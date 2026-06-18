@@ -1,0 +1,93 @@
+SOURCE: Feynman Lectures on Physics, Volume I, Chapter 31
+LANGUAGE: en
+SECTION: 31–2 The field due to the material
+SOURCE_URL: https://www.feynmanlectures.caltech.edu/I_31.html
+
+# 31–2 The field due to the material
+
+We now have to ask: Is the field \(E_a\) obtained in the second term of Eq. (31.8) the kind we would expect from oscillating charges in the plate? If we can show that it is, we will then have calculated what the index \(n\) should be! [Since \(n\) is the only nonfundamental number in Eq. (31.8).] We turn now to calculating what field \(E_a\) the charges in the material will produce. (To help you keep track of the many symbols we have used up to now, and will be using in the rest of our calculation, we have put them all together in Table31–1.)
+TABLE Ch31-T1: Table 31–1Symbols used in the calculations
+If the source \(S\) (of Fig.31–1) is far off to the left, then the field \(E_s\) will have the same phase everywhere on the plate, so we can write that in the neighborhood of the plate
+\[
+\begin{equation}
+\label{Eq:I:31:9}
+E_s=E_0e^{i\omega(t-z/c)}.
+\end{equation}
+\]
+Right at the plate, where \(z = 0\) , we will have
+\[
+\begin{equation}
+\label{Eq:I:31:10}
+E_s=E_0e^{i\omega t}\text{ (at the plate)}.
+\end{equation}
+\]
+Each of the electrons in the atoms of the plate will feel this electric field and will be driven up and down (we assume the direction of \(E_0\) is vertical) by the electric force \(qE\) . To find what motion we expect for the electrons, we will assume that the atoms are little oscillators, that is, that the electrons are fastened elastically to the atoms, which means that if a force is applied to an electron its displacement from its normal position will be proportional to the force.
+You may think that this is a funny model of an atom if you have heard about electrons whirling around in orbits. But that is just an oversimplified picture. The correct picture of an atom, which is given by the theory of wave mechanics, says that,so far as problems involving light are concerned, the electrons behave as though they were held by springs. So we shall suppose that the electrons have a linear restoring force which, together with their mass \(m\) , makes them behave like little oscillators, with a resonant frequency \(\omega_0\) . We have already studied such oscillators, and we know that the equation of their motion is written this way:
+\[
+\begin{equation}
+\label{Eq:I:31:11}
+m\biggl(\frac{d^2x}{dt^2}+\omega_0^2x\biggr)=F,
+\end{equation}
+\]
+where \(F\) is the driving force.
+For our problem, the driving force comes from the electric field of the wave from the source, so we should use
+\[
+\begin{equation}
+\label{Eq:I:31:12}
+F=q_eE_s=q_eE_0e^{i\omega t},
+\end{equation}
+\]
+where \(q_e\) is the electric charge on the electron and for \(E_s\) we use the expression \(E_s = E_0e^{i\omega t}\) from (31.10). Our equation of motion for the electron is then
+\[
+\begin{equation}
+\label{Eq:I:31:13}
+m\biggl(\frac{d^2x}{dt^2}+\omega_0^2x\biggr)=q_eE_0e^{i\omega t}.
+\end{equation}
+\]
+We have solved this equation before, and we know that the solution is
+\[
+\begin{equation}
+\label{Eq:I:31:14}
+x=x_0e^{i\omega t},
+\end{equation}
+\]
+where, by substituting in (31.13), we find that
+\[
+\begin{equation}
+\label{Eq:I:31:15}
+x_0=\frac{q_eE_0}{m(\omega_0^2-\omega^2)},
+\end{equation}
+\]
+so that
+\[
+\begin{equation}
+\label{Eq:I:31:16}
+x=\frac{q_eE_0}{m(\omega_0^2-\omega^2)}\,e^{i\omega t}.
+\end{equation}
+\]
+We have what we needed to know—the motion of the electrons in the plate. And it is the same for every electron, except that the mean position (the “zero” of the motion) is, of course, different for each electron.
+Now we are ready to find the field \(E_a\) that these atoms produce at the point \(P\) , because we have already worked out (at the end of Chapter30) what field is produced by a sheet of charges that all move together. Referring back to Eq. (30.19), we see that the field \(E_a\) at \(P\) is just a negative constant times the velocity of the charges retarded in time by the amount \(z/c\) . Differentiating \(x\) in Eq. (31.16) to get the velocity, and sticking in the retardation [or just putting \(x_0\) from (31.15) into (30.18)] yields
+\[
+\begin{equation}
+\label{Eq:I:31:17}
+E_a=-\frac{\eta q_e}{2\epsO c}\biggl[
+i\omega\,\frac{q_eE_0}{m(\omega_0^2-\omega^2)}\,
+e^{i\omega(t-z/c)}\biggr].
+\end{equation}
+\]
+Just as we expected, the driven motion of the electrons produced an extra wave which travels to the right (that is what the factor \(e^{i\omega(t-z/c)}\) says), and the amplitude of this wave is proportional to the number of atoms per unit area in the plate (the factor \(\eta\) ) and also proportional to the strength of the source field (the factor \(E_0\) ). Then there are some factors which depend on the atomic properties ( \(q_e\) , \(m\) , and \(\omega_0\) ), as we should expect.
+The most important thing, however, is that this formula (31.17) for \(E_a\) looks very much like the expression for \(E_a\) that we got in Eq. (31.8) by saying that the original wave was delayed in passing through a material with an index of refraction \(n\) . The two expressions will, in fact, be identical if
+\[
+\begin{equation}
+\label{Eq:I:31:18}
+(n-1)\,\Delta z=\frac{\eta q_e^2}{2\epsO m(\omega_0^2-\omega^2)}.
+\end{equation}
+\]
+Notice that both sides are proportional to \(\Delta z\) , since \(\eta\) , which is the number of atomsper unit area, is equal to \(N\,\Delta z\) , where \(N\) is the number of atomsper unit volumeof the plate. Substituting \(N\,\Delta z\) for \(\eta\) and cancelling the \(\Delta z\) , we get our main result, a formula for the index of refraction in terms of the properties of the atoms of the material—and of the frequency of the light:
+\[
+\begin{equation}
+\label{Eq:I:31:19}
+n=1+\frac{Nq_e^2}{2\epsO m(\omega_0^2-\omega^2)}.
+\end{equation}
+\]
+This equation gives the “explanation” of the index of refraction that we wished to obtain.

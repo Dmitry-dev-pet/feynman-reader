@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Analysis of the Principles of Statistical Mechanics - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="en">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch40.html#study-panel">Back to chapter</a>
+      <a class="nav-btn" href="../../index.html">Volume contents</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1 id="analysis-of-the-principles-of-statistical-mechanics">Analysis of
+the Principles of Statistical Mechanics</h1>
+<p>This briefing document provides a comprehensive analysis of the
+principles of statistical mechanics as presented in the source context.
+It examines the transition from kinetic theory—which describes matter
+via collisions—to statistical mechanics, which applies the laws of
+mechanics to systems in thermal equilibrium to determine the
+distribution of atoms in space and velocity.</p>
+<h2 id="executive-summary">Executive Summary</h2>
+<p>The study of statistical mechanics seeks to explain the gross
+properties of matter through the motion and arrangement of its
+constituent parts at thermal equilibrium. The analysis begins with the
+"exponential atmosphere" model, demonstrating that particle density
+decreases exponentially with height (potential energy). This specific
+case generalizes into <strong>Boltzmann’s Law</strong>, which states
+that the probability of finding molecules in any spatial arrangement is
+proportional to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>−</mi><mtext mathvariant="normal">P.E.</mtext><mi>/</mi><mi>k</mi><mi>T</mi></mrow></msup><annotation encoding="application/x-tex">e^{-\text{P.E.}/kT}</annotation></semantics></math>.</p>
+<p>A parallel derivation for molecular speeds reveals that velocity
+distribution is independent of external forces and follows a similar
+exponential law based on kinetic energy. While classical statistical
+mechanics successfully explains many gas properties, it fails to account
+for the specific heats of diatomic and polyatomic gases. This
+discrepancy, famously noted by Maxwell and Jeans, represents the first
+historical evidence of the limitations of classical physics. The
+resolution is found in quantum mechanics, where discrete energy levels
+"freeze out" at low temperatures, preventing certain internal motions
+(vibrations and rotations) from contributing to a system's internal
+energy until specific temperature thresholds are met.</p>
+<hr />
+<h2 id="key-analytical-themes">Key Analytical Themes</h2>
+<h3 id="1-the-boltzmann-law-and-spatial-distribution">1. The Boltzmann
+Law and Spatial Distribution</h3>
+<p>The distribution of molecules in space under the influence of
+conservative forces is governed by the potential energy of the
+arrangement.</p>
+<ul>
+<li><strong>The Atmospheric Example:</strong> In an isothermal
+atmosphere, the pressure at any height must support the weight of the
+gas above it. This leads to the differential equation
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi>d</mi><mi>n</mi></mrow><mrow><mi>d</mi><mi>h</mi></mrow></mfrac><mo>=</mo><mi>−</mi><mfrac><mrow><mi>m</mi><mi>g</mi></mrow><mrow><mi>k</mi><mi>T</mi></mrow></mfrac><mi>n</mi></mrow><annotation encoding="application/x-tex">\frac{dn}{dh} = -\frac{mg}{kT}n</annotation></semantics></math>.</li>
+<li><strong>The Exponential Law:</strong> The solution is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><msub><mi>n</mi><mn>0</mn></msub><msup><mi>e</mi><mrow><mi>−</mi><mi>m</mi><mi>g</mi><mi>h</mi><mi>/</mi><mi>k</mi><mi>T</mi></mrow></msup></mrow><annotation encoding="application/x-tex">n = n_0e^{-mgh/kT}</annotation></semantics></math>,
+where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+is the density at height
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>h</mi><annotation encoding="application/x-tex">h</annotation></semantics></math>.
+Because
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mi>g</mi><mi>h</mi></mrow><annotation encoding="application/x-tex">mgh</annotation></semantics></math>
+is the potential energy, the law generalizes to:
+<ul>
+<li><strong>Formula:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">constant</mtext><mo stretchy="false" form="postfix">)</mo><msup><mi>e</mi><mrow><mi>−</mi><mtext mathvariant="normal">P.E.</mtext><mi>/</mi><mi>k</mi><mi>T</mi></mrow></msup></mrow><annotation encoding="application/x-tex">n = (\text{constant})e^{-\text{P.E.}/kT}</annotation></semantics></math></li>
+</ul></li>
+<li><strong>Physical Meaning:</strong> At high temperatures
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mi>T</mi><mo>≫</mo><mtext mathvariant="normal">P.E.</mtext></mrow><annotation encoding="application/x-tex">kT \gg \text{P.E.}</annotation></semantics></math>),
+molecules are distributed almost uniformly. As temperature falls,
+molecules gravitate toward regions of lower potential energy (e.g.,
+clumping together due to mutual attraction).</li>
+</ul>
+<h3 id="2-the-distribution-of-molecular-speeds">2. The Distribution of
+Molecular Speeds</h3>
+<p>The distribution of velocities is independent of the forces acting on
+the molecules and remains the same throughout a system in thermal
+equilibrium.</p>
+<ul>
+<li><strong>Derivation via Energy:</strong> By considering which
+molecules have sufficient vertical velocity to climb a "potential hill"
+of height
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>h</mi><annotation encoding="application/x-tex">h</annotation></semantics></math>,
+the source derives the fraction of particles within a velocity
+range.</li>
+<li><strong>The Maxwell-Boltzmann Distribution:</strong> The probability
+of a molecule having a certain velocity component
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>u</mi><annotation encoding="application/x-tex">u</annotation></semantics></math>
+is proportional to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>−</mi><mi>m</mi><msup><mi>u</mi><mn>2</mn></msup><mi>/</mi><mn>2</mn><mi>k</mi><mi>T</mi></mrow></msup><annotation encoding="application/x-tex">e^{-mu^2/2kT}</annotation></semantics></math>.</li>
+<li><strong>Generalization to Momentum:</strong> In both classical and
+relativistic contexts, the distribution of momenta is proportional to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>−</mi><mtext mathvariant="normal">K.E.</mtext><mi>/</mi><mi>k</mi><mi>T</mi></mrow></msup><annotation encoding="application/x-tex">e^{-\text{K.E.}/kT}</annotation></semantics></math>.</li>
+<li><strong>Three-Dimensional Symmetry:</strong> Because the
+distribution is independent of direction, the total probability for all
+three velocity components
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><msub><mi>v</mi><mi>x</mi></msub><mo>,</mo><msub><mi>v</mi><mi>y</mi></msub><mo>,</mo><msub><mi>v</mi><mi>z</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(v_x, v_y, v_z)</annotation></semantics></math>
+is the product of the individual probabilities:
+<ul>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>v</mi><mi>x</mi></msub><mo>,</mo><msub><mi>v</mi><mi>y</mi></msub><mo>,</mo><msub><mi>v</mi><mi>z</mi></msub><mo stretchy="false" form="postfix">)</mo><mo>∝</mo><msup><mi>e</mi><mrow><mi>−</mi><mi>m</mi><msubsup><mi>v</mi><mi>x</mi><mn>2</mn></msubsup><mi>/</mi><mn>2</mn><mi>k</mi><mi>T</mi></mrow></msup><mo>⋅</mo><msup><mi>e</mi><mrow><mi>−</mi><mi>m</mi><msubsup><mi>v</mi><mi>y</mi><mn>2</mn></msubsup><mi>/</mi><mn>2</mn><mi>k</mi><mi>T</mi></mrow></msup><mo>⋅</mo><msup><mi>e</mi><mrow><mi>−</mi><mi>m</mi><msubsup><mi>v</mi><mi>z</mi><mn>2</mn></msubsup><mi>/</mi><mn>2</mn><mi>k</mi><mi>T</mi></mrow></msup></mrow><annotation encoding="application/x-tex">f(v_x, v_y, v_z) \propto e^{-mv_x^2/2kT} \cdot e^{-mv_y^2/2kT} \cdot e^{-mv_z^2/2kT}</annotation></semantics></math></li>
+</ul></li>
+</ul>
+<h3 id="3-molecular-forces-and-the-many-body-problem">3. Molecular
+Forces and the Many-Body Problem</h3>
+<p>Statistical mechanics attempts to describe how billions of molecules
+arrange themselves based on their mutual potential energy
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo stretchy="false" form="prefix">(</mo><mi>r</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">V(r)</annotation></semantics></math>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Feature</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Potential Function</strong></td>
+<td style="text-align: left;">Molecules attract at distance
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mo>&gt;</mo><msub><mi>r</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">r &gt; r_0</annotation></semantics></math>)
+and repel strongly at short range
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mo>&lt;</mo><msub><mi>r</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">r &lt; r_0</annotation></semantics></math>).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Phase Changes</strong></td>
+<td style="text-align: left;">As
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mi>T</mi></mrow><annotation encoding="application/x-tex">kT</annotation></semantics></math>
+becomes much less than the potential minimum $</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Complexity</strong></td>
+<td style="text-align: left;">While the law
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>−</mi><mo>∑</mo><msub><mi>V</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mi>/</mi><mi>k</mi><mi>T</mi></mrow></msup><annotation encoding="application/x-tex">e^{-\sum V_{ij}/kT}</annotation></semantics></math>
+is simple, calculating results for
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>10</mn><mn>9</mn></msup><annotation encoding="application/x-tex">10^9</annotation></semantics></math>
+variables is mathematically "enormously complicated."</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4-specific-heats-and-the-failure-of-classical-physics">4.
+Specific Heats and the Failure of Classical Physics</h3>
+<p>Classical mechanics predicts the internal energy
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>U</mi><annotation encoding="application/x-tex">U</annotation></semantics></math>)
+and the ratio of specific heats
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>γ</mi><annotation encoding="application/x-tex">\gamma</annotation></semantics></math>)
+based on degrees of freedom.</p>
+<ul>
+<li><strong>Monatomic Gases:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>=</mo><mfrac><mn>3</mn><mn>2</mn></mfrac><mi>k</mi><mi>T</mi></mrow><annotation encoding="application/x-tex">U = \frac{3}{2}kT</annotation></semantics></math>
+per atom;
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>γ</mi><mo>=</mo><mn>1.66</mn></mrow><annotation encoding="application/x-tex">\gamma = 1.66</annotation></semantics></math>.
+This matches experimental data for Helium, Argon, and Krypton.</li>
+<li><strong>Diatomic Gases:</strong> Classical theory for a vibrating,
+rotating "spring-like" molecule predicts
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>=</mo><mfrac><mn>7</mn><mn>2</mn></mfrac><mi>k</mi><mi>T</mi></mrow><annotation encoding="application/x-tex">U = \frac{7}{2}kT</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>γ</mi><mo>=</mo><mn>1.286</mn></mrow><annotation encoding="application/x-tex">\gamma = 1.286</annotation></semantics></math>.</li>
+<li><strong>The Discrepancy:</strong> Experimental values for Oxygen and
+Hydrogen
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>γ</mi><mo>≈</mo><mn>1.40</mn></mrow><annotation encoding="application/x-tex">\gamma \approx 1.40</annotation></semantics></math>)
+contradict this. Furthermore,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>γ</mi><annotation encoding="application/x-tex">\gamma</annotation></semantics></math>
+varies with temperature, which classical theory cannot explain.</li>
+<li><strong>The "Ridiculous" Result:</strong> Classical physics suggests
+that every internal motion (including electrons) should add
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>k</mi><mi>T</mi></mrow><annotation encoding="application/x-tex">\frac{1}{2}kT</annotation></semantics></math>
+to the energy, which would make
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>γ</mi><annotation encoding="application/x-tex">\gamma</annotation></semantics></math>
+approach 1.0, a result described as "ridiculously" wrong compared to
+experimental facts.</li>
+</ul>
+<hr />
+<h2 id="important-quotes-with-context">Important Quotes with
+Context</h2>
+<h3 id="on-the-limits-of-classical-theory">On the Limits of Classical
+Theory</h3>
+<blockquote>
+<p>"It is ridiculous. It is wrong."</p>
+</blockquote>
+<ul>
+<li><strong>Context:</strong> This refers to the classical prediction
+that including all internal atomic motions (like electron movement)
+would lead to a specific heat ratio
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>γ</mi><annotation encoding="application/x-tex">\gamma</annotation></semantics></math>
+far lower than what is experimentally observed.</li>
+</ul>
+<h3 id="maxwells-greatest-difficulty">Maxwell’s "Greatest
+Difficulty"</h3>
+<blockquote>
+<p>"I have now put before you what I consider to be the greatest
+difficulty yet encountered by the molecular theory." (Maxwell, 1869)</p>
+</blockquote>
+<ul>
+<li><strong>Context:</strong> Maxwell realized that a rigorously proved
+theorem of classical mechanics—the equipartition of energy—could not
+satisfy the known relation between the two specific heats of a gas. This
+was the first historical signal that classical laws were fundamentally
+flawed.</li>
+</ul>
+<h3 id="the-phenomenon-of-freezing-out">The Phenomenon of "Freezing
+Out"</h3>
+<blockquote>
+<p>"It is a very mysterious phenomenon, and it seems as though as the
+temperature falls, certain kinds of motions 'freeze out'." (Sir James
+Hopwood Jeans)</p>
+</blockquote>
+<ul>
+<li><strong>Context:</strong> Physicists observed that at lower
+temperatures, gases behaved as if they had fewer degrees of freedom
+(e.g., diatomic hydrogen behaving like a monatomic gas), a concept
+impossible under classical mechanics.</li>
+</ul>
+<hr />
+<h2 id="summary-of-key-figures-and-data">Summary of Key Figures and
+Data</h2>
+<h3 id="atmospheric-density-and-gamma-comparisons">Atmospheric Density
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>γ</mi><annotation encoding="application/x-tex">\gamma</annotation></semantics></math>
+Comparisons</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Subject</th>
+<th style="text-align: left;">Data/Trend</th>
+<th style="text-align: left;">Source Reference</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Atmospheric Density</strong></td>
+<td style="text-align: left;">Oxygen (heavy) decreases much faster with
+height than Hydrogen (light).</td>
+<td style="text-align: left;">[SOURCE_IMAGE_2]</td>
+</tr>
+<tr>
+<td
+style="text-align: left;"><strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>γ</mi><annotation encoding="application/x-tex">\gamma</annotation></semantics></math>
+(Monatomic)</strong></td>
+<td style="text-align: left;">He (-180°C): 1.660; Ar (15°C): 1.668.</td>
+<td style="text-align: left;">Table 40–1</td>
+</tr>
+<tr>
+<td
+style="text-align: left;"><strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>γ</mi><annotation encoding="application/x-tex">\gamma</annotation></semantics></math>
+(Diatomic)</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>2</mn></msub><annotation encoding="application/x-tex">H_2</annotation></semantics></math>
+(100°C): 1.404;
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>O</mi><mn>2</mn></msub><annotation encoding="application/x-tex">O_2</annotation></semantics></math>
+(100°C): 1.399.</td>
+<td style="text-align: left;">Table 40–1</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Temperature Effect</strong></td>
+<td style="text-align: left;">For
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>2</mn></msub><annotation encoding="application/x-tex">H_2</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>γ</mi><annotation encoding="application/x-tex">\gamma</annotation></semantics></math>
+rises toward 1.6 as temperature drops, indicating rotation/vibration
+"freeze out."</td>
+<td style="text-align: left;">[SOURCE_IMAGE_6]</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2
+id="actionable-insights-the-quantum-mechanical-resolution">Actionable
+Insights: The Quantum Mechanical Resolution</h2>
+<p>The source context concludes with the fundamental shift required to
+resolve the failures of classical statistical mechanics. These insights
+define the modern approach to the subject:</p>
+<ul>
+<li><strong>Discrete Energy States:</strong> In quantum mechanics,
+systems bound by potential (like vibrating molecules) have discrete
+energy levels
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mn>0</mn></msub><mo>,</mo><msub><mi>E</mi><mn>1</mn></msub><mo>,</mo><msub><mi>E</mi><mn>2</mn></msub><mo>,</mo><mi>…</mi></mrow><annotation encoding="application/x-tex">E_0, E_1, E_2, \dots</annotation></semantics></math>).</li>
+<li><strong>Quantum Boltzmann Law:</strong> The probability of finding a
+molecule in a state with energy
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>E</mi><mi>i</mi></msub><annotation encoding="application/x-tex">E_i</annotation></semantics></math>
+is proportional to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>−</mi><msub><mi>E</mi><mi>i</mi></msub><mi>/</mi><mi>k</mi><mi>T</mi></mrow></msup><annotation encoding="application/x-tex">e^{-E_i/kT}</annotation></semantics></math>.</li>
+<li><strong>The Energy Gap Threshold:</strong>
+<ul>
+<li>If
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mi>T</mi><mo>≪</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>E</mi><mn>1</mn></msub><mo>−</mo><msub><mi>E</mi><mn>0</mn></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">kT \ll (E_1 - E_0)</annotation></semantics></math>,
+the molecule is almost certain to be in the ground state
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>E</mi><mn>0</mn></msub><annotation encoding="application/x-tex">E_0</annotation></semantics></math>).
+The motion is "frozen" and does not contribute to specific heat.</li>
+<li>If
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mi>T</mi><mo>≫</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>E</mi><mn>1</mn></msub><mo>−</mo><msub><mi>E</mi><mn>0</mn></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">kT \gg (E_1 - E_0)</annotation></semantics></math>,
+many levels are excited, and the system's behavior approaches the
+classical continuum.</li>
+</ul></li>
+<li><strong>Predictive Application:</strong> This explains why heavy
+molecules like Iodine exhibit classical behavior at lower temperatures
+than Hydrogen; their higher mass results in lower natural frequencies
+and smaller energy gaps between states.</li>
+</ul>
+    </article>
+  </main>
+</body>
+</html>

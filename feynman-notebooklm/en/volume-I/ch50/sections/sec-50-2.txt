@@ -1,0 +1,35 @@
+SOURCE: Feynman Lectures on Physics, Volume I, Chapter 50
+LANGUAGE: en
+SECTION: 50–2 The Fourier series
+SOURCE_URL: https://www.feynmanlectures.caltech.edu/I_50.html
+
+# 50–2 The Fourier series
+
+We have discussed in the preceding chapter another way of looking at the motion of a vibrating system. We have seen that a string has various natural modes of oscillation, and that any particular kind of vibration that may be set up by the starting conditions can be thought of as a combination—in suitable proportions—of several of the natural modes, oscillating together. For a string we found that the normal modes of oscillation had the frequencies \(\omega_0\) , \(2\omega_0\) , \(3\omega_0\) , … The most general motion of a plucked string, therefore, is composed of the sum of a sinusoidal oscillation at the fundamental frequency \(\omega_0\) , another at the second harmonic frequency \(2\omega_0\) , another at the third harmonic \(3\omega_0\) , etc. Now the fundamental mode repeats itself every period \(T_1 = 2\pi/\omega_0\) . The second harmonic mode repeats itself every \(T_2 = 2\pi/2\omega_0\) . Italsorepeats itself every \(T_1 =
+2T_2\) , aftertwoof its periods. Similarly, the third harmonic mode repeats itself after a time \(T_1\) which is \(3\) of its periods. We see again why a plucked string repeats its whole pattern with a periodicity of \(T_1\) . It produces a musical tone.
+We have been talking about the motion of the string. But thesound, which is the motion of the air, is produced by the motion of the string, so its vibrations too must be composed of the same harmonics—though we are no longer thinking about the normal modes of the air. Also, the relative strength of the harmonics may be different in the air than in the string, particularly if the string is “coupled” to the air via a sounding board. The efficiency of the coupling to the air is different for different harmonics.
+If we let \(f(t)\) represent the air pressure as a function of time for a musical tone [such as that in Fig.50–1(b)], then we expect that \(f(t)\) can be written as the sum of a number of simple harmonic functions of time—like \(\cos\omega t\) —for each of the various harmonic frequencies. If the period of the vibration is \(T\) , the fundamental angular frequency will be \(\omega = 2\pi/T\) , and the harmonics will be \(2\omega\) , \(3\omega\) , etc.
+There is one slight complication. For each frequency we may expect that the starting phases will not necessarily be the same for all frequencies. We should, therefore, use functions like \(\cos\,(\omega t
++ \phi)\) . It is, however, simpler to use instead both the sine and cosine functions foreachfrequency. We recall that
+\[
+\begin{equation}
+\label{Eq:I:50:1}
+\cos\,(\omega t + \phi) = (\cos\phi\cos\omega t - 
+\sin\phi\sin\omega t)
+\end{equation}
+\]
+and since \(\phi\) is a constant,anysinusoidal oscillation at the frequency \(\omega\) can be written as the sum of a term with \(\cos\omega t\) and another term with \(\sin\omega t\) .
+We conclude, then, thatanyfunction \(f(t)\) that is periodic with the period \(T\) can be written mathematically as
+\[
+\begin{alignat}{4}
+f(t) &= a_0\notag\\[.5ex]
+&\quad\;+\;a_1\cos&&\omega t &&\;+\;b_1\sin&&\omega t\notag\\[.65ex]
+&\quad\;+\;a_2\cos2&&\omega t &&\;+\;b_2\sin2&&\omega t\notag\\[.65ex]
+&\quad\;+\;a_3\cos3&&\omega t &&\;+\;b_3\sin3&&\omega t\notag\\[.5ex]
+\label{Eq:I:50:2}
+&\quad\;+\;\dotsb && &&\;+\;\dotsb
+\end{alignat}
+\]
+where \(\omega = 2\pi/T\) and the \(a\) ’s and \(b\) ’s are numerical constants which tell us how much of each component oscillation is present in the oscillation \(f(t)\) . We have added the “zero-frequency” term \(a_0\) so that our formula will be completely general, although it is usually zero for a musical tone. It represents a shift of the average value (that is, the “zero” level) of the sound pressure. With it our formula can take care of any case. The equality of Eq. (50.2) is represented schematically in Fig.50–2. (The amplitudes, \(a_n\) and \(b_n\) , of the harmonic functions must be suitably chosen. They are shown schematically and without any particular scale in the figure.) The series (50.2) is called theFourier seriesfor \(f(t)\) .
+FIGURE Ch50-F2: Fig. 50–2.Any periodic function \(f(t)\) is equal to a sum of simple harmonic functions.
+We have said thatanyperiodic function can be made up in this way. We should correct that and say that any sound wave, or any function we ordinarily encounter in physics, can be made up of such a sum. The mathematicians can invent functions which cannot be made up of simple harmonic functions—for instance, a function that has a “reverse twist” so that it has two values for some values of \(t\) ! We need not worry about such functions here.

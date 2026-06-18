@@ -1,0 +1,262 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Глава 16. Релятивистская энергия и релятивистский импульс: Аналитический отчет - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch16.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1
+id="глава-16-релятивистская-энергия-и-релятивистский-импульс-аналитический-отчет">Глава
+16. Релятивистская энергия и релятивистский импульс: Аналитический
+отчет</h1>
+<p>Этот документ представляет собой подробный анализ материалов 16-й
+главы «Феймановских лекций по физике», посвященной релятивистской
+динамике. В отчете рассматриваются принципы относительности,
+трансформация скоростей, изменение массы со скоростью и фундаментальная
+взаимосвязь между массой и энергией.</p>
+<h2 id="1-резюме-для-руководства-executive-summary">1. Резюме для
+руководства (Executive Summary)</h2>
+<p>Глава 16 переводит обсуждение принципа относительности из области
+кинематики в область динамики. Основной вывод заключается в том, что
+законы Ньютона требуют корректировки при высоких скоростях, близких к
+скорости света
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>c</mi><annotation encoding="application/x-tex">c</annotation></semantics></math>).
+Ключевые положения включают:</p>
+<ul>
+<li><strong>Сложение скоростей:</strong> Скорости не складываются просто
+алгебраически; существует предел, равный
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>c</mi><annotation encoding="application/x-tex">c</annotation></semantics></math>,
+который невозможно превысить.</li>
+<li><strong>Релятивистская масса:</strong> Масса объекта не является
+постоянной величиной, а увеличивается с ростом скорости по закону
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>=</mo><msub><mi>m</mi><mn>0</mn></msub><mi>/</mi><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mi>v</mi><mn>2</mn></msup><mi>/</mi><msup><mi>c</mi><mn>2</mn></msup></mrow></msqrt></mrow><annotation encoding="application/x-tex">m = m_0 / \sqrt{1 - v^2/c^2}</annotation></semantics></math>.</li>
+<li><strong>Эквивалентность массы и энергии:</strong> Энергия обладает
+инерцией. Любое изменение внутренней энергии системы (кинетической,
+потенциальной, тепловой) ведет к изменению её массы
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>=</mo><mi>m</mi><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">E = mc^2</annotation></semantics></math>).</li>
+<li><strong>Законы сохранения:</strong> В теории относительности законы
+сохранения импульса и энергии неразрывно связаны. Сохранение импульса во
+всех системах отсчета с необходимостью требует учета зависимости массы
+от скорости и эквивалентности массы-энергии.</li>
+</ul>
+<hr />
+<h2 id="2-ключевые-темы-и-концептуальный-анализ">2. Ключевые темы и
+концептуальный анализ</h2>
+<h3 id="21-философское-значение-и-научный-метод">2.1. Философское
+значение и научный метод</h3>
+<p>Лекция начинается с критики «философов за чашкой чая», которые
+упрощают теорию относительности до фразы «всё относительно». Фейнман
+подчеркивает, что принцип относительности — это не результат
+умозрительных заключений, а следствие экспериментов.</p>
+<ul>
+<li><strong>Измеримость:</strong> Только эксперимент определяет, что
+можно измерить (например, абсолютную скорость нельзя, а вращение — можно
+с помощью маятника Фуко).</li>
+<li><strong>Смирение перед опытом:</strong> Даже самые проверенные
+законы (законы Ньютона) могут оказаться неточными в новых условиях
+(высокие скорости).</li>
+<li><strong>Симметрия:</strong> Важнейшим техническим достижением теории
+стало изучение симметрии законов и их инвариантности при преобразованиях
+Лоренца.</li>
+</ul>
+<h3 id="22-парадокс-близнецов-и-ускорение">2.2. Парадокс близнецов и
+ускорение</h3>
+<p>Анализ случая Петера и Пауля проясняет, что замедление времени — это
+реальный физический эффект.</p>
+<ul>
+<li><strong>Асимметрия:</strong> Парадокс разрешается тем, что один из
+братьев (Пауль) испытывает реальное физическое ускорение при развороте,
+что выделяет его систему отсчета.</li>
+<li><strong>Экспериментальное подтверждение:</strong> Увеличение времени
+жизни движущихся мю-мезонов (как при прямолинейном движении, так и при
+движении по кругу в ускорителе) подтверждает правильность этих
+выводов.</li>
+</ul>
+<h3 id="23-релятивистская-динамика-и-трансформация-скоростей">2.3.
+Релятивистская динамика и трансформация скоростей</h3>
+<p>Принцип относительности требует изменения правил перехода между
+системами отсчета. На смену преобразованиям Галилея приходят
+преобразования Лоренца.</p>
+<p><strong>Основные формулы трансформации скоростей:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Тип движения</th>
+<th style="text-align: left;">Формула</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Продольное сложение (вдоль оси
+x)</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>v</mi><mi>x</mi></msub><mo>=</mo><mfrac><mrow><mi>u</mi><mo>+</mo><msub><mi>v</mi><msup><mi>x</mi><mo>′</mo></msup></msub></mrow><mrow><mn>1</mn><mo>+</mo><mi>u</mi><msub><mi>v</mi><msup><mi>x</mi><mo>′</mo></msup></msub><mi>/</mi><msup><mi>c</mi><mn>2</mn></msup></mrow></mfrac></mrow><annotation encoding="application/x-tex">v_x = \frac{u + v_{x&#39;}}{1 + uv_{x&#39;}/c^2}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Поперечная скорость
+(боковая)</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>v</mi><mi>y</mi></msub><mo>=</mo><msub><mi>v</mi><msup><mi>y</mi><mo>′</mo></msup></msub><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mi>u</mi><mn>2</mn></msup><mi>/</mi><msup><mi>c</mi><mn>2</mn></msup></mrow></msqrt></mrow><annotation encoding="application/x-tex">v_y = v_{y&#39;} \sqrt{1 - u^2/c^2}</annotation></semantics></math>
+(при
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>v</mi><msup><mi>x</mi><mo>′</mo></msup></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">v_{x&#39;} = 0</annotation></semantics></math>)</td>
+</tr>
+</tbody>
+</table>
+<p>Физический смысл поперечной трансформации (Рис. 16.1) заключается в
+том, что для сохранения одновременности событий (тиков световых и
+механических часов) в разных системах отсчета, любая вертикальная
+скорость должна уменьшаться на тот же релятивистский множитель, что и
+скорость света.</p>
+<hr />
+<h2 id="3-релятивистская-масса-и-импульс">3. Релятивистская масса и
+импульс</h2>
+<p>Фейнман доказывает изменение массы, анализируя столкновения частиц
+без обращения к сложным законам силы, опираясь только на принцип
+относительности и закон сохранения импульса.</p>
+<h3 id="31-анализ-упругого-столкновения-рис-162-и-163">3.1. Анализ
+упругого столкновения (Рис. 16.2 и 16.3)</h3>
+<p>Рассматривая столкновение двух одинаковых частиц в разных системах
+отсчета, автор показывает, что для сохранения вертикального импульса
+масса частицы
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>m</mi><mi>v</mi></msub><annotation encoding="application/x-tex">m_v</annotation></semantics></math>)
+должна зависеть от её скорости.</p>
+<ul>
+<li><strong>Результат:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>m</mi><mi>u</mi></msub><mo>=</mo><mfrac><msub><mi>m</mi><mn>0</mn></msub><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mi>u</mi><mn>2</mn></msup><mi>/</mi><msup><mi>c</mi><mn>2</mn></msup></mrow></msqrt></mfrac></mrow><annotation encoding="application/x-tex">m_u = \frac{m_0}{\sqrt{1 - u^2/c^2}}</annotation></semantics></math>,
+где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>m</mi><mn>0</mn></msub><annotation encoding="application/x-tex">m_0</annotation></semantics></math>
+— масса покоя.</li>
+<li><strong>Импульс:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>p</mi><mo accent="true">→</mo></mover><mo>=</mo><msub><mi>m</mi><mi>v</mi></msub><mover><mi>v</mi><mo accent="true">→</mo></mover></mrow><annotation encoding="application/x-tex">\vec{p} = m_v \vec{v}</annotation></semantics></math>.
+Импульс всегда направлен по вектору скорости, но коэффициент
+пропорциональности (масса) растет со скоростью.</li>
+</ul>
+<h3 id="32-неупругое-столкновение-и-рост-массы-рис-164">3.2. Неупругое
+столкновение и «рост» массы (Рис. 16.4)</h3>
+<p>При столкновении и слипании двух движущихся тел образуется новое
+тело.</p>
+<ul>
+<li><strong>Вывод:</strong> Масса покоя образовавшегося тела
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>M</mi><mn>0</mn></msub><annotation encoding="application/x-tex">M_0</annotation></semantics></math>)
+равна сумме масс движущихся тел до столкновения
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><msub><mi>m</mi><mi>w</mi></msub></mrow><annotation encoding="application/x-tex">2m_w</annotation></semantics></math>),
+что больше суммы их индивидуальных масс покоя
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><msub><mi>m</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">2m_0</annotation></semantics></math>).</li>
+<li><strong>Инсайт:</strong> Кинетическая энергия сближавшихся тел
+перешла в «массу» нового покоящегося тела.</li>
+</ul>
+<hr />
+<h2 id="4-энергия-эквивалентность-и-сохранение">4. Энергия:
+Эквивалентность и сохранение</h2>
+<p>Энергия и масса в теории относительности — это фактически две стороны
+одной медали.</p>
+<h3 id="41-формулы-энергии">4.1. Формулы энергии</h3>
+<ul>
+<li><strong>Кинетическая энергия:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>T</mi><mo>=</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>m</mi><mi>u</mi></msub><mo>−</mo><msub><mi>m</mi><mn>0</mn></msub><mo stretchy="false" form="postfix">)</mo><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\Delta T = (m_u - m_0)c^2</annotation></semantics></math>.</li>
+<li><strong>Полная энергия:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>=</mo><mi>m</mi><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">E = mc^2</annotation></semantics></math>.</li>
+<li><strong>Связь энергии и импульса:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>E</mi><mn>2</mn></msup><mo>−</mo><msup><mi>P</mi><mn>2</mn></msup><msup><mi>c</mi><mn>2</mn></msup><mo>=</mo><msubsup><mi>m</mi><mn>0</mn><mn>2</mn></msubsup><msup><mi>c</mi><mn>4</mn></msup></mrow><annotation encoding="application/x-tex">E^2 - P^2c^2 = m_0^2c^4</annotation></semantics></math>.
+Это соотношение является фундаментальным и используется чаще, чем прямая
+формула массы.</li>
+<li><strong>Связь импульса и энергии через скорость:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>c</mi><mo>=</mo><mi>E</mi><mo>⋅</mo><mfrac><mi>v</mi><mi>c</mi></mfrac></mrow><annotation encoding="application/x-tex">Pc = E \cdot \frac{v}{c}</annotation></semantics></math>.</li>
+</ul>
+<h3 id="42-практические-следствия">4.2. Практические следствия</h3>
+<ol type="1">
+<li><strong>Ядерная физика:</strong> Формула
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>=</mo><mi mathvariant="normal">Δ</mi><mi>m</mi><mo>⋅</mo><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">E = \Delta m \cdot c^2</annotation></semantics></math>
+позволяет рассчитать выделение энергии при распаде урана (атомная
+бомба), зная разницу между массой покоя целого ядра и суммой масс покоя
+осколков.</li>
+<li><strong>Химия:</strong> Любая химическая реакция с выделением
+энергии сопровождается потерей массы, однако эта разница слишком мала
+для измерения современными весами.</li>
+<li><strong>Природа частиц:</strong> Для элементарных частиц (например,
+K-мезонов) деление на «энергию покоя составных частей» и «внутреннюю
+кинетическую энергию» часто невозможно и бессмысленно; важна только
+полная энергия
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">mc^2</annotation></semantics></math>.</li>
+</ol>
+<hr />
+<h2 id="5-важные-цитаты-с-контекстом">5. Важные цитаты с контекстом</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Цитата</th>
+<th style="text-align: left;">Контекст</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><em>«...законы физических явлений обязаны
+быть одинаковыми для неподвижного наблюдателя и для наблюдателя, который
+относительно него переносится равномерным движением...»</em></td>
+<td style="text-align: left;">Определение принципа относительности
+Пуанкаре, легшее в основу главы.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><em>«...нельзя априори утверждать, что
+что-то измеримо, а что-то нет; это решает не рассуждение, а
+эксперимент.»</em></td>
+<td style="text-align: left;">Ответ Фейнмана философам, пытающимся
+доказать теорию относительности «чистым мозговым усилием».</td>
+</tr>
+<tr>
+<td style="text-align: left;"><em>«...теперь мы взираем на наши законы
+физики куда более смиренно — ведь любой из них может оказаться
+ошибочным!»</em></td>
+<td style="text-align: left;">Рефлексия над тем, как открытие
+ошибочности законов Ньютона повлияло на научное мировоззрение.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><em>«...бедного старого Эйнштейна во всех
+газетах называли "отцом" атомной бомбы.»</em></td>
+<td style="text-align: left;">Комментарий Фейнмана о том, что Эйнштейн
+лишь предсказал количество энергии через формулу, но не создавал саму
+технологию процесса.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="6-аналитические-выводы-actionable-insights">6. Аналитические
+выводы (Actionable Insights)</h2>
+<ol type="1">
+<li><strong>Унификация сохранения:</strong> Больше нет смысла разделять
+закон сохранения массы и закон сохранения энергии. В релятивистском мире
+это один и тот же закон.</li>
+<li><strong>Инерция энергии:</strong> Любая форма энергии (тепловая,
+потенциальная в пружине, энергия связи в ядре) обладает инерцией и
+увеличивает массу объекта.</li>
+<li><strong>Предел скорости:</strong> Знаменатель в формулах
+трансформации
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><msup><mi>v</mi><mn>2</mn></msup><mi>/</mi><msup><mi>c</mi><mn>2</mn></msup><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(1 - v^2/c^2)</annotation></semantics></math>
+накладывает абсолютное ограничение: материальное тело с ненулевой массой
+покоя никогда не достигнет скорости света, так как его масса и энергия
+стали бы бесконечными.</li>
+<li><strong>Сдвиг начала отсчета:</strong> Теория относительности
+предлагает удобную систему, где полная энергия тела никогда не равна
+нулю, а начинается с «энергии покоя»
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>m</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">m_0c^2</annotation></semantics></math>.
+Это упрощает расчеты в физике высоких энергий.</li>
+</ol>
+    </article>
+  </main>
+</body>
+</html>

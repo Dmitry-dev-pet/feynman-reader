@@ -1,0 +1,75 @@
+# Figure context for Chapter 16. Relativistic Energy and Momentum
+
+SOURCE: Feynman Lectures on Physics, Volume I, Chapter 16
+LANGUAGE: en
+SOURCE_URL: https://www.feynmanlectures.caltech.edu/I_16.html
+
+NotebookLM use: pair this file with the clean chapter text and the PNG image files below. The visual descriptions here are inferred from the surrounding lecture text; the PNG files are included so NotebookLM can inspect the diagrams directly when image sources are uploaded.
+
+## Ch16-F1: Fig. 16–1.Trajectories described by a light ray and particle inside a moving clock.
+
+Section: 16–3 Transformation of velocities
+Image file: images/Ch16-F1.png
+
+Context before the figure:
+
+Of course, there are cases in which the motion is not in the direction of the uniform translation. For example, there may be an object inside the ship which is just moving “upward” with the velocity \(v_{y'}\) with respect to the ship, and the ship is moving “horizontally.” Now, we simply go through the same thing, only using \(y\) ’s instead of \(x\) ’s, with the result \[ \begin{equation} y=y'=v_{y'}t',\notag \end{equation} \] so that if \(v_{x'} = 0\) , \[ \begin{equation} \label{Eq:I:16:7} v_y=\frac{y}{t}=v_{y'}\sqrt{1-u^2/c^2}. \end{equation} \] Thus a sidewise velocity is no longer \(v_{y'}\) , but \(v_{y'}\sqrt{1 - u^2/c^2}\) . We found this result by substituting and combining the transformation equations, but we can also see the result directly from the principle of relativity for the following reason (it is always good to look again to see whether we can see the reason). We...
+
+Context after the figure:
+
+We learned in the last chapter that the mass of an object increases with velocity, but no demonstration of this was given, in the sense that we made no arguments analogous to those about the way clocks have to behave. However, wecanshow that, as a consequence of relativity plus a few other reasonable assumptions, the mass must vary in this way. (We have to say “a few other assumptions” because we cannot prove anything unless we have some laws which we assume to be true, if we expect to make meaningful deductions.) To avoid the need to study the transformation laws of force, we shall analyze acollision, where we need know nothing about the laws of force, except that we shall assume the conservation of momentum and energy. Also, we shall assume that the momentum of a particle which is moving is a vector and is always directed in the direction of the velocity. However, we shall not assume...
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.
+
+## Ch16-F2: Fig. 16–2.Two views of an elastic collision between equal objects moving at the same speed in opposite directions.
+
+Section: 16–4 Relativistic mass
+Image file: images/Ch16-F2.png
+
+Context before the figure:
+
+Suppose that we have two particles, like two protons, that are absolutely equal, and they are moving toward each other with exactly equal velocities. Their total momentum is zero. Now what can happen? After the collision, their directions of motion must be exactly opposite to each other, because if they are not exactly opposite, there will be a nonzero total vector momentum, and momentum would not have been conserved. Also they must have the same speeds, since they are exactly similar objects; in fact, they must have the same speed they started with, since we suppose that the energy is conserved in these collisions. So the diagram of an elastic collision, a reversible collision, will look like Fig.16–2(a): all the arrows are the same length, all the speeds are equal. We shall suppose that such collisions can always be arranged, that any angle \(\theta\) can occur, and that any speed...
+
+Context after the figure:
+
+Now here is the real trick: let us look at this collision from the point of view of someone riding along in a car that is moving with a speed equal to the horizontal component of the velocity of one particle. Then how does the collision look? It looks as though particle \(1\) is just going straight up, because it has lost its horizontal component, and it comes straight down again, also because it does not have that component. That is, the collision appears as shown in Fig.16–3(a). Particle \(2\) , however, was going the other way, and as we ride past it appears to fly by at some terrific speed and at a smaller angle, but we can appreciate that the angles before and after the collision are thesame. Let us denote by \(u\) the horizontal component of the velocity of particle \(2\) , and by \(w\) the vertical velocity of particle \(1\) .
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.
+
+## Ch16-F3: Fig. 16–3.Two more views of the collision, from moving cars.
+
+Section: 16–4 Relativistic mass
+Image file: images/Ch16-F3.png
+
+Context before the figure:
+
+Now here is the real trick: let us look at this collision from the point of view of someone riding along in a car that is moving with a speed equal to the horizontal component of the velocity of one particle. Then how does the collision look? It looks as though particle \(1\) is just going straight up, because it has lost its horizontal component, and it comes straight down again, also because it does not have that component. That is, the collision appears as shown in Fig.16–3(a). Particle \(2\) , however, was going the other way, and as we ride past it appears to fly by at some terrific speed and at a smaller angle, but we can appreciate that the angles before and after the collision are thesame. Let us denote by \(u\) the horizontal component of the velocity of particle \(2\) , and by \(w\) the vertical velocity of particle \(1\) .
+
+Context after the figure:
+
+Now the question is, what is the vertical velocity \(u\tan\alpha\) ? If we knew that, we could get the correct expression for the momentum, using the law of conservation of momentum in the vertical direction. Clearly, the horizontal component of the momentum is conserved: it is the same before and after the collision for both particles, and is zero for particle \(1\) . So we need to use the conservation law only for the upward velocity \(u\tan\alpha\) . But wecanget the upward velocity, simply by looking at the same collision going the other way! If we look at the collision of Fig.16–3(a) from a car moving to the left with speed \(u\) , we see the same collision, except “turned over,” as shown in Fig.16–3(b). Now particle \(2\) is the one that goes up and down with speed \(w\) , and particle \(1\) has picked up the horizontal speed \(u\) . Of course, now weknowwhat the velocity...
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.
+
+## Ch16-F4: Fig. 16–4.Two views of an inelastic collision between equally massive objects.
+
+Section: 16–4 Relativistic mass
+Image file: images/Ch16-F4.png
+
+Context before the figure:
+
+Let us take the limiting case that \(w\) is infinitesimal. If \(w\) is very tiny indeed, it is clear that \(v\) and \(u\) are practically equal. In this case, \(m_w \to m_0\) and \(m_v \to m_u\) . The grand result is \[ \begin{equation} \label{Eq:I:16:10} m_u=\frac{m_0}{\sqrt{1-u^2/c^2}}. \end{equation} \] It is an interesting exercise now to check whether or not Eq. (16.9) is indeed true for arbitrary values of \(w\) , assuming that Eq. (16.10) is the right formula for the mass. Note that the velocity \(v\) needed in Eq. (16.9) can be calculated from the right-angle triangle: \[ \begin{equation*} v^2=u^2+w^2(1-u^2/c^2). \end{equation*} \] It will be found to check out automatically, although we used it only in the limit of small \(w\) .
+
+Context after the figure:
+
+Now, let us accept that momentum is conserved and that the mass depends upon the velocity according to (16.10) and go on to find what else we can conclude. Let us consider what is commonly called aninelastic collision. For simplicity, we shall suppose that two objects of the same kind, moving oppositely with equal speeds \(w\) , hit each other and stick together, to become some new, stationary object, as shown in Fig.16–4(a). The mass \(m\) of each corresponds to \(w\) , which, as we know, is \(m_0/\sqrt{1 - w^2/c^2}\) . If we assume the conservation of momentum and the principle of relativity, we can demonstrate an interesting fact about the mass of the new object which has been formed. We imagine an infinitesimal velocity \(u\) at right angles to \(w\) (we can do the same with finite values of \(u\) , but it is easier to understand with an infinitesimal velocity), then look at this...
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.

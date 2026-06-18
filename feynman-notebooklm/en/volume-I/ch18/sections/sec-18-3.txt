@@ -1,0 +1,49 @@
+SOURCE: Feynman Lectures on Physics, Volume I, Chapter 18
+LANGUAGE: en
+SECTION: 18–3 Angular momentum
+SOURCE_URL: https://www.feynmanlectures.caltech.edu/I_18.html
+
+# 18–3 Angular momentum
+
+Although we have so far considered only the special case of a rigid body, the properties of torques and their mathematical relationships are interesting also even when an object is not rigid. In fact, we can prove a very remarkable theorem: just as external force is the rate of change of a quantity \(p\) , which we call the total momentum of a collection of particles, so the external torque is the rate of change of a quantity \(L\) which we call theangular momentumof the group of particles.
+FIGURE Ch18-F3: Fig. 18–3.A particle moves about an axis \(O\) .
+To prove this, we shall suppose that there is a system of particles on which there are some forces acting and find out what happens to the system as a result of the torques due to these forces. First, of course, we should consider justoneparticle. In Fig.18–3is one particle of mass \(m\) , and an axis \(O\) ; the particle is not necessarily rotating in a circle about \(O\) , it may be moving in an ellipse, like a planet going around the sun, or in some other curve. It is moving somehow, and there are forces on it, and it accelerates according to the usual formula that the \(x\) -component of force is the mass times the \(x\) -component of acceleration, etc. But let us see what thetorquedoes. The torque equals \(xF_y - yF_x\) , and the force in the \(x\) - or \(y\) -direction is the mass times the acceleration in the \(x\) - or \(y\) -direction:
+\[
+\begin{align}
+\tau&=xF_y-yF_x\notag\\[.5ex]
+\label{Eq:I:18:14}
+&=xm(d^2y/dt^2)-ym(d^2x/dt^2).
+\end{align}
+\]
+Now, although this does not appear to be the derivative of any simple quantity, it is in fact the derivative of the quantity \(xm(dy/dt) -
+ym(dx/dt)\) :
+\[
+\begin{equation}
+\begin{aligned}
+\ddt{}{t}\biggl[&xm\biggl(\ddt{y}{t}\biggr)-ym\biggl(\ddt{x}{t}\biggr)\biggr]\\[1.5ex]
+=\quad&xm\biggl(\frac{d^2y}{dt^2}\biggr)+\biggl(\ddt{x}{t}\biggr)m\biggl(\ddt{y}{t}\biggr)\\[1ex]
+-\;&ym\biggl(\frac{d^2x}{dt^2}\biggr)-\biggl(\ddt{y}{t}\biggr)m\biggl(\ddt{x}{t}\biggr)\\[1.5ex]
+=\quad&xm\biggl(\frac{d^2y}{dt^2}\biggr)-ym\biggl(\frac{d^2x}{dt^2}\biggr).
+\end{aligned}
+\label{Eq:I:18:15}
+\end{equation}
+\]
+So it is true that the torque is the rate of change of something with time! So we pay attention to the “something,” we give it a name: we call it \(L\) , the angular momentum:
+\[
+\begin{align}
+L&=xm(dy/dt)-ym(dx/dt)\notag\\[.5ex]
+\label{Eq:I:18:16}
+&=xp_y-yp_x.
+\end{align}
+\]
+Although our present discussion is nonrelativistic, the second form for \(L\) given above is relativistically correct. So we have found that there is also a rotational analog for the momentum, and that this analog, the angular momentum, is given by an expression in terms of the components of linear momentum that is just like the formula for torque in terms of the force components! Thus, if we want to know the angular momentum of a particle about an axis, we take only the component of the momentum that is tangential, and multiply it by the radius. In other words, what counts for angular momentum is not how fast it is goingawayfrom the origin, but how much it is goingaroundthe origin. Only the tangential part of the momentum counts for angular momentum. Furthermore, the farther out the line of the momentum extends, the greater the angular momentum. And also, because the geometrical facts are the same whether the quantity is labeled \(p\) or \(F\) , it is true that there is a lever arm (notthe same as the lever arm of the force on the particle!) which is obtained by extending the line of themomentumand finding the perpendicular distance to the axis. Thus the angular momentum is the magnitude of the momentum times the momentum lever arm. So we have three formulas for angular momentum, just as we have three formulas for the torque:
+\[
+\begin{align}
+L&=xp_y-yp_x\notag\\[.5ex]
+&=rp_{\text{tang}}\notag\\
+\label{Eq:I:18:17}
+&=p\cdot\text{lever arm}.
+\end{align}
+\]
+Like torque, angular momentum depends upon the position of the axis about which it is to be calculated.
+Before proceeding to a treatment of more than one particle, let us apply the above results to a planet going around the sun. In which direction is the force? The force is toward the sun. What, then, is the torque on the object? Of course, this depends upon where we take the axis, but we get a very simple result if we take it at the sun itself, for the torque is the force times the lever arm, or the component of force perpendicular to \(r\) , times \(r\) . But there is no tangential force, so there is no torque about an axis at the sun! Therefore, the angular momentum of the planet going around the sun must remain constant. Let us see what that means. The tangential component of velocity, times the mass, times the radius, will be constant, because that is the angular momentum, and the rate of change of the angular momentum is the torque, and, in this problem, the torque is zero. Of course since the mass is also a constant, this means that the tangential velocity times the radius is a constant. But this is something we already knew for the motion of a planet. Suppose we consider a small amount of time \(\Delta t\) . How far will the planet move when it moves from \(P\) to \(Q\) (Fig.18–3)? How muchareawill it sweep through? Disregarding the very tiny area \(QQ'P\) compared with the much larger area \(OPQ\) , it is simply half the base \(PQ\) times the height, \(OR\) . In other words, the area that is swept through in unit time will be equal to the velocity times the lever arm of the velocity (times one-half). Thus the rate of change of area is proportional to the angular momentum, which is constant. So Kepler’s law about equal areas in equal times is a word description of the statement of the law of conservation of angular momentum, when there is no torque produced by the force.

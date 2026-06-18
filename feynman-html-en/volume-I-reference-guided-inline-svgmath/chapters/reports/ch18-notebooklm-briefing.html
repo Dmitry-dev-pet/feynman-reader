@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chapter 18: Rotation in Two Dimensions - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="en">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch18.html#study-panel">Back to chapter</a>
+      <a class="nav-btn" href="../../index.html">Volume contents</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1 id="chapter-18-rotation-in-two-dimensions">Chapter 18: Rotation in
+Two Dimensions</h1>
+<p>This briefing document provides an analytical overview of the
+mechanics of rotation in two dimensions, as outlined in the Feynman
+Lectures on Physics. It covers the transition from point-particle
+mechanics to the study of complex, rigid bodies, focusing on the center
+of mass, rotational kinematics, torque, and the conservation of angular
+momentum.</p>
+<h2 id="executive-summary">Executive Summary</h2>
+<p>Chapter 18 marks a transition from the mechanics of point particles
+to the study of complex systems, specifically "rigid bodies." The
+analysis establishes that even complex motions can be understood through
+two primary lenses: the motion of the <strong>center of mass</strong>
+and the <strong>rotation</strong> of the body around an axis.</p>
+<p>A central theme is the direct analogy between linear and rotational
+dynamics. Just as force causes linear acceleration,
+<strong>torque</strong> causes angular acceleration. Similarly, just as
+linear momentum is conserved in the absence of external force,
+<strong>angular momentum</strong> is conserved in the absence of
+external torque. A unique distinction is highlighted: while an object's
+mass remains constant, its <strong>moment of inertia</strong> (its
+resistance to turning) can change if the distribution of its mass
+relative to the axis changes, leading to dramatic effects in angular
+velocity.</p>
+<hr />
+<h2 id="i-the-theorem-of-the-center-of-mass">I. The Theorem of the
+Center of Mass</h2>
+<p>When analyzing a "complicated" object—such as a collection of blocks
+and spokes—its motion may appear chaotic. However, the theorem of the
+center of mass proves that a specific "mean position" exists that
+follows a simple trajectory, such as a parabola under gravity.</p>
+<h3 id="mathematical-definition">Mathematical Definition</h3>
+<p>The center of mass <span class="math inline">$(\FLPR)$</span> is an
+average position where each constituent particle's position <span
+class="math inline">$(\FLPr_i)$</span> is weighted by its mass
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><msub><mi>m</mi><mi>i</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(m_i)</annotation></semantics></math>:
+<span class="math display">$$\FLPR = \frac{\sum_i m_i
+\FLPr_i}{M}$$</span> <em>(Where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>M</mi><annotation encoding="application/x-tex">M</annotation></semantics></math>
+is the total mass of the object.)</em></p>
+<h3 id="physical-significance">Physical Significance</h3>
+<ul>
+<li><strong>External vs. Internal Forces:</strong> Newton’s Third Law
+ensures that internal forces (actions and reactions between particles
+within the object) cancel out. Therefore, the acceleration of the center
+of mass is determined solely by external forces: <span
+class="math inline">$\FLPF_{\text{ext}} = M
+\frac{d^2\FLPR}{dt^2}$</span>.</li>
+<li><strong>Constant Velocity:</strong> In the absence of external
+forces, the center of mass moves at a constant velocity, regardless of
+how much the object wiggles or rotates internally.</li>
+<li><strong>Propulsion:</strong> Rocket propulsion does not move the
+center of mass of the system (rocket plus exhaust gas). Instead, it
+moves the "interesting part" (the rocket) by ejecting an "uninteresting
+part" (the gas) in the opposite direction.</li>
+</ul>
+<hr />
+<h2 id="ii-kinematics-of-plane-rotation">II. Kinematics of Plane
+Rotation</h2>
+<p>Rotation in two dimensions (plane rotation) involves a rigid body
+turning about a fixed axis. The motion of any point on the body is
+defined by its angular change.</p>
+<h3 id="the-linear-rotational-analogy">The Linear-Rotational
+Analogy</h3>
+<p>There is a direct relationship between one-dimensional displacement
+and two-dimensional rotation:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Linear Quantity</th>
+<th style="text-align: left;">Rotational Analog</th>
+<th style="text-align: left;">Relation/Formula</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Distance
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math>)</td>
+<td style="text-align: left;">Angle
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>θ</mi><annotation encoding="application/x-tex">\theta</annotation></semantics></math>)</td>
+<td style="text-align: left;">Measured in radians</td>
+</tr>
+<tr>
+<td style="text-align: left;">Velocity
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>v</mi><annotation encoding="application/x-tex">v</annotation></semantics></math>)</td>
+<td style="text-align: left;">Angular Velocity
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ω</mi><annotation encoding="application/x-tex">\omega</annotation></semantics></math>)</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ω</mi><mo>=</mo><mi>d</mi><mi>θ</mi><mi>/</mi><mi>d</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">\omega = d\theta/dt</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;">Acceleration
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>)</td>
+<td style="text-align: left;">Angular Acceleration
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>α</mi><annotation encoding="application/x-tex">\alpha</annotation></semantics></math>)</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi><mo>=</mo><mi>d</mi><mi>ω</mi><mi>/</mi><mi>d</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">\alpha = d\omega/dt</annotation></semantics></math></td>
+</tr>
+</tbody>
+</table>
+<h3 id="particle-motion-in-rotation">Particle Motion in Rotation</h3>
+<p>For a particle at distance
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math>
+from the axis (as seen in <strong>Figure 18-1</strong>):</p>
+<ul>
+<li>The distance moved is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mi mathvariant="normal">Δ</mi><mi>θ</mi></mrow><annotation encoding="application/x-tex">r \Delta\theta</annotation></semantics></math>.</li>
+<li>The magnitude of velocity is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mo>=</mo><mi>ω</mi><mi>r</mi></mrow><annotation encoding="application/x-tex">v = \omega r</annotation></semantics></math>.</li>
+<li>The velocity components are
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>v</mi><mi>x</mi></msub><mo>=</mo><mi>−</mi><mi>ω</mi><mi>y</mi></mrow><annotation encoding="application/x-tex">v_x = -\omega y</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>v</mi><mi>y</mi></msub><mo>=</mo><mi>+</mi><mi>ω</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">v_y = +\omega x</annotation></semantics></math>.</li>
+</ul>
+<hr />
+<h2 id="iii-torque-the-twisting-force">III. Torque: The "Twisting
+Force"</h2>
+<p>Torque
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>τ</mi><annotation encoding="application/x-tex">\tau</annotation></semantics></math>)
+is the rotational analog of force. It is the "twist" applied to an
+object.</p>
+<h3 id="quantitative-definition">Quantitative Definition</h3>
+<p>Torque is defined through the concept of work. If
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>W</mi><mo>=</mo><mi>τ</mi><mi mathvariant="normal">Δ</mi><mi>θ</mi></mrow><annotation encoding="application/x-tex">\Delta W = \tau \Delta\theta</annotation></semantics></math>,
+then for a force applied at point
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(x, y)</annotation></semantics></math>:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>τ</mi><mo>=</mo><mi>x</mi><msub><mi>F</mi><mi>y</mi></msub><mo>−</mo><mi>y</mi><msub><mi>F</mi><mi>x</mi></msub></mrow><annotation encoding="application/x-tex">\tau = xF_y - yF_x</annotation></semantics></math></p>
+<h3 id="geometric-interpretations">Geometric Interpretations</h3>
+<p>As illustrated in <strong>Figure 18-2</strong>, torque can be
+calculated in three equivalent ways:</p>
+<ol type="1">
+<li><strong>Component Form:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>τ</mi><mo>=</mo><mi>x</mi><msub><mi>F</mi><mi>y</mi></msub><mo>−</mo><mi>y</mi><msub><mi>F</mi><mi>x</mi></msub></mrow><annotation encoding="application/x-tex">\tau = xF_y - yF_x</annotation></semantics></math>.</li>
+<li><strong>Tangential Force:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>τ</mi><mo>=</mo><mi>r</mi><msub><mi>F</mi><mtext mathvariant="normal">tang</mtext></msub></mrow><annotation encoding="application/x-tex">\tau = r F_{\text{tang}}</annotation></semantics></math>
+(only the component of force perpendicular to the radius causes
+rotation).</li>
+<li><strong>Lever Arm:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>τ</mi><mo>=</mo><mi>F</mi><mo>⋅</mo><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">lever arm</mtext><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\tau = F \cdot (\text{lever arm})</annotation></semantics></math>,
+where the lever arm is the perpendicular distance from the axis to the
+line of action of the force.</li>
+</ol>
+<h3 id="equilibrium">Equilibrium</h3>
+<p>For an object to be in equilibrium, two conditions must be met:</p>
+<ol type="1">
+<li>The sum of all forces must be zero (<span class="math inline">$\sum
+\FLPF = 0$</span>).</li>
+<li>The sum of all torques about any axis must be zero
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∑</mo><mi>τ</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\sum \tau = 0</annotation></semantics></math>).</li>
+</ol>
+<hr />
+<h2 id="iv-angular-momentum-and-conservation">IV. Angular Momentum and
+Conservation</h2>
+<p>Angular momentum
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>L</mi><annotation encoding="application/x-tex">L</annotation></semantics></math>)
+is the rotational analog of linear momentum
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math>).
+The external torque acting on a system is equal to the rate of change of
+its total angular momentum:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>τ</mi><mo>=</mo><mi>d</mi><mi>L</mi><mi>/</mi><mi>d</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">\tau = dL/dt</annotation></semantics></math>.</p>
+<h3 id="formulas-for-angular-momentum">Formulas for Angular
+Momentum</h3>
+<p>For a single particle (as seen in <strong>Figure 18-3</strong>):</p>
+<ul>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo>=</mo><mi>x</mi><msub><mi>p</mi><mi>y</mi></msub><mo>−</mo><mi>y</mi><msub><mi>p</mi><mi>x</mi></msub></mrow><annotation encoding="application/x-tex">L = xp_y - yp_x</annotation></semantics></math></li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo>=</mo><mi>r</mi><msub><mi>p</mi><mtext mathvariant="normal">tang</mtext></msub></mrow><annotation encoding="application/x-tex">L = r p_{\text{tang}}</annotation></semantics></math></li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo>=</mo><mi>p</mi><mo>⋅</mo><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">momentum lever arm</mtext><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">L = p \cdot (\text{momentum lever arm})</annotation></semantics></math></li>
+</ul>
+<h3 id="moment-of-inertia-i">Moment of Inertia
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>I</mi><annotation encoding="application/x-tex">I</annotation></semantics></math>)</h3>
+<p>For a rigid body, angular momentum is the product of its "inertia for
+turning" and its angular velocity:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo>=</mo><mi>I</mi><mi>ω</mi></mrow><annotation encoding="application/x-tex">L = I\omega</annotation></semantics></math>
+Where the <strong>Moment of Inertia</strong>
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>I</mi><annotation encoding="application/x-tex">I</annotation></semantics></math>)
+is defined as:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mo>=</mo><munder><mo>∑</mo><mi>i</mi></munder><msub><mi>m</mi><mi>i</mi></msub><msubsup><mi>r</mi><mi>i</mi><mn>2</mn></msubsup></mrow><annotation encoding="application/x-tex">I = \sum_i m_i r_i^2</annotation></semantics></math>
+This indicates that the resistance to rotation depends not just on the
+total mass, but on how far that mass is distributed from the axis. As
+shown in <strong>Figure 18-4</strong>, moving masses farther from the
+axis increases
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>I</mi><annotation encoding="application/x-tex">I</annotation></semantics></math>
+and decreases acceleration for a given torque.</p>
+<h3 id="the-law-of-conservation">The Law of Conservation</h3>
+<p>If the net external torque is zero, the total angular momentum is
+conserved
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo>=</mo><mtext mathvariant="normal">constant</mtext></mrow><annotation encoding="application/x-tex">L = \text{constant}</annotation></semantics></math>).</p>
+<ul>
+<li><strong>Variable Moment of Inertia:</strong> Unlike mass, the moment
+of inertia can change (e.g., a rotating person pulling their arms
+in).</li>
+<li><strong>Resulting Motion:</strong> If
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>I</mi><annotation encoding="application/x-tex">I</annotation></semantics></math>
+decreases,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ω</mi><annotation encoding="application/x-tex">\omega</annotation></semantics></math>
+must increase to keep
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>L</mi><annotation encoding="application/x-tex">L</annotation></semantics></math>
+constant
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mn>1</mn></msub><msub><mi>ω</mi><mn>1</mn></msub><mo>=</mo><msub><mi>I</mi><mn>2</mn></msub><msub><mi>ω</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">I_1\omega_1 = I_2\omega_2</annotation></semantics></math>).</li>
+</ul>
+<hr />
+<h2 id="v-key-physical-applications">V. Key Physical Applications</h2>
+<h3 id="planetary-motion-keplers-law">Planetary Motion (Kepler's
+Law)</h3>
+<p>In the case of a planet orbiting the sun, the force is purely radial.
+Since the force is directed toward the sun, the torque about the sun is
+zero. Consequently:</p>
+<ul>
+<li>The angular momentum of the planet is constant.</li>
+<li>This conservation of angular momentum is the physical basis for
+<strong>Kepler’s Law of Equal Areas</strong>, as the rate at which area
+is swept is proportional to the angular momentum.</li>
+</ul>
+<h3 id="action-and-reaction-in-rotation">Action and Reaction in
+Rotation</h3>
+<p>The briefing notes that internal torques within a system cancel out
+because the "action" and "reaction" forces are directed oppositely along
+the same line, resulting in equal and opposite lever arms for any given
+axis.</p>
+<hr />
+<h2 id="important-quotes-with-context">Important Quotes with
+Context</h2>
+<blockquote>
+<p><strong>"The external force is the total mass times the acceleration
+of an imaginary point whose location is <span
+class="math inline">$\FLPR$</span>. This point is called the center of
+mass of the body."</strong></p>
+</blockquote>
+<ul>
+<li><em>Context:</em> Defining the mathematical simplification that
+allows complex objects to be treated as point particles for certain
+translational calculations.</li>
+</ul>
+<blockquote>
+<p><strong>"Torque is going to be so arranged that the theorem of work
+has an absolute analog: force times distance is work, and torque times
+angle is going to be work."</strong></p>
+</blockquote>
+<ul>
+<li><em>Context:</em> Explaining the derivation of torque as a
+quantitative measurement of "twist" based on the energy required to
+rotate a body.</li>
+</ul>
+<blockquote>
+<p><strong>"There is one important difference between mass and moment of
+inertia which is very dramatic. The mass of an object never changes, but
+its moment of inertia can be changed."</strong></p>
+</blockquote>
+<ul>
+<li><em>Context:</em> Describing why conservation of angular momentum
+leads to changes in speed (like a skater spinning faster), whereas
+conservation of linear momentum with a constant mass does not.</li>
+</ul>
+<hr />
+<h2 id="actionable-insights-for-analysis">Actionable Insights for
+Analysis</h2>
+<ul>
+<li><strong>Identify the Axis:</strong> Torque and angular momentum
+values are dependent on the chosen axis. When calculating equilibrium or
+motion, always define the axis clearly.</li>
+<li><strong>Use the Analogy:</strong> When faced with a complex
+rotational problem, substitute the rotational variables
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>θ</mi><mo>,</mo><mi>ω</mi><mo>,</mo><mi>α</mi><mo>,</mo><mi>τ</mi><mo>,</mo><mi>I</mi><mo>,</mo><mi>L</mi></mrow><annotation encoding="application/x-tex">\theta, \omega, \alpha, \tau, I, L</annotation></semantics></math>)
+into known linear formulas
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>,</mo><mi>v</mi><mo>,</mo><mi>a</mi><mo>,</mo><mi>F</mi><mo>,</mo><mi>m</mi><mo>,</mo><mi>p</mi></mrow><annotation encoding="application/x-tex">s, v, a, F, m, p</annotation></semantics></math>).</li>
+<li><strong>Check for External Torque:</strong> To determine if angular
+momentum is conserved, verify if there are any forces acting at a
+distance from the axis that have a tangential component.</li>
+<li><strong>Assess Mass Distribution:</strong> When predicting the
+behavior of a system (like the falling weight in <strong>Figure
+18-4</strong>), consider how changes in mass distribution will affect
+the moment of inertia and, consequently, the angular acceleration.</li>
+</ul>
+    </article>
+  </main>
+</body>
+</html>

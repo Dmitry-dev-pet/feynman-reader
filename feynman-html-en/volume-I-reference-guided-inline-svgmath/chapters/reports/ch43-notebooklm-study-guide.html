@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Study Guide: Diffusion and Kinetic Theory - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="en">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch43.html#study-panel">Back to chapter</a>
+      <a class="nav-btn" href="../../index.html">Volume contents</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1 id="study-guide-diffusion-and-kinetic-theory">Study Guide: Diffusion
+and Kinetic Theory</h1>
+<p>This study guide examines the molecular mechanisms of diffusion,
+mobility, and conductivity in gases that are near, but not exactly in,
+thermal equilibrium. It explores the behavior of individual molecules to
+explain macroscopic phenomena such as electric current in gases and
+thermal conduction.</p>
+<hr />
+<h2 id="i-key-concepts">I. Key Concepts</h2>
+<h3 id="1-molecular-collisions-and-probability">1. Molecular Collisions
+and Probability</h3>
+<p>In a gas, molecules undergo a random sequence of collisions. The
+frequency and timing of these collisions are fundamental to
+understanding transport processes:</p>
+<ul>
+<li><strong>Mean Collision Time
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>τ</mi><annotation encoding="application/x-tex">\tau</annotation></semantics></math>):</strong>
+The average time interval between successive collisions for a single
+molecule.</li>
+<li><strong>Survival Probability:</strong> The probability that a
+molecule will go for a time
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math>
+without a collision is given by the exponential decay
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msup><mi>e</mi><mrow><mi>−</mi><mi>t</mi><mi>/</mi><mi>τ</mi></mrow></msup></mrow><annotation encoding="application/x-tex">P(t) = e^{-t/\tau}</annotation></semantics></math>.</li>
+<li><strong>Stationary Property:</strong> Surprisingly, the average time
+from <em>any</em> arbitrary starting instant to the next collision is
+also exactly
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>τ</mi><annotation encoding="application/x-tex">\tau</annotation></semantics></math>.</li>
+</ul>
+<h3 id="2-the-mean-free-path-l">2. The Mean Free Path
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>l</mi><annotation encoding="application/x-tex">l</annotation></semantics></math>)</h3>
+<p>The mean free path is the average distance a particle travels between
+collisions.</p>
+<ul>
+<li><strong>Geometric Relationship:</strong> It is defined by the
+product of the mean velocity and the mean collision time:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>l</mi><mo>=</mo><mi>v</mi><mi>τ</mi></mrow><annotation encoding="application/x-tex">l = v\tau</annotation></semantics></math>.</li>
+<li><strong>Collision Cross Section
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>σ</mi><mi>c</mi></msub><annotation encoding="application/x-tex">\sigma_c</annotation></semantics></math>):</strong>
+This represents the effective "target size" of a molecule. For spherical
+molecules, it is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>π</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>r</mi><mn>1</mn></msub><mo>+</mo><msub><mi>r</mi><mn>2</mn></msub><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\pi(r_1 + r_2)^2</annotation></semantics></math>.</li>
+<li><strong>Density Dependency:</strong> The mean free path is inversely
+proportional to the density of the gas
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>n</mi><mn>0</mn></msub><annotation encoding="application/x-tex">n_0</annotation></semantics></math>)
+and the cross section:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>σ</mi><mi>c</mi></msub><msub><mi>n</mi><mn>0</mn></msub><mi>l</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\sigma_c n_0 l = 1</annotation></semantics></math>.</li>
+</ul>
+<h3 id="3-mobility-mu-and-drift-speed">3. Mobility
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>μ</mi><annotation encoding="application/x-tex">\mu</annotation></semantics></math>)
+and Drift Speed</h3>
+<p>When a "special" molecule (such as an ion) is subjected to an
+external force
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>F</mi><annotation encoding="application/x-tex">F</annotation></semantics></math>,
+it develops a net motion called "drift" superimposed on its random
+thermal motion.</p>
+<ul>
+<li><strong>Drift Velocity:</strong> The average velocity picked up
+between collisions is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>v</mi><mtext mathvariant="normal">drift</mtext></msub><mo>=</mo><mi>F</mi><mi>τ</mi><mi>/</mi><mi>m</mi></mrow><annotation encoding="application/x-tex">v_{\text{drift}} = F\tau/m</annotation></semantics></math>.</li>
+<li><strong>Mobility:</strong> Defined as the ratio of drift velocity to
+the applied force
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>=</mo><msub><mi>v</mi><mtext mathvariant="normal">drift</mtext></msub><mi>/</mi><mi>F</mi></mrow><annotation encoding="application/x-tex">\mu = v_{\text{drift}}/F</annotation></semantics></math>).
+It is mathematically expressed as
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>=</mo><mi>τ</mi><mi>/</mi><mi>m</mi></mrow><annotation encoding="application/x-tex">\mu = \tau/m</annotation></semantics></math>.</li>
+<li><strong>Forgetting Time:</strong> For heavy molecules that do not
+lose all momentum in a single collision,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>τ</mi><annotation encoding="application/x-tex">\tau</annotation></semantics></math>
+is interpreted as the "forgetting time"—the average time required to
+randomize the molecule’s forward momentum.</li>
+</ul>
+<h3 id="4-diffusion-and-the-einstein-relation">4. Diffusion and the
+Einstein Relation</h3>
+<p>Diffusion is the slow spreading of "special" molecules through a
+background gas due to random molecular motions rather than convection
+currents.</p>
+<ul>
+<li><strong>Diffusion Coefficient
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>D</mi><annotation encoding="application/x-tex">D</annotation></semantics></math>):</strong>
+Relates the molecular current
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>J</mi><mi>x</mi></msub><annotation encoding="application/x-tex">J_x</annotation></semantics></math>)
+to the density gradient
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><msub><mi>n</mi><mi>a</mi></msub><mi>/</mi><mi>d</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">dn_a/dx</annotation></semantics></math>).
+For gases,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mi>l</mi><mi>v</mi></mrow><annotation encoding="application/x-tex">D = \frac{1}{3}lv</annotation></semantics></math>.</li>
+<li><strong>The Einstein Relation:</strong> A fundamental link between
+mobility and diffusion:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mo>=</mo><mi>μ</mi><mi>k</mi><mi>T</mi></mrow><annotation encoding="application/x-tex">D = \mu kT</annotation></semantics></math>.
+This relation is universally valid because it is derived from the
+balance of drift and diffusion currents in an equilibrium state.</li>
+</ul>
+<hr />
+<h2 id="ii-essential-mathematical-formulas">II. Essential Mathematical
+Formulas</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Concept</th>
+<th style="text-align: left;">Equation</th>
+<th style="text-align: left;">Variables</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Collision
+Probability</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msup><mi>e</mi><mrow><mi>−</mi><mi>t</mi><mi>/</mi><mi>τ</mi></mrow></msup></mrow><annotation encoding="application/x-tex">P(t) = e^{-t/\tau}</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>τ</mi><annotation encoding="application/x-tex">\tau</annotation></semantics></math>
+= mean time</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mean Free Path</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>l</mi><mo>=</mo><mfrac><mn>1</mn><mrow><msub><mi>σ</mi><mi>c</mi></msub><msub><mi>n</mi><mn>0</mn></msub></mrow></mfrac></mrow><annotation encoding="application/x-tex">l = \frac{1}{\sigma_c n_0}</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>σ</mi><mi>c</mi></msub><annotation encoding="application/x-tex">\sigma_c</annotation></semantics></math>
+= cross section;
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>n</mi><mn>0</mn></msub><annotation encoding="application/x-tex">n_0</annotation></semantics></math>
+= density</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Drift Velocity</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>v</mi><mtext mathvariant="normal">drift</mtext></msub><mo>=</mo><mi>μ</mi><mi>F</mi></mrow><annotation encoding="application/x-tex">v_{\text{drift}} = \mu F</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>μ</mi><annotation encoding="application/x-tex">\mu</annotation></semantics></math>
+= mobility;
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>F</mi><annotation encoding="application/x-tex">F</annotation></semantics></math>
+= force</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mobility</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>=</mo><mi>τ</mi><mi>/</mi><mi>m</mi></mrow><annotation encoding="application/x-tex">\mu = \tau/m</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math>
+= mass of the molecule</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Diffusion Current</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>J</mi><mi>x</mi></msub><mo>=</mo><mi>−</mi><mi>D</mi><mfrac><mrow><mi>d</mi><msub><mi>n</mi><mi>a</mi></msub></mrow><mrow><mi>d</mi><mi>x</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">J_x = -D \frac{dn_a}{dx}</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>D</mi><annotation encoding="application/x-tex">D</annotation></semantics></math>
+= diffusion coefficient</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Einstein Relation</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mo>=</mo><mi>μ</mi><mi>k</mi><mi>T</mi></mrow><annotation encoding="application/x-tex">D = \mu kT</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math>
+= Boltzmann constant;
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>T</mi><annotation encoding="application/x-tex">T</annotation></semantics></math>
+= temperature</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Thermal Conductivity</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>κ</mi><mo>=</mo><mfrac><mn>1</mn><mrow><mi>γ</mi><mo>−</mo><mn>1</mn></mrow></mfrac><mfrac><mrow><mi>k</mi><mi>v</mi></mrow><msub><mi>σ</mi><mi>c</mi></msub></mfrac></mrow><annotation encoding="application/x-tex">\kappa = \frac{1}{\gamma - 1} \frac{kv}{\sigma_c}</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>γ</mi><annotation encoding="application/x-tex">\gamma</annotation></semantics></math>
+= specific heat ratio</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="iii-common-misconceptions">III. Common Misconceptions</h2>
+<h3 id="1-the-average-velocity-error-in-drift-calculations">1. The
+"Average Velocity" Error in Drift Calculations</h3>
+<p>A common error in textbooks is to assume the drift velocity is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo stretchy="false" form="prefix">(</mo><mi>F</mi><mi>/</mi><mi>m</mi><mo stretchy="false" form="postfix">)</mo><mi>τ</mi></mrow><annotation encoding="application/x-tex">\frac{1}{2}(F/m)\tau</annotation></semantics></math>.
+This assumes all molecules travel for exactly the time
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>τ</mi><annotation encoding="application/x-tex">\tau</annotation></semantics></math>
+and start from zero velocity. In reality, because shorter intervals
+between collisions occur more frequently but contribute less to the
+drift, the proper statistical distribution of free times cancels the
+factor of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>1</mn><mn>2</mn></mfrac><annotation encoding="application/x-tex">\frac{1}{2}</annotation></semantics></math>,
+making
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>v</mi><mtext mathvariant="normal">drift</mtext></msub><mo>=</mo><mi>F</mi><mi>τ</mi><mi>/</mi><mi>m</mi></mrow><annotation encoding="application/x-tex">v_{\text{drift}} = F\tau/m</annotation></semantics></math>
+the correct result.</p>
+<h3 id="2-density-and-thermal-conductivity">2. Density and Thermal
+Conductivity</h3>
+<p>It is often intuitively assumed that a denser gas will conduct heat
+faster because there are more molecules to carry energy. However, in the
+kinetic theory of gases, <strong>thermal conductivity is independent of
+density</strong>. While a higher density provides more "carriers," it
+simultaneously shortens the mean free path, limiting how far each
+carrier can transport energy. These two effects exactly compensate for
+one another.</p>
+<h3 id="3-diffusion-vs-convection">3. Diffusion vs. Convection</h3>
+<p>Diffusion is the transport of molecules solely through random
+individual molecular motions. It is frequently confused with "gross
+transport" or convection (wind currents). In most practical scenarios,
+gases mix through a combination of both, but kinetic theory specifically
+analyzes the case where no macroscopic wind currents exist.</p>
+<hr />
+<h2 id="iv-short-answer-practice-questions">IV. Short-Answer Practice
+Questions</h2>
+<ol type="1">
+<li><strong>How does the probability of a molecule avoiding a collision
+for a time equal to the mean collision time
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>τ</mi><annotation encoding="application/x-tex">\tau</annotation></semantics></math>)
+compare to 50%?</strong>
+<ul>
+<li><em>Answer:</em> The probability is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup><annotation encoding="application/x-tex">e^{-1}</annotation></semantics></math>,
+which is approximately 0.37 (37%). Therefore, the chance is less than
+one-half.</li>
+</ul></li>
+<li><strong>What physical factors determine the "mobility" of a particle
+in a gas?</strong>
+<ul>
+<li><em>Answer:</em> Mobility is determined by the mean time between
+collisions
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>τ</mi><annotation encoding="application/x-tex">\tau</annotation></semantics></math>)
+and the mass
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math>)
+of the particle
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>=</mo><mi>τ</mi><mi>/</mi><mi>m</mi></mrow><annotation encoding="application/x-tex">\mu = \tau/m</annotation></semantics></math>).</li>
+</ul></li>
+<li><strong>Under what specific condition does the formula for thermal
+conductivity
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>κ</mi><annotation encoding="application/x-tex">\kappa</annotation></semantics></math>)
+fail?</strong>
+<ul>
+<li><em>Answer:</em> It fails when the gas density is so low that the
+mean free path is no longer much smaller than the dimensions of the
+container (i.e., molecules can travel wall-to-wall without
+colliding).</li>
+</ul></li>
+<li><strong>In the context of ionic conductivity, how does the current
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>I</mi><annotation encoding="application/x-tex">I</annotation></semantics></math>)
+relate to the applied voltage
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math>)?</strong>
+<ul>
+<li><em>Answer:</em> The current is proportional to the voltage
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mo>∝</mo><mi>V</mi></mrow><annotation encoding="application/x-tex">I \propto V</annotation></semantics></math>),
+which follows the form of Ohm's Law.</li>
+</ul></li>
+</ol>
+<hr />
+<h2 id="v-essay-prompts-for-deeper-exploration">V. Essay Prompts for
+Deeper Exploration</h2>
+<ol type="1">
+<li><strong>The Synthesis of Drift and Diffusion:</strong> Explain how
+the Einstein Relation
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mo>=</mo><mi>μ</mi><mi>k</mi><mi>T</mi></mrow><annotation encoding="application/x-tex">D = \mu kT</annotation></semantics></math>)
+connects two seemingly different processes. In your essay, describe how
+the "internal" forces of random collisions (diffusion) and "external"
+forces (mobility) are reconciled using the laws of statistical
+mechanics.</li>
+<li><strong>The Statistical Nature of the Mean Free Path:</strong> Using
+the concept of collision cross sections, derive the relationship
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>σ</mi><mi>c</mi></msub><msub><mi>n</mi><mn>0</mn></msub><mi>l</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\sigma_c n_0 l = 1</annotation></semantics></math>.
+Discuss why some molecules travel much further than the mean free path
+while others travel less, and how this relates to the "total area"
+covered by scatterers in a volume.</li>
+</ol>
+<hr />
+<h2 id="vi-glossary-of-terms">VI. Glossary of Terms</h2>
+<ul>
+<li><strong>Background Molecules:</strong> The majority molecules in a
+gas that provide the environment through which "special" molecules
+move.</li>
+<li><strong>Collision Cross Section
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>σ</mi><mi>c</mi></msub><annotation encoding="application/x-tex">\sigma_c</annotation></semantics></math>):</strong>
+The effective area within which the center of a particle must be located
+to result in a collision with another molecule.</li>
+<li><strong>Diffusion:</strong> The process by which molecules spread
+from regions of high concentration to low concentration due to random
+thermal motion.</li>
+<li><strong>Drift Velocity:</strong> The net average speed of a particle
+in the direction of an applied force, superimposed over its random
+motion.</li>
+<li><strong>Mean Free Path
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>l</mi><annotation encoding="application/x-tex">l</annotation></semantics></math>):</strong>
+The average distance a molecule travels between two successive
+collisions.</li>
+<li><strong>Mobility
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>μ</mi><annotation encoding="application/x-tex">\mu</annotation></semantics></math>):</strong>
+The ratio of the drift velocity to the applied force; a measure of how
+easily a particle moves through a medium under influence.</li>
+<li><strong>Special Molecules
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>S</mi><annotation encoding="application/x-tex">S</annotation></semantics></math>-molecules):</strong>
+Molecules that differ from the background gas (e.g., different mass,
+chemical type, or electric charge).</li>
+<li><strong>Thermal Conductivity
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>κ</mi><annotation encoding="application/x-tex">\kappa</annotation></semantics></math>):</strong>
+The measure of a material's ability to conduct heat, defined as the
+ratio of the rate of energy flow to the temperature gradient.</li>
+</ul>
+    </article>
+  </main>
+</body>
+</html>

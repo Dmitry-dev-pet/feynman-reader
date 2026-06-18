@@ -1,0 +1,194 @@
+# Figure context for Chapter 44. The Laws of Thermodynamics
+
+SOURCE: Feynman Lectures on Physics, Volume I, Chapter 44
+LANGUAGE: en
+SOURCE_URL: https://www.feynmanlectures.caltech.edu/I_44.html
+
+NotebookLM use: pair this file with the clean chapter text and the PNG image files below. The visual descriptions here are inferred from the surrounding lecture text; the PNG files are included so NotebookLM can inspect the diagrams directly when image sources are uploaded.
+
+## Ch44-F1: Fig. 44–1.The heated rubber band.
+
+Section: 44–1 Heat engines; the first law
+Image file: images/Ch44-F1.png
+
+Context before the figure:
+
+Let us consider another example. Many people are familiar with this interesting property of rubber: If we take a rubber band and pull it, it gets warm. If one puts it between his lips, for example, and pulls it out, he can feel a distinct warming, and this warming is reversible in the sense that if he relaxes the rubber band quickly while it is between his lips, it is distinctly cooled. That means that when we stretch a rubber band it heats, and when we release the tension of the band it cools. Now our instincts might suggest that if we heated a band, it might pull: that the fact that pulling a band heats it might imply that heating a band should cause it to contract. And, in fact, if we apply a gas flame to a rubber band holding a weight, we will see that the band contracts abruptly (Fig.44–1). So it is true that when we heat a rubber band it pulls, and this fact is definitely related...
+
+Context after the figure:
+
+The internal machinery of rubber that causes these effects is quite complicated. We will describe it from a molecular point of view to some extent, although our main purpose in this chapter is to understand the relationship of these effects independently of the molecular model. Nevertheless, we can show from the molecular model that the effects are closely related. One way to understand the behavior of rubber is to recognize that this substance consists of an enormous tangle of long chains of molecules, a kind of “molecular spaghetti,” with one extra complication: between the chains there are cross-links—like spaghetti that is sometimes welded together where it crosses another piece of spaghetti—a grand tangle. When we pull out such a tangle, some of the chains tend to line up along the direction of the pull. At the same time, the chains are in thermal motion, so they hit each other...
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.
+
+## Ch44-F2: Fig. 44–2.The rubber band heat engine.
+
+Section: 44–1 Heat engines; the first law
+Image file: images/Ch44-F2.png
+
+Context before the figure:
+
+We have seen how these two processes, contraction when heated and cooling during relaxation, can be related by the kinetic theory, but it would be a tremendous challenge to determine from the theory the precise relationship between the two. We would have to know how many collisions there were each second and what the chains look like, and we would have to take account of all kinds of other complications. The detailed mechanism is so complex that we cannot, by kinetic theory, really determine exactly what happens; still, a definite relation between the two effects we observe can be worked out without knowing anything about the internal machinery!
+
+Context after the figure:
+
+The whole subject of thermodynamics depends essentially upon the following kind of consideration: because a rubber band is “stronger” at higher temperatures than it is at lower temperatures, it ought to be possible to lift weights, and to move them around, and thus to do work with heat. In fact, we have already seen experimentally that a heated rubber band can lift a weight. The study of the way that one does work with heat is the beginning of the science of thermodynamics. Can we make an engine which uses the heating effect on a rubber band to do work? One can make a silly looking engine that does just this. It consists of a bicycle wheel in which all the spokes are rubber bands (Fig.44–2). If one heats the rubber bands on one side of the wheel with a pair of heat lamps, they become “stronger” than the rubber bands on the other side. The center of gravity of the wheel will be pulled to...
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.
+
+## Ch44-F3: Fig. 44–3.Heat engine.
+
+Section: 44–2 The second law
+Image file: images/Ch44-F3.png
+
+Context before the figure:
+
+Carnot’s analysis of heat engines is quite similar to the argument that we gave about weight-lifting engines in our discussion of the conservation of energy in Chapter4. In fact, that argument was patterned after Carnot’s argument about heat engines, and so the present treatment will sound very much the same.
+
+Context after the figure:
+
+Suppose we build a heat engine that has a “boiler” somewhere at a temperature \(T_1\) . A certain heat \(Q_1\) is taken from the boiler, the steam engine does some work \(W\) , and it then delivers some heat \(Q_2\) into a “condenser” at another temperature \(T_2\) (Fig.44–3). Carnot did not say how much heat, because he did not know the first law, and he did not use the law that \(Q_2\) was equal to \(Q_1\) because he did not believe it. Although everybody thought that, according to the caloric theory, the heats \(Q_1\) and \(Q_2\) would have to be the same, Carnot did not say they were the same—that is part of the cleverness of his argument. If we do use the first law, we find that the heat delivered, \(Q_2\) , is the heat \(Q_1\) that was put in minus the work \(W\) that was done: \[ \begin{equation} \label{Eq:I:44:3} Q_2 = Q_1 - W. \end{equation} \] (If we have some kind of cyclic...
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.
+
+## Ch44-F4: Fig. 44–4.Reversible heat transfer.
+
+Section: 44–3 Reversible engines
+Image file: images/Ch44-F4.png
+
+Context before the figure:
+
+Now we must analyze our engines. One thing is clear: we will lose something if the engines contain devices in which there is friction. The best engine will be a frictionless engine. We assume, then, the same idealization that we did when we studied the conservation of energy; that is, a perfectly frictionless engine.
+
+Context after the figure:
+
+We must also consider the analog of frictionless motion, “frictionless” heat transfer. If we put a hot object at a high temperature against a cold object, so that the heat flows, then it is not possible to make that heat flow in a reverse direction by a very small change in the temperature of either object. But when we have a practically frictionless machine, if we push it with a little force one way, it goes that way, and if we push it with a little force the other way, it goes the other way. We need to find the analog of frictionless motion: heat transfer whose direction we can reverse with only a tiny change. If the difference in temperature is finite, that is impossible, but if one makes sure that heat flows always between two things at essentially the same temperature, with just an infinitesimal difference to make it flow in the desired direction, the flow is said to be reversible...
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.
+
+## Ch44-F5: Fig. 44–5.Steps in Carnot cycle.
+
+Section: 44–3 Reversible engines
+Image file: images/Ch44-F5.png
+
+Context before the figure:
+
+We must also consider the analog of frictionless motion, “frictionless” heat transfer. If we put a hot object at a high temperature against a cold object, so that the heat flows, then it is not possible to make that heat flow in a reverse direction by a very small change in the temperature of either object. But when we have a practically frictionless machine, if we push it with a little force one way, it goes that way, and if we push it with a little force the other way, it goes the other way. We need to find the analog of frictionless motion: heat transfer whose direction we can reverse with only a tiny change. If the difference in temperature is finite, that is impossible, but if one makes sure that heat flows always between two things at essentially the same temperature, with just an infinitesimal difference to make it flow in the desired direction, the flow is said to be reversible...
+
+Context after the figure:
+
+Let us now consider an idealized engine in which all the processes are reversible. To show that such a thing is possible in principle, we will give an example of an engine cycle which may or may not be practical, but which is at least reversible, in the sense of Carnot’s idea. Suppose that we have a gas in a cylinder equipped with a frictionless piston. The gas is not necessarily a perfect gas. The fluid does not even have to be a gas, but to be specific let us say we do have a perfect gas. Also, suppose that we have two heat pads, \(T_1\) and \(T_2\) —great big things that have definite temperatures, \(T_1\) and \(T_2\) . We will suppose in this case that \(T_1\) is higher than \(T_2\) . Let us first heat the gas and at the same time expand it, while it is in contact with the heat pad at \(T_1\) . As we do this, pulling the piston out very slowly as the heat flows into the gas, we will...
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.
+
+## Ch44-F6: Fig. 44–6.The Carnot cycle.
+
+Section: 44–3 Reversible engines
+Image file: images/Ch44-F6.png
+
+Context before the figure:
+
+Let us now consider an idealized engine in which all the processes are reversible. To show that such a thing is possible in principle, we will give an example of an engine cycle which may or may not be practical, but which is at least reversible, in the sense of Carnot’s idea. Suppose that we have a gas in a cylinder equipped with a frictionless piston. The gas is not necessarily a perfect gas. The fluid does not even have to be a gas, but to be specific let us say we do have a perfect gas. Also, suppose that we have two heat pads, \(T_1\) and \(T_2\) —great big things that have definite temperatures, \(T_1\) and \(T_2\) . We will suppose in this case that \(T_1\) is higher than \(T_2\) . Let us first heat the gas and at the same time expand it, while it is in contact with the heat pad at \(T_1\) . As we do this, pulling the piston out very slowly as the heat flows into the gas, we will...
+
+Context after the figure:
+
+To understand what we are doing, we shall use a plot (Fig.44–6) of the pressure of the gas against its volume. As the gas expands, the pressure falls. The curve marked (1) tells us how the pressure and volume change if the temperature is kept fixed at the value \(T_1\) . For an ideal gas this curve would be \(PV = NkT_1\) . During an isothermal expansion the pressure falls as the volume increases until we stop at the point \(b\) . At the same time, a certain heat \(Q_1\) must flow into the gas from the reservoir, for if the gas were expanded without being in contact with the reservoir it would cool off, as we already know. Having completed the isothermal expansion, stopping at the point \(b\) , let us take the cylinder away from the reservoir and continue the expansion. This time we permit no heat to enter the cylinder. Again we perform the expansion slowly, so there is no reason why we...
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.
+
+## Ch44-F7: Fig. 44–7.Reversible engine \(A\) being driven backwards by engine \(B\) .
+
+Section: 44–3 Reversible engines
+Image file: images/Ch44-F7.png
+
+Context before the figure:
+
+Incidentally, it is easy to find out what the total amount of work is, because the work during any expansion is the pressure times the change in volume, \(\int P\,dV\) . On this particular diagram, we have plotted \(P\) vertically and \(V\) horizontally. So if we call the vertical distance \(y\) and the horizontal distance \(x\) , this is \(\int y\,dx\) —in other words, the area under the curve. So the area under each of the numbered curves is a measure of the work done by or on the gas in the corresponding step. It is easy to see that the net work done is the shaded area of the picture.
+
+Context after the figure:
+
+Now that we have given a single example of a reversible machine, we shall suppose that other such engines are also possible. Let us assume that we have a reversible engine \(A\) which takes \(Q_1\) at \(T_1\) , does work \(W\) , and delivers some heat at \(T_2\) . Now let us assume we have any other engine \(B\) , made by man, already designed or not yet invented, made of rubber bands, steam, or whatever, reversible or not, which is designed so that it takes in the same amount of heat \(Q_1\) at \(T_1\) , and rejects the heat at the lower temperature \(T_2\) (Fig.44–7). Assume that engine \(B\) does some work, \(W'\) . Now we shall show that \(W'\) is not greater than \(W\) —that no engine can do more work than a reversible one. Why? Suppose that, indeed, \(W'\) were bigger than \(W\) . Then we could take the heat \(Q_1\) out of the reservoir at \(T_1\) , and with engine \(B\) we could...
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.
+
+## Ch44-F8: Fig. 44–8.Engines 1 and 2 together are equivalent to engine 3.
+
+Section: 44–4 The efficiency of an ideal engine
+Image file: images/Ch44-F8.png
+
+Context before the figure:
+
+We need only obtain formulas for \(Q_1\) and \(Q_2\) (for \(W\) is just \(Q_1 - Q_2\) ), the heats exchanged with the reservoirs during the isothermal expansion or contraction. For example, how much heat \(Q_1\) is absorbed from the reservoir at temperature \(T_1\) during the isothermal expansion [marked (1) in Fig.44–6] from point \(a\) , at pressure \(p_a\) , volume \(V_a\) , temperature \(T_1\) , to point \(b\) with pressure \(p_b\) , volume \(V_b\) , and the same temperature \(T_1\) ? For a perfect gas each molecule has an energy that depends only on the temperature, and since the temperature and the number of molecules are the same at \(a\) and at \(b\) , the internal energy is the same.There is no change in \(U\) ;all the work done by the gas, \[ \begin{equation*} W = \int_a^bp\,dV, \end{equation*} \] during the expansion is energy \(Q_1\) taken from the reservoir. During the...
+
+Context after the figure:
+
+Now we shall see how this universal law could also be obtained by logical argument, without knowing the properties of any specific substances, as follows. Suppose that we have three engines and three temperatures, let us say \(T_1\) , \(T_2\) , and \(T_3\) . Let one engine absorb heat \(Q_1\) from the temperature \(T_1\) and do a certain amount of work \(W_{13}\) , and let it deliver heat \(Q_3\) to the temperature \(T_3\) (Fig.44–8). Let another engine run backwards between \(T_2\) and \(T_3\) . Suppose that we let the second engine be of such a size that it will absorb the same heat \(Q_3\) , and deliver the heat \(Q_2\) . We will have to put a certain amount of work, \(W_{32}\) , into it—negative because the engine is running backwards. When the first machine goes through a cycle, it absorbs heat \(Q_1\) and delivers \(Q_3\) at the temperature \(T_3\) ; then the second machine takes...
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.
+
+## Ch44-F9: Fig. 44–9.Absolute thermodynamic temperature.
+
+Section: 44–5 The thermodynamic temperature
+Image file: images/Ch44-F9.png
+
+Context before the figure:
+
+At this stage we are not going to try to find the formula for the above increasing function of the temperature in terms of our familiar mercury temperature scale, but insteadwe shall define temperature by a new scale. At one time “the temperature” was defined arbitrarily by dividing the expansion of water into even degrees of a certain size. But when one then measures temperature with a mercury thermometer, one finds that the degrees are no longer even. Butnow we can make a definition of temperature which is independent of any particular substance. We can use that function \(f(T)\) , which does not depend on what device we use, because the efficiency of these reversible engines is independent of their working substances. Since the function we found is rising with temperature, we will define thefunction itselfas the temperature, measured in units of the standard one-degree temperature...
+
+Context after the figure:
+
+Now we see that when we have two engines, one working between \(T_1\) and one degree, the other working between \(T_2\) and one degree, delivering the same heat at unit temperature, then the heats absorbed must be related by \[ \begin{equation} \label{Eq:I:44:12} \frac{Q_1}{T_1} = S = \frac{Q_2}{T_2}. \end{equation} \] But that means that if we have a single engine running between \(T_1\) and \(T_2\) , then the result of the whole analysis, the grand finale, is that \(Q_1\) is to \(T_1\) as \(Q_2\) is to \(T_2\) , if the engine absorbs energy \(Q_1\) at temperature \(T_1\) and delivers heat \(Q_2\) at temperature \(T_2\) . Whenever the engine is reversible, this relationship between the heats must follow. That is all there is to it: that is the center of the universe of thermodynamics.
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.
+
+## Ch44-F10: Fig. 44–10.Change in entropy during a reversible transformation.
+
+Section: 44–6 Entropy
+Image file: images/Ch44-F10.png
+
+Context before the figure:
+
+Now it is interesting that besides the pressure, which is a function of the temperature and the volume, and the internal energy, which is a function of temperature and volume, we have found another quantity which is a function of the condition, i.e., the entropy of the substance. Let us try to explain how we compute it, and what we mean when we call it a “function of the condition.” Consider the system in two different conditions, much as we had in the experiment where we did the adiabatic and isothermal expansions. (Incidentally, there is no need that a heat engine have only two reservoirs, it could have three or four different temperatures at which it takes in and delivers heats, and so on.) We can move around on a \(pV\) diagram all over the place, and go from one condition to another. In other words, we could say the gas is in a certain condition \(a\) , and then it goes over to...
+
+Context after the figure:
+
+Let us compute the total amount of entropy which has been delivered. The entropy difference, or the entropy needed to go from \(a\) to \(b\) by this particular reversible transformation, is the total entropy, the total of the entropy taken out of the little reservoirs, and delivered at the unit temperature: \[ \begin{equation} \label{Eq:I:44:16} S_b - S_a = \int_a^b\frac{dQ}{T}. \end{equation} \] The question is, does the entropy difference depend upon the path taken? There is more than one way to go from \(a\) to \(b\) . Remember that in the Carnot cycle we could go from \(a\) to \(c\) in Fig.44–6by first expanding isothermally and then adiabatically; or we could first expand adiabatically and then isothermally. So the question is whether the entropy change which occurs when we go from \(a\) to \(b\) in Fig.44–10is the same on one route as it is on another.It must be the same, because...
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.
+
+## Ch44-F11: Fig. 44–11.Change in entropy in a completely reversible cycle.
+
+Section: 44–6 Entropy
+Image file: images/Ch44-F11.png
+
+Context before the figure:
+
+Let us compute the total amount of entropy which has been delivered. The entropy difference, or the entropy needed to go from \(a\) to \(b\) by this particular reversible transformation, is the total entropy, the total of the entropy taken out of the little reservoirs, and delivered at the unit temperature: \[ \begin{equation} \label{Eq:I:44:16} S_b - S_a = \int_a^b\frac{dQ}{T}. \end{equation} \] The question is, does the entropy difference depend upon the path taken? There is more than one way to go from \(a\) to \(b\) . Remember that in the Carnot cycle we could go from \(a\) to \(c\) in Fig.44–6by first expanding isothermally and then adiabatically; or we could first expand adiabatically and then isothermally. So the question is whether the entropy change which occurs when we go from \(a\) to \(b\) in Fig.44–10is the same on one route as it is on another.It must be the same, because...
+
+Context after the figure:
+
+We can find a function \(S(V,T)\) which has the property that if we compute the change in entropy, as the substance is moved along any reversible path, in terms of the heat rejected at unit temperature, then \[ \begin{equation} \label{Eq:I:44:17} \Delta S = \int\frac{dQ}{T}, \end{equation} \] where \(dQ\) is the heat removed from the substance at temperature \(T\) . This total entropy change is the difference between the entropy calculated at the initial and final points: \[ \begin{equation} \label{Eq:I:44:18} \Delta S = S(V_b,T_b) - S(V_a,T_a) = \int_a^b\frac{dQ}{T}. \end{equation} \] This expression does not completely define the entropy, but rather only thedifferenceof entropy between two different conditions. Only if we can evaluate the entropy for one special condition can we really define \(S\) absolutely.
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.

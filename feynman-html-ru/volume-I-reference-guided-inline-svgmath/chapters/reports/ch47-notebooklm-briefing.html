@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Глава 47. Звук. Волновое уравнение: Аналитический отчет - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch47.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1 id="глава-47-звук-волновое-уравнение-аналитический-отчет">Глава 47.
+Звук. Волновое уравнение: Аналитический отчет</h1>
+<p>Этот отчет представляет собой глубокий анализ физических принципов,
+математических выводов и ключевых концепций, изложенных в главе 47
+«Лекций по физике» Фейнмана. Глава посвящена природе звука как
+механического волнового явления и выводу волнового уравнения.</p>
+<h2 id="i-краткий-обзор-executive-summary">I. Краткий обзор (Executive
+Summary)</h2>
+<p>В данном материале исследуется феномен волн на примере звука.
+Основное внимание уделяется выводу волнового уравнения, исходя из
+фундаментальных законов механики Ньютона и свойств газов.
+Рассматриваются три ключевых физических аспекта: движение газа и
+изменение его плотности, связь плотности с давлением и влияние градиента
+давления на движение среды.</p>
+<p>Ключевым результатом анализа является установление связи между
+макроскопической скоростью звука и термодинамическими свойствами среды
+(температурой, молекулярным весом), а также подтверждение принципа
+суперпозиции для звуковых волн.</p>
+<h2 id="ii-анализ-ключевых-тем">II. Анализ ключевых тем</h2>
+<h3 id="1-общность-волновых-явлений">1. Общность волновых явлений</h3>
+<p>Звук рассматривается не как изолированное явление, а как частный
+случай волнового движения, общие принципы которого применимы в
+электродинамике, квантовой механике (волны материи) и сейсмологии.</p>
+<ul>
+<li><strong>Интерференция во времени:</strong> В отличие от
+пространственной интерференции, интерференция во времени от двух
+источников с близкими частотами приводит к возникновению
+<strong>биений</strong> (фиг. 47.1).</li>
+<li><strong>Типы волн:</strong> Выделяются продольные (звук в газах) и
+поперечные волны, а также волны в твердых телах и на поверхности
+воды.</li>
+</ul>
+<h3 id="2-математическое-описание-распространения">2. Математическое
+описание распространения</h3>
+<p>Для волн, скорость которых
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>c</mi><annotation encoding="application/x-tex">c</annotation></semantics></math>)
+не зависит от длины волны (недисперсионные среды), положение возмущения
+в момент времени
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math>
+описывается функцией аргумента
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><mi>c</mi><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(x - ct)</annotation></semantics></math>.</p>
+<ul>
+<li><strong>Смысл аргумента:</strong> Если в момент
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">t=0</annotation></semantics></math>
+максимум функции находился в точке
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>,
+то спустя время
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math>
+он сместится в точку
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>+</mo><mi>c</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">x + ct</annotation></semantics></math>
+(фиг. 47.2).</li>
+<li><strong>Принцип суперпозиции:</strong> Благодаря линейности
+волнового уравнения, сумма двух независимых волн также является
+решением, что позволяет звукам «проходить» друг сквозь друга без
+искажений.</li>
+</ul>
+<h3 id="3-физические-условия-применимости">3. Физические условия
+применимости</h3>
+<p>Модель звука как непрерывной среды справедлива только тогда,
+когда:</p>
+<ul>
+<li>Расстояние между гребнями и впадинами давления много больше
+<strong>длины свободного пробега</strong> молекул.</li>
+<li>В противном случае молекулы просто выровняли бы плотность, и волна
+бы не возникла.</li>
+<li>Звуковое смещение
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>χ</mi><annotation encoding="application/x-tex">\chi</annotation></semantics></math>)
+рассматривается как движение центра масс малого элемента объема
+газа.</li>
+</ul>
+<h2 id="iii-вывод-волнового-уравнения">III. Вывод волнового
+уравнения</h2>
+<p>Вывод базируется на объединении трех физических свойств
+(уравнений).</p>
+<h3 id="таблица-1-три-составляющие-физики-звука">Таблица 1. Три
+составляющие физики звука</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Свойство</th>
+<th style="text-align: left;">Физическая суть</th>
+<th style="text-align: left;">Математическое выражение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>I. Кинематика</strong></td>
+<td style="text-align: left;">Изменение плотности из-за неравномерного
+смещения
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>χ</mi><annotation encoding="application/x-tex">\chi</annotation></semantics></math>)</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ρ</mi><mi>e</mi></msub><mo>=</mo><mi>−</mi><msub><mi>ρ</mi><mn>0</mn></msub><mfrac><mrow><mi>∂</mi><mi>χ</mi></mrow><mrow><mi>∂</mi><mi>x</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\rho_e = -\rho_0 \frac{\partial \chi}{\partial x}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>II. Статика (Газовые
+законы)</strong></td>
+<td style="text-align: left;">Избыточное давление пропорционально
+избыточной плотности</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>P</mi><mi>e</mi></msub><mo>=</mo><mi>κ</mi><msub><mi>ρ</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">P_e = \kappa \rho_e</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>III. Динамика</strong></td>
+<td style="text-align: left;">Разность давлений (сила) вызывает
+ускорение массы</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ρ</mi><mn>0</mn></msub><mfrac><mrow><msup><mi>∂</mi><mn>2</mn></msup><mi>χ</mi></mrow><mrow><mi>∂</mi><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac><mo>=</mo><mi>−</mi><mfrac><mrow><mi>∂</mi><msub><mi>P</mi><mi>e</mi></msub></mrow><mrow><mi>∂</mi><mi>x</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\rho_0 \frac{\partial^2 \chi}{\partial t^2} = -\frac{\partial P_e}{\partial x}</annotation></semantics></math></td>
+</tr>
+</tbody>
+</table>
+<h3 id="результирующее-уравнение">Результирующее уравнение</h3>
+<p>Комбинируя эти уравнения, получаем <strong>волновое
+уравнение</strong>:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><msup><mi>∂</mi><mn>2</mn></msup><mi>χ</mi></mrow><mrow><mi>∂</mi><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac><mo>=</mo><mfrac><mn>1</mn><msubsup><mi>c</mi><mi>s</mi><mn>2</mn></msubsup></mfrac><mfrac><mrow><msup><mi>∂</mi><mn>2</mn></msup><mi>χ</mi></mrow><mrow><mi>∂</mi><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{\partial^2 \chi}{\partial x^2} = \frac{1}{c_s^2} \frac{\partial^2 \chi}{\partial t^2}</annotation></semantics></math>
+Где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>c</mi><mi>s</mi><mn>2</mn></msubsup><mo>=</mo><mi>κ</mi><mo>=</mo><mfrac><mrow><mi>d</mi><mi>P</mi></mrow><mrow><mi>d</mi><mi>ρ</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">c_s^2 = \kappa = \frac{dP}{d\rho}</annotation></semantics></math>
+— квадрат скорости звука.</p>
+<h2 id="iv-визуальный-анализ-по-материалам-фигур">IV. Визуальный анализ
+(по материалам фигур)</h2>
+<ul>
+<li><strong>Фиг. 47.1 (Биения):</strong> Демонстрирует, как сложение
+двух волн близкой частоты создает результирующую амплитуду, пульсирующую
+во времени.</li>
+<li><strong>Фиг. 47.2 (Движение волны):</strong> Показывает смещение
+профиля волны на расстояние
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">ct</annotation></semantics></math>
+за время
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math>.</li>
+<li><strong>Фиг. 47.3 (Изменение объема):</strong> Иллюстрирует, как
+разница в смещениях
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>χ</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\chi(x, t)</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>χ</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>+</mo><mi mathvariant="normal">Δ</mi><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\chi(x + \Delta x, t)</annotation></semantics></math>
+приводит к деформации элементарного объема
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">\Delta x</annotation></semantics></math>,
+что и меняет плотность.</li>
+<li><strong>Фиг. 47.4 (Градиент давления):</strong> Показывает силы,
+действующие на слой воздуха толщиной
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">\Delta x</annotation></semantics></math>.
+Сила слева
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">P(x, t)</annotation></semantics></math>
+и сила справа
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>+</mo><mi mathvariant="normal">Δ</mi><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">P(x + \Delta x, t)</annotation></semantics></math>
+создают результирующую силу, пропорциональную
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mfrac><mrow><mi>∂</mi><mi>P</mi></mrow><mrow><mi>∂</mi><mi>x</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">-\frac{\partial P}{\partial x}</annotation></semantics></math>.</li>
+</ul>
+<h2 id="v-скорость-звука-термодинамический-аспект">V. Скорость звука:
+Термодинамический аспект</h2>
+<p>Важнейшим уточнением в главе является переход от расчетов Ньютона к
+расчетам Лапласа.</p>
+<ul>
+<li><strong>Ошибка Ньютона:</strong> Предполагал, что процесс
+изотермический (температура не меняется).</li>
+<li><strong>Поправка Лапласа:</strong> Процесс в звуковой волне
+<strong>адиабатический</strong> (теплообмен не успевает произойти).</li>
+<li><strong>Итоговая формула скорости:</strong>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>c</mi><mi>s</mi><mn>2</mn></msubsup><mo>=</mo><mfrac><mrow><mi>γ</mi><mi>P</mi></mrow><mi>ρ</mi></mfrac><mo>=</mo><mfrac><mrow><mi>γ</mi><mi>R</mi><mi>T</mi></mrow><mi>μ</mi></mfrac></mrow><annotation encoding="application/x-tex">c_s^2 = \frac{\gamma P}{\rho} = \frac{\gamma RT}{\mu}</annotation></semantics></math>
+<ul>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>γ</mi><annotation encoding="application/x-tex">\gamma</annotation></semantics></math>
+— коэффициент адиабаты (1.4 для воздуха).</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>T</mi><annotation encoding="application/x-tex">T</annotation></semantics></math>
+— абсолютная температура.</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>μ</mi><annotation encoding="application/x-tex">\mu</annotation></semantics></math>
+— молекулярный вес.</li>
+</ul></li>
+</ul>
+<p><strong>Связь с молекулярной скоростью:</strong> Скорость звука имеет
+тот же порядок величины, что и средняя скорость молекул
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>v</mi><mtext mathvariant="normal">av</mtext></msub><annotation encoding="application/x-tex">v_{\text{av}}</annotation></semantics></math>),
+и составляет примерно:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>c</mi><mi>s</mi></msub><mo>=</mo><msqrt><mfrac><mi>γ</mi><mn>3</mn></mfrac></msqrt><msub><mi>v</mi><mtext mathvariant="normal">av</mtext></msub></mrow><annotation encoding="application/x-tex">c_s = \sqrt{\frac{\gamma}{3}} v_{\text{av}}</annotation></semantics></math>
+Это подтверждает, что возмущение передается посредством теплового
+движения молекул.</p>
+<h2 id="vi-важные-цитаты-и-их-контекст">VI. Важные цитаты и их
+контекст</h2>
+<blockquote>
+<p><em>«Метод объяснения новых явлений с помощью старых, законы которых
+уже известны, представляет собой, пожалуй, величайшее искусство
+математической физики».</em> <strong>Контекст:</strong> Описывает
+процесс вывода уравнений для звука (новое явление) на базе законов
+Ньютона (старое знание).</p>
+</blockquote>
+<blockquote>
+<p><em>«Способ Ньютона дает изотермическую скорость звука, что
+неправильно. Правильное вычисление было сделано позже Лапласом...»</em>
+<strong>Контекст:</strong> Разъяснение важности учета адиабатичности
+процесса из-за отсутствия теплообмена между областями сжатия и
+разрежения.</p>
+</blockquote>
+<h2 id="vii-ключевые-выводы">VII. Ключевые выводы</h2>
+<ol type="1">
+<li><strong>Независимость от частоты:</strong> В воздухе (в первом
+приближении) скорость звука не зависит от частоты, что позволяет нам
+слышать музыку и речь без временных искажений разных тонов.</li>
+<li><strong>Линейность:</strong> Звуковые волны подчиняются принципу
+суперпозиции при малых амплитудах (до 100-120 дБ), что математически
+обусловлено линейностью волнового уравнения.</li>
+<li><strong>Температурная зависимость:</strong> Скорость звука зависит
+исключительно от температуры газа и его состава
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>μ</mi><annotation encoding="application/x-tex">\mu</annotation></semantics></math>),
+но не от давления или плотности по отдельности.</li>
+<li><strong>Аналогия со светом:</strong> Волновое уравнение для звука
+структурно идентично волновому уравнению для света, выводимому из
+уравнений Максвелла.</li>
+</ol>
+    </article>
+  </main>
+</body>
+</html>

@@ -1,0 +1,46 @@
+SOURCE: Feynman Lectures on Physics, Volume I, Chapter 21
+LANGUAGE: en
+SECTION: 21–5 Forced oscillations
+SOURCE_URL: https://www.feynmanlectures.caltech.edu/I_21.html
+
+# 21–5 Forced oscillations
+
+Next we shall discuss theforced harmonic oscillator, i.e., one in which there is an external driving force acting. The equation then is the following:
+\[
+\begin{equation}
+\label{Eq:I:21:8}
+m\,d^2x/dt^2=-kx+F(t).
+\end{equation}
+\]
+We would like to find out what happens in these circumstances. The external driving force can have various kinds of functional dependence on the time; the first one that we shall analyze is very simple—we shall suppose that the force is oscillating:
+\[
+\begin{equation}
+\label{Eq:I:21:9}
+F(t)=F_0\cos\omega t.
+\end{equation}
+\]
+Notice, however, that this \(\omega\) is not necessarily \(\omega_0\) : we have \(\omega\) under our control; the forcing may be done at different frequencies. So we try to solve Eq. (21.8) with the special force (21.9). What is the solution of (21.8)? One special solution, (we shall discuss the more general cases later) is
+\[
+\begin{equation}
+\label{Eq:I:21:10}
+x=C\cos\omega t,
+\end{equation}
+\]
+where the constant is to be determined. In other words, we might suppose that if we kept pushing back and forth, the mass would follow back and forth in step with the force. We can try it anyway. So we put (21.10) and (21.9) into (21.8), and get
+\[
+\begin{equation}
+\label{Eq:I:21:11}
+-m\omega^2C\cos\omega t=-m\omega_0^2C\cos\omega t+F_0\cos\omega t.
+\end{equation}
+\]
+We have also put in \(k = m\omega_0^2\) , so that we will understand the equation better at the end. Now because the cosine appears everywhere, we can divide it out, and that shows that (21.10) is, in fact, a solution, provided we pick \(C\) just right. The answer is that \(C\) must be
+\[
+\begin{equation}
+\label{Eq:I:21:12}
+C=F_0/m(\omega_0^2-\omega^2).
+\end{equation}
+\]
+That is, \(m\) oscillates at the same frequency as the force, but with an amplitude which depends on the frequency of the force, and also upon the frequency of the natural motion of the oscillator. It means, first, that if \(\omega\) is very small compared with \(\omega_0\) , then the displacement and the force are in the same direction. On the other hand, if we shake it back and forth very fast, then (21.12) tells us that \(C\) is negative if \(\omega\) is above the natural frequency \(\omega_0\) of the harmonic oscillator. (We will call \(\omega_0\) the natural frequency of the harmonic oscillator, and \(\omega\) the applied frequency.) At very high frequency the denominator may become very large, and there is then not much amplitude.
+Of course the solution we have found is the solution only if things are started just right, for otherwise there is a part which usually dies out after a while. This other part is called thetransientresponse to \(F(t)\) , while (21.10) and (21.12) are called thesteady-stateresponse.
+According to our formula (21.12), a very remarkable thing should also occur: if \(\omega\) is almost exactly the same as \(\omega_0\) , then \(C\) should approach infinity. So if we adjust the frequency of the force to be “in time” with the natural frequency, then we should get an enormous displacement. This is well known to anybody who has pushed a child on a swing. It does not work very well to close our eyes and push at a certain speed at random. If we happen to get the right timing, then the swing goes very high, but if we have the wrong timing, then sometimes we may be pushing when we should be pulling, and so on, and it does not work.
+If we make \(\omega\) exactly equal to \(\omega_0\) , we find that it should oscillate at aninfiniteamplitude, which is, of course, impossible. The reason it does not is that something goes wrong with the equation, there are some other frictional terms, and other forces, which are not in (21.8) but which occur in the real world. So the amplitude does not reach infinity for some reason; it may be that the spring breaks!

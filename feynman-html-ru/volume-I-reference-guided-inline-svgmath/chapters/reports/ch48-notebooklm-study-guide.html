@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Глава 48. Биения: Учебный конспект - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch48.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1 id="глава-48-биения-учебный-конспект">Глава 48. Биения: Учебный
+конспект</h1>
+<p>Данный конспект составлен на основе материалов лекции Ричарда
+Фейнмана и посвящен явлению биений, возникающему при наложении волн с
+близкими частотами, а также анализу модуляции, групповой скорости и их
+применению в технике и квантовой механике.</p>
+<h2 id="1-основные-концепции">1. Основные концепции</h2>
+<h3 id="сложение-двух-волн-и-природа-биений">Сложение двух волн и
+природа биений</h3>
+<p>Если два источника имеют слегка различающиеся частоты
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ω</mi><mn>1</mn></msub><annotation encoding="application/x-tex">\omega_1</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ω</mi><mn>2</mn></msub><annotation encoding="application/x-tex">\omega_2</annotation></semantics></math>),
+их суперпозиция в определенной точке пространства приводит к
+возникновению пульсаций интенсивности.</p>
+<ul>
+<li><strong>Математическое описание:</strong> Сумма двух косинусоид
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><msub><mi>ω</mi><mn>1</mn></msub><mi>t</mi><mo>+</mo><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><msub><mi>ω</mi><mn>2</mn></msub><mi>t</mi></mrow><annotation encoding="application/x-tex">\cos\omega_1t + \cos\omega_2t</annotation></semantics></math>
+преобразуется в произведение:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo stretchy="false" form="prefix">(</mo><msub><mi>ω</mi><mn>1</mn></msub><mo>+</mo><msub><mi>ω</mi><mn>2</mn></msub><mo stretchy="false" form="postfix">)</mo><mi>t</mi><mo>⋅</mo><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo stretchy="false" form="prefix">(</mo><msub><mi>ω</mi><mn>1</mn></msub><mo>−</mo><msub><mi>ω</mi><mn>2</mn></msub><mo stretchy="false" form="postfix">)</mo><mi>t</mi></mrow><annotation encoding="application/x-tex">2\cos\frac{1}{2}(\omega_1 + \omega_2)t \cdot \cos\frac{1}{2}(\omega_1 - \omega_2)t</annotation></semantics></math></li>
+<li><strong>Результат:</strong> Возникает волна со средней частотой
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo stretchy="false" form="prefix">(</mo><msub><mi>ω</mi><mn>1</mn></msub><mo>+</mo><msub><mi>ω</mi><mn>2</mn></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\frac{1}{2}(\omega_1 + \omega_2)</annotation></semantics></math>,
+амплитуда которой медленно меняется (модулируется) с частотой
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo stretchy="false" form="prefix">(</mo><msub><mi>ω</mi><mn>1</mn></msub><mo>−</mo><msub><mi>ω</mi><mn>2</mn></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\frac{1}{2}(\omega_1 - \omega_2)</annotation></semantics></math>.</li>
+<li><strong>Частота биений:</strong> Хотя амплитуда меняется с
+половинной разностью частот, интенсивность (которая пропорциональна
+квадрату амплитуды) пульсирует с частотой, равной полной разности
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><msub><mi>ω</mi><mn>1</mn></msub><mo>−</mo><msub><mi>ω</mi><mn>2</mn></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(\omega_1 - \omega_2)</annotation></semantics></math>.</li>
+</ul>
+<h3 id="амплитудная-модуляция-am-и-боковые-полосы">Амплитудная модуляция
+(AM) и боковые полосы</h3>
+<p>В радиовещании информация передается путем изменения амплитуды
+высокочастотного сигнала (<strong>несущей</strong>) в соответствии со
+звуковым сигналом.</p>
+<ul>
+<li><strong>Формула модулированной волны:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>b</mi><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><msub><mi>ω</mi><mi>m</mi></msub><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><msub><mi>ω</mi><mi>c</mi></msub><mi>t</mi></mrow><annotation encoding="application/x-tex">S = (1 + b\cos\omega_mt)\cos\omega_ct</annotation></semantics></math>,
+где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ω</mi><mi>c</mi></msub><annotation encoding="application/x-tex">\omega_c</annotation></semantics></math>
+— несущая, а
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ω</mi><mi>m</mi></msub><annotation encoding="application/x-tex">\omega_m</annotation></semantics></math>
+— частота звука.</li>
+<li><strong>Боковые полосы:</strong> Математически модулированный сигнал
+эквивалентен сумме трех частот:
+<ol type="1">
+<li>Несущая частота:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ω</mi><mi>c</mi></msub><annotation encoding="application/x-tex">\omega_c</annotation></semantics></math>.</li>
+<li>Верхняя боковая частота:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ω</mi><mi>c</mi></msub><mo>+</mo><msub><mi>ω</mi><mi>m</mi></msub></mrow><annotation encoding="application/x-tex">\omega_c + \omega_m</annotation></semantics></math>.</li>
+<li>Нижняя боковая частота:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ω</mi><mi>c</mi></msub><mo>−</mo><msub><mi>ω</mi><mi>m</mi></msub></mrow><annotation encoding="application/x-tex">\omega_c - \omega_m</annotation></semantics></math>.</li>
+</ol></li>
+<li><strong>Полоса пропускания:</strong> Для передачи сложного сигнала
+(голоса или видео) требуется определенная ширина спектра. Например,
+телевизионный канал занимает полосу шириной 6 МГц, так как для четкого
+изображения необходимо передавать высокие частоты (до 4 МГц).</li>
+</ul>
+<h3 id="фазовая-и-групповая-скорости">Фазовая и групповая скорости</h3>
+<p>В средах, где скорость волны зависит от частоты (дисперсия),
+различают два вида скоростей:</p>
+<ol type="1">
+<li><strong>Фазовая скорость
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>v</mi><mi>p</mi></msub><mo>=</mo><mi>ω</mi><mi>/</mi><mi>k</mi></mrow><annotation encoding="application/x-tex">v_p = \omega/k</annotation></semantics></math>):</strong>
+Скорость движения узлов или гребней отдельной идеальной синусоиды. Она
+может быть больше скорости света (например, для рентгеновских лучей в
+стекле).</li>
+<li><strong>Групповая скорость
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>v</mi><mi>g</mi></msub><mo>=</mo><mi>d</mi><mi>ω</mi><mi>/</mi><mi>d</mi><mi>k</mi></mrow><annotation encoding="application/x-tex">v_g = d\omega/dk</annotation></semantics></math>):</strong>
+Скорость, с которой перемещается модуляция или «огибающая» (волновой
+пакет). Именно с этой скоростью передается информация и энергия.
+Групповая скорость всегда остается меньше или равной скорости
+света.</li>
+</ol>
+<h3 id="применение-в-квантовой-механике">Применение в квантовой
+механике</h3>
+<p>Частица в квантовой механике описывается волной амплитуды вероятности
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ψ</mi><mo>=</mo><mi>A</mi><msup><mi>e</mi><mrow><mi>i</mi><mo stretchy="false" form="prefix">(</mo><mi>ω</mi><mi>t</mi><mo>−</mo><mi>k</mi><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow></msup></mrow><annotation encoding="application/x-tex">\psi = Ae^{i(\omega t - kx)}</annotation></semantics></math>.</p>
+<ul>
+<li>Связь с классикой: Энергия
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>=</mo><mi>ℏ</mi><mi>ω</mi></mrow><annotation encoding="application/x-tex">E = \hbar\omega</annotation></semantics></math>,
+импульс
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>=</mo><mi>ℏ</mi><mi>k</mi></mrow><annotation encoding="application/x-tex">p = \hbar k</annotation></semantics></math>.</li>
+<li>Скорость частицы: Групповая скорость волнового пакета в точности
+совпадает с классической скоростью частицы
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>v</mi><annotation encoding="application/x-tex">v</annotation></semantics></math>.</li>
+</ul>
+<h3 id="связанные-маятники-и-собственные-колебания">Связанные маятники и
+собственные колебания</h3>
+<p>Систему из двух одинаковых связанных маятников можно рассматривать
+через биения:</p>
+<ul>
+<li><strong>Две моды колебаний:</strong>
+<ol type="1">
+<li>Маятники качаются синхронно в одну сторону (низкая частота, пружина
+не растянута).</li>
+<li>Маятники качаются в противоположные стороны (более высокая частота,
+пружина добавляет жесткости).</li>
+</ol></li>
+<li><strong>Перекачка энергии:</strong> Если запустить только один
+маятник, его движение можно представить как сумму этих двух мод. Из-за
+разности частот между модами возникают биения, которые проявляются как
+постепенный переход энергии от одного маятника к другому и обратно.</li>
+</ul>
+<hr />
+<h2 id="2-типичные-ошибки">2. Типичные ошибки</h2>
+<ol type="1">
+<li><strong>Путаница в частотах:</strong> Ошибочное утверждение, что
+частота биений равна
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo stretchy="false" form="prefix">(</mo><msub><mi>ω</mi><mn>1</mn></msub><mo>−</mo><msub><mi>ω</mi><mn>2</mn></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\frac{1}{2}(\omega_1 - \omega_2)</annotation></semantics></math>.
+На самом деле, слух и приборы фиксируют пульсации интенсивности на
+частоте
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><msub><mi>ω</mi><mn>1</mn></msub><mo>−</mo><msub><mi>ω</mi><mn>2</mn></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(\omega_1 - \omega_2)</annotation></semantics></math>.</li>
+<li><strong>Нарушение теории относительности:</strong> Мнение о том, что
+фазовая скорость, превышающая скорость света
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>c</mi><annotation encoding="application/x-tex">c</annotation></semantics></math>),
+нарушает физические законы. Важно помнить, что сигналы передаются с
+групповой скоростью, которая не превышает
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>c</mi><annotation encoding="application/x-tex">c</annotation></semantics></math>.</li>
+<li><strong>Избирательность приемника:</strong> Попытка настроить
+радиоприемник на одну-единственную частоту несущей. В этом случае
+информация (содержащаяся в боковых полосах) будет отсечена, и звук
+пропадет.</li>
+</ol>
+<hr />
+<h2 id="3-проверочные-вопросы-короткие-ответы">3. Проверочные вопросы
+(короткие ответы)</h2>
+<ol type="1">
+<li><strong>Чему равна частота пульсаций интенсивности при сложении волн
+с частотами 800 Гц и 810 Гц?</strong> <em>Ответ: 10 Гц.</em></li>
+<li><strong>Какие три частоты присутствуют в спектре AM-радиостанции,
+если несущая — 1000 кГц, а модулирующий тон — 5 кГц?</strong> <em>Ответ:
+995 кГц, 1000 кГц и 1005 кГц.</em></li>
+<li><strong>Как называется скорость, с которой распространяется сигнал
+или модуляция?</strong> <em>Ответ: Групповая скорость.</em></li>
+<li><strong>Почему телевизионный сигнал нельзя передавать на частоте 800
+кГц?</strong> <em>Ответ: Потому что частота модуляции (около 4 МГц) не
+может быть выше частоты несущей.</em></li>
+<li><strong>В каком случае групповая скорость совпадает с
+фазовой?</strong> <em>Ответ: В вакууме или в средах без дисперсии, где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ω</mi><mo>=</mo><mi>k</mi><mi>c</mi></mrow><annotation encoding="application/x-tex">\omega = kc</annotation></semantics></math>.</em></li>
+<li><strong>Что происходит с частотой связанных маятников, когда они
+качаются в противоположные стороны?</strong> <em>Ответ: Она
+увеличивается из-за дополнительной возвращающей силы пружины.</em></li>
+</ol>
+<hr />
+<h2 id="4-вопросы-для-глубокого-осмысления-эссе">4. Вопросы для
+глубокого осмысления (эссе)</h2>
+<ol type="1">
+<li><strong>Парадокс фазовой скорости:</strong> Объясните, почему
+фазовая скорость рентгеновских лучей в веществе может превышать скорость
+света и как понятие групповой скорости разрешает это противоречие с
+теорией относительности.</li>
+<li><strong>Информационная емкость каналов связи:</strong> Обоснуйте
+необходимость разделения радио- и телестанций по частотным интервалам.
+Какую роль в этом играют боковые полосы и как метод «одной боковой
+полосы» помогает экономить частотный ресурс?</li>
+<li><strong>Единство описания в физике:</strong> Проанализируйте, как
+явление биений помогает понять переход энергии в связанных механических
+системах и одновременно описывает движение частиц в квантовом мире.</li>
+</ol>
+<hr />
+<h2 id="5-краткий-глоссарий">5. Краткий глоссарий</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Термин</th>
+<th style="text-align: left;">Определение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Биения</strong></td>
+<td style="text-align: left;">Периодические изменения интенсивности,
+возникающие при наложении двух волн с близкими частотами.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Несущая частота</strong></td>
+<td style="text-align: left;">Высокочастотное колебание, используемое
+как «транспорт» для передачи низкочастотной информации.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Амплитудная модуляция
+(AM)</strong></td>
+<td style="text-align: left;">Процесс изменения амплитуды несущей волны
+в соответствии с передаваемым сигналом.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Боковые полосы</strong></td>
+<td style="text-align: left;">Дополнительные частоты, возникающие выше и
+ниже несущей в результате модуляции.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Фазовая скорость</strong></td>
+<td style="text-align: left;">Скорость перемещения фазы волны
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ω</mi><mi>/</mi><mi>k</mi></mrow><annotation encoding="application/x-tex">\omega/k</annotation></semantics></math>).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Групповая скорость</strong></td>
+<td style="text-align: left;">Скорость распространения волнового пакета
+или огибающей
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>ω</mi><mi>/</mi><mi>d</mi><mi>k</mi></mrow><annotation encoding="application/x-tex">d\omega/dk</annotation></semantics></math>).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Волновой пакет</strong></td>
+<td style="text-align: left;">Локализованная в пространстве группа волн,
+используемая в квантовой механике для описания положения частицы.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Собственные моды</strong></td>
+<td style="text-align: left;">Характерные типы независимых колебаний
+системы (например, синхронное или встречное движение маятников).</td>
+</tr>
+</tbody>
+</table>
+    </article>
+  </main>
+</body>
+</html>

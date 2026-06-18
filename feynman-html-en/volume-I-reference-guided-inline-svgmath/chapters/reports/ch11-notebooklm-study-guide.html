@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chapter 11 Study Guide: Vectors and the Symmetry of Physical Laws - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="en">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch11.html#study-panel">Back to chapter</a>
+      <a class="nav-btn" href="../../index.html">Volume contents</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1
+id="chapter-11-study-guide-vectors-and-the-symmetry-of-physical-laws">Chapter
+11 Study Guide: Vectors and the Symmetry of Physical Laws</h1>
+<p>This study guide provides a comprehensive overview of the principles
+of vector analysis and the symmetry of physical laws as outlined in the
+provided text. It covers theoretical foundations, mathematical
+operations, and practical applications in mechanics.</p>
+<hr />
+<h2 id="i-key-concepts">I. Key Concepts</h2>
+<h3 id="1-symmetry-in-physical-law">1. Symmetry in Physical Law</h3>
+<p>Symmetry is defined using Hermann Weyl’s principle: a thing is
+symmetrical if it remains exactly the same after a specific operation.
+In physics, this refers to the invariance of physical laws when certain
+operations are performed on the experimental setup or the coordinate
+system.</p>
+<ul>
+<li><strong>Translational Symmetry:</strong> The laws of physics do not
+change if an apparatus is moved from one location to another, provided
+all relevant influences (like gravity or external forces) are also
+moved.</li>
+<li><strong>Rotational Symmetry:</strong> The laws of physics remain the
+same regardless of the direction in which the axes are chosen. While
+specific equipment (like a pendulum clock) may seem to fail when tilted,
+it is because an external factor (the Earth's gravity) was not rotated
+with the device.</li>
+</ul>
+<h3 id="2-coordinate-transformations">2. Coordinate Transformations</h3>
+<p>To prove symmetry, physicists analyze how measurements change between
+two observers, "Joe" (fixed system) and "Moe" (displaced or rotated
+system).</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Operation</th>
+<th style="text-align: left;">Coordinate Transformation</th>
+<th style="text-align: left;">Impact on Physical Laws</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Translation</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>x</mi><mo>′</mo></msup><mo>=</mo><mi>x</mi><mo>−</mo><mi>a</mi></mrow><annotation encoding="application/x-tex">x&#39; = x - a</annotation></semantics></math>;
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>y</mi><mo>′</mo></msup><mo>=</mo><mi>y</mi></mrow><annotation encoding="application/x-tex">y&#39; = y</annotation></semantics></math>;
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>z</mi><mo>′</mo></msup><mo>=</mo><mi>z</mi></mrow><annotation encoding="application/x-tex">z&#39; = z</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>d</mi><mn>2</mn></msup><msup><mi>x</mi><mo>′</mo></msup><mi>/</mi><mi>d</mi><msup><mi>t</mi><mn>2</mn></msup><mo>=</mo><msup><mi>d</mi><mn>2</mn></msup><mi>x</mi><mi>/</mi><mi>d</mi><msup><mi>t</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">d^2x&#39;/dt^2 = d^2x/dt^2</annotation></semantics></math>;
+Newton's laws remain identical.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Rotation</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>x</mi><mo>′</mo></msup><mo>=</mo><mi>x</mi><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>θ</mi><mo>+</mo><mi>y</mi><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mi>θ</mi></mrow><annotation encoding="application/x-tex">x&#39; = x \cos \theta + y \sin \theta</annotation></semantics></math>
+<br>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>y</mi><mo>′</mo></msup><mo>=</mo><mi>y</mi><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>θ</mi><mo>−</mo><mi>x</mi><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mi>θ</mi></mrow><annotation encoding="application/x-tex">y&#39; = y \cos \theta - x \sin \theta</annotation></semantics></math></td>
+<td style="text-align: left;">Force components transform with the same
+rules as coordinates, preserving
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mi mathvariant="bold-italic">𝒂</mi><mo>=</mo><mi mathvariant="bold-italic">𝑭</mi></mrow><annotation encoding="application/x-tex">m\mathbf{a} = \mathbf{F}</annotation></semantics></math>.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-the-nature-of-vectors">3. The Nature of Vectors</h3>
+<p>A vector is not merely a set of three numbers; it is a physical
+quantity associated with three numbers that transform according to the
+same rules as a "step in space" (displacement) when the coordinate
+system is rotated.</p>
+<ul>
+<li><strong>Scalars:</strong> Quantities without direction (e.g.,
+temperature, number of objects, time).</li>
+<li><strong>Vectors:</strong> Quantities with both magnitude and
+direction (e.g., velocity, momentum, force, acceleration).</li>
+<li><strong>Invariance:</strong> A vector equation (e.g.,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑭</mi><mo>=</mo><mi>m</mi><mi mathvariant="bold-italic">𝒂</mi></mrow><annotation encoding="application/x-tex">\mathbf{F} = m\mathbf{a}</annotation></semantics></math>)
+is true in any coordinate system if it is true in one, because both
+sides transform identically.</li>
+</ul>
+<h3 id="4-vector-algebra-and-calculus">4. Vector Algebra and
+Calculus</h3>
+<ul>
+<li><strong>Addition:</strong> Performed by adding components
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>x</mi></msub><mo>+</mo><msub><mi>b</mi><mi>x</mi></msub><mo>,</mo><msub><mi>a</mi><mi>y</mi></msub><mo>+</mo><msub><mi>b</mi><mi>y</mi></msub><mo>,</mo><msub><mi>a</mi><mi>z</mi></msub><mo>+</mo><msub><mi>b</mi><mi>z</mi></msub></mrow><annotation encoding="application/x-tex">a_x + b_x, a_y + b_y, a_z + b_z</annotation></semantics></math>).
+Geometrically, this follows the "head-to-tail" rule or the parallelogram
+law.</li>
+<li><strong>Subtraction:</strong> Performed by subtracting components or
+adding a negative vector
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝒂</mi><mo>−</mo><mi mathvariant="bold-italic">𝒃</mi><mo>=</mo><mi mathvariant="bold-italic">𝒂</mi><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mi mathvariant="bold-italic">𝒃</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mathbf{a} - \mathbf{b} = \mathbf{a} + (-\mathbf{b})</annotation></semantics></math>).
+Geometrically, the difference is the vector drawn from the head of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝒃</mi><annotation encoding="application/x-tex">\mathbf{b}</annotation></semantics></math>
+to the head of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝒂</mi><annotation encoding="application/x-tex">\mathbf{a}</annotation></semantics></math>.</li>
+<li><strong>Differentiation:</strong> Differentiating a vector with
+respect to time produces a new vector.
+<ul>
+<li><strong>Velocity:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝒗</mi><mo>=</mo><mi>d</mi><mi mathvariant="bold-italic">𝒓</mi><mi>/</mi><mi>d</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">\mathbf{v} = d\mathbf{r}/dt</annotation></semantics></math>.</li>
+<li><strong>Acceleration:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝒂</mi><mo>=</mo><mi>d</mi><mi mathvariant="bold-italic">𝒗</mi><mi>/</mi><mi>d</mi><mi>t</mi><mo>=</mo><msup><mi>d</mi><mn>2</mn></msup><mi mathvariant="bold-italic">𝒓</mi><mi>/</mi><mi>d</mi><msup><mi>t</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\mathbf{a} = d\mathbf{v}/dt = d^2\mathbf{r}/dt^2</annotation></semantics></math>.</li>
+</ul></li>
+</ul>
+<h3 id="5-components-of-acceleration">5. Components of Acceleration</h3>
+<p>When a particle moves along a curved trajectory, its acceleration can
+be decomposed into two parts:</p>
+<ol type="1">
+<li><strong>Tangential Acceleration
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>a</mi><mo>∥</mo></msub><annotation encoding="application/x-tex">a_\parallel</annotation></semantics></math>):</strong>
+The rate of change in speed,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>v</mi><mi>/</mi><mi>d</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">dv/dt</annotation></semantics></math>.</li>
+<li><strong>Normal Acceleration
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>a</mi><mo>⟂</mo></msub><annotation encoding="application/x-tex">a_\perp</annotation></semantics></math>):</strong>
+The acceleration at right angles to the motion, calculated as
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>v</mi><mn>2</mn></msup><mi>/</mi><mi>R</mi></mrow><annotation encoding="application/x-tex">v^2/R</annotation></semantics></math>,
+where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>R</mi><annotation encoding="application/x-tex">R</annotation></semantics></math>
+is the radius of curvature.</li>
+</ol>
+<h3 id="6-the-scalar-dot-product">6. The Scalar (Dot) Product</h3>
+<p>The scalar product of two vectors
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝒂</mi><annotation encoding="application/x-tex">\mathbf{a}</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝒃</mi><annotation encoding="application/x-tex">\mathbf{b}</annotation></semantics></math>
+is a single number (a scalar) that is independent of the coordinate
+system.</p>
+<ul>
+<li><strong>Algebraic Definition:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝒂</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝒃</mi><mo>=</mo><msub><mi>a</mi><mi>x</mi></msub><msub><mi>b</mi><mi>x</mi></msub><mo>+</mo><msub><mi>a</mi><mi>y</mi></msub><msub><mi>b</mi><mi>y</mi></msub><mo>+</mo><msub><mi>a</mi><mi>z</mi></msub><msub><mi>b</mi><mi>z</mi></msub></mrow><annotation encoding="application/x-tex">\mathbf{a} \cdot \mathbf{b} = a_x b_x + a_y b_y + a_z b_z</annotation></semantics></math>.</li>
+<li><strong>Geometric Definition:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝒂</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝒃</mi><mo>=</mo><mi>a</mi><mi>b</mi><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>θ</mi></mrow><annotation encoding="application/x-tex">\mathbf{a} \cdot \mathbf{b} = ab \cos \theta</annotation></semantics></math>
+(where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>θ</mi><annotation encoding="application/x-tex">\theta</annotation></semantics></math>
+is the angle between the vectors).</li>
+<li><strong>Applications:</strong>
+<ul>
+<li><strong>Kinetic Energy:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi><mi>.</mi><mi>E</mi><mi>.</mi><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>m</mi><mo stretchy="false" form="prefix">(</mo><mi mathvariant="bold-italic">𝒗</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝒗</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">K.E. = \frac{1}{2}m(\mathbf{v} \cdot \mathbf{v})</annotation></semantics></math>.</li>
+<li><strong>Work:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>W</mi><mo>=</mo><mi mathvariant="bold-italic">𝑭</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝒔</mi></mrow><annotation encoding="application/x-tex">W = \mathbf{F} \cdot \mathbf{s}</annotation></semantics></math>.</li>
+</ul></li>
+</ul>
+<hr />
+<h2 id="ii-common-misconceptions">II. Common Misconceptions</h2>
+<ul>
+<li><strong>"Any three numbers form a vector":</strong> This is false.
+To be a vector, the three numbers must represent a physical quantity
+that transforms according to the specific linear laws of rotation (the
+same laws that govern a step in space).</li>
+<li><strong>Subtracting vectors at different locations:</strong> One
+cannot find the difference between two vectors (like velocity at
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>t</mi><mn>1</mn></msub><annotation encoding="application/x-tex">t_1</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>t</mi><mn>2</mn></msub><annotation encoding="application/x-tex">t_2</annotation></semantics></math>)
+simply by drawing a line between them if their tails are in different
+places. To subtract vectors, their tails must be moved to the same
+origin while maintaining their original magnitude and orientation.</li>
+<li><strong>Invariance vs. Absolute Position:</strong> While the
+<em>laws</em> of physics are symmetrical under translation and rotation,
+the <em>results</em> of an experiment can change if the environment
+(like the presence of a wall or the Earth) is not moved or rotated with
+the apparatus. Symmetry applies to the total system, including all
+essential influences.</li>
+</ul>
+<hr />
+<h2 id="iii-self-check-questions">III. Self-Check Questions</h2>
+<h3 id="short-answer-quiz">Short-Answer Quiz</h3>
+<ol type="1">
+<li>How does Hermann Weyl define symmetry?</li>
+<li>What is the mathematical relationship between Moe’s
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>x</mi><mo>′</mo></msup><annotation encoding="application/x-tex">x&#39;</annotation></semantics></math>
+coordinate and Joe’s
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>
+coordinate in a translation along the x-axis by distance
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>?</li>
+<li>Why is the time derivative of a position vector also considered a
+vector?</li>
+<li>Write the algebraic formula for the dot product of vectors
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝒂</mi><annotation encoding="application/x-tex">\mathbf{a}</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝒃</mi><annotation encoding="application/x-tex">\mathbf{b}</annotation></semantics></math>
+in terms of their components.</li>
+<li>What happens to the dot product of two vectors if they are at a
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>90</mn><mo>∘</mo></msup><annotation encoding="application/x-tex">90^\circ</annotation></semantics></math>
+angle to each other?</li>
+<li>How is the tangential component of acceleration
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>a</mi><mo>∥</mo></msub><annotation encoding="application/x-tex">a_\parallel</annotation></semantics></math>)
+related to the speed of a particle?</li>
+<li>What are the dot product properties of the unit vectors
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝒊</mi><mo>,</mo><mi mathvariant="bold-italic">𝒋</mi><mo>,</mo><mi mathvariant="bold-italic">𝒌</mi></mrow><annotation encoding="application/x-tex">\mathbf{i}, \mathbf{j}, \mathbf{k}</annotation></semantics></math>?</li>
+<li>If
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝒄</mi><mo>=</mo><mi mathvariant="bold-italic">𝒂</mi><mo>+</mo><mi mathvariant="bold-italic">𝒃</mi></mrow><annotation encoding="application/x-tex">\mathbf{c} = \mathbf{a} + \mathbf{b}</annotation></semantics></math>,
+does the order of addition
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝒂</mi><mo>+</mo><mi mathvariant="bold-italic">𝒃</mi></mrow><annotation encoding="application/x-tex">\mathbf{a} + \mathbf{b}</annotation></semantics></math>
+vs.
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝒃</mi><mo>+</mo><mi mathvariant="bold-italic">𝒂</mi></mrow><annotation encoding="application/x-tex">\mathbf{b} + \mathbf{a}</annotation></semantics></math>)
+change the resulting vector
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝒄</mi><annotation encoding="application/x-tex">\mathbf{c}</annotation></semantics></math>?</li>
+</ol>
+<h3 id="essay-questions">Essay Questions</h3>
+<ol type="1">
+<li><strong>The Role of Symmetry:</strong> Discuss why the symmetry of
+physical laws under translation and rotation implies that there is no
+"center of the universe" or "unique direction" in space. How does this
+affect the way we write physical equations?</li>
+<li><strong>The Pendulum Clock Paradox:</strong> Explain why a pendulum
+clock seems to violate rotational symmetry and how a physicist would
+resolve this apparent contradiction to maintain the principle of
+symmetry.</li>
+<li><strong>Vector Utility:</strong> Analyze why vector notation (e.g.,
+writing
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mi mathvariant="bold-italic">𝒂</mi><mo>=</mo><mi mathvariant="bold-italic">𝑭</mi></mrow><annotation encoding="application/x-tex">m\mathbf{a} = \mathbf{F}</annotation></semantics></math>
+instead of three separate equations for
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo></mrow><annotation encoding="application/x-tex">x, y,</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>z</mi><annotation encoding="application/x-tex">z</annotation></semantics></math>)
+is more than just a shorthand convenience. How does it guarantee the
+invariance of physical laws?</li>
+</ol>
+<hr />
+<h2 id="iv-concise-glossary">IV. Concise Glossary</h2>
+<ul>
+<li><strong>Acceleration
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝒂</mi><annotation encoding="application/x-tex">\mathbf{a}</annotation></semantics></math>):</strong>
+The time derivative of the velocity vector; the second derivative of the
+position vector.</li>
+<li><strong>Component:</strong> One of the three numbers (e.g.,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi></mrow><annotation encoding="application/x-tex">x, y, z</annotation></semantics></math>)
+that describes a vector in a specific coordinate system.</li>
+<li><strong>Dot Product
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝒂</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝒃</mi></mrow><annotation encoding="application/x-tex">\mathbf{a} \cdot \mathbf{b}</annotation></semantics></math>):</strong>
+An operation between two vectors that results in a scalar; it represents
+the product of their magnitudes and the cosine of the angle between
+them.</li>
+<li><strong>Invariance:</strong> The property of a law or quantity
+remaining unchanged after a transformation (like rotation or
+translation).</li>
+<li><strong>Scalar:</strong> A physical quantity that has magnitude but
+no direction; it is invariant under rotation of axes.</li>
+<li><strong>Symmetry:</strong> The property where a system or law
+appears the same after a specific operation (e.g., displacement).</li>
+<li><strong>Translation:</strong> The lateral displacement of a
+coordinate system's origin without changing the orientation of the
+axes.</li>
+<li><strong>Unit Vector
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝒊</mi><mo>,</mo><mi mathvariant="bold-italic">𝒋</mi><mo>,</mo><mi mathvariant="bold-italic">𝒌</mi></mrow><annotation encoding="application/x-tex">\mathbf{i}, \mathbf{j}, \mathbf{k}</annotation></semantics></math>):</strong>
+A vector with a magnitude of one, used to point in a specific direction
+(usually along the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo></mrow><annotation encoding="application/x-tex">x, y,</annotation></semantics></math>
+or
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>z</mi><annotation encoding="application/x-tex">z</annotation></semantics></math>
+axes).</li>
+<li><strong>Vector:</strong> A physical quantity characterized by three
+components that transform under rotation like a step in space; it
+possesses both magnitude and direction.</li>
+<li><strong>Velocity
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝒗</mi><annotation encoding="application/x-tex">\mathbf{v}</annotation></semantics></math>):</strong>
+The rate of change of the position vector with respect to time
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi mathvariant="bold-italic">𝒓</mi><mi>/</mi><mi>d</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">d\mathbf{r}/dt</annotation></semantics></math>).</li>
+</ul>
+    </article>
+  </main>
+</body>
+</html>

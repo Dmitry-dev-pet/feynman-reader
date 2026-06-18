@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Глава 18. Двумерные вращения: Учебное пособие - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch18.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1 id="глава-18-двумерные-вращения-учебное-пособие">Глава 18. Двумерные
+вращения: Учебное пособие</h1>
+<p>Данное пособие синтезировано на основе лекций Ричарда Фейнмана и
+посвящено изучению механики сложных систем, динамике твердого тела и
+законам вращательного движения в двух измерениях.</p>
+<hr />
+<h2 id="1-ключевые-понятия-и-теоретические-основы">1. Ключевые понятия и
+теоретические основы</h2>
+<h3 id="теорема-о-центре-масс">Теорема о центре масс</h3>
+<p>При изучении сложных объектов, состоящих из множества частиц,
+выделяют математическую точку — <strong>центр масс</strong>.</p>
+<ul>
+<li><strong>Определение:</strong> Точка, положение которой определяется
+вектором <span class="math inline">$\FLPR = \sum m_i \FLPr_i /
+M$</span>, где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>M</mi><annotation encoding="application/x-tex">M</annotation></semantics></math>
+— полная масса тела.</li>
+<li><strong>Движение:</strong> Внешняя сила, действующая на объект,
+равна полной массе, умноженной на ускорение его центра масс
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>=</mo><mi>M</mi><mo>⋅</mo><msub><mi>a</mi><mrow><mi>c</mi><mi>m</mi></mrow></msub></mrow><annotation encoding="application/x-tex">F = M \cdot a_{cm}</annotation></semantics></math>).
+Это объясняет, почему брошенный сложный предмет летит по параболе:
+именно его центр масс описывает эту траекторию, независимо от вращений
+или вибраций самого тела.</li>
+<li><strong>Изолированная система:</strong> Если внешние силы
+отсутствуют, центр масс системы сохраняет состояние покоя или
+равномерного прямолинейного движения, даже если части внутри системы
+перемещаются (например, человек, идущий по палубе корабля).</li>
+</ul>
+<h3 id="кинематика-и-динамика-плоского-вращения">Кинематика и динамика
+плоского вращения</h3>
+<p>Вращение твердого тела вокруг неподвижной оси (плоское вращение)
+характеризуется изменением угловых величин. Между линейным и
+вращательным движением существует полная аналогия:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Линейное движение</th>
+<th style="text-align: left;">Вращательное движение (аналог)</th>
+<th style="text-align: left;">Связь величин</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Расстояние
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math>)</td>
+<td style="text-align: left;">Угол
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>θ</mi><annotation encoding="application/x-tex">\theta</annotation></semantics></math>)</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><mi>r</mi><mi>θ</mi></mrow><annotation encoding="application/x-tex">s = r\theta</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;">Скорость
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>v</mi><annotation encoding="application/x-tex">v</annotation></semantics></math>)</td>
+<td style="text-align: left;">Угловая скорость
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ω</mi><mo>=</mo><mi>d</mi><mi>θ</mi><mi>/</mi><mi>d</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">\omega = d\theta/dt</annotation></semantics></math>)</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mo>=</mo><mi>ω</mi><mi>r</mi></mrow><annotation encoding="application/x-tex">v = \omega r</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;">Ускорение
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>)</td>
+<td style="text-align: left;">Угловое ускорение
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi><mo>=</mo><mi>d</mi><mi>ω</mi><mi>/</mi><mi>d</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">\alpha = d\omega/dt</annotation></semantics></math>)</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>t</mi></msub><mo>=</mo><mi>α</mi><mi>r</mi></mrow><annotation encoding="application/x-tex">a_t = \alpha r</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;">Масса
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math>)</td>
+<td style="text-align: left;">Момент инерции
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>I</mi><annotation encoding="application/x-tex">I</annotation></semantics></math>)</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mo>=</mo><mo>∑</mo><msub><mi>m</mi><mi>i</mi></msub><msubsup><mi>r</mi><mi>i</mi><mn>2</mn></msubsup></mrow><annotation encoding="application/x-tex">I = \sum m_i r_i^2</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;">Сила
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>F</mi><annotation encoding="application/x-tex">F</annotation></semantics></math>)</td>
+<td style="text-align: left;">Момент силы
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>τ</mi><annotation encoding="application/x-tex">\tau</annotation></semantics></math>)</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>τ</mi><mo>=</mo><mi>r</mi><msub><mi>F</mi><mrow><mi>t</mi><mi>a</mi><mi>n</mi><mi>g</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\tau = r F_{tang}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;">Импульс
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math>)</td>
+<td style="text-align: left;">Момент количества движения
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>L</mi><annotation encoding="application/x-tex">L</annotation></semantics></math>)</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo>=</mo><mi>I</mi><mi>ω</mi></mrow><annotation encoding="application/x-tex">L = I\omega</annotation></semantics></math></td>
+</tr>
+</tbody>
+</table>
+<h3 id="момент-силы-крутящий-момент">Момент силы (Крутящий момент)</h3>
+<p>Момент силы — это количественная мера «скручивающего» действия силы.
+Существует три способа его вычисления:</p>
+<ol type="1">
+<li><strong>Алгебраический:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>τ</mi><mo>=</mo><mi>x</mi><msub><mi>F</mi><mi>y</mi></msub><mo>−</mo><mi>y</mi><msub><mi>F</mi><mi>x</mi></msub></mrow><annotation encoding="application/x-tex">\tau = xF_y - yF_x</annotation></semantics></math>.</li>
+<li><strong>Через компоненты:</strong> Произведение тангенциальной
+составляющей силы на расстояние до оси
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>τ</mi><mo>=</mo><mi>r</mi><mo>⋅</mo><msub><mi>F</mi><mrow><mi>t</mi><mi>a</mi><mi>n</mi><mi>g</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\tau = r \cdot F_{tang}</annotation></semantics></math>).</li>
+<li><strong>Через плечо силы:</strong> Произведение полной силы на
+кратчайшее расстояние от оси до линии действия силы (плечо).</li>
+</ol>
+<h3 id="момент-количества-движения-угловой-момент">Момент количества
+движения (Угловой момент)</h3>
+<p>Для одной частицы угловой момент определяется как
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo>=</mo><mi>x</mi><msub><mi>p</mi><mi>y</mi></msub><mo>−</mo><mi>y</mi><msub><mi>p</mi><mi>x</mi></msub></mrow><annotation encoding="application/x-tex">L = xp_y - yp_x</annotation></semantics></math>.
+В более общем виде это произведение тангенциальной составляющей импульса
+на радиус.</p>
+<ul>
+<li><strong>Связь с моментом силы:</strong> Скорость изменения полного
+углового момента системы равна суммарному моменту внешних сил:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>τ</mi><mrow><mi>e</mi><mi>x</mi><mi>t</mi></mrow></msub><mo>=</mo><mi>d</mi><mi>L</mi><mi>/</mi><mi>d</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">\tau_{ext} = dL/dt</annotation></semantics></math>.</li>
+<li><strong>Внутренние силы:</strong> Моменты внутренних сил
+взаимодействия между частицами системы взаимно сокращаются (согласно
+третьему закону Ньютона в сильной форме).</li>
+</ul>
+<h3 id="момент-инерции-и-закон-сохранения">Момент инерции и закон
+сохранения</h3>
+<p><strong>Момент инерции
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>I</mi><annotation encoding="application/x-tex">I</annotation></semantics></math>)</strong>
+— это мера инертности тела при вращении. В отличие от массы, он зависит
+не только от количества вещества, но и от его распределения относительно
+оси вращения. Чем дальше массы расположены от оси, тем выше момент
+инерции.</p>
+<p><strong>Закон сохранения момента количества движения:</strong> Если
+внешний момент сил равен нулю, то полный угловой момент системы остается
+постоянным
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo>=</mo><mi>I</mi><mi>ω</mi><mo>=</mo><mi>c</mi><mi>o</mi><mi>n</mi><mi>s</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">L = I\omega = const</annotation></semantics></math>).</p>
+<hr />
+<h2 id="2-типичные-ошибки-при-изучении-темы">2. Типичные ошибки при
+изучении темы</h2>
+<ol type="1">
+<li><strong>Отождествление массы и момента инерции:</strong> Ошибка
+полагать, что инерция вращения зависит только от веса объекта. На самом
+деле, решающую роль играет «плечо масс» (расстояние от оси).</li>
+<li><strong>Игнорирование выбора оси:</strong> Величины момента силы
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>τ</mi><annotation encoding="application/x-tex">\tau</annotation></semantics></math>)
+и момента количества движения
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>L</mi><annotation encoding="application/x-tex">L</annotation></semantics></math>)
+всегда зависят от выбора точки (оси), относительно которой они
+вычисляются. Без указания оси эти величины теряют смысл.</li>
+<li><strong>Учет внутренних сил при расчете момента:</strong> Ошибка
+пытаться вычислить моменты сил, действующих между частями твердого тела.
+Для описания движения системы в целом важны только внешние моменты.</li>
+<li><strong>Сравнение
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>I</mi><annotation encoding="application/x-tex">I</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math>
+по неизменности:</strong> Масса объекта постоянна (в нерелятивистском
+случае), тогда как момент инерции одного и того же объекта можно
+изменить, просто перераспределив его части относительно оси (например,
+прижав руки к телу во время вращения).</li>
+</ol>
+<hr />
+<h2 id="3-проверочные-вопросы-краткие-ответы">3. Проверочные вопросы
+(краткие ответы)</h2>
+<p><strong>Вопрос 1:</strong> Какое условие необходимо для того, чтобы
+центр масс системы покоился или двигался равномерно? <em>Ответ:</em>
+Сумма всех внешних сил, действующих на систему, должна быть равна
+нулю.</p>
+<p><strong>Вопрос 2:</strong> Как работа, совершаемая при вращении,
+связана с моментом силы? <em>Ответ:</em> Работа равна произведению
+момента силы на угол поворота
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>W</mi><mo>=</mo><mi>τ</mi><mo>⋅</mo><mi mathvariant="normal">Δ</mi><mi>θ</mi></mrow><annotation encoding="application/x-tex">\Delta W = \tau \cdot \Delta\theta</annotation></semantics></math>).</p>
+<p><strong>Вопрос 3:</strong> Почему планеты движутся вокруг Солнца с
+постоянным угловым моментом? <em>Ответ:</em> Потому что гравитационная
+сила направлена строго к Солнцу (радиально), ее тангенциальная
+составляющая равна нулю, а следовательно, момент силы относительно
+Солнца также равен нулю.</p>
+<p><strong>Вопрос 4:</strong> Какие два условия необходимы для
+статического равновесия твердого тела в двумерном случае?
+<em>Ответ:</em> 1) Сумма всех внешних сил равна нулю; 2) Сумма всех
+моментов внешних сил относительно любой оси равна нулю.</p>
+<p><strong>Вопрос 5:</strong> Как изменится угловая скорость
+вращающегося человека, если он раздвинет руки с гирями в стороны?
+<em>Ответ:</em> Угловая скорость уменьшится, так как увеличится момент
+инерции, а произведение
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mi>ω</mi></mrow><annotation encoding="application/x-tex">I\omega</annotation></semantics></math>
+должно оставаться неизменным при отсутствии внешних моментов.</p>
+<hr />
+<h2 id="4-темы-для-глубокого-изучения-эссе">4. Темы для глубокого
+изучения (эссе)</h2>
+<ol type="1">
+<li><strong>Аналогия между линейной и вращательной динамикой:</strong>
+Проанализируйте, почему законы Ньютона для поступательного движения
+имеют свои зеркальные отражения в теории вращения. Как понятие момента
+инерции расширяет наше понимание инерции?</li>
+<li><strong>Закон Кеплера как следствие сохранения момента количества
+движения:</strong> Докажите связь между геометрическим законом «равных
+площадей» и физическим законом сохранения
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>L</mi><annotation encoding="application/x-tex">L</annotation></semantics></math>.
+Почему это применимо к любой центральной силе?</li>
+<li><strong>Роль внутренних сил в механике сложных систем:</strong>
+Объясните на основе третьего закона Ньютона, почему при анализе движения
+системы как целого (динамика центра масс и изменение углового момента)
+мы можем игнорировать сложные внутренние взаимодействия.</li>
+</ol>
+<hr />
+<h2 id="5-краткий-глоссарий">5. Краткий глоссарий</h2>
+<ul>
+<li><strong>Центр масс</strong> — среднее положение масс системы, точка,
+в которой сосредоточена вся инертность системы по отношению к
+поступательному движению.</li>
+<li><strong>Твердое тело</strong> — идеализированная модель объекта,
+форма которого остается неизменной (расстояния между частицами
+постоянны) под действием приложенных сил.</li>
+<li><strong>Угловая скорость
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ω</mi><annotation encoding="application/x-tex">\omega</annotation></semantics></math>)</strong>
+— скорость изменения угла поворота тела со временем, измеряемая в
+радианах в секунду.</li>
+<li><strong>Момент силы (Торкс,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>τ</mi><annotation encoding="application/x-tex">\tau</annotation></semantics></math>)</strong>
+— векторная величина, характеризующая вращательное действие силы;
+определяется как произведение силы на плечо.</li>
+<li><strong>Момент количества движения (Угловой момент,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>L</mi><annotation encoding="application/x-tex">L</annotation></semantics></math>)</strong>
+— мера количества вращательного движения, аналог импульса для
+вращения.</li>
+<li><strong>Момент инерции
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>I</mi><annotation encoding="application/x-tex">I</annotation></semantics></math>)</strong>
+— физическая величина, зависящая от распределения масс в теле и
+определяющая его сопротивление угловому ускорению.</li>
+<li><strong>Плечо силы</strong> — перпендикулярное расстояние от оси
+вращения до линии действия силы.</li>
+</ul>
+    </article>
+  </main>
+</body>
+</html>

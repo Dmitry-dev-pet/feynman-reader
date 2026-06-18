@@ -1,0 +1,281 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Аналитический отчет: Глава 30. Дифракция - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch30.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1 id="аналитический-отчет-глава-30-дифракция">Аналитический отчет:
+Глава 30. Дифракция</h1>
+<p>Данный документ представляет собой подробный анализ тридцатой главы
+«Фейнмановских лекций по физике», посвященной явлению дифракции. В
+отчете систематизированы теоретические основы, математические
+формулировки и практические приложения дифракционных эффектов.</p>
+<h2 id="1-резюме-для-руководства">1. Резюме для руководства</h2>
+<p>Основная идея главы заключается в том, что между понятиями
+«интерференция» и «дифракция» нет существенного физического различия.
+Традиционно термин «интерференция» используется для описания
+взаимодействия малого числа источников, в то время как «дифракция»
+применяется при рассмотрении множества источников.</p>
+<p>Ключевые достижения анализа:</p>
+<ul>
+<li>Выведена универсальная формула интенсивности для системы из
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+осцилляторов.</li>
+<li>Определены принципы работы дифракционной решетки как инструмента
+спектрального анализа.</li>
+<li>Установлены критерии разрешающей способности оптических и
+радиотехнических систем.</li>
+<li>Описаны сложные дифракционные эффекты на краях непрозрачных экранов
+и в структурах кристаллов.</li>
+<li>Получено фундаментальное выражение для поля излучения бесконечной
+плоскости зарядов.</li>
+</ul>
+<hr />
+<h2 id="2-детальный-анализ-ключевых-тем">2. Детальный анализ ключевых
+тем</h2>
+<h3 id="21-результирующее-поле-n-одинаковых-осцилляторов">2.1.
+Результирующее поле
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+одинаковых осцилляторов</h3>
+<p>При рассмотрении
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+осцилляторов, расположенных на равных расстояниях
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>d</mi><annotation encoding="application/x-tex">d</annotation></semantics></math>
+с разностью фаз
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>,
+общая амплитуда
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>A</mi><mi>R</mi></msub><annotation encoding="application/x-tex">A_R</annotation></semantics></math>
+и интенсивность
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>I</mi><annotation encoding="application/x-tex">I</annotation></semantics></math>
+определяются геометрическим сложением векторов (фазоров).</p>
+<p><strong>Математический аппарат:</strong> Результирующая амплитуда:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mi>R</mi></msub><mo>=</mo><mi>A</mi><mfrac><mrow><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mi>ϕ</mi><mi>/</mi><mn>2</mn><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>ϕ</mi><mi>/</mi><mn>2</mn><mo stretchy="false" form="postfix">)</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">A_R = A \frac{\sin(n\phi/2)}{\sin(\phi/2)}</annotation></semantics></math></p>
+<p>Суммарная интенсивность:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mo>=</mo><msub><mi>I</mi><mn>0</mn></msub><mfrac><mrow><msup><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mn>2</mn></msup><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mi>ϕ</mi><mi>/</mi><mn>2</mn><mo stretchy="false" form="postfix">)</mo></mrow><mrow><msup><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mn>2</mn></msup><mo stretchy="false" form="prefix">(</mo><mi>ϕ</mi><mi>/</mi><mn>2</mn><mo stretchy="false" form="postfix">)</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">I = I_0 \frac{\sin^2(n\phi/2)}{\sin^2(\phi/2)}</annotation></semantics></math></p>
+<p><strong>Физические следствия:</strong></p>
+<ol type="1">
+<li><strong>Максимумы:</strong> В главном максимуме
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ϕ</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\phi = 0</annotation></semantics></math>)
+интенсивность в
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>n</mi><mn>2</mn></msup><annotation encoding="application/x-tex">n^2</annotation></semantics></math>
+раз больше интенсивности одного осциллятора. Дополнительные максимумы
+возникают при
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ϕ</mi><mo>=</mo><mn>2</mn><mi>π</mi><mi>m</mi></mrow><annotation encoding="application/x-tex">\phi = 2\pi m</annotation></semantics></math>.</li>
+<li><strong>Минимумы:</strong> Первый минимум возникает при
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ϕ</mi><mo>=</mo><mn>2</mn><mi>π</mi><mi>/</mi><mi>n</mi></mrow><annotation encoding="application/x-tex">\phi = 2\pi/n</annotation></semantics></math>.
+Геометрически это соответствует моменту, когда векторная диаграмма
+(многоугольник) замыкается в кольцо (Фиг. 30.1).</li>
+<li><strong>Ширина пика:</strong> С увеличением
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+центральный максимум становится очень узким, а интенсивность боковых
+лепестков резко падает (Фиг. 30.2).</li>
+</ol>
+<h3 id="22-дифракционная-решетка">2.2. Дифракционная решетка</h3>
+<p>Дифракционная решетка — это практическая реализация системы множества
+осцилляторов. Она позволяет разделять свет по длинам волн, так как угол
+отклонения
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>θ</mi><annotation encoding="application/x-tex">\theta</annotation></semantics></math>
+зависит от
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>λ</mi><annotation encoding="application/x-tex">\lambda</annotation></semantics></math>.</p>
+<p><strong>Условие главных максимумов:</strong>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mi>θ</mi><mo>=</mo><mi>m</mi><mi>λ</mi></mrow><annotation encoding="application/x-tex">d \sin \theta = m\lambda</annotation></semantics></math></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Параметр</th>
+<th style="text-align: left;">Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Порядок
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math>)</strong></td>
+<td style="text-align: left;">Целое число, определяющее номер
+пучка.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Угловое
+распределение</strong></td>
+<td style="text-align: left;">Красный свет (большая
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>λ</mi><annotation encoding="application/x-tex">\lambda</annotation></semantics></math>)
+отклоняется на больший угол, чем синий.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Форма штрихов</strong></td>
+<td style="text-align: left;">Специальная (например, пилообразная) форма
+штрихов позволяет перераспределять интенсивность в пользу конкретного
+порядка (Фиг. 30.4).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="23-разрешающая-способность-критерий-рэлея">2.3. Разрешающая
+способность (Критерий Рэлея)</h3>
+<p>Разрешающая способность определяет минимальную разность длин волн
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>λ</mi></mrow><annotation encoding="application/x-tex">\Delta\lambda</annotation></semantics></math>,
+при которой два источника еще можно отличить друг от друга.</p>
+<p><strong>Критерий Рэлея:</strong> Первый минимум дифракционной картины
+для одной длины волны должен совпадать с максимумом для другой (Фиг.
+30.6).</p>
+<p><strong>Формула разрешающей способности:</strong>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mi>λ</mi><mrow><mi mathvariant="normal">Δ</mi><mi>λ</mi></mrow></mfrac><mo>=</mo><mi>m</mi><mi>n</mi></mrow><annotation encoding="application/x-tex">\frac{\lambda}{\Delta\lambda} = mn</annotation></semantics></math>
+Где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math>
+— порядок спектра,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+— общее число штрихов решетки.</p>
+<p>Для телескопов и антенн минимальный разрешимый угол составляет:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>θ</mi><mo>≈</mo><mfrac><mi>λ</mi><mi>L</mi></mfrac></mrow><annotation encoding="application/x-tex">\theta \approx \frac{\lambda}{L}</annotation></semantics></math>
+(Для круглого отверстия используется коэффициент 1.22).</p>
+<h3 id="24-дифракция-на-непрозрачном-экране-и-спираль-корню">2.4.
+Дифракция на непрозрачном экране и спираль Корню</h3>
+<p>При освещении непрозрачного предмета край тени не является резким.
+Интенсивность вблизи границы колеблется, а внутри области геометрической
+тени плавно затухает (Фиг. 30.9).</p>
+<p><strong>Спираль Корню (Фиг. 30.8):</strong> Это геометрическое
+представление суммы бесконечно малых векторов, фаза которых меняется
+пропорционально квадрату расстояния от точки на экране
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>h</mi><mn>2</mn></msup><mi>/</mi><mn>2</mn><mi>s</mi></mrow><annotation encoding="application/x-tex">h^2/2s</annotation></semantics></math>).</p>
+<ul>
+<li>В точке точно напротив края предмета интенсивность составляет ровно
+<strong>1/4</strong> от интенсивности падающего света.</li>
+<li>Это объясняется тем, что в этой точке доступна только «половина»
+векторов от полной спирали.</li>
+</ul>
+<hr />
+<h2 id="3-анализ-поля-плоскости-зарядов-глава-307">3. Анализ поля
+плоскости зарядов (Глава 30–7)</h2>
+<p>Рассматривается плоскость с плотностью зарядов
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>η</mi><annotation encoding="application/x-tex">\eta</annotation></semantics></math>.
+Все заряды колеблются в фазе с ускорением
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><msup><mi>ω</mi><mn>2</mn></msup><msub><mi>x</mi><mn>0</mn></msub><msup><mi>e</mi><mrow><mi>i</mi><mi>ω</mi><mi>t</mi></mrow></msup></mrow><annotation encoding="application/x-tex">-\omega^2x_0e^{i\omega t}</annotation></semantics></math>.</p>
+<p><strong>Ключевой результат:</strong> Полное электрическое поле в
+точке
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math>
+на расстоянии
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>z</mi><annotation encoding="application/x-tex">z</annotation></semantics></math>
+от плоскости:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>=</mo><mi>−</mi><mfrac><mrow><mi>η</mi><mi>q</mi></mrow><mrow><mn>2</mn><msub><mi>ϵ</mi><mn>0</mn></msub><mi>c</mi></mrow></mfrac><mo stretchy="false" form="prefix">[</mo><mi>v</mi><msub><mo stretchy="false" form="postfix">]</mo><mrow><mi>t</mi><mo>−</mo><mi>z</mi><mi>/</mi><mi>c</mi></mrow></msub></mrow><annotation encoding="application/x-tex">E = -\frac{\eta q}{2\epsilon_0 c} [v]_{t-z/c}</annotation></semantics></math>
+Где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><mi>v</mi><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">[v]</annotation></semantics></math>
+— скорость зарядов в запаздывающий момент времени.</p>
+<p><strong>Графическое вычисление интеграла (Фиг. 30.11,
+30.12):</strong> Математически интеграл по бесконечной плоскости
+неопределен (описывает окружность в комплексной плоскости). Однако
+физически, учитывая, что любая плоскость конечна или её плотность падает
+к краям, график превращается в спираль, сходящуюся к центру окружности.
+Это дает конечное и физически осмысленное значение поля.</p>
+<hr />
+<h2 id="4-важные-цитаты-и-их-контекст">4. Важные цитаты и их
+контекст</h2>
+<blockquote>
+<p><strong>«До сих пор никому не удалось удовлетворительным образом
+определить разницу между дифракцией и интерференцией. Дело здесь только
+в привычке...»</strong> <em>Контекст:</em> Начало главы, где автор
+подчеркивает единство физической природы всех интерференционных
+явлений.</p>
+</blockquote>
+<blockquote>
+<p><strong>«Если источники расположены слишком близко (расстояние
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>d</mi><annotation encoding="application/x-tex">d</annotation></semantics></math>
+меньше
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>λ</mi><annotation encoding="application/x-tex">\lambda</annotation></semantics></math>),
+возможен только один пучок — нулевого порядка».</strong>
+<em>Контекст:</em> Обсуждение условий возникновения максимумов высших
+порядков в дифракционных решетках.</p>
+</blockquote>
+<blockquote>
+<p><strong>«Падающий свет возбуждает движение атомов отражающего тела, а
+оно в свою очередь генерирует новую волну... угол падения луча света
+равен углу, под которым выходит отраженный луч!»</strong>
+<em>Контекст:</em> Объяснение механизма зеркального отражения через
+вторичное излучение (рассеяние) множества атомов поверхности.</p>
+</blockquote>
+<hr />
+<h2 id="5-сводная-таблица-ключевых-формул">5. Сводная таблица ключевых
+формул</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Явление</th>
+<th style="text-align: left;">Формула</th>
+<th style="text-align: left;">Физический смысл</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Интенсивность
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+источников</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mo>=</mo><msub><mi>I</mi><mn>0</mn></msub><mfrac><mrow><msup><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mn>2</mn></msup><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mi>ϕ</mi><mi>/</mi><mn>2</mn><mo stretchy="false" form="postfix">)</mo></mrow><mrow><msup><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mn>2</mn></msup><mo stretchy="false" form="prefix">(</mo><mi>ϕ</mi><mi>/</mi><mn>2</mn><mo stretchy="false" form="postfix">)</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">I = I_0 \frac{\sin^2(n\phi/2)}{\sin^2(\phi/2)}</annotation></semantics></math></td>
+<td style="text-align: left;">Распределение энергии в дифракционной
+картине.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Дифракционный
+минимум</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mi>d</mi><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mi>θ</mi><mo>=</mo><mi>λ</mi></mrow><annotation encoding="application/x-tex">nd \sin \theta = \lambda</annotation></semantics></math></td>
+<td style="text-align: left;">Условие полной деструктивной интерференции
+(замыкание вектора).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Разрешающая
+способность</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>λ</mi><mi>/</mi><mi>λ</mi><mo>=</mo><mn>1</mn><mi>/</mi><mi>m</mi><mi>n</mi></mrow><annotation encoding="application/x-tex">\Delta\lambda/\lambda = 1/mn</annotation></semantics></math></td>
+<td style="text-align: left;">Предел точности спектрального
+прибора.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Поле плоскости</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>∼</mo><mrow><mtext mathvariant="normal">velocity at </mtext><mspace width="0.333em"></mspace></mrow><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo>−</mo><mi>z</mi><mi>/</mi><mi>c</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">E \sim \text{velocity at } (t-z/c)</annotation></semantics></math></td>
+<td style="text-align: left;">Связь поля излучения со скоростью движения
+зарядов на плоскости.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="6-практические-выводы-и-идеи">6. Практические выводы и идеи</h2>
+<ol type="1">
+<li><strong>Спектроскопия:</strong> Использование дифракционных решеток
+позволяет бесконтактно определять химический состав и физические
+параметры источников света по их спектру.</li>
+<li><strong>Радиолокация и астрономия:</strong> Размер антенны
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>L</mi><annotation encoding="application/x-tex">L</annotation></semantics></math>
+напрямую определяет угловую точность системы
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi><mi>/</mi><mi>L</mi></mrow><annotation encoding="application/x-tex">\lambda/L</annotation></semantics></math>).
+Для улучшения разрешения необходимо увеличивать апертуру или
+использовать более короткие волны.</li>
+<li><strong>Кристаллография:</strong> Использование рентгеновских лучей
+(где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>λ</mi><annotation encoding="application/x-tex">\lambda</annotation></semantics></math>
+соизмерима с расстоянием между атомами) превращает кристаллы в
+трехмерные дифракционные решетки, позволяя «видеть» структуру
+вещества.</li>
+<li><strong>Оптика тонких пленок:</strong> Цвета масляных пятен и
+мыльных пузырей объясняются интерференцией волн, отраженных от передней
+и задней поверхностей пленки. Две волны складываются с разностью фаз,
+зависящей от толщины пленки и угла зрения.</li>
+</ol>
+    </article>
+  </main>
+</body>
+</html>

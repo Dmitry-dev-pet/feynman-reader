@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Аналитический отчет по главе I-09: Динамические законы Ньютона - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch09.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1
+id="аналитический-отчет-по-главе-i-09-динамические-законы-ньютона">Аналитический
+отчет по главе I-09: Динамические законы Ньютона</h1>
+<h2 id="1-введение-исторический-и-научный-контекст">1. Введение:
+Исторический и научный контекст</h2>
+<p>Открытие законов динамики стало «драматическим моментом» в истории
+человеческой мысли. До Исаака Ньютона движение небесных тел — блуждания
+планет по небосводу — казалось непостижимой тайной, мистической
+загадкой. После Ньютона мир стал прозрачным и понятным.</p>
+<p>Великий прорыв начался с воображения Галилео Галилея. Он первым
+осознал, что движение само по себе не требует объяснения силой — его
+требует <em>изменение</em> движения. Сформулированный им принцип инерции
+гласит: тело, предоставленное самому себе, сохраняет состояние покоя или
+равномерного прямолинейного движения. Ньютон же сделал следующий шаг,
+перейдя от качественных догадок к строгому количественному анализу.
+Сегодня мы можем с гордостью сказать, что для предсказания орбитальных
+возмущений Урана, вызванных влиянием Юпитера и Сатурна, достаточно лишь
+знания законов динамики и базовой арифметики.</p>
+<h2 id="2-фундаментальные-понятия-импульс-масса-и-сила">2.
+Фундаментальные понятия: Импульс, Масса и Сила</h2>
+<h3 id="определения-и-различия">Определения и различия</h3>
+<p>В физике мы используем обыденные слова с необычной точностью:</p>
+<ul>
+<li><strong>«Быстрота» (speed) против «Скорости» (velocity):</strong>
+Быстрота — это лишь число (скаляр), показывающее интенсивность движения.
+Скорость — это вектор, обладающий и величиной, и направлением.</li>
+<li><strong>Вес против Инертности (массы):</strong> Представьте, что вы
+находитесь на Марсе. Ваш вес там изменится, так как «сила давления» на
+поверхность станет меньше. Однако ваша инертность — то, насколько трудно
+вас разогнать или остановить — останется точно такой же. Масса — это
+количественная мера этой инертности.</li>
+</ul>
+<h3 id="математическая-формулировка">Математическая формулировка</h3>
+<p>Второй закон Ньютона гласит, что скорость изменения импульса тела
+пропорциональна приложенной силе:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑭</mi><mo>=</mo><mfrac><mi>d</mi><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo stretchy="false" form="prefix">(</mo><mi>m</mi><mi mathvariant="bold-italic">𝒗</mi><mo stretchy="false" form="postfix">)</mo><mspace width="1.0em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>9.1</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mathbf{F} = \frac{d}{dt}(m\mathbf{v}) \quad (9.1)</annotation></semantics></math></p>
+<p>В классической механике мы принимаем массу
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math>
+за постоянную величину, что позволяет переписать закон через ускорение:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑭</mi><mo>=</mo><mi>m</mi><mfrac><mrow><mi>d</mi><mi mathvariant="bold-italic">𝒗</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mi>m</mi><mi mathvariant="bold-italic">𝒂</mi><mspace width="1.0em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>9.2</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mathbf{F} = m\frac{d\mathbf{v}}{dt} = m\mathbf{a} \quad (9.2)</annotation></semantics></math>
+Физический смысл прост: сила определяет не то, <em>где</em> находится
+тело или <em>как быстро</em> оно движется, а то, как именно его движение
+<em>меняется</em> в данный момент времени.</p>
+<h3 id="свойства-массы">Свойства массы</h3>
+<p>Классический подход Ньютона опирается на два ключевых допущения:</p>
+<ol type="1">
+<li><strong>Постоянство:</strong> Масса тела не зависит ни от его
+положения, ни от скорости.</li>
+<li><strong>Аддитивность:</strong> Если мы соединяем два предмета, их
+общая масса равна сумме их индивидуальных масс.</li>
+</ol>
+<h2 id="3-векторная-природа-движения-компоненты-скорости-и-ускорения">3.
+Векторная природа движения: Компоненты скорости и ускорения</h2>
+<h3 id="разложение-по-осям">Разложение по осям</h3>
+<p>Движение в пространстве полностью описывается изменением координат
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi></mrow><annotation encoding="application/x-tex">x, y, z</annotation></semantics></math>.
+<code>[Здесь приводится описание схемы малого перемещения тела на основе Фиг. 9.1: перемещение Δs представлено как диагональ параллелепипеда. Стороны Δx, Δy и Δz соответствуют проекциям пути на оси координат за время Δt. Это позволяет вычислить абсолютную величину скорости через её компоненты: |v| = \sqrt{v_x^2 + v_y^2 + v_z^2} (9.6)]</code>.</p>
+<h3 id="система-уравнений">Система уравнений</h3>
+<p>Второй закон Ньютона — это фактически три независимых закона,
+действующих вдоль каждой из осей:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">{</mo><mtable><mtr><mtd columnalign="left" style="text-align: left"><msub><mi>F</mi><mi>x</mi></msub><mo>=</mo><mi>m</mi><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mi>x</mi></mrow><mrow><mi>d</mi><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac></mtd></mtr><mtr><mtd columnalign="left" style="text-align: left"><msub><mi>F</mi><mi>y</mi></msub><mo>=</mo><mi>m</mi><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mi>y</mi></mrow><mrow><mi>d</mi><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac></mtd></mtr><mtr><mtd columnalign="left" style="text-align: left"><msub><mi>F</mi><mi>z</mi></msub><mo>=</mo><mi>m</mi><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mi>z</mi></mrow><mrow><mi>d</mi><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac></mtd></mtr></mtable></mrow><mspace width="1.0em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>9.7</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\begin{cases} F_x = m\frac{d^2x}{dt^2} \\ F_y = m\frac{d^2y}{dt^2} \\ F_z = m\frac{d^2z}{dt^2} \end{cases} \quad (9.7)</annotation></semantics></math>
+Если силы вдоль осей не связаны между собой, движения по
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><annotation encoding="application/x-tex">x, y</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>z</mi><annotation encoding="application/x-tex">z</annotation></semantics></math>
+полностью независимы.</p>
+<h3 id="физический-смысл-кривизны">Физический смысл кривизны</h3>
+<p><code>[Здесь приводится описание схемы изменения вектора скорости на основе Фиг. 9.2: показано, что сила может изменять как модуль скорости, так и её направление. Если сила приложена строго перпендикулярно вектору скорости, она не меняет быстроту движения, а только искривляет траекторию]</code>.
+В этом случае ускорение направлено к центру кривизны и вычисляется как:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>=</mo><mfrac><msup><mi>v</mi><mn>2</mn></msup><mi>R</mi></mfrac><mspace width="1.0em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>9.3</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">a = \frac{v^2}{R} \quad (9.3)</annotation></semantics></math>
+Важно понимать интуитивно: такое ускорение всегда действует под прямым
+углом к мгновенной скорости.</p>
+<h2 id="4-практические-модели-сил-тяготение-и-пружина">4. Практические
+модели сил: Тяготение и Пружина</h2>
+<h3 id="сила-тяжести">Сила тяжести</h3>
+<p>У поверхности Земли сила тяжести направлена вертикально вниз и равна
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mi>g</mi></mrow><annotation encoding="application/x-tex">mg</annotation></semantics></math>.
+Уравнение свободного падения (9.9) после сокращения массы дает
+постоянное ускорение
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>g</mi><annotation encoding="application/x-tex">g</annotation></semantics></math>.
+Интегрирование приводит к классическим уравнениям положения:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><msub><mi>x</mi><mn>0</mn></msub><mo>+</mo><msub><mi>v</mi><mn>0</mn></msub><mi>t</mi><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>g</mi><msup><mi>t</mi><mn>2</mn></msup><mspace width="1.0em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>9.10</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">x = x_0 + v_0t + \frac{1}{2}gt^2 \quad (9.10)</annotation></semantics></math></p>
+<h3 id="грузик-на-пружине">Грузик на пружине</h3>
+<p><code>[Здесь приводится изображение системы «грузик на пружине» на основе Фиг. 9.3: груз подвешен на пружине, создающей возвращающую силу F = -kx. Сила пропорциональна отклонению и направлена в противоположную сторону]</code>.
+Принимая для простоты
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mi>/</mi><mi>m</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">k/m = 1</annotation></semantics></math>,
+получаем фундаментальное уравнение колебаний:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi>d</mi><msub><mi>v</mi><mi>x</mi></msub></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mi>−</mi><mi>x</mi><mspace width="1.0em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>9.12</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\frac{dv_x}{dt} = -x \quad (9.12)</annotation></semantics></math></p>
+<h2 id="5-методология-численного-анализа-алгоритм-расчета">5.
+Методология численного анализа (Алгоритм расчета)</h2>
+<p>Когда уравнения становятся сложными, на помощь приходит численный
+метод приращений.</p>
+<h3 id="алгоритм-расчета">Алгоритм расчета</h3>
+<ol type="1">
+<li><strong>Начальный импульс:</strong> Чтобы запустить расчет методом
+средних точек, необходимо найти скорость в первый полушаг времени
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ϵ</mi><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">\epsilon/2</annotation></semantics></math>:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mo stretchy="false" form="prefix">(</mo><mi>ϵ</mi><mi>/</mi><mn>2</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>v</mi><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mi>ϵ</mi><mi>/</mi><mn>2</mn><mo stretchy="false" form="postfix">)</mo><mi>a</mi><mo stretchy="false" form="prefix">(</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">v(\epsilon/2) = v(0) + (\epsilon/2)a(0)</annotation></semantics></math></li>
+<li><strong>Цикл расчета:</strong> Зная значения в момент
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math>,
+вычисляем новые для момента
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>+</mo><mi>ϵ</mi></mrow><annotation encoding="application/x-tex">t+\epsilon</annotation></semantics></math>:
+<ul>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo>+</mo><mi>ϵ</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>x</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>ϵ</mi><mo>⋅</mo><mi>v</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo>+</mo><mi>ϵ</mi><mi>/</mi><mn>2</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">x(t+\epsilon) = x(t) + \epsilon \cdot v(t+\epsilon/2)</annotation></semantics></math></li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo>+</mo><mi>ϵ</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>F</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo>+</mo><mi>ϵ</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">)</mo><mi>/</mi><mi>m</mi></mrow><annotation encoding="application/x-tex">a(t+\epsilon) = F(x(t+\epsilon))/m</annotation></semantics></math></li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo>+</mo><mn>3</mn><mi>ϵ</mi><mi>/</mi><mn>2</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>v</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo>+</mo><mi>ϵ</mi><mi>/</mi><mn>2</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>ϵ</mi><mo>⋅</mo><mi>a</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo>+</mo><mi>ϵ</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">v(t+3\epsilon/2) = v(t+\epsilon/2) + \epsilon \cdot a(t+\epsilon)</annotation></semantics></math></li>
+</ul></li>
+<li><strong>Повторение:</strong> Цикл повторяется до конца нужного
+интервала времени.</li>
+</ol>
+<h3 id="повышение-точности-хитрость-метода">Повышение точности:
+«хитрость» метода</h3>
+<p>Использование скорости именно в <em>середине</em> временного
+интервала (уравнения 9.16) критически важно. Это позволяет учесть, что
+скорость меняется на протяжении всего шага
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϵ</mi><annotation encoding="application/x-tex">\epsilon</annotation></semantics></math>,
+и среднее значение дает на порядок более точный результат.</p>
+<h3 id="табличная-интерпретация">Табличная интерпретация</h3>
+<p><code>[Здесь приводится описание графика на основе Фиг. 9.4: точки численного расчета из Таблицы 9.1 нанесены поверх теоретической кривой x = cos t. Точки ложатся точно на линию, демонстрируя, что шаг в 0.1 сек обеспечивает точность до трех значащих цифр]</code>.</p>
+<h2 id="6-динамика-планетных-систем">6. Динамика планетных систем</h2>
+<h3 id="моделирование-орбиты">Моделирование орбиты</h3>
+<p><code>[На основе Фиг. 9.5 описывается разложение силы тяготения Солнца. Используя подобие треугольников, мы находим, что компонента силы F_x так относится к полной силе F, как координата x относится к расстоянию r]</code>.
+Приняв
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>G</mi><mi>M</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">GM = 1</annotation></semantics></math>,
+получаем систему:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">{</mo><mtable><mtr><mtd columnalign="left" style="text-align: left"><mfrac><mrow><mi>d</mi><msub><mi>v</mi><mi>x</mi></msub></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mi>−</mi><mfrac><mi>x</mi><msup><mi>r</mi><mn>3</mn></msup></mfrac></mtd></mtr><mtr><mtd columnalign="left" style="text-align: left"><mfrac><mrow><mi>d</mi><msub><mi>v</mi><mi>y</mi></msub></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mi>−</mi><mfrac><mi>y</mi><msup><mi>r</mi><mn>3</mn></msup></mfrac></mtd></mtr><mtr><mtd columnalign="left" style="text-align: left"><mi>r</mi><mo>=</mo><msqrt><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></msqrt></mtd></mtr></mtable></mrow><mspace width="1.0em"></mspace><mo stretchy="false" form="prefix">(</mo><mn>9.17</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\begin{cases} \frac{dv_x}{dt} = -\frac{x}{r^3} \\ \frac{dv_y}{dt} = -\frac{y}{r^3} \\ r = \sqrt{x^2 + y^2} \end{cases} \quad (9.17)</annotation></semantics></math></p>
+<h3 id="анализ-результатов-таблица-92">Анализ результатов (Таблица
+9.2)</h3>
+<p>Численный расчет показывает мощь метода. При начальных условиях
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mn>0.5</mn><mo>,</mo><msub><mi>v</mi><mi>y</mi></msub><mo>=</mo><mn>1.63</mn></mrow><annotation encoding="application/x-tex">x=0.5, v_y=1.63</annotation></semantics></math>:</p>
+<ul>
+<li>Планета пересекает ось
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>
+в момент
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>=</mo><mn>2.101</mn></mrow><annotation encoding="application/x-tex">t = 2.101</annotation></semantics></math>
+сек.</li>
+<li>Полный период обращения составляет
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>4.20</mn><annotation encoding="application/x-tex">4.20</annotation></semantics></math>
+сек.</li>
+<li>Большая полуось орбиты равна
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0.761</mn><annotation encoding="application/x-tex">0.761</annotation></semantics></math>.
+<code>[Описание Фиг. 9.6: точки на графике орбиты расположены неравномерно. Они сгущаются вдали от Солнца (афелий), где планета движется медленнее, и разрежены вблизи него (перигелий), наглядно подтверждая законы Кеплера]</code>.</li>
+</ul>
+<h3 id="проблема-многих-тел">Проблема многих тел</h3>
+<p>Для системы из
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>N</mi><annotation encoding="application/x-tex">N</annotation></semantics></math>
+планет (9.18) расчет усложняется, так как нужно учитывать влияние всех
+тел друг на друга. Однако для современной техники это не проблема:</p>
+<ul>
+<li>Для точности в <strong>одну миллиардную</strong> требуется около
+<strong>400 000 циклов</strong> на один оборот.</li>
+<li>Вычислительная машина справляется с расчетом орбиты Юпитера со всеми
+возмущениями всего за <strong>2 минуты</strong>.</li>
+</ul>
+<h2 id="7-заключение-мощь-законов-ньютона">7. Заключение: Мощь законов
+Ньютона</h2>
+<p>Универсальность законов Ньютона поразительна. Один и тот же
+математический аппарат описывает и простое покачивание грузика на
+пружине, и величественный танец планет. Мы обнаружили, что сложнейшие
+небесные явления, веками казавшиеся божественным промыслом, теперь могут
+быть предсказаны любым, кто владеет законами динамики и умеет складывать
+числа. Природа оказалась не просто упорядоченной, а вычислимой.</p>
+    </article>
+  </main>
+</body>
+</html>

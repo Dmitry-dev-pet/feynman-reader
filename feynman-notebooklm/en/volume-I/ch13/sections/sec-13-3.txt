@@ -1,0 +1,96 @@
+SOURCE: Feynman Lectures on Physics, Volume I, Chapter 13
+LANGUAGE: en
+SECTION: 13–3 Summation of energy
+SOURCE_URL: https://www.feynmanlectures.caltech.edu/I_13.html
+
+# 13–3 Summation of energy
+
+Now we go on to the more general consideration of what happens when there are large numbers of objects. Suppose we have the complicated problem of many objects, which we label \(i = 1\) , \(2\) , \(3\) , …, all exerting gravitational pulls on each other. What happens then? We shall prove that if we add the kinetic energies of all the particles, and add to this the sum, over allpairsof particles, of their mutual gravitational potential energy, \(-GMm/r_{ij}\) , the total is a constant:
+\[
+\begin{equation}
+\label{Eq:I:13:14}
+\sum_i\tfrac{1}{2}m_iv_i^2\;+\!\!\sum_{(\text{pairs $ij$})}
+\!\!-\frac{Gm_im_j}{r_{ij}}=\text{const}.
+\end{equation}
+\]
+How do we prove it? We differentiate each side with respect to time and get zero. When we differentiate \(\tfrac{1}{2}m_iv_i^2\) , we find derivatives of the velocity that are the forces, just as in Eq. (13.5). We replace these forces by the law of force that we know from Newton’s law of gravity and then we notice that what is left is minus the time derivative of
+\[
+\begin{equation*}
+\sum_{\text{pairs}}
+-\frac{Gm_im_j}{r_{ij}}.
+\end{equation*}
+\]
+The time derivative of the kinetic energy is
+\[
+\begin{equation}
+\begin{aligned}
+\ddt{}{t}\sum_i\tfrac{1}{2}m_iv_i^2
+&=\sum_im_i\,\ddt{\FLPv_i}{t}\cdot\FLPv_i\\[.5ex]
+&=\sum_i\FLPF_i\cdot\FLPv_i\\[-.5ex]
+&=\sum_i\Biggl(
+\sum_j-\frac{Gm_im_j\FLPr_{ij}}{r_{ij}^3}
+\Biggr)\cdot\FLPv_i.
+\end{aligned}
+\label{Eq:I:13:15}
+\end{equation}
+\]
+The time derivative of the potential energy is
+\[
+\begin{equation*}
+\ddt{}{t}\sum_{\text{pairs}}
+-\frac{Gm_im_j}{r_{ij}}=
+\sum_{\text{pairs}}
+\Biggl(+\frac{Gm_im_j}{r_{ij}^2}\Biggr)
+\biggl(\ddt{r_{ij}}{t}\biggr).
+\end{equation*}
+\]
+But
+\[
+\begin{equation*}
+r_{ij}=\sqrt{(x_i-x_j)^2+(y_i-y_j)^2+(z_i-z_j)^2},
+\end{equation*}
+\]
+so that
+\[
+\begin{align*}
+\ddt{r_{ij}}{t}&=
+\begin{alignedat}[t]{5}
+\frac{1}{2r_{ij}}\biggl[
+&2(x_i&&-x_j&&)\biggl(\ddt{x_i}{t}&&-\ddt{x_j}{t}&&\biggr)\\
+{}+{}&2(y_i&&-y_j&&)\biggl(\ddt{y_i}{t}&&-\ddt{y_j}{t}&&\biggr)\\
+{}+{}&2(z_i&&-z_j&&)\biggl(\ddt{z_i}{t}&&-\ddt{z_j}{t}&&\biggr)
+\biggr]
+\end{alignedat}\\[1ex]
+&=\FLPr_{ij}\cdot\frac{\FLPv_i-\FLPv_j}{r_{ij}}\\[.5ex]
+&=\FLPr_{ij}\cdot\frac{\FLPv_i}{r_{ij}}+
+\FLPr_{ji}\cdot\frac{\FLPv_j}{r_{ji}},
+\end{align*}
+\]
+since \(\FLPr_{ij} = -\FLPr_{ji}\) , while \(r_{ij} = r_{ji}\) . Thus
+\[
+\begin{equation}
+\begin{gathered}
+\ddt{}{t}\sum_{\text{pairs}}-\frac{Gm_im_j}{r_{ij}}=\\[2ex]
+\sum_{\text{pairs}}\biggl[
+\frac{Gm_im_j\FLPr_{ij}}{r_{ij}^3}\cdot\FLPv_i+
+\frac{Gm_jm_i\FLPr_{ji}}{r_{ji}^3}\cdot\FLPv_j\biggr].
+\end{gathered}
+\label{Eq:I:13:16}
+\end{equation}
+\]
+Now we must note carefully what \(\sum\limits_i\{\sum\limits_j\}\) and \(\sum\limits_{\text{pairs}}\) mean. In Eq. (13.15), \(\sum\limits_i\{\sum\limits_j\}\) means that \(i\) takes on all values \(i=1\) , \(2\) , \(3\) , … in turn, and for each value of \(i\) , the index \(j\) takes on all values except \(i\) . Thus if \(i = 3\) , \(j\) takes on the values \(1\) , \(2\) , \(4\) , …
+In Eq. (13.16), on the other hand, \(\sum\limits_{\text{pairs}}\) means that given values of \(i\) and \(j\) occur only once. Thus the particle pair \(1\) and \(3\) contributes only one term to the sum. To keep track of this, we might agree to let \(i\) range over all values \(1\) , \(2\) , \(3\) , …, and for each \(i\) let \(j\) range only over valuesgreaterthan \(i\) . Thus if \(i = 3\) , \(j\) could only have values \(4\) , \(5\) , \(6\) , … But we notice that for each \(i,j\) value there are two contributions to the sum, one involving \(\FLPv_i\) , and the other \(\FLPv_j\) , and that these terms have the same appearance as those of Eq. (13.15), whereallvalues of \(i\) and \(j\) (except \(i = j\) ) are included in the sum. Therefore, by matching the terms one by one, we see that Eqs. (13.16) and (13.15) are precisely the same, but of opposite sign, so that the time derivative of the kinetic plus potential energy is indeed zero. Thus we see that, for many objects,the kinetic energy is the sum of the contributions from each individual object, and that the potential energy is also simple, it being also just a sum of contributions, the energies between all the pairs. We can understandwhyit should be the energy of every pair this way: Suppose that we want to find the total amount of work that must be done to bring the objects to certain distances from each other. We may do this in several steps, bringing them in from infinity where there is no force, one by one. First we bring in number one, which requires no work, since no other objects are yet present to exert force on it. Next we bring in number two, which does take some work, namely \(W_{12}=-Gm_1m_2/r_{12}\) . Now, and this is an important point, suppose we bring in the next object to position three. At any moment the force on number \(3\) can be written as the sum of two forces—the force exerted by number \(1\) and that exerted by number \(2\) . Thereforethe work done is the sum of the works done by each, because if \(\FLPF_3\) can be resolved into the sum of two forces,
+\[
+\begin{equation*}
+\FLPF_3=\FLPF_{13}+\FLPF_{23},
+\end{equation*}
+\]
+then the work is
+\[
+\begin{equation*}
+\int\FLPF_3\cdot d\FLPs=
+\int\FLPF_{13}\cdot d\FLPs+\int\FLPF_{23}\cdot d\FLPs=
+W_{13}+W_{23}.
+\end{equation*}
+\]
+That is, the work done is the sum of the work done against the first force and the second force, as if each acted independently. Proceeding in this way, we see that the total work required to assemble the given configuration of objects is precisely the value given in Eq. (13.14) as the potential energy. It is because gravity obeys the principle of superposition of forces that we can write the potential energy as a sum over each pair of particles.

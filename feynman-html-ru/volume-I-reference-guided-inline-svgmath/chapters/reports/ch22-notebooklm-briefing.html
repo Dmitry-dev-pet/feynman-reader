@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Аналитический отчет по главе 22: АЛГЕБРА - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch22.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1 id="аналитический-отчет-по-главе-22-алгебра">Аналитический отчет по
+главе 22: АЛГЕБРА</h1>
+<h2 id="исполнительное-резюме">Исполнительное резюме</h2>
+<p>Данный отчет представляет собой глубокий анализ процесса эволюции
+алгебраических понятий — от простейшего счета целых чисел до вывода
+«самой поразительной формулы в математике»
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>e</mi><mrow><mi>i</mi><mi>θ</mi></mrow></msup><mo>=</mo><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>θ</mi><mo>+</mo><mi>i</mi><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mi>θ</mi></mrow><annotation encoding="application/x-tex">e^{i\theta} = \cos\theta + i\sin\theta</annotation></semantics></math>).
+Основная идея текста заключается в том, что математика в физике — это не
+просто инструмент, а способ увидеть красоту и простоту законов природы.
+Через последовательный процесс <strong>абстракции и обобщения</strong>
+решаются «неразрешимые» задачи, что приводит к открытию отрицательных,
+дробных, иррациональных и, наконец, комплексных чисел. В документе
+детально рассматриваются методы численного вычисления логарифмов (метод
+Бриггса) и раскрывается алгебраическая природа тригонометрических
+функций.</p>
+<hr />
+<h2 id="1-фундаментальные-правила-и-процесс-обобщения">1.
+Фундаментальные правила и процесс обобщения</h2>
+<p>Алгебра строится на расширении области применения базовых правил.
+Вместо того чтобы использовать числа для определения правил, правила
+используются для определения новых типов чисел.</p>
+<h3 id="прямые-и-обратные-операции">Прямые и обратные операции</h3>
+<p>Основные операции и их обратные аналоги формируют структуру
+алгебраических уравнений:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Прямая операция</th>
+<th style="text-align: left;">Уравнение</th>
+<th style="text-align: left;">Обратная операция</th>
+<th style="text-align: left;">Решение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Сложение</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>+</mo><mi>b</mi><mo>=</mo><mi>c</mi></mrow><annotation encoding="application/x-tex">a + b = c</annotation></semantics></math></td>
+<td style="text-align: left;">Вычитание</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo>=</mo><mi>c</mi><mo>−</mo><mi>a</mi></mrow><annotation encoding="application/x-tex">b = c - a</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Умножение</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mi>b</mi><mo>=</mo><mi>c</mi></mrow><annotation encoding="application/x-tex">ab = c</annotation></semantics></math></td>
+<td style="text-align: left;">Деление</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo>=</mo><mi>c</mi><mi>/</mi><mi>a</mi></mrow><annotation encoding="application/x-tex">b = c/a</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Возведение в степень</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>b</mi><mi>a</mi></msup><mo>=</mo><mi>c</mi></mrow><annotation encoding="application/x-tex">b^a = c</annotation></semantics></math></td>
+<td style="text-align: left;">Корень</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo>=</mo><mroot><mi>c</mi><mi>a</mi></mroot></mrow><annotation encoding="application/x-tex">b = \sqrt[a]{c}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Возведение в степень</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>a</mi><mi>b</mi></msup><mo>=</mo><mi>c</mi></mrow><annotation encoding="application/x-tex">a^b = c</annotation></semantics></math></td>
+<td style="text-align: left;">Логарифм</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo>=</mo><msub><mrow><mi mathvariant="normal">log</mi><mo>&#8289;</mo></mrow><mi>a</mi></msub><mi>c</mi></mrow><annotation encoding="application/x-tex">b = \log_a c</annotation></semantics></math></td>
+</tr>
+</tbody>
+</table>
+<h3 id="принцип-великого-плана">Принцип «Великого плана»</h3>
+<p>Процесс развития математики описывается как цепочка преодоления
+препятствий:</p>
+<ol type="1">
+<li><strong>Отрицательные числа:</strong> возникают при попытке решить
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mo>−</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">3 - 5</annotation></semantics></math>.
+Правила умножения (например, минус на минус дает плюс) выводятся так,
+чтобы сохранялись базовые законы (дистрибутивность и др.).</li>
+<li><strong>Дробные числа:</strong> возникают из необходимости деления
+(например,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mi>/</mi><mn>5</mn></mrow><annotation encoding="application/x-tex">3/5</annotation></semantics></math>).</li>
+<li><strong>Иррациональные числа:</strong> решение уравнений типа
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">x^2 = 2</annotation></semantics></math>.
+Требуют введения понятий непрерывности и последовательных
+приближений.</li>
+<li><strong>Комплексные числа:</strong> решение уравнения
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>=</mo><mi>−</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">x^2 = -1</annotation></semantics></math>.
+Введение мнимой единицы
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math>
+является «последним изобретением», так как оно позволяет решить любое
+алгебраическое уравнение.</li>
+</ol>
+<hr />
+<h2 id="2-численные-методы-и-натуральное-основание">2. Численные методы
+и натуральное основание</h2>
+<p>Текст подробно описывает исторический и практический метод вычисления
+иррациональных степеней и логарифмов через последовательное извлечение
+квадратного корня из 10.</p>
+<h3 id="метод-вычисления-на-примере-log_10-2">Метод вычисления (на
+примере
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow><mi mathvariant="normal">log</mi><mo>&#8289;</mo></mrow><mn>10</mn></msub><mn>2</mn></mrow><annotation encoding="application/x-tex">\log_{10} 2</annotation></semantics></math>)</h3>
+<p>Для вычисления логарифма используется таблица последовательных
+квадратных корней из 10 (табл. 22.1 в источнике).</p>
+<ul>
+<li><strong>Ключевое наблюдение:</strong> При малых значениях степени
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math>
+выполняется приближенное равенство:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>10</mn><mi>s</mi></msup><mo>≈</mo><mn>1</mn><mo>+</mo><mn>2.3025</mn><mi>s</mi></mrow><annotation encoding="application/x-tex">10^s \approx 1 + 2.3025s</annotation></semantics></math></li>
+<li>Это значение
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>2.3025</mn><annotation encoding="application/x-tex">2.3025</annotation></semantics></math>)
+является связующим звеном между десятичными и натуральными
+логарифмами.</li>
+</ul>
+<h3 id="натуральное-основание-e">Натуральное основание
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>e</mi><annotation encoding="application/x-tex">e</annotation></semantics></math></h3>
+<p>Натуральное основание логарифмов определяется как число, для которого
+выполняется условие
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>e</mi><mi>n</mi></msup><mo>≈</mo><mn>1</mn><mo>+</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">e^n \approx 1 + n</annotation></semantics></math>
+при
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>→</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">n \to 0</annotation></semantics></math>.</p>
+<ul>
+<li>Вычисленное значение
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>e</mi><mo>≈</mo><mn>2.718</mn></mrow><annotation encoding="application/x-tex">e \approx 2.718</annotation></semantics></math>
+(в тексте получено
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>2.7184</mn><annotation encoding="application/x-tex">2.7184</annotation></semantics></math>
+через произведение факторов из таблицы корней).</li>
+<li>Переход от основания 10 к основанию
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>e</mi><annotation encoding="application/x-tex">e</annotation></semantics></math>
+осуществляется путем масштабирования логарифмов на коэффициент
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>2.3025</mn><annotation encoding="application/x-tex">2.3025</annotation></semantics></math>.</li>
+</ul>
+<hr />
+<h2 id="3-комплексные-числа-и-мнимая-степень">3. Комплексные числа и
+мнимая степень</h2>
+<p>Комплексное число записывается в виде
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>=</mo><mi>p</mi><mo>+</mo><mi>i</mi><mi>q</mi></mrow><annotation encoding="application/x-tex">a = p + iq</annotation></semantics></math>,
+где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>i</mi><mn>2</mn></msup><mo>=</mo><mi>−</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">i^2 = -1</annotation></semantics></math>.
+Любые операции с ними (сложение, умножение) следуют стандартным правилам
+алгебры.</p>
+<h3 id="возведение-10-в-мнимую-степень">Возведение 10 в мнимую
+степень</h3>
+<p>Приняв допущение, что закон
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>10</mn><mi>ϵ</mi></msup><mo>=</mo><mn>1</mn><mo>+</mo><mn>2.3025</mn><mi>ϵ</mi></mrow><annotation encoding="application/x-tex">10^\epsilon = 1 + 2.3025\epsilon</annotation></semantics></math>
+верен и для мнимых чисел, строится таблица значений
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>10</mn><mrow><mi>i</mi><mi>s</mi></mrow></msup><mo>=</mo><mi>x</mi><mo>+</mo><mi>i</mi><mi>y</mi></mrow><annotation encoding="application/x-tex">10^{is} = x + iy</annotation></semantics></math>.</p>
+<ul>
+<li><strong>Свойство сопряжения:</strong> Если
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>10</mn><mrow><mi>i</mi><mi>s</mi></mrow></msup><mo>=</mo><mi>x</mi><mo>+</mo><mi>i</mi><mi>y</mi></mrow><annotation encoding="application/x-tex">10^{is} = x + iy</annotation></semantics></math>,
+то
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>10</mn><mrow><mi>−</mi><mi>i</mi><mi>s</mi></mrow></msup><mo>=</mo><mi>x</mi><mo>−</mo><mi>i</mi><mi>y</mi></mrow><annotation encoding="application/x-tex">10^{-is} = x - iy</annotation></semantics></math>.</li>
+<li><strong>Условие нормировки:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">x^2 + y^2 = 1</annotation></semantics></math>.
+Это означает, что при изменении
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math>
+точка
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(x, y)</annotation></semantics></math>
+всегда находится на окружности единичного радиуса.</li>
+</ul>
+<hr />
+<h2 id="4-анализ-графического-материала-и-физический-смысл">4. Анализ
+графического материала и физический смысл</h2>
+<h3 id="осцилляции-мнимой-экспоненты-фиг-221">Осцилляции мнимой
+экспоненты (Фиг. 22.1)</h3>
+<p>На графике (Фиг. 22.1) изображены зависимости действительной части
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>)
+и мнимой части
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>y</mi><annotation encoding="application/x-tex">y</annotation></semantics></math>)
+от показателя степени
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math>
+в выражении
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>10</mn><mrow><mi>i</mi><mi>s</mi></mrow></msup><mo>=</mo><mi>x</mi><mo>+</mo><mi>i</mi><mi>y</mi></mrow><annotation encoding="application/x-tex">10^{is} = x + iy</annotation></semantics></math>.</p>
+<ul>
+<li><strong>Поведение:</strong> Величины
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>y</mi><annotation encoding="application/x-tex">y</annotation></semantics></math>
+осциллируют между
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>+</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">+1</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">-1</annotation></semantics></math>.</li>
+<li><strong>Периодичность:</strong> Функция
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>10</mn><mrow><mi>i</mi><mi>s</mi></mrow></msup><annotation encoding="application/x-tex">10^{is}</annotation></semantics></math>
+является периодической. Поскольку
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>10</mn><mrow><mn>0.68</mn><mi>i</mi></mrow></msup><mo>≈</mo><mi>i</mi></mrow><annotation encoding="application/x-tex">10^{0.68i} \approx i</annotation></semantics></math>,
+то четвертая степень этого числа
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>10</mn><mrow><mn>2.72</mn><mi>i</mi></mrow></msup><annotation encoding="application/x-tex">10^{2.72i}</annotation></semantics></math>)
+равна
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>+</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">+1</annotation></semantics></math>,
+что замыкает цикл.</li>
+<li><strong>Вывод:</strong> Эти кривые — «алгебраические» синус и
+косинус.</li>
+</ul>
+<h3 id="объединение-алгебры-и-геометрии-фиг-222">Объединение алгебры и
+геометрии (Фиг. 22.2)</h3>
+<p>Геометрическое представление комплексного числа на плоскости
+(диаграмма Аргана) устанавливает прямую связь:</p>
+<ul>
+<li>Горизонтальная координата —
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>
+(действительная часть).</li>
+<li>Вертикальная координата —
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>y</mi><annotation encoding="application/x-tex">y</annotation></semantics></math>
+(мнимая часть).</li>
+<li>Радиус
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math>
+и угол
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>θ</mi><annotation encoding="application/x-tex">\theta</annotation></semantics></math>
+позволяют записать число в виде
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><msup><mi>e</mi><mrow><mi>i</mi><mi>θ</mi></mrow></msup></mrow><annotation encoding="application/x-tex">re^{i\theta}</annotation></semantics></math>.</li>
+</ul>
+<hr />
+<h2 id="5-жемчужина-математики-формула-эйлера">5. Жемчужина математики:
+Формула Эйлера</h2>
+<p>Итогом всех обобщений является формула:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>e</mi><mrow><mi>i</mi><mi>θ</mi></mrow></msup><mo>=</mo><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>θ</mi><mo>+</mo><mi>i</mi><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mi>θ</mi></mrow><annotation encoding="application/x-tex">e^{i\theta} = \cos\theta + i\sin\theta</annotation></semantics></math></p>
+<p><strong>Физический и математический смысл:</strong></p>
+<ol type="1">
+<li><strong>Чисто алгебраическое происхождение:</strong> Функции синуса
+и косинуса, изначально возникшие в геометрии, естественным образом
+выводятся из законов алгебры при работе с мнимыми степенями.</li>
+<li><strong>Единство дисциплин:</strong> Это точка слияния алгебры и
+геометрии.</li>
+<li><strong>Завершенность:</strong> Комплексные числа позволяют найти
+решение для любой алгебраической задачи, не требуя дальнейших расширений
+системы счисления.</li>
+</ol>
+<hr />
+<h2 id="6-важные-цитаты-и-их-контекст">6. Важные цитаты и их
+контекст</h2>
+<blockquote>
+<p><em>«Математика — очень важный рабочий инструмент... однако при
+изучении теоретической физики мы обнаруживаем, что все физические законы
+можно записать в виде математических формул, именно это придает законам
+простоту и красоту».</em> — Контекст: Обоснование глубокого изучения
+алгебры в курсе физики.</p>
+</blockquote>
+<blockquote>
+<p><em>«Наш великий план состоит в том, чтобы продолжать процесс
+обобщения: всякий раз, когда мы сталкиваемся с очередной задачей,
+которую не можем решить, мы расширяем область чисел».</em> — Контекст:
+Объяснение методологии развития математических понятий от целых чисел до
+иррациональных.</p>
+</blockquote>
+<blockquote>
+<p><em>«Самое чудесное, что больше ничего не надо изобретать. Это
+последнее изобретение».</em> — Контекст: О комплексных числах как
+финальном этапе расширения алгебраической системы.</p>
+</blockquote>
+<hr />
+<h2 id="7-практические-выводы-actionable-insights">7. Практические
+выводы (Actionable Insights)</h2>
+<ol type="1">
+<li><strong>Метод «шага в сторону»:</strong> В физике и математике
+решение тупиковой задачи часто лежит в расширении определений и
+пересмотре смысла символов при сохранении базовых правил.</li>
+<li><strong>Вычислительная эффективность:</strong> Исторический пример
+Генри Бриггса (1620 г.) показывает, что сложные таблицы логарифмов могут
+быть построены на основе простой операции извлечения квадратного корня,
+дополненной линейной аппроксимацией для малых величин.</li>
+<li><strong>Универсальность
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>e</mi><annotation encoding="application/x-tex">e</annotation></semantics></math>:</strong>
+Использование натурального основания
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>e</mi><annotation encoding="application/x-tex">e</annotation></semantics></math>
+упрощает математические выражения, делая производную функции
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mi>x</mi></msup><annotation encoding="application/x-tex">e^x</annotation></semantics></math>
+максимально простой (в пределе
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mo>→</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\Delta \to 0</annotation></semantics></math>),
+что критически важно для описания колебательных систем в физике.</li>
+<li><strong>Комплексное сопряжение:</strong> Использование сопряженных
+чисел
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>+</mo><mi>i</mi><mi>y</mi></mrow><annotation encoding="application/x-tex">x + iy</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>−</mo><mi>i</mi><mi>y</mi></mrow><annotation encoding="application/x-tex">x - iy</annotation></semantics></math>)
+— мощный инструмент для избавления от мнимых частей в знаменателях и
+нахождения модулей комплексных величин.</li>
+</ol>
+    </article>
+  </main>
+</body>
+</html>

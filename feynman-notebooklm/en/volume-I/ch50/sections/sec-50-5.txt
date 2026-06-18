@@ -1,0 +1,37 @@
+SOURCE: Feynman Lectures on Physics, Volume I, Chapter 50
+LANGUAGE: en
+SECTION: 50–5 The energy theorem
+SOURCE_URL: https://www.feynmanlectures.caltech.edu/I_50.html
+
+# 50–5 The energy theorem
+
+The energy in a wave is proportional to the square of its amplitude. For a wave of complex shape, the energy in one period will be proportional to \(\int_0^Tf^2(t)\,dt\) . We can also relate this energy to the Fourier coefficients. We write
+\[
+\begin{gather}
+\label{Eq:I:50:22}
+\int_0^Tf^2(t)\,dt =\\
+\int_0^T\biggl[a_0 + \sum_{n = 1}^\infty
+a_n\cos n\omega t +
+\sum_{n = 1}^\infty
+b_n\sin n\omega t\biggr]^2\,dt.\notag
+\end{gather}
+\]
+When we expand the square of the bracketed term we will get all possible cross terms, such as \(a_5\cos5\omega t\cdot a_7\cos7\omega t\) and \(a_5\cos5\omega t\cdot b_7\sin7\omega t\) . We have shown above, however, [Eqs. (50.11) and (50.12)] that the integrals of all such terms over one period is zero. We have left only the square terms like \(a_5^2\cos^2 5\omega t\) . The integral of any cosine squared or sine squared over one period is equal to \(T/2\) , so we get
+\[
+\begin{gather}
+\label{Eq:I:50:23}
+\int_0^Tf^2(t)\,dt =\\[.5ex]
+Ta_0^2 + \frac{T}{2}\,(a_1^2 + a_2^2 + \dotsb + b_1^2 + b_2^2 + \dotsb)= \notag\\[.5ex]
+Ta_0^2 + \frac{T}{2}\sum_{n = 1}^\infty(a_n^2 + b_n^2).\notag
+\end{gather}
+\]
+This equation is called the “energy theorem,” and says that the total energy in a wave is just the sum of the energies in all of the Fourier components. For example, applying this theorem to the series (50.19), since \([f(t)]^2
+= 1\) we get
+\[
+\begin{equation*}
+T = \frac{T}{2}\cdot\biggl(\frac{4}{\pi}\biggr)^2\biggl(
+1 + \frac{1}{3^2} + \frac{1}{5^2} + \frac{1}{7^2} + \dotsb\biggr),
+\end{equation*}
+\]
+so we learn that the sum of the squares of the reciprocals of the odd integers is \(\pi^2/8\) . In a similar way, by first obtaining the Fourier series for the function \(f(t)=(t-T/2)^2\) and using the energy theorem, we can prove that \(1 +
+1/2^4 + 1/3^4 + \dotsb\) is \(\pi^4/90\) , a result we needed in Chapter45.

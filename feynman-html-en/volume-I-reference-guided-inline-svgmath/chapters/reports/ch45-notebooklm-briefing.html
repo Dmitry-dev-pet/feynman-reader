@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chapter 45: Illustrations of Thermodynamics - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="en">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch45.html#study-panel">Back to chapter</a>
+      <a class="nav-btn" href="../../index.html">Volume contents</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1 id="chapter-45-illustrations-of-thermodynamics">Chapter 45:
+Illustrations of Thermodynamics</h1>
+<p>This briefing document provides a deep analytical synthesis of the
+thermodynamic principles and applications outlined in the source
+context. It explores the mathematical foundations of internal energy,
+the derivation of fundamental thermodynamic relationships, and their
+application across diverse physical systems, from ideal gases and rubber
+bands to phase changes and blackbody radiation.</p>
+<h2 id="executive-summary">Executive Summary</h2>
+<p>The primary objective of this analysis is to demonstrate the power
+and universality of thermodynamics. By utilizing a small set of
+independent variables—specifically temperature
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>T</mi><annotation encoding="application/x-tex">T</annotation></semantics></math>)
+and volume
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math>)—and
+two dependent functions—internal energy
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>U</mi><annotation encoding="application/x-tex">U</annotation></semantics></math>)
+and pressure
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math>)—nearly
+all thermodynamic results can be deduced.</p>
+<p>The core of the analysis rests on the Second Law of Thermodynamics as
+expressed through a Carnot cycle. This framework establishes a
+fundamental link between the change in pressure when temperature changes
+at constant volume and the heat required to maintain temperature during
+expansion. These relationships prove remarkably resilient, applying even
+when the underlying kinetic mechanisms of a system are poorly
+understood.</p>
+<hr />
+<h2 id="i-mathematical-foundations-and-internal-energy">I. Mathematical
+Foundations and Internal Energy</h2>
+<h3 id="partial-derivatives-in-thermodynamics">Partial Derivatives in
+Thermodynamics</h3>
+<p>Because thermodynamic quantities depend on multiple variables, the
+use of partial derivatives is essential to maintain precision. To
+describe the behavior of a gas, one must specify which variable is held
+constant during a change.</p>
+<ul>
+<li><strong>Notation:</strong> The symbol
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mi>∂</mi><mi>P</mi></mrow><mrow><mi>∂</mi><mi>T</mi></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mi>V</mi></msub><annotation encoding="application/x-tex">\left(\frac{\partial P}{\partial T}\right)_V</annotation></semantics></math>
+represents the derivative of pressure with respect to temperature while
+volume is held constant.</li>
+<li><strong>Fundamental Relation:</strong> For any function
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">f(x, y)</annotation></semantics></math>,
+the change
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>f</mi></mrow><annotation encoding="application/x-tex">\Delta f</annotation></semantics></math>
+is expressed as:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>f</mi><mo>=</mo><mi mathvariant="normal">Δ</mi><mi>x</mi><msub><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mi>∂</mi><mi>f</mi></mrow><mrow><mi>∂</mi><mi>x</mi></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mi>y</mi></msub><mo>+</mo><mi mathvariant="normal">Δ</mi><mi>y</mi><msub><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mi>∂</mi><mi>f</mi></mrow><mrow><mi>∂</mi><mi>y</mi></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mi>x</mi></msub></mrow><annotation encoding="application/x-tex">\Delta f = \Delta x \left(\frac{\partial f}{\partial x}\right)_y + \Delta y \left(\frac{\partial f}{\partial y}\right)_x</annotation></semantics></math></li>
+</ul>
+<h3 id="the-basic-thermodynamic-equation">The Basic Thermodynamic
+Equation</h3>
+<p>Using the First Law
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>U</mi><mo>=</mo><mi mathvariant="normal">Δ</mi><mi>Q</mi><mo>−</mo><mi>P</mi><mi mathvariant="normal">Δ</mi><mi>V</mi></mrow><annotation encoding="application/x-tex">\Delta U = \Delta Q - P\Delta V</annotation></semantics></math>)
+and the Second Law (via the Carnot cycle), a primary relationship is
+derived that serves as the foundation for the chapter:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mi>∂</mi><mi>U</mi></mrow><mrow><mi>∂</mi><mi>V</mi></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mi>T</mi></msub><mo>=</mo><mi>T</mi><msub><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mi>∂</mi><mi>P</mi></mrow><mrow><mi>∂</mi><mi>T</mi></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mi>V</mi></msub><mo>−</mo><mi>P</mi></mrow><annotation encoding="application/x-tex">\left(\frac{\partial U}{\partial V}\right)_T = T \left(\frac{\partial P}{\partial T}\right)_V - P</annotation></semantics></math></p>
+<p><strong>Physical Meaning:</strong> This equation connects two
+seemingly different phenomena:</p>
+<ol type="1">
+<li><strong>Pressure-Temperature Relationship:</strong> How much the
+pressure rises when a substance is heated at a fixed volume.</li>
+<li><strong>Internal Energy-Volume Relationship:</strong> How much heat
+must be added to maintain a constant temperature as a substance
+expands.</li>
+</ol>
+<h3 id="specific-heat">Specific Heat</h3>
+<p>The specific heat at constant volume
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>C</mi><mi>V</mi></msub><annotation encoding="application/x-tex">C_V</annotation></semantics></math>)
+is defined as the amount of heat required to change the temperature of a
+substance by one degree while volume is held constant:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mi>∂</mi><mi>U</mi></mrow><mrow><mi>∂</mi><mi>T</mi></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mi>V</mi></msub><mo>=</mo><msub><mi>C</mi><mi>V</mi></msub></mrow><annotation encoding="application/x-tex">\left(\frac{\partial U}{\partial T}\right)_V = C_V</annotation></semantics></math></p>
+<hr />
+<h2 id="ii-the-carnot-cycle-and-geometric-analysis">II. The Carnot Cycle
+and Geometric Analysis</h2>
+<p>The source utilizes a geometric analysis of an infinitesimal Carnot
+cycle on a Pressure-Volume (P-V) diagram to derive essential
+results.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Figure</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Key Insight</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>[SOURCE_IMAGE_1]</strong></td>
+<td style="text-align: left;">P-V diagram for a Carnot cycle showing
+isothermal and adiabatic lines.</td>
+<td style="text-align: left;">The shaded area represents the net work
+done by the gas in a reversible cycle.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>[SOURCE_IMAGE_2]</strong></td>
+<td style="text-align: left;">Geometric evaluation of the shaded
+area.</td>
+<td style="text-align: left;">The area of the cycle approaches a
+parallelogram
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>V</mi><mi mathvariant="normal">Δ</mi><mi>P</mi></mrow><annotation encoding="application/x-tex">\Delta V \Delta P</annotation></semantics></math>)
+as the increments
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>T</mi></mrow><annotation encoding="application/x-tex">\Delta T</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>Q</mi></mrow><annotation encoding="application/x-tex">\Delta Q</annotation></semantics></math>
+approach zero.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key Derivation from Carnot's Argument:</strong> The work done
+by the gas (the shaded area) is equal to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>V</mi><mi mathvariant="normal">Δ</mi><mi>P</mi></mrow><annotation encoding="application/x-tex">\Delta V \Delta P</annotation></semantics></math>.
+According to the efficiency of a Carnot engine, this work is also equal
+to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>Q</mi><mo stretchy="false" form="prefix">(</mo><mi mathvariant="normal">Δ</mi><mi>T</mi><mi>/</mi><mi>T</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\Delta Q (\Delta T / T)</annotation></semantics></math>.
+This leads to:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi mathvariant="normal">Δ</mi><mi>Q</mi></mrow><mrow><mi mathvariant="normal">Δ</mi><mi>V</mi></mrow></mfrac><mo>=</mo><mi>T</mi><msub><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mi>∂</mi><mi>P</mi></mrow><mrow><mi>∂</mi><mi>T</mi></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mi>V</mi></msub></mrow><annotation encoding="application/x-tex">\frac{\Delta Q}{\Delta V} = T \left(\frac{\partial P}{\partial T}\right)_V</annotation></semantics></math></p>
+<hr />
+<h2 id="iii-applications-across-physical-systems">III. Applications
+Across Physical Systems</h2>
+<p>The beauty of thermodynamic relations is their "substitution"
+property. If a system's work can be expressed in the form
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi mathvariant="normal">Δ</mi><mi>B</mi></mrow><annotation encoding="application/x-tex">A \Delta B</annotation></semantics></math>,
+the results for a gas can be applied by substituting
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+for
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mi>P</mi></mrow><annotation encoding="application/x-tex">-P</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+for
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math>.</p>
+<h3 id="1-the-rubber-band">1. The Rubber Band</h3>
+<ul>
+<li><strong>Work substitution:</strong> Work done is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mi>F</mi><mi mathvariant="normal">Δ</mi><mi>L</mi></mrow><annotation encoding="application/x-tex">-F \Delta L</annotation></semantics></math>
+(where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>F</mi><annotation encoding="application/x-tex">F</annotation></semantics></math>
+is force and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>L</mi><annotation encoding="application/x-tex">L</annotation></semantics></math>
+is length).</li>
+<li><strong>Observation:</strong> Stretching a rubber band causes its
+temperature to rise; heating a rubber band causes it to contract.</li>
+<li><strong>Thermodynamic Result:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>Q</mi><mo>=</mo><mi>−</mi><mi>T</mi><msub><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mi>∂</mi><mi>F</mi></mrow><mrow><mi>∂</mi><mi>T</mi></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mi>L</mi></msub><mi mathvariant="normal">Δ</mi><mi>L</mi></mrow><annotation encoding="application/x-tex">\Delta Q = -T \left(\frac{\partial F}{\partial T}\right)_L \Delta L</annotation></semantics></math>.
+This calculates the force increase when heated at a fixed length based
+on the heat needed to maintain temperature during relaxation.</li>
+</ul>
+<h3 id="2-the-electric-battery">2. The Electric Battery</h3>
+<ul>
+<li><strong>Work substitution:</strong> Work done is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mi mathvariant="normal">Δ</mi><mi>Z</mi></mrow><annotation encoding="application/x-tex">E \Delta Z</annotation></semantics></math>
+(where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math>
+is voltage and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Z</mi><annotation encoding="application/x-tex">Z</annotation></semantics></math>
+is charge).</li>
+<li><strong>Internal Energy Change:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi mathvariant="normal">Δ</mi><mi>U</mi></mrow><mrow><mi mathvariant="normal">Δ</mi><mi>Z</mi></mrow></mfrac><mo>=</mo><mi>T</mi><msub><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mi>∂</mi><mi>E</mi></mrow><mrow><mi>∂</mi><mi>T</mi></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mi>Z</mi></msub><mo>−</mo><mi>E</mi></mrow><annotation encoding="application/x-tex">\frac{\Delta U}{\Delta Z} = T \left(\frac{\partial E}{\partial T}\right)_Z - E</annotation></semantics></math>.</li>
+<li><strong>Insight:</strong> A battery heats up during discharge
+because of the work done and the internal energy change. This provides a
+method to measure chemical reaction energy by observing how battery
+voltage changes with temperature.</li>
+</ul>
+<h3 id="3-ideal-gases-and-temperature-scales">3. Ideal Gases and
+Temperature Scales</h3>
+<p>For an ideal gas, the internal energy
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>U</mi><annotation encoding="application/x-tex">U</annotation></semantics></math>
+depends only on
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>T</mi><annotation encoding="application/x-tex">T</annotation></semantics></math>,
+not
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math>.
+Thus,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mi>∂</mi><mi>U</mi></mrow><mrow><mi>∂</mi><mi>V</mi></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mi>T</mi></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\left(\frac{\partial U}{\partial V}\right)_T = 0</annotation></semantics></math>.</p>
+<ul>
+<li>Applying the basic equation yields
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mtext mathvariant="normal">const</mtext><mo>×</mo><mi>T</mi></mrow><annotation encoding="application/x-tex">P = \text{const} \times T</annotation></semantics></math>.</li>
+<li><strong>Conclusion:</strong> This proves that the "kinetic
+temperature" (based on molecular motion) and the "grand thermodynamic
+absolute temperature" (based on the Second Law) are proportional and can
+be made identical through the choice of scale.</li>
+</ul>
+<h3 id="4-transformation-to-chemists-variables">4. Transformation to
+Chemists' Variables</h3>
+<p>Chemists prefer temperature
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>T</mi><annotation encoding="application/x-tex">T</annotation></semantics></math>)
+and pressure
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math>)
+as independent variables. This is handled by defining <strong>Enthalpy
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>H</mi><annotation encoding="application/x-tex">H</annotation></semantics></math>)</strong>:</p>
+<ul>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi><mo>=</mo><mi>U</mi><mo>+</mo><mi>P</mi><mi>V</mi></mrow><annotation encoding="application/x-tex">H = U + PV</annotation></semantics></math></li>
+<li>Fundamental Relation:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mi>∂</mi><mi>H</mi></mrow><mrow><mi>∂</mi><mi>P</mi></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mi>T</mi></msub><mo>=</mo><mi>−</mi><mi>T</mi><msub><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mi>∂</mi><mi>V</mi></mrow><mrow><mi>∂</mi><mi>T</mi></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mi>P</mi></msub><mo>+</mo><mi>V</mi></mrow><annotation encoding="application/x-tex">\left(\frac{\partial H}{\partial P}\right)_T = -T \left(\frac{\partial V}{\partial T}\right)_P + V</annotation></semantics></math></li>
+</ul>
+<hr />
+<h2 id="iv-phase-changes-the-clausius-clapeyron-equation">IV. Phase
+Changes: The Clausius-Clapeyron Equation</h2>
+<p>Thermodynamics provides an exact relationship for phase transitions
+(e.g., liquid to vapor), even when the kinetic theory of the transition
+is complex.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Figure</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>[SOURCE_IMAGE_3]</strong></td>
+<td style="text-align: left;">Isothermal lines for a condensable vapor.
+The flat section represents the region where liquid and vapor coexist at
+a constant <strong>vapor pressure</strong>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>[SOURCE_IMAGE_4]</strong></td>
+<td style="text-align: left;">A Carnot cycle constructed using the flat
+vapor-pressure sections of two isotherms.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The Clausius-Clapeyron Equation:</strong>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mi>L</mi><mrow><mi>T</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>V</mi><mi>G</mi></msub><mo>−</mo><msub><mi>V</mi><mi>L</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow></mfrac><mo>=</mo><mfrac><mrow><mi>d</mi><msub><mi>P</mi><mtext mathvariant="normal">vap</mtext></msub></mrow><mrow><mi>d</mi><mi>T</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{L}{T(V_G - V_L)} = \frac{dP_{\text{vap}}}{dT}</annotation></semantics></math></p>
+<ul>
+<li><strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>L</mi><annotation encoding="application/x-tex">L</annotation></semantics></math>:</strong>
+Latent heat of vaporization.</li>
+<li><strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mi>G</mi></msub><mo>,</mo><msub><mi>V</mi><mi>L</mi></msub></mrow><annotation encoding="application/x-tex">V_G, V_L</annotation></semantics></math>:</strong>
+Volume of the gas and liquid phases, respectively.</li>
+<li><strong>Physical Meaning:</strong> This relates the rate of change
+of vapor pressure with temperature to the heat required for evaporation
+and the change in volume.</li>
+</ul>
+<p><strong>Comparison with Kinetic Theory:</strong></p>
+<ul>
+<li><strong>Thermodynamics:</strong> Provides an <strong>exact</strong>
+differential relationship but cannot determine constants of
+integration.</li>
+<li><strong>Kinetic Theory:</strong> Provides approximate models (e.g.,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mtext mathvariant="normal">const</mtext><mo>⋅</mo><msup><mi>e</mi><mrow><mi>−</mi><mi>L</mi><mi>/</mi><mi>R</mi><mi>T</mi></mrow></msup></mrow><annotation encoding="application/x-tex">P = \text{const} \cdot e^{-L/RT}</annotation></semantics></math>)
+and can determine constants if the model is correct.</li>
+<li><strong>Advantage:</strong> When knowledge of internal mechanisms is
+weak, thermodynamic relations are the most powerful tools
+available.</li>
+</ul>
+<hr />
+<h2 id="v-blackbody-radiation">V. Blackbody Radiation</h2>
+<p>Thermodynamics can also be applied to a "box of light."</p>
+<ul>
+<li><strong>Radiation Pressure:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mfrac><mi>U</mi><mi>V</mi></mfrac></mrow><annotation encoding="application/x-tex">P = \frac{1}{3} \frac{U}{V}</annotation></semantics></math>.</li>
+<li><strong>Energy Density Relation:</strong> Substituting into the
+basic thermodynamic equation
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mi>∂</mi><mi>U</mi></mrow><mrow><mi>∂</mi><mi>V</mi></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mi>T</mi></msub><mo>=</mo><mn>3</mn><mi>P</mi><mo>=</mo><mi>T</mi><msub><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mi>∂</mi><mi>P</mi></mrow><mrow><mi>∂</mi><mi>T</mi></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mi>V</mi></msub><mo>−</mo><mi>P</mi></mrow><annotation encoding="application/x-tex">\left(\frac{\partial U}{\partial V}\right)_T = 3P = T \left(\frac{\partial P}{\partial T}\right)_V - P</annotation></semantics></math>
+results in the differential equation:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi>d</mi><mi>P</mi></mrow><mi>P</mi></mfrac><mo>=</mo><mn>4</mn><mfrac><mrow><mi>d</mi><mi>T</mi></mrow><mi>T</mi></mfrac></mrow><annotation encoding="application/x-tex">\frac{dP}{P} = 4 \frac{dT}{T}</annotation></semantics></math></li>
+<li><strong>The
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>T</mi><mn>4</mn></msup><annotation encoding="application/x-tex">T^4</annotation></semantics></math>
+Law:</strong> This integration shows that radiation pressure and energy
+density
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mi>/</mi><mi>V</mi></mrow><annotation encoding="application/x-tex">U/V</annotation></semantics></math>)
+both vary as the fourth power of temperature
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>T</mi><mn>4</mn></msup><annotation encoding="application/x-tex">T^4</annotation></semantics></math>).</li>
+</ul>
+<p><strong>The Stefan-Boltzmann Constant
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>σ</mi><annotation encoding="application/x-tex">\sigma</annotation></semantics></math>):</strong>
+While thermodynamics proves the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>T</mi><mn>4</mn></msup><annotation encoding="application/x-tex">T^4</annotation></semantics></math>
+dependence, it cannot calculate the proportionality constant. That
+requires a complete theory (quantum mechanics):</p>
+<ul>
+<li>Total energy density:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mi>U</mi><mi>V</mi></mfrac><mo>=</mo><mfrac><mrow><mn>4</mn><mi>σ</mi></mrow><mi>c</mi></mfrac><msup><mi>T</mi><mn>4</mn></msup></mrow><annotation encoding="application/x-tex">\frac{U}{V} = \frac{4\sigma}{c} T^4</annotation></semantics></math>.</li>
+<li>Energy flux from a small hole:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Flux</mtext><mo>=</mo><mi>σ</mi><msup><mi>T</mi><mn>4</mn></msup></mrow><annotation encoding="application/x-tex">\text{Flux} = \sigma T^4</annotation></semantics></math>.</li>
+</ul>
+<hr />
+<h2 id="vi-important-quotes-and-contextual-insights">VI. Important
+Quotes and Contextual Insights</h2>
+<blockquote>
+<p>"The subject of thermodynamics is complicated because there are so
+many different ways of describing the same thing."</p>
+</blockquote>
+<p><strong>Context:</strong> Feynman explains that the proliferation of
+variables
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>,</mo><mi>V</mi><mo>,</mo><mi>T</mi><mo>,</mo><mi>U</mi><mo>,</mo><mi>S</mi><mo>,</mo><mi>H</mi></mrow><annotation encoding="application/x-tex">P, V, T, U, S, H</annotation></semantics></math>)
+makes the field seem daunting, but it can be simplified by choosing a
+consistent set of independent variables.</p>
+<blockquote>
+<p>"When knowledge is weak and the situation is complicated,
+thermodynamic relations are really the most powerful."</p>
+</blockquote>
+<p><strong>Context:</strong> This highlights the utility of
+thermodynamics in phase transitions and complex materials where
+molecular-level details are difficult to model accurately.</p>
+<blockquote>
+<p>"Most of the time man chooses trouble for himself, but in this case
+he made them [temperature scales] equal!"</p>
+</blockquote>
+<p><strong>Context:</strong> Referring to the choice to make the kinetic
+temperature scale and the thermodynamic absolute temperature scale
+coincide.</p>
+<hr />
+<h2 id="vii-actionable-insights-for-analysis">VII. Actionable Insights
+for Analysis</h2>
+<ol type="1">
+<li><strong>Systematic Substitution:</strong> To analyze a new physical
+system, identify the work term
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi mathvariant="normal">Δ</mi><mi>B</mi></mrow><annotation encoding="application/x-tex">A \Delta B</annotation></semantics></math>).
+Substitute
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>→</mo><mi>−</mi><mi>P</mi></mrow><annotation encoding="application/x-tex">A \to -P</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>→</mo><mi>V</mi></mrow><annotation encoding="application/x-tex">B \to V</annotation></semantics></math>
+into established thermodynamic equations to find new relationships.</li>
+<li><strong>Evaluating Phase Stability:</strong> Use the
+Clausius-Clapeyron equation to predict how the boiling point or melting
+point of a substance will shift with changes in pressure.</li>
+<li><strong>Experimental Energy Measurement:</strong> To find the energy
+required for a chemical reaction in a battery, measure the voltage's
+temperature coefficient
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mi>∂</mi><mi>E</mi></mrow><mrow><mi>∂</mi><mi>T</mi></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\left(\frac{\partial E}{\partial T}\right)</annotation></semantics></math>
+rather than just the voltage itself.</li>
+<li><strong>Scaling Limits:</strong> Remember that while thermodynamics
+provides the <em>form</em> of a law (like
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>T</mi><mn>4</mn></msup><annotation encoding="application/x-tex">T^4</annotation></semantics></math>
+for radiation), a microscopic theory is necessary to determine the
+specific constants of proportionality.</li>
+</ol>
+    </article>
+  </main>
+</body>
+</html>

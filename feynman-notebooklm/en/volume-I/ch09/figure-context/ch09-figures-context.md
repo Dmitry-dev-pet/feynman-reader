@@ -1,0 +1,109 @@
+# Figure context for Chapter 9. Newton’s Laws of Dynamics
+
+SOURCE: Feynman Lectures on Physics, Volume I, Chapter 9
+LANGUAGE: en
+SOURCE_URL: https://www.feynmanlectures.caltech.edu/I_09.html
+
+NotebookLM use: pair this file with the clean chapter text and the PNG image files below. The visual descriptions here are inferred from the surrounding lecture text; the PNG files are included so NotebookLM can inspect the diagrams directly when image sources are uploaded.
+
+## Ch9-F1: Fig. 9–1.A small displacement of an object.
+
+Section: 9–2 Speed and velocity
+Image file: images/Ch9-F1.png
+
+Context before the figure:
+
+In order to make our language more precise, we shall make one further definition in our use of the wordsspeedandvelocity. Ordinarily we think of speed and velocity as being the same, and in ordinary language they are the same. But in physics we have taken advantage of the fact that therearetwo words and have chosen to use them to distinguish two ideas. We carefully distinguish velocity, which has both magnitude and direction, from speed, which we choose to mean the magnitude of the velocity, but which does not include the direction. We can formulate this more precisely by describing how the \(x\) -, \(y\) -, and \(z\) -coordinates of an object change with time. Suppose, for example, that at a certain instant an object is moving as shown in Fig.9–1. In a given small interval of time \(\Delta t\) it will move a certain distance \(\Delta x\) in the \(x\) -direction, \(\Delta y\) in the...
+
+Context after the figure:
+
+In Eq. (9.4)we have resolved the velocity into componentsby telling how fast the object is moving in the \(x\) -direction, the \(y\) -direction, and the \(z\) -direction. The velocity is completely specified, both as to magnitude and direction, if we give the numerical values of its three rectangular components: \[ \begin{equation} \begin{aligned} v_x&=dx/dt,\\[.5ex] v_y&=dy/dt,\\[.5ex] v_z&=dz/dt. \end{aligned} \label{Eq:I:9:5} \end{equation} \] On the other hand, the speed of the object is \[ \begin{equation} \label{Eq:I:9:6} ds/dt=\abs{v}=\sqrt{v_x^2+v_y^2+v_z^2}. \end{equation} \]
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.
+
+## Ch9-F2: Fig. 9–2.A change in velocity in which both the magnitude and direction change.
+
+Section: 9–3 Components of velocity, acceleration, and force
+Image file: images/Ch9-F2.png
+
+Context before the figure:
+
+In Eq. (9.4)we have resolved the velocity into componentsby telling how fast the object is moving in the \(x\) -direction, the \(y\) -direction, and the \(z\) -direction. The velocity is completely specified, both as to magnitude and direction, if we give the numerical values of its three rectangular components: \[ \begin{equation} \begin{aligned} v_x&=dx/dt,\\[.5ex] v_y&=dy/dt,\\[.5ex] v_z&=dz/dt. \end{aligned} \label{Eq:I:9:5} \end{equation} \] On the other hand, the speed of the object is \[ \begin{equation} \label{Eq:I:9:6} ds/dt=\abs{v}=\sqrt{v_x^2+v_y^2+v_z^2}. \end{equation} \]
+
+Context after the figure:
+
+Next, suppose that, because of the action of a force, the velocity changes to some other direction and a different magnitude, as shown in Fig.9–2. We can analyze this apparently complex situation rather simply if we evaluate the changes in the \(x\) -, \(y\) -, and \(z\) -components of velocity. The change in the component of the velocity in the \(x\) -direction in a time \(\Delta t\) is \(\Delta v_x=a_x\,\Delta t\) , where \(a_x\) is what we call the \(x\) -component of the acceleration. Similarly, we see that \(\Delta v_y=a_y\,\Delta t\) and \(\Delta v_z=a_z\,\Delta t\) . In these terms, we see that Newton’s Second Law, in saying that the force is in the same direction as the acceleration, is really three laws, in the sense that the component of the force in the \(x\) -, \(y\) -, or \(z\) -direction is equal to the mass times the rate of change of the corresponding component of...
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.
+
+## Ch9-F3: Fig. 9–3.A mass on a spring.
+
+Section: 9–4 What is the force?
+Image file: images/Ch9-F3.png
+
+Context before the figure:
+
+Extending our previous example, what are the forces on objects near the earth’s surface? Near the earth’s surface, the force in the vertical direction due to gravity is proportional to the mass of the object and is nearly independent of height for heights small compared with the earth’s radius \(R\) : \(F=\) \(GmM/R^2=\) \(mg\) , where \(g=GM/R^2\) is called theacceleration of gravity. Thus the law of gravity tells us that weight is proportional to mass; the force is in the vertical direction and is the mass times \(g\) . Again we find that the motion in the horizontal direction is at constant velocity. The interesting motion is in the vertical direction, and Newton’s Second Law tells us \[ \begin{equation} \label{Eq:I:9:9} mg=m(d^2x/dt^2). \end{equation} \] Cancelling the \(m\) ’s, we find that the acceleration in the \(x\) -direction is constant and equal to \(g\) . This is of course...
+
+Context after the figure:
+
+As another example, let us suppose that we have been able to build a gadget (Fig.9–3) which applies a force proportional to the distance and directed oppositely—a spring. If we forget about gravity, which is of course balanced out by the initial stretch of the spring, and talk only aboutexcessforces, we see that if we pull the mass down, the spring pulls up, while if we push it up the spring pulls down. This machine has been designed carefully so that the force is greater, the more we pull it up, in exact proportion to the displacement from the balanced condition, and the force upward is similarly proportional to how far we pull down. If we watch the dynamics of this machine, we see a rather beautiful motion—up, down, up, down, … The question is, will Newton’s equations correctly describe this motion? Let us see whether we can exactly calculate how it moves with this periodic...
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.
+
+## Ch9-F4: Fig. 9–4.Graph of the motion of a mass on a spring.
+
+Section: 9–6 Numerical solution of the equations
+Image file: images/Ch9-F4.png
+
+Context before the figure:
+
+Now we are ready to carry through our calculation. For convenience, we may arrange the work in the form of a table, with columns for the time, the position, the velocity, and the acceleration, and the in-between lines for the velocity, as shown in Table9–1. Such a table is, of course, just a convenient way of representing the numerical values obtained from the set of equations (9.16), and in fact the equations themselves need never be written. We just fill in the various spaces in the table one by one. This table now gives us a very good idea of the motion: it starts from rest, first picks up a little upward (negative) velocity and it loses some of its distance. The acceleration is then a little bit less but it is still gaining speed. But as it goes on it gains speed more and more slowly, until as it passes \(x=0\) at about \(t=1.50\) sec we can confidently predict that it will keep...
+
+Context after the figure:
+
+The above analysis is very nice for the motion of an oscillating spring, but can we analyze the motion of a planet around the sun? Let us see whether we can arrive at an approximation to an ellipse for the orbit. We shall suppose that the sun is infinitely heavy, in the sense that we shall not include its motion. Suppose a planet starts at a certain place and is moving with a certain velocity; it goes around the sun in some curve, and we shall try to analyze, by Newton’s laws of motion and his law of gravitation, what the curve is. How? At a given moment it is at some position in space. If the radial distance from the sun to this position is called \(r\) , then we know that there is a force directed inward which, according to the law of gravity, is equal to a constant times the product of the sun’s mass and the planet’s mass divided by the square of the distance. To analyze this further...
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.
+
+## Ch9-F5: Fig. 9–5.The force of gravity on a planet.
+
+Section: 9–7 Planetary motions
+Image file: images/Ch9-F5.png
+
+Context before the figure:
+
+The above analysis is very nice for the motion of an oscillating spring, but can we analyze the motion of a planet around the sun? Let us see whether we can arrive at an approximation to an ellipse for the orbit. We shall suppose that the sun is infinitely heavy, in the sense that we shall not include its motion. Suppose a planet starts at a certain place and is moving with a certain velocity; it goes around the sun in some curve, and we shall try to analyze, by Newton’s laws of motion and his law of gravitation, what the curve is. How? At a given moment it is at some position in space. If the radial distance from the sun to this position is called \(r\) , then we know that there is a force directed inward which, according to the law of gravity, is equal to a constant times the product of the sun’s mass and the planet’s mass divided by the square of the distance. To analyze this further...
+
+Context after the figure:
+
+From this figure we see that the horizontal component of the force is related to the complete force in the same manner as the horizontal distance \(x\) is to the complete hypotenuse \(r\) , because the two triangles are similar. Also, if \(x\) is positive, \(F_x\) is negative. That is, \(F_x/\abs{F}=-x/r\) , or \(F_x=\) \(-\abs{F}x/r=\) \(-GMmx/r^3\) . Now we use the dynamical law to find that this force component is equal to the mass of the planet times the rate of change of its velocity in the \(x\) -direction. Thus we find the following laws: \[ \begin{equation} \begin{aligned} m(dv_x/dt)&=-GMmx/r^3,\\ m(dv_y/dt)&=-GMmy/r^3,\\ r&=\sqrt{x^2+y^2}. \end{aligned} \label{Eq:I:9:17} \end{equation} \] This, then, is the set of equations we must solve. Again, in order to simplify the numerical work, we shall suppose that the unit of time, or the mass of the sun, has been so adjusted (or luck...
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.
+
+## Ch9-F6: Fig. 9–6.The calculated motion of a planet around the sun.
+
+Section: 9–7 Planetary motions
+Image file: images/Ch9-F6.png
+
+Context before the figure:
+
+Our calculation thus proceeds by the following steps, using time intervals \(\epsilon=0.100\) : Initial values at \(t=0\) : \[ \begin{alignat*}{2} x(0)&=0.500&\qquad\qquad y(0)&=\phantom{+}0.000\\[.5ex] v_x(0)&=0.000&\qquad\qquad v_y(0)&=+1.630 \end{alignat*} \] From these we find: \[ \begin{alignat*}{2} r(0)&=\phantom{-}0.500&\qquad 1/r^3(0)&=8.000\\[.5ex] a_x(0)&=-4.000&\qquad a_y(0)&=0.000 \end{alignat*} \] Thus we may calculate the velocities \(v_x(0.05)\) and \(v_y(0.05)\) : \[ \begin{align*} v_x(0.05) &= 0.000 - 4.000 \times 0.050 = -0.200;\\[1ex] v_y(0.05) &= 1.630 + 0.000 \times 0.050 = \phantom{-}1.630. \end{align*} \] Now our main calculations begin: \[ \begin{alignat*}{2} x(0.1)&=0.500-0.20 \times 0.1&&=\phantom{-}0.480\\[.5ex] y(0.1)&=0.0+1.63 \times 0.1 &&=\phantom{-}0.163\\[.5ex] r(0.1)&=\sqrt{0.480^2+0.163^2}&&=\phantom{-}0.507\\[.5ex] 1/r^3(0.1)&=7.677 &&\\[.5ex]...
+
+Context after the figure:
+
+Now let us see how we can calculate the motion of Neptune, Jupiter, Uranus, or any other planet. If we have a great many planets, and let the sun move too, can we do the same thing? Of course we can. We calculate the force on a particular planet, let us say planet number \(i\) , which has a position \(x_i,y_i,z_i\) ( \(i=1\) may represent the sun, \(i=2\) Mercury, \(i=3\) Venus, and so on). We must know the positions of all the planets. The force acting on one is due to all the other bodies which are located, let us say, at positions \(x_j,y_j,z_j\) . Therefore the equations are \[ \begin{align} m_i\,\ddt{v_{ix}}{t}&= \sum_{j=1}^N-\frac{Gm_im_j(x_i-x_j)}{r_{ij}^3},\notag\\ \label{Eq:I:9:18} m_i\,\ddt{v_{iy}}{t}&= \sum_{j=1}^N-\frac{Gm_im_j( y_i- y_j )}{r_{ij}^3},\\ m_i\,\ddt{v_{iz}}{t}&= \sum_{j=1}^N-\frac{Gm_im_j( z_i- z_j )}{r_{ij}^3}.\notag \end{align} \] Further, we define...
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.

@@ -1,0 +1,109 @@
+# Figure context for Chapter 25. Linear Systems and Review
+
+SOURCE: Feynman Lectures on Physics, Volume I, Chapter 25
+LANGUAGE: en
+SOURCE_URL: https://www.feynmanlectures.caltech.edu/I_25.html
+
+NotebookLM use: pair this file with the clean chapter text and the PNG image files below. The visual descriptions here are inferred from the surrounding lecture text; the PNG files are included so NotebookLM can inspect the diagrams directly when image sources are uploaded.
+
+## Ch25-F1: Fig. 25–1.An example of the principle of superposition for linear systems.
+
+Section: 25–2 Superposition of solutions
+Image file: images/Ch25-F1.png
+
+Context before the figure:
+
+This is an example of what is called theprinciple of superpositionfor linear systems, and it is very important. It means the following: if we have a complicated force which can be broken up in any convenient manner into a sum of separate pieces, each of which is in some way simple, in the sense that for each special piece into which we have divided the force we can solve the equation, then the answer is available for thewholeforce, because we may simply add the pieces of thesolutionback together, in the same manner as the totalforceis compounded out of pieces (Fig.25–1).
+
+Context after the figure:
+
+Let us give another example of the principle of superposition. In Chapter12we said that it was one of the great facts of the laws of electricity that if we have a certain distribution of charges \(q_a\) and calculate the electric field \(\FLPE_a\) arising from these charges at a certain place \(P\) , and if, on the other hand, we have another set of charges \(q_b\) and we calculate the field \(\FLPE_b\) due to these at the corresponding place, then if both charge distributions are present at the same time, the field \(\FLPE\) at \(P\) is thesumof \(\FLPE_a\) due to one set plus \(\FLPE_b\) due to the other. In other words, if we know the field due to a certain charge, then the field due to many charges is merely the vector sum of the fields of these charges taken individually. This is exactly analogous to the above proposition that if we know the result of two given forces taken at one...
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.
+
+## Ch25-F2: Fig. 25–2.The principle of superposition in electrostatics.
+
+Section: 25–2 Superposition of solutions
+Image file: images/Ch25-F2.png
+
+Context before the figure:
+
+Let us give another example of the principle of superposition. In Chapter12we said that it was one of the great facts of the laws of electricity that if we have a certain distribution of charges \(q_a\) and calculate the electric field \(\FLPE_a\) arising from these charges at a certain place \(P\) , and if, on the other hand, we have another set of charges \(q_b\) and we calculate the field \(\FLPE_b\) due to these at the corresponding place, then if both charge distributions are present at the same time, the field \(\FLPE\) at \(P\) is thesumof \(\FLPE_a\) due to one set plus \(\FLPE_b\) due to the other. In other words, if we know the field due to a certain charge, then the field due to many charges is merely the vector sum of the fields of these charges taken individually. This is exactly analogous to the above proposition that if we know the result of two given forces taken at one...
+
+Context after the figure:
+
+The reason why this is true in electricity is that the great laws of electricity, Maxwell’s equations, which determine the electric field, turn out to be differential equations which arelinear, i.e., which have the property (25.3). What corresponds to the force is thechargegenerating the electric field, and the equation which determines the electric field in terms of the charge is linear.
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.
+
+## Ch25-F3: Fig. 25–3.A sharply tuned resonance curve.
+
+Section: 25–2 Superposition of solutions
+Image file: images/Ch25-F3.png
+
+Context before the figure:
+
+By the principle of superposition, the response of the electric circuit in the radio, the first part of which is a linear circuit, to the forces that are acting due to the electric field \(F_a + F_b\) , is \(x_a + x_b\) . It therefore looks as though we will never disentangle them. In fact, the very proposition of superposition seems to insist that we cannotavoidhaving both of them in our system. But remember, for aresonantcircuit, the response curve, the amount of \(x\) per unit \(F\) , as a function of the frequency, looks like Fig.25–3. If it were a very high \(Q\) circuit, the response would show a very sharp maximum. Now suppose that the two stations are comparable in strength, that is, the twoforcesare of the same magnitude. Theresponsethat we get is the sum of \(x_a\) and \(x_b\) . But, in Fig.25–3, \(x_a\) is tremendous, while \(x_b\) is small. So, in spite of the fact that the...
+
+Context after the figure:
+
+Now what about the tuning? How do we tune it? We change \(\omega_0\) by changing the \(L\) or the \(C\) of the circuit, because the frequency of the circuit has to do with the combination of \(L\) and \(C\) . In particular, most radios are built so that one can change the capacitance. When we retune the radio, we can make a new setting of the dial, so that the natural frequency of the circuit is shifted, say, to \(\omega_c\) . In those circumstances we hear neither one station nor the other; we get silence, provided there is no other station at frequency \(\omega_c\) . If we keep on changing the capacitance until the resonance curve is at \(\omega_b\) , then of course we hear the other station. That is how radio tuning works; it is again the principle of superposition, combined with a resonant response.2
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.
+
+## Ch25-F4: Fig. 25–4.A complicated force may be treated as a succession of sharp impulses.
+
+Section: 25–2 Superposition of solutions
+Image file: images/Ch25-F4.png
+
+Context before the figure:
+
+Another way in which our complicated problem can be solved is the following very interesting one. Suppose that, by some tremendous mental effort, it were possible to solve our problem for a special force, namely animpulse. The force is quickly turned on and then off; it is all over. Actually we need only solve for an impulse of some unit strength, any other strength can be gotten by multiplication by an appropriate factor. We know that the response \(x\) for an impulse is a damped oscillation. Now what can we say about some other force, for instance a force like that of Fig.25–4?
+
+Context after the figure:
+
+Such a force can be likened to a succession of blows with a hammer. First there is no force, and all of a sudden there is a steady force—impulse, impulse, impulse, impulse, … and then it stops. In other words, we imagine the continuous force to be a series of impulses, very close together. Now, we know the result for an impulse, so the result for a whole series of impulses will be a whole series of damped oscillations: it will be the curve for the first impulse, and then (slightly later) we add to that the curve for the second impulse, and the curve for the third impulse, and so on. Thus we can represent, mathematically, the complete solution for arbitrary functions if we know the answer for an impulse. We get the answer for any other force simply by integrating. This method is called theGreen’s function method. A Green’s function is a response to an impulse, and the method of analyzing...
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.
+
+## Ch25-F5: Fig. 25–5.Resonance curves with various amounts of friction present.
+
+Section: 25–3 Oscillations in linear systems
+Image file: images/Ch25-F5.png
+
+Context before the figure:
+
+Next, what about the resonance curve? Why is there a resonance? First, imagine for a moment that there is no friction, and we have something which could oscillate by itself. If we tapped the pendulum just right each time it went by, of course we could make it go like mad. But if we close our eyes and do not watch it, and tap at arbitrary equal intervals, what is going to happen? Sometimes we will find ourselves tapping when it is going the wrong way. When we happen to have the timing just right, of course, each tap is given at just the right time, and so it goes higher and higher and higher. So without friction we get a curve which looks like the solid curve in Fig.25–5for different frequencies. Qualitatively, we understand the resonance curve; in order to get the exact shape of the curve it is probably just as well to do the mathematics. The curve goes toward infinity as...
+
+Context after the figure:
+
+Now suppose there is a little bit of friction; then when the displacement of the oscillator is small, the friction does not affect it much; the resonance curve is the same, except when we are near resonance. Instead of becoming infinite near resonance, the curve is only going to get so high that the work done by our tapping each time is enough to compensate for the loss of energy by friction during the cycle. So the top of the curve is rounded off—it does not go to infinity. If there is more friction, the top of the curve is rounded off still more. Now someone might say, “I thought the widths of the curves depended on the friction.” That is because the curve is usually plotted so that the top of the curve is called one unit. However, the mathematical expression is even simpler to understand if we just plot all the curves on the same scale; then all that happens is that the friction cuts...
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.
+
+## Ch25-F6: Fig. 25–6.Two impedances, connected in series and in parallel.
+
+Section: 25–5 Series and parallel impedances
+Image file: images/Ch25-F6.png
+
+Context before the figure:
+
+Finally, there is an important item which is not quite in the nature of review. This has to do with an electrical circuit in which there is more than one circuit element. For example, when we have an inductor, a resistor, and a capacitor connected as in Fig.24–2, we note that all the charge went through every one of the three, so that the current in such a singly connected thing is the same at all points along the wire. Since the current is the same in each one, the voltage across \(R\) is \(IR\) , the voltage across \(L\) is \(L(dI/dt)\) , and so on. So, the total voltage drop is the sum of these, and this leads to Eq. (25.15). Using complex numbers, we found that we could solve the equation for the steady-state motion in response to a sinusoidal force. We thus found that \(\hat{V}= \hat{Z}\hat{I}\) . Now \(\hat{Z}\) is called theimpedanceof this particular circuit. It tells us that if...
+
+Context after the figure:
+
+Now suppose we have a more complicated circuit which has two pieces, which by themselves have certain impedances, \(\hat{Z}_1\) and \(\hat{Z}_2\) and we put them inseries(Fig.25–6a) and apply a voltage. What happens? It is now a little more complicated, but if \(\hat{I}\) is the current through \(\hat{Z}_1\) , the voltage difference across \(\hat{Z}_1\) , is \(\hat{V}_1=\hat{I}\hat{Z}_1\) ; similarly, the voltage across \(\hat{Z}_2\) is \(\hat{V}_2=\hat{I}\hat{Z}_2\) .The same current goes through both. Therefore the total voltage is the sum of the voltages across the two sections and is equal to \(\hat{V}= \hat{V}_1 + \hat{V}_2 =(\hat{Z}_1 + \hat{Z}_2)\hat{I}\) . This means that the voltage on the complete circuit can be written \(\hat{V}=\hat{I}\hat{Z}_s\) , where the \(\hat{Z}_s\) of the combined system in series is the sum of the two \(\hat{Z}\) ’s of the separate pieces: \[...
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.

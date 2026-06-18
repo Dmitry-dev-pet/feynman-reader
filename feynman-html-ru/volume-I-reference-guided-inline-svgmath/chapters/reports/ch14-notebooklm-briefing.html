@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Аналитический отчет: Глава 14. Работа и потенциальная энергия (окончание) - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch14.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1
+id="аналитический-отчет-глава-14-работа-и-потенциальная-энергия-окончание">Аналитический
+отчет: Глава 14. Работа и потенциальная энергия (окончание)</h1>
+<h2 id="резюме">Резюме</h2>
+<p>Данный отчет представляет собой глубокий анализ завершающей части
+14-й главы «Фейнмановских лекций по физике». Основное внимание уделяется
+уточнению понятий механической работы, кинетической и потенциальной
+энергии, а также их взаимодействию в контексте консервативных и
+неконсервативных сил. Рассматриваются практические приложения этих идей
+к гравитационным и электрическим полям, а также дается объяснение
+физической природы потенциала и градиента.</p>
+<hr />
+<h2 id="1-концепция-работы-в-физике">1. Концепция работы в физике</h2>
+<h3 id="физическое-vs-физиологическое-определение">Физическое vs
+Физиологическое определение</h3>
+<p>Фейнман подчеркивает резкое различие между обыденным или
+физиологическим пониманием работы и её строгим физическим
+определением.</p>
+<ul>
+<li><strong>Физическое определение:</strong> Работа
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>W</mi><annotation encoding="application/x-tex">W</annotation></semantics></math>)
+совершается только тогда, когда точка приложения силы перемещается. Она
+рассчитывается как контурный интеграл:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>W</mi><mo>=</mo><mo>∫</mo><mi mathvariant="bold-italic">𝑭</mi><mo>⋅</mo><mi>d</mi><mi mathvariant="bold-italic">𝒔</mi></mrow><annotation encoding="application/x-tex">W = \int \mathbf{F} \cdot d\mathbf{s}</annotation></semantics></math>.
+Работа равна произведению составляющей силы в направлении перемещения на
+величину этого перемещения.</li>
+<li><strong>Физиологический парадокс:</strong> Удержание тяжелой гири
+неподвижно требует усилий и вызывает усталость, но с точки зрения физики
+работа равна нулю. Это объясняется неэффективностью поперечнополосатых
+мышц человека, которые для поддержания статического напряжения постоянно
+сокращаются и расслабляются на молекулярном уровне, потребляя энергию
+химических связей. В отличие от них, «гладкие» мышцы (например, у
+моллюсков) способны фиксироваться без затрат энергии, подобно опоре
+стола.</li>
+</ul>
+<h3 id="связь-с-кинетической-энергией">Связь с кинетической
+энергией</h3>
+<p>Фундаментальный вывод раздела: работа, совершаемая над частицей
+равнодействующей всех приложенных к ней сил, в точности равна изменению
+её кинетической энергии
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>T</mi><annotation encoding="application/x-tex">T</annotation></semantics></math>):
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mo stretchy="false" form="prefix">(</mo><msup><mi>v</mi><mn>2</mn></msup><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><mn>2</mn><mi>m</mi></mfrac><mi mathvariant="bold-italic">𝑭</mi><mo>⋅</mo><mi mathvariant="normal">Δ</mi><mi mathvariant="bold-italic">𝒔</mi></mrow><annotation encoding="application/x-tex">\Delta(v^2) = \frac{2}{m} \mathbf{F} \cdot \Delta \mathbf{s}</annotation></semantics></math></p>
+<hr />
+<h2 id="2-движение-при-наложенных-связях">2. Движение при наложенных
+связях</h2>
+<p>При анализе движения тел по определенным траекториям (например,
+скольжение по криволинейному склону или движение маятника) важную роль
+играют <strong>силы связи</strong> (реакция опоры, натяжение нити).</p>
+<ul>
+<li><strong>Ключевое свойство:</strong> В отсутствие трения силы
+неподвижной связи всегда направлены перпендикулярно вектору движения
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi mathvariant="bold-italic">𝒔</mi></mrow><annotation encoding="application/x-tex">d\mathbf{s}</annotation></semantics></math>),
+следовательно, их работа равна нулю.</li>
+<li><strong>Принцип суперпозиции:</strong> Если силу можно разложить на
+составляющие (например, силу тяжести и силу реакции связи), то общая
+работа равна сумме работ этих составляющих. На практике это позволяет
+рассчитывать изменение кинетической энергии, учитывая только работу силы
+тяжести, игнорируя сложные реакции связей (фиг. 14.1).</li>
+</ul>
+<hr />
+<h2 id="3-консервативные-силы-и-потенциальная-энергия">3. Консервативные
+силы и потенциальная энергия</h2>
+<h3 id="определение-консервативности">Определение консервативности</h3>
+<p>Сила называется <strong>консервативной</strong>, если работа,
+совершаемая ею при перемещении тела между двумя точками, не зависит от
+формы пути, а определяется только начальным и конечным положениями (фиг.
+14.2).</p>
+<h3 id="потенциальная-энергия-u">Потенциальная энергия
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>U</mi><annotation encoding="application/x-tex">U</annotation></semantics></math>)</h3>
+<p>Для консервативных сил вводится функция положения
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">U(x, y, z)</annotation></semantics></math>.
+Работа при переходе из точки (1) в точку (2) выражается как разность
+значений этой функции:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mo>∫</mo><mn>1</mn><mn>2</mn></msubsup><mi mathvariant="bold-italic">𝑭</mi><mo>⋅</mo><mi>d</mi><mi mathvariant="bold-italic">𝒔</mi><mo>=</mo><mi>U</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mi>U</mi><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\int_1^2 \mathbf{F} \cdot d\mathbf{s} = U(1) - U(2)</annotation></semantics></math>
+Изменение потенциальной энергии равно взятой с обратным знаком работе
+силы.</p>
+<p><strong>Закон сохранения механической энергии:</strong> Если на тело
+действуют только консервативные силы, то сумма кинетической и
+потенциальной энергий остается неизменной:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo>+</mo><mi>U</mi><mo>=</mo><mtext mathvariant="normal">const</mtext></mrow><annotation encoding="application/x-tex">T + U = \text{const}</annotation></semantics></math></p>
+<h3 id="примеры-потенциальной-энергии">Примеры потенциальной
+энергии:</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Тип взаимодействия</th>
+<th style="text-align: left;">Формула
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>U</mi><annotation encoding="application/x-tex">U</annotation></semantics></math></th>
+<th style="text-align: left;">Примечание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Однородное поле
+тяжести</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo stretchy="false" form="prefix">(</mo><mi>z</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>m</mi><mi>g</mi><mi>z</mi></mrow><annotation encoding="application/x-tex">U(z) = mgz</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>z</mi><annotation encoding="application/x-tex">z</annotation></semantics></math>
+— высота над произвольным уровнем</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Упругая деформация
+(пружина)</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>k</mi><msup><mi>x</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">U(x) = \frac{1}{2}kx^2</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>
+— отклонение от равновесия</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Гравитационное поле масс
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>M</mi><annotation encoding="application/x-tex">M</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math></strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo stretchy="false" form="prefix">(</mo><mi>r</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>−</mi><mi>G</mi><mi>M</mi><mi>m</mi><mi>/</mi><mi>r</mi></mrow><annotation encoding="application/x-tex">U(r) = -GMm/r</annotation></semantics></math></td>
+<td style="text-align: left;">Ноль энергии на бесконечности</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Электрическое поле
+зарядов</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo stretchy="false" form="prefix">(</mo><mi>r</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msub><mi>q</mi><mn>1</mn></msub><msub><mi>q</mi><mn>2</mn></msub><mi>/</mi><mn>4</mn><mi>π</mi><msub><mi>ϵ</mi><mn>0</mn></msub><mi>r</mi></mrow><annotation encoding="application/x-tex">U(r) = q_1 q_2 / 4\pi\epsilon_0 r</annotation></semantics></math></td>
+<td style="text-align: left;">Аналогично закону тяготения</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4-анализ-энергетических-характеристик">4. Анализ энергетических
+характеристик</h2>
+<h3 id="межмолекулярные-взаимодействия-фиг-143">Межмолекулярные
+взаимодействия (фиг. 14.3)</h3>
+<p>На больших расстояниях атомы притягиваются
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>∝</mo><mn>1</mn><mi>/</mi><msup><mi>r</mi><mn>6</mn></msup></mrow><annotation encoding="application/x-tex">U \propto 1/r^6</annotation></semantics></math>),
+а на малых — резко отталкиваются.</p>
+<ul>
+<li><strong>Точка равновесия
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>d</mi><annotation encoding="application/x-tex">d</annotation></semantics></math>):</strong>
+Соответствует минимуму потенциальной энергии. В этой точке сила
+взаимодействия равна нулю.</li>
+<li><strong>Энергия связи:</strong> Чтобы развести атомы из состояния
+равновесия на бесконечность, необходимо затратить работу, равную глубине
+«потенциальной ямы».</li>
+</ul>
+<h3 id="космические-скорости">Космические скорости</h3>
+<p>С помощью закона сохранения энергии выводятся критические параметры
+движения:</p>
+<ul>
+<li><strong>Вторая космическая скорость (скорость
+освобождения):</strong> Квадрат скорости должен быть равен
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>g</mi><mi>a</mi></mrow><annotation encoding="application/x-tex">2ga</annotation></semantics></math>.
+Для Земли это около 7 миль в секунду. Энергия, необходимая для улета
+навсегда, ровно вдвое больше энергии, нужной для вращения по низкой
+круговой орбите.</li>
+</ul>
+<hr />
+<h2 id="5-неконсервативные-силы-современный-взгляд">5. Неконсервативные
+силы: современный взгляд</h2>
+<p>Фейнман выдвигает тезис, что <strong>неконсервативных сил в природе
+не существует</strong> на фундаментальном уровне.</p>
+<ul>
+<li><strong>Трение:</strong> Кажущаяся потеря энергии при трении
+является лишь переходом макроскопической кинетической энергии во
+внутреннюю энергию — хаотическое движение атомов (теплоту) и изменение
+их взаимного расположения.</li>
+<li><strong>Микроскопическая консервативность:</strong> Все
+фундаментальные взаимодействия (гравитация, электромагнетизм)
+консервативны. Понятие «потерянной» энергии возникает только из-за
+невозможности отследить движение каждой отдельной частицы в сложной
+системе.</li>
+</ul>
+<hr />
+<h2 id="6-потенциалы-и-поля">6. Потенциалы и поля</h2>
+<h3 id="понятие-поля-и-потенциала">Понятие поля и потенциала</h3>
+<p>Для удобства описания вводятся скалярные и векторные характеристики
+пространства:</p>
+<ol type="1">
+<li><strong>Вектор поля
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑪</mi><annotation encoding="application/x-tex">\mathbf{C}</annotation></semantics></math>):</strong>
+Сила, действующая на единичную массу
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑭</mi><mo>=</mo><mi>m</mi><mi mathvariant="bold-italic">𝑪</mi></mrow><annotation encoding="application/x-tex">\mathbf{F} = m\mathbf{C}</annotation></semantics></math>).</li>
+<li><strong>Скалярный потенциал
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="normal">Ψ</mi><annotation encoding="application/x-tex">\Psi</annotation></semantics></math>):</strong>
+Потенциальная энергия единичной массы
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>=</mo><mi>m</mi><mi mathvariant="normal">Ψ</mi></mrow><annotation encoding="application/x-tex">U = m\Psi</annotation></semantics></math>).</li>
+</ol>
+<p>Связь между ними выражается через <strong>градиент</strong>
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>∇</mi><annotation encoding="application/x-tex">\nabla</annotation></semantics></math>):
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑭</mi><mo>=</mo><mi>−</mi><mi>∇</mi><mi>U</mi><mo>,</mo><mspace width="1.0em"></mspace><mi mathvariant="bold-italic">𝑪</mi><mo>=</mo><mi>−</mi><mi>∇</mi><mi mathvariant="normal">Ψ</mi></mrow><annotation encoding="application/x-tex">\mathbf{F} = -\nabla U, \quad \mathbf{C} = -\nabla \Psi</annotation></semantics></math>
+Это означает, что компонента силы в любом направлении равна скорости
+убывания потенциальной энергии в этом направлении (частная производная с
+обратным знаком).</p>
+<h3 id="практические-примеры-полей-фиг-144-и-145">Практические примеры
+полей (фиг. 14.4 и 14.5)</h3>
+<ul>
+<li><strong>Сферический слой:</strong> Вне слоя потенциал меняется как
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mi>r</mi></mrow><annotation encoding="application/x-tex">1/r</annotation></semantics></math>
+(как от точечной массы). Внутри слоя потенциал постоянен
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Ψ</mi><mo>=</mo><mi>−</mi><mi>G</mi><mi>m</mi><mi>/</mi><mi>a</mi></mrow><annotation encoding="application/x-tex">\Psi = -Gm/a</annotation></semantics></math>),
+что означает отсутствие гравитационного поля внутри полой сферы.</li>
+<li><strong>Плоский конденсатор:</strong> Между двумя заряженными
+пластинами создается однородное электрическое поле
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>=</mo><mi>σ</mi><mi>/</mi><msub><mi>ϵ</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">E = \sigma/\epsilon_0</annotation></semantics></math>.
+Разность потенциалов (напряжение) прямо пропорциональна расстоянию
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>d</mi><annotation encoding="application/x-tex">d</annotation></semantics></math>
+между пластинами:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>ϕ</mi><mo>=</mo><mi>σ</mi><mi>d</mi><mi>/</mi><msub><mi>ϵ</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">\Delta\phi = \sigma d/\epsilon_0</annotation></semantics></math>.</li>
+</ul>
+<hr />
+<h2 id="7-важные-цитаты-и-идеи">7. Важные цитаты и идеи</h2>
+<blockquote>
+<p>«Куда важнее выучить и запомнить не доказательство, а само
+соотношение. Тогда уже в любом случае мы сможем сказать: "Легко
+показать, что..."»</p>
+</blockquote>
+<ul>
+<li><strong>О математических трюках:</strong> Автор призывает запоминать
+не шаги вывода, а саму идею и факт того, что данное положение доказуемо.
+Истинное знание предмета позволяет «изобрести» доказательство заново в
+нужный момент.</li>
+<li><strong>Об энергии в квантовой механике:</strong> В современной
+физике идея силы отходит на второй план, уступая место понятию энергии,
+которое сохраняет актуальность даже там, где понятия силы и скорости
+«рассасываются».</li>
+</ul>
+<hr />
+<h2 id="8-практические-выводы-actionable-insights">8. Практические
+выводы (Actionable Insights)</h2>
+<ol type="1">
+<li><strong>При расчете движения без трения по сложным
+траекториям:</strong> Всегда используйте закон сохранения энергии. Силы
+связи не совершают работы, что позволяет полностью игнорировать
+геометрию пути при определении конечной скорости.</li>
+<li><strong>При анализе систем с потенциалом:</strong> Помните, что если
+потенциал (или потенциальная энергия) в некоторой области постоянен, то
+сила в этой области отсутствует.</li>
+<li><strong>Выбор нулевой точки:</strong> Точка нулевой потенциальной
+энергии всегда произвольна. Для расчетов важна только
+<strong>разность</strong> потенциальных энергий. При расчетах
+космических масштабов удобно принимать
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">U=0</annotation></semantics></math>
+на бесконечности.</li>
+<li><strong>Магнитные поля:</strong> Помните, что магнитное поле никогда
+не совершает работы над движущимся зарядом, так как сила всегда
+перпендикулярна скорости. Оно изменяет направление движения, но не
+кинетическую энергию.</li>
+</ol>
+    </article>
+  </main>
+</body>
+</html>

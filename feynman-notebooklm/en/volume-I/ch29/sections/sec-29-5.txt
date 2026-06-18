@@ -1,0 +1,97 @@
+SOURCE: Feynman Lectures on Physics, Volume I, Chapter 29
+LANGUAGE: en
+SECTION: 29–5 The mathematics of interference
+SOURCE_URL: https://www.feynmanlectures.caltech.edu/I_29.html
+
+# 29–5 The mathematics of interference
+
+Now we have finished our analysis of the phenomena of dipole radiators qualitatively, and we must learn how to analyze them quantitatively. To find the effect of two sources at some particular angle in the most general case, where the two oscillators have some intrinsic relative phase \(\alpha\) from one another and the strengths \(A_1\) and \(A_2\) are not equal, we find that we have to add two cosines having the same frequency, but with different phases. It is very easy to find this phase difference; it is made up of a delay due to the difference in distance, and the intrinsic, built-in phase of the oscillation. Mathematically, we have to find the sum \(R\) of two waves: \(R = A_1 \cos\,(\omega t + \phi_1) + A_2 \cos\,(\omega t + \phi_2)\) . How do we do it?
+It is really very easy, and we presume that we already know how to do it. However, we shall outline the procedure in some detail. First, we can, if we are clever with mathematics and know enough about cosines and sines, simply work it out. The easiest such case is the one where \(A_1\) and \(A_2\) are equal, let us say they are both equal to \(A\) . In those circumstances, for example (we could call this the trigonometric method of solving the problem), we have
+\[
+\begin{equation}
+\label{Eq:I:29:9}
+R = A[\cos\,(\omega t+\phi_1)+\cos\,(\omega t + \phi_2)].
+\end{equation}
+\]
+Once, in our trigonometry class, we may have learned the rule that
+\[
+\begin{equation}
+\label{Eq:I:29:10}
+\cos A+\cos B=2\cos\tfrac{1}{2}(A+B)\cos\tfrac{1}{2}(A-B).
+\end{equation}
+\]
+If we know that, then we can immediately write \(R\) as
+\[
+\begin{equation}
+\label{Eq:I:29:11}
+R=2A\cos\tfrac{1}{2}(\phi_1-\phi_2)\cos\,(\omega t+\tfrac{1}{2}\phi_1+
+\tfrac{1}{2}\phi_2).
+\end{equation}
+\]
+So we find that we have an oscillatory wave with a new phase and a new amplitude. In general, the resultwillbe an oscillatory wave with a new amplitude \(A_R\) , which we may call the resultant amplitude, oscillating at the same frequency but with a phase difference \(\phi_R\) , called the resultant phase. In view of this, our particular case has the following result: that the resultant amplitude is
+\[
+\begin{equation}
+\label{Eq:I:29:12}
+A_R=2A\cos\tfrac{1}{2}(\phi_1-\phi_2),
+\end{equation}
+\]
+and the resultant phase is the average of the two phases, and we have completely solved our problem.
+FIGURE Ch29-F9: Fig. 29–9.A geometrical method for combining two cosine waves. The entire diagram is thought of as rotating counterclockwise with angular frequency \(\omega\) .
+Now suppose that we cannot remember that the sum of two cosines is twice the cosine of half the sum times the cosine of half the difference. Then we may use another method of analysis which is more geometrical. Any cosine function of \(\omega t\) can be considered as the horizontal projection of arotating vector. Suppose there were a vector \(\FLPA_1\) of length \(A_1\) rotating with time, so that its angle with the horizontal axis is \(\omega t + \phi_1\) . (We shall leave out the \(\omega t\) in a minute, and see that it makes no difference.) Suppose that we take a snapshot at the time \(t = 0\) , although, in fact, the picture is rotating with angular velocity \(\omega\) (Fig.29–9). The projection of \(\FLPA_1\) along the horizontal axis is precisely \(A_1\cos\,(\omega t + \phi_1)\) . Now at \(t= 0\) the second wave could be represented by another vector, \(\FLPA_2\) , of length \(A_2\) and at an angle \(\phi_2\) , and also rotating. They are both rotating with the same angular velocity \(\omega\) , and therefore therelativepositions of the two are fixed. The system goes around like a rigid body. The horizontal projection of \(\FLPA_2\) is \(A_2\cos\,(\omega t + \phi_2)\) . But we know from the theory of vectors that if we add the two vectors in the ordinary way, by the parallelogram rule, and draw the resultant vector \(\FLPA_R\) , the \(x\) -component of the resultant is the sum of the \(x\) -components of the other two vectors. That solves our problem. It is easy to check that this gives the correct result for the special case we treated above, where \(A_1=\) \(A_2 =\) \(A\) . In this case, we see from Fig.29–9that \(\FLPA_R\) lies midway between \(\FLPA_1\) and \(\FLPA_2\) and makes an angle \(\tfrac{1}{2}(\phi_2 - \phi_1)\) with each. Therefore we see that \(A_R = 2A\cos\tfrac{1}{2}(\phi_2 -
+\phi_1)\) , as before. Also, as we see from the triangle, the phase of \(\FLPA_R\) , as it goes around, is the average angle of \(\FLPA_1\) and \(\FLPA_2\) when the two amplitudes are equal. Clearly, we can also solve for the case where the amplitudes are not equal, just as easily. We can call that thegeometricalway of solving the problem.
+There is still another way of solving the problem, and that is theanalyticalway. That is, instead of having actually to draw a picture like Fig.29–9, we can write something down which says the same thing as the picture: instead of drawing the vectors, we write acomplex numberto represent each of the vectors. The real parts of the complex numbers are the actual physical quantities. So in our particular case the waves could be written in this way: \(A_1e^{i(\omega t + \phi_1)}\) [the real part of this is \(A_1\cos\,(\omega t + \phi_1)\) ] and \(A_2e^{i(\omega t + \phi_2)}\) . Now we can add the two:
+\[
+\begin{align}
+R&=A_1e^{i(\omega t + \phi_1)}+A_2e^{i(\omega t + \phi_2)}\notag\\[1ex]
+&=(A_1e^{i\phi_1}+A_2e^{i\phi_2})e^{i\omega t}
+\label{Eq:I:29:13}
+\end{align}
+\]
+or
+\[
+\begin{equation}
+\label{Eq:I:29:14}
+\hat{R}=A_1e^{i\phi_1}+A_2e^{i\phi_2}=A_Re^{i\phi_R}.
+\end{equation}
+\]
+This solves the problem that we wanted to solve, because it represents the result as a complex number of magnitude \(A_R\) and phase \(\phi_R\) .
+To see how this method works, let us find the amplitude \(A_R\) which is the “length” of \(\hat{R}\) . To get the “length” of a complex quantity, we always multiply the quantity by its complex conjugate, which gives the length squared. The complex conjugate is the same expression, but with the sign of the \(i\) ’s reversed. Thus we have
+\[
+\begin{equation}
+\label{Eq:I:29:15}
+A_R^2=(A_1e^{i\phi_1}+A_2e^{i\phi_2})(A_1e^{-i\phi_1}+A_2e^{-i\phi_2}).
+\end{equation}
+\]
+In multiplying this out, we get \(A_1^2 + A_2^2\) (here the \(e\) ’s cancel), and for the cross terms we have
+\[
+\begin{equation*}
+A_1A_2(e^{i(\phi_1-\phi_2)}+e^{i(\phi_2-\phi_1)}).
+\end{equation*}
+\]
+Now
+\[
+\begin{equation*}
+e^{i\theta}+e^{-i\theta}=
+\cos\theta+i\sin\theta+\cos\theta-i\sin\theta.
+\end{equation*}
+\]
+That is to say, \(e^{i\theta} + e^{-i\theta} = 2\cos\theta\) . Our final result is therefore
+\[
+\begin{equation}
+\label{Eq:I:29:16}
+A_R^2=A_1^2+A_2^2+2A_1A_2\cos\,(\phi_2-\phi_1).
+\end{equation}
+\]
+As we see, this agrees with the length of \(\FLPA_R\) in Fig.29–9, using the rules of trigonometry.
+Thus the sum of the two effects has the intensity \(A_1^2\) we would get with one of them alone, plus the intensity \(A_2^2\) we would get with the other one alone, plus a correction. This correction we call theinterference effect. It is really only the difference between what we get simply by adding the intensities, and what actually happens. We call it interference whether it is positive or negative. (Interference in ordinary language usually suggests opposition or hindrance, but in physics we often do not use language the way it was originally designed!) If the interference term is positive, we call that caseconstructiveinterference, horrible though it may sound to anybody other than a physicist! The opposite case is calleddestructiveinterference.
+FIGURE Ch29-F10: Fig. 29–10.Two oscillators of equal amplitude, with a phase difference \(\alpha\) between them.
+Now let us see how to apply our general formula (29.16) for the case of two oscillators to the special situations which we have discussed qualitatively. To apply this general formula, it is only necessary to find what phase difference, \(\phi_2 - \phi_1\) , exists between the signals arriving at a given point. (It depends only on the phase difference, of course, and not on the phase itself.) So let us consider the case where the two oscillators, of equal amplitude, are separated by some distance \(d\) and have an intrinsic relative phase \(\alpha\) . (When one is at phase zero, the phase of the other is \(\alpha\) .) Then we ask what the intensity will be in some azimuth direction \(\theta\) from the E–W line. [Note that this isnotthe same \(\theta\) as appears in (29.1). We are torn between using an unconventional symbol like \(\cancel{\text{U}}\!\!,\) or the conventional symbol \(\theta\) (Fig.29–10).] The phase relationship is found by noting that the difference in distance from \(P\) to the two oscillators is \(d\sin\theta\) , so that the phase difference contribution from this is the number of wavelengths in \(d\sin\theta\) , multiplied by \(2\pi\) . (Those who are more sophisticated might want to multiply the wave number \(k\) , which is the rate of change of phase with distance, by \(d\sin\theta\) ; it is exactly the same.) The phase difference due to the distance difference is thus \(2\pi
+d\sin\theta/\lambda\) , but, due to the timing of the oscillators, there is an additional phase \(\alpha\) . So the phase difference at arrival would be
+\[
+\begin{equation}
+\label{Eq:I:29:17}
+\phi_2-\phi_1=\alpha+2\pi d\sin\theta/\lambda.
+\end{equation}
+\]
+This takes care of all the cases. Thus all we have to do is substitute this expression into (29.16) for the case \(A_1 = A_2\) , and we can calculate all the various results for two antennas of equal intensity.
+Now let us see what happens in our various cases. The reason we know, for example, that the intensity is \(2\) at \(30^\circ\) in Fig.29–5is the following: the two oscillators are \(\tfrac{1}{2}\lambda\) apart, so at \(30^\circ\) , \(d\sin\theta=\lambda/4\) . Thus \(\phi_2 - \phi_1 =\) \(2\pi\lambda/4\lambda =\) \(\pi/2\) , and so the interference term is zero. (We are adding two vectors at \(90^\circ\) .) The result is the hypotenuse of a \(45^\circ\) right-angle triangle, which is \(\sqrt{2}\) times the unit amplitude; squaring it, we get twice the intensity of one oscillator alone. All the other cases can be worked out in this same way.

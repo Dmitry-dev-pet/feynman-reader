@@ -1,0 +1,59 @@
+# Figure context for Chapter 32. Radiation Damping. Light Scattering
+
+SOURCE: Feynman Lectures on Physics, Volume I, Chapter 32
+LANGUAGE: en
+SOURCE_URL: https://www.feynmanlectures.caltech.edu/I_32.html
+
+NotebookLM use: pair this file with the clean chapter text and the PNG image files below. The visual descriptions here are inferred from the surrounding lecture text; the PNG files are included so NotebookLM can inspect the diagrams directly when image sources are uploaded.
+
+## Ch32-F1: Fig. 32–1.The area of a spherical segment is \(2\pi r\sin\theta\cdot
+ r\,d\theta\) .
+
+Section: 32–2 The rate of radiation of energy
+Image file: images/Ch32-F1.png
+
+Context before the figure:
+
+The quantity \(\epsO c\) appears quite often in expressions involving radiowave propagation. Its reciprocal is called theimpedance of a vacuum, and it is an easy number to remember: it has the value \(1/\epsO c = 377\) ohms. So the power in watts per square meter is equal to the average of the field squared, divided by \(377\) .
+
+Context after the figure:
+
+Using our expression (29.1) for the electric field, we find that \[ \begin{equation} \label{Eq:I:32:2} S=\frac{q^2a'^2\sin^2\theta}{16\pi^2\epsO r^2c^3} \end{equation} \] is the power per square meter radiated in the direction \(\theta\) . We notice that it goes inversely as the square of the distance, as we said before. Now suppose we wanted the total energy radiated in all directions: then we must integrate (32.2) over all directions. First we multiply by the area, to find the amount that flows within a little angle \(d\theta\) (Fig.32–1). We need the area of a spherical section. The way to think of it is this: if \(r\) is the radius, then the width of the annular segment is \(r\,d\theta\) , and the circumference is \(2\pi r \sin \theta\) , because \(r\sin\theta\) is the radius of the circle. So the area of the little piece of the sphere is \(2\pi r \sin \theta\) times \(r\,d\theta\)...
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.
+
+## Ch32-F2: Fig. 32–2.A beam of radiation falls on an atom and causes the charges (electrons) in the atom to move. The moving electrons in turn radiate in various directions.
+
+Section: 32–5 Scattering of light
+Image file: images/Ch32-F2.png
+
+Context before the figure:
+
+Earlier, we remarked that the phenomenon of scattering of light of this nature is the origin of the blue of the sky. The sunlight goes through the air, and when we look to one side of the sun—say at \(90^\circ\) to the beam—we see blue light; what we now have to calculate ishow muchlight we see andwhy it is blue.
+
+Context after the figure:
+
+If the incident beam has the electric field1 \(\FLPE = \hat{\FLPE}_0e^{i\omega t}\) at the point where the atom is located, we know that an electron in the atom will vibrate up and down in response to this \(\FLPE\) (Fig.32–2). From Eq. (23.8), the response will be \[ \begin{equation} \label{Eq:I:32:15} \hat{\FLPx}=\frac{q_e\hat{\FLPE}_0}{m(\omega_0^2-\omega^2+i\gamma\omega)}. \end{equation} \] We could include the damping and the possibility that the atom acts like several oscillators of different frequency and sum over the various frequencies, but for simplicity let us just take one oscillator and neglect the damping. Then the response to the external electric field, which we have already used in the calculation of the index of refraction, is simply \[ \begin{equation} \label{Eq:I:32:16} \hat{\FLPx}=\frac{q_e\hat{\FLPE}_0}{m(\omega_0^2-\omega^2)}. \end{equation} \] We could now easily...
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.
+
+## Ch32-F3: Fig. 32–3.Illustration of the origin of the polarization of radiation scattered at right angles to the incident beam.
+
+Section: 32–5 Scattering of light
+Image file: images/Ch32-F3.png
+
+Context before the figure:
+
+Finally, there is one other important feature which really belongs in the next chapter, on polarization, but it is so interesting that we point it out now. This is that the electric field of the scattered light tends to vibrate in a particular direction. The electric field in the incoming light is oscillating in some way, and the driven oscillator goes in this same direction, and if we are situated about at right angles to the beam, we will seepolarizedlight, that is to say, light in which the electric field is going only one way. In general, the atoms can vibrate in any direction at right angles to the beam, but if they are driven directly toward or away from us, we do not see it. So if the incoming light has an electric field which changes and oscillates in any direction, which we call unpolarized light, then the light which is coming out at \(90^\circ\) to the beam vibrates in only...
+
+Context after the figure:
+
+There is a substance called polaroid which has the property that when light goes through it, only the piece of the electric field which is along one particular axis can get through. We can use this to test for polarization, and indeed we find the light scattered by the hypo solution to be strongly polarized.
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.

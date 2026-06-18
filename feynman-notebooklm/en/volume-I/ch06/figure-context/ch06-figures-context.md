@@ -1,0 +1,194 @@
+# Figure context for Chapter 6. Probability
+
+SOURCE: Feynman Lectures on Physics, Volume I, Chapter 6
+LANGUAGE: en
+SOURCE_URL: https://www.feynmanlectures.caltech.edu/I_06.html
+
+NotebookLM use: pair this file with the clean chapter text and the PNG image files below. The visual descriptions here are inferred from the surrounding lecture text; the PNG files are included so NotebookLM can inspect the diagrams directly when image sources are uploaded.
+
+## Ch6-F1: Fig. 6–1.Observed sequences of heads and tails in three games of 30 tosses each.
+
+Section: 6–2 Fluctuations
+Image file: images/Ch6-F1.png
+
+Context before the figure:
+
+In Chapter5we described the size of a nucleus in terms of its apparent area, or “cross section.” When we did so we were really talking about probabilities. When we shoot a high-energy particle at a thin slab of material, there is some chance that it will pass right through and some chance that it will hit a nucleus. (Since the nucleus is so small that we cannotseeit, we cannot aim right at a nucleus. We must “shoot blind.”) If there are \(n\) atoms in our slab and the nucleus of each atom has a cross-sectional area \(\sigma\) , then the total area “shadowed” by the nuclei is \(n\sigma\) . In a large number \(N\) of random shots, we expect that the number of hits \(N_C\) ofsomenucleus will be in the ratio to \(N\) as the shadowed area is to the total area of the slab: \[ \begin{equation} \label{Eq:I:6:2} N_C/N=n\sigma/A. \end{equation} \] We may say, therefore, that theprobabilitythat...
+
+Context after the figure:
+
+We would like now to use our ideas about probability to consider in some greater detail the question: “How many heads do I reallyexpectto get if I toss a coin \(N\) times?” Before answering the question, however, let us look at what does happen in such an “experiment.” Figure6–1shows the results obtained in the first three “runs” of such an experiment in which \(N=30\) . The sequences of “heads” and “tails” are shown just as they were obtained. The first game gave \(11\) heads; the second also \(11\) ; the third \(16\) . In three trials we did not once get \(15\) heads. Should we begin to suspect the coin? Or were we wrong in thinking that the most likely number of “heads” in such a game is \(15\) ? Ninety-seven more runs were made to obtain a total of \(100\) experiments of \(30\) tosses each. The results of the experiments are given in Table6–1.1
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.
+
+## Ch6-F2: Fig. 6–2.Summary of the results of 100 games of 30 tosses each. The vertical bars show the number of games in which a score of \(k\) heads was obtained. The dashed curve shows the expected numbers of games with the score \(k\) obtained by a probability computation.
+
+Section: 6–2 Fluctuations
+Image file: images/Ch6-F2.png
+
+Context before the figure:
+
+Looking at the numbers in Table6–1, we see that most of the results are “near” \(15\) , in that they are between \(12\) and \(18\) . We can get a better feeling for the details of these results if we plot a graph of thedistributionof the results. We count the number of games in which a score of \(k\) was obtained, and plot this number for each \(k\) . Such a graph is shown in Fig.6–2. A score of \(15\) heads was obtained in \(13\) games. A score of \(14\) heads was also obtained \(13\) times. Scores of \(16\) and \(17\) were each obtainedmorethan \(13\) times. Are we to conclude that there is some bias toward heads? Was our “best estimate” not good enough? Should we conclude now that the “most likely” score for a run of \(30\) tosses is really \(16\) heads? But wait! In all the games taken together, there were \(3000\) tosses. And the total number of heads obtained was \(1493\) . The...
+
+Context after the figure:
+
+We may ask the question: “Whatisthe probability that a game of \(30\) tosses will yield \(15\) heads—or \(16\) , or any other number?” We have said that in a game of one toss, the probability of obtainingonehead is \(0.5\) , and the probability of obtaining no head is \(0.5\) . In a game of two tosses there arefourpossible outcomes: \(HH\) , \(HT\) , \(TH\) , \(TT\) . Since each of these sequences is equally likely, we conclude that (a) the probability of a score of two heads is \(\tfrac{1}{4}\) , (b) the probability of a score of one head is \(\tfrac{2}{4}\) , (c) the probability of a zero score is \(\tfrac{1}{4}\) . There aretwoways of obtaining one head, but only one of obtaining either zero or two heads.
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.
+
+## Ch6-F3: Fig. 6–3.A diagram for showing the number of ways a score of 0, 1, 2, or 3 heads can be obtained in a game of 3 tosses.
+
+Section: 6–2 Fluctuations
+Image file: images/Ch6-F3.png
+
+Context before the figure:
+
+Consider now a game of \(3\) tosses. The third toss is equally likely to be heads or tails. There is only one way to obtain \(3\) heads: wemusthave obtained \(2\) heads on the first two tosses, and then heads on the last. There are, however,threeways of obtaining \(2\) heads. We could throw tails after having thrown two heads (one way) or we could throw heads after throwing only one head in the first two tosses (two ways). So for scores of \(3\) - \(H\) , \(2\) - \(H\) , \(1\) - \(H\) , \(0\) - \(H\) we have that the number of equally likely ways is \(1\) , \(3\) , \(3\) , \(1\) , with a total of \(8\) different possible sequences. The probabilities are \(\tfrac{1}{8}\) , \(\tfrac{3}{8}\) , \(\tfrac{3}{8}\) , \(\tfrac{1}{8}\) .
+
+Context after the figure:
+
+The argument we have been making can be summarized by a diagram like that in Fig.6–3. It is clear how the diagram should be continued for games with a larger number of tosses. Figure6–4shows such a diagram for a game of \(6\) tosses. The number of “ways” to any point on the diagram is just the number of different “paths” (sequences of heads and tails) which can be taken from the starting point. The vertical position gives us the total number of heads thrown. The set of numbers which appears in such a diagram is known asPascal’s triangle. The numbers are also known as thebinomial coefficients, because they also appear in the expansion of \((a+b)^n\) . If we call \(n\) the number of tosses and \(k\) the number of heads thrown, then the numbers in the diagram are usually designated by the symbol \(\tbinom{n}{k}\) . We may remark in passing that the binomial coefficients can also be...
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.
+
+## Ch6-F4: Fig. 6–4.A diagram like that of Fig.6–3, for a game of 6 tosses.
+
+Section: 6–2 Fluctuations
+Image file: images/Ch6-F4.png
+
+Context before the figure:
+
+Consider now a game of \(3\) tosses. The third toss is equally likely to be heads or tails. There is only one way to obtain \(3\) heads: wemusthave obtained \(2\) heads on the first two tosses, and then heads on the last. There are, however,threeways of obtaining \(2\) heads. We could throw tails after having thrown two heads (one way) or we could throw heads after throwing only one head in the first two tosses (two ways). So for scores of \(3\) - \(H\) , \(2\) - \(H\) , \(1\) - \(H\) , \(0\) - \(H\) we have that the number of equally likely ways is \(1\) , \(3\) , \(3\) , \(1\) , with a total of \(8\) different possible sequences. The probabilities are \(\tfrac{1}{8}\) , \(\tfrac{3}{8}\) , \(\tfrac{3}{8}\) , \(\tfrac{1}{8}\) .
+
+Context after the figure:
+
+The argument we have been making can be summarized by a diagram like that in Fig.6–3. It is clear how the diagram should be continued for games with a larger number of tosses. Figure6–4shows such a diagram for a game of \(6\) tosses. The number of “ways” to any point on the diagram is just the number of different “paths” (sequences of heads and tails) which can be taken from the starting point. The vertical position gives us the total number of heads thrown. The set of numbers which appears in such a diagram is known asPascal’s triangle. The numbers are also known as thebinomial coefficients, because they also appear in the expansion of \((a+b)^n\) . If we call \(n\) the number of tosses and \(k\) the number of heads thrown, then the numbers in the diagram are usually designated by the symbol \(\tbinom{n}{k}\) . We may remark in passing that the binomial coefficients can also be...
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.
+
+## Ch6-F5: Fig. 6–5.The progress made in a random walk. The horizontal coordinate \(N\) is the total number of steps taken; the vertical coordinate \(D_N\) is the net distance moved from the starting position.
+
+Section: 6–3 The random walk
+Image file: images/Ch6-F5.png
+
+Context before the figure:
+
+First, let us look at a few examples of a random walk. We may characterize the walker’s progress by the net distance \(D_N\) traveled in \(N\) steps. We show in the graph of Fig.6–5three examples of the path of a random walker. (We have used for the random sequence of choices the results of the coin tosses shown in Fig.6–1.)
+
+Context after the figure:
+
+What can we say about such a motion? We might first ask: “How far does he get on the average?” We mustexpectthat his average progress will be zero, since he is equally likely to go either forward or backward. But we have the feeling that as \(N\) increases, he is more likely to have strayed farther from the starting point. We might, therefore, ask what is his average distance travelled inabsolute value, that is, what is the average of \(\abs{D}\) . It is, however, more convenient to deal with another measure of “progress,” the square of the distance: \(D^2\) is positive for either positive or negative motion, and is therefore a reasonablemeasureof such random wandering.
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.
+
+## Ch6-F6: Fig. 6–6.The fraction of the tosses that gave heads in a particular sequence of \(N\) tosses of a penny.
+
+Section: 6–3 The random walk
+Image file: images/Ch6-F6.png
+
+Context before the figure:
+
+We are now in a position to consider a question we have avoided until now. How shall we tell whether a coin is “honest” or “loaded”? We can give now at least a partial answer. For an honest coin, we expect the fraction of the times heads appears to be \(0.5\) , that is, \[ \begin{equation} \label{Eq:I:6:13} \frac{\expval{N_H}}{N}=0.5. \end{equation} \] Wealsoexpect an actual \(N_H\) to deviate from \(N/2\) by about \(\sqrt{N}/2\) , or thefractionto deviate by \[ \begin{equation*} \frac{1}{N}\,\frac{\sqrt{N}}{2}=\frac{1}{2\sqrt{N}}. \end{equation*} \] The larger \(N\) is, the closer weexpectthe fraction \(N_H/N\) to be to one-half.
+
+Context after the figure:
+
+In Fig.6–6we have plotted the fraction \(N_H/N\) for the coin tosses reported earlier in this chapter. We see the tendency for the fraction of heads to approach \(0.5\) for large \(N\) . Unfortunately, for any given run or combination of runs there is noguaranteethat the observed deviation will be evenneartheexpecteddeviation. There is always the finite chance that a large fluctuation—a long string of heads or tails—will give an arbitrarily large deviation. All we can say is thatifthe deviation is near the expected \(1/2\sqrt{N}\) (say within a factor of \(2\) or \(3\) ), we have no reason to suspect the honesty of the coin. If it is much larger, we may be suspicious, but cannot prove, that the coin is loaded (or that the tosser is clever!).
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.
+
+## Ch6-F7: Fig. 6–7.The probability density for ending up at the distance \(D\) from the starting place in a random walk of \(N\) steps. ( \(D\) is measured in units of the rms step length.)
+
+Section: 6–4 A probability distribution
+Image file: images/Ch6-F7.png
+
+Context before the figure:
+
+The form of \(p(x)\) will depend on \(N\) , the number of steps taken, and also on the distribution of individual step lengths. We cannot demonstrate the proofs here, but for large \(N\) , \(p(x)\) is thesamefor all reasonable distributions in individual step lengths, and depends only on \(N\) . We plot \(p(x)\) for three values of \(N\) in Fig.6–7. You will notice that the “half-widths” (typical spread from \(x=0\) ) of these curves is \(\sqrt{N}\) , as we have shown it should be.
+
+Context after the figure:
+
+You may notice also that the value of \(p(x)\) near zero is inversely proportional to \(\sqrt{N}\) . This comes about because the curves are all of a similar shape and their areas under the curves must all be equal. Since \(p(x)\,\Delta x\) is the probability of finding \(D\) in \(\Delta x\) when \(\Delta x\) is small, we can determine the chance of finding \(D\) somewhereinside an arbitrary interval from \(x_1\) to \(x_2\) , by cutting the interval in a number of small increments \(\Delta x\) and evaluating the sum of the terms \(p(x)\,\Delta x\) for each increment. The probability that \(D\) lands somewhere between \(x_1\) and \(x_2\) , which we may write \(P(x_1 < D < x_2)\) , is equal to the shaded area in Fig.6–8. The smaller we take the increments \(\Delta x\) , the more correct is our result. We can write, therefore, \[ \begin{equation} \begin{gathered} P(x_1 < D < x_2)=\sum...
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.
+
+## Ch6-F8: Fig. 6–8.The probability that the distance \(D\) traveled in a random walk is between \(x_1\) and \(x_2\) is the area under the curve of \(p(x)\) from \(x_1\) to \(x_2\) .
+
+Section: 6–4 A probability distribution
+Image file: images/Ch6-F8.png
+
+Context before the figure:
+
+You may notice also that the value of \(p(x)\) near zero is inversely proportional to \(\sqrt{N}\) . This comes about because the curves are all of a similar shape and their areas under the curves must all be equal. Since \(p(x)\,\Delta x\) is the probability of finding \(D\) in \(\Delta x\) when \(\Delta x\) is small, we can determine the chance of finding \(D\) somewhereinside an arbitrary interval from \(x_1\) to \(x_2\) , by cutting the interval in a number of small increments \(\Delta x\) and evaluating the sum of the terms \(p(x)\,\Delta x\) for each increment. The probability that \(D\) lands somewhere between \(x_1\) and \(x_2\) , which we may write \(P(x_1 < D < x_2)\) , is equal to the shaded area in Fig.6–8. The smaller we take the increments \(\Delta x\) , the more correct is our result. We can write, therefore, \[ \begin{equation} \begin{gathered} P(x_1 < D < x_2)=\sum...
+
+Context after the figure:
+
+The area under the whole curve is the probability that \(D\) lands somewhere (that is, hassomevalue between \(x=-\infty\) and \(x=+\infty\) ). That probability is surely \(1\) . We must have that \[ \begin{equation} \label{Eq:I:6:19} \int_{-\infty}^{+\infty}p(x)\,dx=1. \end{equation} \] Since the curves in Fig.6–7get wider in proportion to \(\sqrt{N}\) , their heights must be proportional to \(1/\sqrt{N}\) to maintain the total area equal to \(1\) .
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.
+
+## Ch6-F9: Fig. 6–9.The distribution of velocities of the molecules in a gas.
+
+Section: 6–4 A probability distribution
+Image file: images/Ch6-F9.png
+
+Context before the figure:
+
+Earlier, we said that the pressure of a gas is due to the molecules bouncing against the walls of the container. When we come later to make a more quantitative description, we will wish to know how fast the molecules are going when they bounce, since the impact they make will depend on that speed. We cannot, however, speak ofthespeed of the molecules. It is necessary to use a probability description. A molecule may have any speed, but some speeds are more likely than others. We describe what is going on by saying that the probability that any particular molecule will have a speed between \(v\) and \(v+\Delta v\) is \(p(v)\,\Delta v\) , where \(p(v)\) , a probability density, is a given function of the speed \(v\) . We shall see later how Maxwell, using common sense and the ideas of probability, was able to find a mathematical expression for \(p(v)\) . The form2of the function \(p(v)\)...
+
+Context after the figure:
+
+We often think of the curve of Fig.6–9in a somewhat different way. If we consider the molecules in a typical container (with a volume of, say, one liter), then there are a very large number \(N\) of molecules present ( \(N\approx10^{22}\) ). Since \(p(v)\,\Delta v\) is the probability thatonemolecule will have its velocity in \(\Delta v\) , by our definition of probability we mean that theexpectednumber \(\expval{\Delta N}\) to be found with a velocity in the interval \(\Delta v\) is given by \[ \begin{equation} \label{Eq:I:6:21} \expval{\Delta N}=N\,p(v)\,\Delta v. \end{equation} \] We call \(N\,p(v)\) the “distribution in velocity.” The area under the curve between two velocities \(v_1\) and \(v_2\) , for example the shaded area in Fig.6–9, represents [for the curve \(N\,p(v)\) ] the expected number of molecules with velocities between \(v_1\) and \(v_2\) . Since with a gas we are...
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.
+
+## Ch6-F10: Fig. 6–10.Probability densities for observation of the position and velocity of a particle.
+
+Section: 6–5 The uncertainty principle
+Image file: images/Ch6-F10.png
+
+Context before the figure:
+
+We can give a probability density \(p_1(x)\) , such that \(p_1(x)\,\Delta x\) is the probability that the particle will be found between \(x\) and \(x+\Delta x\) . If the particle is reasonably well localized, say near \(x_0\) , the function \(p_1(x)\) might be given by the graph of Fig.6–10(a). Similarly, we must specify the velocity of the particle by means of a probability density \(p_2(v)\) , with \(p_2(v)\,\Delta v\) the probability that the velocity will be found between \(v\) and \(v+\Delta v\) .
+
+Context after the figure:
+
+It is one of the fundamental results of quantum mechanics that the two functions \(p_1(x)\) and \(p_2(v)\) cannot be chosen independently and, in particular, cannot both be made arbitrarily narrow. If we call the typical “width” of the \(p_1(x)\) curve \([\Delta x]\) , and that of the \(p_2(v)\) curve \([\Delta v]\) (as shown in the figure), nature demands that theproductof the two widths be at least as big as the number \(\hbar/2m\) , where \(m\) is the mass of the particle. We may write this basic relationship as \[ \begin{equation} \label{Eq:I:6:22} [\Delta x]\cdot[\Delta v]\geq\hbar/2m. \end{equation} \] This equation is a statement of theHeisenberg uncertainty principlethat we mentioned earlier.
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.
+
+## Ch6-F11: Fig. 6–11.A way of visualizing a hydrogen atom. The density (whiteness) of the cloud represents the probability density for observing the electron.
+
+Section: 6–5 The uncertainty principle
+Image file: 
+
+Context before the figure:
+
+The necessary uncertainty in our specification of the position of a particle becomes most important when we wish to describe the structure of atoms. In the hydrogen atom, which has a nucleus of one proton with one electron outside of the nucleus, the uncertainty in the position of the electron is as large as the atom itself! We cannot, therefore, properly speak of the electron moving in some “orbit” around the proton. The most we can say is that there is a certainchance \(p(r)\,\Delta V\) , of observing the electron in an element of volume \(\Delta V\) at the distance \(r\) from the proton. The probability density \(p(r)\) is given by quantum mechanics. For an undisturbed hydrogen atom \(p(r)=Ae^{-2r/a}\) . The number \(a\) is the “typical” radius, where the function is decreasing rapidly. Since there is a small probability of finding the electron at distances from the nucleus much...
+
+Context after the figure:
+
+We can form an image of the hydrogen atom by imagining a “cloud” whose density is proportional to the probability density for observing the electron. A sample of such a cloud is shown in Fig.6–11. Thus our best “picture” of a hydrogen atom is a nucleus surrounded by an “electron cloud” (although wereallymean a “probability cloud”). The electron is there somewhere, but nature permits us to know only thechanceof finding it at any particular place.
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.

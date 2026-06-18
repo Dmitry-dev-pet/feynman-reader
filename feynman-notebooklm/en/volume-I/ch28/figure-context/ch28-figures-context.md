@@ -1,0 +1,75 @@
+# Figure context for Chapter 28. Electromagnetic Radiation
+
+SOURCE: Feynman Lectures on Physics, Volume I, Chapter 28
+LANGUAGE: en
+SOURCE_URL: https://www.feynmanlectures.caltech.edu/I_28.html
+
+NotebookLM use: pair this file with the clean chapter text and the PNG image files below. The visual descriptions here are inferred from the surrounding lecture text; the PNG files are included so NotebookLM can inspect the diagrams directly when image sources are uploaded.
+
+## Ch28-F1: Fig. 28–1.A high-frequency signal generator drives charges up and down on two wires.
+
+Section: 28–3 The dipole radiator
+Image file: images/Ch28-F1.png
+
+Context before the figure:
+
+As our fundamental “law” of electromagnetic radiation, we are going to assume that (28.6) is true, i.e., that the electric field produced by an accelerating charge which is moving nonrelativistically at a very large distance \(r\) approaches that form. The electric field varies inversely as \(r\) and is proportional to the acceleration of the charge, projected onto the “plane of sight,” and this acceleration is not today’s acceleration, but the acceleration that it had at an earlier time, the amount of delay being a time, \(r/c\) . In the remainder of this chapter we shall discuss this law so that we can understand it better physically, because we are going to use it to understand all of the phenomena of light and radio propagation, such as reflection, refraction, interference, diffraction, and scattering. It is the central law, and is all we need. All the rest of Eq. (28.3) was written...
+
+Context after the figure:
+
+We shall discuss (28.3) further next year. In the meantime, we shall accept it as true, but not just on a theoretical basis. We may devise a number of experiments which illustrate the character of the law. In order to do so, we need an accelerating charge. It should be a single charge, but if we can make a great many charges move together, all the same way, we know that the field will be the sum of the effects of each of the individual charges; we just add them together. As an example, consider two pieces of wire connected to a generator, as shown in Fig.28–1. The idea is that the generator makes a potential difference, or a field, which pulls electrons away from piece \(A\) and pushes them into \(B\) at one moment, and then, an infinitesimal time later, it reverses the effect and pulls the electrons out of \(B\) and pumps them back into \(A\) !So in these two wires charges, let us say...
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.
+
+## Ch28-F2: Fig. 28–2.The instantaneous electric field on a sphere centered at a localized, linearly oscillating charge.
+
+Section: 28–3 The dipole radiator
+Image file: images/Ch28-F2.png
+
+Context before the figure:
+
+Because the room in which the waves we are measuring has other objects in it, our electric field will shake electrons in these other objects; the electric field makes these other charges go up and down, and in going up and down, these also produce an effect on our probe. Thus for a successful experiment we must hold things fairly close together, so that the influences from the walls and from ourselves—the reflected waves—are relatively small. So the phenomena will not turn out to appear to be precisely and perfectly in accord with Eq. (28.6), but will be close enough that we shall be able to appreciate the law.
+
+Context after the figure:
+
+Now we turn the generator on and hear the audio signal. We find a strong field when the detector \(D\) is parallel to the generator \(G\) at point \(1\) (Fig.28–2). We find the same amount of field also at any other azimuth angle about the axis of \(G\) , because it has no directional effects. On the other hand, when the detector is at \(3\) the field is zero. That is all right, because our formula said that the field should be the acceleration of the chargeprojected perpendicularto the line of sight. Therefore when we look down on \(G\) , the charge is moving toward and away from \(D\) , and there is no effect. So that checks the first rule, that there is no effect when the charge is moving directly toward us. Secondly, the formula says that the electric field should be perpendicular to \(r\) and in the plane of \(G\) and \(r\) ; so if we put \(D\) at \(1\) but rotate it \(90^\circ\) ...
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.
+
+## Ch28-F3: Fig. 28–3.Illustration of interference of sources.
+
+Section: 28–4 Interference
+Image file: images/Ch28-F3.png
+
+Context before the figure:
+
+Next, we may test what happens when we have two sources side by side several wavelengths apart (Fig.28–3). The law is that the two sources should add their effects at point \(1\) when both of the sources are connected to the same generator and are both moving up and down the same way, so that the total electric field is the sum of the two and is twice as strong as it was before.
+
+Context after the figure:
+
+Now comes an interesting possibility. Suppose we make the charges in \(S_1\) and \(S_2\) both accelerate up and down, but delay the timing of \(S_2\) so that they are \(180^\circ\) out of phase. Then the field produced by \(S_1\) will be in one direction and the field produced by \(S_2\) will be in the opposite direction at any instant, and therefore we should getnoeffect at point \(1\) . The phase of oscillation is neatly adjustable by means of a pipe which is carrying the signal to \(S_2\) . By changing the length of this pipe we change the time it takes the signal to arrive at \(S_2\) and thus we change the phase of that oscillation. By adjusting this length, we can indeed find a place where there is no more signal left, in spite of the fact that both \(S_1\) and \(S_2\) are moving! The fact that they are both moving can be checked, because if we cut one out, we can see the motion of...
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.
+
+## Ch28-F4: Fig. 28–4.Illustration of the vector character of the combination of sources.
+
+Section: 28–4 Interference
+Image file: images/Ch28-F4.png
+
+Context before the figure:
+
+Now, it is very interesting to show that the addition of the two fields is in fact avectoraddition. We have just checked it for up and down motion, but let us check two nonparallel directions. First, we restore \(S_1\) and \(S_2\) to the same phase; that is, they are again moving together. But now we turn \(S_1\) through \(90^\circ\) , as shown in Fig.28–4. Now we should have at point \(1\) the sum of two effects, one of which is vertical and the other horizontal. The electric field is the vector sum of these two in-phase signals—they are both strong at the same time and go through zero together; the total field should be a signal \(R\) at \(45^\circ\) . If we turn \(D\) to get the maximum noise, it should be at about \(45^\circ\) , and not vertical. And if we turn it at right angles to that direction, we should get zero, which is easy to measure. Indeed, we observe just such behavior!
+
+Context after the figure:
+
+Now, how about the retardation? How can we demonstrate that the signal is retarded? We could, with a great deal of equipment, measure the time at which it arrives, but there is another, very simple way. Referring again to Fig.28–3, suppose that \(S_1\) and \(S_2\) are in phase. They are both shaking together, and they produce equal electric fields at point \(1\) . But suppose we go to a certain place \(2\) which is closer to \(S_2\) and farther from \(S_1\) . Then, in accordance with the principle that the acceleration should be retarded by an amount equal to \(r/c\) , if the retardations are not equal, the signals are no longer in phase. Thus it should be possible to find a position at which the distances of \(D\) from \(S_1\) and \(S_2\) differ by some amount \(\Delta\) , in such a manner that there is no net signal. That is, the distance \(\Delta\) is to be the distance light goes in...
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.

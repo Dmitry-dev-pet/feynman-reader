@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Глава 49. Собственные колебания - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch49.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1 id="глава-49-собственные-колебания">Глава 49. Собственные
+колебания</h1>
+<p>Данное учебное пособие составлено на основе материалов лекции
+Фейнмана и посвящено изучению поведения волн в ограниченном
+пространстве, анализу собственных частот и принципу суперпозиции в
+линейных системах.</p>
+<hr />
+<h2 id="1-основные-концепции-и-теоретические-положения">1. Основные
+концепции и теоретические положения</h2>
+<h3 id="отражение-волн-и-стоячие-волны">Отражение волн и стоячие
+волны</h3>
+<p>При встрече волны с неподвижной границей (например, закрепленным
+концом струны) происходит её <strong>отражение</strong>. Математически
+это описывается как суперпозиция двух волн: реальной волны, идущей к
+границе, и гипотетической «отраженной» волны, идущей в противоположном
+направлении с обратным знаком.</p>
+<ul>
+<li><strong>Условие на границе:</strong> В точке закрепления
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">x = 0</annotation></semantics></math>)
+суммарное перемещение
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>y</mi><annotation encoding="application/x-tex">y</annotation></semantics></math>)
+всегда должно быть равно нулю.</li>
+<li><strong>Узлы:</strong> Точки в пространстве, которые вообще не
+перемещаются при колебаниях. Для струны они соответствуют значениям, где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>ω</mi><mi>x</mi><mi>/</mi><mi>c</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\sin(\omega x/c) = 0</annotation></semantics></math>.</li>
+<li><strong>Мода:</strong> Характер движения, при котором каждая точка
+объекта совершает чисто синусоидальные колебания с одинаковой
+частотой.</li>
+</ul>
+<h3 id="волны-в-ограниченном-пространстве">Волны в ограниченном
+пространстве</h3>
+<p>Когда система ограничена с двух сторон (например, струна длиной
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>L</mi><annotation encoding="application/x-tex">L</annotation></semantics></math>),
+синусоидальные колебания возможны только при определенных
+<strong>собственных частотах</strong>.</p>
+<ul>
+<li><strong>Граничное условие:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>k</mi><mi>L</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\sin(kL) = 0</annotation></semantics></math>,
+откуда следует, что волновое число
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math>
+должно удовлетворять условию
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mi>L</mi><mo>=</mo><mi>n</mi><mi>π</mi></mrow><annotation encoding="application/x-tex">kL = n\pi</annotation></semantics></math>,
+где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+— целое число.</li>
+<li><strong>Гармоники:</strong> Собственные частоты струны кратны
+основной частоте
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ω</mi><mn>1</mn></msub><annotation encoding="application/x-tex">\omega_1</annotation></semantics></math>:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><msub><mi>ω</mi><mn>1</mn></msub><mo>,</mo><mn>2</mn><msub><mi>ω</mi><mn>1</mn></msub><mo>,</mo><mn>3</mn><msub><mi>ω</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">1\omega_1, 2\omega_1, 3\omega_1</annotation></semantics></math>
+и т.д. Первая гармоника имеет длину волны
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi><mo>=</mo><mn>2</mn><mi>L</mi></mrow><annotation encoding="application/x-tex">\lambda = 2L</annotation></semantics></math>.</li>
+</ul>
+<h3 id="двумерные-колебания">Двумерные колебания</h3>
+<p>В двумерных системах (например, прямоугольная мембрана барабана
+размером
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>×</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">a \times b</annotation></semantics></math>)
+ситуация усложняется. Для возникновения стоячей волны условия должны
+выполняться одновременно по обоим измерениям.</p>
+<ul>
+<li><strong>Уравнение частот для прямоугольника:</strong>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>1</mn><msup><mi>λ</mi><mn>2</mn></msup></mfrac><mo>=</mo><mfrac><msup><mi>n</mi><mn>2</mn></msup><mrow><mn>4</mn><msup><mi>a</mi><mn>2</mn></msup></mrow></mfrac><mo>+</mo><mfrac><msup><mi>m</mi><mn>2</mn></msup><mrow><mn>4</mn><msup><mi>b</mi><mn>2</mn></msup></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{1}{\lambda^2} = \frac{n^2}{4a^2} + \frac{m^2}{4b^2}</annotation></semantics></math></li>
+<li><strong>Важное отличие:</strong> В двумерных и более сложных
+системах собственные частоты, как правило, <strong>не являются
+кратными</strong> друг другу.</li>
+</ul>
+<h3 id="принцип-суперпозиции">Принцип суперпозиции</h3>
+<p>Любое сложное движение линейной системы можно представить как сумму
+(суперпозицию) её собственных гармонических колебаний, взятых с
+определенными амплитудами и фазами. Это применимо как к струнам, так и к
+сложным конструкциям, таким как крыло самолета.</p>
+<hr />
+<h2 id="2-проверочные-вопросы-short-answer-quiz">2. Проверочные вопросы
+(Short-answer quiz)</h2>
+<ol type="1">
+<li><strong>Что происходит со знаком волны при отражении от жестко
+закрепленного конца струны?</strong>
+<ul>
+<li><em>Ответ:</em> Волна отражается с изменением знака на
+противоположный.</li>
+</ul></li>
+<li><strong>Как называются точки системы, остающиеся неподвижными в
+процессе колебаний?</strong>
+<ul>
+<li><em>Ответ:</em> Узлы.</li>
+</ul></li>
+<li><strong>Почему в ограниченной системе (например, в трубе или на
+струне) возникают только дискретные частоты?</strong>
+<ul>
+<li><em>Ответ:</em> Потому что синусоидальная волна должна «вписаться» в
+границы системы, удовлетворяя условию нулевого смещения на её
+концах.</li>
+</ul></li>
+<li><strong>Справедливо ли утверждение, что все собственные частоты
+любой системы всегда кратны основной частоте?</strong>
+<ul>
+<li><em>Ответ:</em> Нет, это верно только для простых одномерных систем
+типа однородной струны. В 2D-системах или неоднородных средах частоты не
+связаны гармонически.</li>
+</ul></li>
+<li><strong>Сколько собственных гармоник (мод) имеет система из двух
+связанных маятников?</strong>
+<ul>
+<li><em>Ответ:</em> Две моды, так как система имеет две степени
+свободы.</li>
+</ul></li>
+<li><strong>Как изменение плотности газа (например, замена воздуха
+гелием) влияет на резонансные частоты человеческого голоса?</strong>
+<ul>
+<li><em>Ответ:</em> Скорость звука в менее плотном гелии выше, что
+приводит к увеличению всех резонансных частот резонатора (полости рта) и
+изменению тембра голоса.</li>
+</ul></li>
+</ol>
+<hr />
+<h2 id="3-типичные-ошибки-при-изучении-темы">3. Типичные ошибки при
+изучении темы</h2>
+<ul>
+<li><strong>Ожидание гармонической связи:</strong> Часто полагают, что
+вторая собственная частота всегда в два раза больше первой. Это ошибка:
+для прямоугольной мембраны или подвешенной цепочки с переменным
+натяжением частоты распределяются сложнее.</li>
+<li><strong>Путаница между бегущей и стоячей волной:</strong> Стоячая
+волна — это не отдельный вид волны, а результат суперпозиции двух волн,
+бегущих навстречу друг другу.</li>
+<li><strong>Игнорирование фазы:</strong> При сложении мод важно
+учитывать не только их амплитуды, но и фазовый сдвиг. Например, сложение
+двух первых гармоник со сдвигом фаз в 90° создает видимость «горба»,
+перемещающегося по струне.</li>
+</ul>
+<hr />
+<h2 id="4-темы-для-развернутых-ответов-essay-prompts">4. Темы для
+развернутых ответов (Essay prompts)</h2>
+<ol type="1">
+<li><strong>Принцип суперпозиции как универсальный инструмент
+анализа:</strong> Объясните, почему анализ сложных вибраций (например,
+крыла самолета) через собственные моды эффективнее, чем попытка описать
+общее движение целиком.</li>
+<li><strong>Связь классической волновой механики и квантовых
+энергетических уровней:</strong> Опишите, каким образом понятие
+«собственных частот» в ограниченном пространстве трансформируется в
+понятие «энергетических уровней» атома в квантовой механике.</li>
+<li><strong>Влияние геометрии на спектр собственных частот:</strong> На
+примере прямоугольной мембраны и таблицы мод (49.1) покажите, как
+изменение параметров системы
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>)
+влияет на распределение частот.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Форма моды</th>
+<th
+style="text-align: center;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math></th>
+<th
+style="text-align: center;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math></th>
+<th
+style="text-align: center;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>ω</mi><mi>/</mi><msub><mi>ω</mi><mn>0</mn></msub><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">(\omega/\omega_0)^2</annotation></semantics></math></th>
+<th
+style="text-align: center;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ω</mi><mi>/</mi><msub><mi>ω</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">\omega/\omega_0</annotation></semantics></math></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Основная</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">1.25</td>
+<td style="text-align: center;">1.12</td>
+</tr>
+<tr>
+<td style="text-align: left;">Гармоника 2</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2.00</td>
+<td style="text-align: center;">1.41</td>
+</tr>
+<tr>
+<td style="text-align: left;">Гармоника 3</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">3</td>
+<td style="text-align: center;">3.25</td>
+<td style="text-align: center;">1.80</td>
+</tr>
+<tr>
+<td style="text-align: left;">Гармоника 4</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">1</td>
+<td style="text-align: center;">4.25</td>
+<td style="text-align: center;">2.06</td>
+</tr>
+<tr>
+<td style="text-align: left;">Гармоника 5</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">2</td>
+<td style="text-align: center;">5.00</td>
+<td style="text-align: center;">2.24</td>
+</tr>
+</tbody>
+</table>
+<p><em>(Данные для прямоугольника с соотношением сторон
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>=</mo><mn>2</mn><mi>b</mi></mrow><annotation encoding="application/x-tex">a = 2b</annotation></semantics></math>)</em></p>
+<hr />
+<h2 id="5-краткий-глоссарий">5. Краткий глоссарий</h2>
+<ul>
+<li><strong>Граничные условия</strong> — математические ограничения,
+накладываемые на решение волнового уравнения в точках закрепления или на
+краях системы.</li>
+<li><strong>Квантование энергии</strong> — (в контексте главы)
+возникновение дискретных уровней энергии в атоме, обусловленное волновой
+природой электрона в ограниченном пространстве.</li>
+<li><strong>Линейная система</strong> — система, для которой выполняется
+принцип суперпозиции: сумма двух любых решений уравнения движения также
+является решением.</li>
+<li><strong>Собственная частота</strong> — частота, с которой система
+может совершать устойчивые синусоидальные колебания (моды) без внешнего
+воздействия.</li>
+<li><strong>Связанные маятники</strong> — механическая система,
+состоящая из двух осцилляторов, обменивающихся энергией через пружину
+или иную связь; классический пример системы с несколькими модами.</li>
+</ul>
+    </article>
+  </main>
+</body>
+</html>

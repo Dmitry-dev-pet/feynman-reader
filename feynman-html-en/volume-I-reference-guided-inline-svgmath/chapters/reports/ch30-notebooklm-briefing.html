@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chapter 30: Diffraction – Analytical Briefing - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="en">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch30.html#study-panel">Back to chapter</a>
+      <a class="nav-btn" href="../../index.html">Volume contents</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1 id="chapter-30-diffraction--analytical-briefing">Chapter 30:
+Diffraction – Analytical Briefing</h1>
+<p>This briefing document provides a comprehensive analysis of the
+principles of diffraction as outlined in the provided text. It covers
+the transition from interference to diffraction, the mathematical
+derivation of resultant amplitudes from multiple sources, and the
+practical applications of these principles in technology and physical
+observation.</p>
+<h2 id="executive-summary">Executive Summary</h2>
+<p>The analysis establishes that there is no fundamental physical
+distinction between "interference" and "diffraction"; the terms are
+largely matters of usage based on the number of sources involved. The
+core of the chapter is the mathematical modeling of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+equally spaced oscillators using geometric vector addition. This model
+explains the behavior of diffraction gratings, the resolving power of
+optical and radio instruments, and the complex intensity patterns
+observed near the edges of shadows. Key results include the intensity
+formula for
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+oscillators, the Rayleigh criterion for resolution, and the derivation
+of the electric field produced by a plane of oscillating charges.</p>
+<hr />
+<h2 id="i-mathematical-foundation-the-n-oscillator-model">I.
+Mathematical Foundation: The
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>-Oscillator
+Model</h2>
+<p>The fundamental problem addressed is the addition of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>R</mi><annotation encoding="application/x-tex">R</annotation></semantics></math>
+amplitudes from
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+equally spaced oscillators, each with an equal amplitude
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+but a successive phase difference
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>.</p>
+<h3 id="1-geometric-vector-addition">1. Geometric Vector Addition</h3>
+<p>The addition is performed geometrically by treating each oscillator's
+contribution as a vector (or arrow) of length
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>.
+Successive vectors are placed tip-to-tail at an angle
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>
+to one another, forming an equiangular polygon. As shown in
+<strong>[SOURCE_IMAGE_1]</strong>, these vertices lie on a circle of
+radius
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math>.</p>
+<h3 id="2-key-formulas-and-derivations">2. Key Formulas and
+Derivations</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Variable</th>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Formula / Value</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Phase Difference</strong></td>
+<td style="text-align: left;">Difference between successive
+oscillators</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ϕ</mi><mo>=</mo><mi>α</mi><mo>+</mo><mfrac><mrow><mn>2</mn><mi>π</mi><mi>d</mi><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mi>θ</mi></mrow><mi>λ</mi></mfrac></mrow><annotation encoding="application/x-tex">\phi = \alpha + \frac{2\pi d \sin \theta}{\lambda}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Resultant Amplitude</strong></td>
+<td style="text-align: left;">Total amplitude
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>A</mi><mi>R</mi></msub><annotation encoding="application/x-tex">A_R</annotation></semantics></math>
+from
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+sources</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mi>R</mi></msub><mo>=</mo><mi>A</mi><mfrac><mrow><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mi>ϕ</mi><mi>/</mi><mn>2</mn><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>ϕ</mi><mi>/</mi><mn>2</mn><mo stretchy="false" form="postfix">)</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">A_R = A \frac{\sin(n\phi/2)}{\sin(\phi/2)}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Resultant Intensity</strong></td>
+<td style="text-align: left;">Intensity
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>I</mi><annotation encoding="application/x-tex">I</annotation></semantics></math>
+relative to a single source
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>I</mi><mn>0</mn></msub><annotation encoding="application/x-tex">I_0</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mo>=</mo><msub><mi>I</mi><mn>0</mn></msub><mfrac><mrow><msup><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mn>2</mn></msup><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mi>ϕ</mi><mi>/</mi><mn>2</mn><mo stretchy="false" form="postfix">)</mo></mrow><mrow><msup><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mn>2</mn></msup><mo stretchy="false" form="prefix">(</mo><mi>ϕ</mi><mi>/</mi><mn>2</mn><mo stretchy="false" form="postfix">)</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">I = I_0 \frac{\sin^2(n\phi/2)}{\sin^2(\phi/2)}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Maximum Intensity</strong></td>
+<td style="text-align: left;">Intensity at the central peak
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ϕ</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\phi = 0</annotation></semantics></math>)</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mrow><mi>m</mi><mi>a</mi><mi>x</mi></mrow></msub><mo>=</mo><msup><mi>n</mi><mn>2</mn></msup><msub><mi>I</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">I_{max} = n^2 I_0</annotation></semantics></math></td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-physical-interpretation-of-the-pattern">3. Physical
+Interpretation of the Pattern</h3>
+<ul>
+<li><strong>Central Maximum:</strong> When
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ϕ</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\phi = 0</annotation></semantics></math>,
+all oscillators are in phase, and the intensity is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>n</mi><mn>2</mn></msup><annotation encoding="application/x-tex">n^2</annotation></semantics></math>
+times that of a single oscillator.</li>
+<li><strong>First Minimum:</strong> Occurs when the vector polygon
+closes a complete circle
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mi>ϕ</mi><mo>=</mo><mn>2</mn><mi>π</mi></mrow><annotation encoding="application/x-tex">n\phi = 2\pi</annotation></semantics></math>).
+This happens when the total path difference
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="normal">Δ</mi><annotation encoding="application/x-tex">\Delta</annotation></semantics></math>
+across the entire array equals one wavelength
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>λ</mi><annotation encoding="application/x-tex">\lambda</annotation></semantics></math>.</li>
+<li><strong>Side Lobes:</strong> These are subsidiary maxima that occur
+as
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>
+increases. The first side lobe has an intensity of only ~4.5% of the
+central maximum (<strong>[SOURCE_IMAGE_5]</strong>).</li>
+<li><strong>Higher-Order Maxima:</strong> Strong beams recur whenever
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>
+is a multiple of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>π</mi></mrow><annotation encoding="application/x-tex">2\pi</annotation></semantics></math>
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mi>θ</mi><mo>=</mo><mi>m</mi><mi>λ</mi></mrow><annotation encoding="application/x-tex">d \sin \theta = m\lambda</annotation></semantics></math>),
+where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math>
+is the "order" of the beam.</li>
+</ul>
+<hr />
+<h2 id="ii-the-diffraction-grating">II. The Diffraction Grating</h2>
+<p>A diffraction grating utilizes a large number of parallel, equally
+spaced "scratches" or wires to scatter light. It serves as a primary
+tool for separating light into its constituent wavelengths (colors).</p>
+<h3 id="1-spectral-separation">1. Spectral Separation</h3>
+<p>Because the angle
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>θ</mi><annotation encoding="application/x-tex">\theta</annotation></semantics></math>
+of the maxima depends on the wavelength
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>λ</mi><annotation encoding="application/x-tex">\lambda</annotation></semantics></math>
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mi>θ</mi><mo>=</mo><mi>m</mi><mi>λ</mi></mrow><annotation encoding="application/x-tex">d \sin \theta = m\lambda</annotation></semantics></math>),
+different colors appear at different angles. Red light, having a longer
+wavelength than blue, is diffracted at a greater angle.</p>
+<h3 id="2-grating-design-and-blazing">2. Grating Design and
+"Blazing"</h3>
+<p>While a simple grating with infinitesimal notches produces beams of
+equal strength across all orders, practical gratings often use
+"sawtooth" cuts (<strong>[SOURCE_IMAGE_7]</strong>). This allows the
+manufacturer to concentrate the majority of the light into a specific
+order, increasing the instrument's utility.</p>
+<h3 id="3-reflection-as-a-limit">3. Reflection as a Limit</h3>
+<p>The analysis shows that the law of reflection (angle of incidence
+equals angle of scattering) is a specific solution of the diffraction
+grating equations when the spacing of scatterers is much smaller than
+the wavelength of light.</p>
+<hr />
+<h2 id="iii-resolving-power-and-instrumental-limits">III. Resolving
+Power and Instrumental Limits</h2>
+<p>Resolving power defines the ability of an instrument to distinguish
+between two closely spaced sources or wavelengths.</p>
+<h3 id="1-the-rayleigh-criterion">1. The Rayleigh Criterion</h3>
+<p>To distinguish two separate wavelengths
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>λ</mi><annotation encoding="application/x-tex">\lambda</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>λ</mi><mo>′</mo></msup><annotation encoding="application/x-tex">\lambda&#39;</annotation></semantics></math>,
+the first minimum of one wavelength's diffraction pattern must coincide
+with the maximum of the other (<strong>[SOURCE_IMAGE_9]</strong>).</p>
+<h3 id="2-resolution-formulas">2. Resolution Formulas</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Application</th>
+<th style="text-align: left;">Resolution Limit Formula</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Diffraction Grating</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mi>λ</mi><mrow><mi mathvariant="normal">Δ</mi><mi>λ</mi></mrow></mfrac><mo>=</mo><mi>m</mi><mi>n</mi></mrow><annotation encoding="application/x-tex">\frac{\lambda}{\Delta\lambda} = mn</annotation></semantics></math>
+(Order
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>×</mi><annotation encoding="application/x-tex">\times</annotation></semantics></math>
+Total Lines)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>General Frequency</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>ν</mi><mo>=</mo><mn>1</mn><mi>/</mi><mi>T</mi></mrow><annotation encoding="application/x-tex">\Delta \nu = 1/T</annotation></semantics></math>
+(Reciprocal time difference)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Telescope/Antenna</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>θ</mi><mo>=</mo><mi>λ</mi><mi>/</mi><mi>L</mi></mrow><annotation encoding="application/x-tex">\theta = \lambda/L</annotation></semantics></math>
+(Wavelength / Total Length)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-the-reciprocity-principle">3. The Reciprocity Principle</h3>
+<p>The document notes that the receiving pattern of an antenna (its
+directional sensitivity) is identical to the intensity distribution it
+would produce if it were used as a transmitter.</p>
+<hr />
+<h2 id="iv-diffraction-by-opaque-screens-and-near-field-effects">IV.
+Diffraction by Opaque Screens and Near-Field Effects</h2>
+<p>When light is blocked by an opaque object, the intensity at the edge
+of the shadow does not drop abruptly from bright to dark. Instead, it
+oscillates and "overshoots" before decaying into the shadow
+(<strong>[SOURCE_IMAGE_12]</strong>).</p>
+<h3 id="1-cornus-spiral">1. Cornu’s Spiral</h3>
+<p>Unlike far-field diffraction where phase changes linearly with
+distance, near-field diffraction involves phase changes proportional to
+the <em>square</em> of the distance from the point opposite the observer
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>h</mi><mn>2</mn></msup><mi>/</mi><mn>2</mn><mi>s</mi></mrow><annotation encoding="application/x-tex">h^2/2s</annotation></semantics></math>).</p>
+<ul>
+<li>The vector sum for this condition traces <strong>Cornu’s
+Spiral</strong> (<strong>[SOURCE_IMAGE_11]</strong>).</li>
+<li><strong>At the Shadow Edge:</strong> The intensity is exactly
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mn>4</mn></mrow><annotation encoding="application/x-tex">1/4</annotation></semantics></math>
+(or 25%) of the incident light because exactly half of the
+amplitude-contributing spiral is blocked.</li>
+</ul>
+<hr />
+<h2 id="v-field-of-a-plane-of-oscillating-charges">V. Field of a Plane
+of Oscillating Charges</h2>
+<p>The document derives the electric field produced by an infinite sheet
+of charges oscillating in unison.</p>
+<ul>
+<li><strong>The Integral Problem:</strong> Calculating the field at
+point
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math>
+involves integrating contributions from rings of charges across the
+plane (<strong>[SOURCE_IMAGE_2]</strong>).</li>
+<li><strong>Graphical Solution:</strong> The integral
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∫</mo><msup><mi>e</mi><mrow><mi>−</mi><mi>i</mi><mi>ω</mi><mi>r</mi><mi>/</mi><mi>c</mi></mrow></msup><mi>d</mi><mi>r</mi></mrow><annotation encoding="application/x-tex">\int e^{-i\omega r/c} dr</annotation></semantics></math>
+initially appears indefinite, tracing a circle in the complex plane
+(<strong>[SOURCE_IMAGE_3]</strong>). However, physical reality (the
+plane eventually stopping or tapering) causes the path to spiral inward
+to a definite center (<strong>[SOURCE_IMAGE_4]</strong>).</li>
+<li><strong>The Final Result:</strong> The total field at a distance
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>z</mi><annotation encoding="application/x-tex">z</annotation></semantics></math>
+is proportional to the velocity of the charges at the retarded time
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>−</mo><mi>z</mi><mi>/</mi><mi>c</mi></mrow><annotation encoding="application/x-tex">t - z/c</annotation></semantics></math>:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mtext mathvariant="normal">Total Field at </mtext><mspace width="0.333em"></mspace></mrow><mi>P</mi><mo>=</mo><mi>−</mi><mfrac><mrow><mi>η</mi><mi>q</mi></mrow><mrow><mn>2</mn><msub><mi>ϵ</mi><mn>0</mn></msub><mi>c</mi></mrow></mfrac><mo stretchy="false" form="prefix">[</mo><mtext mathvariant="normal">velocity of charges</mtext><msub><mo stretchy="false" form="postfix">]</mo><mrow><mrow><mtext mathvariant="normal">at </mtext><mspace width="0.333em"></mspace></mrow><mi>t</mi><mo>−</mo><mi>z</mi><mi>/</mi><mi>c</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\text{Total Field at } P = -\frac{\eta q}{2\epsilon_0 c} [\text{velocity of charges}]_{\text{at } t-z/c}</annotation></semantics></math></li>
+</ul>
+<hr />
+<h2 id="vi-important-quotes-and-physical-insights">VI. Important Quotes
+and Physical Insights</h2>
+<blockquote>
+<p>"No one has ever been able to define the difference between
+interference and diffraction satisfactorily. It is just a question of
+usage, and there is no specific, important physical difference between
+them."</p>
+</blockquote>
+<p><strong>Context:</strong> This opens the chapter, establishing that
+both phenomena arise from the same physical principle: the superposition
+of waves.</p>
+<blockquote>
+<p>"The smallest angle that can be resolved by an antenna array of
+length
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>L</mi><annotation encoding="application/x-tex">L</annotation></semantics></math>
+is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>θ</mi><mo>=</mo><mi>λ</mi><mi>/</mi><mi>L</mi></mrow><annotation encoding="application/x-tex">\theta = \lambda/L</annotation></semantics></math>."</p>
+</blockquote>
+<p><strong>Context:</strong> This summarizes the fundamental limit of
+all wave-based imaging systems, from radio telescopes to optical
+mirrors.</p>
+<blockquote>
+<p>"In any real situation the plane of charges cannot be infinite in
+extent... the graph of our integral would then become a curve which is a
+spiral."</p>
+</blockquote>
+<p><strong>Context:</strong> Explaining why mathematical "mysterious
+quantities" like
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>−</mi><mi>i</mi><mi>∞</mi></mrow></msup><annotation encoding="application/x-tex">e^{-i\infty}</annotation></semantics></math>
+result in concrete physical values when the realities of finite systems
+are considered.</p>
+<hr />
+<h2 id="vii-actionable-physical-insights">VII. Actionable Physical
+Insights</h2>
+<ul>
+<li><strong>Predicting Maxima:</strong> To find where a grating will
+produce a beam, look for angles where the path difference between
+adjacent sources is an integer multiple of the wavelength.</li>
+<li><strong>Understanding Sharpness:</strong> A larger number of
+oscillators
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>)
+results in a narrower and more intense central maximum, as the intensity
+scales with
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>n</mi><mn>2</mn></msup><annotation encoding="application/x-tex">n^2</annotation></semantics></math>.</li>
+<li><strong>Shadow Observation:</strong> When observing the edge of a
+shadow, expect the "wobble" in intensity to occur on the illuminated
+side, while the intensity inside the shadow will fall off
+continuously.</li>
+<li><strong>Resolution Strategy:</strong> To increase the resolving
+power of a grating, one must either increase the total number of lines
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(n)</annotation></semantics></math>
+or work in a higher order
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>m</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(m)</annotation></semantics></math>.</li>
+</ul>
+    </article>
+  </main>
+</body>
+</html>

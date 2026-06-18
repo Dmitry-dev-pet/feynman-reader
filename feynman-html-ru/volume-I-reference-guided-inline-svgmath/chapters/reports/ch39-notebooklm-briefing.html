@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Глава 39: Кинетическая теория газов — Аналитический отчет - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch39.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1 id="глава-39-кинетическая-теория-газов--аналитический-отчет">Глава
+39: Кинетическая теория газов — Аналитический отчет</h1>
+<p>Этот аналитический отчет представляет собой синтез материалов главы
+39 «Фейнмановских лекций по физике». В документе рассматриваются
+механизмы давления газа, природа температуры, связь между
+микроскопическим движением атомов и макроскопическими законами
+термодинамики, а также свойства излучения.</p>
+<hr />
+<h2 id="резюме-executive-summary">Резюме (Executive Summary)</h2>
+<p>Основная цель анализа — понять свойства вещества, исходя из того, что
+оно состоит из атомов, взаимодействующих по законам механики. Переход от
+законов Ньютона к свойствам материи сложен и требует использования
+теории вероятностей и признания ограничений классической механики
+(необходимость квантового подхода).</p>
+<p>Центральным достижением главы является вывод <strong>закона
+идеального газа</strong> и установление физического смысла температуры:
+<strong>температура есть мера средней кинетической энергии
+поступательного движения молекул</strong>. Анализ охватывает не только
+обычные газы, но и фотонный газ (излучение), демонстрируя
+универсальность кинетического подхода. Ключевой вывод гласит, что при
+одинаковых давлении и температуре в равных объемах любых газов
+содержится одинаковое число молекул (закон Авогадро).</p>
+<hr />
+<h2 id="глубокий-анализ-ключевых-тем">Глубокий анализ ключевых тем</h2>
+<h3 id="1-физическая-природа-давления-газа">1. Физическая природа
+давления газа</h3>
+<p>Давление газа — это макроскопическое проявление бесчисленных
+микроскопических столкновений молекул с поверхностью.</p>
+<ul>
+<li><strong>Механизм:</strong> Молекулы, ударяясь о стенку (или
+поршень), передают ей импульс. Сила, действующая на поршень, равна
+суммарному импульсу, переданному всеми молекулами за одну секунду.</li>
+<li><strong>Математическая модель:</strong>
+<ul>
+<li>Импульс, передаваемый одной частицей при упругом ударе:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>m</mi><msub><mi>v</mi><mi>x</mi></msub></mrow><annotation encoding="application/x-tex">2mv_x</annotation></semantics></math>.</li>
+<li>Число ударов о поршень площадью
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+за время
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math>:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><msub><mi>v</mi><mi>x</mi></msub><mi>t</mi><mi>A</mi></mrow><annotation encoding="application/x-tex">n v_x t A</annotation></semantics></math>
+(где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+— концентрация).</li>
+<li>Итоговое давление
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math>
+(сила на единицу площади):
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mi>n</mi><mi>m</mi><mo stretchy="false" form="prefix">⟨</mo><msubsup><mi>v</mi><mi>x</mi><mn>2</mn></msubsup><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">P = nm \langle v_x^2 \rangle</annotation></semantics></math></li>
+<li>Учитывая изотропность (равенство средних скоростей по всем осям
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⟨</mo><msubsup><mi>v</mi><mi>x</mi><mn>2</mn></msubsup><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mo stretchy="false" form="prefix">⟨</mo><msup><mi>v</mi><mn>2</mn></msup><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">\langle v_x^2 \rangle = \frac{1}{3} \langle v^2 \rangle</annotation></semantics></math>),
+получаем основное уравнение:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mfrac><mn>2</mn><mn>3</mn></mfrac><mi>n</mi><mo stretchy="false" form="prefix">⟨</mo><mfrac><mrow><mi>m</mi><msup><mi>v</mi><mn>2</mn></msup></mrow><mn>2</mn></mfrac><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">P = \frac{2}{3} n \langle \frac{mv^2}{2} \rangle</annotation></semantics></math></li>
+</ul></li>
+</ul>
+<h3 id="2-внутренняя-энергия-и-адиабатические-процессы">2. Внутренняя
+энергия и адиабатические процессы</h3>
+<p>Для одноатомного газа вся внутренняя энергия
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>U</mi><annotation encoding="application/x-tex">U</annotation></semantics></math>
+заключена в кинетической энергии движения его атомов.</p>
+<ul>
+<li><strong>Связь давления и энергии:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>V</mi><mo>=</mo><mfrac><mn>2</mn><mn>3</mn></mfrac><mi>U</mi></mrow><annotation encoding="application/x-tex">PV = \frac{2}{3} U</annotation></semantics></math>.</li>
+<li><strong>Адиабатическое сжатие:</strong> Процесс, при котором тепло
+не уходит из системы
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>W</mi><mo>=</mo><mi>−</mi><mi>d</mi><mi>U</mi></mrow><annotation encoding="application/x-tex">dW = -dU</annotation></semantics></math>).
+Фейнман выводит закон для такого процесса:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msup><mi>V</mi><mi>γ</mi></msup><mo>=</mo><mi>C</mi></mrow><annotation encoding="application/x-tex">PV^\gamma = C</annotation></semantics></math>
+Для одноатомного газа
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>γ</mi><mo>=</mo><mn>5</mn><mi>/</mi><mn>3</mn></mrow><annotation encoding="application/x-tex">\gamma = 5/3</annotation></semantics></math>.
+Этот коэффициент характеризует сжимаемость газа при условии, что вся
+работа сжатия переходит в кинетическую энергию молекул.</li>
+</ul>
+<h3 id="3-температура-как-кинетическая-энергия">3. Температура как
+кинетическая энергия</h3>
+<p>Равновесие между двумя системами (газами), разделенными подвижным
+поршнем (Фиг. 39.2), достигается не только при равенстве давлений, но и
+при равенстве средних кинетических энергий молекул.</p>
+<ul>
+<li><strong>Механизм передачи:</strong> Поршень «дрожит» под ударами
+молекул. Если молекулы одной стороны имеют большую энергию, они через
+дрожание поршня передают её более медленным молекулам другой
+стороны.</li>
+<li><strong>Определение температуры:</strong> Температура
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>T</mi><annotation encoding="application/x-tex">T</annotation></semantics></math>
+прямо пропорциональна средней кинетической энергии молекулы:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⟨</mo><mfrac><mrow><mi>m</mi><msup><mi>v</mi><mn>2</mn></msup></mrow><mn>2</mn></mfrac><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><mfrac><mn>3</mn><mn>2</mn></mfrac><mi>k</mi><mi>T</mi></mrow><annotation encoding="application/x-tex">\langle \frac{mv^2}{2} \rangle = \frac{3}{2} kT</annotation></semantics></math>
+Здесь
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math>
+— постоянная Больцмана
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1.38</mn><mo>×</mo><msup><mn>10</mn><mrow><mi>−</mi><mn>23</mn></mrow></msup></mrow><annotation encoding="application/x-tex">1.38 \times 10^{-23}</annotation></semantics></math>
+Дж/К). Множитель
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">1/2</annotation></semantics></math>
+приходится на каждую степень свободы (движение вдоль одной оси).</li>
+</ul>
+<h3 id="4-закон-идеального-газа">4. Закон идеального газа</h3>
+<p>Объединение формул давления и температуры дает универсальный закон:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>V</mi><mo>=</mo><mi>N</mi><mi>k</mi><mi>T</mi></mrow><annotation encoding="application/x-tex">PV = NkT</annotation></semantics></math>
+Или в молярной форме, используемой химиками:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>V</mi><mo>=</mo><mi>n</mi><mi>R</mi><mi>T</mi></mrow><annotation encoding="application/x-tex">PV = nRT</annotation></semantics></math>
+Где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mo>=</mo><msub><mi>N</mi><mn>0</mn></msub><mi>k</mi><mo>≈</mo><mn>8.317</mn></mrow><annotation encoding="application/x-tex">R = N_0k \approx 8.317</annotation></semantics></math>
+Дж/(моль·К). Это уравнение объясняет, почему равные объемы газов при
+одинаковых условиях содержат равное число молекул.</p>
+<h3 id="5-сжимаемость-излучения-фотонный-газ">5. Сжимаемость излучения
+(Фотонный газ)</h3>
+<p>Кинетическая теория применима и к свету (фотонам) внутри горячего
+«ящика» (например, внутри звезды).</p>
+<ul>
+<li>Для фотонов импульс
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math>
+связан с энергией
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math>
+как
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>=</mo><mi>p</mi><mi>c</mi></mrow><annotation encoding="application/x-tex">E = pc</annotation></semantics></math>.</li>
+<li>Вследствие этого связь давления и энергии иная:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>V</mi><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mi>U</mi></mrow><annotation encoding="application/x-tex">PV = \frac{1}{3} U</annotation></semantics></math>.</li>
+<li>Показатель адиабаты для фотонного газа:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>γ</mi><mo>=</mo><mn>4</mn><mi>/</mi><mn>3</mn></mrow><annotation encoding="application/x-tex">\gamma = 4/3</annotation></semantics></math>.</li>
+</ul>
+<hr />
+<h2 id="важные-цитаты-и-их-контекст">Важные цитаты и их контекст</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Цитата</th>
+<th style="text-align: left;">Контекст</th>
+<th style="text-align: left;">Физический смысл</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">«Если бы наши уши были намного
+чувствительнее... мы бы все время слышали страшный шум... как будто
+сразу очень много барабанщиков отбивают беспорядочную дробь».</td>
+<td style="text-align: left;">Описание природы давления воздуха на
+барабанную перепонку.</td>
+<td style="text-align: left;">Давление — это не статическая сила, а
+результат дискретных, высокочастотных ударов молекул.</td>
+</tr>
+<tr>
+<td style="text-align: left;">«Трудные вещи лучше изучать не
+спеша!»</td>
+<td style="text-align: left;">Обоснование временного отказа от строгих
+доказательств через квантовую механику.</td>
+<td style="text-align: left;">Признание сложности микромира и
+необходимости постепенного приближения к истине через упрощенные
+модели.</td>
+</tr>
+<tr>
+<td style="text-align: left;">«Среднее значение косинуса угла между
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝒘</mi><annotation encoding="application/x-tex">\mathbf{w}</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="bold-italic">𝒗</mi><mrow><mi>C</mi><mi>M</mi></mrow></msub><annotation encoding="application/x-tex">\mathbf{v}_{CM}</annotation></semantics></math>
+равно нулю».</td>
+<td style="text-align: left;">Вывод равенства средних энергий при
+столкновении двух разных молекул в системе центра масс.</td>
+<td style="text-align: left;">Ключевой математический шаг, доказывающий,
+что столкновения хаотизируют направления и выравнивают энергии.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="анализ-иллюстраций">Анализ иллюстраций</h2>
+<ul>
+<li><strong>Фиг. 39.1 (Атомы в ящике с поршнем):</strong> Иллюстрирует
+базовую модель для расчета давления. Поршень площадью
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+перемещается на
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">dx</annotation></semantics></math>,
+совершая работу над газом.</li>
+<li><strong>Фиг. 39.2 (Два газа и подвижный поршень):</strong>
+Демонстрирует процесс установления теплового равновесия. Давления могут
+быть равны при разной плотности и скорости, но истинное равновесие
+требует равенства средних кинетических энергий.</li>
+<li><strong>Фиг. 39.3 (Столкновение молекул):</strong> Показывает
+столкновение в системе центра масс. После удара модули скоростей
+сохраняются, меняются только направления, что ведет к изотропности
+распределения.</li>
+<li><strong>Фиг. 39.4 (Полупроницаемая перегородка):</strong> Мысленный
+эксперимент, подтверждающий, что средние кинетические энергии молекул
+разных сортов выравниваются даже при наличии физического разделения,
+если возможен обмен частицами.</li>
+</ul>
+<hr />
+<h2 id="ключевые-выводы-и-научные-принципы">Ключевые выводы и научные
+принципы</h2>
+<ol type="1">
+<li><strong>Принцип равного распределения (Equipartition):</strong> На
+каждую независимую степень свободы (направление движения, вращение,
+колебание) приходится в среднем энергия, равная
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>k</mi><mi>T</mi></mrow><annotation encoding="application/x-tex">\frac{1}{2} kT</annotation></semantics></math>.</li>
+<li><strong>Степени свободы сложных молекул:</strong> Для молекулы из
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math>
+атомов общее число степеней свободы равно
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mi>r</mi></mrow><annotation encoding="application/x-tex">3r</annotation></semantics></math>.
+Из них
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>3</mn><annotation encoding="application/x-tex">3</annotation></semantics></math>
+приходятся на движение центра масс (трансляционная энергия
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>3</mn><mn>2</mn></mfrac><mi>k</mi><mi>T</mi></mrow><annotation encoding="application/x-tex">\frac{3}{2} kT</annotation></semantics></math>),
+а остальные
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mi>r</mi><mo>−</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">3r - 3</annotation></semantics></math>
+— на внутренние вращения и колебания.</li>
+<li><strong>Универсальность газовых законов:</strong> Закон идеального
+газа не зависит от конкретной массы молекул или их химической природы,
+так как давление определяется только суммарной кинетической
+энергией.</li>
+<li><strong>Границы классической теории:</strong> Фейнман подчеркивает,
+что классический анализ лишь приближен. Полное понимание свойств
+вещества невозможно без квантовой механики, особенно в вопросах
+внутренней энергии атомов.</li>
+<li><strong>Термодинамика без атомов:</strong> Существует возможность
+понимать связи между теплом, сжатием и расширением (термодинамика), не
+изучая атомы, однако кинетическая теория дает более глубокое понимание
+механизмов этих процессов.</li>
+</ol>
+<h3 id="справочная-таблица-показатели-адиабаты-gamma">Справочная
+таблица: Показатели адиабаты
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>γ</mi><annotation encoding="application/x-tex">\gamma</annotation></semantics></math>)</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Тип системы</th>
+<th
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>γ</mi><annotation encoding="application/x-tex">\gamma</annotation></semantics></math></th>
+<th style="text-align: left;">Физическая причина</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Одноатомный газ</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>5</mn><mi>/</mi><mn>3</mn><mo>≈</mo><mn>1.67</mn></mrow><annotation encoding="application/x-tex">5/3 \approx 1.67</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>V</mi><mo>=</mo><mfrac><mn>2</mn><mn>3</mn></mfrac><mi>U</mi></mrow><annotation encoding="application/x-tex">PV = \frac{2}{3} U</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;">Фотонный газ (излучение)</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><mi>/</mi><mn>3</mn><mo>≈</mo><mn>1.33</mn></mrow><annotation encoding="application/x-tex">4/3 \approx 1.33</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>V</mi><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mi>U</mi></mrow><annotation encoding="application/x-tex">PV = \frac{1}{3} U</annotation></semantics></math></td>
+</tr>
+</tbody>
+</table>
+    </article>
+  </main>
+</body>
+</html>

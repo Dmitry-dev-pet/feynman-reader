@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Глава 43. Диффузия: Аналитический отчет по материалам Фейнмановских лекций по физике - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch43.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1
+id="глава-43-диффузия-аналитический-отчет-по-материалам-фейнмановских-лекций-по-физике">Глава
+43. Диффузия: Аналитический отчет по материалам Фейнмановских лекций по
+физике</h1>
+<p>Данный документ представляет собой глубокий анализ физических
+процессов, происходящих в газах в состояниях, близких к
+термодинамическому равновесию. В центре внимания находятся механизмы
+столкновений молекул, явления дрейфа под действием внешних сил,
+молекулярная диффузия и теплопроводность.</p>
+<h2 id="i-резюме-для-руководителей-executive-summary">I. Резюме для
+руководителей (Executive Summary)</h2>
+<p>Глава 43 посвящена переходу от статической картины термодинамического
+равновесия к кинетической теории процессов переноса. Основная идея
+заключается в том, что макроскопические свойства газа (электрическое
+сопротивление, коэффициент диффузии, теплопроводность) напрямую
+выводятся из микроскопических характеристик движения атомов:
+<strong>среднего времени между столкновениями
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>τ</mi><annotation encoding="application/x-tex">\tau</annotation></semantics></math>)</strong>
+и <strong>средней длины свободного пробега
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>l</mi><annotation encoding="application/x-tex">l</annotation></semantics></math>)</strong>.</p>
+<p>Ключевые выводы анализа:</p>
+<ol type="1">
+<li><strong>Универсальность подвижности:</strong> Скорость дрейфа частиц
+пропорциональна приложенной силе, что закладывает основу для понимания
+закона Ома на атомном уровне.</li>
+<li><strong>Соотношение Эйнштейна:</strong> Установлена фундаментальная
+связь между коэффициентом диффузии
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>D</mi><annotation encoding="application/x-tex">D</annotation></semantics></math>)
+и подвижностью
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>μ</mi><annotation encoding="application/x-tex">\mu</annotation></semantics></math>):
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mo>=</mo><mi>μ</mi><mi>k</mi><mi>T</mi></mrow><annotation encoding="application/x-tex">D = \mu kT</annotation></semantics></math>.
+Это доказывает, что оба явления имеют единую природу — тепловое
+движение.</li>
+<li><strong>Парадокс теплопроводности:</strong> Теоретически обосновано,
+что теплопроводность газа в широком диапазоне не зависит от его
+плотности, так как уменьшение числа носителей энергии компенсируется
+увеличением дистанции их свободного пробега.</li>
+</ol>
+<hr />
+<h2 id="ii-детальный-анализ-ключевых-тем">II. Детальный анализ ключевых
+тем</h2>
+<h3 id="1-статистика-столкновений-и-время-выживания">1. Статистика
+столкновений и «время выживания»</h3>
+<p>Кинетическая теория рассматривает движение молекул как
+последовательность случайных столкновений. Важнейшим параметром является
+среднее время между ними —
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>τ</mi><annotation encoding="application/x-tex">\tau</annotation></semantics></math>.</p>
+<ul>
+<li><strong>Вероятность столкновения:</strong> За малый промежуток
+времени
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">dt</annotation></semantics></math>
+вероятность того, что молекула испытает удар, составляет
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>t</mi><mi>/</mi><mi>τ</mi></mrow><annotation encoding="application/x-tex">dt/\tau</annotation></semantics></math>.</li>
+<li><strong>Закон выживания:</strong> Число молекул
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">N(t)</annotation></semantics></math>,
+не испытавших ни одного столкновения за время
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math>,
+убывает экспоненциально:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msub><mi>N</mi><mn>0</mn></msub><msup><mi>e</mi><mrow><mi>−</mi><mi>t</mi><mi>/</mi><mi>τ</mi></mrow></msup></mrow><annotation encoding="application/x-tex">N(t) = N_0 e^{-t/\tau}</annotation></semantics></math></li>
+<li><strong>Физический смысл:</strong> Вероятность того, что молекула
+«проживет» без столкновений время, превышающее среднее значение
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>τ</mi><annotation encoding="application/x-tex">\tau</annotation></semantics></math>,
+составляет всего около 37%
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>−</mi><mn>1</mn></mrow></msup><annotation encoding="application/x-tex">e^{-1}</annotation></semantics></math>).</li>
+</ul>
+<h3 id="2-средняя-длина-свободного-пробега-и-эффективное-сечение">2.
+Средняя длина свободного пробега и эффективное сечение</h3>
+<p>Длина свободного пробега
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>l</mi><annotation encoding="application/x-tex">l</annotation></semantics></math>)
+— это среднее расстояние, которое проходит частица между ударами. Она
+связана с размерами молекул через понятие <strong>эффективного сечения
+столкновения
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>σ</mi><mi>c</mi></msub><annotation encoding="application/x-tex">\sigma_c</annotation></semantics></math>)</strong>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Параметр</th>
+<th style="text-align: left;">Формула</th>
+<th style="text-align: left;">Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Связь с временем</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>l</mi><mo>=</mo><mi>τ</mi><mi>v</mi></mrow><annotation encoding="application/x-tex">l = \tau v</annotation></semantics></math></td>
+<td style="text-align: left;">Где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>v</mi><annotation encoding="application/x-tex">v</annotation></semantics></math>
+— средняя скорость молекулы.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Геометрическая связь</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>σ</mi><mi>c</mi></msub><msub><mi>n</mi><mn>0</mn></msub><mi>l</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\sigma_c n_0 l = 1</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>n</mi><mn>0</mn></msub><annotation encoding="application/x-tex">n_0</annotation></semantics></math>
+— концентрация молекул.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Сечение (модель
+шаров)</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>σ</mi><mi>c</mi></msub><mo>=</mo><mi>π</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>r</mi><mn>1</mn></msub><mo>+</mo><msub><mi>r</mi><mn>2</mn></msub><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\sigma_c = \pi(r_1 + r_2)^2</annotation></semantics></math></td>
+<td style="text-align: left;">Площадь мишени, определяемая радиусами
+сталкивающихся частиц.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Визуализация (Фиг. 43.1):</strong> На рисунке представлена
+движущаяся частица, проходящая слой газа толщиной
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">dx</annotation></semantics></math>.
+Эффективная площадь, «закрытая» рассеивателями, определяет вероятность
+столкновения. Если частица проходит путь
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>l</mi><annotation encoding="application/x-tex">l</annotation></semantics></math>,
+она в среднем встречает достаточное количество мишеней, чтобы их
+суммарное сечение покрыло единичную площадь.</p>
+<h3 id="3-скорость-дрейфа-и-подвижность-mu">3. Скорость дрейфа и
+подвижность
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>μ</mi><annotation encoding="application/x-tex">\mu</annotation></semantics></math>)</h3>
+<p>Когда на частицу (например, ион) действует внешняя сила
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>F</mi><annotation encoding="application/x-tex">F</annotation></semantics></math>,
+на хаотическое тепловое движение накладывается направленный дрейф.</p>
+<ul>
+<li><strong>Основная формула:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>v</mi><mtext mathvariant="normal">drift</mtext></msub><mo>=</mo><mfrac><mrow><mi>F</mi><mi>τ</mi></mrow><mi>m</mi></mfrac><mo>=</mo><mi>μ</mi><mi>F</mi></mrow><annotation encoding="application/x-tex">v_{\text{drift}} = \frac{F\tau}{m} = \mu F</annotation></semantics></math></li>
+<li><strong>Подвижность
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>μ</mi><annotation encoding="application/x-tex">\mu</annotation></semantics></math>):</strong>
+Коэффициент пропорциональности
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>=</mo><mi>τ</mi><mi>/</mi><mi>m</mi></mrow><annotation encoding="application/x-tex">\mu = \tau/m</annotation></semantics></math>.
+Она тем выше, чем больше время между столкновениями и чем меньше масса
+частицы.</li>
+<li><strong>Критическое замечание:</strong> Фейнман указывает на
+распространенную ошибку в учебниках, где в формулу дрейфа ошибочно
+вводится множитель
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">1/2</annotation></semantics></math>.
+Правильный анализ распределения времени между столкновениями
+подтверждает отсутствие этого множителя.</li>
+</ul>
+<h3 id="4-ионная-проводимость-и-закон-ома">4. Ионная проводимость и
+закон Ома</h3>
+<p>Приложение электрического поля
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math>
+к ионизированному газу создает ток.</p>
+<ul>
+<li>Сила, действующая на ион:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>=</mo><mi>q</mi><mi>E</mi><mo>=</mo><mi>q</mi><mo stretchy="false" form="prefix">(</mo><mi>V</mi><mi>/</mi><mi>b</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">F = qE = q(V/b)</annotation></semantics></math>,
+где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math>
+— напряжение,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>
+— расстояние между пластинами.</li>
+<li><strong>Закон Ома:</strong> Сопротивление газа
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>R</mi><annotation encoding="application/x-tex">R</annotation></semantics></math>
+выражается через микропараметры:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>1</mn><mi>R</mi></mfrac><mo>=</mo><mi>μ</mi><msup><mi>q</mi><mn>2</mn></msup><msub><mi>n</mi><mi>i</mi></msub><mfrac><mi>A</mi><mi>b</mi></mfrac></mrow><annotation encoding="application/x-tex">\frac{1}{R} = \mu q^2 n_i \frac{A}{b}</annotation></semantics></math>
+Здесь
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>n</mi><mi>i</mi></msub><annotation encoding="application/x-tex">n_i</annotation></semantics></math>
+— плотность ионов,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+— площадь сечения. Это демонстрирует, как макроскопическое сопротивление
+зависит от «времени забывания» импульса ионами.</li>
+</ul>
+<h3 id="5-молекулярная-диффузия-и-соотношение-эйнштейна">5. Молекулярная
+диффузия и соотношение Эйнштейна</h3>
+<p>Диффузия — это перенос вещества, вызванный градиентом
+концентрации.</p>
+<ul>
+<li><strong>Поток (Закон Фика):</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>J</mi><mi>x</mi></msub><mo>=</mo><mi>−</mi><mi>D</mi><mfrac><mrow><mi>d</mi><msub><mi>n</mi><mi>a</mi></msub></mrow><mrow><mi>d</mi><mi>x</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">J_x = -D \frac{dn_a}{dx}</annotation></semantics></math></li>
+<li><strong>Коэффициент диффузии:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mi>l</mi><mi>v</mi></mrow><annotation encoding="application/x-tex">D = \frac{1}{3} lv</annotation></semantics></math></li>
+<li><strong>Связь с подвижностью:</strong> Используя принципы
+статистической механики и распределение Больцмана
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>−</mi><mi>U</mi><mi>/</mi><mi>k</mi><mi>T</mi></mrow></msup><annotation encoding="application/x-tex">e^{-U/kT}</annotation></semantics></math>),
+выводится фундаментальное соотношение:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mo>=</mo><mi>μ</mi><mi>k</mi><mi>T</mi></mrow><annotation encoding="application/x-tex">D = \mu kT</annotation></semantics></math>
+Это уравнение связывает способность системы к рассеиванию (диффузия) с
+её откликом на внешнюю силу (подвижность) через температуру.</li>
+</ul>
+<hr />
+<h2 id="iii-теплопроводность-газа">III. Теплопроводность газа</h2>
+<p>Теплопроводность рассматривается как диффузия энергии. Молекулы из
+горячих областей переносят более высокую кинетическую энергию в холодные
+области.</p>
+<p><strong>Ключевая формула:</strong>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>κ</mi><mo>=</mo><mfrac><mn>1</mn><mrow><mi>γ</mi><mo>−</mo><mn>1</mn></mrow></mfrac><mo>⋅</mo><mfrac><mrow><mi>k</mi><mi>v</mi></mrow><msub><mi>σ</mi><mi>c</mi></msub></mfrac></mrow><annotation encoding="application/x-tex">\kappa = \frac{1}{\gamma - 1} \cdot \frac{kv}{\sigma_c}</annotation></semantics></math></p>
+<p><strong>Физический парадокс:</strong> Теплопроводность
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>κ</mi><annotation encoding="application/x-tex">\kappa</annotation></semantics></math>
+<strong>не зависит от плотности газа</strong>. При увеличении плотности
+растет число носителей энергии, но пропорционально сокращается длина их
+свободного пробега, что полностью компенсирует эффект. Данная
+закономерность нарушается только в глубоком вакууме, когда длина
+свободного пробега становится соизмеримой с размерами сосуда.</p>
+<hr />
+<h2 id="iv-важные-цитаты-с-комментариями">IV. Важные цитаты с
+комментариями</h2>
+<ol type="1">
+<li><blockquote>
+<p><strong>«Статистическая механика и термодинамика имеют дело с
+равновесным состоянием, а при отклонении от равновесия мы можем
+анализировать происходящее только, так сказать, атом за
+атомом».</strong></p>
+</blockquote>
+<ul>
+<li><em>Контекст:</em> Обоснование необходимости использования
+кинетической теории вместо чистой термодинамики при изучении процессов
+переноса.</li>
+</ul></li>
+<li><blockquote>
+<p><strong>«Изменение числа „носителей“ энергии при изменениях плотности
+в точности компенсируется изменением расстояния, которое пробегает
+„носитель“ между столкновениями».</strong></p>
+</blockquote>
+<ul>
+<li><em>Контекст:</em> Объяснение независимости теплопроводности от
+плотности газа.</li>
+</ul></li>
+<li><blockquote>
+<p><strong>«Подвижность и диффузия тесно связаны. Это соотношение
+впервые вывел Эйнштейн».</strong></p>
+</blockquote>
+<ul>
+<li><em>Контекст:</em> Итог анализа связи между хаотическим движением и
+направленным дрейфом под действием сил.</li>
+</ul></li>
+</ol>
+<hr />
+<h2 id="v-практические-выводы-и-идеи-actionable-insights">V.
+Практические выводы и идеи (Actionable Insights)</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Наблюдаемое явление</th>
+<th style="text-align: left;">Способ физической интерпретации</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Измерение сопротивления
+ионизированного газа</strong></td>
+<td style="text-align: left;">Позволяет вычислить подвижность ионов
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>μ</mi><annotation encoding="application/x-tex">\mu</annotation></semantics></math>)
+и, следовательно, среднее время между столкновениями
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>τ</mi><annotation encoding="application/x-tex">\tau</annotation></semantics></math>).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Анализ длины свободного пробега
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>l</mi><annotation encoding="application/x-tex">l</annotation></semantics></math>)</strong></td>
+<td style="text-align: left;">Дает возможность экспериментально
+определить эффективное сечение столкновения
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>σ</mi><mi>c</mi></msub><annotation encoding="application/x-tex">\sigma_c</annotation></semantics></math>),
+что косвенно раскрывает структуру и размеры атомов.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Управление диффузией</strong></td>
+<td style="text-align: left;">Понимание зависимости
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mo>=</mo><mfrac><mn>1</mn><mn>3</mn></mfrac><mi>l</mi><mi>v</mi></mrow><annotation encoding="application/x-tex">D = \frac{1}{3} lv</annotation></semantics></math>
+позволяет прогнозировать скорость смешивания газов при изменении
+температуры (влияет на
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>v</mi><annotation encoding="application/x-tex">v</annotation></semantics></math>)
+и давления (влияет на
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>l</mi><annotation encoding="application/x-tex">l</annotation></semantics></math>).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Ограничения моделей</strong></td>
+<td style="text-align: left;">При низких плотностях (вакуум), когда
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>l</mi><annotation encoding="application/x-tex">l</annotation></semantics></math>
+сопоставима с размерами системы, формулы диффузии и теплопроводности
+перестают работать, требуя возврата к индивидуальному расчету траекторий
+частиц.</td>
+</tr>
+</tbody>
+</table>
+    </article>
+  </main>
+</body>
+</html>

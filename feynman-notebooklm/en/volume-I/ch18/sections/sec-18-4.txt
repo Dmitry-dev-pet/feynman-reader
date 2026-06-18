@@ -1,0 +1,47 @@
+SOURCE: Feynman Lectures on Physics, Volume I, Chapter 18
+LANGUAGE: en
+SECTION: 18–4 Conservation of angular momentum
+SOURCE_URL: https://www.feynmanlectures.caltech.edu/I_18.html
+
+# 18–4 Conservation of angular momentum
+
+Now we shall go on to consider what happens when there is a large number of particles, when an object is made of many pieces with many forces acting between them and on them from the outside. Of course, we already know that, about any given fixed axis, the torque on the \(i\) th particle (which is the force on the \(i\) th particle times the lever arm of that force) is equal to the rate of change of the angular momentum of that particle, and that the angular momentum of the \(i\) th particle is its momentum times its momentum lever arm. Now suppose we add the torques \(\tau_i\) for all the particles and call it the total torque \(\tau\) . Then this will be the rate of change of the sum of the angular momenta of all the particles \(L_i\) , and that defines a new quantity which we call the total angular momentum \(L\) . Just as the totalmomentumof an object is the sum of the momenta of all the parts, so the angular momentum is the sum of the angular momenta of all the parts. Then the rate of change of the total \(L\) is the total torque:
+\[
+\begin{equation}
+\label{Eq:I:18:18}
+\tau=\sum\tau_i=\sum\ddt{L_i}{t}=\ddt{L}{t}.
+\end{equation}
+\]
+Now it might seem that the total torque is a complicated thing. There are all those internal forces and all the outside forces to be considered. But, if we take Newton’s law of action and reaction to say, not simply that the action and reaction are equal, but also that they aredirected exactly oppositely along the same line(Newton may or may not actually have said this, but he tacitly assumed it), then the twotorqueson the reacting objects, due to their mutual interaction, will be equal and opposite because the lever arms for any axis are equal. Therefore the internal torques balance out pair by pair, and so we have the remarkable theorem that therate of change of the total angular momentum about any axis is equal to the external torque about that axis!
+\[
+\begin{equation}
+\label{Eq:I:18:19}
+\tau=\sum\tau_i=\tau_{\text{ext}}=dL/dt.
+\end{equation}
+\]
+Thus we have a very powerful theorem concerning the motion of large collections of particles, which permits us to study the overall motion without having to look at the detailed machinery inside. This theorem is true for any collection of objects, whether they form a rigid body or not.
+One extremely important case of the above theorem is thelaw of conservation of angular momentum:if no external torques act upon a system of particles, the angular momentum remains constant.
+A special case of great importance is that of a rigid body, that is, an object of a definite shape that is just turning around. Consider an object that is fixed in its geometrical dimensions, and which is rotating about a fixed axis. Various parts of the object bear the same relationship to one another at all times. Now let us try to find the total angular momentum of this object. If the mass of one of its particles is \(m_i\) , and its position or location is at \((x_i, y_i)\) , then the problem is to find the angular momentum of that particle, because the total angular momentum is the sum of the angular momenta of all such particles in the body. For an object going around in a circle, the angular momentum, of course, is the mass times the velocity times the distance from the axis, and the velocity is equal to the angular velocity times the distance from the axis:
+\[
+\begin{equation}
+\label{Eq:I:18:20}
+L_i=m_iv_ir_i=m_ir_i^2\omega,
+\end{equation}
+\]
+or, summing over all the particles \(i\) , we get
+\[
+\begin{equation}
+\label{Eq:I:18:21}
+L=I\omega,
+\end{equation}
+\]
+where
+\[
+\begin{equation}
+\label{Eq:I:18:22}
+I=\sum_im_ir_i^2.
+\end{equation}
+\]
+This is the analog of the law that the momentum is mass times velocity. Velocity is replaced by angular velocity, and we see that the mass is replaced by a new thing which we call themoment of inertia \(I\) , which is analogous to the mass. Equations (18.21) and (18.22) say that a body has inertia for turning which depends, not just on the masses, but onhow far away they arefrom the axis. So, if we have two objects of the same mass, when we put the masses farther away from the axis, the inertia for turning will be higher. This is easily demonstrated by the apparatus shown in Fig.18–4, where a weight \(M\) is kept from falling very fast because it has to turn the large weighted rod. At first, the masses \(m\) are close to the axis, and \(M\) speeds up at a certain rate. But when we change the moment of inertia by putting the two masses \(m\) much farther away from the axis, then we see that \(M\) accelerates much less rapidly than it did before, because the body has much more inertia against turning. The moment of inertia is the inertia against turning, and is the sum of the contributions of all the masses, times their distancessquared, from the axis.
+FIGURE Ch18-F4: Fig. 18–4.The “inertia for turning” depends upon the lever arm of the masses.
+There is one important difference between mass and moment of inertia which is very dramatic. The mass of an object never changes, but its moment of inertiacanbe changed. If we stand on a frictionless rotatable stand with our arms outstretched, and hold some weights in our hands as we rotate slowly, we may change our moment of inertia by drawing our arms in, but our mass does not change. When we do this, all kinds of wonderful things happen, because of the law of the conservation of angular momentum: If the external torque is zero, then the angular momentum, the moment of inertia times omega, remains constant. Initially, we were rotating with a large moment of inertia \(I_1\) at a low angular velocity \(\omega_1\) , and the angular momentum was \(I_1\omega_1\) . Then we changed our moment of inertia by pulling our arms in, say to a smaller value \(I_2\) . Then the product \(I\omega\) , which has to stay the same because the total angular momentum has to stay the same, was \(I_2\omega_2\) . So \(I_1\omega_1 = I_2\omega_2\) . That is, if wereducethe moment of inertia, we have toincreasethe angular velocity.

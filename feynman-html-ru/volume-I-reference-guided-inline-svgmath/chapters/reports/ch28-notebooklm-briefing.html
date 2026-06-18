@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Аналитический отчет: Электромагнитное излучение (Глава 28) - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch28.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1
+id="аналитический-отчет-электромагнитное-излучение-глава-28">Аналитический
+отчет: Электромагнитное излучение (Глава 28)</h1>
+<p>Данный документ представляет собой всесторонний анализ главы 28
+«Фейнмановских лекций по физике», посвященной фундаментальным принципам
+электромагнитного излучения. Отчет охватывает теоретические основы,
+математические формулировки и экспериментальные подтверждения механизмов
+генерации и распространения электромагнитных волн.</p>
+<h2 id="1-резюме-для-руководителей">1. Резюме для руководителей</h2>
+<p>Центральной идеей главы является великое обобщение физики XIX века —
+объединение законов электричества, магнетизма и оптики, совершенное Дж.
+К. Максвеллом в 1860 году. Ключевым открытием стало предсказание
+существования полей, которые убывают обратно пропорционально первой
+степени расстояния
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mi>r</mi></mrow><annotation encoding="application/x-tex">1/r</annotation></semantics></math>),
+в отличие от статических полей, убывающих как
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><msup><mi>r</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">1/r^2</annotation></semantics></math>.
+Именно это свойство делает возможным передачу энергии и информации на
+огромные расстояния (свет звезд, радиосвязь). Основной закон излучения
+гласит: электрическое поле на большом расстоянии порождается ускорением
+заряда, спроецированным на плоскость, перпендикулярную лучу зрения, с
+учетом запаздывания сигнала.</p>
+<hr />
+<h2 id="2-основные-темы-и-физические-концепции">2. Основные темы и
+физические концепции</h2>
+<h3 id="21-исторический-синтез-и-значение-излучения">2.1. Исторический
+синтез и значение излучения</h3>
+<p>История физики рассматривается как последовательность великих
+обобщений. Максвелл показал, что свет — это электромагнитные поля,
+возникающие из-за быстрых колебаний электронов.</p>
+<ul>
+<li><strong>Единство явлений:</strong> Излучение связывает нас с
+далекими объектами Вселенной. Без закона воздействия полей, убывающего
+как
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mi>r</mi></mrow><annotation encoding="application/x-tex">1/r</annotation></semantics></math>,
+человечество не знало бы о существовании звезд и галактик.</li>
+<li><strong>Квантовая электродинамика:</strong> Текст отмечает, что
+законы Ньютона и классическая электродинамика в XX веке были уточнены
+квантовой механикой, однако классические формулы Максвелла остаются
+фундаментом для понимания макроскопических явлений.</li>
+</ul>
+<h3 id="22-законы-поля-для-движущегося-заряда">2.2. Законы поля для
+движущегося заряда</h3>
+<p>Полное описание электрического поля
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>
+произвольно движущегося заряда описывается сложным уравнением,
+включающим три основных компонента:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Компонент поля</th>
+<th style="text-align: left;">Описание и физический смысл</th>
+<th style="text-align: left;">Зависимость от расстояния</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Кулоновский член</strong></td>
+<td style="text-align: left;">Классическое поле неподвижного заряда,
+ориентированное на его «запаздывающее» положение.</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∝</mo><mn>1</mn><mi>/</mi><msup><mi>r</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\propto 1/r^2</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Поправка на
+запаздывание</strong></td>
+<td style="text-align: left;">Попытка «природы» угадать текущее
+положение заряда через скорость изменения поля.</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∝</mo><mn>1</mn><mi>/</mi><msup><mi>r</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\propto 1/r^2</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Член излучения</strong></td>
+<td style="text-align: left;">Пропорционален второй производной
+единичного вектора направления на заряд (ускорению).</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∝</mo><mn>1</mn><mi>/</mi><mi>r</mi></mrow><annotation encoding="application/x-tex">\propto 1/r</annotation></semantics></math></td>
+</tr>
+</tbody>
+</table>
+<h3 id="23-основной-закон-излучения-приближение-больших-расстояний">2.3.
+Основной закон излучения (Приближение больших расстояний)</h3>
+<p>Для практических целей на значительных расстояниях доминирует только
+третий член. Формула (28.6) определяет поле излучения:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mi>x</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><mrow><mi>−</mi><mi>q</mi></mrow><mrow><mn>4</mn><mi>π</mi><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup><mi>r</mi></mrow></mfrac><msub><mi>a</mi><mi>x</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mi>t</mi><mo>−</mo><mfrac><mi>r</mi><mi>c</mi></mfrac><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">E_x(t) = \frac{-q}{4\pi\epsilon_0 c^2 r} a_x \left(t - \frac{r}{c}\right)</annotation></semantics></math>
+<strong>Физический смысл:</strong></p>
+<ol type="1">
+<li><strong>Пропорциональность ускорению:</strong> Поле создается только
+ускоряющимся зарядом.</li>
+<li><strong>Эффект проекции:</strong> Имеет значение только составляющая
+ускорения, перпендикулярная линии зрения. Если заряд движется прямо на
+наблюдателя, излучение в этом направлении равно нулю.</li>
+<li><strong>Запаздывание
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mi>/</mi><mi>c</mi></mrow><annotation encoding="application/x-tex">r/c</annotation></semantics></math>):</strong>
+Поле в точке наблюдения в момент времени
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math>
+определяется ускорением, которое заряд имел в более ранний момент
+времени.</li>
+</ol>
+<hr />
+<h2 id="3-математические-формулировки-и-формулы">3. Математические
+формулировки и формулы</h2>
+<p>В тексте выделены ключевые уравнения, описывающие электромагнитное
+взаимодействие:</p>
+<ul>
+<li><strong>Сила Лоренца (28.2):</strong> Описывает воздействие полей на
+заряд
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>q</mi><annotation encoding="application/x-tex">q</annotation></semantics></math>,
+движущийся со скоростью
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝒗</mi><annotation encoding="application/x-tex">\mathbf{v}</annotation></semantics></math>:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑭</mi><mo>=</mo><mi>q</mi><mo stretchy="false" form="prefix">(</mo><mi mathvariant="bold-italic">𝑬</mi><mo>+</mo><mi mathvariant="bold-italic">𝒗</mi><mo>×</mo><mi mathvariant="bold-italic">𝑩</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mathbf{F} = q(\mathbf{E} + \mathbf{v} \times \mathbf{B})</annotation></semantics></math></li>
+<li><strong>Полное электрическое поле (28.3):</strong>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑬</mi><mo>=</mo><mfrac><mrow><mi>−</mi><mi>q</mi></mrow><mrow><mn>4</mn><mi>π</mi><msub><mi>ϵ</mi><mn>0</mn></msub></mrow></mfrac><mrow><mo stretchy="true" form="prefix">[</mo><mfrac><msub><mi mathvariant="bold-italic">𝒆</mi><msup><mi>r</mi><mo>′</mo></msup></msub><mrow><msup><mi>r</mi><mo>′</mo></msup><msup><mi></mi><mn>2</mn></msup></mrow></mfrac><mo>+</mo><mfrac><msup><mi>r</mi><mo>′</mo></msup><mi>c</mi></mfrac><mfrac><mi>d</mi><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><msub><mi mathvariant="bold-italic">𝒆</mi><msup><mi>r</mi><mo>′</mo></msup></msub><mrow><msup><mi>r</mi><mo>′</mo></msup><msup><mi></mi><mn>2</mn></msup></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo>+</mo><mfrac><mn>1</mn><msup><mi>c</mi><mn>2</mn></msup></mfrac><mfrac><msup><mi>d</mi><mn>2</mn></msup><mrow><mi>d</mi><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac><msub><mi mathvariant="bold-italic">𝒆</mi><msup><mi>r</mi><mo>′</mo></msup></msub><mo stretchy="true" form="postfix">]</mo></mrow></mrow><annotation encoding="application/x-tex">\mathbf{E} = \frac{-q}{4\pi\epsilon_0} \left[ \frac{\mathbf{e}_{r&#39;}}{r&#39;^2} + \frac{r&#39;}{c} \frac{d}{dt} \left( \frac{\mathbf{e}_{r&#39;}}{r&#39;^2} \right) + \frac{1}{c^2} \frac{d^2}{dt^2} \mathbf{e}_{r&#39;} \right]</annotation></semantics></math></li>
+<li><strong>Связь магнитного и электрического полей (28.4):</strong>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑩</mi><mo>=</mo><mi>−</mi><msub><mi mathvariant="bold-italic">𝒆</mi><msup><mi>r</mi><mo>′</mo></msup></msub><mo>×</mo><mi mathvariant="bold-italic">𝑬</mi><mi>/</mi><mi>c</mi></mrow><annotation encoding="application/x-tex">\mathbf{B} = -\mathbf{e}_{r&#39;} \times \mathbf{E}/c</annotation></semantics></math></li>
+</ul>
+<hr />
+<h2 id="4-экспериментальный-анализ-и-визуализация">4. Экспериментальный
+анализ и визуализация</h2>
+<p>Для подтверждения теоретических выводов в тексте приводятся примеры с
+использованием дипольных осцилляторов и детекторов.</p>
+<h3 id="анализ-графического-материала">Анализ графического
+материала</h3>
+<ul>
+<li><strong>Фиг. 28.1 (Дипольный излучатель):</strong> Демонстрирует
+генератор, раскачивающий электроны в двух отрезках проволоки
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>).
+Это создает условия для работы закона излучения через ускорение
+множества зарядов.</li>
+<li><strong>Фиг. 28.2 (Диаграмма направленности):</strong> Показывает
+распределение поля вокруг колеблющегося заряда.
+<ul>
+<li><em>Точка 1:</em> Максимальное поле (детектор параллелен
+ускорению).</li>
+<li><em>Точка 3:</em> Нулевое поле (детектор на оси движения
+заряда).</li>
+</ul></li>
+<li><strong>Фиг. 28.3 (Интерференция):</strong> Иллюстрирует сложение
+полей от двух источников
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mn>1</mn></msub><mo>,</mo><msub><mi>S</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">S_1, S_2</annotation></semantics></math>).
+Показано, что если изменить фазу одного источника на
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>180</mn><mo>∘</mo></msup><annotation encoding="application/x-tex">180^\circ</annotation></semantics></math>,
+сигналы в определенной точке могут полностью погасить друг друга.</li>
+<li><strong>Фиг. 28.4 (Векторное сложение):</strong> Подтверждает, что
+электрические поля складываются как векторы. Если повернуть один
+излучатель на
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>90</mn><mo>∘</mo></msup><annotation encoding="application/x-tex">90^\circ</annotation></semantics></math>,
+суммарное поле будет направлено под углом
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>45</mn><mo>∘</mo></msup><annotation encoding="application/x-tex">45^\circ</annotation></semantics></math>.</li>
+</ul>
+<hr />
+<h2 id="5-важные-цитаты-и-их-контекст">5. Важные цитаты и их
+контекст</h2>
+<blockquote>
+<p><em>«История физики — это история таких обобщений, и в основе успеха
+физической науки лежит главным образом наша способность к синтезу».</em>
+<strong>Контекст:</strong> Введение к главе, подчеркивающее значимость
+объединения разрозненных явлений (свет, электричество, магнетизм) в
+единую теорию.</p>
+</blockquote>
+<blockquote>
+<p><em>«Максвелл мог бы сказать: "Да будет электричество и магнетизм, и
+станет свет!"»</em> <strong>Контекст:</strong> Образное описание
+момента, когда математические уравнения Максвелла предсказали природу
+света.</p>
+</blockquote>
+<blockquote>
+<p><em>«Природа как будто пытается угадать, каким будет поле в настоящий
+момент времени, беря скорость его изменения и умножая на время
+запаздывания».</em> <strong>Контекст:</strong> Объяснение физического
+смысла второго члена в уравнении (28.3), который является поправкой к
+закону Кулона.</p>
+</blockquote>
+<blockquote>
+<p><em>«Никакого эффекта нет, когда заряд движется прямо на нас».</em>
+<strong>Контекст:</strong> Обоснование того, почему в формулу излучения
+входит только проекция ускорения, перпендикулярная лучу зрения.</p>
+</blockquote>
+<hr />
+<h2 id="6-практические-выводы-и-идеи-actionable-insights">6.
+Практические выводы и идеи (Actionable Insights)</h2>
+<ol type="1">
+<li><strong>Принцип суперпозиции:</strong> Для нахождения полного поля
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+необходимо просто сложить вклады от всех отдельных зарядов во Вселенной.
+Это фундаментальный инструмент для анализа любых сложных систем
+излучения.</li>
+<li><strong>Проекционное правило:</strong> При проектировании антенн или
+анализе рассеяния света следует учитывать, что интенсивность излучения
+максимальна в направлении, перпендикулярном ускорению зарядов, и равна
+нулю вдоль оси их движения.</li>
+<li><strong>Управление фазой:</strong> Феномен интерференции позволяет
+манипулировать направлением и силой сигнала. Изменяя расстояние до
+источника или задерживая сигнал в кабеле (фазу), можно добиваться как
+усиления, так и полного подавления волн.</li>
+<li><strong>Важность запаздывания:</strong> При расчете высокочастотных
+систем (где период колебаний сопоставим со временем прохождения света
+между частями системы) учет времени запаздывания
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mi>/</mi><mi>c</mi></mrow><annotation encoding="application/x-tex">r/c</annotation></semantics></math>)
+является критически важным для определения фазы и результата
+интерференции.</li>
+</ol>
+    </article>
+  </main>
+</body>
+</html>

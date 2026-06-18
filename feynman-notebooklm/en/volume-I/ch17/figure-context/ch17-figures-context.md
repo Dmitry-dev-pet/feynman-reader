@@ -1,0 +1,75 @@
+# Figure context for Chapter 17. Space-Time
+
+SOURCE: Feynman Lectures on Physics, Volume I, Chapter 17
+LANGUAGE: en
+SOURCE_URL: https://www.feynmanlectures.caltech.edu/I_17.html
+
+NotebookLM use: pair this file with the clean chapter text and the PNG image files below. The visual descriptions here are inferred from the surrounding lecture text; the PNG files are included so NotebookLM can inspect the diagrams directly when image sources are uploaded.
+
+## Ch17-F1: Fig. 17–1.Three particle paths in space-time: (a) a particle at rest at \(x = x_0\) ; (b) a particle which starts at \(x = x_0\) and moves with constant speed; (c) a particle which starts at high speed but slows down; (d) a light path.
+
+Section: 17–1 The geometry of space-time
+Image file: images/Ch17-F1.png
+
+Context before the figure:
+
+Thus we shall try to think of objects in a new kind of world, of space and time mixed together, in the same sense that the objects in our ordinary space-world are real, and can be looked at from different directions. We shall then consider that objects occupying space and lasting for a certain length of time occupy a kind of a “blob” in a new kind of world, and that we look at this “blob” from different points of view when we are moving at different velocities. This new world, this geometrical entity in which the “blobs” exist by occupying position and taking up a certain amount of time, is calledspace-time. A given point \((x,y,z,t)\) in space-time is called anevent. Imagine, for example, that we plot the \(x\) -positions horizontally, \(y\) and \(z\) in two other directions, both mutually at “right angles” and at “right angles” to the paper (!), and time, vertically. Now, how does a...
+
+Context after the figure:
+
+What about light? Light travels at the speed \(c\) , and that would be represented by a line having a certain fixed slope (Fig.17–1d).
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.
+
+## Ch17-F2: Fig. 17–2.Two views of a disintegrating particle.
+
+Section: 17–1 The geometry of space-time
+Image file: images/Ch17-F2.png
+
+Context before the figure:
+
+Now according to our new idea, if a given event occurs to a particle, say if it suddenly disintegrates at a certain space-time point into two new ones which follow some new tracks, and this interesting event occurred at a certain value of \(x\) and a certain value of \(t\) , then we would expect that, if this makes any sense, we just have to take a new pair of axes and turn them, and that will give us the new \(t\) and the new \(x\) in our new system, as shown in Fig.17–2(a). But this is wrong, because Eq. (17.1) is notexactlythe same mathematical transformation as Eq. (17.2). Note, for example, the difference in sign between the two, and the fact that one is written in terms of \(\cos\theta\) and \(\sin\theta\) , while the other is written with algebraic quantities. (Of course, it is not impossible that the algebraic quantities could be written as cosine and sine, but actually they...
+
+Context after the figure:
+
+Although the geometry of space-time is not Euclidean in the ordinary sense, thereisa geometry which is very similar, but peculiar in certain respects. If this idea of geometry is right, there ought to be some functions of coordinates and time which are independent of the coordinate system. For example, under ordinary rotations, if we take two points, one at the origin, for simplicity, and the other one somewhere else, both systems would have the same origin, and the distance from here to the other point is the same in both. That is one property that is independent of the particular way of measuring it. The square of the distance is \(x^2 + y^2 + z^2\) . Now what about space-time? It is not hard to demonstrate that we have here, also, something which stays the same, namely, the combination \(c^2t^2 - x^2 - y^2 - z^2\) is the same before and after the transformation: \[ \begin{equation}...
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.
+
+## Ch17-F3: Fig. 17–3.The space-time region surrounding a point at the origin.
+
+Section: 17–3 Past, present, and future
+Image file: images/Ch17-F3.png
+
+Context before the figure:
+
+The difference between space-time and ordinary space, and the character of an interval as related to the distance, is very interesting. According to formula (17.5), if we consider a point which in a given coordinate system had zero time, and only space, then the interval squared would be negative and we would have an imaginary interval, the square root of a negative number. Intervals can be either real or imaginary in the theory. The square of an interval may be either positive or negative, unlike distance, which has a positive square. When an interval is imaginary, we say that the two points have aspace-like intervalbetween them (instead of imaginary), because the interval is more like space than like time. On the other hand, if two objects are at the same place in a given coordinate system, but differ only in time, then the square of the time is positive and the distances are zero and...
+
+Context after the figure:
+
+The space-time region surrounding a given space-time point can be separated into three regions, as shown in Fig.17–3. In one region we have space-like intervals, and in two regions, time-like intervals. Physically, these three regions into which space-time around a given point is divided have an interesting physical relationship to that point: a physical object or a signal can get from a point in region \(2\) to the event \(O\) by moving along at a speed less than the speed of light. Therefore events in this region can affect the point \(O\) , can have an influence on it from the past. In fact, of course, an object at \(P\) on the negative \(t\) -axis is precisely in the “past” with respect to \(O\) ; it is the same space-point as \(O\) , only earlier. What happened there then, affects \(O\) now. (Unfortunately, that is the way life is.) Another object at \(Q\) can get to \(O\) by...
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.
+
+## Ch17-F4: Fig. 17–4.The four-vector momentum of a particle.
+
+Section: 17–4 More about four-vectors
+Image file: images/Ch17-F4.png
+
+Context before the figure:
+
+In these transformations, therefore, we have discovered four quantities which transform like \(x\) , \(y\) , \(z\) , and \(t\) , and which we call thefour-vector momentum. Since the momentum is a four-vector, it can be represented on a space-time diagram of a moving particle as an “arrow” tangent to the path, as shown in Fig.17–4. This arrow has a time component equal to the energy, and its space components represent its three-vector momentum; this arrow is more “real” than either the energy or the momentum, because those just depend on how we look at the diagram.
+
+Context after the figure:
+
+The notation for four-vectors is different than it is for three-vectors. In the case of three-vectors, if we were to talk about the ordinary three-vector momentum we would write it \(\FLPp\) . If we wanted to be more specific, we could say it has three components which are, for the axes in question, \(p_x\) , \(p_y\) , and \(p_z\) , or we could simply refer to a general component as \(p_i\) , and say that \(i\) could either be \(x\) , \(y\) , or \(z\) , and that these are the three components; that is, imagine that \(i\) is any one of three directions, \(x\) , \(y\) , or \(z\) . The notation that we use for four-vectors is analogous to this: we write \(p_\mu\) for the four-vector, and \(\mu\) stands for thefourpossible directions \(t\) , \(x\) , \(y\) , or \(z\) .
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.

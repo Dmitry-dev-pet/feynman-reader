@@ -1,0 +1,644 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Аналитический отчет по Главе I-08: Движение (Фейнмановские лекции по физике) - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch08.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1
+id="аналитический-отчет-по-главе-i-08-движение-фейнмановские-лекции-по-физике">Аналитический
+отчет по Главе I-08: Движение (Фейнмановские лекции по физике)</h1>
+<h2 id="1-введение-методология-описания-физических-изменений">1.
+Введение: Методология описания физических изменений</h2>
+<p>Изучение законов природы неизбежно начинается с анализа изменений.
+Самым простым и фундаментальным видом перемен является
+<strong>движение</strong> — изменение положения объекта в пространстве с
+течением времени. Однако, как подчеркивает Ричард Фейнман, в описании
+даже таких базовых процессов скрыто множество «хитростей».</p>
+<p>Сложность описания варьируется от тривиального перемещения твердого
+тела до крайне запутанных явлений, таких как скорость дрейфа облака
+(которое одновременно движется, образуется и испаряется) или «капризы
+женского ума». В физике мы справляемся с этой сложностью через редукцию:
+движение облака можно описать через движение составляющих его молекул, а
+изменения в мыслях — через перемещение атомов в мозгу.</p>
+<p>Для построения аналитической модели мы вводим концепцию
+<strong>«материальной точки»</strong>. Это необходимое упрощение
+позволяет игнорировать внутреннюю структуру объекта, если его размеры
+малы относительно проходимого пути. Например, при анализе перемещения
+автомобиля на 100 км разница между положением мотора и багажника
+пренебрежимо мала.</p>
+<p>На начальном этапе мы намеренно избегаем абсолютной строгости в
+определениях пространства и времени. Попытка достичь полной точности в
+дефинициях часто ведет к «параличу мысли», когда научный поиск
+подменяется бесконечными семантическими спорами о том, что значит
+«знать» или «говорить». Мы принимаем интуитивное понимание этих
+категорий, осознавая, что в рамках теории относительности и квантовой
+механики эти понятия будут подвергнуты глубокой ревизии и уточнению.</p>
+<h2 id="2-способы-фиксации-движения-таблицы-и-графики">2. Способы
+фиксации движения: Таблицы и Графики</h2>
+<p>Движение фиксируется либо дискретно (в таблицах), либо непрерывно (на
+графиках). Рассмотрим два фундаментально разных примера.</p>
+<h3 id="сравнительный-анализ-данных">Сравнительный анализ данных</h3>
+<ol type="1">
+<li><strong>Сложное движение (Автомобиль):</strong> Анализ Таблицы 8.1
+показывает крайне неравномерный характер движения. За первую минуту
+автомобиль проходит 1200 футов, а за вторую — уже 2800 футов
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4000</mn><mo>−</mo><mn>1200</mn></mrow><annotation encoding="application/x-tex">4000 - 1200</annotation></semantics></math>),
+что свидетельствует об ускорении. Участок между 4-й и 5-й минутами
+(пройдено всего 100 футов) указывает на почти полную остановку,
+вероятно, у светофора. После 8-й минуты движение практически
+прекращается (всего 500 футов за минуту) из-за вмешательства полиции. На
+Фиг. 8.1 [SOURCE_IMAGE_1] это отражено ломаной кривой с переменным
+наклоном.</li>
+<li><strong>Простое движение (Падающее тело):</strong> Падающий шарик
+(Таблица 8.2) подчиняется строгому закону
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><mn>16</mn><msup><mi>t</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">s = 16t^2</annotation></semantics></math>.
+Это движение выглядит на Фиг. 8.2 [SOURCE_IMAGE_2] как идеальная
+парабола.</li>
+</ol>
+<h3 id="физический-смысл-наклона-и-кривизны">Физический смысл наклона и
+кривизны</h3>
+<p>В качестве эксперта я должен подчеркнуть критически важное различие в
+интерпретации графика:</p>
+<ul>
+<li><strong>Наклон кривой</strong> (тангенс угла наклона касательной)
+определяет <strong>скорость</strong>
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>v</mi><annotation encoding="application/x-tex">v</annotation></semantics></math>).
+Чем круче наклон, тем выше скорость. Горизонтальный участок (как на 5-й
+минуте Фиг. 8.1) означает
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">v = 0</annotation></semantics></math>.</li>
+<li><strong>Изменение наклона</strong> (кривизна графика) определяет
+<strong>ускорение</strong>
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>).
+Постоянный наклон прямой линии означал бы движение с постоянной
+скоростью без ускорения. Изгиб кривой на Фиг. 8.2 наглядно
+демонстрирует, что скорость непрерывно растет.</li>
+</ul>
+<h2 id="3-физический-смысл-и-математическое-определение-скорости">3.
+Физический смысл и математическое определение скорости</h2>
+<p>Понятие скорости долгое время оставалось камнем преткновения для
+логики.</p>
+<ul>
+<li><strong>Разрешение парадокса Зенона:</strong> Утверждение, что
+Ахиллес никогда не догонит черепаху, так как ему нужно пройти
+бесконечное число этапов, ошибочно. Математически это разрешается
+пониманием того, что сумма бесконечного ряда временных интервалов может
+быть конечной величиной. Бесконечность шагов в рассуждении не
+эквивалентна бесконечности времени.</li>
+<li><strong>Проблема мгновенной скорости:</strong> В известном диалоге
+полицейского и дамы скрыт глубокий смысл. Утверждение «60 миль в час» в
+конкретный момент не означает движения в течение часа. Это
+характеристика состояния в данное мгновение, определяемая через
+предел.</li>
+</ul>
+<p><strong>Математическое определение:</strong> Скорость
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>v</mi><annotation encoding="application/x-tex">v</annotation></semantics></math>
+— это предел отношения малого расстояния
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>,
+пройденного за очень короткий промежуток времени
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϵ</mi><annotation encoding="application/x-tex">\epsilon</annotation></semantics></math>,
+когда этот промежуток стремится к нулю:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mo>=</mo><munder><mi mathvariant="normal">lim</mi><mrow><mi>ϵ</mi><mo>→</mo><mn>0</mn></mrow></munder><mfrac><mi>x</mi><mi>ϵ</mi></mfrac></mrow><annotation encoding="application/x-tex">v = \lim_{\epsilon \to 0} \frac{x}{\epsilon}</annotation></semantics></math>
+Здесь
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>
+— это именно то приращение пути, которое совершается <em>в течение</em>
+интервала
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϵ</mi><annotation encoding="application/x-tex">\epsilon</annotation></semantics></math>.</p>
+<h2 id="4-математический-аппарат-дифференцирование">4. Математический
+аппарат: Дифференцирование</h2>
+<p>Процесс нахождения мгновенной скорости из закона движения называется
+дифференцированием. Продемонстрируем этот механизм алгебраически.</p>
+<h3 id="алгебраический-вывод-производной">Алгебраический вывод
+производной</h3>
+<p><strong>1. Для функции падения
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><mn>16</mn><msup><mi>t</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">s = 16t^2</annotation></semantics></math>:</strong>
+Пусть в момент
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>t</mi><mn>0</mn></msub><annotation encoding="application/x-tex">t_0</annotation></semantics></math>
+расстояние равно
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>s</mi><mn>0</mn></msub><mo>=</mo><mn>16</mn><msubsup><mi>t</mi><mn>0</mn><mn>2</mn></msubsup></mrow><annotation encoding="application/x-tex">s_0 = 16t_0^2</annotation></semantics></math>.
+Спустя малый интервал
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϵ</mi><annotation encoding="application/x-tex">\epsilon</annotation></semantics></math>
+новое положение составит:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>s</mi><mn>0</mn></msub><mo>+</mo><mi>x</mi><mo>=</mo><mn>16</mn><mo stretchy="false" form="prefix">(</mo><msub><mi>t</mi><mn>0</mn></msub><mo>+</mo><mi>ϵ</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>=</mo><mn>16</mn><msubsup><mi>t</mi><mn>0</mn><mn>2</mn></msubsup><mo>+</mo><mn>32</mn><msub><mi>t</mi><mn>0</mn></msub><mi>ϵ</mi><mo>+</mo><mn>16</mn><msup><mi>ϵ</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">s_0 + x = 16(t_0 + \epsilon)^2 = 16t_0^2 + 32t_0\epsilon + 16\epsilon^2</annotation></semantics></math>
+Вычитая исходное расстояние
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>s</mi><mn>0</mn></msub><annotation encoding="application/x-tex">s_0</annotation></semantics></math>,
+получаем приращение
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mn>32</mn><msub><mi>t</mi><mn>0</mn></msub><mi>ϵ</mi><mo>+</mo><mn>16</mn><msup><mi>ϵ</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">x = 32t_0\epsilon + 16\epsilon^2</annotation></semantics></math>
+Разделив на
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϵ</mi><annotation encoding="application/x-tex">\epsilon</annotation></semantics></math>,
+находим отношение:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mi>x</mi><mi>ϵ</mi></mfrac><mo>=</mo><mn>32</mn><msub><mi>t</mi><mn>0</mn></msub><mo>+</mo><mn>16</mn><mi>ϵ</mi></mrow><annotation encoding="application/x-tex">\frac{x}{\epsilon} = 32t_0 + 16\epsilon</annotation></semantics></math>.
+При
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ϵ</mi><mo>→</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\epsilon \to 0</annotation></semantics></math>
+член
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>16</mn><mi>ϵ</mi></mrow><annotation encoding="application/x-tex">16\epsilon</annotation></semantics></math>
+исчезает, и мы получаем точное значение скорости:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mo>=</mo><mn>32</mn><msub><mi>t</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">v = 32t_0</annotation></semantics></math>.</p>
+<p><strong>2. Для общей функции
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><mi>A</mi><msup><mi>t</mi><mn>3</mn></msup><mo>+</mo><mi>B</mi><mi>t</mi><mo>+</mo><mi>C</mi></mrow><annotation encoding="application/x-tex">s = At^3 + Bt + C</annotation></semantics></math>:</strong>
+Подставим
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>+</mo><mi mathvariant="normal">Δ</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">t + \Delta t</annotation></semantics></math>:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>+</mo><mi mathvariant="normal">Δ</mi><mi>s</mi><mo>=</mo><mi>A</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo>+</mo><mi mathvariant="normal">Δ</mi><mi>t</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>3</mn></msup><mo>+</mo><mi>B</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo>+</mo><mi mathvariant="normal">Δ</mi><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>C</mi></mrow><annotation encoding="application/x-tex">s + \Delta s = A(t + \Delta t)^3 + B(t + \Delta t) + C</annotation></semantics></math>
+Разложим куб:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo stretchy="false" form="prefix">(</mo><msup><mi>t</mi><mn>3</mn></msup><mo>+</mo><mn>3</mn><msup><mi>t</mi><mn>2</mn></msup><mi mathvariant="normal">Δ</mi><mi>t</mi><mo>+</mo><mn>3</mn><mi>t</mi><mo stretchy="false" form="prefix">(</mo><mi mathvariant="normal">Δ</mi><mi>t</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mi mathvariant="normal">Δ</mi><mi>t</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>3</mn></msup><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>B</mi><mi>t</mi><mo>+</mo><mi>B</mi><mi mathvariant="normal">Δ</mi><mi>t</mi><mo>+</mo><mi>C</mi></mrow><annotation encoding="application/x-tex">A(t^3 + 3t^2\Delta t + 3t(\Delta t)^2 + (\Delta t)^3) + Bt + B\Delta t + C</annotation></semantics></math>.
+После вычитания
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><mi>A</mi><msup><mi>t</mi><mn>3</mn></msup><mo>+</mo><mi>B</mi><mi>t</mi><mo>+</mo><mi>C</mi></mrow><annotation encoding="application/x-tex">s = At^3 + Bt + C</annotation></semantics></math>
+остается:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>s</mi><mo>=</mo><mn>3</mn><mi>A</mi><msup><mi>t</mi><mn>2</mn></msup><mi mathvariant="normal">Δ</mi><mi>t</mi><mo>+</mo><mi>B</mi><mi mathvariant="normal">Δ</mi><mi>t</mi><mo>+</mo><mn>3</mn><mi>A</mi><mi>t</mi><mo stretchy="false" form="prefix">(</mo><mi mathvariant="normal">Δ</mi><mi>t</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mi>A</mi><mo stretchy="false" form="prefix">(</mo><mi mathvariant="normal">Δ</mi><mi>t</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">\Delta s = 3At^2\Delta t + B\Delta t + 3At(\Delta t)^2 + A(\Delta t)^3</annotation></semantics></math>
+Разделив на
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">\Delta t</annotation></semantics></math>:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi mathvariant="normal">Δ</mi><mi>s</mi></mrow><mrow><mi mathvariant="normal">Δ</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mn>3</mn><mi>A</mi><msup><mi>t</mi><mn>2</mn></msup><mo>+</mo><mi>B</mi><mo>+</mo><mn>3</mn><mi>A</mi><mi>t</mi><mo stretchy="false" form="prefix">(</mo><mi mathvariant="normal">Δ</mi><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>A</mi><mo stretchy="false" form="prefix">(</mo><mi mathvariant="normal">Δ</mi><mi>t</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\frac{\Delta s}{\Delta t} = 3At^2 + B + 3At(\Delta t) + A(\Delta t)^2</annotation></semantics></math>.
+При
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>t</mi><mo>→</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\Delta t \to 0</annotation></semantics></math>
+все члены с
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">\Delta t</annotation></semantics></math>
+обращаются в ноль. Итог:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mo>=</mo><mfrac><mrow><mi>d</mi><mi>s</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mn>3</mn><mi>A</mi><msup><mi>t</mi><mn>2</mn></msup><mo>+</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">v = \frac{ds}{dt} = 3At^2 + B</annotation></semantics></math>.</p>
+<h3 id="нотация-и-правила">Нотация и правила</h3>
+<p>Важно понимать, что символ
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="normal">Δ</mi><annotation encoding="application/x-tex">\Delta</annotation></semantics></math>
+— это <strong>префикс</strong>, обозначающий приращение, а не множитель.
+Отношение
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>s</mi><mi>/</mi><mi mathvariant="normal">Δ</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">\Delta s / \Delta t</annotation></semantics></math>
+нельзя сократить на
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="normal">Δ</mi><annotation encoding="application/x-tex">\Delta</annotation></semantics></math>,
+как нельзя сократить
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mi>θ</mi></mrow><annotation encoding="application/x-tex">\sin \theta</annotation></semantics></math>
+на
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="normal">sin</mi><annotation encoding="application/x-tex">\sin</annotation></semantics></math>.</p>
+<p><strong>Таблица производных (на основе Табл. 8.3):</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Функция
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math>)</th>
+<th style="text-align: left;">Производная
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>s</mi><mi>/</mi><mi>d</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">ds/dt</annotation></semantics></math>)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><msup><mi>t</mi><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">s = t^n</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><msup><mi>t</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msup></mrow><annotation encoding="application/x-tex">nt^{n-1}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><mi>c</mi><mi>u</mi></mrow><annotation encoding="application/x-tex">s = cu</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo stretchy="false" form="prefix">(</mo><mi>d</mi><mi>u</mi><mi>/</mi><mi>d</mi><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">c(du/dt)</annotation></semantics></math></td>
+</tr>
+<tr>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><mi>u</mi><mo>+</mo><mi>v</mi><mo>+</mo><mi>w</mi></mrow><annotation encoding="application/x-tex">s = u + v + w</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>u</mi><mi>/</mi><mi>d</mi><mi>t</mi><mo>+</mo><mi>d</mi><mi>v</mi><mi>/</mi><mi>d</mi><mi>t</mi><mo>+</mo><mi>d</mi><mi>w</mi><mi>/</mi><mi>d</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">du/dt + dv/dt + dw/dt</annotation></semantics></math></td>
+</tr>
+<tr>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><mi>c</mi></mrow><annotation encoding="application/x-tex">s = c</annotation></semantics></math>
+(константа)</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><msup><mi>u</mi><mi>a</mi></msup><msup><mi>v</mi><mi>b</mi></msup><msup><mi>w</mi><mi>c</mi></msup></mrow><annotation encoding="application/x-tex">s = u^a v^b w^c</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mi>a</mi><mi>u</mi></mfrac><mfrac><mrow><mi>d</mi><mi>u</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>+</mo><mfrac><mi>b</mi><mi>v</mi></mfrac><mfrac><mrow><mi>d</mi><mi>v</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>+</mo><mfrac><mi>c</mi><mi>w</mi></mfrac><mfrac><mrow><mi>d</mi><mi>w</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">s \left( \frac{a}{u}\frac{du}{dt} + \frac{b}{v}\frac{dv}{dt} + \frac{c}{w}\frac{dw}{dt} \right)</annotation></semantics></math></td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-обратная-задача-интегрирование">5. Обратная задача:
+Интегрирование</h2>
+<p>Если нам известна скорость
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">v(t)</annotation></semantics></math>,
+мы можем восстановить пройденный путь
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math>,
+разбивая время на бесконечно малые отрезки
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">dt</annotation></semantics></math>
+и суммируя элементарные перемещения
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>s</mi><mo>=</mo><mi>v</mi><mi>d</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">ds = v dt</annotation></semantics></math>.</p>
+<p>Общий путь выражается как предел суммы:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><munder><mi mathvariant="normal">lim</mi><mrow><mi mathvariant="normal">Δ</mi><mi>t</mi><mo>→</mo><mn>0</mn></mrow></munder><mo>∑</mo><mi>v</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>t</mi><mi>i</mi></msub><mo stretchy="false" form="postfix">)</mo><mi mathvariant="normal">Δ</mi><mi>t</mi><mo>=</mo><mo>∫</mo><mi>v</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mi>d</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">s = \lim_{\Delta t \to 0} \sum v(t_i) \Delta t = \int v(t) \, dt</annotation></semantics></math>
+Символ интеграла
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>∫</mo><annotation encoding="application/x-tex">\int</annotation></semantics></math>
+представляет собой стилизованную латинскую букву <strong>S</strong> (от
+<em>summa</em> — сумма). Интегрирование является операцией, обратной
+дифференцированию. Хотя любую элементарную функцию можно
+продифференцировать по алгоритму, обратный поиск интеграла
+(«первообразной») — задача творческая и аналитически более сложная;
+многие функции не имеют интегралов, выразимых в элементарных
+терминах.</p>
+<h2 id="6-ускорение-изменение-темпа-движения">6. Ускорение: Изменение
+темпа движения</h2>
+<p>Ускорение
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+— это скорость изменения скорости, или вторая производная пути по
+времени:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>=</mo><mfrac><mrow><mi>d</mi><mi>v</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mi>s</mi></mrow><mrow><mi>d</mi><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac></mrow><annotation encoding="application/x-tex">a = \frac{dv}{dt} = \frac{d^2s}{dt^2}</annotation></semantics></math></p>
+<p>Для падающего тела, где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mo>=</mo><mn>32</mn><mi>t</mi></mrow><annotation encoding="application/x-tex">v = 32t</annotation></semantics></math>,
+производная по правилу дифференцирования
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">Bt</annotation></semantics></math>
+дает константу:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>=</mo><mn>32</mn></mrow><annotation encoding="application/x-tex">a = 32</annotation></semantics></math>
+фут/сек². Это постоянство ускорения свободного падения
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>g</mi><annotation encoding="application/x-tex">g</annotation></semantics></math>)
+обусловлено действием постоянной силы тяжести, так как согласно закону
+Ньютона ускорение прямо пропорционально приложенной силе.</p>
+<p>Ключевые формулы равноускоренного движения (из покоя):</p>
+<ul>
+<li>Скорость:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mo>=</mo><mi>g</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">v = gt</annotation></semantics></math></li>
+<li>Путь:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>g</mi><msup><mi>t</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">s = \frac{1}{2}gt^2</annotation></semantics></math></li>
+</ul>
+<h2 id="7-движение-в-двух-и-трех-измерениях">7. Движение в двух и трех
+измерениях</h2>
+<p>При переходе к пространственному движению положение точки описывается
+координатами
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(x, y, z)</annotation></semantics></math>,
+а скорость — вектором с компонентами
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>v</mi><mi>x</mi></msub><mo>=</mo><mi>d</mi><mi>x</mi><mi>/</mi><mi>d</mi><mi>t</mi><mo>,</mo><msub><mi>v</mi><mi>y</mi></msub><mo>=</mo><mi>d</mi><mi>y</mi><mi>/</mi><mi>d</mi><mi>t</mi><mo>,</mo><msub><mi>v</mi><mi>z</mi></msub><mo>=</mo><mi>d</mi><mi>z</mi><mi>/</mi><mi>d</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">v_x = dx/dt, v_y = dy/dt, v_z = dz/dt</annotation></semantics></math>.</p>
+<p>На Фиг. 8.3 [SOURCE_IMAGE_3] показано, что элементарный путь на
+плоскости
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">\Delta s</annotation></semantics></math>
+связан с компонентами через теорему Пифагора:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>s</mi><mo>≈</mo><msqrt><mrow><mo stretchy="false" form="prefix">(</mo><mi mathvariant="normal">Δ</mi><mi>x</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mi mathvariant="normal">Δ</mi><mi>y</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup></mrow></msqrt></mrow><annotation encoding="application/x-tex">\Delta s \approx \sqrt{(\Delta x)^2 + (\Delta y)^2}</annotation></semantics></math>.
+В пределе полная скорость тела вычисляется как:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mo>=</mo><msqrt><mrow><msubsup><mi>v</mi><mi>x</mi><mn>2</mn></msubsup><mo>+</mo><msubsup><mi>v</mi><mi>y</mi><mn>2</mn></msubsup><mo>+</mo><msubsup><mi>v</mi><mi>z</mi><mn>2</mn></msubsup></mrow></msqrt></mrow><annotation encoding="application/x-tex">v = \sqrt{v_x^2 + v_y^2 + v_z^2}</annotation></semantics></math>
+В трехмерном пространстве расстояния измеряются от координатных
+плоскостей, что является прямым обобщением двумерного случая.</p>
+<h2 id="8-анализ-смешанного-движения-траектория-параболы">8. Анализ
+смешанного движения: Траектория параболы</h2>
+<p>Рассмотрим объект, брошенный горизонтально со скоростью
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>u</mi><annotation encoding="application/x-tex">u</annotation></semantics></math>
+в поле тяжести
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mi>g</mi></mrow><annotation encoding="application/x-tex">-g</annotation></semantics></math>.
+Его движение описывается системой:</p>
+<ol type="1">
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mi>u</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">x = ut</annotation></semantics></math>
+(равномерное горизонтальное движение).</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>=</mo><mi>−</mi><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>g</mi><msup><mi>t</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">y = -\frac{1}{2}gt^2</annotation></semantics></math>
+(равноускоренное падение).</li>
+</ol>
+<p>Для нахождения формы траектории исключим время
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math>.
+Из первого уравнения
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>=</mo><mi>x</mi><mi>/</mi><mi>u</mi></mrow><annotation encoding="application/x-tex">t = x/u</annotation></semantics></math>.
+Подставляя это во второе, получаем:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>=</mo><mi>−</mi><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>g</mi><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mi>x</mi><mi>u</mi></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup><mo>=</mo><mi>−</mi><mfrac><mi>g</mi><mrow><mn>2</mn><msup><mi>u</mi><mn>2</mn></msup></mrow></mfrac><msup><mi>x</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">y = -\frac{1}{2}g \left(\frac{x}{u}\right)^2 = -\frac{g}{2u^2}x^2</annotation></semantics></math>
+Это уравнение вида
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>=</mo><mi>k</mi><msup><mi>x</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">y = kx^2</annotation></semantics></math>,
+что соответствует параболе. Отрицательный знак указывает на то, что тело
+движется вниз от точки броска. Любое тело в свободном падении, имеющее
+горизонтальную компоненту скорости, неизбежно описывает параболическую
+кривую (Фиг. 8.4).</p>
+<h2 id="9-итоговое-резюме-главы">9. Итоговое резюме главы</h2>
+<ul>
+<li><strong>Математический фундамент:</strong> Физика движения
+неразрывно связана с аппаратом математического анализа. Дифференциальное
+исчисление родилось из необходимости ответить на вопрос «что такое
+скорость?».</li>
+<li><strong>Иерархия изменений:</strong> Скорость есть первая
+производная пути по времени, а ускорение — вторая производная.</li>
+<li><strong>Операционное единство:</strong> Интегрирование (суммирование
+малых вкладов) и дифференцирование (нахождение мгновенного темпа)
+являются взаимно обратными процессами.</li>
+<li><strong>Принцип независимости:</strong> Сложное пространственное
+движение можно анализировать как совокупность независимых движений вдоль
+координатных осей.</li>
+<li><strong>Границы применимости:</strong> Использование модели
+«материальной точки» и классических определений пространства-времени
+является эффективным приближением, требующим уточнения на атомных
+масштабах и при релятивистских скоростях.# Аналитический отчет по Главе
+I-08: Движение (Фейнмановские лекции по физике)</li>
+</ul>
+<h2 id="1-введение-методология-описания-физических-изменений-1">1.
+Введение: Методология описания физических изменений</h2>
+<p>Изучение законов природы неизбежно начинается с анализа изменений.
+Самым простым и фундаментальным видом перемен является
+<strong>движение</strong> — изменение положения объекта в пространстве с
+течением времени. Однако, как подчеркивает Ричард Фейнман, в описании
+даже таких базовых процессов скрыто множество «хитростей».</p>
+<p>Сложность описания варьируется от тривиального перемещения твердого
+тела до крайне запутанных явлений, таких как скорость дрейфа облака
+(которое одновременно движется, образуется и испаряется) или «капризы
+женского ума». В физике мы справляемся с этой сложностью через редукцию:
+движение облака можно описать через движение составляющих его молекул, а
+изменения в мыслях — через перемещение атомов в мозгу.</p>
+<p>Для построения аналитической модели мы вводим концепцию
+<strong>«материальной точки»</strong>. Это необходимое упрощение
+позволяет игнорировать внутреннюю структуру объекта, если его размеры
+малы относительно проходимого пути. Например, при анализе перемещения
+автомобиля на 100 км разница между положением мотора и багажника
+пренебрежимо мала.</p>
+<p>На начальном этапе мы намеренно избегаем абсолютной строгости в
+определениях пространства и времени. Попытка достичь полной точности в
+дефинициях часто ведет к «параличу мысли», когда научный поиск
+подменяется бесконечными семантическими спорами о том, что значит
+«знать» или «говорить». Мы принимаем интуитивное понимание этих
+категорий, осознавая, что в рамках теории относительности и квантовой
+механики эти понятия будут подвергнуты глубокой ревизии и уточнению.</p>
+<h2 id="2-способы-фиксации-движения-таблицы-и-графики-1">2. Способы
+фиксации движения: Таблицы и Графики</h2>
+<p>Движение фиксируется либо дискретно (в таблицах), либо непрерывно (на
+графиках). Рассмотрим два фундаментально разных примера.</p>
+<h3 id="сравнительный-анализ-данных-1">Сравнительный анализ данных</h3>
+<ol type="1">
+<li><strong>Сложное движение (Автомобиль):</strong> Анализ Таблицы 8.1
+показывает крайне неравномерный характер движения. За первую минуту
+автомобиль проходит 1200 футов, а за вторую — уже 2800 футов
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4000</mn><mo>−</mo><mn>1200</mn></mrow><annotation encoding="application/x-tex">4000 - 1200</annotation></semantics></math>),
+что свидетельствует об ускорении. Участок между 4-й и 5-й минутами
+(пройдено всего 100 футов) указывает на почти полную остановку,
+вероятно, у светофора. После 8-й минуты движение практически
+прекращается (всего 500 футов за минуту) из-за вмешательства полиции. На
+Фиг. 8.1 [SOURCE_IMAGE_1] это отражено ломаной кривой с переменным
+наклоном.</li>
+<li><strong>Простое движение (Падающее тело):</strong> Падающий шарик
+(Таблица 8.2) подчиняется строгому закону
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><mn>16</mn><msup><mi>t</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">s = 16t^2</annotation></semantics></math>.
+Это движение выглядит на Фиг. 8.2 [SOURCE_IMAGE_2] как идеальная
+парабола.</li>
+</ol>
+<h3 id="физический-смысл-наклона-и-кривизны-1">Физический смысл наклона
+и кривизны</h3>
+<p>В качестве эксперта я должен подчеркнуть критически важное различие в
+интерпретации графика:</p>
+<ul>
+<li><strong>Наклон кривой</strong> (тангенс угла наклона касательной)
+определяет <strong>скорость</strong>
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>v</mi><annotation encoding="application/x-tex">v</annotation></semantics></math>).
+Чем круче наклон, тем выше скорость. Горизонтальный участок (как на 5-й
+минуте Фиг. 8.1) означает
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">v = 0</annotation></semantics></math>.</li>
+<li><strong>Изменение наклона</strong> (кривизна графика) определяет
+<strong>ускорение</strong>
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>).
+Постоянный наклон прямой линии означал бы движение с постоянной
+скоростью без ускорения. Изгиб кривой на Фиг. 8.2 наглядно
+демонстрирует, что скорость непрерывно растет.</li>
+</ul>
+<h2 id="3-физический-смысл-и-математическое-определение-скорости-1">3.
+Физический смысл и математическое определение скорости</h2>
+<p>Понятие скорости долгое время оставалось камнем преткновения для
+логики.</p>
+<ul>
+<li><strong>Разрешение парадокса Зенона:</strong> Утверждение, что
+Ахиллес никогда не догонит черепаху, так как ему нужно пройти
+бесконечное число этапов, ошибочно. Математически это разрешается
+пониманием того, что сумма бесконечного ряда временных интервалов может
+быть конечной величиной. Бесконечность шагов в рассуждении не
+эквивалентна бесконечности времени.</li>
+<li><strong>Проблема мгновенной скорости:</strong> В известном диалоге
+полицейского и дамы скрыт глубокий смысл. Утверждение «60 миль в час» в
+конкретный момент не означает движения в течение часа. Это
+характеристика состояния в данное мгновение, определяемая через
+предел.</li>
+</ul>
+<p><strong>Математическое определение:</strong> Скорость
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>v</mi><annotation encoding="application/x-tex">v</annotation></semantics></math>
+— это предел отношения малого расстояния
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>,
+пройденного за очень короткий промежуток времени
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϵ</mi><annotation encoding="application/x-tex">\epsilon</annotation></semantics></math>,
+когда этот промежуток стремится к нулю:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mo>=</mo><munder><mi mathvariant="normal">lim</mi><mrow><mi>ϵ</mi><mo>→</mo><mn>0</mn></mrow></munder><mfrac><mi>x</mi><mi>ϵ</mi></mfrac></mrow><annotation encoding="application/x-tex">v = \lim_{\epsilon \to 0} \frac{x}{\epsilon}</annotation></semantics></math>
+Здесь
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>
+— это именно то приращение пути, которое совершается <em>в течение</em>
+интервала
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϵ</mi><annotation encoding="application/x-tex">\epsilon</annotation></semantics></math>.</p>
+<h2 id="4-математический-аппарат-дифференцирование-1">4. Математический
+аппарат: Дифференцирование</h2>
+<p>Процесс нахождения мгновенной скорости из закона движения называется
+дифференцированием. Продемонстрируем этот механизм алгебраически.</p>
+<h3 id="алгебраический-вывод-производной-1">Алгебраический вывод
+производной</h3>
+<p><strong>1. Для функции падения
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><mn>16</mn><msup><mi>t</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">s = 16t^2</annotation></semantics></math>:</strong>
+Пусть в момент
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>t</mi><mn>0</mn></msub><annotation encoding="application/x-tex">t_0</annotation></semantics></math>
+расстояние равно
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>s</mi><mn>0</mn></msub><mo>=</mo><mn>16</mn><msubsup><mi>t</mi><mn>0</mn><mn>2</mn></msubsup></mrow><annotation encoding="application/x-tex">s_0 = 16t_0^2</annotation></semantics></math>.
+Спустя малый интервал
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϵ</mi><annotation encoding="application/x-tex">\epsilon</annotation></semantics></math>
+новое положение составит:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>s</mi><mn>0</mn></msub><mo>+</mo><mi>x</mi><mo>=</mo><mn>16</mn><mo stretchy="false" form="prefix">(</mo><msub><mi>t</mi><mn>0</mn></msub><mo>+</mo><mi>ϵ</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>=</mo><mn>16</mn><msubsup><mi>t</mi><mn>0</mn><mn>2</mn></msubsup><mo>+</mo><mn>32</mn><msub><mi>t</mi><mn>0</mn></msub><mi>ϵ</mi><mo>+</mo><mn>16</mn><msup><mi>ϵ</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">s_0 + x = 16(t_0 + \epsilon)^2 = 16t_0^2 + 32t_0\epsilon + 16\epsilon^2</annotation></semantics></math>
+Вычитая исходное расстояние
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>s</mi><mn>0</mn></msub><annotation encoding="application/x-tex">s_0</annotation></semantics></math>,
+получаем приращение
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mn>32</mn><msub><mi>t</mi><mn>0</mn></msub><mi>ϵ</mi><mo>+</mo><mn>16</mn><msup><mi>ϵ</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">x = 32t_0\epsilon + 16\epsilon^2</annotation></semantics></math>
+Разделив на
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϵ</mi><annotation encoding="application/x-tex">\epsilon</annotation></semantics></math>,
+находим отношение:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mi>x</mi><mi>ϵ</mi></mfrac><mo>=</mo><mn>32</mn><msub><mi>t</mi><mn>0</mn></msub><mo>+</mo><mn>16</mn><mi>ϵ</mi></mrow><annotation encoding="application/x-tex">\frac{x}{\epsilon} = 32t_0 + 16\epsilon</annotation></semantics></math>.
+При
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ϵ</mi><mo>→</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\epsilon \to 0</annotation></semantics></math>
+член
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>16</mn><mi>ϵ</mi></mrow><annotation encoding="application/x-tex">16\epsilon</annotation></semantics></math>
+исчезает, и мы получаем точное значение скорости:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mo>=</mo><mn>32</mn><msub><mi>t</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">v = 32t_0</annotation></semantics></math>.</p>
+<p><strong>2. Для общей функции
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><mi>A</mi><msup><mi>t</mi><mn>3</mn></msup><mo>+</mo><mi>B</mi><mi>t</mi><mo>+</mo><mi>C</mi></mrow><annotation encoding="application/x-tex">s = At^3 + Bt + C</annotation></semantics></math>:</strong>
+Подставим
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>+</mo><mi mathvariant="normal">Δ</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">t + \Delta t</annotation></semantics></math>:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>+</mo><mi mathvariant="normal">Δ</mi><mi>s</mi><mo>=</mo><mi>A</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo>+</mo><mi mathvariant="normal">Δ</mi><mi>t</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>3</mn></msup><mo>+</mo><mi>B</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo>+</mo><mi mathvariant="normal">Δ</mi><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>C</mi></mrow><annotation encoding="application/x-tex">s + \Delta s = A(t + \Delta t)^3 + B(t + \Delta t) + C</annotation></semantics></math>
+Разложим куб:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo stretchy="false" form="prefix">(</mo><msup><mi>t</mi><mn>3</mn></msup><mo>+</mo><mn>3</mn><msup><mi>t</mi><mn>2</mn></msup><mi mathvariant="normal">Δ</mi><mi>t</mi><mo>+</mo><mn>3</mn><mi>t</mi><mo stretchy="false" form="prefix">(</mo><mi mathvariant="normal">Δ</mi><mi>t</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mi mathvariant="normal">Δ</mi><mi>t</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>3</mn></msup><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>B</mi><mi>t</mi><mo>+</mo><mi>B</mi><mi mathvariant="normal">Δ</mi><mi>t</mi><mo>+</mo><mi>C</mi></mrow><annotation encoding="application/x-tex">A(t^3 + 3t^2\Delta t + 3t(\Delta t)^2 + (\Delta t)^3) + Bt + B\Delta t + C</annotation></semantics></math>.
+После вычитания
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><mi>A</mi><msup><mi>t</mi><mn>3</mn></msup><mo>+</mo><mi>B</mi><mi>t</mi><mo>+</mo><mi>C</mi></mrow><annotation encoding="application/x-tex">s = At^3 + Bt + C</annotation></semantics></math>
+остается:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>s</mi><mo>=</mo><mn>3</mn><mi>A</mi><msup><mi>t</mi><mn>2</mn></msup><mi mathvariant="normal">Δ</mi><mi>t</mi><mo>+</mo><mi>B</mi><mi mathvariant="normal">Δ</mi><mi>t</mi><mo>+</mo><mn>3</mn><mi>A</mi><mi>t</mi><mo stretchy="false" form="prefix">(</mo><mi mathvariant="normal">Δ</mi><mi>t</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mi>A</mi><mo stretchy="false" form="prefix">(</mo><mi mathvariant="normal">Δ</mi><mi>t</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">\Delta s = 3At^2\Delta t + B\Delta t + 3At(\Delta t)^2 + A(\Delta t)^3</annotation></semantics></math>
+Разделив на
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">\Delta t</annotation></semantics></math>:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi mathvariant="normal">Δ</mi><mi>s</mi></mrow><mrow><mi mathvariant="normal">Δ</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mn>3</mn><mi>A</mi><msup><mi>t</mi><mn>2</mn></msup><mo>+</mo><mi>B</mi><mo>+</mo><mn>3</mn><mi>A</mi><mi>t</mi><mo stretchy="false" form="prefix">(</mo><mi mathvariant="normal">Δ</mi><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>A</mi><mo stretchy="false" form="prefix">(</mo><mi mathvariant="normal">Δ</mi><mi>t</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\frac{\Delta s}{\Delta t} = 3At^2 + B + 3At(\Delta t) + A(\Delta t)^2</annotation></semantics></math>.
+При
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>t</mi><mo>→</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\Delta t \to 0</annotation></semantics></math>
+все члены с
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">\Delta t</annotation></semantics></math>
+обращаются в ноль. Итог:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mo>=</mo><mfrac><mrow><mi>d</mi><mi>s</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mn>3</mn><mi>A</mi><msup><mi>t</mi><mn>2</mn></msup><mo>+</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">v = \frac{ds}{dt} = 3At^2 + B</annotation></semantics></math>.</p>
+<h3 id="нотация-и-правила-1">Нотация и правила</h3>
+<p>Важно понимать, что символ
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="normal">Δ</mi><annotation encoding="application/x-tex">\Delta</annotation></semantics></math>
+— это <strong>префикс</strong>, обозначающий приращение, а не множитель.
+Отношение
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>s</mi><mi>/</mi><mi mathvariant="normal">Δ</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">\Delta s / \Delta t</annotation></semantics></math>
+нельзя сократить на
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="normal">Δ</mi><annotation encoding="application/x-tex">\Delta</annotation></semantics></math>,
+как нельзя сократить
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mi>θ</mi></mrow><annotation encoding="application/x-tex">\sin \theta</annotation></semantics></math>
+на
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="normal">sin</mi><annotation encoding="application/x-tex">\sin</annotation></semantics></math>.</p>
+<p><strong>Таблица производных (на основе Табл. 8.3):</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Функция
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math>)</th>
+<th style="text-align: left;">Производная
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>s</mi><mi>/</mi><mi>d</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">ds/dt</annotation></semantics></math>)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><msup><mi>t</mi><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">s = t^n</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><msup><mi>t</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msup></mrow><annotation encoding="application/x-tex">nt^{n-1}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><mi>c</mi><mi>u</mi></mrow><annotation encoding="application/x-tex">s = cu</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo stretchy="false" form="prefix">(</mo><mi>d</mi><mi>u</mi><mi>/</mi><mi>d</mi><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">c(du/dt)</annotation></semantics></math></td>
+</tr>
+<tr>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><mi>u</mi><mo>+</mo><mi>v</mi><mo>+</mo><mi>w</mi></mrow><annotation encoding="application/x-tex">s = u + v + w</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>u</mi><mi>/</mi><mi>d</mi><mi>t</mi><mo>+</mo><mi>d</mi><mi>v</mi><mi>/</mi><mi>d</mi><mi>t</mi><mo>+</mo><mi>d</mi><mi>w</mi><mi>/</mi><mi>d</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">du/dt + dv/dt + dw/dt</annotation></semantics></math></td>
+</tr>
+<tr>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><mi>c</mi></mrow><annotation encoding="application/x-tex">s = c</annotation></semantics></math>
+(константа)</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><msup><mi>u</mi><mi>a</mi></msup><msup><mi>v</mi><mi>b</mi></msup><msup><mi>w</mi><mi>c</mi></msup></mrow><annotation encoding="application/x-tex">s = u^a v^b w^c</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mi>a</mi><mi>u</mi></mfrac><mfrac><mrow><mi>d</mi><mi>u</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>+</mo><mfrac><mi>b</mi><mi>v</mi></mfrac><mfrac><mrow><mi>d</mi><mi>v</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>+</mo><mfrac><mi>c</mi><mi>w</mi></mfrac><mfrac><mrow><mi>d</mi><mi>w</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">s \left( \frac{a}{u}\frac{du}{dt} + \frac{b}{v}\frac{dv}{dt} + \frac{c}{w}\frac{dw}{dt} \right)</annotation></semantics></math></td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-обратная-задача-интегрирование-1">5. Обратная задача:
+Интегрирование</h2>
+<p>Если нам известна скорость
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">v(t)</annotation></semantics></math>,
+мы можем восстановить пройденный путь
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math>,
+разбивая время на бесконечно малые отрезки
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">dt</annotation></semantics></math>
+и суммируя элементарные перемещения
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>s</mi><mo>=</mo><mi>v</mi><mi>d</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">ds = v dt</annotation></semantics></math>.</p>
+<p>Общий путь выражается как предел суммы:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><munder><mi mathvariant="normal">lim</mi><mrow><mi mathvariant="normal">Δ</mi><mi>t</mi><mo>→</mo><mn>0</mn></mrow></munder><mo>∑</mo><mi>v</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>t</mi><mi>i</mi></msub><mo stretchy="false" form="postfix">)</mo><mi mathvariant="normal">Δ</mi><mi>t</mi><mo>=</mo><mo>∫</mo><mi>v</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mi>d</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">s = \lim_{\Delta t \to 0} \sum v(t_i) \Delta t = \int v(t) \, dt</annotation></semantics></math>
+Символ интеграла
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>∫</mo><annotation encoding="application/x-tex">\int</annotation></semantics></math>
+представляет собой стилизованную латинскую букву <strong>S</strong> (от
+<em>summa</em> — сумма). Интегрирование является операцией, обратной
+дифференцированию. Хотя любую элементарную функцию можно
+продифференцировать по алгоритму, обратный поиск интеграла
+(«первообразной») — задача творческая и аналитически более сложная;
+многие функции не имеют интегралов, выразимых в элементарных
+терминах.</p>
+<h2 id="6-ускорение-изменение-темпа-движения-1">6. Ускорение: Изменение
+темпа движения</h2>
+<p>Ускорение
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+— это скорость изменения скорости, или вторая производная пути по
+времени:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>=</mo><mfrac><mrow><mi>d</mi><mi>v</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mi>s</mi></mrow><mrow><mi>d</mi><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac></mrow><annotation encoding="application/x-tex">a = \frac{dv}{dt} = \frac{d^2s}{dt^2}</annotation></semantics></math></p>
+<p>Для падающего тела, где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mo>=</mo><mn>32</mn><mi>t</mi></mrow><annotation encoding="application/x-tex">v = 32t</annotation></semantics></math>,
+производная по правилу дифференцирования
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">Bt</annotation></semantics></math>
+дает константу:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>=</mo><mn>32</mn></mrow><annotation encoding="application/x-tex">a = 32</annotation></semantics></math>
+фут/сек². Это постоянство ускорения свободного падения
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>g</mi><annotation encoding="application/x-tex">g</annotation></semantics></math>)
+обусловлено действием постоянной силы тяжести, так как согласно закону
+Ньютона ускорение прямо пропорционально приложенной силе.</p>
+<p>Ключевые формулы равноускоренного движения (из покоя):</p>
+<ul>
+<li>Скорость:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mo>=</mo><mi>g</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">v = gt</annotation></semantics></math></li>
+<li>Путь:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>g</mi><msup><mi>t</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">s = \frac{1}{2}gt^2</annotation></semantics></math></li>
+</ul>
+<h2 id="7-движение-в-двух-и-трех-измерениях-1">7. Движение в двух и трех
+измерениях</h2>
+<p>При переходе к пространственному движению положение точки описывается
+координатами
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(x, y, z)</annotation></semantics></math>,
+а скорость — вектором с компонентами
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>v</mi><mi>x</mi></msub><mo>=</mo><mi>d</mi><mi>x</mi><mi>/</mi><mi>d</mi><mi>t</mi><mo>,</mo><msub><mi>v</mi><mi>y</mi></msub><mo>=</mo><mi>d</mi><mi>y</mi><mi>/</mi><mi>d</mi><mi>t</mi><mo>,</mo><msub><mi>v</mi><mi>z</mi></msub><mo>=</mo><mi>d</mi><mi>z</mi><mi>/</mi><mi>d</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">v_x = dx/dt, v_y = dy/dt, v_z = dz/dt</annotation></semantics></math>.</p>
+<p>На Фиг. 8.3 [SOURCE_IMAGE_3] показано, что элементарный путь на
+плоскости
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">\Delta s</annotation></semantics></math>
+связан с компонентами через теорему Пифагора:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>s</mi><mo>≈</mo><msqrt><mrow><mo stretchy="false" form="prefix">(</mo><mi mathvariant="normal">Δ</mi><mi>x</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mi mathvariant="normal">Δ</mi><mi>y</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup></mrow></msqrt></mrow><annotation encoding="application/x-tex">\Delta s \approx \sqrt{(\Delta x)^2 + (\Delta y)^2}</annotation></semantics></math>.
+В пределе полная скорость тела вычисляется как:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mo>=</mo><msqrt><mrow><msubsup><mi>v</mi><mi>x</mi><mn>2</mn></msubsup><mo>+</mo><msubsup><mi>v</mi><mi>y</mi><mn>2</mn></msubsup><mo>+</mo><msubsup><mi>v</mi><mi>z</mi><mn>2</mn></msubsup></mrow></msqrt></mrow><annotation encoding="application/x-tex">v = \sqrt{v_x^2 + v_y^2 + v_z^2}</annotation></semantics></math>
+В трехмерном пространстве расстояния измеряются от координатных
+плоскостей, что является прямым обобщением двумерного случая.</p>
+<h2 id="8-анализ-смешанного-движения-траектория-параболы-1">8. Анализ
+смешанного движения: Траектория параболы</h2>
+<p>Рассмотрим объект, брошенный горизонтально со скоростью
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>u</mi><annotation encoding="application/x-tex">u</annotation></semantics></math>
+в поле тяжести
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mi>g</mi></mrow><annotation encoding="application/x-tex">-g</annotation></semantics></math>.
+Его движение описывается системой:</p>
+<ol type="1">
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mi>u</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">x = ut</annotation></semantics></math>
+(равномерное горизонтальное движение).</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>=</mo><mi>−</mi><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>g</mi><msup><mi>t</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">y = -\frac{1}{2}gt^2</annotation></semantics></math>
+(равноускоренное падение).</li>
+</ol>
+<p>Для нахождения формы траектории исключим время
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math>.
+Из первого уравнения
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>=</mo><mi>x</mi><mi>/</mi><mi>u</mi></mrow><annotation encoding="application/x-tex">t = x/u</annotation></semantics></math>.
+Подставляя это во второе, получаем:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>=</mo><mi>−</mi><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>g</mi><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mi>x</mi><mi>u</mi></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup><mo>=</mo><mi>−</mi><mfrac><mi>g</mi><mrow><mn>2</mn><msup><mi>u</mi><mn>2</mn></msup></mrow></mfrac><msup><mi>x</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">y = -\frac{1}{2}g \left(\frac{x}{u}\right)^2 = -\frac{g}{2u^2}x^2</annotation></semantics></math>
+Это уравнение вида
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>=</mo><mi>k</mi><msup><mi>x</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">y = kx^2</annotation></semantics></math>,
+что соответствует параболе. Отрицательный знак указывает на то, что тело
+движется вниз от точки броска. Любое тело в свободном падении, имеющее
+горизонтальную компоненту скорости, неизбежно описывает параболическую
+кривую (Фиг. 8.4).</p>
+<h2 id="9-итоговое-резюме-главы-1">9. Итоговое резюме главы</h2>
+<ul>
+<li><strong>Математический фундамент:</strong> Физика движения
+неразрывно связана с аппаратом математического анализа. Дифференциальное
+исчисление родилось из необходимости ответить на вопрос «что такое
+скорость?».</li>
+<li><strong>Иерархия изменений:</strong> Скорость есть первая
+производная пути по времени, а ускорение — вторая производная.</li>
+<li><strong>Операционное единство:</strong> Интегрирование (суммирование
+малых вкладов) и дифференцирование (нахождение мгновенного темпа)
+являются взаимно обратными процессами.</li>
+<li><strong>Принцип независимости:</strong> Сложное пространственное
+движение можно анализировать как совокупность независимых движений вдоль
+координатных осей.</li>
+<li><strong>Границы применимости:</strong> Использование модели
+«материальной точки» и классических определений пространства-времени
+является эффективным приближением, требующим уточнения на атомных
+масштабах и при релятивистских скоростях.</li>
+</ul>
+    </article>
+  </main>
+</body>
+</html>

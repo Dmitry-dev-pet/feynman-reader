@@ -1,0 +1,121 @@
+SOURCE: Feynman Lectures on Physics, Volume I, Chapter 23
+LANGUAGE: en
+SECTION: 23–2 The forced oscillator with damping
+SOURCE_URL: https://www.feynmanlectures.caltech.edu/I_23.html
+
+# 23–2 The forced oscillator with damping
+
+That, then, is how we analyze oscillatory motion with the more elegant mathematical technique. But the elegance of the technique is not at all exhibited in such a problem that can be solved easily by other methods. It is only exhibited when one applies it to more difficult problems. Let us therefore solve another, more difficult problem, which furthermore adds a relatively realistic feature to the previous one. Equation (23.5) tells us that if the frequency \(\omega\) were exactly equal to \(\omega_0\) , we would have an infinite response. Actually, of course, no such infinite response occurs because some other things, like friction, which we have so far ignored, limit the response. Let us therefore add to Eq. (23.2) a friction term.
+Ordinarily such a problem is very difficult because of the character and complexity of the frictional term. There are, however, many circumstances in which the frictional force isproportional to the speedwith which the object moves. An example of such friction is the friction for slow motion of an object in oil or a thick liquid. There is no force when it is just standing still, but the faster it moves the faster the oil has to go past the object, and the greater is the resistance. So we shall assume that there is, in addition to the terms in (23.2), another term, a resistance force proportional to the velocity: \(F_f =-c\,dx/dt\) . It will be convenient, in our mathematical analysis, to write the constant \(c\) as \(m\) times \(\gamma\) to simplify the equation a little. This is just the same trick we use with \(k\) when we replace it by \(m\omega_0^2\) , just to simplify the algebra. Thus our equation will be
+\[
+\begin{equation}
+\label{Eq:I:23:6}
+m(d^2x/dt^2)+c(dx/dt)+kx=F
+\end{equation}
+\]
+or, writing \(c = m\gamma\) and \(k = m\omega_0^2\) and dividing out the mass \(m\) ,
+\[
+\begin{equation*}
+\label{Eq:I:23:6a}
+(d^2x/dt^2)+\gamma(dx/dt)+\omega_0^2x=F/m.
+\tag{23.6a}
+\end{equation*}
+\]
+Now we have the equation in the most convenient form to solve. If \(\gamma\) is very small, that represents very little friction; if \(\gamma\) is very large, there is a tremendous amount of friction. How do we solve this new linear differential equation? Suppose that the driving force is equal to \(F_0\cos\,(\omega t+\Delta)\) ; we could put this into (23.6a) and try to solve it, but we shall instead solve it by our new method. Thus we write \(F\) as the real part of \(\hat{F}e^{i\omega t}\) and \(x\) as the real part of \(\hat{x}e^{i\omega
+t}\) , and substitute these into Eq. (23.6a). It is not even necessary to do the actual substituting, for we can see by inspection that the equation would become
+\[
+\begin{equation}
+\label{Eq:I:23:7}
+[(i\omega)^2\hat{x}+\gamma(i\omega)\hat{x}+\omega_0^2\hat{x}]
+e^{i\omega t}=(\hat{F}/m)e^{i\omega t}.
+\end{equation}
+\]
+[As a matter of fact, if we tried to solve Eq. (23.6a) by our old straightforward way, we would really appreciate the magic of the “complex” method.] If we divide by \(e^{i\omega t}\) on both sides, then we can obtain the response \(\hat{x}\) to the given force \(\hat{F}\) ; it is
+\[
+\begin{equation}
+\label{Eq:I:23:8}
+\hat{x}=\hat{F}/m(\omega_0^2-\omega^2+i\gamma\omega).
+\end{equation}
+\]
+Thus again \(\hat{x}\) is given by \(\hat{F}\) times a certain factor. There is no technical name for this factor, no particular letter for it, but we may call it \(R\) for discussion purposes:
+\[
+\begin{equation}
+R=\frac{1}{m(\omega_0^2-\omega^2+i\gamma\omega)}\notag
+\end{equation}
+\]
+and
+\[
+\begin{equation}
+\label{Eq:I:23:9}
+\hat{x}=\hat{F}R.
+\end{equation}
+\]
+(Although the letters \(\gamma\) and \(\omega_0\) are in very common use, this \(R\) has no particular name.) This factor \(R\) can either be written as \(p+iq\) , or as a certain magnitude \(\rho\) times \(e^{i\theta}\) . If it is written as a certain magnitude times \(e^{i\theta}\) , let us see what it means. Now \(\hat{F}=
+F_0e^{i\Delta}\) , and the actual force \(F\) is the real part of \(F_0e^{i\Delta}e^{i\omega t}\) , that is, \(F_0 \cos\,(\omega t +
+\Delta)\) . Next, Eq. (23.9) tells us that \(\hat{x}\) is equal to \(\hat{F}R\) . So, writing \(R = \rho e^{i\theta}\) as another name for \(R\) , we get
+\[
+\begin{equation*}
+\hat{x}=R\hat{F}=\rho e^{i\theta}F_0e^{i\Delta}=\rho F_0e^{i(\theta+\Delta)}.
+\end{equation*}
+\]
+Finally, going even further back, we see that the physical \(x\) , which is the real part of the complex \(\hat{x}e^{i\omega t}\) , is equal to the real part of \(\rho F_0e^{i(\theta+\Delta)}e^{i\omega t}\) . But \(\rho\) and \(F_0\) are real, and the real part of \(e^{i(\theta+\Delta+\omega t)}\) is simply \(\cos\,(\omega t + \Delta +
+\theta)\) . Thus
+\[
+\begin{equation}
+\label{Eq:I:23:10}
+x=\rho F_0\cos\,(\omega t+\Delta+\theta).
+\end{equation}
+\]
+This tells us that the amplitude of the response is the magnitude of the force \(F\) multiplied by a certain magnification factor, \(\rho\) ; this gives us the “amount” of oscillation. It also tells us, however, that \(x\) is not oscillating in phase with the force, which has the phase \(\Delta\) , but is shifted by an extra amount \(\theta\) . Therefore \(\rho\) and \(\theta\) represent the size of the response and the phase shift of the response.
+Now let us work out what \(\rho\) is. If we have a complex number, the square of the magnitude is equal to the number times its complex conjugate; thus
+\[
+\begin{equation}
+\begin{aligned}
+\rho^2&=\frac{1}{m^2(\omega_0^2-\omega^2+i\gamma\omega)
+(\omega_0^2-\omega^2-i\gamma\omega)}\\[1ex]
+&=\frac{1}{m^2[(\omega_0^2-\omega^2)^2+\gamma^2\omega^2]}.
+\end{aligned}
+\label{Eq:I:23:11}
+\end{equation}
+\]
+In addition, the phase angle \(\theta\) is easy to find, for if we write
+\[
+\begin{equation}
+1/R=1/\rho e^{i\theta}=(1/\rho)e^{-i\theta}=
+m(\omega_0^2-\omega^2+i\gamma\omega),\notag
+\end{equation}
+\]
+we see that
+\[
+\begin{equation}
+\label{Eq:I:23:12}
+\tan\theta=-\gamma\omega/(\omega_0^2-\omega^2).
+\end{equation}
+\]
+It is minus because \(\tan (-\theta) =-\tan\theta\) . A negative value for \(\theta\) results for all \(\omega\) , and this corresponds to the displacement \(x\) lagging the force \(F\) .
+FIGURE Ch23-F2: Fig. 23–2.Plot of \(\rho^2\) versus \(\omega\) .
+FIGURE Ch23-F3: Fig. 23–3.Plot of \(\theta\) versus \(\omega\) .
+Figure23–2shows how \(\rho^2\) varies as a function of frequency ( \(\rho^2\) is physically more interesting than \(\rho\) , because \(\rho^2\) is proportional to the square of the amplitude, or more or less to theenergythat is developed in the oscillator by the force). We see that if \(\gamma\) is very small, then \(1/(\omega_0^2 - \omega^2)^2\) is the most important term, and the response tries to go up toward infinity when \(\omega\) equals \(\omega_0\) . Now the “infinity” is not actually infinite because if \(\omega=\omega_0\) , then \(1/\gamma^2\omega^2\) is still there. The phase shift varies as shown in Fig.23–3.
+In certain circumstances we get a slightly different formula than (23.8), also called a “resonance” formula, and one might think that it represents a different phenomenon, but it does not. The reason is that if \(\gamma\) is very small the most interesting part of the curve is near \(\omega = \omega_0\) , and we may replace (23.8) by an approximate formula which is very accurate if \(\gamma\) is small and \(\omega\) is near \(\omega_0\) . Since \(\omega_0^2 - \omega^2 = (\omega_0-\omega)(\omega_0 + \omega)\) , if \(\omega\) is near \(\omega_0\) this is nearly the same as \(2\omega_0(\omega_0 - \omega)\) and \(\gamma\omega\) is nearly the same as \(\gamma\omega_0\) . Using these in (23.8), we see that \(\omega_0^2-\omega^2 + i\gamma\omega \approx
+2\omega_0(\omega_0-\omega+i\gamma/2)\) , so that
+\[
+\begin{equation}
+\begin{gathered}
+\hat{x}\approx
+\hat{F}/2m\omega_0(\omega_0-\omega+i\gamma/2)\\[.5ex]
+\text{ if }\gamma\ll\omega_0\text{ and }
+\omega\approx\omega_0.
+\end{gathered}
+\label{Eq:I:23:13}
+\end{equation}
+\]
+It is easy to find the corresponding formula for \(\rho^2\) . It is
+\[
+\begin{equation*}
+\rho^2\approx
+1/4m^2\omega_0^2[(\omega_0-\omega)^2+\gamma^2/4].
+\end{equation*}
+\]
+We shall leave it to the student to show the following: if we call the maximum height of the curve of \(\rho^2\) vs. \(\omega\) one unit, and we ask for the width \(\Delta\omega\) of the curve, at one half the maximum height, the full width at half the maximum height of the curve is \(\Delta\omega=\gamma\) , supposing that \(\gamma\) is small. The resonance is sharper and sharper as the frictional effects are made smaller and smaller.
+As another measure of the width, some people use a quantity \(Q\) which is defined as \(Q = \omega_0/\gamma\) . The narrower the resonance, the higher the \(Q\) : \(Q= 1000\) means a resonance whose width is only \(1000\) th of the frequency scale. The \(Q\) of the resonance curve shown in Fig.23–2is \(5\) .
+The importance of the resonance phenomenon is that it occurs in many other circumstances, and so the rest of this chapter will describe some of these other circumstances.

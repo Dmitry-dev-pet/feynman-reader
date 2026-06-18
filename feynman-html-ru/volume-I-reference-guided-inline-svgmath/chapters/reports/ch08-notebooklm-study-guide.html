@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Глава 8. Движение: Учебное пособие - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch08.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1 id="глава-8-движение-учебное-пособие">Глава 8. Движение: Учебное
+пособие</h1>
+<p>Данное учебное пособие составлено на основе материалов лекции Ричарда
+Фейнмана и посвящено фундаментальным аспектам описания движения,
+концепциям скорости и ускорения, а также математическим методам их
+анализа.</p>
+<hr />
+<h2 id="основные-концепции">Основные концепции</h2>
+<h3 id="1-описание-движения">1. Описание движения</h3>
+<p>Движение определяется как изменение положения объекта с течением
+времени. Для упрощения анализа физика часто рассматривает объекты как
+<strong>точки</strong> — маленькие маркеры, размеры которых пренебрежимо
+малы по сравнению с проходимым ими расстоянием (например, автомобиль на
+трассе длиной 100 км).</p>
+<p>Существует два основных способа фиксации движения:</p>
+<ul>
+<li><strong>Табличный:</strong> Запись расстояния
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math>)
+в определенные моменты времени
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math>).</li>
+<li><strong>Графический:</strong> Построение кривой, где по горизонтали
+откладывается время, а по вертикали — расстояние.</li>
+</ul>
+<h3 id="2-скорость-как-производная">2. Скорость как производная</h3>
+<p>Скорость — это быстрота изменения положения. Математически она
+определяется как предел отношения малого приращения расстояния
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">\Delta s</annotation></semantics></math>)
+к малому промежутку времени
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">\Delta t</annotation></semantics></math>)
+при стремлении последнего к нулю:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mo>=</mo><munder><mi mathvariant="normal">lim</mi><mrow><mi mathvariant="normal">Δ</mi><mi>t</mi><mo>→</mo><mn>0</mn></mrow></munder><mfrac><mrow><mi mathvariant="normal">Δ</mi><mi>s</mi></mrow><mrow><mi mathvariant="normal">Δ</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mi>d</mi><mi>s</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">v = \lim_{\Delta t \to 0} \frac{\Delta s}{\Delta t} = \frac{ds}{dt}</annotation></semantics></math>
+Этот процесс нахождения скорости называется
+<strong>дифференцированием</strong>.</p>
+<h3 id="3-ускорение">3. Ускорение</h3>
+<p>Ускорение — это быстрота изменения самой скорости. Оно является
+производной от скорости по времени или второй производной от расстояния
+по времени:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>=</mo><mfrac><mrow><mi>d</mi><mi>v</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mi>s</mi></mrow><mrow><mi>d</mi><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac></mrow><annotation encoding="application/x-tex">a = \frac{dv}{dt} = \frac{d^2s}{dt^2}</annotation></semantics></math>
+Для падающего тела вблизи поверхности Земли ускорение постоянно и
+составляет примерно 32 фут/сек² (в системе единиц, используемой в
+источнике).</p>
+<h3 id="4-интегрирование">4. Интегрирование</h3>
+<p>Процесс, обратный дифференцированию. Если известна скорость в каждый
+момент времени, пройденное расстояние можно найти как
+<strong>интеграл</strong> от скорости:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><mo>∫</mo><mi>v</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mi>d</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">s = \int v(t) \, dt</annotation></semantics></math>
+Геометрически это эквивалентно суммированию бесконечного числа
+бесконечно малых отрезков пути
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mo>⋅</mo><mi>d</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">v \cdot dt</annotation></semantics></math>).</p>
+<hr />
+<h2 id="практикум-вопросы-с-краткими-ответами">Практикум: Вопросы с
+краткими ответами</h2>
+<p><strong>Вопрос 1:</strong> Почему при описании движения автомобиля по
+дороге можно пренебречь тем, что он не является «абсолютной точкой»?</p>
+<ul>
+<li><strong>Ответ:</strong> Для целей описания движения на большие
+расстояния разница в положении между мотором и багажником несущественна;
+точность «точки» достаточна для анализа пройденного пути.</li>
+</ul>
+<p><strong>Вопрос 2:</strong> В чем заключается суть парадокса Зенона об
+Ахиллесе и черепахе?</p>
+<ul>
+<li><strong>Ответ:</strong> Зенон утверждал, что Ахиллес никогда не
+догонит черепаху, так как ему нужно пройти бесконечное число этапов.
+Ошибка заключается в предположении, что бесконечное число этапов деления
+требует бесконечного количества времени.</li>
+</ul>
+<p><strong>Вопрос 3:</strong> Как изменится формула скорости
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mo>=</mo><mn>32</mn><mi>t</mi></mrow><annotation encoding="application/x-tex">v = 32t</annotation></semantics></math>,
+если продифференцировать её для нахождения ускорения?</p>
+<ul>
+<li><strong>Ответ:</strong> Ускорение будет равно 32
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>=</mo><mn>32</mn></mrow><annotation encoding="application/x-tex">a = 32</annotation></semantics></math>),
+что означает постоянную скорость изменения скорости.</li>
+</ul>
+<p><strong>Вопрос 4:</strong> Какую геометрическую фигуру описывает
+траектория тела, брошенного горизонтально с постоянной скоростью
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>u</mi><annotation encoding="application/x-tex">u</annotation></semantics></math>
+при одновременном падении с ускорением
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>g</mi><annotation encoding="application/x-tex">g</annotation></semantics></math>?</p>
+<ul>
+<li><strong>Ответ:</strong> Параболу, описываемую уравнением
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>=</mo><mi>−</mi><mfrac><mi>g</mi><mrow><mn>2</mn><msup><mi>u</mi><mn>2</mn></msup></mrow></mfrac><msup><mi>x</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">y = -\frac{g}{2u^2}x^2</annotation></semantics></math>.</li>
+</ul>
+<p><strong>Вопрос 5:</strong> Что означает символ
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="normal">Δ</mi><annotation encoding="application/x-tex">\Delta</annotation></semantics></math>
+в записи
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">\Delta t</annotation></semantics></math>?</p>
+<ul>
+<li><strong>Ответ:</strong> Это обозначение небольшого приращения или
+добавки к величине времени, которое может быть уменьшено до
+предела.</li>
+</ul>
+<hr />
+<h2 id="темы-для-углубленного-изучения-эссе">Темы для углубленного
+изучения (эссе)</h2>
+<ol type="1">
+<li><strong>Проблема точности определений в науке.</strong> Опираясь на
+текст лекции, обсудите утверждение: «Мы ничего не можем определить
+абсолютно точно». Как физика справляется с философским «параличом мысли»
+при определении таких базовых понятий, как пространство и время?</li>
+<li><strong>Математический анализ как язык движения.</strong> Объясните,
+почему для описания скорости потребовалось создание новой области
+математики (дифференциального исчисления). Как концепция «предела»
+помогла разрешить трудности, с которыми столкнулись греческие
+философы?</li>
+<li><strong>Относительность и квантовые пределы классического
+описания.</strong> В источнике упоминается, что идеи о «метках на
+атомах» и простоте пространства-времени оказываются неверными в
+квантовой механике и теории относительности. Проанализируйте, почему
+классическое описание движения остается полезным, несмотря на эти
+ограничения.</li>
+<li><strong>Связь между силой, ускорением и скоростью.</strong>
+Используя пример падающего тела и автомобиля, объясните, как постоянство
+силы влияет на характер ускорения и почему в реальных условиях (движение
+машины) графики движения редко бывают идеальными параболами.</li>
+</ol>
+<hr />
+<h2 id="глоссарий-важных-терминов">Глоссарий важных терминов</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Термин</th>
+<th style="text-align: left;">Определение согласно источнику</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Дифференциал
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">ds</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">dt</annotation></semantics></math>)</strong></td>
+<td style="text-align: left;">Бесконечно малые приращения расстояния или
+времени, используемые в математическом анализе.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Дифференцирование</strong></td>
+<td style="text-align: left;">Процесс нахождения производной функции
+(например, нахождение скорости из функции расстояния).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Интеграл
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>∫</mo><annotation encoding="application/x-tex">\int</annotation></semantics></math>)</strong></td>
+<td style="text-align: left;">Символ, обозначающий процесс суммирования
+бесконечно малых величин; используется для нахождения пройденного пути
+по известной скорости.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Компоненты скорости
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>v</mi><mi>x</mi></msub><mo>,</mo><msub><mi>v</mi><mi>y</mi></msub><mo>,</mo><msub><mi>v</mi><mi>z</mi></msub></mrow><annotation encoding="application/x-tex">v_x, v_y, v_z</annotation></semantics></math>)</strong></td>
+<td style="text-align: left;">Составляющие полной скорости объекта по
+каждой из осей координат в трехмерном пространстве.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Парабола</strong></td>
+<td style="text-align: left;">Кривая, которую описывает расстояние
+падающего тела от времени
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>=</mo><mn>16</mn><msup><mi>t</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">s = 16t^2</annotation></semantics></math>)
+или траектория тела, брошенного под углом к горизонту.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Производная</strong></td>
+<td style="text-align: left;">Предел отношения приращения функции к
+приращению ее аргумента; характеризует скорость изменения величины.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Средняя скорость</strong></td>
+<td style="text-align: left;">Отношение всего пройденного пути к
+затраченному времени (например, 5000 фут/мин за 7-ю минуту движения
+автомобиля).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Ускорение
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>)</strong></td>
+<td style="text-align: left;">Быстрота изменения скорости; в одномерном
+движении вычисляется как
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>v</mi><mi>/</mi><mi>d</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">dv/dt</annotation></semantics></math>.</td>
+</tr>
+</tbody>
+</table>
+    </article>
+  </main>
+</body>
+</html>

@@ -1,0 +1,63 @@
+SOURCE: Feynman Lectures on Physics, Volume I, Chapter 32
+LANGUAGE: en
+SECTION: 32–3 Radiation damping
+SOURCE_URL: https://www.feynmanlectures.caltech.edu/I_32.html
+
+# 32–3 Radiation damping
+
+Now the fact that an oscillator loses a certain energy would mean that if we had a charge on the end of a spring (or an electron in an atom) which has a natural frequency \(\omega_0\) , and we start it oscillating and let it go, it will not oscillate forever, even if it is in empty space millions of miles from anything. There is no oil, no resistance, in an ordinary sense; no “viscosity.” But nevertheless it will not oscillate, as we might once have said, “forever,” because if it is charged it is radiating energy, and therefore the oscillation will slowly die out. How slowly? What is the \(Q\) of such an oscillator, caused by the electromagnetic effects, the so-called radiation resistance or radiation damping of the oscillator? The \(Q\) of any oscillating system is the total energy content of the oscillator at any time divided by the energy loss per radian:
+\[
+\begin{equation*}
+Q=-\frac{W}{dW/d\phi}.
+\end{equation*}
+\]
+Or (another way to write it), since \(dW/d\phi =\) \((dW/dt)/(d\phi/dt) =\) \((dW/dt)/\omega\) ,
+\[
+\begin{equation}
+\label{Eq:I:32:8}
+Q=-\frac{\omega W}{dW/dt}.
+\end{equation}
+\]
+If for a given \(Q\) this tells us how the energy of the oscillation dies out, \(dW/dt = -(\omega/Q)W\) , which has the solution \(W =
+W_0e^{-\omega t/Q}\) if \(W_0\) is the initial energy (at \(t = 0\) ).
+To find the \(Q\) for a radiator, we go back to (32.8) and use (32.6) for \(dW/dt\) .
+Now what do we use for the energy \(W\) of the oscillator? The kinetic energy of the oscillator is \(\tfrac{1}{2}mv^2\) , and themeankinetic energy is \(m\omega^2x_0^2/4\) . But we remember that for the total energy of an oscillator, on the average half is kinetic and half is potential energy, and so we double our result, and find for the total energy of the oscillator
+\[
+\begin{equation}
+\label{Eq:I:32:9}
+W=\tfrac{1}{2}m\omega^2x_0^2.
+\end{equation}
+\]
+What do we use for the frequency in our formulas? We use the natural frequency \(\omega_0\) because, for all practical purposes, that is the frequency at which our atom is radiating, and for \(m\) we use the electron mass \(m_e\) . Then, making the necessary divisions and cancellations, the formula comes down to
+\[
+\begin{equation}
+\label{Eq:I:32:10}
+\frac{1}{Q}=\frac{4\pi e^2}{3\lambda m_ec^2}.
+\end{equation}
+\]
+(In order to see it better and in a more historical form we write it using our abbreviation \(q_e^2/4\pi\epsO = e^2\) , and the factor \(\omega_0/c\) which was left over has been written as \(2\pi/\lambda\) .) Since \(Q\) is dimensionless, the combination \(e^2/m_ec^2\) must be a property only of the electron charge and mass, an intrinsic property of the electron, and it must be alength. It has been given a name, theclassical electron radius, because the early atomic models, which were invented to explain the radiation resistance on the basis of the force of one part of the electron acting on the other parts, all needed to have an electron whose dimensions were of this general order of magnitude. However, this quantity no longer has the significance that we believe that the electron reallyhassuch a radius. Numerically, the magnitude of the radius is
+\[
+\begin{equation}
+\label{Eq:I:32:11}
+r_0=\frac{e^2}{m_ec^2}=2.82\times10^{-15}\text{ m}.
+\end{equation}
+\]
+Now let us actually calculate the \(Q\) of an atom that is emitting light—let us say a sodium atom. For a sodium atom, the wavelength is roughly \(6000\) angstroms, in the yellow part of the visible spectrum, and this is a typical wavelength. Thus
+\[
+\begin{equation}
+\label{Eq:I:32:12}
+Q=\frac{3\lambda}{4\pi r_0}\approx 5\times10^7,
+\end{equation}
+\]
+so the \(Q\) of an atom is of the order \(10^8\) . This means that an atomic oscillator will oscillate for \(10^8\) radians or about \(10^7\) oscillations, before its energy falls by a factor \(1/e\) . The frequency of oscillation of light corresponding to \(6000\) angstroms, \(\nu =
+c/\lambda\) , is on the order of \(10^{15}\) cycles/sec, and therefore the lifetime, the time it takes for the energy of a radiating atom to die out by a factor \(1/e\) , is on the order of \(10^{-8}\) sec. In ordinary circumstances, freely emitting atoms usually take about this long to radiate. This is valid only for atoms which are in empty space, not being disturbed in any way. If the electron is in a solid and it has to hit other atoms or other electrons, then there are additional resistances and different damping.
+The effective resistance term \(\gamma\) in the resistance law for the oscillator can be found from the relation \(1/Q = \gamma/\omega_0\) , and we remember that the size of \(\gamma\) determines how wide the resonance curve is (Fig.23–2). Thus we have just computed thewidths of spectral linesfor freely radiating atoms! Since \(\lambda = 2\pi c/\omega\) , we find that
+\[
+\begin{align}
+\notag
+\Delta\lambda &=2\pi c\,\Delta\omega/\omega^2=
+2\pi c\gamma/\omega_0^2=2\pi c/Q\omega_0\\[1ex]
+\label{Eq:I:32:13}
+&=\lambda/Q=4\pi r_0/3=1.18\times10^{-14}\text{ m}.
+\end{align}
+\]

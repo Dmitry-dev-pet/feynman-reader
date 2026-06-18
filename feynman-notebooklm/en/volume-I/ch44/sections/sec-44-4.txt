@@ -1,0 +1,83 @@
+SOURCE: Feynman Lectures on Physics, Volume I, Chapter 44
+LANGUAGE: en
+SECTION: 44–4 The efficiency of an ideal engine
+SOURCE_URL: https://www.feynmanlectures.caltech.edu/I_44.html
+
+# 44–4 The efficiency of an ideal engine
+
+Now we shall try to find the law which determines the work \(W\) as a function of \(Q_1\) , \(T_1\) , and \(T_2\) . It is clear that \(W\) is proportional to \(Q_1\) , for if we consider two reversible engines in parallel, both working together and both double engines, the combination is also a reversible engine. If each one absorbed heat \(Q_1\) , the two together absorb \(2Q_1\) and the work done is \(2W\) , and so on. So it is not unreasonable that \(W\) is proportional to \(Q_1\) .
+Now the next important step is to find this universal law. We can, and will, do so by studying a reversible engine with the one particular substance whose laws we know, a perfect gas. It is also possible to obtain the rule by a purely logical argument, using no particular substance at all. This is one of the very beautiful pieces of reasoning in physics and we are reluctant not to show it to you, so for those who would like to see it we shall discuss it in just a moment. But first we shall use the much less abstract and simpler method of direct calculation for a perfect gas.
+We need only obtain formulas for \(Q_1\) and \(Q_2\) (for \(W\) is just \(Q_1
+- Q_2\) ), the heats exchanged with the reservoirs during the isothermal expansion or contraction. For example, how much heat \(Q_1\) is absorbed from the reservoir at temperature \(T_1\) during the isothermal expansion [marked (1) in Fig.44–6] from point \(a\) , at pressure \(p_a\) , volume \(V_a\) , temperature \(T_1\) , to point \(b\) with pressure \(p_b\) , volume \(V_b\) , and the same temperature \(T_1\) ? For a perfect gas each molecule has an energy that depends only on the temperature, and since the temperature and the number of molecules are the same at \(a\) and at \(b\) , the internal energy is the same.There is no change in \(U\) ;all the work done by the gas,
+\[
+\begin{equation*}
+W = \int_a^bp\,dV,
+\end{equation*}
+\]
+during the expansion is energy \(Q_1\) taken from the reservoir. During the expansion, \(pV = NkT_1\) , or
+\[
+\begin{equation}
+p = \frac{NkT_1}{V}\notag
+\end{equation}
+\]
+or
+\[
+\begin{equation}
+\label{Eq:I:44:4}
+Q_1 = \int_a^bp\,dV = \int_a^bNkT_1\,\frac{dV}{V}
+\end{equation}
+\]
+or
+\[
+\begin{equation}
+Q_1 = NkT_1\ln\frac{V_b}{V_a}\notag
+\end{equation}
+\]
+is the heat taken from the reservoir at \(T_1\) . In the same way, for the compression at \(T_2\) [curve (3) of Fig.44–6] the heat delivered to the reservoir at \(T_2\) is
+\[
+\begin{equation}
+\label{Eq:I:44:5}
+Q_2 = NkT_2\ln\frac{V_c}{V_d}.
+\end{equation}
+\]
+To finish our analysis we need only find a relation between \(V_c/V_d\) and \(V_b/V_a\) . This we do by noting that (2) is an adiabatic expansion from \(b\) to \(c\) , during which \(pV^\gamma\) is a constant. Since \(pV =
+NkT\) , we can write this as \((pV)V^{\gamma - 1} = \text{const}\) or, in terms of \(T\) and \(V\) , as \(TV^{\gamma - 1} = \text{const}\) , or
+\[
+\begin{equation}
+\label{Eq:I:44:6}
+T_1V_b^{\gamma - 1} = T_2V_c^{\gamma - 1}.
+\end{equation}
+\]
+Likewise, since (4), the compression from \(d\) to \(a\) , is also adiabatic, we find
+\[
+\begin{equation*}
+T_1V_a^{\gamma - 1} = T_2V_d^{\gamma - 1}.
+\tag{44.6a}
+\label{Eq:I:44:6a}
+\end{equation*}
+\]
+If we divide this equation by the previous one, we find that \(V_b/V_a\) must equal \(V_c/V_d\) , so the \(\ln\) ’s in (44.4) and (44.5) are equal, and that
+\[
+\begin{equation}
+\label{Eq:I:44:7}
+\frac{Q_1}{T_1} = \frac{Q_2}{T_2}.
+\end{equation}
+\]
+This is the relation we were seeking. Although proved for a perfect gas engine, we know it must be truefor any reversible engine at all.
+FIGURE Ch44-F8: Fig. 44–8.Engines 1 and 2 together are equivalent to engine 3.
+Now we shall see how this universal law could also be obtained by logical argument, without knowing the properties of any specific substances, as follows. Suppose that we have three engines and three temperatures, let us say \(T_1\) , \(T_2\) , and \(T_3\) . Let one engine absorb heat \(Q_1\) from the temperature \(T_1\) and do a certain amount of work \(W_{13}\) , and let it deliver heat \(Q_3\) to the temperature \(T_3\) (Fig.44–8). Let another engine run backwards between \(T_2\) and \(T_3\) . Suppose that we let the second engine be of such a size that it will absorb the same heat \(Q_3\) , and deliver the heat \(Q_2\) . We will have to put a certain amount of work, \(W_{32}\) , into it—negative because the engine is running backwards. When the first machine goes through a cycle, it absorbs heat \(Q_1\) and delivers \(Q_3\) at the temperature \(T_3\) ; then the second machine takes the same heat \(Q_3\) out of the reservoir at the temperature \(T_3\) and delivers it into the reservoir at temperature \(T_2\) . Therefore the net result of the two machines in tandem is to take the heat \(Q_1\) from \(T_1\) , and deliver \(Q_2\) at \(T_2\) . The two machines are thus equivalent to a third one, which absorbs \(Q_1\) at \(T_1\) , does work \(W_{12}\) , and delivers heat \(Q_2\) at \(T_2\) , because \(W_{12} = W_{13} - W_{32}\) , as one can immediately show from the first law, as follows:
+\[
+\begin{align}
+W_{13} - W_{32} &= (Q_1 - Q_3) - (Q_2 - Q_3)\notag\\[1ex]
+\label{Eq:I:44:8}
+&= Q_1 - Q_2 = W_{12}.
+\end{align}
+\]
+We can now obtain the laws which relate the efficiencies of the engines, because there clearly must be some kind of relationship between the efficiencies of engines running between the temperatures \(T_1\) and \(T_3\) , and between \(T_2\) and \(T_3\) , and between \(T_1\) and \(T_2\) .
+We can make the argument very clear in the following way: We have just seen that we can always relate the heat absorbed at \(T_1\) to the heat delivered at \(T_2\) by finding the heat delivered at some other temperature \(T_3\) . Therefore we can get all the engines’ properties if we introduce a standard temperature, analyzing everything with that standard temperature. In other words, if we knew the efficiency of an engine running between a certain temperature \(T\) and a certain arbitrary standard temperature, then we could work out the efficiency for any other difference in temperature. Because we assume we are using only reversible engines, we can work from the initial temperature down to the standard temperature and back up to the final temperature again. We shall define the standard temperature arbitrarily asone degree. We shall also adopt a special symbol for the heat which is delivered at this standard temperature: we shall call it \(Q_S\) . In other words, when a reversible engine absorbs the heat \(Q\) at temperature \(T\) , it will deliver, at the unit temperature, a heat \(Q_S\) .If one engine, absorbing heat \(Q_1\) at \(T_1\) , delivers the heat \(Q_S\) at one degree, and if an engine absorbing heat \(Q_2\) at temperature \(T_2\) will also deliver the same heat \(Q_S\) at one degree, then it follows that an engine which absorbs heat \(Q_1\) at the temperature \(T_1\) will deliver heat \(Q_2\) if it runs between \(T_1\) and \(T_2\) , as we have already proved by considering engines running between three temperatures. So all we really have to do is to find how much heat \(Q_1\) we need to put in at the temperature \(T_1\) in order to deliver a certain amount of heat \(Q_S\) at the unit temperature. If we discover that, we have everything. The heat \(Q\) , of course, is a function of the temperature \(T\) . It is easy to see that the heat must increase as the temperature increases, for we know that it takes work to run an engine backwards and deliver heat at a higher temperature. It is also easy to see that the heat \(Q_1\) must be proportional to \(Q_S\) . So the great law is something like this: for a given amount of heat \(Q_S\) delivered at one degree from an engine running at temperature \(T\) degrees, the heat \(Q\) absorbed must be that amount \(Q_S\) times some increasing function of the temperature:
+\[
+\begin{equation}
+\label{Eq:I:44:9}
+Q = Q_Sf(T).
+\end{equation}
+\]

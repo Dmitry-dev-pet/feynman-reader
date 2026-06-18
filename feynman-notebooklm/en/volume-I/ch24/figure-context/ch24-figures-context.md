@@ -1,0 +1,109 @@
+# Figure context for Chapter 24. Transients
+
+SOURCE: Feynman Lectures on Physics, Volume I, Chapter 24
+LANGUAGE: en
+SOURCE_URL: https://www.feynmanlectures.caltech.edu/I_24.html
+
+NotebookLM use: pair this file with the clean chapter text and the PNG image files below. The visual descriptions here are inferred from the surrounding lecture text; the PNG files are included so NotebookLM can inspect the diagrams directly when image sources are uploaded.
+
+## Ch24-F1: Fig. 24–1.A damped cosine oscillation.
+
+Section: 24–2 Damped oscillations
+Image file: images/Ch24-F1.png
+
+Context before the figure:
+
+We now turn to our main topic of discussion: transients. By atransientis meant a solution of the differential equation when there is no force present, but when the system is not simply at rest. (Of course, if it is standing still at the origin with no force acting, that is a nice problem—it stays there!) Suppose the oscillation starts another way: say it was driven by a force for a while, and then we turn off the force. What happens then? Let us first get a rough idea of what will happen for a very high \(Q\) system. So long as a force is acting, the stored energy stays the same, and there is a certain amount of work done to maintain it. Now suppose we turn off the force, and no more work is being done; then the losses which are eating up the energy of the supply are no longer eating up its energy—thereisno more driver. The losses will have to consume, so to speak, the energy that is...
+
+Context after the figure:
+
+So, starting with Eq. (24.1), with no outside force, how do we solve it? Being physicists, we do not have to worry about themethodas much as we do about what the solutionis. Armed with our previous experience, let us try as a solution an exponential curve, \(x = Ae^{i\alpha t}\) . (Why do we try this? It is the easiest thing to differentiate!) We put this into (24.1) (with \(F(t) = 0\) ), using the rule that each time we differentiate \(x\) with respect to time, we multiply by \(i\alpha\) . So it is really quite simple to substitute. Thus our equation looks like this: \[ \begin{equation} \label{Eq:I:24:11} (-\alpha^2+i\gamma\alpha+\omega_0^2)Ae^{i\alpha t}=0. \end{equation} \] The net result must be zero forall times, which is impossible unless (a) \(A = 0\) , which is no solution at all—it stands still, or (b) \[ \begin{equation} \label{Eq:I:24:12} -\alpha^2+i\alpha\gamma+\omega_0^2=0...
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.
+
+## Ch24-F2: Fig. 24–2.An electrical circuit for demonstrating transients.
+
+Section: 24–3 Electrical transients
+Image file: images/Ch24-F2.png
+
+Context before the figure:
+
+The other solution is \(\alpha_2\) , and we see that the difference is only that the sign of \(\omega_\gamma\) is reversed: \[ \begin{equation} \label{Eq:I:24:18} x_2=Be^{-\gamma t/2}e^{-i\omega_\gamma t}. \end{equation} \] What does this mean? We shall soon prove that if \(x_1\) and \(x_2\) are each a possible solution of Eq. (24.1) with \(F = 0\) , then \(x_1 + x_2\) is also a solution of the same equation! So the general solution \(x\) is of the mathematical form \[ \begin{equation} \label{Eq:I:24:19} x=e^{-\gamma t/2}(Ae^{i\omega_\gamma t}+Be^{-i\omega_\gamma t}). \end{equation} \] Now we may wonder why we bother to give this other solution, since we were so happy with the first one all by itself. What is the extra one for, because of course we know we should only take the real part?Weknow that we must take the real part, but how did themathematicsknow that we only wanted the real...
+
+Context after the figure:
+
+Now let us see if the above really works. We construct the electrical circuit shown in Fig.24–2, in which we apply to an oscilloscope the voltage across the inductance \(L\) after we suddenly turn on a voltage by closing the switch \(S\) . It is an oscillatory circuit, and it generates a transient of some kind. It corresponds to a circumstance in which we suddenly apply a force and the system starts to oscillate. It is the electrical analog of a damped mechanical oscillator, and we watch the oscillation on an oscilloscope, where we should see the curves that we were trying to analyze. (The horizontal motion of the oscilloscope is driven at a uniform speed, while the vertical motion is the voltage across the inductor. The rest of the circuit is only a technical detail. We would like to repeat the experiment many, many times, since the persistence of vision is not good enough to see only...
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.
+
+## Ch24-F3: Figure 24–3
+
+Section: 24–3 Electrical transients
+Image file: images/Ch24-F3.png
+
+Context before the figure:
+
+Now let us see if the above really works. We construct the electrical circuit shown in Fig.24–2, in which we apply to an oscilloscope the voltage across the inductance \(L\) after we suddenly turn on a voltage by closing the switch \(S\) . It is an oscillatory circuit, and it generates a transient of some kind. It corresponds to a circumstance in which we suddenly apply a force and the system starts to oscillate. It is the electrical analog of a damped mechanical oscillator, and we watch the oscillation on an oscilloscope, where we should see the curves that we were trying to analyze. (The horizontal motion of the oscilloscope is driven at a uniform speed, while the vertical motion is the voltage across the inductor. The rest of the circuit is only a technical detail. We would like to repeat the experiment many, many times, since the persistence of vision is not good enough to see only...
+
+Context after the figure:
+
+But let us see what happens as we decrease \(Q\) , so that the oscillation dies out more rapidly. We can decrease \(Q\) by increasing the resistance \(R\) in the circuit. When we increase the resistance in the circuit, it dies out faster (Fig.24–4). Then if we increase the resistance in the circuit still more, it dies out faster still (Fig.24–5). But when we put in more than a certain amount, we cannot see any oscillation at all! The question is, is this because our eyes are not good enough? If we increase the resistance still more, we get a curve like that of Fig.24–6, which does not appear to have any oscillations, except perhaps one. Now, how can we explain that by mathematics?
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.
+
+## Ch24-F4: Figure 24–4
+
+Section: 24–3 Electrical transients
+Image file: images/Ch24-F4.png
+
+Context before the figure:
+
+Now let us see if the above really works. We construct the electrical circuit shown in Fig.24–2, in which we apply to an oscilloscope the voltage across the inductance \(L\) after we suddenly turn on a voltage by closing the switch \(S\) . It is an oscillatory circuit, and it generates a transient of some kind. It corresponds to a circumstance in which we suddenly apply a force and the system starts to oscillate. It is the electrical analog of a damped mechanical oscillator, and we watch the oscillation on an oscilloscope, where we should see the curves that we were trying to analyze. (The horizontal motion of the oscilloscope is driven at a uniform speed, while the vertical motion is the voltage across the inductor. The rest of the circuit is only a technical detail. We would like to repeat the experiment many, many times, since the persistence of vision is not good enough to see only...
+
+Context after the figure:
+
+But let us see what happens as we decrease \(Q\) , so that the oscillation dies out more rapidly. We can decrease \(Q\) by increasing the resistance \(R\) in the circuit. When we increase the resistance in the circuit, it dies out faster (Fig.24–4). Then if we increase the resistance in the circuit still more, it dies out faster still (Fig.24–5). But when we put in more than a certain amount, we cannot see any oscillation at all! The question is, is this because our eyes are not good enough? If we increase the resistance still more, we get a curve like that of Fig.24–6, which does not appear to have any oscillations, except perhaps one. Now, how can we explain that by mathematics?
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.
+
+## Ch24-F5: Figure 24–5
+
+Section: 24–3 Electrical transients
+Image file: images/Ch24-F5.png
+
+Context before the figure:
+
+Now let us see if the above really works. We construct the electrical circuit shown in Fig.24–2, in which we apply to an oscilloscope the voltage across the inductance \(L\) after we suddenly turn on a voltage by closing the switch \(S\) . It is an oscillatory circuit, and it generates a transient of some kind. It corresponds to a circumstance in which we suddenly apply a force and the system starts to oscillate. It is the electrical analog of a damped mechanical oscillator, and we watch the oscillation on an oscilloscope, where we should see the curves that we were trying to analyze. (The horizontal motion of the oscilloscope is driven at a uniform speed, while the vertical motion is the voltage across the inductor. The rest of the circuit is only a technical detail. We would like to repeat the experiment many, many times, since the persistence of vision is not good enough to see only...
+
+Context after the figure:
+
+But let us see what happens as we decrease \(Q\) , so that the oscillation dies out more rapidly. We can decrease \(Q\) by increasing the resistance \(R\) in the circuit. When we increase the resistance in the circuit, it dies out faster (Fig.24–4). Then if we increase the resistance in the circuit still more, it dies out faster still (Fig.24–5). But when we put in more than a certain amount, we cannot see any oscillation at all! The question is, is this because our eyes are not good enough? If we increase the resistance still more, we get a curve like that of Fig.24–6, which does not appear to have any oscillations, except perhaps one. Now, how can we explain that by mathematics?
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.
+
+## Ch24-F6: Figure 24–6
+
+Section: 24–3 Electrical transients
+Image file: images/Ch24-F6.png
+
+Context before the figure:
+
+Now let us see if the above really works. We construct the electrical circuit shown in Fig.24–2, in which we apply to an oscilloscope the voltage across the inductance \(L\) after we suddenly turn on a voltage by closing the switch \(S\) . It is an oscillatory circuit, and it generates a transient of some kind. It corresponds to a circumstance in which we suddenly apply a force and the system starts to oscillate. It is the electrical analog of a damped mechanical oscillator, and we watch the oscillation on an oscilloscope, where we should see the curves that we were trying to analyze. (The horizontal motion of the oscilloscope is driven at a uniform speed, while the vertical motion is the voltage across the inductor. The rest of the circuit is only a technical detail. We would like to repeat the experiment many, many times, since the persistence of vision is not good enough to see only...
+
+Context after the figure:
+
+But let us see what happens as we decrease \(Q\) , so that the oscillation dies out more rapidly. We can decrease \(Q\) by increasing the resistance \(R\) in the circuit. When we increase the resistance in the circuit, it dies out faster (Fig.24–4). Then if we increase the resistance in the circuit still more, it dies out faster still (Fig.24–5). But when we put in more than a certain amount, we cannot see any oscillation at all! The question is, is this because our eyes are not good enough? If we increase the resistance still more, we get a curve like that of Fig.24–6, which does not appear to have any oscillations, except perhaps one. Now, how can we explain that by mathematics?
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.

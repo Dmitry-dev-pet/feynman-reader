@@ -1,0 +1,92 @@
+# Figure context for Chapter 49. Modes
+
+SOURCE: Feynman Lectures on Physics, Volume I, Chapter 49
+LANGUAGE: en
+SOURCE_URL: https://www.feynmanlectures.caltech.edu/I_49.html
+
+NotebookLM use: pair this file with the clean chapter text and the PNG image files below. The visual descriptions here are inferred from the surrounding lecture text; the PNG files are included so NotebookLM can inspect the diagrams directly when image sources are uploaded.
+
+## Ch49-F1: Fig. 49–1.Reflection of a wave as a superposition of two travelling waves.
+
+Section: 49–1 The reflection of waves
+Image file: images/Ch49-F1.png
+
+Context before the figure:
+
+Our first example of confining waves will be to confine a wave at one boundary. Let us take the simple example of a one-dimensional wave on a string. One could equally well consider sound in one dimension against a wall, or other situations of a similar nature, but the example of a string will be sufficient for our present purposes. Suppose that the string is held at one end, for example by fastening it to an “infinitely solid” wall. This can be expressed mathematically by saying that the displacement \(y\) of the string at the position \(x = 0\) must be zero, because the end does not move. Now if it were not for the wall, we know that the general solution for the motion is the sum of two functions, \(F(x - ct)\) and \(G(x + ct)\) , the first representing a wave travelling one way in the string, and the second a wave travelling the other way in the string: \[ \begin{equation}...
+
+Context after the figure:
+
+Figure49–1shows a wave travelling in the negative \(x\) -direction near \(x = 0\) , and a hypothetical wave travelling in the other direction reversed in sign and on the other side of the origin. We say hypothetical because, of course, there is no string to vibrate on that side of the origin. The total motion of the string is to be regarded as the sum of these two waves in the region of positive \(x\) . As they reach the origin, they will always cancel at \(x = 0\) , and finally the second (reflected) wave will be the only one to exist for positive \(x\) and it will, of course, be travelling in the opposite direction. These results are equivalent to the following statement: if a wave reaches the clamped end of a string, it will be reflected with a change in sign. Such a reflection can always be understood by imagining that what is coming to the end of the string comes out upside down...
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.
+
+## Ch49-F2: Fig. 49–2.The first three modes of a vibrating string.
+
+Section: 49–2 Confined waves, with natural frequencies
+Image file: images/Ch49-F2.png
+
+Context before the figure:
+
+So we have found the following: that a string has a property that it can have sinusoidal motions,but only at certain frequencies. This is the most important characteristic of confined waves. No matter how complicated the system is, it always turns out that there are some patterns of motion which have a perfect sinusoidal time dependence, but with frequencies that are a property of the particular system and the nature of its boundaries. In the case of the string we have many different possible frequencies, each one, by definition, corresponding to a mode, because a mode is a pattern of motion which repeats itself sinusoidally. Figure49–2shows the first three modes for a string. For the first mode the wavelength \(\lambda\) is \(2L\) . This can be seen if one continues the wave out to \(x = 2L\) to obtain one complete cycle of the sine wave. The angular frequency \(\omega\) is \(2\pi c\)...
+
+Context after the figure:
+
+Returning now to the general motion of the string, it turns out that any possible motion can always be analyzed by asserting that more than one mode is operating at the same time. In fact, for general motion an infinite number of modes must be excited at the same time. To get some idea of this, let us illustrate what happens when there are two modes oscillating at the same time: Suppose that we have the first mode oscillating as shown by the sequence of pictures in Fig.49–3, which illustrates the deflection of the string for equally spaced time intervals extending through half a cycle of the lowest frequency.
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.
+
+## Ch49-F3: Fig. 49–3.Two modes combine to give a travelling wave.
+
+Section: 49–2 Confined waves, with natural frequencies
+Image file: images/Ch49-F3.png
+
+Context before the figure:
+
+Returning now to the general motion of the string, it turns out that any possible motion can always be analyzed by asserting that more than one mode is operating at the same time. In fact, for general motion an infinite number of modes must be excited at the same time. To get some idea of this, let us illustrate what happens when there are two modes oscillating at the same time: Suppose that we have the first mode oscillating as shown by the sequence of pictures in Fig.49–3, which illustrates the deflection of the string for equally spaced time intervals extending through half a cycle of the lowest frequency.
+
+Context after the figure:
+
+Now, at the same time, we suppose that there is an oscillation of the second mode also. Figure49–3also shows a sequence of pictures of this mode, which at the start is \(90^\circ\) out of phase with the first mode. This means that at the start it has no displacement, but the two halves of the string have oppositely directed velocities. Now we recall a general principle relating to linear systems: if there are any two solutions, then their sum is also a solution. Therefore a third possible motion of the string would be a displacement obtained by adding the two solutions shown in Fig.49–3. The result, also shown in the figure, begins to suggest the idea of a bump running back and forth between the ends of the string, although with only two modes we cannot make a very good picture of it; more modes are needed. This result is, in fact, a special case of a great principle for linear...
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.
+
+## Ch49-F4: Fig. 49–4.Vibrating rectangular plate.
+
+Section: 49–3 Modes in two dimensions
+Image file: images/Ch49-F4.png
+
+Context before the figure:
+
+The next example to be considered is the interesting situation of modes in two dimensions. Up to this point we have talked only about one-dimensional situations—a stretched string or sound waves in a tube. Ultimately we should consider three dimensions, but an easier step will be that to two dimensions. Consider for definiteness a rectangular rubber drumhead which is confined so as to have no displacement anywhere on the rectangular edge, and let the dimensions of the rectangle be \(a\) and \(b\) , as shown in Fig.49–4. Now the question is, what are the characteristics of the possible motion? We can start with the same procedure used for the string. If we had no confinement at all, we would expect waves travelling along with some kind of wave motion. For example, \((e^{i\omega t})(e^{-ik_xx + ik_yy})\) would represent a sine wave travelling in some direction which depends on the...
+
+Context after the figure:
+
+However, we want a nodal line at \(y = b\) as well as at \(y = 0\) . How do we do that? The solution is related to something we did when studying reflection from crystals. These waves which cancel each other at \(y = 0\) will do the same at \(y = b\) only if \(2b\sin\theta\) is an integral multiple of \(\lambda\) , where \(\theta\) is the angle shown in Fig.49–4: \[ \begin{equation} \label{Eq:I:49:7} m\lambda = 2b\sin\theta,\quad \text{$m = 0$, $1$, $2$, $\ldots$} \end{equation} \]
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.
+
+## Ch49-F5: Fig. 49–5.Two coupled pendulums.
+
+Section: 49–4 Coupled pendulums
+Image file: images/Ch49-F5.png
+
+Context before the figure:
+
+Finally we should emphasize that not only do modes exist for complicated continuous systems, but also for very simple mechanical systems. A good example is the system of two coupled pendulums discussed in the preceding chapter. In that chapter it was shown that the motion could be analyzed as a superposition of two harmonic motions with different frequencies. So even this system can be analyzed in terms of harmonic motions or modes. The string has an infinite number of modes and the two-dimensional surface also has an infinite number of modes. In a sense it is a double infinity, if we know how to count infinities. But a simple mechanical thing which has only two degrees of freedom, and requires only two variables to describe it, has only two modes.
+
+Context after the figure:
+
+Let us make a mathematical analysis of these two modes for the case where the pendulums are of equal length. Let the displacement of one be \(x\) , and the displacement of the other be \(y\) , as shown in Fig.49–5. Without a spring, the force on the first mass is proportional to the displacement of that mass, because of gravity. There would be, if there were no spring, a certain natural frequency \(\omega_0\) for this one alone. The equation of motion without a spring would be \[ \begin{equation} \label{Eq:I:49:13} m\,\frac{d^2x}{dt^2} = -m\omega_0^2x. \end{equation} \] The other pendulum would swing in the same way if there were no spring. In addition to the force of restoration due to gravitation, there is an additional force pulling the first mass. That force depends upon the excess distance of \(x\) over \(y\) and is proportional to that difference, so it is some constant which...
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.

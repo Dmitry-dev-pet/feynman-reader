@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Аналитический отчет: Работа и потенциальная энергия (Глава 13) - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch13.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1
+id="аналитический-отчет-работа-и-потенциальная-энергия-глава-13">Аналитический
+отчет: Работа и потенциальная энергия (Глава 13)</h1>
+<p>Данный документ представляет собой глубокий анализ главы 13
+«Фейнмановских лекций по физике», посвященной механизмам работы,
+мощности и сохранения энергии. В отчете рассматривается вывод закона
+сохранения энергии из законов Ньютона, анализируется концепция
+потенциальной энергии в различных физических условиях и исследуются
+гравитационные поля сложных тел.</p>
+<h2 id="1-исполнительное-резюме">1. Исполнительное резюме</h2>
+<p>Центральной идеей анализа является доказательство того, что закон
+сохранения энергии является прямым следствием законов движения Ньютона.
+Математический аппарат главы демонстрирует, что скорость изменения
+кинетической энергии тела равна мощности, сообщаемой ему действующими
+силами. Основное внимание уделяется гравитационным силам, для которых
+вводится понятие потенциальной энергии, зависящей только от взаимного
+расположения тел. Исследование распространяется на системы многих тел и
+гравитационные поля протяженных объектов (плоских пластов и сферических
+слоев), подтверждая уникальные свойства потенциала в этих
+конфигурациях.</p>
+<hr />
+<h2 id="2-основные-физические-концепции-и-формулы">2. Основные
+физические концепции и формулы</h2>
+<h3 id="кинетическая-энергия-мощность-и-работа">Кинетическая энергия,
+мощность и работа</h3>
+<p>Фундаментальная связь между механическим движением и энергией
+устанавливается через дифференцирование кинетической энергии
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>T</mi><annotation encoding="application/x-tex">T</annotation></semantics></math>)
+по времени.</p>
+<ul>
+<li><strong>Кинетическая энергия:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>m</mi><msup><mi>v</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">T = \frac{1}{2}mv^2</annotation></semantics></math>.</li>
+<li><strong>Скорость изменения К.Э.:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi>d</mi><mi>T</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mi mathvariant="bold-italic">𝑭</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝒗</mi></mrow><annotation encoding="application/x-tex">\frac{dT}{dt} = \mathbf{F} \cdot \mathbf{v}</annotation></semantics></math>.</li>
+<li><strong>Мощность
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math>):</strong>
+Скалярное произведение силы на скорость
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑭</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝒗</mi></mrow><annotation encoding="application/x-tex">\mathbf{F} \cdot \mathbf{v}</annotation></semantics></math>).</li>
+<li><strong>Работа
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>W</mi><annotation encoding="application/x-tex">W</annotation></semantics></math>):</strong>
+Интеграл от компоненты силы вдоль пути:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>T</mi><mo>=</mo><msubsup><mo>∫</mo><mn>1</mn><mn>2</mn></msubsup><mi mathvariant="bold-italic">𝑭</mi><mo>⋅</mo><mi>d</mi><mi mathvariant="bold-italic">𝒔</mi></mrow><annotation encoding="application/x-tex">\Delta T = \int_{1}^{2} \mathbf{F} \cdot d\mathbf{s}</annotation></semantics></math>.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Величина</th>
+<th style="text-align: left;">Единица измерения (СИ)</th>
+<th style="text-align: left;">Определение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Работа</strong></td>
+<td style="text-align: left;">Джоуль (Дж)</td>
+<td style="text-align: left;">Ньютон-метр (Н·м)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Мощность</strong></td>
+<td style="text-align: left;">Ватт (Вт)</td>
+<td style="text-align: left;">Джоуль в секунду (Дж/с)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="потенциальная-энергия-в-различных-полях">Потенциальная энергия в
+различных полях</h3>
+<p>Потенциальная энергия
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>U</mi><annotation encoding="application/x-tex">U</annotation></semantics></math>)
+определяется как работа, которую необходимо совершить против сил поля
+для перемещения тела в данную точку.</p>
+<ol type="1">
+<li><strong>Однородное поле тяжести (близ поверхности Земли):</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>=</mo><mi>m</mi><mi>g</mi><mi>h</mi></mrow><annotation encoding="application/x-tex">U = mgh</annotation></semantics></math></li>
+<li><strong>Центральное гравитационное поле (закон обратных
+квадратов):</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>=</mo><mi>−</mi><mfrac><mrow><mi>G</mi><mi>M</mi><mi>m</mi></mrow><mi>r</mi></mfrac></mrow><annotation encoding="application/x-tex">U = -\frac{GMm}{r}</annotation></semantics></math></li>
+<li><strong>Упругая сила пружины
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>=</mo><mi>−</mi><mi>k</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">F = -kx</annotation></semantics></math>):</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>k</mi><msup><mi>x</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">U = \frac{1}{2}kx^2</annotation></semantics></math></li>
+</ol>
+<hr />
+<h2 id="3-анализ-ключевых-тем">3. Анализ ключевых тем</h2>
+<h3 id="консервативность-гравитационного-поля">Консервативность
+гравитационного поля</h3>
+<p>Один из важнейших выводов главы заключается в том, что работа в
+гравитационном поле не зависит от траектории, а определяется только
+начальным и конечным положениями.</p>
+<ul>
+<li><strong>Замкнутый путь:</strong> Суммарная работа по любому
+замкнутому контуру в гравитационном поле равна нулю. Это доказывает
+невозможность создания вечного двигателя на основе гравитации.</li>
+<li><strong>Аппроксимация кривой:</strong> Любой сложный путь можно
+представить как последовательность радиальных и круговых участков
+(зазубрин). На круговых участках работа равна нулю (сила перпендикулярна
+перемещению), а на радиальных работа зависит только от изменения
+радиуса.</li>
+</ul>
+<h3 id="энергия-систем-многих-тел">Энергия систем многих тел</h3>
+<p>Для системы, состоящей из множества частиц, полная энергия остается
+постоянной и вычисляется по формуле:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munder><mo>∑</mo><mi>i</mi></munder><mfrac><mn>1</mn><mn>2</mn></mfrac><msub><mi>m</mi><mi>i</mi></msub><msubsup><mi>v</mi><mi>i</mi><mn>2</mn></msubsup><mo>+</mo><munder><mo>∑</mo><mrow><mrow><mtext mathvariant="normal">пары </mtext><mspace width="0.333em"></mspace></mrow><mi>i</mi><mi>j</mi></mrow></munder><mo>−</mo><mfrac><mrow><mi>G</mi><msub><mi>m</mi><mi>i</mi></msub><msub><mi>m</mi><mi>j</mi></msub></mrow><msub><mi>r</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub></mfrac><mo>=</mo><mtext mathvariant="normal">const</mtext></mrow><annotation encoding="application/x-tex">\sum_{i} \frac{1}{2} m_i v_i^2 + \sum_{\text{пары } ij} - \frac{Gm_i m_j}{r_{ij}} = \text{const}</annotation></semantics></math>
+Это выражение показывает, что потенциальная энергия системы является
+суммой энергий взаимодействия всех пар частиц. Это возможно благодаря
+<strong>принципу наложения сил</strong> (суперпозиции).</p>
+<hr />
+<h2 id="4-гравитационные-поля-протяженных-тел">4. Гравитационные поля
+протяженных тел</h2>
+<p>Анализ поля больших масс выявляет удивительные физические
+закономерности, часто противоречащие интуиции.</p>
+<h3 id="бесконечный-плоский-пласт-вещества">Бесконечный плоский пласт
+вещества</h3>
+<p>Сила тяготения, создаваемая бесконечной плоскостью с поверхностной
+плотностью массы
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>μ</mi><annotation encoding="application/x-tex">\mu</annotation></semantics></math>,
+определяется формулой:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>C</mi><mi>x</mi></msub><mo>=</mo><mi>−</mi><mn>2</mn><mi>π</mi><mi>G</mi><mi>μ</mi></mrow><annotation encoding="application/x-tex">C_x = -2\pi G\mu</annotation></semantics></math>
+<strong>Ключевой вывод:</strong> Сила не зависит от расстояния до
+плоскости. С увеличением расстояния вклад каждого отдельного элемента
+массы уменьшается пропорционально
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><msup><mi>r</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">1/r^2</annotation></semantics></math>,
+но количество вещества в эффективном конусе притяжения увеличивается
+пропорционально
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>r</mi><mn>2</mn></msup><annotation encoding="application/x-tex">r^2</annotation></semantics></math>,
+что полностью компенсирует ослабление силы.</p>
+<h3 id="тонкий-сферический-слой">Тонкий сферический слой</h3>
+<p>Фейнман описывает расчет поля сферы как «чудо», подтверждающее
+классические предположения:</p>
+<ul>
+<li><strong>Внешняя точка:</strong> Сферический слой притягивает внешние
+тела так, словно вся его масса сосредоточена в центре.</li>
+<li><strong>Внутренняя точка:</strong> Внутри полого сферического слоя
+потенциальная энергия постоянна в любой точке. Следовательно,
+гравитационная сила внутри такой сферы полностью отсутствует.</li>
+</ul>
+<hr />
+<h2 id="5-визуальный-анализ-по-материалам-графиков">5. Визуальный анализ
+(по материалам графиков)</h2>
+<p>В тексте используются следующие иллюстрации для пояснения физического
+смысла:</p>
+<ul>
+<li><strong>Фиг. 13.1:</strong> Движение по кривой без трения.
+Демонстрирует, что важна только высота
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>h</mi><annotation encoding="application/x-tex">h</annotation></semantics></math>,
+а не форма пути.</li>
+<li><strong>Фиг. 13.2:</strong> Падение массы
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math>
+на массу
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>M</mi><annotation encoding="application/x-tex">M</annotation></semantics></math>.
+Базовая схема для вывода потенциала
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mi>r</mi></mrow><annotation encoding="application/x-tex">1/r</annotation></semantics></math>.</li>
+<li><strong>Фиг. 13.3 и 13.4:</strong> Замкнутые пути и «пилообразные»
+траектории. Иллюстрируют доказательство независимости работы от пути
+через радиальные и дуговые сегменты.</li>
+<li><strong>Фиг. 13.5:</strong> Геометрия расчета поля бесконечного
+пласта через кольцевые зоны.</li>
+<li><strong>Фиг. 13.6:</strong> Расчет потенциала сферического слоя
+через сферические пояски
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">dx</annotation></semantics></math>.</li>
+</ul>
+<hr />
+<h2 id="6-ключевые-цитаты-и-их-контекст">6. Ключевые цитаты и их
+контекст</h2>
+<blockquote>
+<p><em>«Скорость изменения кинетической энергии тела равна мощности,
+затраченной силами, действующими на тело».</em>
+<strong>Контекст:</strong> Математический вывод теоремы о мощности из
+уравнения
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi>d</mi><mi>T</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mi mathvariant="bold-italic">𝑭</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝒗</mi></mrow><annotation encoding="application/x-tex">\frac{dT}{dt} = \mathbf{F} \cdot \mathbf{v}</annotation></semantics></math>.</p>
+</blockquote>
+<blockquote>
+<p><em>«Поскольку вечное движение невозможно, мы должны обнаружить, что
+и это [получение энергии при обходе по замкнутому пути]
+невозможно».</em> <strong>Контекст:</strong> Обоснование того, почему
+работа сил тяжести по любому замкнутому контуру должна быть равна
+нулю.</p>
+</blockquote>
+<blockquote>
+<p><em>«Кажется чудом, что в конце концов сила сводится к тому, что вся
+Земля сжалась в одну точку, стянулась к своему центру!»</em>
+<strong>Контекст:</strong> Описание результата интегрирования сил
+притяжения от каждого элементарного объема сферического тела.</p>
+</blockquote>
+<hr />
+<h2 id="7-практические-выводы-для-аналитика">7. Практические выводы для
+аналитика</h2>
+<ol type="1">
+<li><strong>Проверка вычислений:</strong> При численном анализе орбит
+планет закон сохранения энергии можно использовать как критерий
+точности. Если вычисленная энергия меняется (в тексте упомянута
+погрешность 1.5%), это указывает на ошибки округления или слишком
+большие шаги по времени.</li>
+<li><strong>Универсальность метода:</strong> Принцип сохранения энергии
+позволяет находить скорость планеты в любой точке орбиты без детального
+решения уравнений движения — достаточно знать расстояние до центра
+масс.</li>
+<li><strong>Электростатическая аналогия:</strong> Законы гравитационных
+полей (плоскость, сфера) полностью применимы к электрическим полям, если
+заменить гравитационную константу на электрическую
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mi>G</mi><mo>↔</mo><mn>1</mn><mi>/</mi><mn>4</mn><mi>π</mi><msub><mi>ϵ</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">-G \leftrightarrow 1/4\pi\epsilon_0</annotation></semantics></math>).
+Это позволяет использовать механические выводы в задачах
+электростатики.</li>
+</ol>
+    </article>
+  </main>
+</body>
+</html>

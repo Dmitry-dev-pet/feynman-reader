@@ -1,0 +1,107 @@
+SOURCE: Feynman Lectures on Physics, Volume I, Chapter 14
+LANGUAGE: en
+SECTION: 14–5 Potentials and fields
+SOURCE_URL: https://www.feynmanlectures.caltech.edu/I_14.html
+
+# 14–5 Potentials and fields
+
+We shall now discuss a few of the ideas associated with potential energy and with the idea of afield. Suppose we have two large objects \(A\) and \(B\) and a third very small one which is attracted gravitationally by the two, with some resultant force \(\FLPF\) . We have already noted in Chapter12that the gravitational force on a particle can be written as its mass, \(m\) , times another vector, \(\FLPC\) , which is dependent only upon thepositionof the particle:
+\[
+\begin{equation*}
+\FLPF=m\FLPC.
+\end{equation*}
+\]
+We can analyze gravitation, then, by imagining that there is a certain vector \(\FLPC\) at every position in space which “acts” upon a mass which we may place there, but which is there itself whether we actually supply a mass for it to “act” on or not. \(\FLPC\) has three components, and each of those components is a function of \((x,y,z)\) , a function of position in space. Such a thing we call afield, and we say that the objects \(A\) and \(B\) generatethe field, i.e., they “make” the vector \(\FLPC\) . When an object is put in a field, the force on it is equal to its mass times the value of the field vector at the point where the object is put.
+We can also do the same with the potential energy. Since the potential energy, the integral of \((-\textbf{force})\cdot(d\FLPs)\) can be written as \(m\) times the integral of \((-\textbf{field})\cdot(d\FLPs)\) , a mere change of scale, we see that the potential energy \(U(x,y,z)\) of an object located at a point \((x,y,z)\) in space can be written as \(m\) times another function which we may call thepotential \(\Psi\) . The integral \(\int\FLPC\cdot d\FLPs=-\Psi\) , just as \(\int\FLPF\cdot
+d\FLPs=-U\) ; there is only a scale factor between the two:
+\[
+\begin{align}
+\label{Eq:I:14:7}
+U&=-\int\FLPF\cdot d\FLPs\notag\\
+&=-m\int\FLPC\cdot d\FLPs=m\Psi.
+\end{align}
+\]
+By having this function \(\Psi(x,y,z)\) at every point in space, we can immediately calculate the potential energy of an object at any point in space, namely, \(U(x, y, z) = m\Psi(x, y, z)\) —rather a trivial business, it seems. But it is not really trivial, because it is sometimes much nicer to describe the field by giving the value of \(\Psi\) everywhere in space instead of having to give \(\FLPC\) . Instead of having to write three complicated components of a vector function, we can give instead the scalar function \(\Psi\) . Furthermore, it is much easier to calculate \(\Psi\) than any given component of \(\FLPC\) when the field is produced by a number of masses, for since the potential is a scalar we merely add, without worrying about direction. Also, the field \(\FLPC\) can be recovered easily from \(\Psi\) , as we shall shortly see. Suppose we have point masses \(m_1\) , \(m_2\) , … at the points \(1\) , \(2\) , … and we wish to know the potential \(\Psi\) at some arbitrary point \(p\) . This is simply the sum of the potentials at \(p\) due to the individual masses taken one by one:
+\[
+\begin{equation}
+\label{Eq:I:14:8}
+\Psi(p)=\sum_i-\frac{Gm_i}{r_{ip}},\quad
+i=\text{$1$, $2$, $\ldots$}
+\end{equation}
+\]
+FIGURE Ch14-F4: Fig. 14–4.Potential due to a spherical shell of radius \(a\) .
+In the last chapter we used this formula, that the potential is the sum of the potentials from all the different objects, to calculate the potential due to a spherical shell of matter by adding the contributions to the potential at a point from all parts of the shell. The result of this calculation is shown graphically in Fig.14–4. It is negative, having the value zero at \(r =
+\infty\) and varying as \(1/r\) down to the radius \(a\) , and then is constant inside the shell. Outside the shell the potential is \(-Gm/r\) , where \(m\) is the mass of the shell, which is exactly the same as it would have been if all the mass were located at the center. But it is noteverywhereexactly the same, for inside the shell the potential turns out to be \(-Gm/a\) , and is a constant!When the potential is constant, there is no field, or when the potential energy is constant there is no force, because if we move an object from one place to another anywhere inside the sphere the work done by the force is exactly zero. Why? Because the work done in moving the object from one place to the other is equal to minus the change in the potential energy (or, the corresponding field integral is the change of the potential). But the potential energy is thesameat any two points inside, so there is zero change in potential energy, and therefore no work is done in going between any two points inside the shell. The only way the work can be zero for all directions of displacement is that there is no force at all.
+This gives us a clue as to how we can obtain the force or the field, given the potential energy. Let us suppose that the potential energy of an object is known at the position \((x,y,z)\) and we want to know what the force on the object is. It will not do to know the potential at only this one point, as we shall see; it requires knowledge of the potential at neighboring points as well. Why? How can we calculate the \(x\) -component of the force? (If we can do this, of course, we can also find the \(y\) - and \(z\) -components, and we will then know the whole force.) Now, if we were to move the object a small distance \(\Delta
+x\) , the work done by the force on the object would be the \(x\) -component of the force times \(\Delta x\) , if \(\Delta x\) is sufficiently small, and this should equal the change in potential energy in going from one point to the other:
+\[
+\begin{equation}
+\label{Eq:I:14:9}
+\Delta W=-\Delta U=F_x\,\Delta x.
+\end{equation}
+\]
+We have merely used the formula \(\int\FLPF\cdot d\FLPs=-\Delta U\) , but for avery shortpath. Now we divide by \(\Delta x\) and so find that the force is
+\[
+\begin{equation}
+\label{Eq:I:14:10}
+F_x=-\Delta U/\Delta x.
+\end{equation}
+\]
+Of course this is not exact. What we really want is the limit of (14.10) as \(\Delta x\) gets smaller and smaller, because it is onlyexactlyright in the limit of infinitesimal \(\Delta x\) . This we recognize as the derivative of \(U\) with respect to \(x\) , and we would be inclined, therefore, to write \(-dU/dx\) . But \(U\) depends on \(x\) , \(y\) , and \(z\) , and the mathematicians have invented a different symbol to remind us to be very careful when we are differentiating such a function, so as to remember that we are considering thatonly \(x\) varies, and \(y\) and \(z\) do not vary. Instead of a \(d\) they simply make a “backwards \(6\) ,” or \(\partial\) . (A \(\partial\) should have been used in the beginning of calculus because we always want to cancel that \(d\) , but we never want to cancel a \(\partial\) !) So they write \(\ddpl{U}{x}\) , and furthermore, in moments of duress, if they want to beverycareful, they put a line beside it with a little \(yz\) at the bottom ( \(\ddpl{U}{x}|_{yz}\) ), which means “Take the derivative of \(U\) with respect to \(x\) , keeping \(y\) and \(z\) constant.” Most often we leave out the remark about what is kept constant because it is usually evident from the context, so we usually do not use the line with the \(y\) and \(z\) . However,alwaysuse a \(\partial\) instead of a \(d\) as a warning that it is a derivative with some other variables kept constant. This is called apartial derivative; it is a derivative in which we vary only \(x\) .
+Therefore, we find that the force in the \(x\) -direction is minus the partial derivative of \(U\) with respect to \(x\) :
+\[
+\begin{equation}
+\label{Eq:I:14:11}
+F_x=-\ddpl{U}{x}.
+\end{equation}
+\]
+In a similar way, the force in the \(y\) -direction can be found by differentiating \(U\) with respect to \(y\) , keeping \(x\) and \(z\) constant, and the third component, of course, is the derivative with respect to \(z\) , keeping \(y\) and \(x\) constant:
+\[
+\begin{equation}
+\label{Eq:I:14:12}
+F_y=-\ddpl{U}{y},\quad
+F_z=-\ddpl{U}{z}.
+\end{equation}
+\]
+This is the way to get from the potential energy to the force. We get thefieldfrom thepotentialin exactly the same way:
+\[
+\begin{equation}
+\begin{gathered}
+C_x=-\ddpl{\Psi}{x},\\[.5ex]
+C_y=-\ddpl{\Psi}{y},\\[.5ex]
+C_z=-\ddpl{\Psi}{z}.
+\end{gathered}
+\label{Eq:I:14:13}
+\end{equation}
+\]
+Incidentally, we shall mention here another notation, which we shall not actually use for quite a while: Since \(\FLPC\) is a vector and has \(x\) -, \(y\) -, and \(z\) -components, the symbolized \(\ddpl{}{x}\) , \(\ddpl{}{y}\) , and \(\ddpl{}{z}\) which produce the \(x\) -, \(y\) -, and \(z\) -components are something like vectors. The mathematicians have invented a glorious new symbol, \(\FLPnabla\) , called “grad” or “gradient”, which is not a quantity but anoperatorthat makes a vector from a scalar. It has the following “components”: The \(x\) -component of this “grad” is \(\ddpl{}{x}\) , the \(y\) -component is \(\ddpl{}{y}\) , and the \(z\) -component is \(\ddpl{}{z}\) , and then we have the fun of writing our formulas this way:
+\[
+\begin{equation}
+\label{Eq:I:14:14}
+\FLPF=-\FLPgrad{U},\quad
+\FLPC=-\FLPgrad{\Psi}.
+\end{equation}
+\]
+Using \(\FLPnabla\) gives us a quick way of testing whether we have a real vector equation or not, but actually Eqs. (14.14) mean precisely the same as Eqs. (14.11), (14.12) and (14.13); it is just another way of writing them, and since we do not want to write three equations every time, we just write \(\FLPgrad{U}\) instead.
+One more example of fields and potentials has to do with the electrical case. In the case of electricity the force on a stationary object is the charge times the electric field: \(\FLPF = q\FLPE\) . (In general, of course, the \(x\) -component of force in an electrical problem has also a part which depends on the magnetic field. It is easy to show from Eq. (12.11) that the force on a particle due to magnetic fields is always at right angles to its velocity, and also at right angles to the field. Since the force due to magnetism on a moving charge is at right angles to the velocity,no work is doneby the magnetism on the moving charge because the motion is at right angles to the force. Therefore, in calculating theorems of kinetic energy in electric and magnetic fields we can disregard the contribution from the magnetic field, since it does not change the kinetic energy.) We suppose that there is only an electric field. Then we can calculate the energy, or work done, in the same way as for gravity, and calculate a quantity \(\phi\) which is minus the integral of \(\FLPE\cdot d\FLPs\) , from the arbitrary fixed point to the point where we make the calculation, and then the potential energy in an electric field is just charge times this quantity \(\phi\) :
+\[
+\begin{gather*}
+\phi(\FLPr)=-\int\FLPE\cdot d\FLPs,\\[1ex]
+U=q\phi.
+\end{gather*}
+\]
+FIGURE Ch14-F5: Fig. 14–5.Field between parallel plates.
+Let us take, as an example, the case of two parallel metal plates, each with a surface charge of \(\pm\sigma\) per unit area. This is called a parallel-plate capacitor. We found previously that there is zero force outside the plates and that there is a constant electric field between them, directed from \(+\) to \(-\) and of magnitude \(\sigma/\epsO\) (Fig.14–5). We would like to know how much work would be done in carrying a charge from one plate to the other. The work would be the \((\textbf{force})\cdot(d\FLPs)\) integral, which can be written as charge times the potential value at plate \(1\) minus that at plate \(2\) :
+\[
+\begin{equation*}
+W=\int_1^2\FLPF\cdot d\FLPs=q(\phi_1-\phi_2).
+\end{equation*}
+\]
+We can actually work out the integral because the force is constant, and if we call the separation of the plates \(d\) , then the integral is easy:
+\[
+\begin{equation*}
+\int_1^2\FLPF\cdot d\FLPs=\frac{q\sigma}{\epsO}\int_1^2dx=
+\frac{q\sigma d}{\epsO}.
+\end{equation*}
+\]
+The difference in potential, \(\Delta\phi=\sigma d/\epsO\) , is called thevoltage difference, and \(\phi\) is measured in volts. When we say a pair of plates is charged to a certain voltage, what we mean is that the difference in electrical potential of the two plates is so-and-so many volts. For a capacitor made of two parallel plates carrying a surface charge \(\pm\sigma\) , the voltage, or difference in potential, of the pair of plates is \(\sigma d/\epsO\) .

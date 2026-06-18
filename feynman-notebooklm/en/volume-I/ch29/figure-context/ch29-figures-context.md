@@ -1,0 +1,178 @@
+# Figure context for Chapter 29. Interference
+
+SOURCE: Feynman Lectures on Physics, Volume I, Chapter 29
+LANGUAGE: en
+SOURCE_URL: https://www.feynmanlectures.caltech.edu/I_29.html
+
+NotebookLM use: pair this file with the clean chapter text and the PNG image files below. The visual descriptions here are inferred from the surrounding lecture text; the PNG files are included so NotebookLM can inspect the diagrams directly when image sources are uploaded.
+
+## Ch29-F1: Fig. 29–1.The electric field \(\FigE\) due to a positive charge whose retarded acceleration is \(\Figa'\) .
+
+Section: 29–1 Electromagnetic waves
+Image file: images/Ch29-F1.png
+
+Context before the figure:
+
+In this chapter we shall discuss the subject of the preceding chapter more mathematically. We have qualitatively demonstrated that there are maxima and minima in the radiation field from two sources, and our problem now is to describe the field in mathematical detail, not just qualitatively.
+
+Context after the figure:
+
+We have already physically analyzed the meaning of formula (28.6) quite satisfactorily, but there are a few points to be made about it mathematically. In the first place, if a charge is accelerating up and down along a line, in a motion of very small amplitude, the field at some angle \(\theta\) from the axis of the motion is in a direction at right angles to the line of sight and in the plane containing both the acceleration and the line of sight (Fig.29–1). If the distance is called \(r\) , then at time \(t\) the electric field has the magnitude \[ \begin{equation} \label{Eq:I:29:1} E(t)=\frac{-qa(t-r/c)\sin\theta}{4\pi\epsO c^2r}, \end{equation} \] where \(a(t - r/c)\) is the acceleration at the time \((t - r/c)\) , called theretardedacceleration.
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.
+
+## Ch29-F2: Fig. 29–2.The acceleration of a certain charge as a function of time.
+
+Section: 29–1 Electromagnetic waves
+Image file: images/Ch29-F2.png
+
+Context before the figure:
+
+Now it would be interesting to draw a picture of the field under different conditions. The thing that is interesting, of course, is the factor \(a(t - r/c)\) , and to understand it we can take the simplest case, \(\theta = 90^\circ\) , and plot the field graphically. What we had been thinking of before is that we stand in one position and ask how the field there changes with time. But instead of that, we are now going to see what the field looks like at different positions in space at a given instant. So what we want is a “snapshot” picture which tells us what the field is in different places. Of course it depends upon the acceleration of the charge. Suppose that the charge at first had some particular motion: it was initially standing still, and it suddenly accelerated in some manner, as shown in Fig.29–2, and then stopped. Then, a little bit later, we measure the field at a different...
+
+Context after the figure:
+
+Stated another way: if we add a little time \(\Delta t\) , we can restore \(a(t - r/c)\) to its former value byaddinga little distance \(\Delta r = c\,\Delta t\) . That is, as time goes onthe field moves as a wave outward from the source. That is the reason why we sometimes say light is propagated as waves. It is equivalent to saying that the field is delayed, or to saying that the electric field is moving outward as time goes on.
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.
+
+## Ch29-F3: Fig. 29–3.The electric field as a function of position at a later time. (The \(1/r\) variation is ignored.)
+
+Section: 29–1 Electromagnetic waves
+Image file: images/Ch29-F3.png
+
+Context before the figure:
+
+Now it would be interesting to draw a picture of the field under different conditions. The thing that is interesting, of course, is the factor \(a(t - r/c)\) , and to understand it we can take the simplest case, \(\theta = 90^\circ\) , and plot the field graphically. What we had been thinking of before is that we stand in one position and ask how the field there changes with time. But instead of that, we are now going to see what the field looks like at different positions in space at a given instant. So what we want is a “snapshot” picture which tells us what the field is in different places. Of course it depends upon the acceleration of the charge. Suppose that the charge at first had some particular motion: it was initially standing still, and it suddenly accelerated in some manner, as shown in Fig.29–2, and then stopped. Then, a little bit later, we measure the field at a different...
+
+Context after the figure:
+
+Stated another way: if we add a little time \(\Delta t\) , we can restore \(a(t - r/c)\) to its former value byaddinga little distance \(\Delta r = c\,\Delta t\) . That is, as time goes onthe field moves as a wave outward from the source. That is the reason why we sometimes say light is propagated as waves. It is equivalent to saying that the field is delayed, or to saying that the electric field is moving outward as time goes on.
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.
+
+## Ch29-F4: Fig. 29–4.The energy flowing within the cone \(OABCD\) is independent of the distance \(r\) at which it is measured.
+
+Section: 29–2 Energy of radiation
+Image file: images/Ch29-F4.png
+
+Context before the figure:
+
+First of all, at any particular moment or in any particular place, the strength of the field varies inversely as the distance \(r\) , as we mentioned previously. Now we must point out that theenergycontent of a wave, or the energy effects that such an electric field can have, are proportional to thesquareof the field, because if, for instance, we have some kind of a charge or an oscillator in the electric field, then if we let the field act on the oscillator, it makes it move. If this is a linear oscillator, the acceleration, velocity, and displacement produced by the electric field acting on the charge are all proportional to the field. So the kinetic energy which is developed in the charge is proportional to thesquareof the field. So we shall take it that the energy that a field can deliver to a system is proportional somehow to the square of the field.
+
+Context after the figure:
+
+This means that the energy that the source can deliver decreases as we get farther away; in fact, it variesinversely as the square of the distance. But that has a very simple interpretation: if we wanted to pick up all the energy we could from the wave in a certain cone at a distance \(r_1\) (Fig.29–4), and we do the same at another distance \(r_2\) , we find that the amount of energy per unit area at any one place goes inversely as the square of \(r\) , but the area of the surface intercepted by the cone goesdirectlyas the square of \(r\) . So the energy that we can take out of the wave within a given conical angle is the same, no matter how far away we are! In particular, the total energy that we could take out of the whole wave by putting absorbing oscillators all around is a certain fixed amount. So the fact that the amplitude of \(E\) varies as \(1/r\) is the same as saying that...
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.
+
+## Ch29-F5: Fig. 29–5.The intensities in various directions from two dipole oscillators one-half wavelength apart. Left: in phase ( \(\alpha =
+ 0\) ). Right: one-half period out of phase ( \(\alpha = \pi\) ).
+
+Section: 29–4 Two dipole radiators
+Image file: images/Ch29-F5.png
+
+Context before the figure:
+
+Next let us discuss the mathematics involved in combining the effects of two oscillators to find the net field at a given point. This is very easy in the few cases that we considered in the previous chapter. We shall first describe the effects qualitatively, and then more quantitatively. Let us take the simple case, where the oscillators are situated with their centers in the same horizontal plane as the detector, and the line of vibration is vertical.
+
+Context after the figure:
+
+Figure29–5(a) represents the top view of two such oscillators, and in this particular example they are half a wavelength apart in a N–S direction, and are oscillating together in the same phase, which we call zero phase. Now we would like to know the intensity of the radiation in various directions. By the intensity we mean the amount of energy that the field carries past us per second, which is proportional to the square of the field, averaged in time. So the thing to look at, when we want to know how bright the light is, is the square of the electric field, not the electric field itself. (The electric field tells the strength of the force felt by a stationary charge, but the amount of energy that is going past, in watts per square meter, is proportional to the square of the electric field. We shall derive the constant of proportionality in Chapter31.) If we look at the array from the...
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.
+
+## Ch29-F6: Fig. 29–6.A pair of dipole antennas giving maximum power in one direction.
+
+Section: 29–4 Two dipole radiators
+Image file: images/Ch29-F6.png
+
+Context before the figure:
+
+Now we come to an interesting case which shows up a possibly useful feature. Let us remark that one of the reasons that phase relations of oscillators are interesting is for beaming radio transmitters. For instance, if we build an antenna system and want to send a radio signal, say, to Hawaii, we set the antennas up as in Fig.29–5(a) and we broadcast with our two antennas in phase, because Hawaii is to the west of us. Then we decide that tomorrow we are going to broadcast toward Alberta, Canada. Since that is north, not west, all we have to do is to reverse the phase of one of our antennas, and we can broadcast to the north. So we can build antenna systems with various arrangements. Ours is one of the simplest possible ones; we can make them much more complicated, and by changing the phases in the various antennas we can send the beams in various directions and send most of the power in...
+
+Context after the figure:
+
+If the antennas are separated by one-quarter wavelength, and if the N one is one-fourth period behind the S one in time, then what happens (Fig.29–6)? In the W direction we get \(2\) , as we will see later. In the S direction we getzero, because the signal from S comes at a certain time; that from N comes \(90^\circ\) later intime, but it is already \(90^\circ\) behind in its built-in phase, therefore it arrives, altogether, \(180^\circ\) out of phase, and there is no effect. On the other hand, in the N direction, the N signal arrives earlier than the S signal by \(90^\circ\) in time, because it is a quarter wavelength closer. But its phase is set so that it is oscillating \(90^\circ\) behindin time, which just compensates the delay difference, and therefore the two signals appeartogetherin phase, making the field strength twice as large, and the energy four times as great.
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.
+
+## Ch29-F7: Fig. 29–7.The intensity pattern for two dipoles separated by \(10\lambda\) .
+
+Section: 29–4 Two dipole radiators
+Image file: images/Ch29-F7.png
+
+Context before the figure:
+
+Thus, by using some cleverness in spacing and phasing our antennas, we can send the power all in one direction. But still it is distributed over a great range of angles. Can we arrange it so that it is focused still more sharply in a particular direction? Let us consider the case of Hawaii again, where we are sending the beam east and west but it is spread over quite an angle, because even at \(30^\circ\) we are still getting half the intensity—we are wasting the power. Can we do better than that? Let us take a situation in which the separation is ten wavelengths (Fig.29–7), which is more nearly comparable to the situation in which we experimented in the previous chapter, with separations of several wavelengths rather than a small fraction of a wavelength. Here the picture is quite different.
+
+Context after the figure:
+
+If the oscillators are ten wavelengths apart (we take the in-phase case to make it easy), we see that in the E–W direction, they are in phase, and we get a strong intensity, four times what we would get if one of them were there alone. On the other hand, at a very small angle away, the arrival times differ by \(180^\circ\) and the intensity is zero. To be precise, if we draw a line from each oscillator to a distant point and the difference \(\Delta\) in the two distances is \(\lambda/2\) , half an oscillation, then they will be out of phase. So this first null occurs when that happens. (The figure is not drawn to scale; it is only a rough sketch.) This means that we do indeed have a very sharp beam in the direction we want, because if we just move over a little bit we lose all our intensity. Unfortunately for practical purposes, if we were thinking of making a radio broadcasting array...
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.
+
+## Ch29-F8: Fig. 29–8.A six-dipole antenna array and part of its intensity pattern.
+
+Section: 29–4 Two dipole radiators
+Image file: images/Ch29-F8.png
+
+Context before the figure:
+
+Now how can we arrange to get rid of all these extra maxima, or “lobes,” as they are called? We could get rid of the unwanted lobes in a rather interesting way. Suppose that we were to place another set of antennas between the two that we already have. That is, the outside ones are still \(10\lambda\) apart, but between them, say every \(2\lambda\) , we have put another antenna, and we drive them all in phase. There are now six antennas, and if we looked at the intensity in the E–W direction, it would, of course, be much higher with six antennas than with one. The field would be six times and the intensity thirty-six times as great (the square of the field). We get \(36\) units of intensity in that direction. Now if we look at neighboring points, we find a zero as before, roughly, but if we go farther, to where we used to get a big “bump,” we get a much smaller “bump” now. Let us try to...
+
+Context after the figure:
+
+The reason is that although we might expect to get a big bump when the distance \(\Delta\) is exactly equal to the wavelength, it is true that dipoles \(1\) and \(6\) are then in phase and are cooperating in trying to get some strength in that direction. But numbers \(3\) and \(4\) are roughly \(\tfrac{1}{2}\) a wavelength out of phase with \(1\) and \(6\) , and although \(1\) and \(6\) push together, \(3\) and \(4\) push together too, but in opposite phase. Therefore there is very little intensity in this direction—but there is something; it does not balance exactly. This kind of thing keeps on happening; we get very little bumps, and we have the strong beam in the direction where we want it. But in this particular example, something else will happen: namely, since the distance between successive dipoles is \(2\lambda\) , it is possible to find an angle where the distance \(\delta\)...
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.
+
+## Ch29-F9: Fig. 29–9.A geometrical method for combining two cosine waves. The entire diagram is thought of as rotating counterclockwise with angular frequency \(\omega\) .
+
+Section: 29–5 The mathematics of interference
+Image file: images/Ch29-F9.png
+
+Context before the figure:
+
+It is really very easy, and we presume that we already know how to do it. However, we shall outline the procedure in some detail. First, we can, if we are clever with mathematics and know enough about cosines and sines, simply work it out. The easiest such case is the one where \(A_1\) and \(A_2\) are equal, let us say they are both equal to \(A\) . In those circumstances, for example (we could call this the trigonometric method of solving the problem), we have \[ \begin{equation} \label{Eq:I:29:9} R = A[\cos\,(\omega t+\phi_1)+\cos\,(\omega t + \phi_2)]. \end{equation} \] Once, in our trigonometry class, we may have learned the rule that \[ \begin{equation} \label{Eq:I:29:10} \cos A+\cos B=2\cos\tfrac{1}{2}(A+B)\cos\tfrac{1}{2}(A-B). \end{equation} \] If we know that, then we can immediately write \(R\) as \[ \begin{equation} \label{Eq:I:29:11}...
+
+Context after the figure:
+
+Now suppose that we cannot remember that the sum of two cosines is twice the cosine of half the sum times the cosine of half the difference. Then we may use another method of analysis which is more geometrical. Any cosine function of \(\omega t\) can be considered as the horizontal projection of arotating vector. Suppose there were a vector \(\FLPA_1\) of length \(A_1\) rotating with time, so that its angle with the horizontal axis is \(\omega t + \phi_1\) . (We shall leave out the \(\omega t\) in a minute, and see that it makes no difference.) Suppose that we take a snapshot at the time \(t = 0\) , although, in fact, the picture is rotating with angular velocity \(\omega\) (Fig.29–9). The projection of \(\FLPA_1\) along the horizontal axis is precisely \(A_1\cos\,(\omega t + \phi_1)\) . Now at \(t= 0\) the second wave could be represented by another vector, \(\FLPA_2\) , of length...
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.
+
+## Ch29-F10: Fig. 29–10.Two oscillators of equal amplitude, with a phase difference \(\alpha\) between them.
+
+Section: 29–5 The mathematics of interference
+Image file: images/Ch29-F10.png
+
+Context before the figure:
+
+Thus the sum of the two effects has the intensity \(A_1^2\) we would get with one of them alone, plus the intensity \(A_2^2\) we would get with the other one alone, plus a correction. This correction we call theinterference effect. It is really only the difference between what we get simply by adding the intensities, and what actually happens. We call it interference whether it is positive or negative. (Interference in ordinary language usually suggests opposition or hindrance, but in physics we often do not use language the way it was originally designed!) If the interference term is positive, we call that caseconstructiveinterference, horrible though it may sound to anybody other than a physicist! The opposite case is calleddestructiveinterference.
+
+Context after the figure:
+
+Now let us see how to apply our general formula (29.16) for the case of two oscillators to the special situations which we have discussed qualitatively. To apply this general formula, it is only necessary to find what phase difference, \(\phi_2 - \phi_1\) , exists between the signals arriving at a given point. (It depends only on the phase difference, of course, and not on the phase itself.) So let us consider the case where the two oscillators, of equal amplitude, are separated by some distance \(d\) and have an intrinsic relative phase \(\alpha\) . (When one is at phase zero, the phase of the other is \(\alpha\) .) Then we ask what the intensity will be in some azimuth direction \(\theta\) from the E–W line. [Note that this isnotthe same \(\theta\) as appears in (29.1). We are torn between using an unconventional symbol like \(\cancel{\text{U}}\!\!,\) or the conventional symbol...
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.

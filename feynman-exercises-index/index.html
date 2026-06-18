@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>Feynman Exercises Source Index</title>
+<style>
+    :root {
+      --bg: #f7f7f4;
+      --panel: #ffffff;
+      --ink: #1d2428;
+      --muted: #66727a;
+      --line: #d8ddd8;
+      --accent: #2f6f73;
+      --accent-2: #7a4f24;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font: 15px/1.48 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--ink);
+      background: var(--bg);
+    }
+    header {
+      padding: 28px clamp(18px, 4vw, 48px) 18px;
+      border-bottom: 1px solid var(--line);
+      background: #eef3f1;
+    }
+    h1 { margin: 0 0 8px; font-size: clamp(24px, 3vw, 36px); }
+    h2 { margin: 30px 0 10px; font-size: 20px; }
+    h3 { margin: 18px 0 8px; font-size: 16px; color: var(--accent-2); }
+    p { margin: 0 0 10px; }
+    a { color: var(--accent); text-decoration-thickness: 0.08em; text-underline-offset: 0.18em; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.92em; }
+    main { padding: 18px clamp(18px, 4vw, 48px) 42px; max-width: 1240px; }
+    .toolbar {
+      display: flex;
+      gap: 12px;
+      align-items: center;
+      margin: 16px 0 6px;
+      flex-wrap: wrap;
+    }
+    input[type="search"] {
+      width: min(520px, 100%);
+      padding: 10px 12px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: #fff;
+      color: var(--ink);
+      font: inherit;
+    }
+    .note {
+      background: #fff8e8;
+      border: 1px solid #ead8af;
+      border-radius: 6px;
+      padding: 12px 14px;
+      color: #493a20;
+      margin: 14px 0;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 12px;
+      margin: 12px 0;
+    }
+    .card, section {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      padding: 14px;
+    }
+    section { margin: 14px 0; }
+    .card strong { display: block; margin-bottom: 4px; }
+    .meta { color: var(--muted); font-size: 13px; }
+    .tag {
+      display: inline-block;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 2px 8px;
+      margin: 2px 4px 2px 0;
+      color: var(--muted);
+      font-size: 12px;
+      background: #fafaf8;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 8px;
+      background: #fff;
+    }
+    th, td {
+      border-bottom: 1px solid var(--line);
+      padding: 7px 8px;
+      vertical-align: top;
+      text-align: left;
+    }
+    th {
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+    .num { color: var(--muted); width: 42px; }
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+<header>
+<h1>Feynman Exercises: карта источников</h1>
+<p>Один локальный индекс для всего, что сейчас нашли: официальный HTML Caltech, Tips selected exercises, полный задачник PDF/OCR, старые томные PDF и русский DjVu.</p>
+<div class="toolbar">
+<input id="filter" placeholder="Фильтр по названию, источнику, URL..." type="search"/>
+<span class="meta" id="count"></span>
+</div>
+</header>
+<main>
+<div class="note">
+      Это навигационный файл, а не публикация содержимого. Тексты и PDF остаются в исходных местах; здесь только ссылки и рабочие пометки о качестве источника.
+    </div>
+<section data-index="">
+<h2>Сами лекции: официальные HTML, локальные PDF и наши сборки</h2>
+<div class="grid">
+<div class="card">
+<strong>Официальный online HTML</strong>
+<span class="tag">Caltech</span><span class="tag">MathJax</span><span class="tag">volumes I-III</span>
+<p class="meta">Основной HTML-источник для DOM-пайплайна лекций.</p>
+<a href="https://www.feynmanlectures.caltech.edu/">feynmanlectures.caltech.edu</a> ·
+          <a href="https://www.feynmanlectures.caltech.edu/I_toc.html">Volume I TOC</a> ·
+          <a href="https://www.feynmanlectures.caltech.edu/II_toc.html">Volume II TOC</a> ·
+          <a href="https://www.feynmanlectures.caltech.edu/III_toc.html">Volume III TOC</a>
+</div>
+<div class="card">
+<strong>Локальные исходные PDF</strong>
+<span class="tag">book/</span><span class="tag">source PDFs</span>
+<p class="meta">Оригинальные PDF-источники, лежат локально и не должны попадать в git.</p>
+<a data-release-disabled-href="../../book/Richard%20Feynman%20-%20The%20Feynman%20Lectures%20on%20Physics%20-%20Volume%201%20(New%20Millennium,%202010).pdf" href="#">Volume I</a> ·
+          <a data-release-disabled-href="../../book/Richard%20Feynman%20-%20The%20Feynman%20Lectures%20on%20Physics%20-%20Volume%202%20(New%20Millennium,%20Version%202,%202010).pdf" href="#">Volume II</a> ·
+          <a data-release-disabled-href="../../book/Richard%20Feynman%20-%20The%20Feynman%20Lectures%20on%20Physics%20-%20Volume%203%20(New%20Millennium,%202010).pdf" href="#">Volume III</a>
+</div>
+<div class="card">
+<strong>Наш final release EN/RU</strong>
+<span class="tag">enhanced PDFs</span><span class="tag">links</span><span class="tag">TOC</span>
+<p class="meta">Итоговая папка: <code>output/analysis/feynman-final-ru-en/release/en-ru-enhanced-2026-06-14</code>.</p>
+<a data-release-disabled-href="../feynman-final-ru-en/release/en-ru-enhanced-2026-06-14/reports/release-manifest.json" href="#">release manifest</a>
+</div>
+</div>
+<h3>Английские тома, enhanced</h3>
+<table>
+<thead><tr><th>Том</th><th>PDF</th><th>Страниц / ссылки</th></tr></thead>
+<tbody>
+<tr><td>Volume I</td><td><a data-release-disabled-href="../feynman-final-ru-en/release/en-ru-enhanced-2026-06-14/en/feynman-volume-I-en-enhanced.pdf" href="#">feynman-volume-I-en-enhanced.pdf</a></td><td>1020 pages, 2760 link annotations</td></tr>
+<tr><td>Volume II</td><td><a data-release-disabled-href="../feynman-final-ru-en/release/en-ru-enhanced-2026-06-14/en/feynman-volume-II-en-enhanced.pdf" href="#">feynman-volume-II-en-enhanced.pdf</a></td><td>589 pages, 3399 link annotations</td></tr>
+<tr><td>Volume III</td><td><a data-release-disabled-href="../feynman-final-ru-en/release/en-ru-enhanced-2026-06-14/en/feynman-volume-III-en-enhanced.pdf" href="#">feynman-volume-III-en-enhanced.pdf</a></td><td>681 pages, 2358 link annotations</td></tr>
+<tr><td>EPUB pilot</td><td><a data-release-disabled-href="../feynman-epub-pilot/volume-I-ch01-en/feynman-volume-I-ch01-pilot.epub" href="#">Volume I, Chapter 1 EPUB3 pilot</a></td><td>EPUB3, MathML, 10 embedded PNG figures, epubcheck clean.</td></tr>
+<tr><td>EPUB Volume I</td><td><a data-release-disabled-href="../feynman-epub-pilot/volume-I-en-full/feynman-volume-I-en-dom.epub" href="#">feynman-volume-I-en-dom.epub</a></td><td>52 chapters, 343 embedded PNG figures, EPUB3/MathML, epubcheck clean, 13 tracked math fallbacks.</td></tr>
+<tr><td>EPUB Volume I SVGMath</td><td><a data-release-disabled-href="../feynman-epub-pilot/volume-I-en-full-svgmath/feynman-volume-I-en-svgmath.epub" href="#">feynman-volume-I-en-svgmath.epub</a></td><td>Preferred EPUB: 52 chapters, 343 PNG figures, 4455 rendered SVG formulas, no MathML/raw TeX fallbacks, epubcheck clean.</td></tr>
+</tbody>
+</table>
+<h3>Русские тома, enhanced</h3>
+<table>
+<thead><tr><th>Том</th><th>PDF</th><th>Страниц / ссылки</th></tr></thead>
+<tbody>
+<tr><td>Том I</td><td><a data-release-disabled-href="../feynman-final-ru-en/release/en-ru-enhanced-2026-06-14/ru/feynman-volume-I-ru-enhanced.pdf" href="#">feynman-volume-I-ru-enhanced.pdf</a></td><td>770 pages, 1453 link annotations</td></tr>
+<tr><td>Том II</td><td><a data-release-disabled-href="../feynman-final-ru-en/release/en-ru-enhanced-2026-06-14/ru/feynman-volume-II-ru-enhanced.pdf" href="#">feynman-volume-II-ru-enhanced.pdf</a></td><td>745 pages, 2079 link annotations</td></tr>
+<tr><td>Том III</td><td><a data-release-disabled-href="../feynman-final-ru-en/release/en-ru-enhanced-2026-06-14/ru/feynman-volume-III-ru-enhanced.pdf" href="#">feynman-volume-III-ru-enhanced.pdf</a></td><td>439 pages, 1412 link annotations</td></tr>
+<tr><td>Том I EPUB Inline SVGMath</td><td><a data-release-disabled-href="../feynman-epub-pilot/volume-I-ru-reference-guided-inline-svgmath-post/feynman-volume-I-ru-reference-guided-inline-svgmath.epub" href="#">feynman-volume-I-ru-reference-guided-inline-svgmath.epub</a></td><td>Preferred RU EPUB: reference-guided DOM, 52 chapters, 343 PNG figures, 11241 inline currentColor SVG formula instances, no MathML/raw TeX fallbacks, epubcheck clean.</td></tr>
+<tr><td>Том I HTML Inline SVGMath</td><td><a href="../feynman-html-ru/volume-I-reference-guided-inline-svgmath/index.html">volume-I-reference-guided-inline-svgmath/index.html</a></td><td>Preferred RU HTML: 52 chapter pages, side TOC, clickable refs to figures/equations/tables/sections, PDF-map-aware figure slots, 343 PNG figures, 11241 inline currentColor SVG formula instances, no red ddt/ddpl.</td></tr>
+</tbody>
+</table>
+</section>
+<section data-index="">
+<h2>Сводка</h2>
+<div class="grid">
+<div class="card">
+<strong>Том I RU EPUB, исправленные формулы</strong>
+<span class="tag">inline SVGMath</span><span class="tag">currentColor</span><span class="tag">epubcheck clean</span>
+<p class="meta">Формулы встроены как inline SVG, наследуют цвет текста; красных ddt/ddpl больше нет.</p>
+<a data-release-disabled-href="../feynman-epub-pilot/volume-I-ru-reference-guided-inline-svgmath-post/feynman-volume-I-ru-reference-guided-inline-svgmath.epub" href="#">feynman-volume-I-ru-reference-guided-inline-svgmath.epub</a>
+</div>
+<div class="card">
+<strong>Том I RU HTML, исправленные формулы</strong>
+<span class="tag">52 главы</span><span class="tag">343 рисунка</span><span class="tag">inline SVGMath</span><span class="tag">crossrefs</span>
+<p class="meta">Локальная HTML-версия: отдельные страницы глав, боковое оглавление, кликабельные ссылки и PDF-aware размещение рисунков по исходным page/slot данным.</p>
+<a href="../feynman-html-ru/volume-I-reference-guided-inline-svgmath/index.html">Открыть HTML-версию тома I</a>
+</div>
+<div class="card">
+<strong>Официальные HTML-задачи Caltech</strong>
+<span class="tag">47 страниц</span><span class="tag">HTML</span><span class="tag">answers/solutions</span>
+<p class="meta">Небольшая подборка, не полный задачник.</p>
+<a href="https://www.feynmanlectures.caltech.edu/info/exercises.html">Exercises and Solutions</a>
+</div>
+<div class="card">
+<strong>Feynman's Tips, Chapter 5</strong>
+<span class="tag">80 selected exercises</span><span class="tag">PDF/LaTeX release</span>
+<p class="meta">В онлайн TOC указано: эти 80 плюс около 900 более сложных вошли в полный Exercises book.</p>
+<a href="https://www.feynmanlectures.caltech.edu/TIPS_toc.html">TIPS_toc.html</a>
+</div>
+<div class="card">
+<strong>Полный Exercises book</strong>
+<span class="tag">около 944 задач по OCR</span><span class="tag">скан + OCR</span>
+<p class="meta">Локальный PDF имеет image pages и OCR-текстовый слой; формулы требуют восстановления.</p>
+<a data-release-disabled-href="file:///Users/dmitry/Downloads/dokumen.pub_exercies-for-the-feynman-lectures-on-physics-new-millennium-edition-9780465060719-9780465036615.pdf" href="#">local PDF</a>
+</div>
+<div class="card">
+<strong>Original Course Handouts</strong>
+<span class="tag">Caltech viewer</span><span class="tag">homework/tests</span>
+<p class="meta">Много задач и раздаток исходного курса, отдельный источник.</p>
+<a href="https://www.feynmanlectures.caltech.edu/flphandouts.html">FLP Original Course Handouts</a>
+</div>
+</div>
+</section>
+<section data-index="">
+<h2>Локальные итоговые файлы Tips</h2>
+<table>
+<thead><tr><th>Файл</th><th>Ссылка</th><th>Комментарий</th></tr></thead>
+<tbody>
+<tr>
+<td>Tips RU linked PDF</td>
+<td><a href="../feynman-tips-ru-en/release/tips-ru-en-2026-06-14-v5-dom-hybrid/ru/feynmans-tips-ru-full-dom-hybrid-linked.pdf#page=125">русский PDF, глава 5</a></td>
+<td>Selected exercises начинаются примерно со страницы 125.</td>
+</tr>
+<tr>
+<td>Tips EN linked PDF</td>
+<td><a href="../feynman-tips-ru-en/release/tips-ru-en-2026-06-14-v5-dom-hybrid/en/feynmans-tips-en-full-dom-hybrid-linked.pdf#page=113">английский PDF, chapter 5</a></td>
+<td>Selected Exercises начинаются примерно со страницы 113.</td>
+</tr>
+<tr>
+<td>Tips source PDF</td>
+<td><a data-release-disabled-href="../feynman-tips-ru-en/source/feynmans-tips-on-physics-2013.pdf" href="#">локальный исходный PDF</a></td>
+<td>Оригинальный источник для нашего Tips-пайплайна.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section data-index="">
+<h2>Полный задачник и старые локальные PDFs</h2>
+<table>
+<thead><tr><th>Источник</th><th>Ссылка</th><th>Качество</th></tr></thead>
+<tbody>
+<tr>
+<td>Exercises for the Feynman Lectures on Physics, New Millennium Edition</td>
+<td><a data-release-disabled-href="file:///Users/dmitry/Downloads/dokumen.pub_exercies-for-the-feynman-lectures-on-physics-new-millennium-edition-9780465060719-9780465036615.pdf" href="#">local PDF</a> · <a href="https://www.hachettebookgroup.com/titles/richard-p-feynman/exercises-for-the-feynman-lectures-on-physics/9780465060719/?lens=basic-books">official publisher page</a></td>
+<td>309 pages, скан + OCR. Полный современный источник, но OCR грязный.</td>
+</tr>
+<tr>
+<td>Volume 1 Exercises, Addison-Wesley 1964</td>
+<td><a data-release-disabled-href="file:///Users/dmitry/Downloads/Richard%20Feynman%20-%20The%20Feynman%20Lectures%20on%20Physics%20(PDF,%20DJVU,%20ENG)/Richard%20Feynman%20-%20The%20Feynman%20Lectures%20on%20Physics%20-%20Volume%201%20Exercises%20(Addison-Wesley,%201964).pdf" href="#">local PDF</a></td>
+<td>129 pages, старый томный источник, без нормального текстового слоя.</td>
+</tr>
+<tr>
+<td>Volume 2 Exercises, Addison-Wesley 1964</td>
+<td><a data-release-disabled-href="file:///Users/dmitry/Downloads/Richard%20Feynman%20-%20The%20Feynman%20Lectures%20on%20Physics%20(PDF,%20DJVU,%20ENG)/Richard%20Feynman%20-%20The%20Feynman%20Lectures%20on%20Physics%20-%20Volume%202%20Exercises%20(Addison-Wesley,%201964).pdf" href="#">local PDF</a></td>
+<td>97 pages, старый томный источник, без нормального текстового слоя.</td>
+</tr>
+<tr>
+<td>Volume 3 Exercises, Addison-Wesley 1964</td>
+<td><a data-release-disabled-href="file:///Users/dmitry/Downloads/Richard%20Feynman%20-%20The%20Feynman%20Lectures%20on%20Physics%20(PDF,%20DJVU,%20ENG)/Richard%20Feynman%20-%20The%20Feynman%20Lectures%20on%20Physics%20-%20Volume%203%20Exercises%20(Addison-Wesley,%201964).pdf" href="#">local PDF</a></td>
+<td>49 pages, старый томный источник, без нормального текстового слоя.</td>
+</tr>
+<tr>
+<td>Русский задачник: задачи и упражнения с ответами и решениями, 1978</td>
+<td><a data-release-disabled-href="file:///Users/dmitry/Downloads/Фейнман%20Р.,%20Лейтон%20Р.,%20Сэндс%20М.%20-%20Фейнмановские%20лекции%20по%20физике%20-%201976-78/Фейнман%20Р.,%20Лейтон%20Р.,%20Сэндс%20М.%20-%20Задачи%20и%20упражнения%20с%20ответами%20и%20решениями%20-%201978.djvu" href="#">local DjVu</a></td>
+<td>Русский референс, вероятно без текстового слоя.</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section data-index="">
+<h2>Официальные HTML-задачи Caltech</h2>
+<p class="meta">47 страниц из раздела <a href="https://www.feynmanlectures.caltech.edu/info/exercises.html">Exercises and Solutions</a>. Многие имеют Answer iframe и один или несколько solution-файлов.</p>
+<table>
+<thead><tr><th class="num">#</th><th>Задача</th><th>HTML</th></tr></thead>
+<tbody>
+<tr><td class="num">1</td><td>Atwood's machine</td><td><a href="https://www.feynmanlectures.caltech.edu/info/exercises/atwood.html">atwood.html</a></td></tr>
+<tr><td class="num">2</td><td>bag of marbles</td><td><a href="https://www.feynmanlectures.caltech.edu/info/exercises/bag_of_marbles.html">bag_of_marbles.html</a></td></tr>
+<tr><td class="num">3</td><td>balance moon stone</td><td><a href="https://www.feynmanlectures.caltech.edu/info/exercises/balance_moon_stone.html">balance_moon_stone.html</a></td></tr>
+<tr><td class="num">4</td><td>ball up/down</td><td><a href="https://www.feynmanlectures.caltech.edu/info/exercises/ball_up_down.html">ball_up_down.html</a></td></tr>
+<tr><td class="num">5</td><td>bead parabola accelerometer</td><td><a href="https://www.feynmanlectures.caltech.edu/info/exercises/bead_parabola_accelerometer.html">bead_parabola_accelerometer.html</a></td></tr>
+<tr><td class="num">6</td><td>boat anchor lake</td><td><a href="https://www.feynmanlectures.caltech.edu/info/exercises/boat_anchor_lake.html">boat_anchor_lake.html</a></td></tr>
+<tr><td class="num">7</td><td>boat time</td><td><a href="https://www.feynmanlectures.caltech.edu/info/exercises/boat_time.html">boat_time.html</a></td></tr>
+<tr><td class="num">8</td><td>bobbin on incline</td><td><a href="https://www.feynmanlectures.caltech.edu/info/exercises/bobbin_on_incline.html">bobbin_on_incline.html</a></td></tr>
+<tr><td class="num">9</td><td>bosun's chair</td><td><a href="https://www.feynmanlectures.caltech.edu/info/exercises/bosuns_chair.html">bosuns_chair.html</a></td></tr>
+<tr><td class="num">10</td><td>bouncing ball</td><td><a href="https://www.feynmanlectures.caltech.edu/info/exercises/bouncing_ball.html">bouncing_ball.html</a></td></tr>
+<tr><td class="num">11</td><td>bowling ball rolling</td><td><a href="https://www.feynmanlectures.caltech.edu/info/exercises/bowling_ball_rolling.html">bowling_ball_rolling.html</a></td></tr>
+<tr><td class="num">12</td><td>bug on band</td><td><a href="https://www.feynmanlectures.caltech.edu/info/exercises/bug_on_band.html">bug_on_band.html</a></td></tr>
+<tr><td class="num">13</td><td>bursting shell</td><td><a href="https://www.feynmanlectures.caltech.edu/info/exercises/bursting_shell.html">bursting_shell.html</a></td></tr>
+<tr><td class="num">14</td><td>falling chain</td><td><a href="https://www.feynmanlectures.caltech.edu/info/exercises/falling_chain.html">falling_chain.html</a></td></tr>
+<tr><td class="num">15</td><td>Feynman's restaurant problem</td><td><a href="https://www.feynmanlectures.caltech.edu/info/exercises/feynmans_restaurant_problem.html">feynmans_restaurant_problem.html</a></td></tr>
+<tr><td class="num">16</td><td>five pills</td><td><a href="https://www.feynmanlectures.caltech.edu/info/exercises/five_pills.html">five_pills.html</a></td></tr>
+<tr><td class="num">17</td><td>flying cable</td><td><a href="https://www.feynmanlectures.caltech.edu/info/exercises/flying_cable.html">flying_cable.html</a></td></tr>
+<tr><td class="num">18</td><td>forced pendulum</td><td><a href="https://www.feynmanlectures.caltech.edu/info/exercises/forced_pendulum.html">forced_pendulum.html</a></td></tr>
+<tr><td class="num">19</td><td>gold mountain</td><td><a href="https://www.feynmanlectures.caltech.edu/info/exercises/gold_mountain.html">gold_mountain.html</a></td></tr>
+<tr><td class="num">20</td><td>half pills</td><td><a href="https://www.feynmanlectures.caltech.edu/info/exercises/half_pills.html">half_pills.html</a></td></tr>
+<tr><td class="num">21</td><td>hallway pole</td><td><a href="https://www.feynmanlectures.caltech.edu/info/exercises/hallway_pole.html">hallway_pole.html</a></td></tr>
+<tr><td class="num">22</td><td>impelled rod</td><td><a href="https://www.feynmanlectures.caltech.edu/info/exercises/impelled_rod.html">impelled_rod.html</a></td></tr>
+<tr><td class="num">23</td><td>inelastic relativistic collision</td><td><a href="https://www.feynmanlectures.caltech.edu/info/exercises/inelastic_relativistic_collision.html">inelastic_relativistic_collision.html</a></td></tr>
+<tr><td class="num">24</td><td>infinite pulleys</td><td><a href="https://www.feynmanlectures.caltech.edu/info/exercises/infinite_pulleys.html">infinite_pulleys.html</a></td></tr>
+<tr><td class="num">25</td><td>mass on an incline</td><td><a href="https://www.feynmanlectures.caltech.edu/info/exercises/mass_on_incline.html">mass_on_incline.html</a></td></tr>
+<tr><td class="num">26</td><td>maximum angle of deflection</td><td><a href="https://www.feynmanlectures.caltech.edu/info/exercises/maximum_angle_deflection.html">maximum_angle_deflection.html</a></td></tr>
+<tr><td class="num">27</td><td>packs of shirts</td><td><a href="https://www.feynmanlectures.caltech.edu/info/exercises/packs_of_shirts.html">packs_of_shirts.html</a></td></tr>
+<tr><td class="num">28</td><td>particle in bowl</td><td><a href="https://www.feynmanlectures.caltech.edu/info/exercises/particle_in_bowl.html">particle_in_bowl.html</a></td></tr>
+<tr><td class="num">29</td><td>particle in cone</td><td><a href="https://www.feynmanlectures.caltech.edu/info/exercises/particle_in_cone.html">particle_in_cone.html</a></td></tr>
+<tr><td class="num">30</td><td>particle on sphere</td><td><a href="https://www.feynmanlectures.caltech.edu/info/exercises/particle_on_sphere.html">particle_on_sphere.html</a></td></tr>
+<tr><td class="num">31</td><td>particle points parabola</td><td><a href="https://www.feynmanlectures.caltech.edu/info/exercises/particle_points_parabola.html">particle_points_parabola.html</a></td></tr>
+<tr><td class="num">32</td><td>pile of bricks</td><td><a href="https://www.feynmanlectures.caltech.edu/info/exercises/pile_of_bricks.html">pile_of_bricks.html</a></td></tr>
+<tr><td class="num">33</td><td>pion muon neutrino</td><td><a href="https://www.feynmanlectures.caltech.edu/info/exercises/pion_muon_neutrino.html">pion_muon_neutrino.html</a></td></tr>
+<tr><td class="num">34</td><td>piston ramp spring</td><td><a href="https://www.feynmanlectures.caltech.edu/info/exercises/piston_ramp_spring.html">piston_ramp_spring.html</a></td></tr>
+<tr><td class="num">35</td><td>plank weight trough</td><td><a href="https://www.feynmanlectures.caltech.edu/info/exercises/plank_weight_trough.html">plank_weight_trough.html</a></td></tr>
+<tr><td class="num">36</td><td>rocket vs. jet</td><td><a href="https://www.feynmanlectures.caltech.edu/info/exercises/rocket_vs_jet.html">rocket_vs_jet.html</a></td></tr>
+<tr><td class="num">37</td><td>roll without slipping</td><td><a href="https://www.feynmanlectures.caltech.edu/info/exercises/roll_without_slipping.html">roll_without_slipping.html</a></td></tr>
+<tr><td class="num">38</td><td>rough inclined plane</td><td><a href="https://www.feynmanlectures.caltech.edu/info/exercises/rough_inclined_plane.html">rough_inclined_plane.html</a></td></tr>
+<tr><td class="num">39</td><td>shooting marbles</td><td><a href="https://www.feynmanlectures.caltech.edu/info/exercises/shooting_marbles.html">shooting_marbles.html</a></td></tr>
+<tr><td class="num">40</td><td>speedometer test</td><td><a href="https://www.feynmanlectures.caltech.edu/info/exercises/speedometer_test.html">speedometer_test.html</a></td></tr>
+<tr><td class="num">41</td><td>three balls</td><td><a href="https://www.feynmanlectures.caltech.edu/info/exercises/three_balls.html">three_balls.html</a></td></tr>
+<tr><td class="num">42</td><td>three logs</td><td><a href="https://www.feynmanlectures.caltech.edu/info/exercises/three_logs.html">three_logs.html</a></td></tr>
+<tr><td class="num">43</td><td>turntable cart</td><td><a href="https://www.feynmanlectures.caltech.edu/info/exercises/turntable_cart.html">turntable_cart.html</a></td></tr>
+<tr><td class="num">44</td><td>two rolling balls</td><td><a href="https://www.feynmanlectures.caltech.edu/info/exercises/two_rolling_balls.html">two_rolling_balls.html</a></td></tr>
+<tr><td class="num">45</td><td>wheel and block</td><td><a href="https://www.feynmanlectures.caltech.edu/info/exercises/wheel_and_block.html">wheel_and_block.html</a></td></tr>
+<tr><td class="num">46</td><td>whirling pendulum</td><td><a href="https://www.feynmanlectures.caltech.edu/info/exercises/whirling_pendulum.html">whirling_pendulum.html</a></td></tr>
+<tr><td class="num">47</td><td>worlds fair ornament</td><td><a href="https://www.feynmanlectures.caltech.edu/info/exercises/worlds_fair.html">worlds_fair.html</a></td></tr>
+</tbody>
+</table>
+</section>
+</main>
+<script>
+    const filter = document.getElementById('filter');
+    const count = document.getElementById('count');
+    const rows = Array.from(document.querySelectorAll('tbody tr'));
+    const sections = Array.from(document.querySelectorAll('section[data-index]'));
+    function applyFilter() {
+      const q = filter.value.trim().toLowerCase();
+      let visibleRows = 0;
+      rows.forEach(row => {
+        const show = !q || row.textContent.toLowerCase().includes(q);
+        row.classList.toggle('hidden', !show);
+        if (show) visibleRows += 1;
+      });
+      sections.forEach(section => {
+        const tableRows = section.querySelectorAll('tbody tr');
+        if (!tableRows.length) return;
+        const any = Array.from(tableRows).some(row => !row.classList.contains('hidden'));
+        section.classList.toggle('hidden', !any);
+      });
+      count.textContent = q ? `Показано строк: ${visibleRows}` : `Строк-ссылок: ${rows.length}`;
+    }
+    filter.addEventListener('input', applyFilter);
+    applyFilter();
+  </script>
+</body>
+</html>

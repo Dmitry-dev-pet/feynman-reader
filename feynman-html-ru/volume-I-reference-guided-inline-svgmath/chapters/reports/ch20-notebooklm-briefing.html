@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Аналитический отчет: Вращение в пространстве (Глава 20) - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch20.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1
+id="аналитический-отчет-вращение-в-пространстве-глава-20">Аналитический
+отчет: Вращение в пространстве (Глава 20)</h1>
+<p>Данный отчет представляет собой глубокий анализ принципов вращения
+тел в трехмерном пространстве, основанный на материалах 20-й главы
+«Фейнмановских лекций по физике». Документ охватывает переход от
+двумерного к трехмерному описанию вращения, векторный формализм,
+динамику гироскопов и свойства моментов инерции твердых тел.</p>
+<h2 id="1-резюме">1. Резюме</h2>
+<p>Переход к анализу вращения в трех измерениях требует расширения
+математического аппарата, в частности, введения векторного произведения.
+Основная идея главы заключается в том, что такие величины, как момент
+силы
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>τ</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{\tau}</annotation></semantics></math>)
+и момент количества движения
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>L</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{L}</annotation></semantics></math>),
+хотя и описывают вращение в плоскости, в трехмерном пространстве ведут
+себя как векторы (псевдовекторы). Центральным физическим законом
+является уравнение
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>τ</mi><mo accent="true">→</mo></mover><mo>=</mo><mi>d</mi><mover><mi>L</mi><mo accent="true">→</mo></mover><mi>/</mi><mi>d</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">\vec{\tau} = d\vec{L}/dt</annotation></semantics></math>,
+которое объясняет как сохранение момента импульса, так и сложные
+явления, такие как прецессия и нутация гироскопа. Анализ завершается
+выводом о том, что в общем случае векторы угловой скорости и момента
+количества движения не параллельны, что приводит к возникновению
+динамических нагрузок на оси вращения.</p>
+<hr />
+<h2 id="2-математический-аппарат-вращения-в-3d">2. Математический
+аппарат вращения в 3D</h2>
+<h3 id="векторная-природа-вращательных-величин">Векторная природа
+вращательных величин</h3>
+<p>В двумерном пространстве момент силы — это скаляр. В трехмерном
+пространстве момент силы в любой плоскости (например,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mi>y</mi><mo>,</mo><mi>y</mi><mi>z</mi><mo>,</mo><mi>z</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">xy, yz, zx</annotation></semantics></math>)
+можно представить как компоненты вектора. Фейнман доказывает, что при
+повороте системы координат эти компоненты преобразуются так же, как
+координаты вектора.</p>
+<ul>
+<li><strong>Направление вектора:</strong> По соглашению, вектор
+направлен перпендикулярно плоскости вращения по правилу правого
+винта.</li>
+<li><strong>Типы векторов:</strong>
+<ul>
+<li><strong>Полярные векторы:</strong> Обычные векторы
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>r</mi><mo accent="true">→</mo></mover><mo>,</mo><mover><mi>F</mi><mo accent="true">→</mo></mover><mo>,</mo><mover><mi>p</mi><mo accent="true">→</mo></mover><mo>,</mo><mover><mi>v</mi><mo accent="true">→</mo></mover><mo>,</mo><mover><mi>E</mi><mo accent="true">→</mo></mover></mrow><annotation encoding="application/x-tex">\vec{r}, \vec{F}, \vec{p}, \vec{v}, \vec{E}</annotation></semantics></math>).</li>
+<li><strong>Аксиальные векторы (псевдовекторы):</strong> Векторы,
+возникающие из векторного произведения
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>τ</mi><mo accent="true">→</mo></mover><mo>,</mo><mover><mi>L</mi><mo accent="true">→</mo></mover><mo>,</mo><mover><mi>ω</mi><mo accent="true">→</mo></mover><mo>,</mo><mover><mi>B</mi><mo accent="true">→</mo></mover></mrow><annotation encoding="application/x-tex">\vec{\tau}, \vec{L}, \vec{\omega}, \vec{B}</annotation></semantics></math>).
+Их направление зависит от выбора «право» или «лево» в системе
+координат.</li>
+</ul></li>
+</ul>
+<h3 id="основные-формулы-векторного-произведения">Основные формулы
+векторного произведения</h3>
+<p>Если
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>c</mi><mo accent="true">→</mo></mover><mo>=</mo><mover><mi>a</mi><mo accent="true">→</mo></mover><mo>×</mo><mover><mi>b</mi><mo accent="true">→</mo></mover></mrow><annotation encoding="application/x-tex">\vec{c} = \vec{a} \times \vec{b}</annotation></semantics></math>,
+то компоненты определяются как:</p>
+<ul>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>c</mi><mi>x</mi></msub><mo>=</mo><msub><mi>a</mi><mi>y</mi></msub><msub><mi>b</mi><mi>z</mi></msub><mo>−</mo><msub><mi>a</mi><mi>z</mi></msub><msub><mi>b</mi><mi>y</mi></msub></mrow><annotation encoding="application/x-tex">c_x = a_y b_z - a_z b_y</annotation></semantics></math></li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>c</mi><mi>y</mi></msub><mo>=</mo><msub><mi>a</mi><mi>z</mi></msub><msub><mi>b</mi><mi>x</mi></msub><mo>−</mo><msub><mi>a</mi><mi>x</mi></msub><msub><mi>b</mi><mi>z</mi></msub></mrow><annotation encoding="application/x-tex">c_y = a_z b_x - a_x b_z</annotation></semantics></math></li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>c</mi><mi>z</mi></msub><mo>=</mo><msub><mi>a</mi><mi>x</mi></msub><msub><mi>b</mi><mi>y</mi></msub><mo>−</mo><msub><mi>a</mi><mi>y</mi></msub><msub><mi>b</mi><mi>x</mi></msub></mrow><annotation encoding="application/x-tex">c_z = a_x b_y - a_y b_x</annotation></semantics></math></li>
+</ul>
+<p><strong>Геометрические свойства:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>c</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{c}</annotation></semantics></math>
+перпендикулярен
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>a</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{a}</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>b</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{b}</annotation></semantics></math>,
+а его модуль равен
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mi>b</mi><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mi>θ</mi></mrow><annotation encoding="application/x-tex">ab \sin \theta</annotation></semantics></math>.</p>
+<hr />
+<h2 id="3-динамические-законы-вращения">3. Динамические законы
+вращения</h2>
+<p>Векторная запись позволяет лаконично представить фундаментальные
+законы механики:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Величина</th>
+<th style="text-align: left;">Формула</th>
+<th style="text-align: left;">Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Момент силы</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>τ</mi><mo accent="true">→</mo></mover><mo>=</mo><mover><mi>r</mi><mo accent="true">→</mo></mover><mo>×</mo><mover><mi>F</mi><mo accent="true">→</mo></mover></mrow><annotation encoding="application/x-tex">\vec{\tau} = \vec{r} \times \vec{F}</annotation></semantics></math></td>
+<td style="text-align: left;">Векторное произведение радиус-вектора на
+силу.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Момент количества
+движения</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>L</mi><mo accent="true">→</mo></mover><mo>=</mo><mover><mi>r</mi><mo accent="true">→</mo></mover><mo>×</mo><mover><mi>p</mi><mo accent="true">→</mo></mover></mrow><annotation encoding="application/x-tex">\vec{L} = \vec{r} \times \vec{p}</annotation></semantics></math></td>
+<td style="text-align: left;">Для одной частицы.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Основной закон
+динамики</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>τ</mi><mo accent="true">→</mo></mover><mo>=</mo><mfrac><mrow><mi>d</mi><mover><mi>L</mi><mo accent="true">→</mo></mover></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\vec{\tau} = \frac{d\vec{L}}{dt}</annotation></semantics></math></td>
+<td style="text-align: left;">Скорость изменения момента количества
+движения равна моменту внешних сил.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Линейная скорость</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>v</mi><mo accent="true">→</mo></mover><mo>=</mo><mover><mi>ω</mi><mo accent="true">→</mo></mover><mo>×</mo><mover><mi>r</mi><mo accent="true">→</mo></mover></mrow><annotation encoding="application/x-tex">\vec{v} = \vec{\omega} \times \vec{r}</annotation></semantics></math></td>
+<td style="text-align: left;">Связь угловой и линейной скоростей в
+твердом теле.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Сила Кориолиса</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mover><mi>F</mi><mo accent="true">→</mo></mover><mi>c</mi></msub><mo>=</mo><mn>2</mn><mi>m</mi><mo stretchy="false" form="prefix">(</mo><mover><mi>v</mi><mo accent="true">→</mo></mover><mo>×</mo><mover><mi>ω</mi><mo accent="true">→</mo></mover><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\vec{F}_c = 2m(\vec{v} \times \vec{\omega})</annotation></semantics></math></td>
+<td style="text-align: left;">Псевдосила во вращающейся системе
+координат.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Мощность</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mover><mi>τ</mi><mo accent="true">→</mo></mover><mo>⋅</mo><mover><mi>ω</mi><mo accent="true">→</mo></mover></mrow><annotation encoding="application/x-tex">P = \vec{\tau} \cdot \vec{\omega}</annotation></semantics></math></td>
+<td style="text-align: left;">Скалярное произведение момента силы на
+угловую скорость.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4-анализ-работы-гироскопа">4. Анализ работы гироскопа</h2>
+<h3 id="прецессия">Прецессия</h3>
+<p>Прецессия — это движение оси быстро вращающегося тела под действием
+внешнего момента сил.</p>
+<ul>
+<li><strong>Уравнение прецессии:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>τ</mi><mo accent="true">→</mo></mover><mo>=</mo><mover><mi mathvariant="normal">Ω</mi><mo accent="true">→</mo></mover><mo>×</mo><msub><mover><mi>L</mi><mo accent="true">→</mo></mover><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">\vec{\tau} = \vec{\Omega} \times \vec{L}_0</annotation></semantics></math>,
+где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi mathvariant="normal">Ω</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{\Omega}</annotation></semantics></math>
+— угловая скорость прецессии.</li>
+<li><strong>Физический смысл:</strong> Направление прецессии всегда
+перпендикулярно приложенной силе. Например, сила тяжести, действующая
+вниз на ось волчка, заставляет его двигаться в горизонтальном
+направлении (Фиг. 20.3).</li>
+</ul>
+<h3 id="физическая-сущность-явления-уровень-частиц">Физическая сущность
+явления (уровень частиц)</h3>
+<p>Фейнман подчеркивает, что математика прецессии может казаться
+«колдовством», но её можно понять через реальные силы (Фиг. 20.4).
+Частицы вращающегося колеса при повороте оси вынуждены двигаться по
+криволинейным траекториям. Это требует боковых сил, которые передаются
+от оси через спицы к ободу. Эти силы и создают наблюдаемый момент.</p>
+<h3 id="нутация-и-установление-движения">Нутация и установление
+движения</h3>
+<p>Когда гироскоп отпускают, он не начинает прецессировать мгновенно и
+идеально (Фиг. 20.5):</p>
+<ol type="1">
+<li><strong>Падение:</strong> В первый момент ось начинает падать под
+действием силы тяжести.</li>
+<li><strong>Движение вбок:</strong> Как только началось падение,
+возникает составляющая движения, которая порождает прецессию.</li>
+<li><strong>Нутация:</strong> Ось описывает кривую — циклоиду. Это
+быстрое колебание (нутация) обычно затухает из-за трения, оставляя
+чистую прецессию.</li>
+<li><strong>Смещение:</strong> После установления прецессии ось всегда
+оказывается чуть ниже исходного горизонтального положения. Это
+необходимо для того, чтобы угловой момент имел вертикальную
+составляющую, поддерживающую вращение вокруг вертикальной оси.</li>
+</ol>
+<hr />
+<h2 id="5-момент-количества-движения-твердого-тела">5. Момент количества
+движения твердого тела</h2>
+<h3 id="несоосность-vecl-и-vecomega">Несоосность
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>L</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{L}</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>ω</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{\omega}</annotation></semantics></math></h3>
+<p>Важнейший вывод главы: <strong>вектор момента количества движения
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>L</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{L}</annotation></semantics></math>)
+не обязательно совпадает по направлению с вектором угловой скорости
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>ω</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{\omega}</annotation></semantics></math>)</strong>.
+Пример (Фиг. 20.6): Колесо, закрепленное наклонно на оси. При вращении
+центробежные силы пытаются «выпрямить» колесо, создавая момент сил на
+подшипники. Это означает, что
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>L</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{L}</annotation></semantics></math>
+постоянно меняет направление, вращаясь вокруг оси
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>ω</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{\omega}</annotation></semantics></math>.</p>
+<h3 id="главные-оси-и-моменты-инерции">Главные оси и моменты
+инерции</h3>
+<p>Любое тело (даже неправильной формы, «как картошка») имеет три
+взаимно перпендикулярные <strong>главные оси</strong>.</p>
+<ul>
+<li>Если тело вращается вокруг главной оси, то
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>L</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{L}</annotation></semantics></math>
+параллелен
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>ω</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{\omega}</annotation></semantics></math>.</li>
+<li><strong>Главные моменты инерции:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>,</mo><mi>B</mi><mo>,</mo><mi>C</mi></mrow><annotation encoding="application/x-tex">A, B, C</annotation></semantics></math>
+(максимальный, минимальный и промежуточный).</li>
+</ul>
+<p><strong>Энергия и момент:</strong></p>
+<ul>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>L</mi><mo accent="true">→</mo></mover><mo>=</mo><mi>A</mi><msub><mi>ω</mi><mi>x</mi></msub><mover><mi>i</mi><mo accent="true">→</mo></mover><mo>+</mo><mi>B</mi><msub><mi>ω</mi><mi>y</mi></msub><mover><mi>j</mi><mo accent="true">→</mo></mover><mo>+</mo><mi>C</mi><msub><mi>ω</mi><mi>z</mi></msub><mover><mi>k</mi><mo accent="true">→</mo></mover></mrow><annotation encoding="application/x-tex">\vec{L} = A\omega_x\vec{i} + B\omega_y\vec{j} + C\omega_z\vec{k}</annotation></semantics></math>
+(Уравнение 20.16)</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi><mi>E</mi><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo stretchy="false" form="prefix">(</mo><mi>A</mi><msubsup><mi>ω</mi><mi>x</mi><mn>2</mn></msubsup><mo>+</mo><mi>B</mi><msubsup><mi>ω</mi><mi>y</mi><mn>2</mn></msubsup><mo>+</mo><mi>C</mi><msubsup><mi>ω</mi><mi>z</mi><mn>2</mn></msubsup><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mover><mi>L</mi><mo accent="true">→</mo></mover><mo>⋅</mo><mover><mi>ω</mi><mo accent="true">→</mo></mover></mrow><annotation encoding="application/x-tex">KE = \frac{1}{2}(A\omega_x^2 + B\omega_y^2 + C\omega_z^2) = \frac{1}{2} \vec{L} \cdot \vec{\omega}</annotation></semantics></math>
+(Уравнение 20.17)</li>
+</ul>
+<hr />
+<h2 id="6-важные-цитаты-и-идеи">6. Важные цитаты и идеи</h2>
+<blockquote>
+<p>«По мере углубления во все более сложную физику многие простые вещи
+легче вывести математически, чем действительно понять их фундаментальный
+или простой смысл».</p>
+</blockquote>
+<ul>
+<li><strong>Контекст:</strong> Фейнман обсуждает сложность интуитивного
+понимания прецессии гироскопа по сравнению с простотой векторного
+уравнения.</li>
+</ul>
+<blockquote>
+<p>«Математика дает результаты, которые никто не может понять
+непосредственно... В нашем частном случае прецессия волчка кажется
+чудом, каким-то тайнодействием с прямыми углами, окружностями,
+крутящимися силами и правовинтовыми болтами».</p>
+</blockquote>
+<ul>
+<li><strong>Контекст:</strong> Сравнение классической механики с
+уравнением Дирака, где математическая красота опережает непосредственную
+наглядность.</li>
+</ul>
+<hr />
+<h2 id="7-ключевые-выводы-для-аналитика">7. Ключевые выводы для
+аналитика</h2>
+<ol type="1">
+<li><strong>Геометрическая зависимость:</strong> Векторный метод в 3D —
+это «счастливая случайность» трехмерного пространства, где каждой
+плоскости можно сопоставить единственную перпендикулярную ось. В четырех
+измерениях такая модель не работала бы.</li>
+<li><strong>Динамическая компенсация:</strong> Прецессия — это способ
+системы скомпенсировать внешний момент сил путем изменения направления
+внутреннего момента количества движения.</li>
+<li><strong>Неидеальность моделей:</strong> «Чистая прецессия» — лишь
+частный случай. Реальное движение всегда включает нутацию и небольшое
+отклонение (опускание) оси для удовлетворения законов сохранения.</li>
+<li><strong>Конструкторская значимость:</strong> Несовпадение
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>L</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{L}</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>ω</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{\omega}</annotation></semantics></math>
+в несимметричных телах приводит к вибрациям и нагрузкам на подшипники,
+что критично при проектировании любых вращающихся механизмов.</li>
+</ol>
+    </article>
+  </main>
+</body>
+</html>

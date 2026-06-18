@@ -1,0 +1,58 @@
+# Figure context for Chapter 42. Applications of Kinetic Theory
+
+SOURCE: Feynman Lectures on Physics, Volume I, Chapter 42
+LANGUAGE: en
+SOURCE_URL: https://www.feynmanlectures.caltech.edu/I_42.html
+
+NotebookLM use: pair this file with the clean chapter text and the PNG image files below. The visual descriptions here are inferred from the surrounding lecture text; the PNG files are included so NotebookLM can inspect the diagrams directly when image sources are uploaded.
+
+## Ch42-F1: Fig. 42–1.The energy relationship for the reaction \(A + B \to AB\) .
+
+Section: 42–4 Chemical kinetics
+Image file: images/Ch42-F1.png
+
+Context before the figure:
+
+Suppose that we tried to understand this formula as a result of collisions, much in the way that we understood the evaporation formula, by arguing about how many electrons came off and how many of them came back per unit time. Suppose that \(A\) and \(B\) combine in a collision every once in a while to form a compound \(AB\) . And suppose that the compound \(AB\) is a complicated molecule which jiggles around and is hit by other molecules, and from time to time it gets enough energy to explode and break up again into \(A\) and \(B\) .
+
+Context after the figure:
+
+Now it actually turns out, in chemical reactions, that if the atoms come together with too small an energy, even though energy may be released in the reaction \(A + B \to AB\) , the fact that \(A\) and \(B\) may touch each other does not necessarily make the reaction start. It usually is required that the collision be rather hard, in fact, to get the reaction to go at all—a “soft” collision between \(A\) and \(B\) may not do it, even though energy may be released in the process. So let us suppose that it is very common in chemical reactions that, in order for \(A\) and \(B\) to form \(AB\) , they cannot just hit each other, but they have to hit each otherwith sufficient energy. This energy is called theactivation energy—the energy needed to “activate” the reaction. Call \(A\stared\) the activation energy, the excess energy needed in a collision in order that the reaction may really...
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.
+
+## Ch42-F2: Fig. 42–2.Transitions between two energy levels of an atom.
+
+Section: 42–5 Einstein’s laws of radiation
+Image file: images/Ch42-F2.png
+
+Context before the figure:
+
+We now turn to an interesting analogous situation having to do with the blackbody radiation law. In the last chapter we worked out the distribution law for the radiation in a cavity the way Planck did, considering the radiation from an oscillator. The oscillator had to have a certain mean energy, and since it was oscillating, it would radiate and would keep pumping radiation into the cavity until it piled up enough radiation to balance the absorption and emission. In that way we found that the intensity of radiation at frequency \(\omega\) was given by the formula \[ \begin{equation} \label{Eq:I:42:12} I(\omega)\,d\omega = \frac{\hbar\omega^3\,d\omega} {\pi^2c^2(e^{\hbar\omega/kT} - 1)}. \end{equation} \] This result involved the assumption that the oscillator which was generating the radiation had definite, equally spaced energy levels. We did not say that light had to be a photon or...
+
+Context after the figure:
+
+Einstein assumed that Planck’s final formula was right, and he used that formula to obtain some new information, previously unknown, about the interaction of radiation with matter. His discussion went as follows: Consider any two of the many energy levels of an atom, say the \(m\) th level and the \(n\) th level (Fig.42–2). Now Einstein proposed that when such an atom has light of the right frequency shining on it, it can absorb that photon of light and make a transition from state \(n\) to state \(m\) , and that the probability that this occurs per second depends upon the two levels, of course, but isproportional to how intense the light isthat is shining on it. Let us call the proportionality constant \(B_{nm}\) , merely to remind us that this is not a universal constant of nature, but depends on the particular pair of levels: some levels are easy to excite; some levels are hard to...
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.
+
+## Ch42-F3: Fig. 42–3.By exciting, say by blue light, a higher state \(h\) , which may emit a photon leaving atoms in state \(m\) , the number in this state \(m\) becomes sufficiently large to start laser action.
+
+Section: 42–5 Einstein’s laws of radiation
+Image file: images/Ch42-F3.png
+
+Context before the figure:
+
+The possibility of induced emission has, today, found interesting applications. If there is light present, it will tend to induce the downward transition. The transition then adds its \(\hbar\omega\) to the available light energy, if there were some atoms sitting in the upper state. Now we can arrange, by some nonthermal method, to have a gas in which the number in the state \(m\) is very much greater than the number in the state \(n\) . This is far out of equilibrium, and so is not given by the formula \(e^{-\hbar\omega/kT}\) , which is for equilibrium. We can even arrange it so that the number in the upper state is very large, while the number in the lower state is practically zero. Then light which has the frequency corresponding to the energy difference \(E_m - E_n\) will not be strongly absorbed, because there are not many atoms in state \(n\) to absorb it. On the other hand, when...
+
+Context after the figure:
+
+Various tricks can be used to obtain the atoms in state \(m\) . There may be higher levels to which the atoms can get if we shine in a strong beam of light of high frequency. From these high levels, they may trickle down, emitting various photons, until they all get stuck in the state \(m\) . If they tend to stay in the state \(m\) without emitting, the state is calledmetastable. And then they are all dumped down together by induced emissions. One more technical point—if we put this system in an ordinary box, it would radiate in so many different directions spontaneously, compared with the induced effect, that we would still be in trouble. But we can enhance the induced effect, increase its efficiency, by putting nearly perfect mirrors on each side of the box, so that the light which is emitted gets another chance, and another chance, and another chance, to induce more emission...
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.

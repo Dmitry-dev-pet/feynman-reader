@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Аналитический отчет: Глава 24. Переходные решения - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch24.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1 id="аналитический-отчет-глава-24-переходные-решения">Аналитический
+отчет: Глава 24. Переходные решения</h1>
+<p>Данный отчет представляет собой синтез материалов 24-й главы
+«Фейнмановских лекций по физике», посвященной переходным решениям в
+колебательных системах. В документе анализируются энергетические
+характеристики осциллятора, математическая природа затухающих колебаний
+и их проявление в электрических цепях.</p>
+<h2 id="резюме">Резюме</h2>
+<p>Глава исследует поведение физических систем (механических и
+электрических) в отсутствие внешней вынуждающей силы, но при наличии
+начального запаса энергии. Основное внимание уделяется «переходным
+решениям» — процессам, в которых система стремится к состоянию покоя.
+Ключевыми концепциями являются диссипация энергии через трение (или
+сопротивление), добротность системы
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Q</mi><annotation encoding="application/x-tex">Q</annotation></semantics></math>)
+и математический переход от колебательного движения к чисто
+экспоненциальному затуханию при изменении параметров системы.</p>
+<hr />
+<h2 id="1-энергия-осциллятора-и-добротность-q">1. Энергия осциллятора и
+добротность
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Q</mi><annotation encoding="application/x-tex">Q</annotation></semantics></math>)</h2>
+<h3 id="физический-смысл-энергии-в-комплексном-представлении">Физический
+смысл энергии в комплексном представлении</h3>
+<p>При работе с энергией (кинетической или потенциальной) необходимо
+соблюдать осторожность в использовании комплексных чисел. Поскольку
+энергия пропорциональна квадрату величины (скорости или смещения),
+нельзя просто возводить комплексное число в квадрат.</p>
+<ul>
+<li><strong>Правило:</strong> Сначала выделяется действительная часть
+физической величины, и только затем она возводится в квадрат.</li>
+<li><strong>Теорема о среднем:</strong> Если величина
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+представлена комплексным числом
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>A</mi><mo accent="true">̂</mo></mover><msup><mi>e</mi><mrow><mi>i</mi><mi>ω</mi><mi>t</mi></mrow></msup></mrow><annotation encoding="application/x-tex">\hat{A}e^{i\omega t}</annotation></semantics></math>,
+то среднее значение её квадрата <span
+class="math inline">$\avg{A^2}$</span> за период равно
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><msubsup><mi>A</mi><mn>0</mn><mn>2</mn></msubsup></mrow><annotation encoding="application/x-tex">\frac{1}{2}A_0^2</annotation></semantics></math>,
+где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>A</mi><mn>0</mn></msub><annotation encoding="application/x-tex">A_0</annotation></semantics></math>
+— модуль комплексной амплитуды.</li>
+</ul>
+<h3 id="мощность-и-потери">Мощность и потери</h3>
+<p>Работа, совершаемая внешней силой в секунду (мощность), в среднем
+расходуется на преодоление трения.</p>
+<ul>
+<li><strong>Формула средней мощности (механика):</strong> <span
+class="math display">$$\avg{P} = \avg{\gamma m(dx/dt)^2} =
+\tfrac{1}{2}\gamma m\omega^2x_0^2$$</span></li>
+<li><strong>Электрический аналог:</strong> <span
+class="math display">$$\avg{P} = R\avg{I^2} =
+R\cdot\tfrac{1}{2}I_0^2$$</span> Здесь энергия диссипирует в виде тепла
+(джоулево тепло).</li>
+</ul>
+<h3 id="определение-добротности-q">Определение добротности
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Q</mi><annotation encoding="application/x-tex">Q</annotation></semantics></math>)</h3>
+<p>Добротность — это мера качества осциллятора, определяемая как
+отношение запасенной энергии к работе, совершаемой за один цикл
+(умноженное на
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>π</mi></mrow><annotation encoding="application/x-tex">2\pi</annotation></semantics></math>):
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Q</mi><mo>=</mo><mn>2</mn><mi>π</mi><mfrac><mtext mathvariant="normal">средняя запасенная энергия</mtext><mtext mathvariant="normal">работа за один цикл</mtext></mfrac></mrow><annotation encoding="application/x-tex">Q = 2\pi \frac{\text{средняя запасенная энергия}}{\text{работа за один цикл}}</annotation></semantics></math>
+Для высокодобротных систем вблизи резонанса:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Q</mi><mo>=</mo><mfrac><msub><mi>ω</mi><mn>0</mn></msub><mi>γ</mi></mfrac></mrow><annotation encoding="application/x-tex">Q = \frac{\omega_0}{\gamma}</annotation></semantics></math>
+В электрических цепях:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Q</mi><mo>=</mo><mfrac><mrow><mi>L</mi><mi>ω</mi></mrow><mi>R</mi></mfrac></mrow><annotation encoding="application/x-tex">Q = \frac{L\omega}{R}</annotation></semantics></math>.</p>
+<hr />
+<h2 id="2-анализ-затухающих-колебаний">2. Анализ затухающих
+колебаний</h2>
+<p>Переходные решения возникают, когда внешняя сила
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">F(t) = 0</annotation></semantics></math>.
+Система «проедает» запасенную энергию.</p>
+<h3 id="математический-вывод">Математический вывод</h3>
+<p>Для решения уравнения
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mi>x</mi></mrow><mrow><mi>d</mi><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac><mo>+</mo><mi>γ</mi><mi>m</mi><mfrac><mrow><mi>d</mi><mi>x</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>+</mo><mi>m</mi><msubsup><mi>ω</mi><mn>0</mn><mn>2</mn></msubsup><mi>x</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">m\frac{d^2x}{dt^2} + \gamma m\frac{dx}{dt} + m\omega_0^2x = 0</annotation></semantics></math>
+используется подстановка
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mi>A</mi><msup><mi>e</mi><mrow><mi>i</mi><mi>α</mi><mi>t</mi></mrow></msup></mrow><annotation encoding="application/x-tex">x = Ae^{i\alpha t}</annotation></semantics></math>.
+Это приводит к характеристическому уравнению:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><msup><mi>α</mi><mn>2</mn></msup><mo>+</mo><mi>i</mi><mi>α</mi><mi>γ</mi><mo>+</mo><msubsup><mi>ω</mi><mn>0</mn><mn>2</mn></msubsup><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">-\alpha^2 + i\alpha\gamma + \omega_0^2 = 0</annotation></semantics></math>
+Решения для
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>α</mi><annotation encoding="application/x-tex">\alpha</annotation></semantics></math>:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi><mo>=</mo><mi>i</mi><mi>γ</mi><mi>/</mi><mn>2</mn><mo>±</mo><msqrt><mrow><msubsup><mi>ω</mi><mn>0</mn><mn>2</mn></msubsup><mo>−</mo><msup><mi>γ</mi><mn>2</mn></msup><mi>/</mi><mn>4</mn></mrow></msqrt></mrow><annotation encoding="application/x-tex">\alpha = i\gamma/2 \pm \sqrt{\omega_0^2 - \gamma^2/4}</annotation></semantics></math></p>
+<h3 id="режимы-движения">Режимы движения</h3>
+<ol type="1">
+<li><p><strong>Слабое затухание
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>γ</mi><mi>/</mi><mn>2</mn><mo>&lt;</mo><msub><mi>ω</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">\gamma/2 &lt; \omega_0</annotation></semantics></math>):</strong>
+Система совершает колебания с частотой
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ω</mi><mi>γ</mi></msub><mo>=</mo><msqrt><mrow><msubsup><mi>ω</mi><mn>0</mn><mn>2</mn></msubsup><mo>−</mo><msup><mi>γ</mi><mn>2</mn></msup><mi>/</mi><mn>4</mn></mrow></msqrt></mrow><annotation encoding="application/x-tex">\omega_\gamma = \sqrt{\omega_0^2 - \gamma^2/4}</annotation></semantics></math>,
+амплитуда которых экспоненциально убывает.</p>
+<ul>
+<li><strong>Уравнение движения (фиг. 24.1):</strong>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><msub><mi>A</mi><mn>0</mn></msub><msup><mi>e</mi><mrow><mi>−</mi><mi>γ</mi><mi>t</mi><mi>/</mi><mn>2</mn></mrow></msup><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><msub><mi>ω</mi><mi>γ</mi></msub><mi>t</mi></mrow><annotation encoding="application/x-tex">x = A_0 e^{-\gamma t/2} \cos \omega_\gamma t</annotation></semantics></math></li>
+<li><strong>Физический смысл:</strong> Частота свободных колебаний
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ω</mi><mi>γ</mi></msub><annotation encoding="application/x-tex">\omega_\gamma</annotation></semantics></math>
+несколько ниже резонансной частоты
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ω</mi><mn>0</mn></msub><annotation encoding="application/x-tex">\omega_0</annotation></semantics></math>
+из-за влияния трения.</li>
+</ul></li>
+<li><p><strong>Сильное затухание (апериодический режим,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>γ</mi><mi>/</mi><mn>2</mn><mo>&gt;</mo><msub><mi>ω</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">\gamma/2 &gt; \omega_0</annotation></semantics></math>):</strong>
+Выражение под корнем становится отрицательным, и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ω</mi><mi>γ</mi></msub><annotation encoding="application/x-tex">\omega_\gamma</annotation></semantics></math>
+превращается в мнимую величину. Колебания исчезают, сменяясь суммой двух
+затухающих экспонент.</p></li>
+</ol>
+<hr />
+<h2 id="3-демонстрация-в-электрических-цепях">3. Демонстрация в
+электрических цепях</h2>
+<p>Экспериментальная проверка переходных процессов проводится на цепи,
+содержащей индуктивность
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>L</mi><annotation encoding="application/x-tex">L</annotation></semantics></math>),
+емкость
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math>)
+и переменное сопротивление
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>R</mi><annotation encoding="application/x-tex">R</annotation></semantics></math>)
+(фиг. 24.2).</p>
+<h3 id="визуальный-анализ-переходных-процессов-осциллограммы">Визуальный
+анализ переходных процессов (осциллограммы)</h3>
+<p>Наблюдения на экране осциллографа при внезапном включении напряжения
+показывают следующую динамику (в зависимости от сопротивления):</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Рисунок</th>
+<th style="text-align: left;">Состояние системы</th>
+<th style="text-align: left;">Описание процесса</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Фиг. 24.3</strong></td>
+<td style="text-align: left;">Высокая
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Q</mi><annotation encoding="application/x-tex">Q</annotation></semantics></math></td>
+<td style="text-align: left;">Множество колебаний с медленным затуханием
+амплитуды.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Фиг. 24.4</strong></td>
+<td style="text-align: left;">Средняя
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Q</mi><annotation encoding="application/x-tex">Q</annotation></semantics></math></td>
+<td style="text-align: left;">Более быстрое затухание при увеличении
+сопротивления
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>R</mi><annotation encoding="application/x-tex">R</annotation></semantics></math>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Фиг. 24.5</strong></td>
+<td style="text-align: left;">Низкая
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Q</mi><annotation encoding="application/x-tex">Q</annotation></semantics></math></td>
+<td style="text-align: left;">Очень быстрое затухание, буквально
+несколько периодов.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Фиг. 24.6</strong></td>
+<td style="text-align: left;">Сверхкритическое затухание</td>
+<td style="text-align: left;">Колебания отсутствуют; кривая плавно
+возвращается к нулю.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="важные-цитаты-с-контекстом">Важные цитаты с контекстом</h2>
+<ol type="1">
+<li><p><strong>О выборе метода решения:</strong></p>
+<blockquote>
+<p>«Поскольку мы люди уже опытные, попытаемся представить решение в виде
+экспоненциальной кривой,
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mi>A</mi><msup><mi>e</mi><mrow><mi>i</mi><mi>α</mi><mi>t</mi></mrow></msup></mrow><annotation encoding="application/x-tex">x = Ae^{i\alpha t}</annotation></semantics></math>).
+(Почему мы так поступили? Оттого, что экспоненту легче всего
+дифференцировать!)» <em>Контекст:</em> Обоснование использования
+комплексных экспонент для упрощения дифференциальных уравнений второго
+порядка.</p>
+</blockquote></li>
+<li><p><strong>О природе комплексных решений:</strong></p>
+<blockquote>
+<p>«Мы знаем, что нужно взять действительную часть, но откуда математика
+знает, что мы хотели взять только действительную часть? ... Уравнение не
+знает, что мы произвольно собираемся взять действительную часть, поэтому
+оно предлагает нам, так сказать, комплексно сопряженное решение...»
+<em>Контекст:</em> Объяснение того, почему математически возникают два
+корня
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>α</mi><mn>1</mn></msub><annotation encoding="application/x-tex">\alpha_1</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>α</mi><mn>2</mn></msub><annotation encoding="application/x-tex">\alpha_2</annotation></semantics></math>,
+которые в сумме дают физически значимый (действительный) результат.</p>
+</blockquote></li>
+<li><p><strong>О переходе между физическими режимами:</strong></p>
+<blockquote>
+<p>«Тесная математическая связь синусоидальных и экспоненциальных
+функций... физически часто проявляется в переходе от колебательного
+поведения к экспоненциальному, когда некоторый физический параметр...
+превышает некоторое критическое значение». <em>Контекст:</em> Описание
+фундаментального физического явления — смены характера процесса при
+изменении коэффициента затухания.</p>
+</blockquote></li>
+</ol>
+<hr />
+<h2 id="практические-выводы-и-инсайты">Практические выводы и
+инсайты</h2>
+<ul>
+<li><strong>Принцип суперпозиции:</strong> Если найдено несколько
+решений для уравнения без внешней силы
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mn>1</mn></msub><annotation encoding="application/x-tex">x_1</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mn>2</mn></msub><annotation encoding="application/x-tex">x_2</annotation></semantics></math>),
+то их сумма
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><msub><mi>x</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">x_1 + x_2</annotation></semantics></math>)
+также будет являться законным решением. Это позволяет подстраивать
+решение под конкретные начальные условия
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mn>0</mn></msub><annotation encoding="application/x-tex">x_0</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>v</mi><mn>0</mn></msub><annotation encoding="application/x-tex">v_0</annotation></semantics></math>).</li>
+<li><strong>Зависимость от начальных условий:</strong> Общее решение
+затухающих колебаний (уравнение 24.22) учитывает как начальное смещение,
+так и начальную скорость:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><msup><mi>e</mi><mrow><mi>−</mi><mi>γ</mi><mi>t</mi><mi>/</mi><mn>2</mn></mrow></msup><mrow><mo stretchy="true" form="prefix">[</mo><msub><mi>x</mi><mn>0</mn></msub><mi mathvariant="normal">cos</mi><msub><mi>ω</mi><mi>γ</mi></msub><mi>t</mi><mo>+</mo><mfrac><mrow><msub><mi>v</mi><mn>0</mn></msub><mo>+</mo><mi>γ</mi><msub><mi>x</mi><mn>0</mn></msub><mi>/</mi><mn>2</mn></mrow><msub><mi>ω</mi><mi>γ</mi></msub></mfrac><mi mathvariant="normal">sin</mi><msub><mi>ω</mi><mi>γ</mi></msub><mi>t</mi><mo stretchy="true" form="postfix">]</mo></mrow></mrow><annotation encoding="application/x-tex">x = e^{-\gamma t/2} \left[ x_0 \cos \omega_\gamma t + \frac{v_0 + \gamma x_0 / 2}{\omega_\gamma} \sin \omega_\gamma t \right]</annotation></semantics></math></li>
+<li><strong>Устойчивость системы:</strong> Математический анализ
+подтверждает, что при любых положительных значениях сопротивления
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>γ</mi><annotation encoding="application/x-tex">\gamma</annotation></semantics></math>)
+система остается устойчивой (амплитуда не растет бесконечно), так как
+показатели экспонент всегда остаются отрицательными.</li>
+<li><strong>Универсальность:</strong> Математическая модель идентична
+для механического грузика на пружине и для электрического колебательного
+контура, что позволяет использовать электрические схемы для
+моделирования сложных механических систем.</li>
+</ul>
+    </article>
+  </main>
+</body>
+</html>

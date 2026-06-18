@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Глава 21. Гармонический осциллятор: Учебное пособие - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch21.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1 id="глава-21-гармонический-осциллятор-учебное-пособие">Глава 21.
+Гармонический осциллятор: Учебное пособие</h1>
+<p>Данное пособие синтезирует ключевые идеи из лекций Ричарда Фейнмана,
+посвященных гармоническому осциллятору. Оно охватывает математические
+основы, физические принципы и примеры систем, поведение которых
+описывается линейными дифференциальными уравнениями.</p>
+<hr />
+<h2 id="i-ключевые-понятия-и-краткий-конспект">I. Ключевые понятия и
+краткий конспект</h2>
+<h3 id="1-универсальность-уравнения-осциллятора">1. Универсальность
+уравнения осциллятора</h3>
+<p>Изучение гармонического осциллятора выходит далеко за рамки механики.
+Одно и то же линейное дифференциальное уравнение описывает:</p>
+<ul>
+<li>Колебания массы на пружине и маятника.</li>
+<li>Ток в электрических цепях.</li>
+<li>Колебания электронов в атоме (источник света).</li>
+<li>Работу термостатов и других следящих систем.</li>
+<li>Сложные взаимодействия в химии и биологии (например, динамику
+популяций «хищник — жертва»).</li>
+</ul>
+<p><strong>Линейное дифференциальное уравнение с постоянными
+коэффициентами</strong> — это уравнение, представляющее собой сумму
+производных зависимой переменной, каждая из которых умножена на
+константу:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>n</mi></msub><mfrac><mrow><msup><mi>d</mi><mi>n</mi></msup><mi>x</mi></mrow><mrow><mi>d</mi><msup><mi>t</mi><mi>n</mi></msup></mrow></mfrac><mo>+</mo><msub><mi>a</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub><mfrac><mrow><msup><mi>d</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msup><mi>x</mi></mrow><mrow><mi>d</mi><msup><mi>t</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msup></mrow></mfrac><mo>+</mo><mi>…</mi><mo>+</mo><msub><mi>a</mi><mn>0</mn></msub><mi>x</mi><mo>=</mo><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">a_n \frac{d^nx}{dt^n} + a_{n-1} \frac{d^{n-1}x}{dt^{n-1}} + \dots + a_0x = f(t)</annotation></semantics></math>.</p>
+<h3 id="2-механический-осциллятор-масса-на-пружинке">2. Механический
+осциллятор (Масса на пружинке)</h3>
+<p>Для абсолютно упругой пружины возвращающая сила равна
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mi>k</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">-kx</annotation></semantics></math>.
+Согласно второму закону Ньютона:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mi>x</mi></mrow><mrow><mi>d</mi><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac><mo>=</mo><mi>−</mi><mi>k</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">m \frac{d^2x}{dt^2} = -kx</annotation></semantics></math>
+Основное уравнение движения (при
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>ω</mi><mn>0</mn><mn>2</mn></msubsup><mo>=</mo><mi>k</mi><mi>/</mi><mi>m</mi></mrow><annotation encoding="application/x-tex">\omega_0^2 = k/m</annotation></semantics></math>):
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mi>x</mi></mrow><mrow><mi>d</mi><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac><mo>=</mo><mi>−</mi><msubsup><mi>ω</mi><mn>0</mn><mn>2</mn></msubsup><mi>x</mi></mrow><annotation encoding="application/x-tex">\frac{d^2x}{dt^2} = -\omega_0^2x</annotation></semantics></math></p>
+<h3 id="3-свойства-гармонического-движения">3. Свойства гармонического
+движения</h3>
+<ul>
+<li><strong>Независимость периода от амплитуды:</strong> Для линейных
+систем время достижения равновесия не зависит от начального смещения.
+Если растянуть пружину вдвое сильнее, сила и ускорение также удвоятся, и
+грузик пройдет путь вдвое быстрее, затратив то же время.</li>
+<li><strong>Общее решение:</strong> Может быть представлено в нескольких
+формах, например:
+<ul>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mi>a</mi><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><msub><mi>ω</mi><mn>0</mn></msub><mi>t</mi><mo>+</mo><mi mathvariant="normal">Δ</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">x = a \cos(\omega_0t + \Delta)</annotation></semantics></math></li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mi>A</mi><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><msub><mi>ω</mi><mn>0</mn></msub><mi>t</mi><mo>+</mo><mi>B</mi><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><msub><mi>ω</mi><mn>0</mn></msub><mi>t</mi></mrow><annotation encoding="application/x-tex">x = A \cos \omega_0t + B \sin \omega_0t</annotation></semantics></math></li>
+</ul></li>
+<li><strong>Связь с движением по окружности:</strong> Гармоническое
+движение можно рассматривать как проекцию равномерного движения точки по
+окружности на одну из осей (диаметр).</li>
+</ul>
+<h3 id="4-энергия-осциллятора">4. Энергия осциллятора</h3>
+<p>В идеальной системе без трения полная энергия сохраняется и переходит
+из потенциальной
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>U</mi><annotation encoding="application/x-tex">U</annotation></semantics></math>)
+в кинетическую
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>T</mi><annotation encoding="application/x-tex">T</annotation></semantics></math>):</p>
+<ul>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>k</mi><msup><mi>x</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">U = \frac{1}{2}kx^2</annotation></semantics></math>
+(максимальна при максимальном отклонении).</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>m</mi><msup><mi>v</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">T = \frac{1}{2}mv^2</annotation></semantics></math>
+(максимальна при прохождении положения равновесия).</li>
+<li><strong>Полная энергия:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo>+</mo><mi>U</mi><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>m</mi><msubsup><mi>ω</mi><mn>0</mn><mn>2</mn></msubsup><msup><mi>a</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">T + U = \frac{1}{2}m\omega_0^2a^2</annotation></semantics></math>.
+<strong>Важно:</strong> Энергия пропорциональна <em>квадрату</em>
+амплитуды.</li>
+</ul>
+<h3 id="5-колебания-под-действием-внешней-силы">5. Колебания под
+действием внешней силы</h3>
+<p>Если на систему действует внешняя сила
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msub><mi>F</mi><mn>0</mn></msub><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>ω</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">F(t) = F_0 \cos \omega t</annotation></semantics></math>,
+уравнение принимает вид:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mi>x</mi></mrow><mrow><mi>d</mi><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac><mo>+</mo><mi>k</mi><mi>x</mi><mo>=</mo><msub><mi>F</mi><mn>0</mn></msub><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>ω</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">m \frac{d^2x}{dt^2} + kx = F_0 \cos \omega t</annotation></semantics></math>
+Амплитуда вынужденных колебаний
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math>)
+зависит от соотношения частот:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo>=</mo><mfrac><msub><mi>F</mi><mn>0</mn></msub><mrow><mi>m</mi><mo stretchy="false" form="prefix">(</mo><msubsup><mi>ω</mi><mn>0</mn><mn>2</mn></msubsup><mo>−</mo><msup><mi>ω</mi><mn>2</mn></msup><mo stretchy="false" form="postfix">)</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">C = \frac{F_0}{m(\omega_0^2 - \omega^2)}</annotation></semantics></math></p>
+<ul>
+<li>При
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ω</mi><mo>&lt;</mo><msub><mi>ω</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">\omega &lt; \omega_0</annotation></semantics></math>:
+смещение и сила направлены в одну сторону.</li>
+<li>При
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ω</mi><mo>&gt;</mo><msub><mi>ω</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">\omega &gt; \omega_0</annotation></semantics></math>:
+смещение и сила направлены в разные стороны (амплитуда
+отрицательна).</li>
+<li><strong>Резонанс:</strong> Если
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ω</mi><annotation encoding="application/x-tex">\omega</annotation></semantics></math>
+приближается к
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ω</mi><mn>0</mn></msub><annotation encoding="application/x-tex">\omega_0</annotation></semantics></math>,
+амплитуда стремится к бесконечности (в реальном мире ограничивается
+трением).</li>
+</ul>
+<hr />
+<h2 id="ii-проверочные-вопросы-short-answer-quiz">II. Проверочные
+вопросы (Short-Answer Quiz)</h2>
+<ol type="1">
+<li><strong>Как изменится период колебаний
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>t</mi><mn>0</mn></msub><annotation encoding="application/x-tex">t_0</annotation></semantics></math>,
+если массу груза
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math>
+увеличить в 4 раза?</strong> <em>Ответ:</em> Увеличится в 2 раза, так
+как
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>t</mi><mn>0</mn></msub><mo>=</mo><mn>2</mn><mi>π</mi><msqrt><mrow><mi>m</mi><mi>/</mi><mi>k</mi></mrow></msqrt></mrow><annotation encoding="application/x-tex">t_0 = 2\pi\sqrt{m/k}</annotation></semantics></math>.</li>
+<li><strong>Зависит ли период колебаний идеального гармонического
+осциллятора от начального смещения (амплитуды)?</strong> <em>Ответ:</em>
+Нет, не зависит. Это фундаментальное свойство линейных дифференциальных
+уравнений.</li>
+<li><strong>Что такое «фаза» в контексте уравнения
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mi>a</mi><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><msub><mi>ω</mi><mn>0</mn></msub><mi>t</mi><mo>+</mo><mi mathvariant="normal">Δ</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">x = a \cos(\omega_0t + \Delta)</annotation></semantics></math>?</strong>
+<em>Ответ:</em> Это аргумент косинуса
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ω</mi><mn>0</mn></msub><mi>t</mi><mo>+</mo><mi mathvariant="normal">Δ</mi></mrow><annotation encoding="application/x-tex">\omega_0t + \Delta</annotation></semantics></math>),
+который определяет состояние системы в данный момент времени.
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="normal">Δ</mi><annotation encoding="application/x-tex">\Delta</annotation></semantics></math>
+часто называют сдвигом фазы.</li>
+<li><strong>В какой точке траектории кинетическая энергия осциллятора
+равна нулю?</strong> <em>Ответ:</em> В точках максимального отклонения
+(амплитуды), где мгновенная скорость равна нулю.</li>
+<li><strong>Что произойдет с амплитудой вынужденных колебаний, если
+частота внешней силы
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ω</mi><annotation encoding="application/x-tex">\omega</annotation></semantics></math>
+станет намного больше собственной частоты
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ω</mi><mn>0</mn></msub><annotation encoding="application/x-tex">\omega_0</annotation></semantics></math>?</strong>
+<em>Ответ:</em> Амплитуда станет очень малой и будет иметь знак,
+противоположный направлению силы.</li>
+<li><strong>Какова связь между потенциальной и полной энергией в среднем
+за период?</strong> <em>Ответ:</em> Средняя потенциальная энергия равна
+половине полной энергии.</li>
+</ol>
+<hr />
+<h2 id="iii-типичные-ошибки-при-изучении">III. Типичные ошибки при
+изучении</h2>
+<ul>
+<li><strong>Путаница с
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ω</mi><annotation encoding="application/x-tex">\omega</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ω</mi><mn>0</mn></msub><annotation encoding="application/x-tex">\omega_0</annotation></semantics></math>:</strong>
+Ошибочное использование собственной частоты системы
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ω</mi><mn>0</mn></msub><annotation encoding="application/x-tex">\omega_0</annotation></semantics></math>)
+вместо частоты приложенной внешней силы
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ω</mi><annotation encoding="application/x-tex">\omega</annotation></semantics></math>)
+при расчете вынужденных колебаний.</li>
+<li><strong>Забывание знака «минус»:</strong> В уравнении
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mi>a</mi><mo>=</mo><mi>−</mi><mi>k</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">m a = -kx</annotation></semantics></math>
+минус критически важен, так как он указывает на то, что сила направлена
+<em>против</em> смещения (возвращающая сила).</li>
+<li><strong>Линейная зависимость энергии:</strong> Часто ошибочно
+полагают, что энергия растет линейно с ростом амплитуды, тогда как на
+самом деле она растет пропорционально её <em>квадрату</em>.</li>
+<li><strong>Интерпретация резонанса:</strong> Ожидание бесконечной
+амплитуды в реальном эксперименте. В теории (без трения) она бесконечна,
+но в реальности всегда ограничивается силами сопротивления или
+разрушением системы.</li>
+</ul>
+<hr />
+<h2 id="iv-темы-для-эссе-и-глубокого-анализа">IV. Темы для эссе и
+глубокого анализа</h2>
+<ol type="1">
+<li><strong>«Математическая аналогия как инструмент познания»:</strong>
+На примере гармонического осциллятора объясните, почему решение одного
+дифференциального уравнения позволяет описывать процессы в биологии,
+химии и механике одновременно.</li>
+<li><strong>«Физический смысл отрицательной амплитуды»:</strong>
+Разберите поведение системы при вынужденных колебаниях, когда частота
+силы превышает собственную частоту
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ω</mi><mo>&gt;</mo><msub><mi>ω</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">\omega &gt; \omega_0</annotation></semantics></math>).
+Что означает отрицательный знак коэффициента
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math>
+с точки зрения фазы?</li>
+<li><strong>«Роль начальных условий в динамических системах»:</strong>
+Проанализируйте, почему для полного определения движения недостаточно
+только уравнения силы, и какую роль играют начальное смещение
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mn>0</mn></msub><annotation encoding="application/x-tex">x_0</annotation></semantics></math>)
+и начальная скорость
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>v</mi><mn>0</mn></msub><annotation encoding="application/x-tex">v_0</annotation></semantics></math>).</li>
+</ol>
+<hr />
+<h2 id="v-краткий-глоссарий">V. Краткий глоссарий</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Термин</th>
+<th style="text-align: left;">Описание из источника</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Амплитуда
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>)</strong></td>
+<td style="text-align: left;">Мера максимального отклонения груза от
+положения равновесия.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Собственная частота
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ω</mi><mn>0</mn></msub><annotation encoding="application/x-tex">\omega_0</annotation></semantics></math>)</strong></td>
+<td style="text-align: left;">Угловая частота естественных колебаний
+системы, определяемая её внутренними параметрами
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msqrt><mrow><mi>k</mi><mi>/</mi><mi>m</mi></mrow></msqrt><annotation encoding="application/x-tex">\sqrt{k/m}</annotation></semantics></math>).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Период
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>t</mi><mn>0</mn></msub><annotation encoding="application/x-tex">t_0</annotation></semantics></math>)</strong></td>
+<td style="text-align: left;">Продолжительность одного полного цикла
+колебаний.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Фаза</strong></td>
+<td style="text-align: left;">Величина
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ω</mi><mn>0</mn></msub><mi>t</mi><mo>+</mo><mi mathvariant="normal">Δ</mi></mrow><annotation encoding="application/x-tex">\omega_0t + \Delta</annotation></semantics></math>,
+определяющая текущее положение и направление движения в цикле.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Резонанс</strong></td>
+<td style="text-align: left;">Явление резкого возрастания амплитуды
+колебаний при совпадении частоты внешней силы с собственной частотой
+системы.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Линейное уравнение</strong></td>
+<td style="text-align: left;">Уравнение, в котором зависимая переменная
+и её производные входят только в первой степени.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Переходный отклик</strong></td>
+<td style="text-align: left;">Часть движения системы, возникающая сразу
+после приложения силы и обычно затухающая со временем.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Равновесный отклик</strong></td>
+<td style="text-align: left;">Установившееся движение системы под
+действием периодической внешней силы.</td>
+</tr>
+</tbody>
+</table>
+    </article>
+  </main>
+</body>
+</html>

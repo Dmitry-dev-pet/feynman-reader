@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chapter 24: Transients - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="en">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch24.html#study-panel">Back to chapter</a>
+      <a class="nav-btn" href="../../index.html">Volume contents</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1 id="chapter-24-transients">Chapter 24: Transients</h1>
+<p>This study guide covers the principles of transients, energy in
+forced and damped oscillators, the definition and application of the
+Quality Factor
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Q</mi><annotation encoding="application/x-tex">Q</annotation></semantics></math>),
+and the mathematical transition between oscillatory and exponential
+decay.</p>
+<hr />
+<h2 id="i-key-concepts">I. Key Concepts</h2>
+<h3 id="1-energy-in-oscillations">1. Energy in Oscillations</h3>
+<p>In physical systems, energy consists of kinetic and potential
+components. In a mechanical oscillator, kinetic energy is proportional
+to the square of the velocity
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>v</mi><mn>2</mn></msup><annotation encoding="application/x-tex">v^2</annotation></semantics></math>),
+and potential energy is proportional to the square of the displacement
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>x</mi><mn>2</mn></msup><annotation encoding="application/x-tex">x^2</annotation></semantics></math>).</p>
+<ul>
+<li><strong>The Real Part Rule:</strong> When representing physical
+quantities (like velocity or displacement) as complex numbers
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mover><mi>A</mi><mo accent="true">̂</mo></mover><msup><mi>e</mi><mrow><mi>i</mi><mi>ω</mi><mi>t</mi></mrow></msup></mrow><annotation encoding="application/x-tex">A = \hat{A}e^{i\omega t}</annotation></semantics></math>),
+one must take the real part <em>before</em> squaring the value to find
+energy. The real part of a squared complex number is not equivalent to
+the square of the real part of that complex number.</li>
+<li><strong>Mean Square Theorem:</strong> If a quantity
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+is represented by a complex number, the average of its square
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⟨</mo><msup><mi>A</mi><mn>2</mn></msup><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">\langle A^2 \rangle</annotation></semantics></math>)
+over a period of time is equal to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><msubsup><mi>A</mi><mn>0</mn><mn>2</mn></msubsup></mrow><annotation encoding="application/x-tex">\frac{1}{2}A_0^2</annotation></semantics></math>,
+where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>A</mi><mn>0</mn></msub><annotation encoding="application/x-tex">A_0</annotation></semantics></math>
+is the magnitude of the complex amplitude.</li>
+</ul>
+<h3 id="2-power-and-stored-energy">2. Power and Stored Energy</h3>
+<ul>
+<li><strong>Power
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⟨</mo><mi>P</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">\langle P \rangle</annotation></semantics></math>):</strong>
+In a forced oscillator that has reached a steady state, the average work
+done by the driving force per second exactly matches the energy lost to
+friction (resistive loss). This is expressed as
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⟨</mo><mi>P</mi><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><mo stretchy="false" form="prefix">⟨</mo><mi>γ</mi><mi>m</mi><mo stretchy="false" form="prefix">(</mo><mi>d</mi><mi>x</mi><mi>/</mi><mi>d</mi><mi>t</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">\langle P \rangle = \langle \gamma m(dx/dt)^2 \rangle</annotation></semantics></math>.
+In electrical terms, this is Joule heating:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mo stretchy="false" form="prefix">⟨</mo><msup><mi>I</mi><mn>2</mn></msup><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>R</mi><msubsup><mi>I</mi><mn>0</mn><mn>2</mn></msubsup></mrow><annotation encoding="application/x-tex">R \langle I^2 \rangle = \frac{1}{2}RI_0^2</annotation></semantics></math>.</li>
+<li><strong>Stored Energy
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math>):</strong>
+This is the sum of the kinetic and potential energy within the system at
+any moment. While power is consumed to maintain the oscillation, the
+average stored energy remains constant in a steady-state forced
+oscillation.</li>
+</ul>
+<h3 id="3-the-quality-factor-q">3. The Quality Factor
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Q</mi><annotation encoding="application/x-tex">Q</annotation></semantics></math>)</h3>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Q</mi><annotation encoding="application/x-tex">Q</annotation></semantics></math>
+is a measure of an oscillator's efficiency. It is defined as
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>π</mi></mrow><annotation encoding="application/x-tex">2\pi</annotation></semantics></math>
+times the ratio of the mean stored energy to the work done per cycle:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Q</mi><mo>=</mo><mn>2</mn><mi>π</mi><mfrac><mtext mathvariant="normal">Mean Stored Energy</mtext><mtext mathvariant="normal">Work Done per Cycle</mtext></mfrac></mrow><annotation encoding="application/x-tex">Q = 2\pi \frac{\text{Mean Stored Energy}}{\text{Work Done per Cycle}}</annotation></semantics></math></p>
+<ul>
+<li><strong>High
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Q</mi><annotation encoding="application/x-tex">Q</annotation></semantics></math>
+Systems:</strong> In a high
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Q</mi><annotation encoding="application/x-tex">Q</annotation></semantics></math>
+system, the energy stored is much larger than the energy lost per cycle.
+For such systems near resonance,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Q</mi><annotation encoding="application/x-tex">Q</annotation></semantics></math>
+can be simplified to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ω</mi><mn>0</mn></msub><mi>/</mi><mi>γ</mi></mrow><annotation encoding="application/x-tex">\omega_0/\gamma</annotation></semantics></math>.</li>
+<li><strong>Electrical
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Q</mi><annotation encoding="application/x-tex">Q</annotation></semantics></math>:</strong>
+In a resonant circuit,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Q</mi><mo>=</mo><mi>L</mi><mi>ω</mi><mi>/</mi><mi>R</mi></mrow><annotation encoding="application/x-tex">Q = L\omega/R</annotation></semantics></math>.</li>
+</ul>
+<h3 id="4-transients">4. Transients</h3>
+<p>A <strong>transient</strong> is a solution to the differential
+equation of an oscillator when no external driving force is present
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">F=0</annotation></semantics></math>),
+but the system is not at rest (e.g., after a driving force is
+removed).</p>
+<ul>
+<li><strong>Energy Decay:</strong> In a transient state, the system's
+stored energy
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math>)
+is consumed by internal losses. For a high
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Q</mi><annotation encoding="application/x-tex">Q</annotation></semantics></math>
+system, the energy decays exponentially:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>=</mo><msub><mi>E</mi><mn>0</mn></msub><msup><mi>e</mi><mrow><mi>−</mi><mi>γ</mi><mi>t</mi></mrow></msup></mrow><annotation encoding="application/x-tex">E = E_0e^{-\gamma t}</annotation></semantics></math>.</li>
+<li><strong>Amplitude Decay:</strong> Because energy is proportional to
+the square of the displacement, the amplitude of the oscillation decays
+half as fast as the energy:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>∝</mo><msup><mi>e</mi><mrow><mi>−</mi><mi>γ</mi><mi>t</mi><mi>/</mi><mn>2</mn></mrow></msup></mrow><annotation encoding="application/x-tex">x \propto e^{-\gamma t/2}</annotation></semantics></math>.</li>
+</ul>
+<h3 id="5-damping-regimes">5. Damping Regimes</h3>
+<p>The behavior of a transient depends on the relationship between the
+damping coefficient
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>γ</mi><annotation encoding="application/x-tex">\gamma</annotation></semantics></math>)
+and the natural frequency
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ω</mi><mn>0</mn></msub><annotation encoding="application/x-tex">\omega_0</annotation></semantics></math>).</p>
+<ul>
+<li><strong>Underdamped (Oscillatory):</strong> When
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>γ</mi><mi>/</mi><mn>2</mn><mo>&lt;</mo><msub><mi>ω</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">\gamma/2 &lt; \omega_0</annotation></semantics></math>,
+the system oscillates at a frequency
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ω</mi><mi>γ</mi></msub><mo>=</mo><msqrt><mrow><msubsup><mi>ω</mi><mn>0</mn><mn>2</mn></msubsup><mo>−</mo><msup><mi>γ</mi><mn>2</mn></msup><mi>/</mi><mn>4</mn></mrow></msqrt></mrow><annotation encoding="application/x-tex">\omega_\gamma = \sqrt{\omega_0^2 - \gamma^2/4}</annotation></semantics></math>.
+The amplitude diminishes exponentially according to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>−</mi><mi>γ</mi><mi>t</mi><mi>/</mi><mn>2</mn></mrow></msup><annotation encoding="application/x-tex">e^{-\gamma t/2}</annotation></semantics></math>.</li>
+<li><strong>Overdamped (Non-oscillatory):</strong> When
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>γ</mi><mi>/</mi><mn>2</mn><mo>&gt;</mo><msub><mi>ω</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">\gamma/2 &gt; \omega_0</annotation></semantics></math>,
+the square root in the solution becomes imaginary, resulting in two
+solutions that are both pure exponential decays. No oscillations occur;
+the system simply returns to equilibrium.</li>
+</ul>
+<hr />
+<h2 id="ii-self-check-questions">II. Self-Check Questions</h2>
+<p><strong>1. Why can we not simply square a complex number to find the
+physical energy of a system?</strong> Because the real part of the
+square of a complex number includes terms from the imaginary part. In
+the physical world, we must square only the "true and honest" real part
+of the quantity.</p>
+<p><strong>2. What is the mathematical definition of the frequency of a
+damped oscillator
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ω</mi><mi>γ</mi></msub><annotation encoding="application/x-tex">\omega_\gamma</annotation></semantics></math>)?</strong>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ω</mi><mi>γ</mi></msub><mo>=</mo><msqrt><mrow><msubsup><mi>ω</mi><mn>0</mn><mn>2</mn></msubsup><mo>−</mo><mfrac><msup><mi>γ</mi><mn>2</mn></msup><mn>4</mn></mfrac></mrow></msqrt></mrow><annotation encoding="application/x-tex">\omega_\gamma = \sqrt{\omega_0^2 - \frac{\gamma^2}{4}}</annotation></semantics></math></p>
+<p><strong>3. How does increasing the resistance
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>R</mi><annotation encoding="application/x-tex">R</annotation></semantics></math>)
+in an electrical circuit affect the transient response?</strong>
+Increasing
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>R</mi><annotation encoding="application/x-tex">R</annotation></semantics></math>
+increases the damping
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>γ</mi><mo>=</mo><mi>R</mi><mi>/</mi><mi>L</mi></mrow><annotation encoding="application/x-tex">\gamma = R/L</annotation></semantics></math>).
+This causes the oscillations to die out more rapidly (lower
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Q</mi><annotation encoding="application/x-tex">Q</annotation></semantics></math>).
+If
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>R</mi><annotation encoding="application/x-tex">R</annotation></semantics></math>
+is increased beyond a critical point
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>γ</mi><mi>/</mi><mn>2</mn><mo>&gt;</mo><msub><mi>ω</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">\gamma/2 &gt; \omega_0</annotation></semantics></math>),
+the oscillations disappear entirely, leaving only exponential decay.</p>
+<p><strong>4. If a system loses
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mn>1000</mn></mrow><annotation encoding="application/x-tex">1/1000</annotation></semantics></math>
+of its energy per cycle, what is its approximate
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Q</mi><annotation encoding="application/x-tex">Q</annotation></semantics></math>
+value?</strong> Using the definition
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Q</mi><mo>=</mo><mn>2</mn><mi>π</mi><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">Energy</mtext><mi>/</mi><mtext mathvariant="normal">Energy lost per cycle</mtext><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">Q = 2\pi (\text{Energy} / \text{Energy lost per cycle})</annotation></semantics></math>,
+then
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Q</mi><mi>/</mi><mn>2</mn><mi>π</mi><mo>=</mo><mn>1000</mn></mrow><annotation encoding="application/x-tex">Q/2\pi = 1000</annotation></semantics></math>,
+so
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Q</mi><mo>≈</mo><mn>6283</mn></mrow><annotation encoding="application/x-tex">Q \approx 6283</annotation></semantics></math>.</p>
+<p><strong>5. What are the two components of "stored energy" in a
+mechanical oscillator?</strong> The kinetic energy of motion
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>m</mi><msup><mi>v</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\frac{1}{2}m v^2</annotation></semantics></math>)
+and the potential energy of the spring
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>m</mi><msubsup><mi>ω</mi><mn>0</mn><mn>2</mn></msubsup><msup><mi>x</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\frac{1}{2}m\omega_0^2 x^2</annotation></semantics></math>).</p>
+<hr />
+<h2 id="iii-common-misconceptions">III. Common Misconceptions</h2>
+<ul>
+<li><strong>Misconception: A damped oscillator vibrates at its natural
+frequency
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ω</mi><mn>0</mn></msub><annotation encoding="application/x-tex">\omega_0</annotation></semantics></math>).</strong>
+<ul>
+<li><strong>Fact:</strong> The damping actually shifts the frequency to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ω</mi><mi>γ</mi></msub><annotation encoding="application/x-tex">\omega_\gamma</annotation></semantics></math>.
+While
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ω</mi><mi>γ</mi></msub><annotation encoding="application/x-tex">\omega_\gamma</annotation></semantics></math>
+is very close to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ω</mi><mn>0</mn></msub><annotation encoding="application/x-tex">\omega_0</annotation></semantics></math>
+for high
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Q</mi><annotation encoding="application/x-tex">Q</annotation></semantics></math>
+systems, it is strictly lower.</li>
+</ul></li>
+<li><strong>Misconception: Transients only occur when a system is
+"turning off."</strong>
+<ul>
+<li><strong>Fact:</strong> Transients occur whenever there is a change
+in the force or a start-up condition where the system is not yet in
+steady-state. Closing a switch to start a circuit generates a transient
+just as turning it off does.</li>
+</ul></li>
+<li><strong>Misconception: "Overdamped" systems oscillate very
+slowly.</strong>
+<ul>
+<li><strong>Fact:</strong> Overdamped systems do not oscillate at all.
+They consist of two different "dying rates" (exponential decays). The
+system returns to the origin without crossing it more than once
+(depending on initial conditions).</li>
+</ul></li>
+</ul>
+<hr />
+<h2 id="iv-essay-prompts-for-deeper-exploration">IV. Essay Prompts for
+Deeper Exploration</h2>
+<ol type="1">
+<li><strong>The Relationship Between Energy and Amplitude:</strong>
+Explain why the amplitude of a damped transient diminishes at a rate of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>−</mi><mi>γ</mi><mi>t</mi><mi>/</mi><mn>2</mn></mrow></msup><annotation encoding="application/x-tex">e^{-\gamma t/2}</annotation></semantics></math>
+while the energy of the same system diminishes at
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>−</mi><mi>γ</mi><mi>t</mi></mrow></msup><annotation encoding="application/x-tex">e^{-\gamma t}</annotation></semantics></math>.
+Use the relationship between displacement and stored energy to support
+your answer.</li>
+<li><strong>The Transition from Sinusoidal to Exponential
+Behavior:</strong> Discuss the mathematical and physical conditions that
+cause a system to stop oscillating and begin decaying exponentially.
+Specifically, address what happens to the solution of the differential
+equation when
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>γ</mi><mn>2</mn></msup><mi>/</mi><mn>4</mn></mrow><annotation encoding="application/x-tex">\gamma^2/4</annotation></semantics></math>
+exceeds
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msubsup><mi>ω</mi><mn>0</mn><mn>2</mn></msubsup><annotation encoding="application/x-tex">\omega_0^2</annotation></semantics></math>.</li>
+<li><strong>The Electrical-Mechanical Analogy:</strong> Using the
+provided circuit in Figure 24-2, describe how resistance
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>R</mi><annotation encoding="application/x-tex">R</annotation></semantics></math>),
+inductance
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>L</mi><annotation encoding="application/x-tex">L</annotation></semantics></math>),
+and capacitance
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math>)
+serve as analogs for friction
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>γ</mi><mi>m</mi></mrow><annotation encoding="application/x-tex">\gamma m</annotation></semantics></math>),
+mass
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math>),
+and spring constants
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><msubsup><mi>ω</mi><mn>0</mn><mn>2</mn></msubsup></mrow><annotation encoding="application/x-tex">m\omega_0^2</annotation></semantics></math>).
+How does the oscilloscope allow us to visualize these mechanical
+properties?</li>
+</ol>
+<hr />
+<h2 id="v-glossary-of-important-terms">V. Glossary of Important
+Terms</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Term</th>
+<th style="text-align: left;">Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Transient</strong></td>
+<td style="text-align: left;">A solution to an oscillator's differential
+equation in the absence of an external force; the "dying out" behavior
+of a system.</td>
+</tr>
+<tr>
+<td
+style="text-align: left;"><strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Q</mi><annotation encoding="application/x-tex">Q</annotation></semantics></math>
+(Quality Factor)</strong></td>
+<td style="text-align: left;">A dimensionless parameter that describes
+how underdamped an oscillator is;
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>π</mi><mo>×</mo></mrow><annotation encoding="application/x-tex">2\pi \times</annotation></semantics></math>
+(mean stored energy / work done per cycle).</td>
+</tr>
+<tr>
+<td
+style="text-align: left;"><strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>γ</mi><annotation encoding="application/x-tex">\gamma</annotation></semantics></math>
+(Gamma)</strong></td>
+<td style="text-align: left;">The damping coefficient; represents the
+rate of energy loss in the system.</td>
+</tr>
+<tr>
+<td
+style="text-align: left;"><strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ω</mi><mn>0</mn></msub><annotation encoding="application/x-tex">\omega_0</annotation></semantics></math></strong></td>
+<td style="text-align: left;">The natural or resonant frequency of the
+system without damping.</td>
+</tr>
+<tr>
+<td
+style="text-align: left;"><strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ω</mi><mi>γ</mi></msub><annotation encoding="application/x-tex">\omega_\gamma</annotation></semantics></math></strong></td>
+<td style="text-align: left;">The actual frequency of a damped
+oscillation, which is slightly lower than the natural frequency.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Joule Heating</strong></td>
+<td style="text-align: left;">The energy loss in an electrical circuit
+due to resistance, analogous to frictional heat loss in mechanics.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Superposition</strong></td>
+<td style="text-align: left;">The mathematical principle stating that if
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mn>1</mn></msub><annotation encoding="application/x-tex">x_1</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mn>2</mn></msub><annotation encoding="application/x-tex">x_2</annotation></semantics></math>
+are solutions to a linear differential equation, then
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><msub><mi>x</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">x_1 + x_2</annotation></semantics></math>
+is also a solution.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Exponential Decay</strong></td>
+<td style="text-align: left;">A non-oscillatory decrease in value where
+the rate of change is proportional to the current value (e.g.,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>−</mi><mi>γ</mi><mi>t</mi></mrow></msup><annotation encoding="application/x-tex">e^{-\gamma t}</annotation></semantics></math>).</td>
+</tr>
+</tbody>
+</table>
+    </article>
+  </main>
+</body>
+</html>

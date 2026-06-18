@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Аналитический отчет: Примеры из термодинамики (на основе Главы 45 «Фейнмановских лекций по физике») - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch45.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1
+id="аналитический-отчет-примеры-из-термодинамики-на-основе-главы-45-фейнмановских-лекций-по-физике">Аналитический
+отчет: Примеры из термодинамики (на основе Главы 45 «Фейнмановских
+лекций по физике»)</h1>
+<h2 id="резюме">Резюме</h2>
+<p>Данный документ представляет собой аналитический обзор главы 45,
+посвященной практическому применению законов термодинамики к различным
+физическим системам. Основное внимание уделяется выводу фундаментальных
+термодинамических соотношений и их использованию для описания идеальных
+газов, растяжения резины, работы электрических батарей, процессов
+фазового перехода (испарения) и излучения абсолютно черного тела.
+Центральной идеей главы является демонстрация мощи термодинамики как
+метода, позволяющего получать точные макроскопические связи между
+физическими величинами, не опираясь на детальное знание внутреннего
+строения вещества.</p>
+<hr />
+<h2 id="1-методологические-основы-и-математический-аппарат">1.
+Методологические основы и математический аппарат</h2>
+<p>Термодинамика характеризуется сложностью из-за множества способов
+описания одной и той же системы. Для упрощения анализа в тексте приняты
+<strong>температура
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>T</mi><annotation encoding="application/x-tex">T</annotation></semantics></math>)</strong>
+и <strong>объем
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math>)</strong>
+в качестве основных независимых переменных.</p>
+<h3 id="частные-производные-в-термодинамике">Частные производные в
+термодинамике</h3>
+<p>Для однозначного определения скорости изменения одной величины
+относительно другой необходимо фиксировать состояние остальных
+переменных. В документе вводится стандартная нотация для частных
+производных:</p>
+<ul>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>∂</mi><mi>P</mi><mi>/</mi><mi>∂</mi><mi>T</mi><msub><mo stretchy="false" form="postfix">)</mo><mi>V</mi></msub></mrow><annotation encoding="application/x-tex">(\partial P / \partial T)_V</annotation></semantics></math>
+— изменение давления при изменении температуры и фиксированном
+объеме.</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>∂</mi><mi>U</mi><mi>/</mi><mi>∂</mi><mi>T</mi><msub><mo stretchy="false" form="postfix">)</mo><mi>V</mi></msub><mo>=</mo><msub><mi>C</mi><mi>V</mi></msub></mrow><annotation encoding="application/x-tex">(\partial U / \partial T)_V = C_V</annotation></semantics></math>
+— удельная теплоемкость при постоянном объеме, определяющая скорость
+изменения внутренней энергии по температуре.</li>
+</ul>
+<h3 id="основное-соотношение-для-приращения-функции">Основное
+соотношение для приращения функции</h3>
+<p>Для любой функции
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">f(x, y)</annotation></semantics></math>
+приращение
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>f</mi></mrow><annotation encoding="application/x-tex">\Delta f</annotation></semantics></math>
+выражается через частные производные:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>f</mi><mo>=</mo><mi mathvariant="normal">Δ</mi><mi>x</mi><msub><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mi>∂</mi><mi>f</mi></mrow><mrow><mi>∂</mi><mi>x</mi></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mi>y</mi></msub><mo>+</mo><mi mathvariant="normal">Δ</mi><mi>y</mi><msub><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mi>∂</mi><mi>f</mi></mrow><mrow><mi>∂</mi><mi>y</mi></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mi>x</mi></msub></mrow><annotation encoding="application/x-tex">\Delta f = \Delta x \left( \frac{\partial f}{\partial x} \right)_y + \Delta y \left( \frac{\partial f}{\partial y} \right)_x</annotation></semantics></math></p>
+<hr />
+<h2 id="2-фундаментальное-термодинамическое-уравнение">2.
+Фундаментальное термодинамическое уравнение</h2>
+<p>Ключевым достижением главы является вывод уравнения, связывающего
+изменение внутренней энергии
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>U</mi><annotation encoding="application/x-tex">U</annotation></semantics></math>)
+с давлением
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math>),
+температурой
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>T</mi><annotation encoding="application/x-tex">T</annotation></semantics></math>)
+и объемом
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math>).</p>
+<h3 id="вывод-через-цикл-карно">Вывод через цикл Карно</h3>
+<p>Используя аргументы Карно для бесконечно малого цикла (см.
+[SOURCE_IMAGE_1] и [SOURCE_IMAGE_2]), устанавливается связь между теплом
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>Q</mi></mrow><annotation encoding="application/x-tex">\Delta Q</annotation></semantics></math>,
+необходимым для изотермического изменения объема, и изменением давления
+при нагреве:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi mathvariant="normal">Δ</mi><mi>Q</mi></mrow><mrow><mi mathvariant="normal">Δ</mi><mi>V</mi></mrow></mfrac><mo>=</mo><mi>T</mi><msub><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mi>∂</mi><mi>P</mi></mrow><mrow><mi>∂</mi><mi>T</mi></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mi>V</mi></msub></mrow><annotation encoding="application/x-tex">\frac{\Delta Q}{\Delta V} = T \left( \frac{\partial P}{\partial T} \right)_V</annotation></semantics></math></p>
+<p><strong>Физический смысл:</strong> Количество тепла, которое нужно
+подвести к системе для поддержания постоянной температуры при
+расширении, прямо пропорционально абсолютной температуре и скорости
+роста давления при нагреве (при постоянном объеме).</p>
+<h3 id="итоговое-уравнение-для-внутренней-энергии">Итоговое уравнение
+для внутренней энергии</h3>
+<p>Комбинируя первый закон термодинамики
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>U</mi><mo>=</mo><mi mathvariant="normal">Δ</mi><mi>Q</mi><mo>−</mo><mi>P</mi><mi mathvariant="normal">Δ</mi><mi>V</mi></mrow><annotation encoding="application/x-tex">\Delta U = \Delta Q - P\Delta V</annotation></semantics></math>)
+и результат Карно, получаем:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mi>∂</mi><mi>U</mi></mrow><mrow><mi>∂</mi><mi>V</mi></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mi>T</mi></msub><mo>=</mo><mi>T</mi><msub><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mi>∂</mi><mi>P</mi></mrow><mrow><mi>∂</mi><mi>T</mi></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mi>V</mi></msub><mo>−</mo><mi>P</mi></mrow><annotation encoding="application/x-tex">\left( \frac{\partial U}{\partial V} \right)_T = T \left( \frac{\partial P}{\partial T} \right)_V - P</annotation></semantics></math>
+Это уравнение является «сердцем» главы и позволяет анализировать любую
+систему, зная ее уравнение состояния.</p>
+<hr />
+<h2 id="3-анализ-физических-систем-и-их-аналогий">3. Анализ физических
+систем и их аналогий</h2>
+<p>Документ демонстрирует универсальность термодинамических законов
+через замену переменных в базовых уравнениях.</p>
+<h3 id="таблица-аналогий-систем">Таблица аналогий систем</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Система</th>
+<th style="text-align: left;">Переменная (аналог
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math>)</th>
+<th style="text-align: left;">Сила/Параметр (аналог
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mi>P</mi></mrow><annotation encoding="application/x-tex">-P</annotation></semantics></math>)</th>
+<th style="text-align: left;">Соотношение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Газ</strong></td>
+<td style="text-align: left;">Объем
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math>)</td>
+<td style="text-align: left;">Давление
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mi>P</mi></mrow><annotation encoding="application/x-tex">-P</annotation></semantics></math>)</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>∂</mi><mi>U</mi><mi>/</mi><mi>∂</mi><mi>V</mi><msub><mo stretchy="false" form="postfix">)</mo><mi>T</mi></msub><mo>=</mo><mi>T</mi><mo stretchy="false" form="prefix">(</mo><mi>∂</mi><mi>P</mi><mi>/</mi><mi>∂</mi><mi>T</mi><msub><mo stretchy="false" form="postfix">)</mo><mi>V</mi></msub><mo>−</mo><mi>P</mi></mrow><annotation encoding="application/x-tex">(\partial U / \partial V)_T = T(\partial P / \partial T)_V - P</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Резиновая лента</strong></td>
+<td style="text-align: left;">Длина
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>L</mi><annotation encoding="application/x-tex">L</annotation></semantics></math>)</td>
+<td style="text-align: left;">Сила натяжения
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>F</mi><annotation encoding="application/x-tex">F</annotation></semantics></math>)</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>Q</mi><mo>=</mo><mi>−</mi><mi>T</mi><mo stretchy="false" form="prefix">(</mo><mi>∂</mi><mi>F</mi><mi>/</mi><mi>∂</mi><mi>T</mi><msub><mo stretchy="false" form="postfix">)</mo><mi>L</mi></msub><mi mathvariant="normal">Δ</mi><mi>L</mi></mrow><annotation encoding="application/x-tex">\Delta Q = -T(\partial F / \partial T)_L \Delta L</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Батарея</strong></td>
+<td style="text-align: left;">Заряд
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Z</mi><annotation encoding="application/x-tex">Z</annotation></semantics></math>)</td>
+<td style="text-align: left;">Э.д.с.
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math>)</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>U</mi><mi>/</mi><mi mathvariant="normal">Δ</mi><mi>Z</mi><mo>=</mo><mi>T</mi><mo stretchy="false" form="prefix">(</mo><mi>∂</mi><mi>E</mi><mi>/</mi><mi>∂</mi><mi>T</mi><msub><mo stretchy="false" form="postfix">)</mo><mi>Z</mi></msub><mo>−</mo><mi>E</mi></mrow><annotation encoding="application/x-tex">\Delta U / \Delta Z = T(\partial E / \partial T)_Z - E</annotation></semantics></math></td>
+</tr>
+</tbody>
+</table>
+<h3 id="важные-выводы-по-системам">Важные выводы по системам:</h3>
+<ul>
+<li><strong>Идеальный газ:</strong> Поскольку внутренняя энергия
+идеального газа не зависит от объема
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>∂</mi><mi>U</mi><mi>/</mi><mi>∂</mi><mi>V</mi><msub><mo stretchy="false" form="postfix">)</mo><mi>T</mi></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">(\partial U / \partial V)_T = 0</annotation></semantics></math>),
+доказано, что
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math>
+пропорционально
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>T</mi><annotation encoding="application/x-tex">T</annotation></semantics></math>.
+Это подтверждает совпадение кинетической температурной шкалы с
+абсолютной термодинамической шкалой.</li>
+<li><strong>Резиновая лента:</strong> Термодинамика объясняет, почему
+лента нагревается при растяжении и сокращается при нагреве.</li>
+<li><strong>Химические переменные:</strong> Для удобства химиков
+вводится понятие <strong>энтальпии</strong>
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi><mo>=</mo><mi>U</mi><mo>+</mo><mi>P</mi><mi>V</mi></mrow><annotation encoding="application/x-tex">H = U + PV</annotation></semantics></math>),
+что позволяет перейти к независимым переменным
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>T</mi><mo>,</mo><mi>P</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(T, P)</annotation></semantics></math>.
+Основное уравнение при этом принимает вид:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>∂</mi><mi>H</mi><mi>/</mi><mi>∂</mi><mi>P</mi><msub><mo stretchy="false" form="postfix">)</mo><mi>T</mi></msub><mo>=</mo><mi>−</mi><mi>T</mi><mo stretchy="false" form="prefix">(</mo><mi>∂</mi><mi>V</mi><mi>/</mi><mi>∂</mi><mi>T</mi><msub><mo stretchy="false" form="postfix">)</mo><mi>P</mi></msub><mo>+</mo><mi>V</mi></mrow><annotation encoding="application/x-tex">(\partial H / \partial P)_T = -T(\partial V / \partial T)_P + V</annotation></semantics></math>.</li>
+</ul>
+<hr />
+<h2 id="4-уравнение-клаузиуса--клапейрона-и-фазовые-переходы">4.
+Уравнение Клаузиуса — Клапейрона и фазовые переходы</h2>
+<p>Анализ процесса испарения жидкости позволяет связать скрытую теплоту
+парообразования с характеристиками пара.</p>
+<h3 id="диаграммы-состояния-изотермы">Диаграммы состояния
+(Изотермы)</h3>
+<ul>
+<li><strong>[SOURCE_IMAGE_3]:</strong> Демонстрирует изотермы
+конденсирующегося пара. В области «Жидкость и пар» давление остается
+постоянным (давление пара), несмотря на изменение объема.</li>
+<li><strong>[SOURCE_IMAGE_4]:</strong> Показывает цикл Карно,
+реализованный на фазовом переходе.</li>
+</ul>
+<h3 id="уравнение-клаузиуса--клапейрона">Уравнение Клаузиуса —
+Клапейрона</h3>
+<p>Применяя цикл Карно к системе «жидкость — пар», выводится точное
+уравнение:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mi>L</mi><mrow><mi>T</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>V</mi><mi>G</mi></msub><mo>−</mo><msub><mi>V</mi><mi>L</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow></mfrac><mo>=</mo><mfrac><mrow><mi>d</mi><msub><mi>P</mi><mtext mathvariant="normal">vap</mtext></msub></mrow><mrow><mi>d</mi><mi>T</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{L}{T(V_G - V_L)} = \frac{dP_{\text{vap}}}{dT}</annotation></semantics></math>
+Где:</p>
+<ul>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>L</mi><annotation encoding="application/x-tex">L</annotation></semantics></math>
+— теплота испарения.</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>V</mi><mi>G</mi></msub><mo>,</mo><msub><mi>V</mi><mi>L</mi></msub></mrow><annotation encoding="application/x-tex">V_G, V_L</annotation></semantics></math>
+— объемы газа и жидкости соответственно.</li>
+</ul>
+<p><strong>Сравнение с кинетической теорией:</strong> В то время как
+кинетическая теория дает приближенную зависимость
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>≈</mo><mtext mathvariant="normal">const</mtext><mo>⋅</mo><msup><mi>e</mi><mrow><mi>−</mi><mi>L</mi><mi>/</mi><mi>R</mi><mi>T</mi></mrow></msup></mrow><annotation encoding="application/x-tex">P \approx \text{const} \cdot e^{-L/RT}</annotation></semantics></math>,
+термодинамическое уравнение является абсолютно точным и применимым к
+любым изменениям состояния (например, плавлению).</p>
+<hr />
+<h2 id="5-излучение-абсолютно-черного-тела">5. Излучение абсолютно
+черного тела</h2>
+<p>Термодинамика применяется к анализу «газа» из фотонов в закрытом
+объеме.</p>
+<ul>
+<li><strong>Давление излучения:</strong> На основе электродинамики
+известно, что
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mi>U</mi><mi>/</mi><mn>3</mn><mi>V</mi></mrow><annotation encoding="application/x-tex">P = U / 3V</annotation></semantics></math>.</li>
+<li><strong>Закон Стефана — Больцмана:</strong> Подстановка этого
+выражения в фундаментальное уравнение
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>∂</mi><mi>U</mi><mi>/</mi><mi>∂</mi><mi>V</mi><msub><mo stretchy="false" form="postfix">)</mo><mi>T</mi></msub><mo>=</mo><mn>3</mn><mi>P</mi><mo>=</mo><mi>T</mi><mo stretchy="false" form="prefix">(</mo><mi>d</mi><mi>P</mi><mi>/</mi><mi>d</mi><mi>T</mi><msub><mo stretchy="false" form="postfix">)</mo><mi>V</mi></msub><mo>−</mo><mi>P</mi></mrow><annotation encoding="application/x-tex">(\partial U / \partial V)_T = 3P = T(dP/dT)_V - P</annotation></semantics></math>
+приводит к дифференциальному уравнению, решением которого является:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mi>/</mi><mi>V</mi><mo>=</mo><mi>a</mi><msup><mi>T</mi><mn>4</mn></msup></mrow><annotation encoding="application/x-tex">U/V = aT^4</annotation></semantics></math>
+Плотность энергии излучения пропорциональна четвертой степени
+температуры.</li>
+<li><strong>Мощность и слабость термодинамики:</strong> Она доказывает
+зависимость
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>T</mi><mn>4</mn></msup><annotation encoding="application/x-tex">T^4</annotation></semantics></math>,
+но не может определить значение константы
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>σ</mi><annotation encoding="application/x-tex">\sigma</annotation></semantics></math>
+(постоянная Стефана — Больцмана). Значение
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>σ</mi><annotation encoding="application/x-tex">\sigma</annotation></semantics></math>
+выводится только через квантовомеханический анализ распределения
+Планка.</li>
+</ul>
+<hr />
+<h2 id="6-важные-цитаты-и-их-контекст">6. Важные цитаты и их
+контекст</h2>
+<blockquote>
+<p><strong>«Термодинамика сложна потому, что каждое явление она
+позволяет описывать многими способами».</strong> <em>Контекст:</em>
+Введение к главе, объясняющее обилие переменных
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>,</mo><mi>V</mi><mo>,</mo><mi>T</mi><mo>,</mo><mi>U</mi><mo>,</mo><mi>S</mi><mo>,</mo><mi>H</mi></mrow><annotation encoding="application/x-tex">P, V, T, U, S, H</annotation></semantics></math>)
+и необходимость фиксации независимых параметров.</p>
+</blockquote>
+<blockquote>
+<p><strong>«Не зная детального строения газа... мы все же можем вывести
+связь между количеством тепла, необходимым для поддержания температуры
+при расширении, и изменением давления при нагревании».</strong>
+<em>Контекст:</em> Обсуждение физического смысла уравнения (45.7),
+подчеркивающее фундаментальный характер термодинамических выводов.</p>
+</blockquote>
+<blockquote>
+<p><strong>«Когда наши познания слабы, а ситуация сложна,
+термодинамические соотношения действительно оказываются самым мощным
+средством».</strong> <em>Контекст:</em> Сравнение термодинамики с
+кинетической теорией при описании процессов плавления и испарения.</p>
+</blockquote>
+<hr />
+<h2 id="7-аналитические-выводы-actionable-insights">7. Аналитические
+выводы (Actionable Insights)</h2>
+<ol type="1">
+<li><strong>Универсальность метода аналогий:</strong> Для любой
+физической системы, где совершается работа, можно построить
+термодинамическую модель, просто идентифицировав аналоги давления и
+объема (например, Э.Д.С. и заряд).</li>
+<li><strong>Точность против модельности:</strong> Термодинамические
+уравнения (как уравнение Клаузиуса — Клапейрона) всегда точны, так как
+базируются на невозможности вечного двигателя, в то время как
+кинетические модели всегда зависят от точности принятых допущений о
+микромире.</li>
+<li><strong>Температурная шкала:</strong> Термодинамика дает
+фундаментальное определение температуры, независимое от свойств
+конкретного вещества, что позволяет калибровать любые реальные
+термометры.</li>
+<li><strong>Взаимосвязь эффектов:</strong> Любая система, проявляющая
+термическую реакцию на механическое воздействие (как нагрев резины при
+растяжении), обязательно проявит механическую реакцию на термическое
+воздействие (сокращение при нагреве). Эти эффекты количественно
+связаны.</li>
+</ol>
+    </article>
+  </main>
+</body>
+</html>

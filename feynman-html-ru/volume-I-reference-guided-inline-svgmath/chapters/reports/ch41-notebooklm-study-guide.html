@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Глава 41. Броуновское движение: Учебное руководство - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch41.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1 id="глава-41-броуновское-движение-учебное-руководство">Глава 41.
+Броуновское движение: Учебное руководство</h1>
+<p>Данное руководство синтезирует ключевые физические принципы,
+математические модели и историческое значение броуновского движения и
+связанных с ним явлений флуктуаций, описанных в главе 41.</p>
+<hr />
+<h2 id="1-основные-концепции">1. Основные концепции</h2>
+<h3 id="природа-броуновского-движения">Природа броуновского
+движения</h3>
+<p>Броуновское движение, открытое Робертом Броуном в 1827 году,
+представляет собой непрерывное хаотическое движение мелких частиц,
+взвешенных в жидкости или газе. Это прямое следствие молекулярного
+движения.</p>
+<ul>
+<li><strong>Качественная модель:</strong> Представьте огромный мяч для
+пушбола, который толкает толпа невидимых с большого расстояния людей.
+Беспорядочное перемещение мяча выдает присутствие и активность
+людей.</li>
+<li><strong>Энергетический аспект:</strong> Согласно кинетической
+теории, средняя кинетическая энергия любой частицы (даже очень тяжелой)
+в состоянии теплового равновесия составляет
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>3</mn><mn>2</mn></mfrac><mi>k</mi><mi>T</mi></mrow><annotation encoding="application/x-tex">\frac{3}{2}kT</annotation></semantics></math>.</li>
+</ul>
+<h3
+id="равнораспределение-энергии-и-пределы-измерений">Равнораспределение
+энергии и пределы измерений</h3>
+<p>Теорема о равнораспределении утверждает, что при тепловом равновесии
+энергия распределяется по степеням свободы. Это накладывает
+фундаментальные ограничения на точность измерительных приборов.</p>
+<ul>
+<li><strong>Зеркальный гальванометр:</strong> Крошечное зеркальце на
+кварцевой нити будет совершать микродвижения («плясать») из-за
+столкновений с молекулами воздуха или внутренних флуктуаций нити.</li>
+<li><strong>Формула флуктуаций:</strong> Средний квадрат угла качаний
+зеркальца равен
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⟨</mo><msup><mi>θ</mi><mn>2</mn></msup><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><mi>k</mi><mi>T</mi><mi>/</mi><mi>I</mi><msubsup><mi>ω</mi><mn>0</mn><mn>2</mn></msubsup></mrow><annotation encoding="application/x-tex">\langle \theta^2 \rangle = kT/I\omega_0^2</annotation></semantics></math>.
+Для уменьшения этих колебаний необходимо охлаждение системы.</li>
+</ul>
+<h3 id="шум-джонсона">Шум Джонсона</h3>
+<p>Тепловые флуктуации проявляются в электрических цепях как шум.
+Электроны в сопротивлении находятся в тепловом равновесии с материалом,
+что приводит к флуктуациям плотности и возникновению крошечных
+электрических полей.</p>
+<ul>
+<li><strong>Характеристика:</strong> Средний квадрат напряжения на
+индуктивности в резонансном контуре:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⟨</mo><msubsup><mi>V</mi><mi>L</mi><mn>2</mn></msubsup><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><mi>L</mi><msubsup><mi>ω</mi><mn>0</mn><mn>2</mn></msubsup><mi>k</mi><mi>T</mi></mrow><annotation encoding="application/x-tex">\langle V_L^2 \rangle = L\omega_0^2 kT</annotation></semantics></math>.</li>
+<li><strong>Спектральная плотность мощности:</strong> Мощность шума,
+генерируемого сопротивлением, распределена по частотам:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>ω</mi><mo stretchy="false" form="postfix">)</mo><mi>d</mi><mi>ω</mi><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mi>/</mi><mi>π</mi><mo stretchy="false" form="postfix">)</mo><mi>k</mi><mi>T</mi><mi>d</mi><mi>ω</mi></mrow><annotation encoding="application/x-tex">P(\omega) d\omega = (2/\pi)kT d\omega</annotation></semantics></math>.</li>
+</ul>
+<h3 id="тепловое-равновесие-излучения-и-квантовый-переход">Тепловое
+равновесие излучения и квантовый переход</h3>
+<p>Классическая физика предсказывает распределение интенсивности
+излучения абсолютно черного тела (закон Рэлея):
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mo stretchy="false" form="prefix">(</mo><mi>ω</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msup><mi>ω</mi><mn>2</mn></msup><mi>k</mi><mi>T</mi><mi>/</mi><msup><mi>π</mi><mn>2</mn></msup><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">I(\omega) = \omega^2 kT / \pi^2 c^2</annotation></semantics></math>.</p>
+<ul>
+<li><strong>Проблема:</strong> Эта формула ведет к «ультрафиолетовой
+катастрофе» — предсказанию бесконечной энергии на высоких частотах
+(рентгеновские лучи в обычной печи), что противоречит реальности.</li>
+<li><strong>Решение Планка:</strong> Макс Планк ввел допущение, что
+осциллятор может принимать энергию только порциями
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ℏ</mi><mi>ω</mi></mrow><annotation encoding="application/x-tex">\hbar\omega</annotation></semantics></math>.
+Это привело к появлению первой квантовомеханической формулы для средней
+энергии осциллятора:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⟨</mo><mi>E</mi><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><mfrac><mrow><mi>ℏ</mi><mi>ω</mi></mrow><mrow><msup><mi>e</mi><mrow><mi>ℏ</mi><mi>ω</mi><mi>/</mi><mi>k</mi><mi>T</mi></mrow></msup><mo>−</mo><mn>1</mn></mrow></mfrac></mrow><annotation encoding="application/x-tex">\langle E \rangle = \frac{\hbar\omega}{e^{\hbar\omega/kT} - 1}</annotation></semantics></math></li>
+</ul>
+<hr />
+<h2 id="2-математические-модели-и-случайные-блуждания">2. Математические
+модели и случайные блуждания</h2>
+<h3 id="задача-о-пьяном-матросе">Задача о «пьяном матросе»</h3>
+<p>Броуновское движение описывается математической моделью случайных
+блужданий, где каждый последующий шаг не зависит от предыдущего.</p>
+<ul>
+<li><strong>Квадрат расстояния:</strong> Средний квадрат расстояния от
+начала координат
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⟨</mo><msup><mi>R</mi><mn>2</mn></msup><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">\langle R^2 \rangle</annotation></semantics></math>
+пропорционален времени
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math>,
+а не само расстояние.</li>
+<li><strong>Уравнение Эйнштейна-Смолуховского:</strong>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⟨</mo><msup><mi>R</mi><mn>2</mn></msup><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><mn>6</mn><mi>k</mi><mi>T</mi><mfrac><mi>t</mi><mi>μ</mi></mfrac></mrow><annotation encoding="application/x-tex">\langle R^2 \rangle = 6kT \frac{t}{\mu}</annotation></semantics></math>
+Здесь
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>μ</mi><annotation encoding="application/x-tex">\mu</annotation></semantics></math>
+— коэффициент сопротивления (вязкости), который можно измерить
+экспериментально (например, по скорости падения капли).</li>
+</ul>
+<h3 id="определение-фундаментальных-констант">Определение
+фундаментальных констант</h3>
+<p>Изучение смещения броуновских частиц позволило исторически впервые
+точно определить:</p>
+<ol type="1">
+<li><strong>Постоянную Больцмана
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math>).</strong></li>
+<li><strong>Число Авогадро
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>N</mi><mn>0</mn></msub><annotation encoding="application/x-tex">N_0</annotation></semantics></math>):</strong>
+через связь
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mo>=</mo><msub><mi>N</mi><mn>0</mn></msub><mi>k</mi></mrow><annotation encoding="application/x-tex">R = N_0 k</annotation></semantics></math>,
+где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>R</mi><annotation encoding="application/x-tex">R</annotation></semantics></math>
+— универсальная газовая постоянная.</li>
+</ol>
+<hr />
+<h2 id="3-типичные-ошибки-при-изучении-темы">3. Типичные ошибки при
+изучении темы</h2>
+<ul>
+<li><strong>Линейная зависимость расстояния от времени:</strong> Часто
+ошибочно полагают, что среднее пройденное расстояние пропорционально
+времени
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⟨</mo><mi>R</mi><mo stretchy="false" form="postfix">⟩</mo><mo>∼</mo><mi>t</mi></mrow><annotation encoding="application/x-tex">\langle R \rangle \sim t</annotation></semantics></math>).
+В случайных блужданиях пропорционален времени квадрат расстояния
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⟨</mo><msup><mi>R</mi><mn>2</mn></msup><mo stretchy="false" form="postfix">⟩</mo><mo>∼</mo><mi>t</mi></mrow><annotation encoding="application/x-tex">\langle R^2 \rangle \sim t</annotation></semantics></math>),
+что означает гораздо более медленное удаление от центра.</li>
+<li><strong>Зависимость от свойств частицы в равновесии:</strong> Ошибка
+считать, что спектр излучения черного тела зависит от массы или заряда
+осциллятора. В формулу
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mo stretchy="false" form="prefix">(</mo><mi>ω</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">I(\omega)</annotation></semantics></math>
+входят только частота, температура и фундаментальные константы; свойства
+вещества «выпадают».</li>
+<li><strong>Игнорирование радиационного трения:</strong> При
+рассмотрении равновесия излучения нельзя забывать, что ускоренно
+движущийся заряд обязан излучать энергию. Без внешней подкачки
+(падающего света) осциллятор бы мгновенно остыл.</li>
+</ul>
+<hr />
+<h2 id="4-проверочные-вопросы-short-answer-quiz">4. Проверочные вопросы
+(Short-Answer Quiz)</h2>
+<ol type="1">
+<li><strong>Кто и в каком году открыл броуновское движение?</strong>
+(Роберт Броун, 1827 г.)</li>
+<li><strong>Чему равна средняя кинетическая энергия броуновской частицы
+согласно классической теории?</strong>
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>3</mn><mn>2</mn></mfrac><mi>k</mi><mi>T</mi></mrow><annotation encoding="application/x-tex">\frac{3}{2}kT</annotation></semantics></math>)</li>
+<li><strong>Как изменится средний квадрат угла колебаний зеркальца
+гальванометра при увеличении температуры в 2 раза?</strong> (Увеличится
+в 2 раза)</li>
+<li><strong>В чем заключается несостоятельность закона Рэлея для
+излучения черного тела?</strong> (Он предсказывает бесконечную
+интенсивность излучения на высоких частотах — «рентгеновские лучи» при
+любой температуре)</li>
+<li><strong>Какое фундаментальное допущение сделал Планк для вывода
+своей формулы?</strong> (Энергия осциллятора может принимать только
+дискретные значения, кратные
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ℏ</mi><mi>ω</mi></mrow><annotation encoding="application/x-tex">\hbar\omega</annotation></semantics></math>)</li>
+<li><strong>Почему для возникновения тепловых флуктуаций необходимо
+наличие необратимых потерь (сопротивления)?</strong> (Флуктуации и
+диссипация (потери) тесно связаны; без механизма потерь система не может
+прийти к тепловому равновесию
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mi>T</mi></mrow><annotation encoding="application/x-tex">kT</annotation></semantics></math>)</li>
+</ol>
+<hr />
+<h2 id="5-темы-для-развернутых-ответов-эссе">5. Темы для развернутых
+ответов (Эссе)</h2>
+<ol type="1">
+<li><strong>Роль броуновского движения в доказательстве
+атомно-молекулярной теории.</strong> Опишите, как наблюдение за
+макроскопическими частицами позволило количественно оценить микромир
+(число Авогадро) и почему это стало «началом конца» классической
+механики.</li>
+<li><strong>Сравнительный анализ классического и квантового осциллятора
+в контексте теплового равновесия.</strong> Объясните, почему
+классическая величина
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mi>T</mi></mrow><annotation encoding="application/x-tex">kT</annotation></semantics></math>
+заменяется на квантовый «обрезающий множитель» и как это спасает физику
+от ультрафиолетовой катастрофы.</li>
+<li><strong>Взаимосвязь электрических и механических
+флуктуаций.</strong> Проанализируйте аналогию между шумом Джонсона в
+резисторе и «пляской» зеркальца гальванометра. Какую роль в обоих
+случаях играет температура?</li>
+</ol>
+<hr />
+<h2 id="6-краткий-глоссарий">6. Краткий глоссарий</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Термин</th>
+<th style="text-align: left;">Определение согласно источнику</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Постоянная Больцмана
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math>)</strong></td>
+<td style="text-align: left;">Константа, связывающая среднюю энергию
+частицы с термодинамической температурой.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Равнораспределение</strong></td>
+<td style="text-align: left;">Теорема, согласно которой на каждую
+степень свободы системы в равновесии приходится в среднем энергия
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>k</mi><mi>T</mi></mrow><annotation encoding="application/x-tex">\frac{1}{2}kT</annotation></semantics></math>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Шум Джонсона</strong></td>
+<td style="text-align: left;">Тепловые флуктуации напряжения/тока в
+электрическом сопротивлении.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Абсолютно черное
+тело</strong></td>
+<td style="text-align: left;">Идеализированный объект, спектр излучения
+которого зависит исключительно от его температуры.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Случайное блуждание</strong></td>
+<td style="text-align: left;">Процесс движения, в котором каждый шаг
+совершается в случайном направлении независимо от предыдущих
+перемещений.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Коэффициент сопротивления
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>μ</mi><annotation encoding="application/x-tex">\mu</annotation></semantics></math>)</strong></td>
+<td style="text-align: left;">Параметр, определяющий силу трения,
+пропорциональную скорости движения частицы в среде.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Квант энергии
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ℏ</mi><mi>ω</mi></mrow><annotation encoding="application/x-tex">\hbar\omega</annotation></semantics></math>)</strong></td>
+<td style="text-align: left;">Минимальная порция энергии, которую может
+поглощать или излучать гармонический осциллятор по теории Планка.</td>
+</tr>
+</tbody>
+</table>
+    </article>
+  </main>
+</body>
+</html>

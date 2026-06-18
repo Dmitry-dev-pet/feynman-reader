@@ -1,0 +1,46 @@
+SOURCE: Feynman Lectures on Physics, Volume I, Chapter 43
+LANGUAGE: en
+SECTION: 43–4 Ionic conductivity
+SOURCE_URL: https://www.feynmanlectures.caltech.edu/I_43.html
+
+# 43–4 Ionic conductivity
+
+We now apply our results to a special case. Suppose we have a gas in a vessel in which there are also some ions—atoms or molecules with a net electric charge. We show the situation schematically in Fig.43–2. If two opposite walls of the container are metallic plates, we can connect them to the terminals of a battery and thereby produce an electric field in the gas. The electric field will result in a force on the ions, so they will begin to drift toward one or the other of the plates. An electric current will be induced, and the gas with its ions will behave like a resistor. By computing the ion flow from the drift velocity we can compute the resistance. We ask, specifically: How does the flow of electric current depend on the voltage difference \(V\) that we apply across the two plates?
+FIGURE Ch43-F2: Fig. 43–2.Electric current from an ionized gas.
+We consider the case that our container is a rectangular box of length \(b\) and cross-sectional area \(A\) (Fig.43–2). If the potential difference, or voltage, from one plate to the other is \(V\) , the electric field \(E\) between the plates is \(V/b\) . (The electric potential is the work done in carrying a unit charge from one plate to the other. The force on a unit charge is \(\FLPE\) . If \(\FLPE\) is the same everywhere between the plates, which is a good enough approximation for now, the work done on a unit charge is just \(Eb\) , so \(V = Eb\) .) The special force on an ion of the gas is \(q\FLPE\) , where \(q\) is the charge on the ion. The drift velocity of the ion is then \(\mu\) times this force, or
+\[
+\begin{equation}
+\label{Eq:I:43:16}
+v_{\text{drift}} = \mu F = \mu qE = \mu q\,\frac{V}{b}.
+\end{equation}
+\]
+An electric current \(I\) is the flow of charge in a unit time. The electric current to one of the plates is given by the total charge of the ions which arrive at the plate in a unit of time. If the ions drift toward the plate with the velocity \(v_{\text{drift}}\) , then those which are within a distance ( \(v_{\text{drift}}\cdot T\) ) will arrive at the plate in the time \(T\) . If there are \(n_i\) ions per unit volume, the number which reach the plate in the time \(T\) is ( \(n_i\cdot
+A\cdot v_{\text{drift}}\cdot T\) ). Each ion carries the charge \(q\) , so we have that
+\[
+\begin{equation}
+\label{Eq:I:43:17}
+\text{Charge collected in $T$} = qn_iAv_{\text{drift}}T.
+\end{equation}
+\]
+The current \(I\) is the charge collected in \(T\) divided by \(T\) , so
+\[
+\begin{equation}
+\label{Eq:I:43:18}
+I = qn_iAv_{\text{drift}}.
+\end{equation}
+\]
+Substituting \(v_{\text{drift}}\) from (43.16), we have
+\[
+\begin{equation}
+\label{Eq:I:43:19}
+I = \mu q^2n_i\,\frac{A}{b}\,V.
+\end{equation}
+\]
+We find that the current is proportional to the voltage, which is just the form of Ohm’s law, and the resistance \(R\) is the inverse of the proportionality constant:
+\[
+\begin{equation}
+\label{Eq:I:43:20}
+\frac{1}{R} = \mu q^2n_i\,\frac{A}{b}.
+\end{equation}
+\]
+We have a relation between the resistance and the molecular properties \(n_i\) , \(q\) , and \(\mu\) , which depends in turn on \(m\) and \(\tau\) . If we know \(n_i\) and \(q\) from atomic measurements, a measurement of \(R\) could be used to determine \(\mu\) , and from \(\mu\) also \(\tau\) .

@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Analytical Briefing: Probability in Physical Systems - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="en">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch06.html#study-panel">Back to chapter</a>
+      <a class="nav-btn" href="../../index.html">Volume contents</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1 id="analytical-briefing-probability-in-physical-systems">Analytical
+Briefing: Probability in Physical Systems</h1>
+<p>This briefing document synthesizes the principles of probability as
+outlined in the provided source context. It covers the transition from
+common-sense "chance" to rigorous mathematical frameworks, including
+binomial distributions, random walks, and the fundamental role of
+probability in quantum mechanics.</p>
+<h2 id="executive-summary">Executive Summary</h2>
+<p>The study of probability is the "true logic of this world," serving
+as a quantitative system for making better guesses under conditions of
+incomplete information. Initially developed to describe repeatable
+events like coin tosses, probability has become an essential tool in
+physics for understanding complex systems—from the diffusion of gases to
+the inherent uncertainties of quantum mechanics. Key findings indicate
+that while individual events are unpredictable, large-scale systems
+exhibit consistent average behaviors governed by mathematical laws such
+as the binomial distribution and the Heisenberg uncertainty
+principle.</p>
+<hr />
+<h2 id="i-conceptual-foundations-of-chance">I. Conceptual Foundations of
+Chance</h2>
+<h3 id="the-nature-of-probability">The Nature of Probability</h3>
+<p>Probability is defined as a quantitative measure of likelihood used
+when information is incomplete. It is not an "absolute" number but a
+subjective estimate based on current knowledge and the same degree of
+starting ignorance.</p>
+<ul>
+<li><strong>Operational Definition:</strong> If an observation is
+repeated
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>N</mi><annotation encoding="application/x-tex">N</annotation></semantics></math>
+times, and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>N</mi><mi>A</mi></msub><annotation encoding="application/x-tex">N_A</annotation></semantics></math>
+is the estimate of the most likely number of times a specific result
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+occurs, the probability is:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><msub><mi>N</mi><mi>A</mi></msub><mi>N</mi></mfrac></mrow><annotation encoding="application/x-tex">P(A) = \frac{N_A}{N}</annotation></semantics></math></li>
+<li><strong>The Principle of Equivalence:</strong> If an observation can
+yield
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math>
+different results, and there is no reason to believe any one is more
+likely than another (e.g., a blind draw from a shuffled deck), the
+probability of any specific outcome is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mi>m</mi></mrow><annotation encoding="application/x-tex">1/m</annotation></semantics></math>.</li>
+</ul>
+<h3 id="requirements-for-application">Requirements for Application</h3>
+<ol type="1">
+<li><strong>Repeatability:</strong> Probability only applies to outcomes
+of repeatable observations.</li>
+<li><strong>Equivalent Preparation:</strong> Each observation must be
+made from an equivalently prepared situation.</li>
+<li><strong>Future-Facing:</strong> Probability is spoken of only for
+observations contemplated for the future.</li>
+</ol>
+<hr />
+<h2 id="ii-discrete-probability-and-fluctuations">II. Discrete
+Probability and Fluctuations</h2>
+<p>Using coin tossing as a model (where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>=</mo><mn>30</mn></mrow><annotation encoding="application/x-tex">N=30</annotation></semantics></math>),
+the source demonstrates that "most likely" outcomes are rarely observed
+exactly in small samples.</p>
+<h3 id="the-binomial-distribution">The Binomial Distribution</h3>
+<p>When a game has two outcomes (Win/Loss), with
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math>
+as the probability of winning and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>p</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">q = (1-p)</annotation></semantics></math>
+as the probability of losing, the probability
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>k</mi><mo>,</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">P(k, n)</annotation></semantics></math>
+of obtaining
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math>
+wins in
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+trials is:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>k</mi><mo>,</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mi>n</mi><mi>k</mi></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><msup><mi>p</mi><mi>k</mi></msup><msup><mi>q</mi><mrow><mi>n</mi><mo>−</mo><mi>k</mi></mrow></msup></mrow><annotation encoding="application/x-tex">P(k, n) = \binom{n}{k} p^k q^{n-k}</annotation></semantics></math></p>
+<p>The term
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mi>n</mi><mi>k</mi></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\binom{n}{k}</annotation></semantics></math>
+represents the <strong>binomial coefficients</strong> (or Pascal’s
+Triangle), calculated as:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mi>n</mi><mi>k</mi></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mfrac><mrow><mi>n</mi><mi>!</mi></mrow><mrow><mi>k</mi><mi>!</mi><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo>−</mo><mi>k</mi><mo stretchy="false" form="postfix">)</mo><mi>!</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\binom{n}{k} = \frac{n!}{k!(n - k)!}</annotation></semantics></math></p>
+<h3 id="understanding-fluctuations">Understanding Fluctuations</h3>
+<ul>
+<li><strong>The "Most Likely" Value:</strong> In 30 tosses of an honest
+coin, 15 heads is the most likely single outcome, but it is not
+guaranteed.</li>
+<li><strong>Observation vs. Expectation:</strong> Figure 6-2 shows that
+in 100 games of 30 tosses, scores of 16 or 17 heads may occur more
+frequently than 15 due to "fluctuations." These are not necessarily
+biases but inherent variations in random systems.</li>
+<li><strong>Law of Large Numbers:</strong> As the number of tosses
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>N</mi><annotation encoding="application/x-tex">N</annotation></semantics></math>
+increases, the fraction of heads
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>N</mi><mi>H</mi></msub><mi>/</mi><mi>N</mi></mrow><annotation encoding="application/x-tex">N_H/N</annotation></semantics></math>)
+approaches 0.5. The expected deviation of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>N</mi><mi>H</mi></msub><annotation encoding="application/x-tex">N_H</annotation></semantics></math>
+from
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">N/2</annotation></semantics></math>
+is approximately
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><msqrt><mi>N</mi></msqrt><mn>2</mn></mfrac><annotation encoding="application/x-tex">\frac{\sqrt{N}}{2}</annotation></semantics></math>.</li>
+</ul>
+<hr />
+<h2 id="iii-the-random-walk-and-physical-progress">III. The Random Walk
+and Physical Progress</h2>
+<p>The "random walk" models a player starting at
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">x=0</annotation></semantics></math>
+and taking a random step forward or backward. This provides a
+mathematical basis for Brownian motion and measurement errors.</p>
+<h3 id="key-metrics-of-progress">Key Metrics of Progress</h3>
+<ul>
+<li><strong>Mean Square Distance:</strong> The average progress of a
+random walker is zero, but the square of the distance increases linearly
+with the number of steps:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⟨</mo><msubsup><mi>D</mi><mi>N</mi><mn>2</mn></msubsup><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><mi>N</mi></mrow><annotation encoding="application/x-tex">\langle D_N^2 \rangle = N</annotation></semantics></math></li>
+<li><strong>Root-Mean-Square (RMS) Distance:</strong> A more intuitive
+measure of "straying" from the origin is the square root of the mean
+square distance:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mtext mathvariant="normal">rms</mtext></msub><mo>=</mo><msqrt><mi>N</mi></msqrt></mrow><annotation encoding="application/x-tex">D_{\text{rms}} = \sqrt{N}</annotation></semantics></math></li>
+</ul>
+<h3 id="detecting-loaded-systems">Detecting "Loaded" Systems</h3>
+<p>To determine if a coin is honest, one looks at the fraction of heads.
+The deviation from 0.5 should be near
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>1</mn><mrow><mn>2</mn><msqrt><mi>N</mi></msqrt></mrow></mfrac><annotation encoding="application/x-tex">\frac{1}{2\sqrt{N}}</annotation></semantics></math>.</p>
+<ul>
+<li>If the deviation is within a factor of 2 or 3 of this value, there
+is no reason to suspect the coin.</li>
+<li>If the deviation is significantly larger, the coin may be
+"loaded."</li>
+</ul>
+<hr />
+<h2 id="iv-continuous-distributions-and-probability-density">IV.
+Continuous Distributions and Probability Density</h2>
+<p>In systems with variable step lengths (like molecules in a gas), we
+cannot assign a probability to an exact value of distance
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>D</mi><annotation encoding="application/x-tex">D</annotation></semantics></math>.
+Instead, we use <strong>probability density</strong>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">p(x)</annotation></semantics></math>.</p>
+<h3 id="mathematical-characteristics">Mathematical Characteristics</h3>
+<p>The probability that
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>D</mi><annotation encoding="application/x-tex">D</annotation></semantics></math>
+lands between
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mn>1</mn></msub><annotation encoding="application/x-tex">x_1</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mn>2</mn></msub><annotation encoding="application/x-tex">x_2</annotation></semantics></math>
+is the area under the density curve:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>&lt;</mo><mi>D</mi><mo>&lt;</mo><msub><mi>x</mi><mn>2</mn></msub><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msubsup><mo>∫</mo><msub><mi>x</mi><mn>1</mn></msub><msub><mi>x</mi><mn>2</mn></msub></msubsup><mi>p</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mi>d</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">P(x_1 &lt; D &lt; x_2) = \int_{x_1}^{x_2} p(x) \, dx</annotation></semantics></math></p>
+<p><strong>The Normal (Gaussian) Distribution:</strong> For large
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>N</mi><annotation encoding="application/x-tex">N</annotation></semantics></math>,
+the probability density takes the following form:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><mn>1</mn><mrow><mi>σ</mi><msqrt><mrow><mn>2</mn><mi>π</mi></mrow></msqrt></mrow></mfrac><msup><mi>e</mi><mrow><mi>−</mi><msup><mi>x</mi><mn>2</mn></msup><mi>/</mi><mn>2</mn><msup><mi>σ</mi><mn>2</mn></msup></mrow></msup></mrow><annotation encoding="application/x-tex">p(x) = \frac{1}{\sigma\sqrt{2\pi}} e^{-x^2/2\sigma^2}</annotation></semantics></math></p>
+<ul>
+<li><strong>Standard Deviation
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>σ</mi><annotation encoding="application/x-tex">\sigma</annotation></semantics></math>):</strong>
+In a random walk,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo>=</mo><msqrt><mi>N</mi></msqrt><msub><mi>S</mi><mtext mathvariant="normal">rms</mtext></msub></mrow><annotation encoding="application/x-tex">\sigma = \sqrt{N} S_{\text{rms}}</annotation></semantics></math>.</li>
+<li><strong>Normalization:</strong> The total area under the curve must
+equal 1, as the particle must be <em>somewhere</em>:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mo>∫</mo><mrow><mi>−</mi><mi>∞</mi></mrow><mrow><mi>+</mi><mi>∞</mi></mrow></msubsup><mi>p</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mi>d</mi><mi>x</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\int_{-\infty}^{+\infty} p(x) \, dx = 1</annotation></semantics></math>.</li>
+</ul>
+<h3 id="physical-meaning-in-gas-dynamics">Physical Meaning in Gas
+Dynamics</h3>
+<ul>
+<li><strong>Diffusion:</strong> Molecules in still air spread out
+because of random collisions. As time (and number of steps
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>N</mi><annotation encoding="application/x-tex">N</annotation></semantics></math>)
+increases, the distribution curves become wider and shorter (Figure
+6-7).</li>
+<li><strong>Velocity Distribution:</strong> Maxwell’s distribution shows
+that while a molecule may have any speed, some are more likely. The
+"distribution in velocity"
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mo>⋅</mo><mi>p</mi><mo stretchy="false" form="prefix">(</mo><mi>v</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">N \cdot p(v)</annotation></semantics></math>
+allows us to calculate the expected number of molecules within a
+specific velocity range.</li>
+</ul>
+<hr />
+<h2 id="v-probability-in-quantum-mechanics">V. Probability in Quantum
+Mechanics</h2>
+<p>In modern physics, probability is not merely a convenience for
+complex systems but an <strong>essential</strong> description of atomic
+events.</p>
+<h3 id="the-heisenberg-uncertainty-principle">The Heisenberg Uncertainty
+Principle</h3>
+<p>Quantum mechanics dictates that the probability densities for
+position
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>p</mi><mn>1</mn></msub><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">p_1(x)</annotation></semantics></math>)
+and velocity
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>p</mi><mn>2</mn></msub><mo stretchy="false" form="prefix">(</mo><mi>v</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">p_2(v)</annotation></semantics></math>)
+are linked. Nature forbids both from being arbitrarily narrow.
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><mi mathvariant="normal">Δ</mi><mi>x</mi><mo stretchy="false" form="postfix">]</mo><mo>⋅</mo><mo stretchy="false" form="prefix">[</mo><mi mathvariant="normal">Δ</mi><mi>v</mi><mo stretchy="false" form="postfix">]</mo><mo>≥</mo><mfrac><mi>ℏ</mi><mrow><mn>2</mn><mi>m</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">[\Delta x] \cdot [\Delta v] \geq \frac{\hbar}{2m}</annotation></semantics></math></p>
+<ul>
+<li><strong>Physical Meaning:</strong> Forcing a particle into a precise
+location
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">\Delta x</annotation></semantics></math>
+becomes small) causes its velocity to become highly uncertain
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>v</mi></mrow><annotation encoding="application/x-tex">\Delta v</annotation></semantics></math>
+becomes large), and vice versa.</li>
+</ul>
+<h3 id="the-electron-cloud">The Electron Cloud</h3>
+<p>Because of this uncertainty, we cannot describe electrons as moving
+in "orbits." In a hydrogen atom, we speak of a "probability cloud."</p>
+<ul>
+<li><strong>The Cloud Model:</strong> The density of the cloud
+represents the chance of finding the electron at a specific distance
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math>
+from the nucleus.</li>
+<li><strong>Formula:</strong> For an undisturbed hydrogen atom, the
+probability density is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo stretchy="false" form="prefix">(</mo><mi>r</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>A</mi><msup><mi>e</mi><mrow><mi>−</mi><mn>2</mn><mi>r</mi><mi>/</mi><mi>a</mi></mrow></msup></mrow><annotation encoding="application/x-tex">p(r) = Ae^{-2r/a}</annotation></semantics></math>,
+where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+is the "typical" radius
+(~<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>10</mn><mrow><mi>−</mi><mn>10</mn></mrow></msup><annotation encoding="application/x-tex">10^{-10}</annotation></semantics></math>
+meters).</li>
+</ul>
+<hr />
+<h2 id="important-quotes">Important Quotes</h2>
+<blockquote>
+<p>"The true logic of this world is in the calculus of probabilities." —
+<strong>James Clerk Maxwell</strong> (Context: Opening the chapter to
+establish probability as the fundamental logic for understanding
+physical reality.)</p>
+</blockquote>
+<blockquote>
+<p>"Any physical theory is a kind of guesswork. There are good guesses
+and there are bad guesses. The theory of probability is a system for
+making better guesses." — <strong>Source Text</strong> (Context:
+Explaining the practical utility of probability in scientific
+theorizing.)</p>
+</blockquote>
+<blockquote>
+<p>"Surely God does not throw dice in determining how electrons should
+go!" — <strong>Albert Einstein</strong> (Context: Highlighting
+historical resistance to the idea that nature is fundamentally
+probabilistic rather than deterministic.)</p>
+</blockquote>
+<hr />
+<h2 id="actionable-insights-for-analysis">Actionable Insights for
+Analysis</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Concept</th>
+<th style="text-align: left;">Key Formula / Figure</th>
+<th style="text-align: left;">Physical Application</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Binomial Probability</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>k</mi><mo>,</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mi>n</mi><mi>k</mi></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><msup><mi>p</mi><mi>k</mi></msup><msup><mi>q</mi><mrow><mi>n</mi><mo>−</mo><mi>k</mi></mrow></msup></mrow><annotation encoding="application/x-tex">P(k, n) = \binom{n}{k} p^k q^{n-k}</annotation></semantics></math></td>
+<td style="text-align: left;">Predicting outcomes of discrete events
+with two possible results.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Random Walk Progress</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mtext mathvariant="normal">rms</mtext></msub><mo>=</mo><msqrt><mi>N</mi></msqrt></mrow><annotation encoding="application/x-tex">D_{\text{rms}} = \sqrt{N}</annotation></semantics></math></td>
+<td style="text-align: left;">Modeling diffusion, Brownian motion, and
+the accumulation of experimental errors.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Probability Density</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mo>∫</mo><mrow><mi>−</mi><mi>∞</mi></mrow><mrow><mi>+</mi><mi>∞</mi></mrow></msubsup><mi>p</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mi>d</mi><mi>x</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\int_{-\infty}^{+\infty} p(x) \, dx = 1</annotation></semantics></math></td>
+<td style="text-align: left;">Calculating the likelihood of continuous
+variables (e.g., molecular velocity).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Uncertainty
+Principle</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><mi mathvariant="normal">Δ</mi><mi>x</mi><mo stretchy="false" form="postfix">]</mo><mo>⋅</mo><mo stretchy="false" form="prefix">[</mo><mi mathvariant="normal">Δ</mi><mi>v</mi><mo stretchy="false" form="postfix">]</mo><mo>≥</mo><mi>ℏ</mi><mi>/</mi><mn>2</mn><mi>m</mi></mrow><annotation encoding="application/x-tex">[\Delta x] \cdot [\Delta v] \geq \hbar/2m</annotation></semantics></math></td>
+<td style="text-align: left;">Understanding why atomic structures are
+"fuzzy" and cannot be described by orbits.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Fluctuation Scale</strong></td>
+<td style="text-align: left;">Error
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≈</mo><mfrac><mn>1</mn><mrow><mn>2</mn><msqrt><mi>N</mi></msqrt></mrow></mfrac></mrow><annotation encoding="application/x-tex">\approx \frac{1}{2\sqrt{N}}</annotation></semantics></math></td>
+<td style="text-align: left;">Determining the "honesty" of a coin or the
+reliability of an experimental result.</td>
+</tr>
+</tbody>
+</table>
+    </article>
+  </main>
+</body>
+</html>

@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chapter 21: The Harmonic Oscillator - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="en">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch21.html#study-panel">Back to chapter</a>
+      <a class="nav-btn" href="../../index.html">Volume contents</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1 id="chapter-21-the-harmonic-oscillator">Chapter 21: The Harmonic
+Oscillator</h1>
+<p>This study guide explores the fundamental principles of the harmonic
+oscillator as detailed in Chapter 21 of the Feynman Lectures on Physics.
+The harmonic oscillator is a cornerstone of physics, providing a
+mathematical framework that applies to mechanical systems, electrical
+circuits, acoustics, and even biological populations.</p>
+<hr />
+<h2 id="i-key-concepts">I. Key Concepts</h2>
+<h3 id="1-linear-differential-equations-with-constant-coefficients">1.
+Linear Differential Equations with Constant Coefficients</h3>
+<p>A harmonic oscillator is defined by a specific type of mathematical
+expression called a linear differential equation with constant
+coefficients. This is an equation where the sum of several terms—each a
+derivative of a dependent variable multiplied by a constant—equals a
+function of the independent variable (usually time).</p>
+<ul>
+<li><strong>Universal Applicability:</strong> Because many diverse
+fields (mechanics, optics, electricity, biology) share the same
+underlying differential equations, studying the mechanical oscillator
+provides insights into:
+<ul>
+<li>Charge flow in electrical circuits.</li>
+<li>Vibrations of tuning forks (acoustics).</li>
+<li>Electron vibrations in atoms (optics).</li>
+<li>Thermostat operations (servo systems).</li>
+<li>Chemical reactions and predator-prey population dynamics.</li>
+</ul></li>
+</ul>
+<h3 id="2-the-mechanical-model-mass-on-a-spring">2. The Mechanical
+Model: Mass on a Spring</h3>
+<p>The simplest mechanical example of a harmonic oscillator is a mass
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math>)
+attached to a linear spring with a spring constant
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math>).</p>
+<ul>
+<li><strong>Restoring Force:</strong> When displaced by a distance
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>),
+the spring exerts a force
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>=</mo><mi>−</mi><mi>k</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">F = -kx</annotation></semantics></math>.
+The minus sign indicates the force always pulls the mass back toward the
+equilibrium position.</li>
+<li><strong>Equation of Motion:</strong> Based on Newton’s Second Law
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>=</mo><mi>m</mi><mi>a</mi></mrow><annotation encoding="application/x-tex">F = ma</annotation></semantics></math>),
+the motion follows the equation:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mi>x</mi></mrow><mrow><mi>d</mi><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac><mo>=</mo><mi>−</mi><mi>k</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">m \frac{d^2x}{dt^2} = -kx</annotation></semantics></math></li>
+<li><strong>Natural Frequency
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ω</mi><mn>0</mn></msub><annotation encoding="application/x-tex">\omega_0</annotation></semantics></math>):</strong>
+The ratio of the spring constant to the mass determines the natural
+frequency of the system:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>ω</mi><mn>0</mn><mn>2</mn></msubsup><mo>=</mo><mfrac><mi>k</mi><mi>m</mi></mfrac></mrow><annotation encoding="application/x-tex">\omega_0^2 = \frac{k}{m}</annotation></semantics></math></li>
+</ul>
+<h3 id="3-properties-of-the-motion">3. Properties of the Motion</h3>
+<ul>
+<li><strong>Independent of Amplitude:</strong> For a linear system, the
+time pattern of the motion remains the same regardless of the initial
+displacement. Pulling a spring twice as far increases the force and
+acceleration proportionally, meaning it takes the same amount of time to
+return to the origin.</li>
+<li><strong>The Period
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>t</mi><mn>0</mn></msub><annotation encoding="application/x-tex">t_0</annotation></semantics></math>):</strong>
+The time required for one complete cycle is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>t</mi><mn>0</mn></msub><mo>=</mo><mn>2</mn><mi>π</mi><msqrt><mrow><mi>m</mi><mi>/</mi><mi>k</mi></mrow></msqrt></mrow><annotation encoding="application/x-tex">t_0 = 2\pi \sqrt{m/k}</annotation></semantics></math>.
+A heavier mass increases the period (due to inertia), while a stronger
+spring decreases it.</li>
+<li><strong>General Solutions:</strong> The displacement
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>
+at any time
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math>
+can be expressed in several mathematically equivalent ways:
+<ol type="1">
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mi>a</mi><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><msub><mi>ω</mi><mn>0</mn></msub><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo>−</mo><msub><mi>t</mi><mn>1</mn></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">x = a \cos \omega_0(t - t_1)</annotation></semantics></math></li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mi>a</mi><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><msub><mi>ω</mi><mn>0</mn></msub><mi>t</mi><mo>+</mo><mi mathvariant="normal">Δ</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">x = a \cos(\omega_0t + \Delta)</annotation></semantics></math></li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mi>A</mi><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><msub><mi>ω</mi><mn>0</mn></msub><mi>t</mi><mo>+</mo><mi>B</mi><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><msub><mi>ω</mi><mn>0</mn></msub><mi>t</mi></mrow><annotation encoding="application/x-tex">x = A \cos \omega_0t + B \sin \omega_0t</annotation></semantics></math></li>
+</ol></li>
+</ul>
+<h3 id="4-relationship-to-circular-motion">4. Relationship to Circular
+Motion</h3>
+<p>Simple harmonic motion (SHM) is mathematically equivalent to the
+projection of uniform circular motion onto a straight line.</p>
+<ul>
+<li>If a particle moves in a circle of radius
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>R</mi><annotation encoding="application/x-tex">R</annotation></semantics></math>
+with constant angular velocity
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ω</mi><mn>0</mn></msub><annotation encoding="application/x-tex">\omega_0</annotation></semantics></math>,
+its horizontal position
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>)
+is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><msub><mi>ω</mi><mn>0</mn></msub><mi>t</mi></mrow><annotation encoding="application/x-tex">R \cos \omega_0t</annotation></semantics></math>.</li>
+<li>The acceleration toward the center of the circle translates to a
+linear acceleration proportional to the displacement from the center:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>x</mi></msub><mo>=</mo><mi>−</mi><msubsup><mi>ω</mi><mn>0</mn><mn>2</mn></msubsup><mi>x</mi></mrow><annotation encoding="application/x-tex">a_x = -\omega_0^2 x</annotation></semantics></math>.</li>
+</ul>
+<h3 id="5-conservation-of-energy">5. Conservation of Energy</h3>
+<p>In an ideal harmonic oscillator without friction, total energy is
+conserved, fluctuating between two forms:</p>
+<ul>
+<li><strong>Potential Energy
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>U</mi><annotation encoding="application/x-tex">U</annotation></semantics></math>):</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>k</mi><msup><mi>x</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\frac{1}{2}kx^2</annotation></semantics></math>.
+This is maximal at the points of greatest displacement.</li>
+<li><strong>Kinetic Energy
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>T</mi><annotation encoding="application/x-tex">T</annotation></semantics></math>):</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>m</mi><msup><mi>v</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\frac{1}{2}mv^2</annotation></semantics></math>.
+This is maximal as the mass passes through the equilibrium point
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">x = 0</annotation></semantics></math>).</li>
+<li><strong>Total Energy:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo>+</mo><mi>U</mi><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>m</mi><msubsup><mi>ω</mi><mn>0</mn><mn>2</mn></msubsup><msup><mi>a</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">T + U = \frac{1}{2}m\omega_0^2 a^2</annotation></semantics></math>.
+The total energy is proportional to the square of the amplitude.</li>
+</ul>
+<h3 id="6-forced-oscillations-and-resonance">6. Forced Oscillations and
+Resonance</h3>
+<p>When an external driving force
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msub><mi>F</mi><mn>0</mn></msub><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>ω</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">F(t) = F_0 \cos \omega t</annotation></semantics></math>
+is applied:</p>
+<ul>
+<li><strong>Steady-State Response:</strong> The system oscillates at the
+frequency of the <em>applied</em> force
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ω</mi><annotation encoding="application/x-tex">\omega</annotation></semantics></math>),
+not its natural frequency
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ω</mi><mn>0</mn></msub><annotation encoding="application/x-tex">\omega_0</annotation></semantics></math>).</li>
+<li><strong>Amplitude of Forced Motion:</strong> The amplitude
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math>)
+is determined by the formula:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo>=</mo><mfrac><msub><mi>F</mi><mn>0</mn></msub><mrow><mi>m</mi><mo stretchy="false" form="prefix">(</mo><msubsup><mi>ω</mi><mn>0</mn><mn>2</mn></msubsup><mo>−</mo><msup><mi>ω</mi><mn>2</mn></msup><mo stretchy="false" form="postfix">)</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">C = \frac{F_0}{m(\omega_0^2 - \omega^2)}</annotation></semantics></math></li>
+<li><strong>Resonance:</strong> If the applied frequency
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ω</mi><annotation encoding="application/x-tex">\omega</annotation></semantics></math>)
+matches the natural frequency
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ω</mi><mn>0</mn></msub><annotation encoding="application/x-tex">\omega_0</annotation></semantics></math>),
+the denominator approaches zero, and the amplitude theoretically
+approaches infinity. In the real world, friction or system failure (like
+a spring breaking) prevents infinite amplitude.</li>
+</ul>
+<hr />
+<h2 id="ii-self-check-questions">II. Self-Check Questions</h2>
+<h3 id="short-answer-quiz">Short-Answer Quiz</h3>
+<ol type="1">
+<li><strong>What defines a differential equation as "linear"?</strong>
+<ul>
+<li><em>Answer:</em> It consists of a sum of several terms, each being a
+derivative of the dependent variable multiplied by a constant.</li>
+</ul></li>
+<li><strong>How does increasing the mass
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math>)
+affect the period of a harmonic oscillator?</strong>
+<ul>
+<li><em>Answer:</em> It increases the period because
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>t</mi><mn>0</mn></msub><mo>=</mo><mn>2</mn><mi>π</mi><msqrt><mrow><mi>m</mi><mi>/</mi><mi>k</mi></mrow></msqrt></mrow><annotation encoding="application/x-tex">t_0 = 2\pi \sqrt{m/k}</annotation></semantics></math>;
+more inertia requires more time to move the mass.</li>
+</ul></li>
+<li><strong>What determines the amplitude of a natural (unforced)
+harmonic oscillator?</strong>
+<ul>
+<li><em>Answer:</em> The initial conditions (how the motion was started,
+such as the initial displacement or a "kick" velocity).</li>
+</ul></li>
+<li><strong>What is the difference between the "transient response" and
+the "steady-state response"?</strong>
+<ul>
+<li><em>Answer:</em> The transient response depends on the starting
+conditions and usually dies out over time; the steady-state response is
+the ongoing motion determined by the external driving force.</li>
+</ul></li>
+<li><strong>At what point in the oscillation is the kinetic energy at
+its maximum?</strong>
+<ul>
+<li><em>Answer:</em> When the mass passes through the equilibrium
+position
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">x = 0</annotation></semantics></math>).</li>
+</ul></li>
+</ol>
+<h3 id="common-misconceptions">Common Misconceptions</h3>
+<ul>
+<li><strong>The "Phase" Confusion:</strong> The term "phase" is often
+used ambiguously. Some define
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="normal">Δ</mi><annotation encoding="application/x-tex">\Delta</annotation></semantics></math>
+as the phase (a constant phase shift), while others define the entire
+argument of the cosine function
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><msub><mi>ω</mi><mn>0</mn></msub><mi>t</mi><mo>+</mo><mi mathvariant="normal">Δ</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(\omega_0t + \Delta)</annotation></semantics></math>
+as the phase, which changes with time.</li>
+<li><strong>Infinite Resonance:</strong> While the mathematical formula
+for forced oscillation suggests an infinite amplitude when
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ω</mi><mo>=</mo><msub><mi>ω</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">\omega = \omega_0</annotation></semantics></math>,
+this is a physical impossibility. Real-world factors like friction,
+which are not present in the basic linear equation, limit the
+amplitude.</li>
+<li><strong>Amplitude and Period:</strong> It is a common mistake to
+think that pulling a mass further back will make it take longer to
+return to center. In a linear oscillator, the increased force exactly
+compensates for the increased distance, keeping the period constant
+regardless of amplitude.</li>
+</ul>
+<hr />
+<h2 id="iii-essay-prompts-for-deeper-exploration">III. Essay Prompts for
+Deeper Exploration</h2>
+<ol type="1">
+<li><strong>The Universality of the Harmonic Oscillator:</strong>
+Discuss why the same differential equation appears in such vastly
+different fields as optics, chemistry, and biology. What does this
+suggest about the nature of equilibrium in physical systems?</li>
+<li><strong>The Geometry of Motion:</strong> Explain the mathematical
+and physical relationship between uniform circular motion and simple
+harmonic motion. How does the projection of a rotating vector provide a
+solution to the mechanical problem of a weight on a spring?</li>
+<li><strong>Energy Dynamics:</strong> Analyze the exchange between
+kinetic and potential energy in an oscillator. Describe the mathematical
+proof for the conservation of total energy and explain why the average
+kinetic energy is equal to exactly half of the total energy.</li>
+<li><strong>The Mechanics of Resonance:</strong> Using the formula for
+forced oscillations, describe what happens to the displacement and
+direction of motion when the applied frequency is much lower than, equal
+to, or much higher than the natural frequency.</li>
+</ol>
+<hr />
+<h2 id="iv-glossary-of-important-terms">IV. Glossary of Important
+Terms</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Term</th>
+<th style="text-align: left;">Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Angular Frequency
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ω</mi><mn>0</mn></msub><annotation encoding="application/x-tex">\omega_0</annotation></semantics></math>)</strong></td>
+<td style="text-align: left;">The number of radians by which the phase
+changes per second; determined by the system's physical properties
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msqrt><mrow><mi>k</mi><mi>/</mi><mi>m</mi></mrow></msqrt><annotation encoding="application/x-tex">\sqrt{k/m}</annotation></semantics></math>).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Amplitude
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>)</strong></td>
+<td style="text-align: left;">The maximum displacement attained by the
+mass from its equilibrium position.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Equilibrium Position</strong></td>
+<td style="text-align: left;">The point where the spring is balanced and
+no net force acts on the mass (defined as
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">x = 0</annotation></semantics></math>
+in the equations).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Initial Conditions</strong></td>
+<td style="text-align: left;">The state of the system at
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">t=0</annotation></semantics></math>
+(displacement and velocity) which determines the constants of the
+motion.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Linear Spring</strong></td>
+<td style="text-align: left;">A spring where the restoring force is
+precisely proportional to the amount of stretch or compression
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>=</mo><mi>−</mi><mi>k</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">F = -kx</annotation></semantics></math>).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Natural Frequency</strong></td>
+<td style="text-align: left;">The frequency at which a system oscillates
+when not subjected to a continuous external driving force.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Period
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>t</mi><mn>0</mn></msub><annotation encoding="application/x-tex">t_0</annotation></semantics></math>)</strong></td>
+<td style="text-align: left;">The time required for the motion to go
+through one complete cycle.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Phase Shift
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="normal">Δ</mi><annotation encoding="application/x-tex">\Delta</annotation></semantics></math>)</strong></td>
+<td style="text-align: left;">A constant that shifts the starting point
+of the oscillation in time relative to a standard cosine wave.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Resonance</strong></td>
+<td style="text-align: left;">A phenomenon where the frequency of a
+driving force matches the natural frequency of the system, leading to
+large amplitudes.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Steady-State
+Response</strong></td>
+<td style="text-align: left;">The long-term behavior of a forced
+oscillator where the system vibrates at the frequency of the external
+force.</td>
+</tr>
+</tbody>
+</table>
+    </article>
+  </main>
+</body>
+</html>

@@ -1,0 +1,157 @@
+SOURCE: Feynman Lectures on Physics, Volume I, Chapter 50
+LANGUAGE: en
+SECTION: 50–4 The Fourier coefficients
+SOURCE_URL: https://www.feynmanlectures.caltech.edu/I_50.html
+
+# 50–4 The Fourier coefficients
+
+Let us return now to the idea that any note—that is, aperiodicsound—can be represented by a suitable combination of harmonics. We would like to show how we can find out what amount of each harmonic is required. It is, of course, easy to compute \(f(t)\) , using Eq. (50.2), if we aregivenall the coefficients \(a\) and \(b\) . The question now is, if we are given \(f(t)\) how can we know what the coefficients of the various harmonic terms should be? (It is easy to make a cake from a recipe; but can we write down the recipe if we are given a cake?)
+Fourier discovered that it was not really very difficult. The term \(a_0\) is certainly easy. We have already said that it is just the average value of \(f(t)\) over one period (from \(t = 0\) to \(t = T\) ). We can easily see that this is indeed so. The average value of a sine or cosine function over one period is zero. Over two, or three, or any whole number of periods, it is also zero. So the average value of all of the terms on the right-hand side of Eq. (50.2) is zero, except for \(a_0\) . (Recall that we must choose \(\omega = 2\pi/T\) .)
+Now the average of a sum is the sum of the averages. So the average of \(f(t)\) is just the average of \(a_0\) . But \(a_0\) is aconstant, so its average is just the same as its value. Recalling the definition of an average, we have
+\[
+\begin{equation}
+\label{Eq:I:50:3}
+a_0 = \frac{1}{T}\int_0^Tf(t)\,dt.
+\end{equation}
+\]
+The other coefficients are only a little more difficult. To find them we can use a trick discovered by Fourier. Suppose we multiply both sides of Eq. (50.2) by some harmonic function—say by \(\cos7\omega t\) . We have then
+\[
+\begin{alignat}{2}
+f(t)\cdot\cos7\omega t &= a_0\cdot\cos7\omega t\notag\\[.75ex]
+&\quad+\;a_1\cos\omega t \cdot\cos7\omega t\notag\\
+&\qquad\qquad+\;b_1\sin\omega t\cdot\cos7\omega t&\notag\\[.75ex]
+&\quad+\;a_2\cos2\omega t\cdot\cos7\omega t \notag\\
+&\qquad\qquad+\;b_2\sin2\omega t\cdot\cos7\omega t\notag\\[1ex]
+&\quad+\quad\dotsb\notag\\[2ex]
+&\quad+\;a_7\cos7\omega t\cdot\cos7\omega t\notag\\
+&\qquad\qquad+\;b_7\sin7\omega t\cdot\cos7\omega t\notag\\[.75ex]
+\label{Eq:I:50:4}
+&\quad+\quad\dotsb
+\end{alignat}
+\]
+Nowlet us average both sides. The average of \(a_0\cos7\omega
+t\) over the time \(T\) is proportional to the average of a cosine over \(7\) whole periods. But that is just zero. The average ofalmost allof the rest of the terms isalsozero. Let us look at the \(a_1\) term. We know, in general, that
+\[
+\begin{equation}
+\label{Eq:I:50:5}
+\cos A\cos B = \tfrac{1}{2}\cos\,(A + B) + \tfrac{1}{2}\cos\,(A - B).
+\end{equation}
+\]
+The \(a_1\) term becomes
+\[
+\begin{equation}
+\label{Eq:I:50:6}
+\tfrac{1}{2}a_1(\cos8\omega t + \cos6\omega t).
+\end{equation}
+\]
+We thus have two cosine terms, one with \(8\) full periods in \(T\) and the other with \(6\) .They both average to zero. The average of the \(a_1\) term is therefore zero.
+For the \(a_2\) term, we would find \(a_2\cos9\omega t\) and \(a_2\cos5\omega t\) , each of which also averages to zero. For the \(a_9\) term, we would find \(\cos16\omega t\) and \(\cos\,(-2\omega t)\) . But \(\cos\,(-2\omega t)\) is the same as \(\cos2\omega t\) , so both of these have zero averages. It is clear thatallof the \(a\) terms will have a zero averageexceptone. And that one is the \(a_7\) term. For this one we have
+\[
+\begin{equation}
+\label{Eq:I:50:7}
+\tfrac{1}{2}a_7(\cos14\omega t + \cos0).
+\end{equation}
+\]
+The cosine of zero is one, and its average, of course, is one. So we have the result that the average of all of the \(a\) terms of Eq. (50.4) equals \(\tfrac{1}{2}a_7\) .
+The \(b\) terms are even easier. When we multiply by any cosine term like \(\cos n\omega t\) , we can show by the same method thatallof the \(b\) terms have the average value zero.
+We see that Fourier’s “trick” has acted like a sieve. When we multiply by \(\cos7\omega t\) and average, all terms drop out except \(a_7\) , and we find that
+\[
+\begin{equation}
+\label{Eq:I:50:8}
+\operatorname{Average}\,[f(t)\cdot\cos7\omega t]=a_7/2,
+\end{equation}
+\]
+or
+\[
+\begin{equation}
+\label{Eq:I:50:9}
+a_7 = \frac{2}{T}\int_0^Tf(t)\cdot\cos7\omega t\,dt.
+\end{equation}
+\]
+We shall leave it for the reader to show that the coefficient \(b_7\) can be obtained by multiplying Eq. (50.2) by \(\sin7\omega
+t\) and averaging both sides. The result is
+\[
+\begin{equation}
+\label{Eq:I:50:10}
+b_7 = \frac{2}{T}\int_0^Tf(t)\cdot\sin7\omega t\,dt.
+\end{equation}
+\]
+Now what is true for \(7\) we expect is true for any integer. So we can summarize our proof and result in the following more elegant mathematical form. If \(m\) and \(n\) are integers other than zero, and if \(\omega = 2\pi/T\) , then
+\[
+\begin{align}
+\label{Eq:I:50:11}
+&\text{I.}\;
+\int_0^T\!\sin n\omega t\cos m\omega t\,dt = 0.\\[1ex]
+% ebook break
+&\left.\hspace{-2mm}
+\begin{alignedat}{3}
+&\text{II.}\;
+\int_0^T\!\cos n\omega t \cos m\omega t\,dt ={}\\[1ex]
+&\text{III.}\;
+\int_0^T\!\sin n\omega t \sin m\omega t\,dt ={}
+\end{alignedat}
+\right\}\notag\\
+\label{Eq:I:50:12}
+&\kern{6em}\begin{cases}
+0 & \kern{-1ex}\text{if $n \neq m$}.\\[1ex]
+T/2 & \kern{-1ex}\text{if $n = m$}.
+\end{cases}\\[1ex]
+% ebook break
+&\text{IV.}\;
+f(t) = a_0 + \sum_{n = 1}^\infty a_n\cos n\omega t\notag\\
+\label{Eq:I:50:13}
+&\kern{5.5em}+\sum_{n = 1}^\infty b_n\sin n\omega t.\\[1ex]
+\label{Eq:I:50:14}
+&\text{V.}\;
+a_0 = \frac{1}{T}\int_0^T\!f(t)\,dt.\\[1.5ex]
+\label{Eq:I:50:15}
+&\text{}\quad
+a_n = \frac{2}{T}\int_0^T\!f(t)\cdot\cos n\omega t\,dt.\\[1.5ex]
+\label{Eq:I:50:16}
+&\text{}\quad
+b_n = \frac{2}{T}\int_0^T\!f(t)\cdot\sin n\omega t\,dt.
+\end{align}
+\]
+In earlier chapters it was convenient to use the exponential notation for representing simple harmonic motion. Instead of \(\cos\omega t\) we used \(\FLPRe e^{i\omega t}\) , the real part of the exponential function. We have used cosine and sine functions in this chapter because it made the derivations perhaps a little clearer. Our final result of Eq. (50.13) can, however, be written in the compact form
+\[
+\begin{equation}
+\label{Eq:I:50:17}
+f(t) = \FLPRe\sum_{n = 0}^\infty\hat{a}_ne^{in\omega t},
+\end{equation}
+\]
+where \(\hat{a}_n\) is the complex number \(a_n - ib_n\) (with \(b_0 =
+0\) ). If we wish to use the same notation throughout, we can write also
+\[
+\begin{equation}
+\label{Eq:I:50:18}
+\hat{a}_n = \frac{2}{T}\int_0^Tf(t)e^{-in\omega t}\,dt\quad
+(n \geq 1).
+\end{equation}
+\]
+We now know how to “analyze” a periodic wave into its harmonic components. The procedure is calledFourier analysis, and the separate terms are called Fourier components. We havenotshown, however, that once we find all of the Fourier components and add them together, we do indeed get back our \(f(t)\) . The mathematicians have shown, for a wide class of functions, in fact for all that are of interest to physicists, that if we can do the integrals we will get back \(f(t)\) . There is one minor exception. If the function \(f(t)\) is discontinuous, i.e., if it jumps suddenly from one value to another, the Fourier sum will give a value at the breakpoint halfway between the upper and lower values at the discontinuity. So if we have the strange function \(f(t) = 0\) , \(0 \leq
+t < t_0\) , and \(f(t) = 1\) for \(t_0 \leq t \leq T\) , the Fourier sum will give the right value everywhereexcept at \(t_0\) , where it will have the value \(\tfrac{1}{2}\) instead of \(1\) . It is rather unphysical anyway to insist that a function should be zeroup to \(t_0\) , but \(1\) right at \(t_0\) . So perhaps we should make the “rule” for physicists that any discontinuous function (which can only be a simplification of arealphysical function) should be defined with halfway values at the discontinuities. Then any such function—with any finite number of such jumps—as well as all other physically interesting functions, are given correctly by the Fourier sum.
+FIGURE Ch50-F3: Fig. 50–3.Square-wave function.
+As an exercise, we suggest that the reader determine the Fourier series for the function shown in Fig.50–3. Since the function cannot be written in an explicit algebraic form, you will not be able to do the integrals from zero to \(T\) in the usual way. The integrals are easy, however, if we separate them into two parts: the integral from zero to \(T/2\) (over which \(f(t) = 1\) ) and the integral from \(T/2\) to \(T\) (over which \(f(t) =
+-1\) ). The result should be
+\[
+\begin{equation}
+\label{Eq:I:50:19}
+f(t) = \frac{4}{\pi}(\sin\omega t + \tfrac{1}{3}\sin3\omega t +
+\tfrac{1}{5}\sin5\omega t + \dotsb),
+\end{equation}
+\]
+where \(\omega = 2\pi/T\) . We thus find that our square wave (with the particular phase chosen) has only odd harmonics, and their amplitudes are in inverse proportion to their frequencies.
+Let us check that Eq. (50.19) does indeed give us back \(f(t)\) for some value of \(t\) . Let us choose \(t = T/4\) , or \(\omega t =
+\pi/2\) . We have
+\[
+\begin{align}
+\label{Eq:I:50:20}
+f(t) &= \frac{4}{\pi}\biggl(\sin\frac{\pi}{2} +
+\frac{1}{3}\sin\frac{3\pi}{2} + \frac{1}{5}\sin\frac{5\pi}{2} +
+\dotsb\biggr)\\[1.5ex]
+\label{Eq:I:50:21}
+&= \frac{4}{\pi}\biggl(1 - \frac{1}{3} + \frac{1}{5} -
+\frac{1}{7}\pm\dotsb\biggr).
+\end{align}
+\]
+The series1has the value \(\pi/4\) , and we find that \(f(t) = 1\) .

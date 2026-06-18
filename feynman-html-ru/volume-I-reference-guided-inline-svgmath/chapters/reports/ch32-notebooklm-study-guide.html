@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Глава 32. Радиационное затухание. Рассеяние света: Учебное пособие - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch32.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1
+id="глава-32-радиационное-затухание-рассеяние-света-учебное-пособие">Глава
+32. Радиационное затухание. Рассеяние света: Учебное пособие</h1>
+<p>Данное пособие синтезирует ключевые физические концепции,
+математические выкладки и экспериментальные наблюдения, изложенные в
+главе 32 «Феймановских лекций по физике». Оно охватывает механизмы
+потери энергии ускоренными зарядами, теорию рассеяния света и объяснение
+природных оптических явлений.</p>
+<hr />
+<h2 id="1-конспект-ключевых-понятий">1. Конспект ключевых понятий</h2>
+<h3 id="321-радиационное-сопротивление">32.1. Радиационное
+сопротивление</h3>
+<p>Когда внешний источник заставляет заряды в антенне колебаться,
+энергия излучается в пространство. С точки зрения электрической цепи это
+выглядит как потеря энергии, аналогичная выделению тепла на обычном
+сопротивлении.</p>
+<ul>
+<li><strong>Определение:</strong> Коэффициент пропорциональности между
+излучаемой мощностью
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math>
+и средним квадратом тока
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⟨</mo><msup><mi>I</mi><mn>2</mn></msup><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">\langle I^2 \rangle</annotation></semantics></math>
+называется радиационным сопротивлением.</li>
+<li><strong>Механизм:</strong> На малых расстояниях поля, создаваемые
+одними частями системы зарядов, воздействуют на другие. В классической
+модели электрона («маленький шарик») задержка взаимодействия между его
+частями приводит к нарушению баланса сил, что создает силу
+сопротивления.</li>
+</ul>
+<h3 id="322-интенсивность-излучения">32.2. Интенсивность излучения</h3>
+<p>Мощность
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>S</mi><annotation encoding="application/x-tex">S</annotation></semantics></math>,
+проходящая через единичную площадь, перпендикулярную направлению
+излучения, определяется формулой:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo>=</mo><msub><mi>ϵ</mi><mn>0</mn></msub><mi>c</mi><mo stretchy="false" form="prefix">⟨</mo><msup><mi>E</mi><mn>2</mn></msup><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">S = \epsilon_0 c \langle E^2 \rangle</annotation></semantics></math></p>
+<ul>
+<li><strong>Импеданс вакуума:</strong> Величина
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>ϵ</mi><mn>0</mn></msub><mi>c</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">1/(\epsilon_0 c)</annotation></semantics></math>
+примерно равна <strong>377 Ом</strong>.</li>
+<li><strong>Угловое распределение:</strong> Мощность, излучаемая в
+направлении
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>θ</mi><annotation encoding="application/x-tex">\theta</annotation></semantics></math>,
+пропорциональна
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mn>2</mn></msup><mi>θ</mi></mrow><annotation encoding="application/x-tex">\sin^2\theta</annotation></semantics></math>
+и обратно пропорциональна
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>r</mi><mn>2</mn></msup><annotation encoding="application/x-tex">r^2</annotation></semantics></math>.</li>
+<li><strong>Полная мощность (формула Лармора):</strong> Интегрирование
+по сфере дает общую энергию, теряемую зарядом в секунду:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mfrac><mrow><msup><mi>q</mi><mn>2</mn></msup><msup><mi>a</mi><mo>′</mo></msup><msup><mi></mi><mn>2</mn></msup></mrow><mrow><mn>6</mn><mi>π</mi><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>c</mi><mn>3</mn></msup></mrow></mfrac></mrow><annotation encoding="application/x-tex">P = \frac{q^2 a&#39;^2}{6\pi \epsilon_0 c^3}</annotation></semantics></math>
+Здесь
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>a</mi><mo>′</mo></msup><annotation encoding="application/x-tex">a&#39;</annotation></semantics></math>
+— запаздывающее ускорение.</li>
+</ul>
+<h3 id="323-радиационное-затухание-и-добротность-q">32.3. Радиационное
+затухание и добротность
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Q</mi><annotation encoding="application/x-tex">Q</annotation></semantics></math>)</h3>
+<p>Поскольку осциллирующий заряд теряет энергию на излучение, его
+колебания затухают даже в вакууме.</p>
+<ul>
+<li><strong>Добротность
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Q</mi><annotation encoding="application/x-tex">Q</annotation></semantics></math>):</strong>
+Отношение полной энергии осциллятора к потере энергии за 1 радиан фазы.
+Для типичного атома
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Q</mi><mo>≈</mo><mn>5</mn><mo>×</mo><msup><mn>10</mn><mn>7</mn></msup></mrow><annotation encoding="application/x-tex">Q \approx 5 \times 10^7</annotation></semantics></math>.</li>
+<li><strong>Время жизни атома:</strong> Для видимого света время, за
+которое энергия уменьшается в
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>e</mi><annotation encoding="application/x-tex">e</annotation></semantics></math>
+раз, составляет порядка
+<strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>10</mn><mrow><mi>−</mi><mn>8</mn></mrow></msup><annotation encoding="application/x-tex">10^{-8}</annotation></semantics></math>
+с</strong>.</li>
+<li><strong>Классический радиус электрона
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>r</mi><mn>0</mn></msub><annotation encoding="application/x-tex">r_0</annotation></semantics></math>):</strong>
+Величина, определяемая внутренними свойствами заряда и массы:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>r</mi><mn>0</mn></msub><mo>=</mo><mfrac><msup><mi>e</mi><mn>2</mn></msup><mrow><msub><mi>m</mi><mi>e</mi></msub><msup><mi>c</mi><mn>2</mn></msup></mrow></mfrac><mo>≈</mo><mn>2.82</mn><mo>×</mo><msup><mn>10</mn><mrow><mi>−</mi><mn>15</mn></mrow></msup><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> м</mtext></mrow></mrow><annotation encoding="application/x-tex">r_0 = \frac{e^2}{m_e c^2} \approx 2.82 \times 10^{-15} \text{ м}</annotation></semantics></math></li>
+</ul>
+<h3 id="324-независимые-источники-и-интерференция">32.4. Независимые
+источники и интерференция</h3>
+<p>Интерференция между двумя источниками не обнаруживается, если
+разность фаз быстро меняется или усредняется прибором.</p>
+<ul>
+<li><strong>Причины отсутствия интерференции:</strong>
+<ol type="1">
+<li>Усреднение по большой области пространства (разность фаз быстро
+меняется).</li>
+<li>Различие частот источников (дрейф фазы со временем).</li>
+<li>Кратковременность излучения отдельных атомов
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∼</mo><msup><mn>10</mn><mrow><mi>−</mi><mn>8</mn></mrow></msup></mrow><annotation encoding="application/x-tex">\sim 10^{-8}</annotation></semantics></math>
+с).</li>
+</ol></li>
+<li><strong>Исключение:</strong> Лазеры позволяют сохранять фазу
+неизменной гораздо дольше (до 1 секунды), что делает возможным
+наблюдение «биений» света.</li>
+</ul>
+<h3 id="325-рассеяние-света">32.5. Рассеяние света</h3>
+<p>Рассеяние возникает, когда падающая волна заставляет электроны атомов
+колебаться, и они начинают переизлучать энергию во всех
+направлениях.</p>
+<ul>
+<li><strong>Эффективное сечение рассеяния
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>σ</mi><mi>s</mi></msub><annotation encoding="application/x-tex">\sigma_s</annotation></semantics></math>):</strong>
+Воображаемая площадь мишени, которая «вырезала» бы из падающего потока
+столько же энергии, сколько реально рассеивает атом.</li>
+<li><strong>Закон Релея:</strong> Если частота света
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ω</mi><annotation encoding="application/x-tex">\omega</annotation></semantics></math>
+много меньше собственной частоты атома
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ω</mi><mn>0</mn></msub><annotation encoding="application/x-tex">\omega_0</annotation></semantics></math>,
+рассеяние пропорционально
+<strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ω</mi><mn>4</mn></msup><annotation encoding="application/x-tex">\omega^4</annotation></semantics></math></strong>
+(или
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><msup><mi>λ</mi><mn>4</mn></msup></mrow><annotation encoding="application/x-tex">1/\lambda^4</annotation></semantics></math>).</li>
+<li><strong>Томпсоновское рассеяние:</strong> Предельный случай для
+свободного электрона
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ω</mi><mn>0</mn></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\omega_0 = 0</annotation></semantics></math>),
+где сечение постоянно и не зависит от частоты.</li>
+</ul>
+<hr />
+<h2 id="2-объяснение-природных-явлений">2. Объяснение природных
+явлений</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Явление</th>
+<th style="text-align: left;">Физическая причина</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Голубой цвет неба</strong></td>
+<td style="text-align: left;">Коротковолновый (голубой) свет
+рассеивается атомами воздуха в 16 раз интенсивнее, чем длинноволновый
+(красный), так как
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>σ</mi><mi>s</mi></msub><mo>∝</mo><msup><mi>ω</mi><mn>4</mn></msup></mrow><annotation encoding="application/x-tex">\sigma_s \propto \omega^4</annotation></semantics></math>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Красный закат</strong></td>
+<td style="text-align: left;">Солнечные лучи проходят через большую
+толщу атмосферы; голубая составляющая рассеивается в стороны, оставляя в
+прямом луче преимущественно красный свет.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Видимость облаков</strong></td>
+<td style="text-align: left;">При конденсации молекулы воды образуют
+сгустки. Если их размер много меньше длины волны,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>N</mi><annotation encoding="application/x-tex">N</annotation></semantics></math>
+молекул рассеивают свет в
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>N</mi><mn>2</mn></msup><annotation encoding="application/x-tex">N^2</annotation></semantics></math>
+раз интенсивнее, чем одна, из-за когерентности фаз.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Белый цвет облаков</strong></td>
+<td style="text-align: left;">Когда капли становятся крупнее длины
+волны, усиление рассеяния для голубого света прекращается раньше, чем
+для красного, и спектр рассеяния выравнивается.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Поляризация неба</strong></td>
+<td style="text-align: left;">Под углом 90° к солнечному лучу рассеянный
+свет оказывается сильно поляризованным, так как электроны колеблются в
+плоскости, перпендикулярной лучу.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3-проверочные-вопросы-краткие-ответы">3. Проверочные вопросы
+(краткие ответы)</h2>
+<ol type="1">
+<li><strong>Чему равно сопротивление (импеданс) вакуума?</strong>
+<ul>
+<li>Примерно 377 Ом.</li>
+</ul></li>
+<li><strong>Как зависит интенсивность излучения от ускорения
+заряда?</strong>
+<ul>
+<li>Она пропорциональна квадрату ускорения
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>a</mi><mn>2</mn></msup><annotation encoding="application/x-tex">a^2</annotation></semantics></math>).</li>
+</ul></li>
+<li><strong>В каком случае интерференция между двумя источниками света
+становится заметной?</strong>
+<ul>
+<li>Когда фазы источников остаются постоянными (коррелированными) в
+течение времени, превышающего время разрешения регистрирующего прибора
+(например, при использовании лазеров).</li>
+</ul></li>
+<li><strong>Почему рассеяние на капле воды
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>N</mi><annotation encoding="application/x-tex">N</annotation></semantics></math>
+молекул) сильнее, чем на
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>N</mi><annotation encoding="application/x-tex">N</annotation></semantics></math>
+отдельных молекулах пара?</strong>
+<ul>
+<li>Потому что молекулы в капле находятся близко друг к другу и
+колеблются в одной фазе; их амплитуды складываются, а интенсивность
+растет как квадрат амплитуды
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>N</mi><mn>2</mn></msup><annotation encoding="application/x-tex">N^2</annotation></semantics></math>).</li>
+</ul></li>
+<li><strong>Что такое эффективное сечение рассеяния?</strong>
+<ul>
+<li>Это отношение полной рассеиваемой энергии в секунду к энергии,
+падающей на 1 м² за секунду. Имеет размерность площади.</li>
+</ul></li>
+</ol>
+<hr />
+<h2 id="4-типичные-ошибки-при-изучении-темы">4. Типичные ошибки при
+изучении темы</h2>
+<ul>
+<li><strong>Отождествление классического радиуса с реальным
+размером:</strong> Ошибка считать, что электрон — это твердый шарик
+радиусом
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2.82</mn><mo>×</mo><msup><mn>10</mn><mrow><mi>−</mi><mn>15</mn></mrow></msup></mrow><annotation encoding="application/x-tex">2.82 \times 10^{-15}</annotation></semantics></math>
+м. Это расчетная величина, возникшая в попытках объяснить радиационное
+затухание через самодействие заряда.</li>
+<li><strong>Отрицание интерференции независимых источников:</strong>
+Ошибка утверждать, что независимые источники «никогда не интерферируют».
+Интерференция есть всегда, но она крайне быстро меняется во времени
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>10</mn><mrow><mi>−</mi><mn>8</mn></mrow></msup><annotation encoding="application/x-tex">10^{-8}</annotation></semantics></math>
+с), и большинство приборов ее просто усредняют до нуля.</li>
+<li><strong>Игнорирование фазы при рассеянии:</strong> Ошибка полагать,
+что интенсивность рассеяния всегда равна сумме интенсивностей отдельных
+атомов. Это верно только при случайном (неупорядоченном) расположении
+атомов на больших расстояниях. При плотной упаковке (капли, твердые
+тела) решающую роль играет разность фаз.</li>
+</ul>
+<hr />
+<h2 id="5-темы-для-эссе-и-дискуссий">5. Темы для эссе и дискуссий</h2>
+<ol type="1">
+<li><strong>Проблема самодействия электрона:</strong> «Почему система,
+состоящая из одного электрона, способна совершать работу против сил
+собственного излучения? Трудности классической электродинамики в
+описании внутренней структуры заряда».</li>
+<li><strong>Эволюция оптики:</strong> «От классического рассеяния Релея
+до когерентного излучения лазеров: как развитие экспериментальной
+техники изменило наше понимание интерференции».</li>
+<li><strong>Оптика атмосферы:</strong> «Математическое моделирование
+изменения цвета неба: от голубого зенита к пурпурному закату через
+призму зависимости
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>σ</mi><mi>s</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>ω</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\sigma_s(\omega)</annotation></semantics></math>».</li>
+</ol>
+<hr />
+<h2 id="6-краткий-глоссарий">6. Краткий глоссарий</h2>
+<ul>
+<li><strong>Добротность (Q):</strong> Безразмерный параметр,
+характеризующий затухание; количество радиан, за которые энергия системы
+уменьшается в
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>e</mi><annotation encoding="application/x-tex">e</annotation></semantics></math>
+раз.</li>
+<li><strong>Запаздывающее ускорение
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>a</mi><mo>′</mo></msup><annotation encoding="application/x-tex">a&#39;</annotation></semantics></math>):</strong>
+Ускорение заряда в момент времени
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo>−</mo><mi>r</mi><mi>/</mi><mi>c</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(t - r/c)</annotation></semantics></math>,
+излучение от которого достигает точки наблюдения в момент
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math>.</li>
+<li><strong>Поляроид:</strong> Вещество, пропускающее электромагнитные
+волны только с определенной ориентацией электрического поля.</li>
+<li><strong>Рассеяние Релея:</strong> Рассеяние света на частицах,
+размеры которых много меньше длины волны, характеризующееся сильной
+зависимостью от частоты.</li>
+<li><strong>Томпсоновское сечение:</strong> Сечение рассеяния
+электромагнитного излучения свободным нерелятивистским электроном.</li>
+</ul>
+    </article>
+  </main>
+</body>
+</html>

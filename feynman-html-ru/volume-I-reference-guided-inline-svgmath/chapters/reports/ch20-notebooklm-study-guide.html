@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Глава 20. Вращение в пространстве: Учебное пособие - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch20.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1 id="глава-20-вращение-в-пространстве-учебное-пособие">Глава 20.
+Вращение в пространстве: Учебное пособие</h1>
+<p>Данное пособие составлено на основе материалов лекций Фейнмана и
+посвящено расширению законов вращательного движения на трехмерное
+пространство. В нем рассматриваются математические основы векторного
+анализа вращений, динамика гироскопов и свойства моментов инерции
+твердых тел.</p>
+<hr />
+<h2 id="1-ключевые-понятия">1. Ключевые понятия</h2>
+<h3 id="векторное-описание-вращения">Векторное описание вращения</h3>
+<p>В трехмерном пространстве кручение в плоскости (например,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mi>y</mi></mrow><annotation encoding="application/x-tex">xy</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mi>z</mi></mrow><annotation encoding="application/x-tex">yz</annotation></semantics></math>
+или
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">zx</annotation></semantics></math>)
+представляется в виде вектора, направленного перпендикулярно этой
+плоскости.</p>
+<ul>
+<li><strong>Момент силы
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝝉</mi><annotation encoding="application/x-tex">\boldsymbol{\tau}</annotation></semantics></math>):</strong>
+Математически ведет себя как вектор, длина которого пропорциональна силе
+кручения. Его направление определяется по <strong>правилу правовинтового
+болта</strong> (правой руки).</li>
+<li><strong>Момент количества движения
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑳</mi><annotation encoding="application/x-tex">\mathbf{L}</annotation></semantics></math>):</strong>
+Для одной частицы определяется как
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑳</mi><mo>=</mo><mi mathvariant="bold-italic">𝒓</mi><mo>×</mo><mi mathvariant="bold-italic">𝒑</mi></mrow><annotation encoding="application/x-tex">\mathbf{L} = \mathbf{r} \times \mathbf{p}</annotation></semantics></math>.</li>
+</ul>
+<h3 id="векторное-кросс--произведение">Векторное (кросс-)
+произведение</h3>
+<p>Обозначается как
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝒄</mi><mo>=</mo><mi mathvariant="bold-italic">𝒂</mi><mo>×</mo><mi mathvariant="bold-italic">𝒃</mi></mrow><annotation encoding="application/x-tex">\mathbf{c} = \mathbf{a} \times \mathbf{b}</annotation></semantics></math>.
+Основные свойства:</p>
+<ol type="1">
+<li><strong>Антикоммутативность:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝒃</mi><mo>×</mo><mi mathvariant="bold-italic">𝒂</mi><mo>=</mo><mi>−</mi><mo stretchy="false" form="prefix">(</mo><mi mathvariant="bold-italic">𝒂</mi><mo>×</mo><mi mathvariant="bold-italic">𝒃</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mathbf{b} \times \mathbf{a} = -(\mathbf{a} \times \mathbf{b})</annotation></semantics></math>.</li>
+<li><strong>Геометрия:</strong> Вектор
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝒄</mi><annotation encoding="application/x-tex">\mathbf{c}</annotation></semantics></math>
+перпендикулярен векторам
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝒂</mi><annotation encoding="application/x-tex">\mathbf{a}</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝒃</mi><annotation encoding="application/x-tex">\mathbf{b}</annotation></semantics></math>.
+Его величина равна
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mi>b</mi><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mi>θ</mi></mrow><annotation encoding="application/x-tex">ab \sin\theta</annotation></semantics></math>.</li>
+<li><strong>Нулевой результат:</strong> Если векторы параллельны
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝒂</mi><mo>=</mo><mi mathvariant="bold-italic">𝒃</mi></mrow><annotation encoding="application/x-tex">\mathbf{a} = \mathbf{b}</annotation></semantics></math>),
+их произведение равно нулю.</li>
+</ol>
+<h3 id="полярные-и-аксиальные-векторы">Полярные и аксиальные
+векторы</h3>
+<ul>
+<li><strong>Полярные векторы:</strong> Обычные векторы (координата
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝒓</mi><annotation encoding="application/x-tex">\mathbf{r}</annotation></semantics></math>,
+сила
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑭</mi><annotation encoding="application/x-tex">\mathbf{F}</annotation></semantics></math>,
+скорость
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝒗</mi><annotation encoding="application/x-tex">\mathbf{v}</annotation></semantics></math>).</li>
+<li><strong>Аксиальные векторы (псевдовекторы):</strong> Векторы,
+содержащие в определении одно векторное произведение (момент силы
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝝉</mi><annotation encoding="application/x-tex">\boldsymbol{\tau}</annotation></semantics></math>,
+момент импульса
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑳</mi><annotation encoding="application/x-tex">\mathbf{L}</annotation></semantics></math>,
+угловая скорость
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝝎</mi><annotation encoding="application/x-tex">\boldsymbol{\omega}</annotation></semantics></math>).
+Они зависят от выбора системы координат (правой или левой).</li>
+</ul>
+<h3 id="динамика-вращения">Динамика вращения</h3>
+<p>Основной закон вращения: внешний момент сил равен скорости изменения
+момента количества движения:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝝉</mi><mo>=</mo><mfrac><mrow><mi>d</mi><mi mathvariant="bold-italic">𝑳</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\boldsymbol{\tau} = \frac{d\mathbf{L}}{dt}</annotation></semantics></math>
+Если внешний момент сил равен нулю, выполняется <strong>закон сохранения
+момента количества движения</strong>.</p>
+<h3 id="гироскопические-эффекты">Гироскопические эффекты</h3>
+<ul>
+<li><strong>Прецессия:</strong> Медленное вращение оси быстро
+крутящегося тела под действием внешнего момента. Установившаяся
+прецессия описывается формулой:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝝉</mi><mo>=</mo><mi mathvariant="bold">𝛀</mi><mo>×</mo><msub><mi mathvariant="bold-italic">𝑳</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">\boldsymbol{\tau} = \boldsymbol{\Omega} \times \mathbf{L}_0</annotation></semantics></math>,
+где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold">𝛀</mi><annotation encoding="application/x-tex">\boldsymbol{\Omega}</annotation></semantics></math>
+— угловая скорость прецессии.</li>
+<li><strong>Нутация:</strong> Колебательные движения оси гироскопа,
+накладывающиеся на прецессию. При освобождении оси гироскоп сначала
+начинает падать под действием силы тяжести, что порождает движение по
+циклоиде (рис. 20.5).</li>
+</ul>
+<hr />
+<h2 id="2-проверочные-вопросы-краткие-ответы">2. Проверочные вопросы
+(краткие ответы)</h2>
+<p><strong>1. Как направлен вектор момента силы относительно плоскости,
+в которой действуют силы?</strong> <em>Ответ:</em> Вектор направлен под
+прямым углом к плоскости кручения; точное направление определяется
+движением правовинтового болта при соответствующем вращении.</p>
+<p><strong>2. Почему момент силы в четырехмерном пространстве нельзя
+было бы представить в виде одного вектора?</strong> <em>Ответ:</em> В
+трех измерениях существует только 3 независимых плоскости (и 3 оси), что
+позволяет связать каждую плоскость с перпендикулярным вектором. В
+четырех измерениях таких плоскостей уже 6, и одного четырехмерного
+вектора недостаточно для их описания.</p>
+<p><strong>3. Что происходит с человеком на крутящемся стуле, если он
+поворачивает ось вращающегося колеса из горизонтального положения в
+вертикальное?</strong> <em>Ответ:</em> Человек вместе со стулом начнет
+вращаться в направлении, противоположном вращению колеса, чтобы
+суммарный момент количества движения относительно вертикальной оси
+остался равным нулю (рис. 20.1).</p>
+<p><strong>4. Чему равна скорость точки твердого тела при
+вращении?</strong> <em>Ответ:</em> Скорость задается выражением
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝒗</mi><mo>=</mo><mi mathvariant="bold-italic">𝝎</mi><mo>×</mo><mi mathvariant="bold-italic">𝒓</mi></mrow><annotation encoding="application/x-tex">\mathbf{v} = \boldsymbol{\omega} \times \mathbf{r}</annotation></semantics></math>,
+где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝝎</mi><annotation encoding="application/x-tex">\boldsymbol{\omega}</annotation></semantics></math>
+— угловая скорость, а
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝒓</mi><annotation encoding="application/x-tex">\mathbf{r}</annotation></semantics></math>
+— положение частицы.</p>
+<p><strong>5. Почему гироскоп должен немного «опуститься» ниже
+горизонтали для поддержания прецессии?</strong> <em>Ответ:</em> Колесо
+обладает моментом инерции относительно оси прецессии. Чтобы возникла
+вертикальная составляющая момента количества движения, необходимая для
+прецессии, ось должна слегка наклониться вниз под действием силы
+тяжести.</p>
+<hr />
+<h2 id="3-вопросы-для-глубокого-изучения-эссе">3. Вопросы для глубокого
+изучения (эссе)</h2>
+<ol type="1">
+<li><strong>Физическая природа гироскопического момента:</strong>
+Объясните возникновение прецессии не через векторные формулы, а через
+реальные ускорения и силы, действующие на частицы вращающегося обода
+колеса. Используйте концепцию искривления путей частиц при повороте оси
+(рис. 20.4).</li>
+<li><strong>Непараллельность векторов
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑳</mi><annotation encoding="application/x-tex">\mathbf{L}</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝝎</mi><annotation encoding="application/x-tex">\boldsymbol{\omega}</annotation></semantics></math>:</strong>
+В каких случаях момент количества движения твердого тела не совпадает по
+направлению с вектором угловой скорости? Опишите последствия этого
+явления для подшипников вала (рис. 20.6).</li>
+<li><strong>Главные оси инерции:</strong> Дайте определение главных осей
+тела. Каким важным свойством обладает вращение вокруг этих осей? Как
+связаны компоненты момента количества движения
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msub><mi>ω</mi><mi>x</mi></msub><mo>,</mo><mi>B</mi><msub><mi>ω</mi><mi>y</mi></msub><mo>,</mo><mi>C</mi><msub><mi>ω</mi><mi>z</mi></msub></mrow><annotation encoding="application/x-tex">A\omega_x, B\omega_y, C\omega_z</annotation></semantics></math>)
+с кинетической энергией вращения?</li>
+</ol>
+<hr />
+<h2 id="4-типичные-ошибки">4. Типичные ошибки</h2>
+<ul>
+<li><strong>Ошибка знака в векторном произведении:</strong> Забывают,
+что порядок векторов критичен
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝒂</mi><mo>×</mo><mi mathvariant="bold-italic">𝒃</mi><mo>≠</mo><mi mathvariant="bold-italic">𝒃</mi><mo>×</mo><mi mathvariant="bold-italic">𝒂</mi></mrow><annotation encoding="application/x-tex">\mathbf{a} \times \mathbf{b} \neq \mathbf{b} \times \mathbf{a}</annotation></semantics></math>).
+Изменение порядка меняет направление результирующего вектора на
+противоположное.</li>
+<li><strong>Представление о «магической» силе гироскопа:</strong>
+Ошибочно полагать, что гироскоп под действием силы тяжести движется
+только вбок. В реальности он всегда сначала немного падает, и только в
+результате этого падения и последующей нутации устанавливается
+прецессия.</li>
+<li><strong>Игнорирование нутации:</strong> При анализе реальных систем
+часто забывают, что «чистая» прецессия — это частный случай. Общее
+движение всегда включает колебания (нутацию), которые затухают из-за
+трения.</li>
+<li><strong>Смешение типов векторов:</strong> Отношение к аксиальным
+векторам (как
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑳</mi><annotation encoding="application/x-tex">\mathbf{L}</annotation></semantics></math>
+или
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝝎</mi><annotation encoding="application/x-tex">\boldsymbol{\omega}</annotation></semantics></math>)
+как к обычным полярным векторам может привести к ошибкам при переходе из
+«правой» системы координат в «левую».</li>
+</ul>
+<hr />
+<h2 id="5-краткий-глоссарий">5. Краткий глоссарий</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Термин</th>
+<th style="text-align: left;">Определение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Аксиальный вектор</strong></td>
+<td style="text-align: left;">Вектор, направление которого зависит от
+правила выбора системы координат (правой или левой); связан с
+вращательным движением.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Главные оси инерции</strong></td>
+<td style="text-align: left;">Три взаимно перпендикулярные оси,
+проходящие через центр масс, при вращении вокруг которых
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑳</mi><annotation encoding="application/x-tex">\mathbf{L}</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝝎</mi><annotation encoding="application/x-tex">\boldsymbol{\omega}</annotation></semantics></math>
+параллельны.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Кориолисова сила</strong></td>
+<td style="text-align: left;">Псевдосила
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="bold-italic">𝑭</mi><mi>c</mi></msub><mo>=</mo><mn>2</mn><mi>m</mi><mi mathvariant="bold-italic">𝒗</mi><mo>×</mo><mi mathvariant="bold-italic">𝝎</mi></mrow><annotation encoding="application/x-tex">\mathbf{F}_c = 2m\mathbf{v} \times \boldsymbol{\omega}</annotation></semantics></math>),
+возникающая при движении частицы во вращающейся системе координат.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Нутация</strong></td>
+<td style="text-align: left;">Колебательное движение оси гироскопа,
+происходящее одновременно с прецессией.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Прецессия</strong></td>
+<td style="text-align: left;">Изменение ориентации оси вращающегося
+объекта в пространстве под действием внешнего момента сил.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Циклоида</strong></td>
+<td style="text-align: left;">Кривая, которую описывает конец оси
+гироскопа в процессе установления прецессии (траектория нутации).</td>
+</tr>
+</tbody>
+</table>
+    </article>
+  </main>
+</body>
+</html>

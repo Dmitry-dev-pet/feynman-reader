@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Учебное пособие: Линейные системы и обзор (Глава 25) - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch25.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1 id="учебное-пособие-линейные-системы-и-обзор-глава-25">Учебное
+пособие: Линейные системы и обзор (Глава 25)</h1>
+<p>Это учебное пособие составлено на основе материалов лекции Фейнмана,
+посвященной общим свойствам линейных систем, принципу суперпозиции и
+физическим аналогиям между механическими и электрическими
+колебаниями.</p>
+<hr />
+<h2 id="i-ключевые-понятия">I. Ключевые понятия</h2>
+<h3 id="1-линейные-системы-и-уравнения">1. Линейные системы и
+уравнения</h3>
+<p>Система называется <strong>линейной</strong>, если для её
+дифференциального уравнения (обозначаемого оператором <span
+class="math inline">$\uL(x)$</span>) выполняются два условия:</p>
+<ul>
+<li><strong>Аддитивность:</strong> <span class="math inline">$\uL(x + y)
+= \uL(x) + \uL(y)$</span>.</li>
+<li><strong>Однородность:</strong> <span class="math inline">$\uL(ax) =
+a\uL(x)$</span> для любой константы
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>.</li>
+</ul>
+<p>Это означает, что если мы знаем решение для двух разных сил, мы можем
+найти решение для их суммы, просто сложив отдельные результаты.</p>
+<h3 id="2-принцип-суперпозиции">2. Принцип суперпозиции</h3>
+<p>Если сложную силу можно представить как сумму нескольких простых сил,
+то отклик системы на сложную силу будет равен сумме откликов на каждую
+из простых сил в отдельности.</p>
+<ul>
+<li><strong>Пример в электростатике:</strong> Электрическое поле
+множества зарядов — это векторная сумма полей каждого заряда по
+отдельности.</li>
+<li><strong>Пример в радиосвязи:</strong> Возможность настроиться на
+одну станцию среди множества одновременно вещающих основана на сочетании
+суперпозиции и острого резонанса.</li>
+</ul>
+<h3 id="3-методы-анализа-сложных-сил">3. Методы анализа сложных сил</h3>
+<p>Существует два основных математических подхода к решению задач с
+произвольными силами в линейных системах:</p>
+<ul>
+<li><strong>Анализ Фурье:</strong> Представление сложной силы в виде
+суммы бесконечного числа синусоидальных волн разных частот.</li>
+<li><strong>Метод функций Грина:</strong> Представление непрерывной силы
+как последовательности коротких импульсов («ударов молотком»). Функция
+Грина — это отклик системы на единичный импульс.</li>
+</ul>
+<h3 id="4-физические-аналогии-механика--электричество">4. Физические
+аналогии (Механика — Электричество)</h3>
+<p>Линейные системы разной природы описываются идентичными уравнениями.
+Это позволяет использовать электрические цепи для моделирования сложных
+механических процессов (принцип <strong>аналоговой вычислительной
+машины</strong>).</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Механическая величина</th>
+<th style="text-align: left;">Электрический аналог</th>
+<th style="text-align: left;">Определение / Формула</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Сила
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>F</mi><annotation encoding="application/x-tex">F</annotation></semantics></math>)</td>
+<td style="text-align: left;">Напряжение
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math>)</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>=</mo><mi>I</mi><mi>R</mi></mrow><annotation encoding="application/x-tex">V = IR</annotation></semantics></math>
+или
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>=</mo><mi>L</mi><mo stretchy="false" form="prefix">(</mo><mi>d</mi><mi>I</mi><mi>/</mi><mi>d</mi><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">V = L(dI/dt)</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;">Координата
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>)</td>
+<td style="text-align: left;">Заряд
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>q</mi><annotation encoding="application/x-tex">q</annotation></semantics></math>)</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi><mo>=</mo><mo>∫</mo><mi>I</mi><mi>d</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">q = \int I dt</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;">Скорость
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>v</mi><annotation encoding="application/x-tex">v</annotation></semantics></math>)</td>
+<td style="text-align: left;">Ток
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>I</mi><annotation encoding="application/x-tex">I</annotation></semantics></math>)</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mo>=</mo><mi>d</mi><mi>q</mi><mi>/</mi><mi>d</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">I = dq/dt</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;">Масса
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math>)</td>
+<td style="text-align: left;">Индуктивность
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>L</mi><annotation encoding="application/x-tex">L</annotation></semantics></math>)</td>
+<td style="text-align: left;">Инерция: ток «не хочет» прекращаться</td>
+</tr>
+<tr>
+<td style="text-align: left;">Коэффициент трения
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>γ</mi><mi>m</mi></mrow><annotation encoding="application/x-tex">\gamma m</annotation></semantics></math>)</td>
+<td style="text-align: left;">Сопротивление
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>R</mi><annotation encoding="application/x-tex">R</annotation></semantics></math>)</td>
+<td style="text-align: left;">Закон Ома:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>=</mo><mi>I</mi><mi>R</mi></mrow><annotation encoding="application/x-tex">V = IR</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;">Жесткость пружины
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math>)</td>
+<td style="text-align: left;">Обратная емкость
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mi>C</mi></mrow><annotation encoding="application/x-tex">1/C</annotation></semantics></math>)</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>=</mo><mi>q</mi><mi>/</mi><mi>C</mi></mrow><annotation encoding="application/x-tex">V = q/C</annotation></semantics></math></td>
+</tr>
+</tbody>
+</table>
+<h3 id="5-импеданс-и-законы-кирхгофа">5. Импеданс и законы Кирхгофа</h3>
+<p>В электрических цепях при синусоидальном напряжении используется
+понятие импеданса
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>Z</mi><mo accent="true">̂</mo></mover><annotation encoding="application/x-tex">\hat{Z}</annotation></semantics></math>),
+где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>V</mi><mo accent="true">̂</mo></mover><mo>=</mo><mover><mi>I</mi><mo accent="true">̂</mo></mover><mover><mi>Z</mi><mo accent="true">̂</mo></mover></mrow><annotation encoding="application/x-tex">\hat{V} = \hat{I}\hat{Z}</annotation></semantics></math>.</p>
+<ul>
+<li><strong>Последовательное соединение:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mover><mi>Z</mi><mo accent="true">̂</mo></mover><mi>s</mi></msub><mo>=</mo><msub><mover><mi>Z</mi><mo accent="true">̂</mo></mover><mn>1</mn></msub><mo>+</mo><msub><mover><mi>Z</mi><mo accent="true">̂</mo></mover><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">\hat{Z}_s = \hat{Z}_1 + \hat{Z}_2</annotation></semantics></math>.</li>
+<li><strong>Параллельное соединение:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><msub><mover><mi>Z</mi><mo accent="true">̂</mo></mover><mi>p</mi></msub><mo>=</mo><mn>1</mn><mi>/</mi><msub><mover><mi>Z</mi><mo accent="true">̂</mo></mover><mn>1</mn></msub><mo>+</mo><mn>1</mn><mi>/</mi><msub><mover><mi>Z</mi><mo accent="true">̂</mo></mover><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">1/\hat{Z}_p = 1/\hat{Z}_1 + 1/\hat{Z}_2</annotation></semantics></math>.</li>
+<li><strong>Законы Кирхгофа:</strong> 1) Сумма токов в узле равна нулю;
+2) Работа по перемещению заряда по замкнутому контуру равна нулю.</li>
+</ul>
+<hr />
+<h2 id="ii-проверочные-вопросы-short-answer-quiz">II. Проверочные
+вопросы (Short-Answer Quiz)</h2>
+<ol type="1">
+<li><strong>Что произойдет, если к «вынужденному» решению линейного
+уравнения добавить любое «свободное» (переходное) решение?</strong>
+<ul>
+<li><em>Ответ:</em> Мы все равно получим решение исходного уравнения.
+Переходные решения со временем затухают, оставляя только равновесное
+решение, соответствующее внешней силе.</li>
+</ul></li>
+<li><strong>Почему уравнения Максвелла позволяют применять принцип
+суперпозиции?</strong>
+<ul>
+<li><em>Ответ:</em> Потому что основные законы электричества,
+определяющие электрическое поле, являются линейными дифференциальными
+уравнениями.</li>
+</ul></li>
+<li><strong>Как изменится резонансная кривая при увеличении
+трения?</strong>
+<ul>
+<li><em>Ответ:</em> Трение «срезает» вершину кривой. Она перестает
+уходить в бесконечность, становится ниже и шире на уровне половины
+максимальной высоты.</li>
+</ul></li>
+<li><strong>В чем главное преимущество использования аналоговых
+вычислительных машин (электрических схем) перед реальными механическими
+испытаниями?</strong>
+<ul>
+<li><em>Ответ:</em> Электрическую цепь легче собрать, разобрать и
+изменить (например, поворотом ручки переменного сопротивления), чем
+перестраивать механическую конструкцию, например, автомобиль.</li>
+</ul></li>
+<li><strong>При каком условии движение маятника можно считать
+линейным?</strong>
+<ul>
+<li><em>Ответ:</em> При малых углах отклонения
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>θ</mi><annotation encoding="application/x-tex">\theta</annotation></semantics></math>),
+когда
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mi>θ</mi><mo>≈</mo><mi>θ</mi></mrow><annotation encoding="application/x-tex">\sin\theta \approx \theta</annotation></semantics></math>.</li>
+</ul></li>
+</ol>
+<hr />
+<h2 id="iii-типичные-ошибки">III. Типичные ошибки</h2>
+<ul>
+<li><strong>Игнорирование условий линейности:</strong> Ошибочно
+полагать, что любая система является линейной. Линейность часто
+сохраняется только при малых отклонениях (как в случае с пружиной или
+маятником). При больших нагрузках система становится нелинейной (пружина
+ломается,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mi>θ</mi></mrow><annotation encoding="application/x-tex">\sin\theta</annotation></semantics></math>
+отклоняется от
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>θ</mi><annotation encoding="application/x-tex">\theta</annotation></semantics></math>).</li>
+<li><strong>Неправильное понимание роли трения:</strong> Часто думают,
+что ширина резонансной кривой — это самостоятельный параметр. На самом
+деле трение просто ограничивает высоту пика. Чем меньше трение, тем выше
+и «острее» кажется пик.</li>
+<li><strong>Трение как нелинейный фактор:</strong> Обычное «сухое»
+трение (постоянное по величине) делает систему нелинейной.
+Математический анализ, описанный в главе, применим только к трению,
+пропорциональному скорости.</li>
+<li><strong>Суммирование импедансов:</strong> Ошибка при расчете
+параллельных цепей — простое сложение импедансов вместо сложения их
+обратных величин
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mover><mi>Z</mi><mo accent="true">̂</mo></mover></mrow><annotation encoding="application/x-tex">1/\hat{Z}</annotation></semantics></math>).</li>
+</ul>
+<hr />
+<h2 id="iv-эссе-темы-для-глубокого-изучения">IV. Эссе: Темы для
+глубокого изучения</h2>
+<ol type="1">
+<li><strong>«Универсальность линейных уравнений в физике».</strong>
+Обоснуйте, почему физики тратят так много времени на изучение линейных
+систем, опираясь на фундаментальные законы (уравнения Максвелла,
+квантовая механика) и метод аппроксимации.</li>
+<li><strong>«Сравнение методов Фурье и Грина: два взгляда на сложную
+силу».</strong> Опишите концептуальное различие между представлением
+силы как суммы гармонических колебаний и как последовательности
+импульсов. В каких случаях каждый из методов может быть
+предпочтительнее?</li>
+<li><strong>«Электромеханические аналогии как инструмент инженерного
+проектирования».</strong> На примере проектирования подвески автомобиля
+объясните, как соответствие между массой, жесткостью и индуктивностью с
+емкостью позволяет предсказывать поведение физических объектов.</li>
+</ol>
+<hr />
+<h2 id="v-глоссарий">V. Глоссарий</h2>
+<ul>
+<li><strong>Амплитуда:</strong> Размах колебаний; в затухающих линейных
+системах уменьшается в одинаковое число раз за равные промежутки времени
+(экспоненциально).</li>
+<li><strong>Затухающие колебания:</strong> Колебания, амплитуда которых
+уменьшается со временем из-за потерь энергии (трения).</li>
+<li><strong>Импеданс (комплексное сопротивление):</strong> Величина,
+связывающая комплексные амплитуды напряжения и тока в цепях переменного
+тока.</li>
+<li><strong>Линейное дифференциальное уравнение:</strong> Уравнение, в
+котором зависимая переменная и её производные входят только в первой
+степени и не перемножаются.</li>
+<li><strong>Операторная запись (<span
+class="math inline">$\uL(x)$</span>):</strong> Сокращенное обозначение
+комбинации математических операций (производных, умножений на константу)
+над переменной.</li>
+<li><strong>Резонанс:</strong> Явление резкого возрастания амплитуды
+вынужденных колебаний при приближении частоты внешней силы к собственной
+частоте системы.</li>
+<li><strong>Функция Грина:</strong> Математическое описание отклика
+линейной системы на короткий единичный импульс.</li>
+</ul>
+    </article>
+  </main>
+</body>
+</html>

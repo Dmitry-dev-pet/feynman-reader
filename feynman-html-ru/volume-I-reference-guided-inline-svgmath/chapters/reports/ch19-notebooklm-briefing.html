@@ -1,0 +1,285 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Глава 19. Центр масс; момент инерции: Аналитический отчет - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch19.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1 id="глава-19-центр-масс-момент-инерции-аналитический-отчет">Глава
+19. Центр масс; момент инерции: Аналитический отчет</h1>
+<p>Этот документ представляет собой всесторонний анализ главы 19
+«Феймановских лекций по физике», посвященной изучению свойств центра
+масс, методов расчета момента инерции и динамики вращательного движения,
+включая кинетическую энергию и силы в неинерциальных системах
+отсчета.</p>
+<h2 id="исполнительное-резюме">Исполнительное резюме</h2>
+<p>Глава 19 расширяет понимание механики сложных систем, вводя понятие
+центра масс (ц. м.) как точки, движение которой описывается законами
+Ньютона так, будто в ней сосредоточена вся масса тела. Рассматриваются
+геометрические методы нахождения центра масс (теоремы Паппа) и
+динамические характеристики вращения. Ключевым параметром здесь
+выступает момент инерции — мера «вращательной инертности» тела. Анализ
+завершается исследованием сохранения момента количества движения,
+изменения кинетической энергии при вращении и природы кориолисовых
+сил.</p>
+<hr />
+<h2 id="1-свойства-и-физический-смысл-центра-масс">1. Свойства и
+физический смысл центра масс</h2>
+<h3 id="определение-и-математическая-база">Определение и математическая
+база</h3>
+<p>Центр масс системы определяется как среднее взвешенное положение всех
+масс системы. Векторное уравнение для положения центра масс (<span
+class="math inline">$\FLPR_{\text{CM}}$</span>) имеет вид: <span
+class="math display">$$\FLPR_{\text{CM}}=\frac{\sum m_i\FLPr_i}{\sum
+m_i}$$</span></p>
+<p>Для одномерного случая по координате
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>X</mi><mtext mathvariant="normal">CM</mtext></msub><mo>=</mo><mfrac><mrow><mo>∑</mo><msub><mi>m</mi><mi>i</mi></msub><msub><mi>x</mi><mi>i</mi></msub></mrow><mrow><mo>∑</mo><msub><mi>m</mi><mi>i</mi></msub></mrow></mfrac></mrow><annotation encoding="application/x-tex">X_{\text{CM}} = \frac{\sum m_ix_i}{\sum m_i}</annotation></semantics></math></p>
+<p><strong>Ключевые свойства:</strong></p>
+<ul>
+<li><strong>Симметрия:</strong> Если объект обладает линией или осью
+симметрии, центр масс обязательно лежит на этой линии/оси.</li>
+<li><strong>Локализация:</strong> Центр масс всегда находится внутри
+выпуклой оболочки, охватывающей тело, но не обязательно внутри самого
+вещества (например, у обруча он находится в центре пустоты).</li>
+<li><strong>Аддитивность (Метод составных частей):</strong> Центр масс
+сложного тела, состоящего из частей
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+(см. Фиг. 19.1), можно найти, представив каждую часть как точечную массу
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>M</mi><mi>A</mi></msub><annotation encoding="application/x-tex">M_A</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>M</mi><mi>B</mi></msub><annotation encoding="application/x-tex">M_B</annotation></semantics></math>),
+расположенную в центре масс этой части:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><msub><mi>X</mi><mtext mathvariant="normal">CM</mtext></msub><mo>=</mo><msub><mi>M</mi><mi>A</mi></msub><msub><mi>X</mi><mi>A</mi></msub><mo>+</mo><msub><mi>M</mi><mi>B</mi></msub><msub><mi>X</mi><mi>B</mi></msub></mrow><annotation encoding="application/x-tex">MX_{\text{CM}} = M_AX_A + M_BX_B</annotation></semantics></math></li>
+</ul>
+<h3 id="масштабируемость-законов-ньютона">Масштабируемость законов
+Ньютона</h3>
+<p>Законы Ньютона обладают уникальным свойством «самовоспроизводимости»:
+если закон
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>=</mo><mi>m</mi><mi>a</mi></mrow><annotation encoding="application/x-tex">F=ma</annotation></semantics></math>
+верен для микроскопических частиц, он остается верным и для
+макроскопических объектов, где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+— ускорение центра масс.</p>
+<ul>
+<li><strong>Историческая особенность:</strong> Первые открытые законы
+физики были именно самовоспроизводящимися, так как фундаментальные
+атомные законы (квантовая механика) проявляются иначе на микроуровне и
+лишь в макромасштабе приближенно переходят в законы Ньютона.</li>
+</ul>
+<h3 id="центр-масс-vs-центр-тяжести">Центр масс vs Центр тяжести</h3>
+<ul>
+<li><strong>Центр тяжести:</strong> Точка приложения суммарной силы
+тяжести. В однородном гравитационном поле он совпадает с центром
+масс.</li>
+<li><strong>Различия:</strong> Если поле непараллельно или неоднородно
+(огромные объекты), центр тяжести может несколько отклоняться от центра
+масс.</li>
+<li><strong>Важное следствие:</strong> Момент сил относительно оси,
+проходящей через центр масс, равен скорости изменения момента количества
+движения даже в том случае, если само тело (и его центр масс) движется с
+ускорением.</li>
+</ul>
+<hr />
+<h2 id="2-методы-вычисления-положения-центра-масс">2. Методы вычисления
+положения центра масс</h2>
+<p>Для вычисления центра масс сложных тел используются математические
+«трюки», в частности <strong>теорема Паппа</strong>:</p>
+<ol type="1">
+<li><strong>Объем тел вращения:</strong> Объем тела, образованного
+вращением плоской фигуры вокруг оси, равен произведению площади этой
+фигуры на расстояние, пройденное её центром масс:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mi>π</mi><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>⋅</mo><mi>S</mi></mrow><annotation encoding="application/x-tex">V = (2\pi x) \cdot S</annotation></semantics></math></li>
+<li><strong>Площадь поверхностей вращения:</strong> Площадь поверхности,
+«заметаемой» кривой при вращении, равна произведению длины этой кривой
+на расстояние, пройденное её центром масс.</li>
+</ol>
+<p><strong>Примеры расчета:</strong> | Фигура | Метод расчета |
+Результат (положение ц. м.) | | :--- | :--- | :--- | |
+<strong>Прямоугольный треугольник</strong> | Вращение вокруг катета
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>H</mi><annotation encoding="application/x-tex">H</annotation></semantics></math>
+(образует конус, Фиг. 19.2) |
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mi>D</mi><mi>/</mi><mn>3</mn><mo>,</mo><mi>y</mi><mo>=</mo><mi>H</mi><mi>/</mi><mn>3</mn></mrow><annotation encoding="application/x-tex">x = D/3, y = H/3</annotation></semantics></math>
+(точка пересечения медиан) | | <strong>Однородный полукруг</strong> |
+Вращение вокруг диаметра (образует шар) |
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mn>4</mn><mi>r</mi><mi>/</mi><mn>3</mn><mi>π</mi></mrow><annotation encoding="application/x-tex">x = 4r/3\pi</annotation></semantics></math>
+| | <strong>Проволочная полуокружность</strong> | Вторая теорема Паппа |
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mn>2</mn><mi>r</mi><mi>/</mi><mi>π</mi></mrow><annotation encoding="application/x-tex">x = 2r/\pi</annotation></semantics></math>
+|</p>
+<hr />
+<h2 id="3-момент-инерции-теория-и-расчет">3. Момент инерции: Теория и
+расчет</h2>
+<p>Момент инерции
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>I</mi><annotation encoding="application/x-tex">I</annotation></semantics></math>)
+определяет сопротивляемость тела изменению его угловой скорости.</p>
+<h3 id="фундаментальные-формулы">Фундаментальные формулы</h3>
+<p>Для дискретных масс:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mo>=</mo><mo>∑</mo><msub><mi>m</mi><mi>i</mi></msub><msubsup><mi>r</mi><mi>i</mi><mn>2</mn></msubsup></mrow><annotation encoding="application/x-tex">I = \sum m_i r_i^2</annotation></semantics></math>
+Для непрерывных тел:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mo>=</mo><mo>∫</mo><msup><mi>r</mi><mn>2</mn></msup><mspace width="0.167em"></mspace><mi>d</mi><mi>m</mi><mo>=</mo><mo>∫</mo><mo stretchy="false" form="prefix">(</mo><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup><mo stretchy="false" form="postfix">)</mo><mi>ρ</mi><mspace width="0.167em"></mspace><mi>d</mi><mi>V</mi></mrow><annotation encoding="application/x-tex">I = \int r^2 \, dm = \int (x^2 + y^2) \rho \, dV</annotation></semantics></math></p>
+<p><strong>Пример (тонкий стержень):</strong> Для стержня длиной
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>L</mi><annotation encoding="application/x-tex">L</annotation></semantics></math>,
+вращающегося вокруг конца (Фиг. 19.3),
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mo>=</mo><mfrac><mrow><mi>M</mi><msup><mi>L</mi><mn>2</mn></msup></mrow><mn>3</mn></mfrac></mrow><annotation encoding="application/x-tex">I = \frac{ML^2}{3}</annotation></semantics></math>.
+Если ось проходит через центр,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mo>=</mo><mfrac><mrow><mi>M</mi><msup><mi>L</mi><mn>2</mn></msup></mrow><mn>12</mn></mfrac></mrow><annotation encoding="application/x-tex">I = \frac{ML^2}{12}</annotation></semantics></math>.</p>
+<h3 id="ключевые-теоремы">Ключевые теоремы</h3>
+<ol type="1">
+<li><strong>Теорема о параллельном переносе оси (Теорема
+Штейнера):</strong>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mo>=</mo><msub><mi>I</mi><mi>c</mi></msub><mo>+</mo><mi>M</mi><msubsup><mi>R</mi><mtext mathvariant="normal">CM</mtext><mn>2</mn></msubsup></mrow><annotation encoding="application/x-tex">I = I_c + MR_{\text{CM}}^2</annotation></semantics></math>
+Момент инерции относительно любой оси равен моменту инерции относительно
+параллельной оси через центр масс
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>I</mi><mi>c</mi></msub><annotation encoding="application/x-tex">I_c</annotation></semantics></math>)
+плюс масса тела на квадрат расстояния до этой оси.</li>
+<li><strong>Теорема о перпендикулярных осях (для плоских
+фигур):</strong>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mi>z</mi></msub><mo>=</mo><msub><mi>I</mi><mi>x</mi></msub><mo>+</mo><msub><mi>I</mi><mi>y</mi></msub></mrow><annotation encoding="application/x-tex">I_z = I_x + I_y</annotation></semantics></math>
+(где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>z</mi><annotation encoding="application/x-tex">z</annotation></semantics></math>
+перпендикулярна плоскости фигуры, а
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><annotation encoding="application/x-tex">x, y</annotation></semantics></math>
+лежат в ней).</li>
+</ol>
+<h3 id="справочные-данные-таблицы-191-и-192">Справочные данные (Таблицы
+19.1 и 19.2)</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Объект</th>
+<th style="text-align: left;">Ось вращения</th>
+<th style="text-align: left;">Момент инерции
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>I</mi><annotation encoding="application/x-tex">I</annotation></semantics></math>)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Тонкий стержень
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>L</mi><annotation encoding="application/x-tex">L</annotation></semantics></math>)</td>
+<td style="text-align: left;">Через центр
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>⟂</mo><annotation encoding="application/x-tex">\perp</annotation></semantics></math>)</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><msup><mi>L</mi><mn>2</mn></msup><mi>/</mi><mn>12</mn></mrow><annotation encoding="application/x-tex">ML^2/12</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;">Шар
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math>)</td>
+<td style="text-align: left;">Через центр</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>M</mi><msup><mi>r</mi><mn>2</mn></msup><mi>/</mi><mn>5</mn></mrow><annotation encoding="application/x-tex">2Mr^2/5</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;">Кольцо
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>r</mi><mn>1</mn></msub><mo>,</mo><msub><mi>r</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">r_1, r_2</annotation></semantics></math>)</td>
+<td style="text-align: left;">Через центр
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>⟂</mo><annotation encoding="application/x-tex">\perp</annotation></semantics></math>)</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mo stretchy="false" form="prefix">(</mo><msubsup><mi>r</mi><mn>1</mn><mn>2</mn></msubsup><mo>+</mo><msubsup><mi>r</mi><mn>2</mn><mn>2</mn></msubsup><mo stretchy="false" form="postfix">)</mo><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">M(r_1^2+r_2^2)/2</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;">Прямоуг. пластина
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow><annotation encoding="application/x-tex">a, b</annotation></semantics></math>)</td>
+<td style="text-align: left;">Через центр
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>⟂</mo><annotation encoding="application/x-tex">\perp</annotation></semantics></math>)</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mo stretchy="false" form="prefix">(</mo><msup><mi>a</mi><mn>2</mn></msup><mo>+</mo><msup><mi>b</mi><mn>2</mn></msup><mo stretchy="false" form="postfix">)</mo><mi>/</mi><mn>12</mn></mrow><annotation encoding="application/x-tex">M(a^2+b^2)/12</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;">Цилиндр
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mo>,</mo><mi>L</mi></mrow><annotation encoding="application/x-tex">r, L</annotation></semantics></math>)</td>
+<td style="text-align: left;">Вдоль оси симметрии</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><msup><mi>r</mi><mn>2</mn></msup><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">Mr^2/2</annotation></semantics></math></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4-динамика-вращения-и-неинерциальные-силы">4. Динамика вращения
+и неинерциальные силы</h2>
+<h3 id="кинетическая-энергия-вращения">Кинетическая энергия
+вращения</h3>
+<p>Энергия вращающегося твердого тела
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>T</mi><annotation encoding="application/x-tex">T</annotation></semantics></math>)
+аналогична энергии поступательного движения
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>m</mi><msup><mi>v</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\frac{1}{2}mv^2</annotation></semantics></math>):
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo>=</mo><mstyle displaystyle="false"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mi>I</mi><msup><mi>ω</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">T = \tfrac{1}{2}I\omega^2</annotation></semantics></math></p>
+<p><strong>Парадокс изменения энергии:</strong> При изменении момента
+инерции (например, человек на вращающемся стуле подтягивает гантели к
+себе) угловая скорость
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ω</mi><annotation encoding="application/x-tex">\omega</annotation></semantics></math>
+растет из-за сохранения момента количества движения
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mi>ω</mi><mo>=</mo><mtext mathvariant="normal">const</mtext></mrow><annotation encoding="application/x-tex">I\omega = \text{const}</annotation></semantics></math>).
+Однако кинетическая энергия при этом <strong>увеличивается</strong>.</p>
+<ul>
+<li><strong>Источник энергии:</strong> Работа, совершаемая человеком
+против центробежной силы при подтягивании грузов к центру.</li>
+</ul>
+<h3 id="сила-кориолиса">Сила Кориолиса</h3>
+<p>В системе отсчета, вращающейся с угловой скоростью
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ω</mi><annotation encoding="application/x-tex">\omega</annotation></semantics></math>,
+на тело, движущееся со скоростью
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>v</mi><annotation encoding="application/x-tex">v</annotation></semantics></math>,
+действует кориолисова сила:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>F</mi><mi>c</mi></msub><mo>=</mo><mn>2</mn><mi>m</mi><mi>ω</mi><mi>v</mi></mrow><annotation encoding="application/x-tex">F_c = 2m\omega v</annotation></semantics></math></p>
+<p><strong>Свойства силы Кориолиса:</strong></p>
+<ul>
+<li>Направлена всегда перпендикулярно вектору скорости (вбок).</li>
+<li>Является «псевдосилой» (силой инерции), возникающей из-за вращения
+системы координат.</li>
+<li><strong>Физический смысл:</strong> Она обеспечивает изменение
+момента количества движения объекта при его радиальном перемещении (Фиг.
+19.4). Чтобы двигаться по радиусу на вращающейся платформе, необходимо
+прикладывать боковое усилие.</li>
+</ul>
+<hr />
+<h2 id="важные-цитаты">Важные цитаты</h2>
+<blockquote>
+<p>«Законы Ньютона являются как бы "кончиком хвоста" атомных законов,
+продолженных до очень больших размеров».</p>
+</blockquote>
+<blockquote>
+<p>«Закон Ньютона имеет ту особенность, что если он верен в определенном
+малом масштабе, то он будет верен и в большем масштабе».</p>
+</blockquote>
+<hr />
+<h2 id="практические-выводы-actionable-insights">Практические выводы
+(Actionable Insights)</h2>
+<ol type="1">
+<li><strong>Упрощение расчетов:</strong> Для нахождения центра масс
+сложной конструкции разделяйте её на простые геометрические элементы
+(прямоугольники, треугольники) и работайте с их центрами масс как с
+точечными массами.</li>
+<li><strong>Эффективность вращения:</strong> Чтобы минимизировать
+затраты энергии на раскручивание (или остановку) объекта, массу следует
+располагать как можно ближе к оси вращения (уменьшая
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>I</mi><annotation encoding="application/x-tex">I</annotation></semantics></math>).</li>
+<li><strong>Учет сил инерции:</strong> При проектировании систем,
+работающих во вращающихся платформах (от каруселей до планетарных
+систем), необходимо учитывать силу Кориолиса, которая будет отклонять
+любые движущиеся части в поперечном направлении.</li>
+<li><strong>Балансировка:</strong> Любое тело будет находиться в
+равновесии в однородном поле тяжести, если точка опоры совпадает с
+центром масс. В этой точке сумма моментов сил тяжести всегда равна
+нулю.</li>
+</ol>
+    </article>
+  </main>
+</body>
+</html>

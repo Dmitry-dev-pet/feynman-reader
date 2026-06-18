@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Аналитический отчет по Главе I-11: Векторы (Фейнмановские лекции по физике) - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch11.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1
+id="аналитический-отчет-по-главе-i-11-векторы-фейнмановские-лекции-по-физике">Аналитический
+отчет по Главе I-11: Векторы (Фейнмановские лекции по физике)</h1>
+<h2 id="1-концепция-симметрии-в-физических-законах">1. Концепция
+симметрии в физических законах</h2>
+<p>В физике понятие симметрии выходит далеко за рамки эстетики. Мы
+говорим о симметрии законов природы, и здесь нам не обойтись без
+строгого определения, которое дал профессор Герман Вейль:</p>
+<blockquote>
+<p>Предмет симметричен, если его можно подвергнуть определенной
+операции, после которой он выглядит точно так же.</p>
+</blockquote>
+<p>Глядите, как это работает на практике. Представим сложную машину:
+скажем, систему сталкивающихся шаров. Если мы построим точно такое же
+устройство в другом месте (сохранив размеры и ориентацию) и запустим его
+в тех же условиях — будет ли оно работать так же? Здравый смысл
+подсказывает, что да. Но если на новом месте машина «врежется в стену»,
+это не значит, что симметрия исчезла. Это значит, что мы не перенесли
+что-то важное (например, саму стену или источники внешних сил).</p>
+<p><strong>Основной вывод:</strong> Критерием симметрии физического
+закона является его самовоспроизводимость. Если уравнения, описывающие
+явление, «выглядят так же» после операции (например, перемещения),
+значит, закон обладает данной симметрией.</p>
+<h2 id="2-переносы-начала-координат-трансляционная-инвариантность">2.
+Переносы начала координат (Трансляционная инвариантность)</h2>
+<p>Давайте проверим, имеет ли значение выбор начала координат. У нас
+есть два экспериментатора: Джо и Мик (на Фиг. 11.1 Мик обозначен как
+<strong>MOE</strong>). Система Мика смещена относительно системы Джо на
+расстояние
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>.</p>
+<ul>
+<li><strong>Формулы преобразования координат [Eq:I:11:2]:</strong>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>x</mi><mo>′</mo></msup><mo>=</mo><mi>x</mi><mo>−</mo><mi>a</mi><mo>,</mo><mspace width="1.0em"></mspace><msup><mi>y</mi><mo>′</mo></msup><mo>=</mo><mi>y</mi><mo>,</mo><mspace width="1.0em"></mspace><msup><mi>z</mi><mo>′</mo></msup><mo>=</mo><mi>z</mi></mrow><annotation encoding="application/x-tex">x&#39; = x - a, \quad y&#39; = y, \quad z&#39; = z</annotation></semantics></math></li>
+<li><strong>Почему законы Ньютона остаются верными?</strong> Если начало
+координат Мика не движется
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>=</mo><mtext mathvariant="normal">const</mtext></mrow><annotation encoding="application/x-tex">a = \text{const}</annotation></semantics></math>),
+то при дифференцировании по времени скорость
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><msup><mi>x</mi><mo>′</mo></msup><mi>/</mi><mi>d</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">dx&#39;/dt</annotation></semantics></math>
+равна
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>x</mi><mi>/</mi><mi>d</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">dx/dt</annotation></semantics></math>,
+а ускорение
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>d</mi><mn>2</mn></msup><msup><mi>x</mi><mo>′</mo></msup><mi>/</mi><mi>d</mi><msup><mi>t</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">d^2x&#39;/dt^2</annotation></semantics></math>
+в точности совпадает с
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>d</mi><mn>2</mn></msup><mi>x</mi><mi>/</mi><mi>d</mi><msup><mi>t</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">d^2x/dt^2</annotation></semantics></math>.
+Поскольку и проекции сил
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>F</mi><mi>x</mi></msub><annotation encoding="application/x-tex">F_x</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>F</mi><msup><mi>x</mi><mo>′</mo></msup></msub><annotation encoding="application/x-tex">F_{x&#39;}</annotation></semantics></math>
+одинаковы, уравнения Джо [Eq:I:11:1] автоматически превращаются в
+уравнения Мика [Eq:I:11:4]:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo stretchy="false" form="prefix">(</mo><msup><mi>d</mi><mn>2</mn></msup><msup><mi>x</mi><mo>′</mo></msup><mi>/</mi><mi>d</mi><msup><mi>t</mi><mn>2</mn></msup><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msub><mi>F</mi><msup><mi>x</mi><mo>′</mo></msup></msub></mrow><annotation encoding="application/x-tex">m(d^2x&#39;/dt^2) = F_{x&#39;}</annotation></semantics></math></li>
+</ul>
+<p>![SOURCE_IMAGE_1] <em>Фиг. 11.1. Две параллельные координатные
+системы Джо и Мика (Moe).</em></p>
+<p><strong>Условия, при которых "машина будет работать так же" на новом
+месте:</strong></p>
+<ul>
+<li>Устройство воссоздано «деталь в деталь».</li>
+<li>Сохранены идентичные начальные условия.</li>
+<li>Источники всех существенных внешних сил перемещены вместе с
+аппаратом.</li>
+<li>Отсутствуют неучтенные физические помехи (вроде стен).</li>
+</ul>
+<h2 id="3-вращение-осей-и-неизменность-законов">3. Вращение осей и
+неизменность законов</h2>
+<p>А что если мы повернем оси? Маятниковые часы — это «плохой» пример
+симметрии, если рассматривать только их механизм. Поверните их боком, и
+маятник упрется в стенку. Но в чем тут соль? В том, что Земля — часть
+системы. Чтобы сохранить симметрию, нужно «повернуть» и Землю. Нам даже
+не нужно прикладывать усилий: достаточно подождать пару минут, пока
+Земля повернется сама, и часы продолжат тикать как ни в чем не
+бывало.</p>
+<p>При повороте осей на угол
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>θ</mi><annotation encoding="application/x-tex">\theta</annotation></semantics></math>
+координаты точки
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math>
+и компоненты силы преобразуются по одним и тем же правилам:</p>
+<p><strong>Математические выражения [Eq:I:11:5, Eq:I:11:6]:</strong>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtable><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><msup><mi>x</mi><mo>′</mo></msup></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mi>x</mi><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>θ</mi><mo>+</mo><mi>y</mi><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mi>θ</mi></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><msup><mi>y</mi><mo>′</mo></msup></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><mi>y</mi><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>θ</mi><mo>−</mo><mi>x</mi><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mi>θ</mi></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><msub><mi>F</mi><msup><mi>x</mi><mo>′</mo></msup></msub></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><msub><mi>F</mi><mi>x</mi></msub><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>θ</mi><mo>+</mo><msub><mi>F</mi><mi>y</mi></msub><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mi>θ</mi></mtd></mtr><mtr><mtd columnalign="right" style="text-align: right; padding-right: 0"><msub><mi>F</mi><msup><mi>y</mi><mo>′</mo></msup></msub></mtd><mtd columnalign="left" style="text-align: left; padding-left: 0"><mo>=</mo><msub><mi>F</mi><mi>y</mi></msub><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>θ</mi><mo>−</mo><msub><mi>F</mi><mi>x</mi></msub><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mi>θ</mi></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{aligned}
+x&#39; &amp;= x \cos\theta + y \sin\theta \\
+y&#39; &amp;= y \cos\theta - x \sin\theta \\
+F_{x&#39;} &amp;= F_x \cos\theta + F_y \sin\theta \\
+F_{y&#39;} &amp;= F_y \cos\theta - F_x \sin\theta
+\end{aligned}</annotation></semantics></math></p>
+<p><strong>Сравнительная таблица структурного сходства:</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Величина</th>
+<th style="text-align: left;">Преобразование по оси
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>X</mi><mo>′</mo></msup><annotation encoding="application/x-tex">X&#39;</annotation></semantics></math></th>
+<th style="text-align: left;">Преобразование по оси
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>Y</mi><mo>′</mo></msup><annotation encoding="application/x-tex">Y&#39;</annotation></semantics></math></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Координаты
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(x, y)</annotation></semantics></math></strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>θ</mi><mo>+</mo><mi>y</mi><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mi>θ</mi></mrow><annotation encoding="application/x-tex">x \cos\theta + y \sin\theta</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>θ</mi><mo>−</mo><mi>x</mi><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mi>θ</mi></mrow><annotation encoding="application/x-tex">y \cos\theta - x \sin\theta</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Компоненты силы
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><msub><mi>F</mi><mi>x</mi></msub><mo>,</mo><msub><mi>F</mi><mi>y</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(F_x, F_y)</annotation></semantics></math></strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>F</mi><mi>x</mi></msub><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>θ</mi><mo>+</mo><msub><mi>F</mi><mi>y</mi></msub><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mi>θ</mi></mrow><annotation encoding="application/x-tex">F_x \cos\theta + F_y \sin\theta</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>F</mi><mi>y</mi></msub><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>θ</mi><mo>−</mo><msub><mi>F</mi><mi>x</mi></msub><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mi>θ</mi></mrow><annotation encoding="application/x-tex">F_y \cos\theta - F_x \sin\theta</annotation></semantics></math></td>
+</tr>
+</tbody>
+</table>
+<p>Эта идентичность форм — ключ ко всему. Она гарантирует, что законы
+физики не меняют своего вида, как бы мы ни вертели осями.</p>
+<p>![SOURCE_IMAGE_7] <em>Фиг. 11.2. Геометрия поворота систем
+координат.</em></p>
+<p>![SOURCE_IMAGE_2] <em>Фиг. 11.3. Составляющие силы F в исходной и
+повернутой системах.</em></p>
+<h2 id="4-определение-вектора-и-векторная-алгебра">4. Определение
+вектора и векторная алгебра</h2>
+<p>Внимание: <strong>вектор</strong> — это не просто три любых числа.
+Например, «количество картофелин в мешке, возраст капитана и цена чая» —
+это три числа, но они не образуют вектор. Почему? Потому что они не
+будут «перемешиваться» друг с другом при повороте системы координат.</p>
+<p><strong>Настоящий вектор</strong> — это набор величин (компонентов),
+которые при смене осей преобразуются точно так же, как координаты
+обычного шага в пространстве.</p>
+<h3 id="операции-векторной-алгебры">Операции векторной алгебры:</h3>
+<ul>
+<li><strong>Сложение:</strong> Геометрически это правило параллелограмма
+или метод «голова к хвосту». Мы просто ставим «ноги» вектора <span
+class="math inline">$\FLPb$</span> на «голову» вектора <span
+class="math inline">$\FLPa$</span>. ![SOURCE_IMAGE_3]</li>
+<li><strong>Вычитание:</strong> Чтобы найти <span
+class="math inline">$\FLPa - \FLPb$</span>, можно прибавить к <span
+class="math inline">$\FLPa$</span> <strong>отрицательный вектор</strong>
+<span class="math inline">$(-\FLPb)$</span> или просто провести стрелку
+от «головы» <span class="math inline">$\FLPb$</span> к «голове» <span
+class="math inline">$\FLPa$</span>. ![SOURCE_IMAGE_4]</li>
+<li><strong>Умножение на скаляр:</strong> Все
+<strong>компоненты</strong> вектора увеличиваются в
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>α</mi><annotation encoding="application/x-tex">\alpha</annotation></semantics></math>
+раз, что просто растягивает или сжимает стрелку, сохраняя её
+направление.</li>
+</ul>
+<h2 id="5-векторный-анализ-в-кинематике-и-динамике">5. Векторный анализ
+в кинематике и динамике</h2>
+<p>Векторы позволяют записывать законы движения элегантно. Поскольку
+производная вектора по времени — это тоже вектор, мы получаем:</p>
+<p><strong>Скорость и ускорение:</strong> <span
+class="math display">$$\FLPv = \frac{d\FLPr}{dt} \quad \text{и} \quad
+\FLPa = \frac{d\FLPv}{dt} = \frac{d^2\FLPr}{dt^2}$$</span></p>
+<p>Глядя на Фиг. 11.7, будьте осторожны! Фейнман не зря написал там
+<strong>«<span class="math inline">$\Delta \FLPv$</span>? No!»</strong>.
+Вы не можете найти разность скоростей, просто соединив концы стрелок на
+криволинейной траектории, если их начала находятся в разных точках.
+Чтобы вычесть векторы, их нужно сначала перенести в общее начало (как на
+Фиг. 11.8).</p>
+<p>![SOURCE_IMAGE_5] <em>Фиг. 11.6. Перемещение частицы <span
+class="math inline">$\Delta \FLPr$</span> за малое время.</em></p>
+<p>![SOURCE_IMAGE_6] <em>Фиг. 11.7. Анализ скоростей на криволинейной
+траектории. Важное предупреждение о вычитании векторов.</em></p>
+<p>Ускорение на кривой делится на:</p>
+<ol type="1">
+<li><strong>Касательное</strong>
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mo>∥</mo></msub><mo>=</mo><mi>d</mi><mi>v</mi><mi>/</mi><mi>d</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">a_\parallel = dv/dt</annotation></semantics></math>):
+меняет величину скорости.</li>
+<li><strong>Нормальное</strong>
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mo>⟂</mo></msub><mo>=</mo><msup><mi>v</mi><mn>2</mn></msup><mi>/</mi><mi>R</mi></mrow><annotation encoding="application/x-tex">a_\perp = v^2/R</annotation></semantics></math>):
+меняет направление.</li>
+</ol>
+<p>Итог — второй закон Ньютона в одной векторной строчке: <span
+class="math display">$$m\FLPa = \FLPF$$</span></p>
+<h2 id="6-скалярное-произведение-и-его-физический-смысл">6. Скалярное
+произведение и его физический смысл</h2>
+<p><strong>Инвариант</strong> — это величина, которая не меняется при
+вращении осей (например, длина вектора).</p>
+<p>Векторный анализ дает нам мощный инструмент получения скаляров из
+векторов — <strong>скалярное произведение</strong> <span
+class="math inline">$\FLPa \cdot \FLPb$</span>. Через компоненты оно
+записывается как
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>x</mi></msub><msub><mi>b</mi><mi>x</mi></msub><mo>+</mo><msub><mi>a</mi><mi>y</mi></msub><msub><mi>b</mi><mi>y</mi></msub><mo>+</mo><msub><mi>a</mi><mi>z</mi></msub><msub><mi>b</mi><mi>z</mi></msub></mrow><annotation encoding="application/x-tex">a_x b_x + a_y b_y + a_z b_z</annotation></semantics></math>
+[Eq:I:11:19].</p>
+<p><strong>Аха-момент (Доказательство инвариантности):</strong> Почему
+эта сумма не зависит от осей? Мы знаем, что квадрат длины любого вектора
+<span class="math inline">$(\FLPa+\FLPb)^2$</span> — инвариант. Раскроем
+скобки:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><msub><mi>a</mi><mi>x</mi></msub><mo>+</mo><msub><mi>b</mi><mi>x</mi></msub><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>a</mi><mi>y</mi></msub><mo>+</mo><msub><mi>b</mi><mi>y</mi></msub><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>a</mi><mi>z</mi></msub><mo>+</mo><msub><mi>b</mi><mi>z</mi></msub><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>=</mo><mo stretchy="false" form="prefix">(</mo><msubsup><mi>a</mi><mi>x</mi><mn>2</mn></msubsup><mo>+</mo><msubsup><mi>a</mi><mi>y</mi><mn>2</mn></msubsup><mo>+</mo><msubsup><mi>a</mi><mi>z</mi><mn>2</mn></msubsup><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mo stretchy="false" form="prefix">(</mo><msubsup><mi>b</mi><mi>x</mi><mn>2</mn></msubsup><mo>+</mo><msubsup><mi>b</mi><mi>y</mi><mn>2</mn></msubsup><mo>+</mo><msubsup><mi>b</mi><mi>z</mi><mn>2</mn></msubsup><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>2</mn><mo stretchy="false" form="prefix">(</mo><msub><mi>a</mi><mi>x</mi></msub><msub><mi>b</mi><mi>x</mi></msub><mo>+</mo><msub><mi>a</mi><mi>y</mi></msub><msub><mi>b</mi><mi>y</mi></msub><mo>+</mo><msub><mi>a</mi><mi>z</mi></msub><msub><mi>b</mi><mi>z</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(a_x + b_x)^2 + (a_y + b_y)^2 + (a_z + b_z)^2 = (a_x^2 + a_y^2 + a_z^2) + (b_x^2 + b_y^2 + b_z^2) + 2(a_x b_x + a_y b_y + a_z b_z)</annotation></semantics></math>
+Если левая часть и первые два слагаемых в скобках инвариантны (это длины
+векторов), то и «перекрестный член»
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>x</mi></msub><msub><mi>b</mi><mi>x</mi></msub><mo>+</mo><msub><mi>a</mi><mi>y</mi></msub><msub><mi>b</mi><mi>y</mi></msub><mo>+</mo><msub><mi>a</mi><mi>z</mi></msub><msub><mi>b</mi><mi>z</mi></msub></mrow><annotation encoding="application/x-tex">a_x b_x + a_y b_y + a_z b_z</annotation></semantics></math>
+<strong>обязан</strong> быть инвариантом. Это и есть наше
+доказательство!</p>
+<p><strong>Физические примеры:</strong></p>
+<ul>
+<li><strong>Кинетическая энергия:</strong> <span
+class="math inline">$K.E. = \frac{1}{2}m(\FLPv \cdot \FLPv)$</span>.
+Здесь скалярное произведение «очищает» скорость от направления, оставляя
+только нужный для энергии скаляр.</li>
+<li><strong>Работа:</strong> <span class="math inline">$W = \FLPF \cdot
+\FLPs$</span>.</li>
+<li><strong>Единичные векторы:</strong> Любой вектор можно разложить по
+осям: <span class="math inline">$\FLPa = a_x\FLPi + a_y\FLPj +
+a_z\FLPk$</span>, где <span class="math inline">$\FLPi, \FLPj,
+\FLPk$</span> — ортогональные векторы единичной длины.</li>
+</ul>
+<p><strong>Свойства:</strong> Коммутативность (<span
+class="math inline">$\FLPa\cdot\FLPb = \FLPb\cdot\FLPa$</span>),
+дистрибутивность и геометрическая форма <span
+class="math inline">$\FLPa\cdot\FLPb = ab \cos \theta$</span>.</p>
+<h2 id="7-заключение-физическая-суть-векторов">7. Заключение: Физическая
+суть векторов</h2>
+<p>Векторная запись — это не просто математическое стенографирование.
+Тот факт, что мы можем записать закон в форме <span
+class="math inline">$m\FLPa = \FLPF$</span>, не упоминая
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi></mrow><annotation encoding="application/x-tex">x, y, z</annotation></semantics></math>,
+открывает фундаментальную истину: Вселенной глубоко плевать на то, как
+именно мы ориентируем свои измерительные приборы. Векторное уравнение —
+это математическое отражение того, что физическая реальность обладает
+глубокой внутренней симметрией относительно поворотов и перемещений в
+пространстве. Математическая элегантность здесь является прямым
+следствием устройства самого мира.</p>
+    </article>
+  </main>
+</body>
+</html>

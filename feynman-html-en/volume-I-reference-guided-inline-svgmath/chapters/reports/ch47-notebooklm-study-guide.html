@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chapter 47: Sound and the Wave Equation - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="en">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch47.html#study-panel">Back to chapter</a>
+      <a class="nav-btn" href="../../index.html">Volume contents</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1 id="chapter-47-sound-and-the-wave-equation">Chapter 47: Sound and
+the Wave Equation</h1>
+<p>This study guide explores the fundamental physics of sound waves, the
+derivation of the wave equation from Newton’s laws, and the variables
+that determine the speed of sound. While sound serves as the primary
+example, the concepts discussed are broadly applicable to various wave
+phenomena throughout physics.</p>
+<hr />
+<h2 id="i-key-concepts">I. Key Concepts</h2>
+<h3 id="1-general-wave-phenomena">1. General Wave Phenomena</h3>
+<p>Waves represent a phenomenon where oscillations occur not just in
+time at a single location, but also propagate through space.</p>
+<ul>
+<li><strong>Interference in Time (Beats):</strong> When two sources of
+sound with slightly different frequencies are heard simultaneously,
+their waves alternate between coming "crests together" and "crest and
+trough together." This resulting rise and fall in volume is known as
+beats.</li>
+<li><strong>Superposition:</strong> Multiple waves can exist in the same
+space simultaneously. The principle of superposition states that if two
+functions represent valid waves, their sum is also a valid wave. In both
+light and sound, waves propagate independently through one another.</li>
+<li><strong>Linearity:</strong> The independence of waves and the
+validity of superposition stem from the fact that the wave equation is
+linear.</li>
+</ul>
+<h3 id="2-the-nature-of-sound-propagation">2. The Nature of Sound
+Propagation</h3>
+<p>Sound is a branch of mechanics and is understood through Newton’s
+laws and the properties of the medium (gas, liquid, or solid).</p>
+<ul>
+<li><strong>Physical Requirements:</strong> For a sound wave to
+propagate in a gas, the distance between pressure crests and troughs
+must be significantly larger than the <strong>mean free path</strong>
+(the distance molecules travel before colliding). If the wavelength were
+smaller, molecules would move freely between crests and troughs,
+immediately "smearing out" the wave.</li>
+<li><strong>Wavefronts:</strong> In a one-dimensional model, wavefronts
+are treated as planes where the displacement of air
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>χ</mi><annotation encoding="application/x-tex">\chi</annotation></semantics></math>)
+depends only on position
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>)
+and time
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math>).</li>
+<li><strong>Types of Elastic Waves:</strong>
+<ul>
+<li><strong>Longitudinal (Compressional):</strong> Particles oscillate
+back and forth along the direction of propagation (e.g., sound in
+gas).</li>
+<li><strong>Transverse:</strong> Particles oscillate perpendicular to
+the direction of propagation.</li>
+<li><strong>Earthquake waves:</strong> Contain both longitudinal and
+transverse waves.</li>
+</ul></li>
+</ul>
+<h3 id="3-the-three-features-of-sound-physics">3. The Three Features of
+Sound Physics</h3>
+<p>The mathematical derivation of the wave equation relies on
+interconnecting three physical features:</p>
+<ol type="1">
+<li><strong>Gas Motion and Density:</strong> The movement of gas changes
+its density. If air is "stretched out" (displacement increases with
+distance), density decreases.</li>
+<li><strong>Density and Pressure:</strong> Changes in density correspond
+to changes in pressure. For small changes, excess pressure
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>P</mi><mi>e</mi></msub><annotation encoding="application/x-tex">P_e</annotation></semantics></math>)
+is proportional to excess density
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ρ</mi><mi>e</mi></msub><annotation encoding="application/x-tex">\rho_e</annotation></semantics></math>).</li>
+<li><strong>Pressure and Motion:</strong> Pressure inequalities generate
+gas motion. A difference in pressure across a thin slab of air creates a
+net force that accelerates the mass of that air.</li>
+</ol>
+<h3 id="4-the-wave-equation">4. The Wave Equation</h3>
+<p>By combining the three features above, we derive the one-dimensional
+wave equation:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><msup><mi>∂</mi><mn>2</mn></msup><mi>χ</mi></mrow><mrow><mi>∂</mi><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac><mo>=</mo><mfrac><mn>1</mn><msubsup><mi>c</mi><mi>s</mi><mn>2</mn></msubsup></mfrac><mfrac><mrow><msup><mi>∂</mi><mn>2</mn></msup><mi>χ</mi></mrow><mrow><mi>∂</mi><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{\partial^2\chi}{\partial x^2} = \frac{1}{c_s^2}\frac{\partial^2\chi}{\partial t^2}</annotation></semantics></math></p>
+<ul>
+<li><strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>χ</mi><annotation encoding="application/x-tex">\chi</annotation></semantics></math>:</strong>
+The displacement of air particles.</li>
+<li><strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>c</mi><mi>s</mi></msub><annotation encoding="application/x-tex">c_s</annotation></semantics></math>:</strong>
+The velocity of the sound wave.</li>
+<li><strong>Solutions:</strong> Any function in the form
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><mi>c</mi><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">f(x - ct)</annotation></semantics></math>
+(moving right) or
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>+</mo><mi>c</mi><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">g(x + ct)</annotation></semantics></math>
+(moving left) satisfies this equation.</li>
+</ul>
+<h3 id="5-the-speed-of-sound">5. The Speed of Sound</h3>
+<p>The speed of sound is determined by the properties of the medium.</p>
+<ul>
+<li><strong>Adiabatic vs. Isothermal:</strong> Sound propagates
+<strong>adiabatically</strong>, meaning there is negligible heat flow
+between compressed and rarefied regions.</li>
+<li><strong>Temperature Dependence:</strong> The speed of sound in a gas
+depends only on the temperature, not on the pressure or density.</li>
+<li><strong>Molecular Relation:</strong> The speed of sound is of the
+same order of magnitude as the average speed of the molecules in the
+gas, specifically:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>c</mi><mi>s</mi></msub><mo>=</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mi>γ</mi><mn>3</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mrow><mn>1</mn><mi>/</mi><mn>2</mn></mrow></msup><msub><mi>v</mi><mtext mathvariant="normal">av</mtext></msub></mrow><annotation encoding="application/x-tex">c_s = \left(\frac{\gamma}{3}\right)^{1/2}v_{\text{av}}</annotation></semantics></math></li>
+</ul>
+<hr />
+<h2 id="ii-common-misconceptions">II. Common Misconceptions</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Misconception</th>
+<th style="text-align: left;">Fact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Isothermal
+Propagation</strong></td>
+<td style="text-align: left;">Isaac Newton originally proposed that heat
+conducts so rapidly that temperature remains constant (isothermal).
+Laplace later proved that sound is <strong>adiabatic</strong>; heat flow
+is negligible over standard wavelengths.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Frequency-Dependent
+Speed</strong></td>
+<td style="text-align: left;">While some waves vary in speed based on
+wavelength, sound and light in air/vacuum have a speed nearly
+<strong>independent of frequency</strong>. If high frequencies traveled
+faster, a sharp noise would be heard as a succession of musical
+notes.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Particle Velocity vs. Wave
+Velocity</strong></td>
+<td style="text-align: left;">The individual molecules of air move in
+all directions at high speeds. The sound wave is the propagation of a
+<em>disturbance</em> (pressure/density changes) through those molecules,
+not the high-speed flight of a single molecule from source to
+listener.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="iii-short-answer-practice-questions">III. Short-Answer Practice
+Questions</h2>
+<ol type="1">
+<li><strong>What is the "principle of superposition" as applied to sound
+waves?</strong>
+<ul>
+<li><em>Answer:</em> It is the principle that if two different sound
+waves exist in space simultaneously, their sum is also a valid wave, and
+they move through each other independently.</li>
+</ul></li>
+<li><strong>How is the "acoustic pressure level" measured?</strong>
+<ul>
+<li><em>Answer:</em> It is measured on a logarithmic decibel (dB) scale,
+defined as
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>20</mn><msub><mrow><mi mathvariant="normal">log</mi><mo>&#8289;</mo></mrow><mn>10</mn></msub><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mi>/</mi><msub><mi>P</mi><mtext mathvariant="normal">ref</mtext></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">20 \log_{10}(P/P_{\text{ref}})</annotation></semantics></math>,
+where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>P</mi><mtext mathvariant="normal">ref</mtext></msub><annotation encoding="application/x-tex">P_{\text{ref}}</annotation></semantics></math>
+is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mo>×</mo><msup><mn>10</mn><mrow><mi>−</mi><mn>10</mn></mrow></msup></mrow><annotation encoding="application/x-tex">2 \times 10^{-10}</annotation></semantics></math>
+bar.</li>
+</ul></li>
+<li><strong>Why is sound propagation in air considered an adiabatic
+process rather than an isothermal one?</strong>
+<ul>
+<li><em>Answer:</em> Because the wavelength of audible sound is much
+larger than the mean free path of molecules, the heat flow between
+compressed (hotter) and rarefied (colder) regions is negligible.</li>
+</ul></li>
+<li><strong>What determines the speed of sound in a gas according to the
+formula
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>c</mi><mi>s</mi><mn>2</mn></msubsup><mo>=</mo><mi>γ</mi><mi>R</mi><mi>T</mi><mi>/</mi><mi>μ</mi></mrow><annotation encoding="application/x-tex">c_s^2 = \gamma RT/\mu</annotation></semantics></math>?</strong>
+<ul>
+<li><em>Answer:</em> The speed depends on the ratio of specific heats
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>γ</mi><annotation encoding="application/x-tex">\gamma</annotation></semantics></math>),
+the gas constant
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>R</mi><annotation encoding="application/x-tex">R</annotation></semantics></math>),
+the absolute temperature
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>T</mi><annotation encoding="application/x-tex">T</annotation></semantics></math>),
+and the molecular weight
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>μ</mi><annotation encoding="application/x-tex">\mu</annotation></semantics></math>).</li>
+</ul></li>
+<li><strong>What physical condition must be met for a sound wave to
+avoid being "smeared out" immediately?</strong>
+<ul>
+<li><em>Answer:</em> The distance between pressure crests and troughs
+must be much larger than the mean free path of the gas molecules.</li>
+</ul></li>
+</ol>
+<hr />
+<h2 id="iv-essay-prompts-for-deeper-exploration">IV. Essay Prompts for
+Deeper Exploration</h2>
+<ol type="1">
+<li><strong>The Interdisciplinary Nature of Waves:</strong> Based on the
+text, discuss how the study of sound waves informs our understanding of
+light (electromagnetism) and quantum mechanics. Why does the author
+argue that learning waves through different examples is superior to
+studying them only in electrodynamics?</li>
+<li><strong>The Art of Mathematical Physics:</strong> The text describes
+the mathematical physicist’s task as two-fold: finding solutions to
+known equations and finding the equations to describe new phenomena.
+Analyze the derivation of the sound wave equation as an example of
+"explaining new phenomena in terms of old ones."</li>
+<li><strong>Newton vs. Laplace:</strong> Compare and contrast the
+isothermal and adiabatic theories of sound speed. Explain the physical
+reasoning behind both and why the adiabatic model ultimately aligns with
+experimental reality.</li>
+</ol>
+<hr />
+<h2 id="v-glossary-of-important-terms">V. Glossary of Important
+Terms</h2>
+<ul>
+<li><strong>Adiabatic:</strong> A process in which no heat enters or
+leaves the system. In sound, this refers to the rapid
+compression/rarefaction that prevents heat exchange.</li>
+<li><strong>Bar:</strong> A unit of pressure equal to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>10</mn><mn>5</mn></msup><annotation encoding="application/x-tex">10^5</annotation></semantics></math>
+N/m², roughly equal to one standard atmosphere (1.0133 bars).</li>
+<li><strong>Beats:</strong> The phenomenon of interference in time
+resulting from two sound sources with slightly different
+frequencies.</li>
+<li><strong>Decibel (dB):</strong> A logarithmic unit used to express
+the intensity or pressure level of sound.</li>
+<li><strong>Longitudinal Wave:</strong> A wave where the particles of
+the medium oscillate back and forth along the same direction the wave
+travels.</li>
+<li><strong>Mean Free Path:</strong> The average distance a molecule
+travels in a gas before colliding with another molecule.</li>
+<li><strong>Rarefaction:</strong> A region in a longitudinal wave where
+the particles are furthest apart, resulting in lower density and
+pressure.</li>
+<li><strong>Wave Equation:</strong> A second-order partial differential
+equation that describes how a disturbance propagates through a medium
+over time and space.</li>
+</ul>
+    </article>
+  </main>
+</body>
+</html>

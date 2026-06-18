@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chapter 25: Linear Systems and Review - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="en">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch25.html#study-panel">Back to chapter</a>
+      <a class="nav-btn" href="../../index.html">Volume contents</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1 id="chapter-25-linear-systems-and-review">Chapter 25: Linear Systems
+and Review</h1>
+<p>This briefing document provides a comprehensive analysis of the
+principles of linear systems, oscillations, and physical analogs as
+detailed in the source context. It outlines the mathematical foundations
+of linearity, the principle of superposition, and the practical
+application of these concepts in physics and engineering.</p>
+<h2 id="executive-summary">Executive Summary</h2>
+<p>The study of linear systems is central to physics because the
+fundamental laws of nature—including Maxwell’s equations and quantum
+mechanics—are often linear. A system is defined as linear if it obeys
+the properties of addition and scaling in its differential equations.
+The most significant consequence of linearity is the <strong>Principle
+of Superposition</strong>, which allows complex problems to be
+decomposed into simpler, solvable parts.</p>
+<p>Key takeaways include:</p>
+<ul>
+<li><strong>Linearity:</strong> Defined by the operator properties <span
+class="math inline">$\uL(x+y) = \uL(x) + \uL(y)$</span> and <span
+class="math inline">$\uL(ax) = a\uL(x)$</span>.</li>
+<li><strong>Superposition:</strong> The total response to a sum of
+forces is the sum of the individual responses to each force.</li>
+<li><strong>Oscillations:</strong> Physical systems oscillate due to
+inertia, while friction (if proportional to velocity) results in
+exponential decay.</li>
+<li><strong>Analogs:</strong> Mechanical systems (mass-spring-damper)
+have direct electrical equivalents (inductor-capacitor-resistor),
+allowing for the use of analog computers to simulate complex mechanical
+behavior.</li>
+</ul>
+<hr />
+<h2 id="i-mathematical-foundations-of-linear-systems">I. Mathematical
+Foundations of Linear Systems</h2>
+<h3 id="defining-linearity">Defining Linearity</h3>
+<p>A problem is considered linear if the differential equation governing
+it maintains two specific properties when represented by an operator
+(<span class="math inline">$\uL$</span>):</p>
+<ol type="1">
+<li><strong>Additivity:</strong> Substituting
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>+</mo><mi>y</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(x+y)</annotation></semantics></math>
+for
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>
+results in the sum of the operations on
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>y</mi><annotation encoding="application/x-tex">y</annotation></semantics></math>
+separately (<span class="math inline">$\uL(x+y) = \uL(x) +
+\uL(y)$</span>).</li>
+<li><strong>Scaling:</strong> Multiplying the variable by a constant
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+results in
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+times the original operation (<span class="math inline">$\uL(ax) =
+a\uL(x)$</span>).</li>
+</ol>
+<h3 id="solutions-to-linear-equations">Solutions to Linear
+Equations</h3>
+<ul>
+<li><strong>Transient (Free) Solutions:</strong> These occur when there
+is no driving force (<span class="math inline">$\uL(x)=0$</span>). If
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mn>1</mn></msub><annotation encoding="application/x-tex">x_1</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mn>2</mn></msub><annotation encoding="application/x-tex">x_2</annotation></semantics></math>
+are solutions, any linear combination
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><mi>β</mi><msub><mi>x</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">\alpha x_1 + \beta x_2</annotation></semantics></math>)
+is also a solution. The number of independent solutions is determined by
+the "degrees of freedom."</li>
+<li><strong>Forced Solutions:</strong> If a system is subjected to an
+outside force (<span class="math inline">$\uL(x)=F(t)$</span>), a
+"transient" solution can be added to any "forced" solution, and the
+result remains a valid solution. While transients eventually die out due
+to friction, the forced solution persists.</li>
+</ul>
+<hr />
+<h2 id="ii-the-principle-of-superposition">II. The Principle of
+Superposition</h2>
+<p>The principle of superposition states that if a complicated force can
+be broken into simpler pieces, the total solution is simply the sum of
+the solutions for those individual pieces.</p>
+<h3 id="key-applications">Key Applications</h3>
+<ul>
+<li><strong>Electrostatics:</strong> The electric field (<span
+class="math inline">$\FLPE$</span>) at a point due to multiple charges
+is the vector sum of the fields produced by each individual charge
+distribution
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>q</mi><mi>a</mi></msub><mo>,</mo><msub><mi>q</mi><mi>b</mi></msub></mrow><annotation encoding="application/x-tex">q_a, q_b</annotation></semantics></math>).</li>
+<li><strong>Radio Tuning:</strong> Radios receive multiple signals
+simultaneously. By using a resonant circuit with a high
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Q</mi><annotation encoding="application/x-tex">Q</annotation></semantics></math>
+(quality factor), the system is tuned so that the response to the
+desired frequency
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mi>a</mi></msub><annotation encoding="application/x-tex">x_a</annotation></semantics></math>)
+is "tremendous" while responses to other frequencies
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>x</mi><mi>b</mi></msub><annotation encoding="application/x-tex">x_b</annotation></semantics></math>)
+are negligible, effectively disentangling the signals (See <strong>Fig.
+25-3</strong>).</li>
+</ul>
+<h3 id="methods-for-analyzing-complicated-forces">Methods for Analyzing
+Complicated Forces</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Method</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Fourier Analysis</strong></td>
+<td style="text-align: left;">Decomposing a complicated curve into an
+infinite sum of sine waves of different frequencies.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Green’s Function</strong></td>
+<td style="text-align: left;">Analyzing a force as a succession of sharp
+impulses (blows with a hammer). The solution is found by integrating the
+responses to these individual impulses (<strong>Fig.
+25-4</strong>).</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="iii-physical-dynamics-of-oscillations">III. Physical Dynamics of
+Oscillations</h2>
+<h3 id="the-nature-of-oscillation-and-friction">The Nature of
+Oscillation and Friction</h3>
+<p>Oscillation is a consequence of <strong>inertia</strong>; a mass
+passing its equilibrium point cannot stop instantly due to momentum.</p>
+<ul>
+<li><strong>Linear Friction:</strong> If friction is proportional to
+velocity, the amplitude of each successive cycle is reduced by a
+constant factor. This results in an exponential decay curve
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><msub><mi>A</mi><mn>0</mn></msub><msup><mi>a</mi><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">A=A_0a^n</annotation></semantics></math>
+or
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>−</mi><mi>c</mi><mi>t</mi></mrow></msup><annotation encoding="application/x-tex">e^{-ct}</annotation></semantics></math>).</li>
+<li><strong>Non-linear Friction:</strong> Ordinary rubbing friction is
+constant and independent of oscillation size, making the system
+non-linear and difficult to solve analytically. Such cases require
+<strong>numerical methods</strong>.</li>
+</ul>
+<h3 id="resonance">Resonance</h3>
+<p>Resonance occurs when the timing of external "taps" matches the
+natural frequency
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ω</mi><mn>0</mn></msub><annotation encoding="application/x-tex">\omega_0</annotation></semantics></math>)
+of the system.</p>
+<ul>
+<li><strong>Without Friction:</strong> The response curve approaches
+infinity as the driving frequency
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ω</mi><annotation encoding="application/x-tex">\omega</annotation></semantics></math>)
+nears
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ω</mi><mn>0</mn></msub><annotation encoding="application/x-tex">\omega_0</annotation></semantics></math>
+(<strong>Fig. 25-5</strong>, solid line).</li>
+<li><strong>With Friction:</strong> Friction "rounds off" the top of the
+resonance curve. Increased friction lowers the peak and makes the curve
+appear wider relative to its maximum height.</li>
+</ul>
+<hr />
+<h2 id="iv-electrical-analogs-and-impedance">IV. Electrical Analogs and
+Impedance</h2>
+<p>One of the most powerful aspects of linear system theory is the
+direct correspondence between mechanical and electrical systems.</p>
+<h3 id="correspondence-table">Correspondence Table</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Mechanical Element</th>
+<th style="text-align: left;">Electrical Analog</th>
+<th style="text-align: left;">Relationship</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Force
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>F</mi><annotation encoding="application/x-tex">F</annotation></semantics></math>)</td>
+<td style="text-align: left;">Voltage
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math>)</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>↔</mo><mi>F</mi></mrow><annotation encoding="application/x-tex">V \leftrightarrow F</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;">Mass
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math>)</td>
+<td style="text-align: left;">Inductance
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>L</mi><annotation encoding="application/x-tex">L</annotation></semantics></math>)</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>=</mo><mi>L</mi><mo stretchy="false" form="prefix">(</mo><msup><mi>d</mi><mn>2</mn></msup><mi>q</mi><mi>/</mi><mi>d</mi><msup><mi>t</mi><mn>2</mn></msup><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">V = L(d^2q/dt^2)</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;">Velocity
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>v</mi><annotation encoding="application/x-tex">v</annotation></semantics></math>)</td>
+<td style="text-align: left;">Current
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>I</mi><annotation encoding="application/x-tex">I</annotation></semantics></math>)</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mo>=</mo><mi>d</mi><mi>q</mi><mi>/</mi><mi>d</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">I = dq/dt</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;">Drag
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>γ</mi><mi>m</mi></mrow><annotation encoding="application/x-tex">\gamma m</annotation></semantics></math>)</td>
+<td style="text-align: left;">Resistance
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>R</mi><annotation encoding="application/x-tex">R</annotation></semantics></math>)</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>=</mo><mi>I</mi><mi>R</mi></mrow><annotation encoding="application/x-tex">V = IR</annotation></semantics></math>
+(Ohm's Law)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Spring Constant
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math>)</td>
+<td style="text-align: left;">Reciprocal Capacitance
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mi>C</mi></mrow><annotation encoding="application/x-tex">1/C</annotation></semantics></math>)</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>=</mo><mi>q</mi><mi>/</mi><mi>C</mi></mrow><annotation encoding="application/x-tex">V = q/C</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;">Displacement
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>)</td>
+<td style="text-align: left;">Charge
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>q</mi><annotation encoding="application/x-tex">q</annotation></semantics></math>)</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi><mo>↔</mo><mi>x</mi></mrow><annotation encoding="application/x-tex">q \leftrightarrow x</annotation></semantics></math></td>
+</tr>
+</tbody>
+</table>
+<h3 id="analog-computing">Analog Computing</h3>
+<p>Because of these identities, complex mechanical systems (like an
+automobile's suspension) can be simulated using electrical circuits.
+Engineers can adjust "dials" (resistors or capacitors) to observe how
+changes in damping or spring stiffness affect the system without
+building physical prototypes.</p>
+<h3 id="series-and-parallel-impedance">Series and Parallel
+Impedance</h3>
+<p>Using complex numbers, the steady-state response is expressed as
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>V</mi><mo accent="true">̂</mo></mover><mo>=</mo><mover><mi>Z</mi><mo accent="true">̂</mo></mover><mover><mi>I</mi><mo accent="true">̂</mo></mover></mrow><annotation encoding="application/x-tex">\hat{V} = \hat{Z}\hat{I}</annotation></semantics></math>,
+where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>Z</mi><mo accent="true">̂</mo></mover><annotation encoding="application/x-tex">\hat{Z}</annotation></semantics></math>
+is the <strong>impedance</strong>.</p>
+<ul>
+<li><strong>Series Connection:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mover><mi>Z</mi><mo accent="true">̂</mo></mover><mi>s</mi></msub><mo>=</mo><msub><mover><mi>Z</mi><mo accent="true">̂</mo></mover><mn>1</mn></msub><mo>+</mo><msub><mover><mi>Z</mi><mo accent="true">̂</mo></mover><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">\hat{Z}_s = \hat{Z}_1 + \hat{Z}_2</annotation></semantics></math>
+(Current is constant across elements).</li>
+<li><strong>Parallel Connection:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><msub><mover><mi>Z</mi><mo accent="true">̂</mo></mover><mi>p</mi></msub><mo>=</mo><mn>1</mn><mi>/</mi><msub><mover><mi>Z</mi><mo accent="true">̂</mo></mover><mn>1</mn></msub><mo>+</mo><mn>1</mn><mi>/</mi><msub><mover><mi>Z</mi><mo accent="true">̂</mo></mover><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">1/\hat{Z}_p = 1/\hat{Z}_1 + 1/\hat{Z}_2</annotation></semantics></math>
+(Voltage is constant across elements).</li>
+</ul>
+<hr />
+<h2 id="v-key-figures-and-visual-context">V. Key Figures and Visual
+Context</h2>
+<ul>
+<li><strong>Fig. 25-1:</strong> Illustrates superposition; a complex
+force
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>F</mi><mi>a</mi></msub><mo>+</mo><msub><mi>F</mi><mi>b</mi></msub></mrow><annotation encoding="application/x-tex">F_a+F_b</annotation></semantics></math>
+yields a combined response
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mi>a</mi></msub><mo>+</mo><msub><mi>x</mi><mi>b</mi></msub></mrow><annotation encoding="application/x-tex">x_a+x_b</annotation></semantics></math>.</li>
+<li><strong>Fig. 25-2:</strong> Demonstrates the vector sum of electric
+fields (<span class="math inline">$\FLPE_a + \FLPE_b = \FLPE$</span>)
+generated by separate charge distributions.</li>
+<li><strong>Fig. 25-3:</strong> Shows a sharply tuned resonance curve
+where the response at
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ω</mi><mi>a</mi></msub><annotation encoding="application/x-tex">\omega_a</annotation></semantics></math>
+is vastly larger than at
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ω</mi><mi>b</mi></msub><annotation encoding="application/x-tex">\omega_b</annotation></semantics></math>,
+explaining radio selectivity.</li>
+<li><strong>Fig. 25-4:</strong> Visualizes a continuous force as a
+series of closely spaced impulses, the basis for the Green's function
+method.</li>
+<li><strong>Fig. 25-5:</strong> Displays resonance curves; the peak is
+infinite without friction and progressively "rounded off" as friction
+increases.</li>
+<li><strong>Fig. 25-6:</strong> Diagrams of impedances connected in
+series (a) and parallel (b).</li>
+</ul>
+<hr />
+<h2 id="vi-important-quotes-with-context">VI. Important Quotes with
+Context</h2>
+<blockquote>
+<p><strong>"Mathematical analysis is not the grand thing it is said to
+be; it solves only the simplest possible equations."</strong></p>
+</blockquote>
+<ul>
+<li><strong>Context:</strong> Discussing why linear equations are
+emphasized. Most real-world (non-linear) equations must be solved
+numerically; analytic solutions are rare.</li>
+</ul>
+<blockquote>
+<p><strong>"The fundamental laws of physics are often linear... That is
+why we spend so much time on linear equations: because if we understand
+linear equations, we are ready, in principle, to understand a lot of
+things."</strong></p>
+</blockquote>
+<ul>
+<li><strong>Context:</strong> Justifying the focus on linearity as a
+gateway to understanding Maxwell's equations and quantum mechanics.</li>
+</ul>
+<blockquote>
+<p><strong>"A Green’s function is a response to an impulse, and the
+method of analyzing any force by putting together the response of
+impulses is called the Green’s function method."</strong></p>
+</blockquote>
+<ul>
+<li><strong>Context:</strong> Defining one of the two primary
+mathematical strategies for solving complex linear problems.</li>
+</ul>
+<hr />
+<h2 id="vii-actionable-insights">VII. Actionable Insights</h2>
+<ol type="1">
+<li><strong>Decompose Complex Problems:</strong> When faced with a
+complex driving force in a linear system, break the force into simpler
+components (sine waves or impulses), solve for those, and sum the
+results.</li>
+<li><strong>Leverage Resonance for Selection:</strong> To isolate a
+specific signal among many (as in radio), design a circuit with a high
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Q</mi><annotation encoding="application/x-tex">Q</annotation></semantics></math>
+factor to ensure a sharp, high-amplitude response only at the desired
+frequency.</li>
+<li><strong>Utilize Numerical Methods for Non-Linearity:</strong> If
+friction is not proportional to velocity (e.g., dry sliding friction),
+abandon simple analytic formulas and use numerical integration to find
+the system's behavior.</li>
+<li><strong>Use Electrical Simulations:</strong> For complicated
+mechanical design (e.g., vibration analysis), build an equivalent L-R-C
+circuit. It is faster, cheaper, and easier to modify than a mechanical
+model.</li>
+</ol>
+    </article>
+  </main>
+</body>
+</html>

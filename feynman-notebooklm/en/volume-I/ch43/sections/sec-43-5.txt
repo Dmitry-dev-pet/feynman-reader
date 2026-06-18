@@ -1,0 +1,157 @@
+SOURCE: Feynman Lectures on Physics, Volume I, Chapter 43
+LANGUAGE: en
+SECTION: 43–5 Molecular diffusion
+SOURCE_URL: https://www.feynmanlectures.caltech.edu/I_43.html
+
+# 43–5 Molecular diffusion
+
+We turn now to a different kind of problem, and a different kind of analysis: the theory of diffusion. Suppose that we have a container of gas in thermal equilibrium, and that we introduce a small amount of a different kind of gas at some place in the container. We shall call the original gas the “background” gas and the new one the “special” gas. The special gas will start to spread out through the whole container, but it will spread slowly because of the presence of the background gas. This slow spreading-out process is calleddiffusion. The diffusion is controlled mainly by the molecules of the special gas getting knocked about by the molecules of the background gas. After a large number of collisions, the special molecules end up spread out more or less evenly throughout the whole volume. We must be carefulnotto confuse diffusion of a gas with the gross transport that may occur due to convection currents. Most commonly, the mixing of two gases occurs by a combination of convection and diffusion. We are interested now only in the case that there areno “wind” currents. The gas is spreading only by molecular motions, by diffusion. We wish to compute how fast diffusion takes place.
+We now compute thenet flowof molecules of the “special” gas due to the molecular motions. There will be a net flow only when there is some nonuniform distribution of the molecules, otherwise all of the molecular motions would average to give no net flow. Let us consider first the flow in the \(x\) -direction. To find the flow, we consider an imaginary plane surface perpendicular to the \(x\) -axis and count the number of special molecules that cross this plane. To obtain the net flow, we must count as positive those molecules which cross in the direction of positive \(x\) andsubtractfrom this number the number which cross in the negative \(x\) -direction. As we have seen many times, the number which cross a surface area in a time \(\Delta T\) is given by the number which start the interval \(\Delta T\) in a volume which extends the distance \(v\,\Delta T\) from the plane. (Note that \(v\) , here, is the actual molecular velocity, not the drift velocity.)
+We shall simplify our algebra by giving our surface one unit of area. Then the number of special molecules which pass from left to right (taking the \(+x\) -direction to the right) is \(n_-v\,\Delta T\) , where \(n_-\) is the number of special molecules per unit volume to the left (within a factor of \(2\) or so, but we are ignoring such factors!). The number which cross from right to left is, similarly, \(n_+v\,\Delta T\) , where \(n_+\) is the number density of special molecules on the right-hand side of the plane. If we call the molecular current \(J\) , by which we mean the net flow of molecules per unit area per unit time, we have
+\[
+\begin{equation}
+\label{Eq:I:43:21}
+J = \frac{n_-v\,\Delta T - n_+v\,\Delta T}{\Delta T},
+\end{equation}
+\]
+or
+\[
+\begin{equation}
+\label{Eq:I:43:22}
+J = (n_- - n_+)v.
+\end{equation}
+\]
+What shall we use for \(n_-\) and \(n_+\) ? When we say “the density on the left,” howfarto the left do we mean? We should choose the density at the place from which the molecules started their “flight,” because the number whichstartsuch trips is determined by the number present at that place. So by \(n_-\) we should mean the density a distance to the left equal to the mean free path \(l\) , and by \(n_+\) , the density at the distance \(l\) to the right of our imaginary surface.
+It is convenient to consider that the distribution of our special molecules in space is described by a continuous function of \(x\) , \(y\) , and \(z\) which we shall call \(n_a\) . By \(n_a(x,y,z)\) we mean the number density of special molecules in a small volume element centered on \((x,y,z)\) . In terms of \(n_a\) we can express the difference \((n_+ -
+n_-)\) as
+\[
+\begin{equation}
+\label{Eq:I:43:23}
+(n_+ - n_-) = \ddt{n_a}{x}\,\Delta x = \ddt{n_a}{x}\cdot 2l.
+\end{equation}
+\]
+Substituting this result in Eq. (43.22) and neglecting the factor of \(2\) , we get
+\[
+\begin{equation}
+\label{Eq:I:43:24}
+J_x = -lv\,\ddt{n_a}{x}.
+\end{equation}
+\]
+We have found that the flow of special molecules is proportional to the derivative of the density, or to what is sometimes called the “gradient” of the density.
+It is clear that we have made several rough approximations. Besides various factors of two we have left out, we have used \(v\) where we should have used \(v_x\) , and we have assumed that \(n_+\) and \(n_-\) refer to places at the perpendicular distance \(l\) from our surface, whereas for those molecules which do not travel perpendicular to the surface element, \(l\) should correspond to theslantdistance from the surface. All of these refinements can be made; the result of a more careful analysis shows that the right-hand side of Eq. (43.24) should be multiplied by \(1/3\) . So a better answer is
+\[
+\begin{equation}
+\label{Eq:I:43:25}
+J_x = -\frac{lv}{3}\,\ddt{n_a}{x}.
+\end{equation}
+\]
+Similar equations can be written for the currents in the \(y\) - and \(z\) -directions.
+The current \(J_x\) and the density gradient \(dn_a/dx\) can be measured by macroscopic observations. Their experimentally determined ratio is called the “diffusion coefficient,” \(D\) . That is,
+\[
+\begin{equation}
+\label{Eq:I:43:26}
+J_x = -D\,\ddt{n_a}{x}.
+\end{equation}
+\]
+We have been able to show that for a gas we expect
+\[
+\begin{equation}
+\label{Eq:I:43:27}
+D = \tfrac{1}{3}lv.
+\end{equation}
+\]
+So far in this chapter we have considered two distinct processes:mobility, the drift of molecules due to “outside” forces; anddiffusion, the spreading determined only by the internal forces, the random collisions. There is, however, a relation between them, since they both depend basically on the thermal motions, and the mean free path \(l\) appears in both calculations.
+If, in Eq. (43.25), we substitute \(l = v\tau\) and \(\tau =
+\mu m\) , we have
+\[
+\begin{equation}
+\label{Eq:I:43:28}
+J_x = -\tfrac{1}{3}mv^2\mu\,\ddt{n_a}{x}.
+\end{equation}
+\]
+But \(mv^2\) depends only on the temperature. We recall that
+\[
+\begin{equation}
+\label{Eq:I:43:29}
+\tfrac{1}{2}mv^2 = \tfrac{3}{2}kT,
+\end{equation}
+\]
+so
+\[
+\begin{equation}
+\label{Eq:I:43:30}
+J_x = -\mu kT\,\ddt{n_a}{x}.
+\end{equation}
+\]
+We find that \(D\) , thediffusioncoefficient, is just \(kT\) times \(\mu\) , themobilitycoefficient:
+\[
+\begin{equation}
+\label{Eq:I:43:31}
+D = \mu kT.
+\end{equation}
+\]
+And it turns out that the numerical coefficient in (43.31) is exactly right—no extra factors have to be thrown in to adjust for our rough assumptions. We can show, in fact, that (43.31) mustalwaysbe correct—even in complicated situations (for example, the case of a suspension in a liquid) where the details of our simple calculations would not apply at all.
+To show that (43.31) must be correct in general, we shall derive it in a different way, using only our basic principles of statistical mechanics. Imagine a situation in which there is a gradient of “special” molecules, and we have a diffusion current proportional to the density gradient, according to Eq. (43.26). We now apply a force field in the \(x\) -direction, so that each special molecule feels the force \(F\) . According to thedefinitionof the mobility \(\mu\) there will be a drift velocity given by
+\[
+\begin{equation}
+\label{Eq:I:43:32}
+v_{\text{drift}} = \mu F.
+\end{equation}
+\]
+By our usual arguments, thedrift current(thenetnumber of molecules which pass a unit of area in a unit of time) will be
+\[
+\begin{equation}
+\label{Eq:I:43:33}
+J_{\text{drift}} = n_av_{\text{drift}},
+\end{equation}
+\]
+or
+\[
+\begin{equation}
+\label{Eq:I:43:34}
+J_{\text{drift}} = n_a\mu F.
+\end{equation}
+\]
+We nowadjustthe force \(F\) so that the drift current due to \(F\) justbalancesthe diffusion, so that there isno net flowof our special molecules. We have \(J_x + J_{\text{drift}} = 0\) , or
+\[
+\begin{equation}
+\label{Eq:I:43:35}
+D\,\ddt{n_a}{x} = n_a\mu F.
+\end{equation}
+\]
+Under the “balance” conditions we find a steady (with time) gradient of density given by
+\[
+\begin{equation}
+\label{Eq:I:43:36}
+\ddt{n_a}{x} = \frac{n_a\mu F}{D}.
+\end{equation}
+\]
+But notice! We are describing anequilibriumcondition, so ourequilibriumlaws of statistical mechanics apply. According to these laws the probability of finding a molecule at the coordinate \(x\) is proportional to \(e^{-U/kT}\) , where \(U\) is the potential energy. In terms of the number density \(n_a\) , this means that
+\[
+\begin{equation}
+\label{Eq:I:43:37}
+n_a = n_0e^{-U/kT}.
+\end{equation}
+\]
+If we differentiate (43.37) with respect to \(x\) , we find
+\[
+\begin{equation}
+\label{Eq:I:43:38}
+\ddt{n_a}{x} = -n_0e^{-U/kT}\cdot\frac{1}{kT}\,\ddt{U}{x},
+\end{equation}
+\]
+or
+\[
+\begin{equation}
+\label{Eq:I:43:39}
+\ddt{n_a}{x} = -\frac{n_a}{kT}\,\ddt{U}{x}.
+\end{equation}
+\]
+In our situation, since the force \(F\) is in the \(x\) -direction, the potential energy \(U\) is just \(-Fx\) , and \(-dU/dx = F\) . Equation (43.39) then gives
+\[
+\begin{equation}
+\label{Eq:I:43:40}
+\ddt{n_a}{x} = \frac{n_aF}{kT}.
+\end{equation}
+\]
+[This is just exactly Eq. (40.2), from which we deduced \(e^{-U/kT}\) in the first place, so we have come in a circle]. Comparing (43.40) with (43.36), we get exactly Eq. (43.31). We have shown that Eq. (43.31), which gives the diffusion current in terms of the mobility, has the correct coefficient and is very generally true. Mobility and diffusion are intimately connected. This relation was first deduced by Einstein.

@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chapter 47: Sound and the Wave Equation – Analytical Briefing - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="en">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch47.html#study-panel">Back to chapter</a>
+      <a class="nav-btn" href="../../index.html">Volume contents</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1
+id="chapter-47-sound-and-the-wave-equation--analytical-briefing">Chapter
+47: Sound and the Wave Equation – Analytical Briefing</h1>
+<p>This briefing document provides a comprehensive analysis of the
+mechanical and mathematical foundations of sound waves as detailed in
+the source context. It explores the derivation of the wave equation, the
+physical properties of sound propagation, and the specific mechanics
+governing the speed of sound in gases.</p>
+<h2 id="executive-summary">Executive Summary</h2>
+<p>The analysis of sound serves as a bridge between classical mechanics
+and the broader study of wave phenomena in physics. Sound is presented
+not as a separate set of laws, but as a direct consequence of Newton’s
+laws of motion applied to the properties of matter. The fundamental
+physics of sound involves the interplay between gas motion, density
+changes, and pressure inequalities. Through a rigorous derivation, these
+relationships culminate in the linear wave equation, which describes how
+disturbances propagate through a medium. Key findings include the
+verification of the principle of superposition and the realization that
+the speed of sound in a gas is primarily dependent on temperature and
+the adiabatic nature of the compression-rarefaction cycle.</p>
+<hr />
+<h2 id="1-the-nature-and-universality-of-waves">1. The Nature and
+Universality of Waves</h2>
+<p>Waves are a phenomenon appearing in diverse contexts throughout
+physics, including light (electromagnetism), water (surface tension and
+swells), solids (elastic waves), and quantum mechanics (probability
+amplitudes).</p>
+<h3 id="key-wave-phenomena">Key Wave Phenomena</h3>
+<ul>
+<li><strong>Interference in Time (Beats):</strong> When two sound
+sources of slightly different frequencies are heard simultaneously,
+their waves alternate between being in phase (crests together) and out
+of phase (crest and trough together). This results in the rising and
+falling of sound intensity known as beats.</li>
+<li><strong>Wave Propagation:</strong> In a vacuum or air, the velocity
+of waves is often independent of the wavelength. This allows complex
+signals to be transmitted with high fidelity, as different frequencies
+travel at the same speed.</li>
+<li><strong>Superposition:</strong> Multiple waves can exist in the same
+space simultaneously, with the resulting field being the simple sum of
+the individual wave components.</li>
+</ul>
+<h3 id="mathematical-representation">Mathematical Representation</h3>
+<p>A one-dimensional wave propagating in the positive
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>-direction
+with velocity
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>c</mi><annotation encoding="application/x-tex">c</annotation></semantics></math>
+is represented by a function of the form:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><mi>c</mi><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">f(x - ct)</annotation></semantics></math>
+Conversely, a wave propagating in the negative
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>-direction
+is represented by:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>+</mo><mi>c</mi><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">g(x + ct)</annotation></semantics></math></p>
+<hr />
+<h2 id="2-derivation-of-the-wave-equation">2. Derivation of the Wave
+Equation</h2>
+<p>The derivation of the sound wave equation is an exercise in
+mathematical physics, explaining new phenomena (sound) in terms of
+established laws (Newton’s mechanics). It relies on three interconnected
+physical features.</p>
+<h3 id="i-the-relation-between-displacement-and-density">I. The Relation
+Between Displacement and Density</h3>
+<p>When a gas is disturbed, its molecules are displaced from their
+equilibrium positions. If
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>χ</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\chi(x, t)</annotation></semantics></math>
+represents the displacement of a portion of air at position
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>
+and time
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math>,
+the resulting change in density is determined by the gradient of that
+displacement.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Variable</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ρ</mi><mn>0</mn></msub><annotation encoding="application/x-tex">\rho_0</annotation></semantics></math></td>
+<td style="text-align: left;">Equilibrium (undisturbed) air density</td>
+</tr>
+<tr>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ρ</mi><mi>e</mi></msub><annotation encoding="application/x-tex">\rho_e</annotation></semantics></math></td>
+<td style="text-align: left;">Excess density (change from
+equilibrium)</td>
+</tr>
+<tr>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∂</mi><mi>χ</mi><mi>/</mi><mi>∂</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">\partial\chi/\partial x</annotation></semantics></math></td>
+<td style="text-align: left;">Partial derivative of displacement with
+respect to distance</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Relation (I):</strong>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ρ</mi><mi>e</mi></msub><mo>=</mo><mi>−</mi><msub><mi>ρ</mi><mn>0</mn></msub><mfrac><mrow><mi>∂</mi><mi>χ</mi></mrow><mrow><mi>∂</mi><mi>x</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\rho_e = -\rho_0 \frac{\partial\chi}{\partial x}</annotation></semantics></math>
+<em>Physical Meaning:</em> If the displacement increases with distance
+(stretching the air), the density decreases.</p>
+<h3 id="ii-the-relation-between-density-and-pressure">II. The Relation
+Between Density and Pressure</h3>
+<p>Pressure
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math>)
+is a function of density
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ρ</mi><annotation encoding="application/x-tex">\rho</annotation></semantics></math>).
+For the small changes characteristic of sound, the excess pressure
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>P</mi><mi>e</mi></msub><annotation encoding="application/x-tex">P_e</annotation></semantics></math>)
+is proportional to the excess density
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ρ</mi><mi>e</mi></msub><annotation encoding="application/x-tex">\rho_e</annotation></semantics></math>).</p>
+<p><strong>Relation (II):</strong>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>P</mi><mi>e</mi></msub><mo>=</mo><mi>κ</mi><msub><mi>ρ</mi><mi>e</mi></msub><mo>,</mo><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> where </mtext><mspace width="0.333em"></mspace></mrow><mi>κ</mi><mo>=</mo><msub><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mi>d</mi><mi>P</mi></mrow><mrow><mi>d</mi><mi>ρ</mi></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">P_e = \kappa \rho_e, \text{ where } \kappa = \left(\frac{dP}{d\rho}\right)_0</annotation></semantics></math>
+<em>Acoustic Pressure Measurement:</em> Sound intensity is measured on a
+logarithmic decibel (dB) scale. A pressure amplitude of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mo>×</mo><msup><mn>10</mn><mrow><mi>−</mi><mn>7</mn></mrow></msup></mrow><annotation encoding="application/x-tex">2 \times 10^{-7}</annotation></semantics></math>
+bar corresponds to a moderately intense sound of 60 dB.</p>
+<h3 id="iii-the-equation-of-motion">III. The Equation of Motion</h3>
+<p>Using Newton’s second law
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>=</mo><mi>m</mi><mi>a</mi></mrow><annotation encoding="application/x-tex">F = ma</annotation></semantics></math>),
+the motion of a thin slab of air is determined by the pressure gradient
+across it.</p>
+<p><strong>Relation (III):</strong>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ρ</mi><mn>0</mn></msub><mfrac><mrow><msup><mi>∂</mi><mn>2</mn></msup><mi>χ</mi></mrow><mrow><mi>∂</mi><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac><mo>=</mo><mi>−</mi><mfrac><mrow><mi>∂</mi><msub><mi>P</mi><mi>e</mi></msub></mrow><mrow><mi>∂</mi><mi>x</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\rho_0 \frac{\partial^2\chi}{\partial t^2} = -\frac{\partial P_e}{\partial x}</annotation></semantics></math></p>
+<h3 id="the-combined-wave-equation">The Combined Wave Equation</h3>
+<p>By substituting Relations I and II into Relation III, the variables
+are reduced to displacement
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>χ</mi><annotation encoding="application/x-tex">\chi</annotation></semantics></math>),
+yielding the linear wave equation:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><msup><mi>∂</mi><mn>2</mn></msup><mi>χ</mi></mrow><mrow><mi>∂</mi><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac><mo>=</mo><mfrac><mn>1</mn><msubsup><mi>c</mi><mi>s</mi><mn>2</mn></msubsup></mfrac><mfrac><mrow><msup><mi>∂</mi><mn>2</mn></msup><mi>χ</mi></mrow><mrow><mi>∂</mi><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{\partial^2\chi}{\partial x^2} = \frac{1}{c_s^2} \frac{\partial^2\chi}{\partial t^2}</annotation></semantics></math>
+where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>c</mi><mi>s</mi><mn>2</mn></msubsup><mo>=</mo><mi>κ</mi></mrow><annotation encoding="application/x-tex">c_s^2 = \kappa</annotation></semantics></math>
+represents the square of the speed of sound.</p>
+<hr />
+<h2 id="3-the-speed-of-sound-c_s">3. The Speed of Sound
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>c</mi><mi>s</mi></msub><annotation encoding="application/x-tex">c_s</annotation></semantics></math>)</h2>
+<p>The speed of sound is a property of the medium. Historically, the
+calculation of this speed required a correction regarding the thermal
+properties of the wave.</p>
+<h3 id="newton-vs-laplace">Newton vs. Laplace</h3>
+<ul>
+<li><strong>Newton's Isothermal Assumption:</strong> Newton originally
+calculated the speed of sound assuming temperature remained constant
+(isothermal). This resulted in an incorrect value.</li>
+<li><strong>Laplace's Adiabatic Correction:</strong> Laplace correctly
+identified that sound waves move too rapidly for significant heat flow
+to occur between compressed (hotter) and rarefied (colder) regions.
+Therefore, the process is <strong>adiabatic</strong>.</li>
+</ul>
+<h3 id="thermodynamic-formulation">Thermodynamic Formulation</h3>
+<p>For a gas where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><msup><mi>V</mi><mi>γ</mi></msup><mo>=</mo><mtext mathvariant="normal">const</mtext></mrow><annotation encoding="application/x-tex">PV^\gamma = \text{const}</annotation></semantics></math>,
+the speed of sound is determined by:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>c</mi><mi>s</mi><mn>2</mn></msubsup><mo>=</mo><mfrac><mrow><mi>γ</mi><mi>P</mi></mrow><mi>ρ</mi></mfrac></mrow><annotation encoding="application/x-tex">c_s^2 = \frac{\gamma P}{\rho}</annotation></semantics></math>
+Using the ideal gas law
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>V</mi><mo>=</mo><mi>N</mi><mi>k</mi><mi>T</mi></mrow><annotation encoding="application/x-tex">PV = NkT</annotation></semantics></math>),
+this can be rewritten to show that the speed depends only on temperature
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>T</mi><annotation encoding="application/x-tex">T</annotation></semantics></math>)
+and molecular mass
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math>
+or
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>μ</mi><annotation encoding="application/x-tex">\mu</annotation></semantics></math>):
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>c</mi><mi>s</mi><mn>2</mn></msubsup><mo>=</mo><mfrac><mrow><mi>γ</mi><mi>k</mi><mi>T</mi></mrow><mi>m</mi></mfrac><mo>=</mo><mfrac><mrow><mi>γ</mi><mi>R</mi><mi>T</mi></mrow><mi>μ</mi></mfrac></mrow><annotation encoding="application/x-tex">c_s^2 = \frac{\gamma kT}{m} = \frac{\gamma RT}{\mu}</annotation></semantics></math></p>
+<h3 id="relation-to-molecular-speed">Relation to Molecular Speed</h3>
+<p>The speed of sound is of the same order of magnitude as the average
+speed of the molecules
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>v</mi><mtext mathvariant="normal">av</mtext></msub><annotation encoding="application/x-tex">v_{\text{av}}</annotation></semantics></math>)
+in the gas:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>c</mi><mi>s</mi></msub><mo>=</mo><msqrt><mfrac><mi>γ</mi><mn>3</mn></mfrac></msqrt><msub><mi>v</mi><mtext mathvariant="normal">av</mtext></msub></mrow><annotation encoding="application/x-tex">c_s = \sqrt{\frac{\gamma}{3}} v_{\text{av}}</annotation></semantics></math>
+This confirms the physical intuition that a pressure disturbance is
+propagated via the motion and collisions of individual molecules.</p>
+<hr />
+<h2 id="4-key-quotes-with-context">4. Key Quotes with Context</h2>
+<blockquote>
+<p><strong>"This problem of explaining new phenomena in terms of old
+ones, when we know the laws of the old ones, is perhaps the greatest art
+of mathematical physics."</strong></p>
+</blockquote>
+<ul>
+<li><strong>Context:</strong> Discussing the importance of the
+derivation itself rather than just the final formula, emphasizing how
+Newton's laws are used to derive the properties of sound.</li>
+</ul>
+<blockquote>
+<p><strong>"Sound is a branch of mechanics, and so it is to be
+understood in terms of Newton’s laws."</strong></p>
+</blockquote>
+<ul>
+<li><strong>Context:</strong> Establishing that sound is not an
+independent phenomenon but a mechanical consequence of gas properties
+and motion.</li>
+</ul>
+<blockquote>
+<p><strong>"If we had high frequencies travelling faster than low
+frequencies, a short, sharp noise would be heard as a succession of
+musical sounds."</strong></p>
+</blockquote>
+<ul>
+<li><strong>Context:</strong> Explaining why the velocity of sound in
+air must be independent of frequency/wavelength for us to hear sounds
+with fidelity.</li>
+</ul>
+<blockquote>
+<p><strong>"The speed of sound is some number which is roughly
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><msqrt><mn>3</mn></msqrt></mrow><annotation encoding="application/x-tex">1/\sqrt{3}</annotation></semantics></math>
+times some average speed... it is reasonable and satisfying that the
+speed of sound is roughly
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">1/2</annotation></semantics></math>
+of the average molecular speed."</strong></p>
+</blockquote>
+<ul>
+<li><strong>Context:</strong> Connecting the macroscopic phenomenon of
+sound to the microscopic kinetic theory of gases.</li>
+</ul>
+<hr />
+<h2 id="5-actionable-insights-and-physical-meaning">5. Actionable
+Insights and Physical Meaning</h2>
+<ul>
+<li><strong>Linearity and Fidelity:</strong> Because the wave equation
+is linear, the principle of superposition holds. This allows human ears
+to distinguish multiple sounds (like different instruments in an
+orchestra) simultaneously without them distorting each other.</li>
+<li><strong>Scale Requirements:</strong> For a sound wave to propagate
+effectively, the distance between pressure crests and troughs
+(wavelength) must be much larger than the <strong>mean free
+path</strong> of the molecules. If the wavelength were too short,
+molecules would simply diffuse between regions and smear out the
+wave.</li>
+<li><strong>Temperature Sensitivity:</strong> Since the speed of sound
+depends on the square root of the absolute temperature
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>c</mi><mi>s</mi></msub><mo>∝</mo><msqrt><mi>T</mi></msqrt></mrow><annotation encoding="application/x-tex">c_s \propto \sqrt{T}</annotation></semantics></math>),
+sound travels faster in warmer air. It does not depend on the air's
+pressure or density independently, as their ratio remains constant at a
+given temperature.</li>
+<li><strong>Limits of the Model:</strong> The derivation assumes
+"extremely small" pressure changes
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>P</mi><mi>e</mi></msub><mo>≪</mo><msub><mi>P</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">P_e \ll P_0</annotation></semantics></math>).
+In scenarios involving large pressure changes, such as explosions, the
+linear approximation fails, leading to new, non-linear effects.</li>
+</ul>
+    </article>
+  </main>
+</body>
+</html>

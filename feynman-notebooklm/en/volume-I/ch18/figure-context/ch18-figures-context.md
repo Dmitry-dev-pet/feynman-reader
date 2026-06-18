@@ -1,0 +1,75 @@
+# Figure context for Chapter 18. Rotation in Two Dimensions
+
+SOURCE: Feynman Lectures on Physics, Volume I, Chapter 18
+LANGUAGE: en
+SOURCE_URL: https://www.feynmanlectures.caltech.edu/I_18.html
+
+NotebookLM use: pair this file with the clean chapter text and the PNG image files below. The visual descriptions here are inferred from the surrounding lecture text; the PNG files are included so NotebookLM can inspect the diagrams directly when image sources are uploaded.
+
+## Ch18-F1: Fig. 18–1.Kinematics of two-dimensional rotation.
+
+Section: 18–2 Rotation of a rigid body
+Image file: images/Ch18-F1.png
+
+Context before the figure:
+
+First, let us study the kinematics of rotations. The angle will change with time, and just as we talked about position and velocity in one dimension, we may talk about angular position and angular velocity in plane rotation. In fact, there is a very interesting relationship between rotation in two dimensions and one-dimensional displacement, in which almost every quantity has its analog. First, we have the angle \(\theta\) which defines how far the body has gonearound; this replaces the distance \(s\) , which defines how far it has gonealong. In the same manner, we have a velocity of turning, \(\omega= d\theta/dt\) , which tells us how much the angle changes in a second, just as \(v = ds/dt\) describes how fast a thing moves, or how far it moves in a second. If the angle is measured in radians, then the angular velocity \(\omega\) will be so and so many radians per second. The greater...
+
+Context after the figure:
+
+Now of course we shall have to relate the dynamics of rotation to the laws of dynamics of the particles of which the object is made, so we must find out how a particular particle moves when the angular velocity is such and such. To do this, let us take a certain particle which is located at a distance \(r\) from the axis and say it is in a certain location \(P(x, y)\) at a given instant, in the usual manner (Fig.18–1). If at a moment \(\Delta t\) later the angle of the whole object has turned through \(\Delta\theta\) , then this particle is carried with it. It is at the same radius away from \(O\) as it was before, but is carried to \(Q\) . The first thing we would like to know is how much the distance \(x\) changes and how much the distance \(y\) changes. If \(OP\) is called \(r\) , then the length \(PQ\) is \(r\,\Delta\theta\) , because of the way angles are defined. The change in...
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.
+
+## Ch18-F2: Fig. 18–2.The torque produced by a force.
+
+Section: 18–2 Rotation of a rigid body
+Image file: images/Ch18-F2.png
+
+Context before the figure:
+
+Now we pause briefly to note that our foregoing introduction of torque, through the idea of work, gives us a most important result for an object in equilibrium: if all the forces on an object are in balance both for translation and rotation, not only is the netforcezero, but the total of all thetorquesis also zero, because if an object is in equilibrium,no work is done by the forces for a small displacement. Therefore, since \(\Delta W = \tau\,\Delta\theta=0\) , the sum of all the torques must be zero. So there are two conditions for equilibrium: that the sum of the forces is zero, and that the sum of the torques is zero. Prove that it suffices to be sure that the sum of torques about anyoneaxis (in two dimensions) is zero.
+
+Context after the figure:
+
+Now let us consider a single force, and try to figure out, geometrically, what this strange thing \(xF_y - yF_x\) amounts to. In Fig.18–2we see a force \(\FLPF\) acting at a point \(\FLPr\) . When the object has rotated through a small angle \(\Delta\theta\) , the work done, of course, is the component of force in the direction of the displacement times the displacement. In other words, it is only the tangential component of the force that counts, and this must be multiplied by the distance \(r\,\Delta\theta\) . Therefore we see that the torque is also equal to the tangential component of force (perpendicular to the radius) times the radius. That makes sense in terms of our ordinary idea of the torque, because if the force were completely radial, it would not put any “twist” on the body; it is evident that the twisting effect should involve only the part of the force which is not...
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.
+
+## Ch18-F3: Fig. 18–3.A particle moves about an axis \(O\) .
+
+Section: 18–3 Angular momentum
+Image file: images/Ch18-F3.png
+
+Context before the figure:
+
+Although we have so far considered only the special case of a rigid body, the properties of torques and their mathematical relationships are interesting also even when an object is not rigid. In fact, we can prove a very remarkable theorem: just as external force is the rate of change of a quantity \(p\) , which we call the total momentum of a collection of particles, so the external torque is the rate of change of a quantity \(L\) which we call theangular momentumof the group of particles.
+
+Context after the figure:
+
+To prove this, we shall suppose that there is a system of particles on which there are some forces acting and find out what happens to the system as a result of the torques due to these forces. First, of course, we should consider justoneparticle. In Fig.18–3is one particle of mass \(m\) , and an axis \(O\) ; the particle is not necessarily rotating in a circle about \(O\) , it may be moving in an ellipse, like a planet going around the sun, or in some other curve. It is moving somehow, and there are forces on it, and it accelerates according to the usual formula that the \(x\) -component of force is the mass times the \(x\) -component of acceleration, etc. But let us see what thetorquedoes. The torque equals \(xF_y - yF_x\) , and the force in the \(x\) - or \(y\) -direction is the mass times the acceleration in the \(x\) - or \(y\) -direction: \[ \begin{align}...
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.
+
+## Ch18-F4: Fig. 18–4.The “inertia for turning” depends upon the lever arm of the masses.
+
+Section: 18–4 Conservation of angular momentum
+Image file: images/Ch18-F4.png
+
+Context before the figure:
+
+This is the analog of the law that the momentum is mass times velocity. Velocity is replaced by angular velocity, and we see that the mass is replaced by a new thing which we call themoment of inertia \(I\) , which is analogous to the mass. Equations (18.21) and (18.22) say that a body has inertia for turning which depends, not just on the masses, but onhow far away they arefrom the axis. So, if we have two objects of the same mass, when we put the masses farther away from the axis, the inertia for turning will be higher. This is easily demonstrated by the apparatus shown in Fig.18–4, where a weight \(M\) is kept from falling very fast because it has to turn the large weighted rod. At first, the masses \(m\) are close to the axis, and \(M\) speeds up at a certain rate. But when we change the moment of inertia by putting the two masses \(m\) much farther away from the axis, then we see...
+
+Context after the figure:
+
+There is one important difference between mass and moment of inertia which is very dramatic. The mass of an object never changes, but its moment of inertiacanbe changed. If we stand on a frictionless rotatable stand with our arms outstretched, and hold some weights in our hands as we rotate slowly, we may change our moment of inertia by drawing our arms in, but our mass does not change. When we do this, all kinds of wonderful things happen, because of the law of the conservation of angular momentum: If the external torque is zero, then the angular momentum, the moment of inertia times omega, remains constant. Initially, we were rotating with a large moment of inertia \(I_1\) at a low angular velocity \(\omega_1\) , and the angular momentum was \(I_1\omega_1\) . Then we changed our moment of inertia by pulling our arms in, say to a smaller value \(I_2\) . Then the product \(I\omega\) ...
+
+NotebookLM reading hint:
+
+Use the image together with the nearby text above. Prefer the lecture context over generic image interpretation.

@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Глава 6. Вероятность: Учебное пособие - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch06.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1 id="глава-6-вероятность-учебное-пособие">Глава 6. Вероятность:
+Учебное пособие</h1>
+<p>Данное учебное пособие составлено на основе материалов лекции Ричарда
+Фейнмана и посвящено фундаментальным аспектам теории вероятностей, их
+математическому описанию и применению в физике — от бросания монеты до
+квантовой механики.</p>
+<hr />
+<h2 id="1-основные-концепции-и-темы">1. Основные концепции и темы</h2>
+<h3 id="природа-вероятности-и-случая">Природа вероятности и случая</h3>
+<ul>
+<li><strong>Определение случая:</strong> Под «случаем» понимается своего
+рода догадка, которую мы строим при наличии неполной информации или
+недостоверных знаний. Теория вероятностей — это система для построения
+наилучших (наиболее правдоподобных) догадок.</li>
+<li><strong>Математическое определение:</strong> Вероятность конкретного
+исхода
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">P(A)</annotation></semantics></math>
+определяется как отношение наиболее правдоподобного числа ожидаемых
+событий
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>N</mi><mi>A</mi></msub><annotation encoding="application/x-tex">N_A</annotation></semantics></math>
+к общему числу воображаемых наблюдений
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>N</mi><annotation encoding="application/x-tex">N</annotation></semantics></math>:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><msub><mi>N</mi><mi>A</mi></msub><mi>N</mi></mfrac></mrow><annotation encoding="application/x-tex">P(A) = \frac{N_A}{N}</annotation></semantics></math></li>
+<li><strong>Субъективность:</strong> Вероятность не является
+«абсолютным» числом; она зависит от уровня знаний (или невежества)
+наблюдателя и может меняться по мере получения новой информации.</li>
+</ul>
+<h3 id="флуктуации-и-биномиальное-распределение">Флуктуации и
+биномиальное распределение</h3>
+<ul>
+<li><strong>Флуктуации:</strong> Это отклонения наблюдаемых результатов
+от ожидаемого среднего значения. Например, при 30 подбрасываниях монеты
+наиболее вероятным результатом является 15 «орлов», однако реальные
+эксперименты часто дают результаты от 12 до 18.</li>
+<li><strong>Треугольник Паскаля и биномиальные коэффициенты:</strong>
+Число способов получить
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math>
+«орлов» в
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+испытаниях соответствует биномиальному коэффициенту
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mi>n</mi><mi>k</mi></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\binom{n}{k}</annotation></semantics></math>,
+который вычисляется по формуле:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mi>n</mi><mi>k</mi></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mfrac><mrow><mi>n</mi><mi>!</mi></mrow><mrow><mi>k</mi><mi>!</mi><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo>−</mo><mi>k</mi><mo stretchy="false" form="postfix">)</mo><mi>!</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\binom{n}{k} = \frac{n!}{k!(n - k)!}</annotation></semantics></math></li>
+<li><strong>Формула вероятности
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math>
+успехов:</strong> Для
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+испытаний с вероятностью успеха
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math>
+и проигрыша
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>p</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">q = (1 - p)</annotation></semantics></math>:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>k</mi><mo>,</mo><mi>n</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mfrac linethickness="0"><mi>n</mi><mi>k</mi></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><msup><mi>p</mi><mi>k</mi></msup><msup><mi>q</mi><mrow><mi>n</mi><mo>−</mo><mi>k</mi></mrow></msup></mrow><annotation encoding="application/x-tex">P(k, n) = \binom{n}{k} p^k q^{n - k}</annotation></semantics></math></li>
+</ul>
+<h3 id="случайные-блуждания">Случайные блуждания</h3>
+<ul>
+<li><strong>Модель:</strong> Игрок делает шаги вперед или назад на
+основе случайного выбора (например, броска монеты).</li>
+<li><strong>Среднее квадратичное расстояние:</strong> Хотя среднее
+продвижение равно нулю, среднее значение квадрата пройденного расстояния
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>D</mi><mn>2</mn></msup><annotation encoding="application/x-tex">D^2</annotation></semantics></math>
+после
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>N</mi><annotation encoding="application/x-tex">N</annotation></semantics></math>
+шагов равно числу шагов:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⟨</mo><msubsup><mi>D</mi><mi>N</mi><mn>2</mn></msubsup><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><mi>N</mi></mrow><annotation encoding="application/x-tex">\langle D_N^2 \rangle = N</annotation></semantics></math></li>
+<li><strong>RMS-расстояние:</strong> Типичное удаление от начала пути
+(среднеквадратичное расстояние) растет пропорционально корню из числа
+шагов:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>D</mi><mrow><mi>r</mi><mi>m</mi><mi>s</mi></mrow></msub><mo>=</mo><msqrt><mi>N</mi></msqrt></mrow><annotation encoding="application/x-tex">D_{rms} = \sqrt{N}</annotation></semantics></math>.</li>
+</ul>
+<h3 id="плотность-вероятности-и-распределения">Плотность вероятности и
+распределения</h3>
+<ul>
+<li><strong>Плотность вероятности
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">p(x)</annotation></semantics></math>:</strong>
+Используется для непрерывных величин. Вероятность того, что значение
+окажется в малом интервале
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">\Delta x</annotation></semantics></math>,
+равна
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mi mathvariant="normal">Δ</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">p(x) \Delta x</annotation></semantics></math>.</li>
+<li><strong>Нормальное (Гауссово) распределение:</strong> При большом
+числе шагов случайного блуждания распределение вероятностей описывается
+функцией:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><mn>1</mn><mrow><mi>σ</mi><msqrt><mrow><mn>2</mn><mi>π</mi></mrow></msqrt></mrow></mfrac><msup><mi>e</mi><mrow><mi>−</mi><msup><mi>x</mi><mn>2</mn></msup><mi>/</mi><mn>2</mn><msup><mi>σ</mi><mn>2</mn></msup></mrow></msup></mrow><annotation encoding="application/x-tex">p(x) = \frac{1}{\sigma \sqrt{2\pi}} e^{-x^2 / 2\sigma^2}</annotation></semantics></math></li>
+<li><strong>Физические примеры:</strong> Диффузия газов и распределение
+молекул по скоростям (распределение Максвелла).</li>
+</ul>
+<h3 id="принцип-неопределенности-гейзенберга">Принцип неопределенности
+Гейзенберга</h3>
+<ul>
+<li>В квантовой механике вероятность становится фундаментальной
+необходимостью. Положение и скорость частицы нельзя определить
+одновременно с произвольной точностью.</li>
+<li><strong>Соотношение неопределенностей:</strong> Произведение
+типичной ширины распределения координаты
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><mi mathvariant="normal">Δ</mi><mi>x</mi><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">[\Delta x]</annotation></semantics></math>
+и скорости
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><mi mathvariant="normal">Δ</mi><mi>v</mi><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">[\Delta v]</annotation></semantics></math>
+ограничено:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><mi mathvariant="normal">Δ</mi><mi>x</mi><mo stretchy="false" form="postfix">]</mo><mo>⋅</mo><mo stretchy="false" form="prefix">[</mo><mi mathvariant="normal">Δ</mi><mi>v</mi><mo stretchy="false" form="postfix">]</mo><mo>≥</mo><mfrac><mi>ℏ</mi><mrow><mn>2</mn><mi>m</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">[\Delta x] \cdot [\Delta v] \geq \frac{\hbar}{2m}</annotation></semantics></math></li>
+</ul>
+<hr />
+<h2 id="2-краткие-вопросы-для-проверки">2. Краткие вопросы для
+проверки</h2>
+<ol type="1">
+<li><strong>Как меняется значение вероятности при получении новых
+данных?</strong>
+<ul>
+<li><em>Ответ:</em> Вероятность может измениться, так как она зависит от
+уровня информированности наблюдателя.</li>
+</ul></li>
+<li><strong>Чему равно ожидаемое число «орлов» при 3000 подбрасываний
+честной монеты?</strong>
+<ul>
+<li><em>Ответ:</em> 1500.</li>
+</ul></li>
+<li><strong>Какова типичная величина отклонения (ошибка)
+экспериментально определенной доли «орлов» от 0.5?</strong>
+<ul>
+<li><em>Ответ:</em> Величина порядка
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mn>2</mn><msqrt><mi>N</mi></msqrt></mrow><annotation encoding="application/x-tex">1 / 2\sqrt{N}</annotation></semantics></math>.</li>
+</ul></li>
+<li><strong>Как называется набор чисел, определяющий количество путей на
+диаграмме испытаний (Фиг. 6.3 и 6.4)?</strong>
+<ul>
+<li><em>Ответ:</em> Треугольник Паскаля.</li>
+</ul></li>
+<li><strong>Чему равно среднее квадратичное расстояние
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⟨</mo><msubsup><mi>D</mi><mi>N</mi><mn>2</mn></msubsup><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">\langle D_N^2 \rangle</annotation></semantics></math>,
+если длина шага
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>S</mi><annotation encoding="application/x-tex">S</annotation></semantics></math>
+варьируется так, что
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mrow><mi>r</mi><mi>m</mi><mi>s</mi></mrow></msub><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">S_{rms} = 1</annotation></semantics></math>?</strong>
+<ul>
+<li><em>Ответ:</em> Оно по-прежнему равно числу шагов
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>N</mi><annotation encoding="application/x-tex">N</annotation></semantics></math>.</li>
+</ul></li>
+<li><strong>В чем заключается физический смысл площади под кривой
+плотности вероятности?</strong>
+<ul>
+<li><em>Ответ:</em> Она представляет собой вероятность того, что
+измеряемая величина окажется в данном интервале. Полная площадь под всей
+кривой всегда равна 1.</li>
+</ul></li>
+<li><strong>Как Эйнштейн выражал свое отношение к вероятностному
+описанию природы в квантовой механике?</strong>
+<ul>
+<li><em>Ответ:</em> Он говорил: «Но ведь не гадает же господь бог "орел
+— решка", чтобы решить, куда должен двигаться электрон!».</li>
+</ul></li>
+</ol>
+<hr />
+<h2 id="3-темы-для-эссе-и-глубокого-размышления">3. Темы для эссе и
+глубокого размышления</h2>
+<ol type="1">
+<li><strong>Субъективный характер вероятности:</strong> Обоснуйте
+утверждение о том, что вероятность зависит от нашего «невежества».
+Приведите примеры того, как одна и та же ситуация оценивается разными
+людьми с разной степенью информированности.</li>
+<li><strong>От классических флуктуаций к квантовой
+неопределенности:</strong> Сравните использование вероятности как
+удобного инструмента в теории газов (где молекул слишком много для
+отслеживания) и как фундаментального закона в квантовой механике
+(принцип неопределенности).</li>
+<li><strong>Случайные блуждания в природе:</strong> Опишите, как модель
+случайных блужданий помогает объяснить физические процессы, такие как
+диффузия запахов в комнате или броуновское движение.</li>
+<li><strong>Статистическая честность:</strong> На основе данных Таблицы
+6.1 и Фиг. 6.6 обсудите, почему отклонение результата от ожидания
+(например, 16 «орлов» вместо 15) не является доказательством
+«нечестности» монеты.</li>
+</ol>
+<hr />
+<h2 id="4-глоссарий-важных-терминов">4. Глоссарий важных терминов</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Термин</th>
+<th style="text-align: left;">Описание из текста</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Биномиальный
+коэффициент</strong></td>
+<td style="text-align: left;">Число равновероятных способов получения
+определенного результата; числа из треугольника Паскаля.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Вероятность</strong></td>
+<td style="text-align: left;">Оценка наиболее правдоподобной доли
+повторных наблюдений, дающих конкретный исход.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Плотность
+вероятности</strong></td>
+<td style="text-align: left;">Функция
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">p(x)</annotation></semantics></math>,
+где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mi mathvariant="normal">Δ</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">p(x)\Delta x</annotation></semantics></math>
+— вероятность нахождения значения в интервале
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">\Delta x</annotation></semantics></math>
+при малом приращении.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Принцип
+неопределенности</strong></td>
+<td style="text-align: left;">Фундаментальное ограничение природы,
+запрещающее одновременное точное знание координаты и скорости
+частицы.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Распределение
+Бернулли</strong></td>
+<td style="text-align: left;">Функция вероятности для независимых
+испытаний с двумя возможными исходами («выигрыш» или «проигрыш»).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Случайное блуждание</strong></td>
+<td style="text-align: left;">Процесс движения, где каждый следующий шаг
+выбирается случайно; математически связан с подбрасыванием монеты.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Среднее квадратичное расстояние
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>D</mi><mrow><mi>r</mi><mi>m</mi><mi>s</mi></mrow></msub><annotation encoding="application/x-tex">D_{rms}</annotation></semantics></math>)</strong></td>
+<td style="text-align: left;">Мера удаления от начальной точки в
+случайном блуждании, равная
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msqrt><mi>N</mi></msqrt><annotation encoding="application/x-tex">\sqrt{N}</annotation></semantics></math>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Флуктуация</strong></td>
+<td style="text-align: left;">Случайное отклонение наблюдаемой величины
+от её наиболее вероятного (ожидаемого) значения.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Электронное облако</strong></td>
+<td style="text-align: left;">Визуализация атома водорода, где плотность
+«облака» пропорциональна вероятности обнаружения электрона в данной
+точке.</td>
+</tr>
+</tbody>
+</table>
+    </article>
+  </main>
+</body>
+</html>

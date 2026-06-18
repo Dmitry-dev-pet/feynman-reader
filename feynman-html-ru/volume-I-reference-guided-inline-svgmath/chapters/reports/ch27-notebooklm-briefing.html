@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Глава 27. ГЕОМЕТРИЧЕСКАЯ ОПТИКА: Аналитический отчет - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch27.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1 id="глава-27-геометрическая-оптика-аналитический-отчет">Глава 27.
+ГЕОМЕТРИЧЕСКАЯ ОПТИКА: Аналитический отчет</h1>
+<p>Настоящий документ представляет собой синтез ключевых идей, формул и
+физических принципов геометрической оптики, изложенных в представленном
+источнике. Глава посвящена изучению элементарных свойств оптических
+систем на основе принципа наименьшего времени и анализу ограничений этих
+систем.</p>
+<h2 id="1-резюме">1. Резюме</h2>
+<p>Геометрическая оптика рассматривается как полезное приближение,
+позволяющее проектировать оптические приборы с помощью простых
+геометрических правил. В основе анализа лежит расчет времени прохождения
+света через различные среды. Ключевыми результатами являются формулы для
+фокусного расстояния сферических поверхностей и линз, понимание
+увеличения и определение пределов разрешающей способности, обусловленных
+волновой природой света.</p>
+<h2 id="2-основные-темы-и-теоретический-анализ">2. Основные темы и
+теоретический анализ</h2>
+<h3
+id="21-геометрическое-обоснование-и-принцип-наименьшего-времени">2.1.
+Геометрическое обоснование и принцип наименьшего времени</h3>
+<p>Для анализа разности времен на различных путях света используется
+фундаментальная геометрическая аппроксимация. Если высота треугольника
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>h</mi><annotation encoding="application/x-tex">h</annotation></semantics></math>)
+мала по сравнению с его основанием
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math>),
+то разность между гипотенузой и основанием
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="normal">Δ</mi><annotation encoding="application/x-tex">\Delta</annotation></semantics></math>)
+выражается формулой:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mo>≈</mo><mfrac><msup><mi>h</mi><mn>2</mn></msup><mrow><mn>2</mn><mi>s</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\Delta \approx \frac{h^2}{2s}</annotation></semantics></math>
+Этот результат является базовым для расчета задержек, возникающих при
+прохождении света через изогнутые поверхности.</p>
+<h3 id="22-фокусировка-на-сферической-поверхности">2.2. Фокусировка на
+сферической поверхности</h3>
+<p>Основное условие идеальной фокусировки — время прохождения света от
+источника
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>O</mi><annotation encoding="application/x-tex">O</annotation></semantics></math>)
+до точки изображения
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>O</mi><mo>′</mo></msup><annotation encoding="application/x-tex">O&#39;</annotation></semantics></math>)
+должно быть постоянным для всех путей.</p>
+<ul>
+<li><strong>Сферическая аппроксимация:</strong> Поскольку поверхности
+четвертого порядка сложны в изготовлении, используются сферические
+поверхности. Точная фокусировка в этом случае достигается только для
+<strong>параксиальных лучей</strong> (лучей, проходящих близко к
+оптической оси).</li>
+<li><strong>Формула преломляющей поверхности:</strong>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>1</mn><mi>s</mi></mfrac><mo>+</mo><mfrac><mi>n</mi><msup><mi>s</mi><mo>′</mo></msup></mfrac><mo>=</mo><mfrac><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow><mi>R</mi></mfrac></mrow><annotation encoding="application/x-tex">\frac{1}{s} + \frac{n}{s&#39;} = \frac{n-1}{R}</annotation></semantics></math>
+где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math>
+— расстояние до объекта,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>s</mi><mo>′</mo></msup><annotation encoding="application/x-tex">s&#39;</annotation></semantics></math>
+— расстояние до изображения,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+— показатель преломления,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>R</mi><annotation encoding="application/x-tex">R</annotation></semantics></math>
+— радиус кривизны.</li>
+</ul>
+<h3 id="23-тонкие-и-сложные-линзы">2.3. Тонкие и сложные линзы</h3>
+<p>Для тонкой линзы, имеющей две поверхности, формула обобщается. Если
+линза находится в воздухе, её свойства описываются уравнением:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>1</mn><mi>s</mi></mfrac><mo>+</mo><mfrac><mn>1</mn><msup><mi>s</mi><mo>′</mo></msup></mfrac><mo>=</mo><mfrac><mn>1</mn><mi>f</mi></mfrac></mrow><annotation encoding="application/x-tex">\frac{1}{s} + \frac{1}{s&#39;} = \frac{1}{f}</annotation></semantics></math>
+Фокусное расстояние
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>f</mi><annotation encoding="application/x-tex">f</annotation></semantics></math>)
+определяется через радиусы кривизны поверхностей
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mn>1</mn></msub><mo>,</mo><msub><mi>R</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">R_1, R_2</annotation></semantics></math>)
+и показатель преломления
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>):
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>1</mn><mi>f</mi></mfrac><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo>−</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mn>1</mn><msub><mi>R</mi><mn>1</mn></msub></mfrac><mo>−</mo><mfrac><mn>1</mn><msub><mi>R</mi><mn>2</mn></msub></mfrac><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">\frac{1}{f} = (n-1) \left( \frac{1}{R_1} - \frac{1}{R_2} \right)</annotation></semantics></math></p>
+<p><strong>Сложные системы:</strong> Любая сложная оптическая система
+(телескоп, микроскоп) может быть описана с помощью двух <strong>главных
+плоскостей</strong>. Если измерять фокусное расстояние от этих
+плоскостей, то к сложной системе применимы те же формулы, что и к тонкой
+линзе.</p>
+<h3 id="24-типы-изображений-и-знаковые-соглашения">2.4. Типы изображений
+и знаковые соглашения</h3>
+<p>Документ устанавливает важные правила для расчетов (соглашения о
+знаках):</p>
+<ol type="1">
+<li><strong>Расстояние до объекта
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math>):</strong>
+положительно, если объект слева от поверхности.</li>
+<li><strong>Расстояние до изображения
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>s</mi><mo>′</mo></msup><annotation encoding="application/x-tex">s&#39;</annotation></semantics></math>):</strong>
+положительно, если изображение справа.</li>
+<li><strong>Радиус кривизны
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>R</mi><annotation encoding="application/x-tex">R</annotation></semantics></math>):</strong>
+положителен, если центр кривизны справа.</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Тип изображения</th>
+<th style="text-align: left;">Условие</th>
+<th style="text-align: left;">Физический смысл</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Действительное</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>s</mi><mo>′</mo></msup><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">s&#39; &gt; 0</annotation></semantics></math></td>
+<td style="text-align: left;">Свет реально сходится в точке.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Мнимое</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>s</mi><mo>′</mo></msup><mo>&lt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">s&#39; &lt; 0</annotation></semantics></math></td>
+<td style="text-align: left;">Свет расходится, но кажется, что он
+исходит из точки за поверхностью.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="25-увеличение-и-формула-ньютона">2.5. Увеличение и формула
+Ньютона</h3>
+<p>Геометрическое построение изображения (Фиг. 27.7) позволяет вывести
+альтернативную формулу линзы, используя расстояния от фокусов
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>x</mi><mo>′</mo></msup><annotation encoding="application/x-tex">x&#39;</annotation></semantics></math>):
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><msup><mi>x</mi><mo>′</mo></msup><mo>=</mo><msup><mi>f</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">xx&#39; = f^2</annotation></semantics></math>
+Увеличение определяется как отношение высоты изображения
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>y</mi><mo>′</mo></msup><annotation encoding="application/x-tex">y&#39;</annotation></semantics></math>)
+к высоте предмета
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>y</mi><annotation encoding="application/x-tex">y</annotation></semantics></math>):
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><msup><mi>y</mi><mo>′</mo></msup><mi>y</mi></mfrac><mo>=</mo><mfrac><mi>f</mi><mi>x</mi></mfrac><mo>=</mo><mfrac><msup><mi>x</mi><mo>′</mo></msup><mi>f</mi></mfrac></mrow><annotation encoding="application/x-tex">\frac{y&#39;}{y} = \frac{f}{x} = \frac{x&#39;}{f}</annotation></semantics></math></p>
+<h2 id="3-физические-ограничения-и-аберрации">3. Физические ограничения
+и аберрации</h2>
+<p>Геометрическая оптика имеет пределы применимости, связанные с
+геометрическими несовершенствами и природой света.</p>
+<ul>
+<li><strong>Сферическая аберрация:</strong> Возникает из-за того, что
+лучи, далекие от оси, фокусируются не в той же точке, что параксиальные
+лучи.</li>
+<li><strong>Хроматическая аберрация:</strong> Разные цвета имеют разные
+показатели преломления и, следовательно, разные фокусные
+расстояния.</li>
+<li><strong>Дифракционный предел:</strong> Принцип наименьшего времени
+перестает работать, если разность времен прохождения лучей меньше
+периода колебания света
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mi>ν</mi></mrow><annotation encoding="application/x-tex">1/\nu</annotation></semantics></math>).</li>
+</ul>
+<h2 id="4-разрешающая-способность">4. Разрешающая способность</h2>
+<p>Разрешающая способность прибора ограничена волновой природой света.
+Две точки считаются различимыми, если разность времен прохождения
+крайних лучей от них до точки изображения превышает один период
+колебаний:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>t</mi><mn>2</mn></msub><mo>−</mo><msub><mi>t</mi><mn>1</mn></msub><mo>&gt;</mo><mfrac><mn>1</mn><mi>ν</mi></mfrac></mrow><annotation encoding="application/x-tex">t_2 - t_1 &gt; \frac{1}{\nu}</annotation></semantics></math></p>
+<p>Это условие эквивалентно критерию, согласно которому минимально
+различимое расстояние
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>D</mi><annotation encoding="application/x-tex">D</annotation></semantics></math>)
+зависит от длины волны
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>λ</mi><annotation encoding="application/x-tex">\lambda</annotation></semantics></math>)
+и апертурного угла
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>θ</mi><annotation encoding="application/x-tex">\theta</annotation></semantics></math>):
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mo>&gt;</mo><mfrac><mi>λ</mi><mrow><mn>2</mn><mi>n</mi><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mi>θ</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">D &gt; \frac{\lambda}{2n \sin \theta}</annotation></semantics></math>
+<strong>Вывод:</strong> Невозможно увидеть объекты размером значительно
+меньше длины волны используемого света.</p>
+<h2 id="5-ключевые-цитаты-с-контекстом">5. Ключевые цитаты с
+контекстом</h2>
+<ol type="1">
+<li><strong>О значении теории Гамильтона:</strong> <em>"Наиболее
+современная и абстрактная теория геометрической оптики, разработанная
+Гамильтоном, имеет весьма важные приложения в механике, причем в
+механике она имеет даже большее значение, чем в оптике".</em></li>
+<li><strong>О практическом подходе к расчету систем:</strong> <em>"Лучше
+последовательно перебрать пять поверхностей, чем запоминать кучу формул,
+ведь может случиться, что нам вообще не придется возиться с
+поверхностями!"</em> — Указание на приоритет последовательного
+применения простых законов преломления перед сложными аналитическими
+формулами.</li>
+<li><strong>О пределе совершенствования линз:</strong> <em>"Если мы
+добились того, что разность во времени между крайним лучом... и
+центральным лучом меньше периода... то улучшать систему дальше
+бесполезно".</em> — Формулировка физического предела точности оптических
+систем.</li>
+<li><strong>Об эффекте плавательного бассейна:</strong> <em>"Когда мы
+смотрим сверху на дно плавательного бассейна, он кажется нам мельче в
+3/4 раза, чем он есть на самом деле; эта величина есть обратная величина
+показателя преломления воды".</em> (Контекст: применение формулы для
+плоской поверхности раздела, где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mo>=</mo><mi>∞</mi></mrow><annotation encoding="application/x-tex">R = \infty</annotation></semantics></math>).</li>
+</ol>
+<h2 id="6-практические-выводы-actionable-insights">6. Практические
+выводы (Actionable Insights)</h2>
+<ul>
+<li><strong>Использование параксиального приближения:</strong> Для
+быстрых расчетов оптических систем следует ограничиваться лучами вблизи
+оси, где сферические поверхности работают адекватно.</li>
+<li><strong>Расчет сложных систем:</strong> Любую комбинацию линз можно
+упростить до двух главных плоскостей и одного эффективного фокусного
+расстояния, что радикально упрощает анализ хода лучей.</li>
+<li><strong>Учет волнового предела:</strong> При проектировании
+микроскопов или телескопов необходимо помнить, что увеличение само по
+себе не гарантирует детализации; решающим фактором является апертурный
+угол и длина волны света.</li>
+<li><strong>Универсальность теоремы о фокусах:</strong> Отношение
+фокусных расстояний в сложной системе всегда равно отношению показателей
+преломления сред, в которых эти фокусы расположены.</li>
+</ul>
+    </article>
+  </main>
+</body>
+</html>

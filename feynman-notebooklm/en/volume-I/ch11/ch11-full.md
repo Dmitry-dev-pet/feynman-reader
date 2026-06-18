@@ -1,0 +1,490 @@
+SOURCE: Feynman Lectures on Physics, Volume I, Chapter 11
+LANGUAGE: en
+TITLE: Chapter 11. Vectors
+SOURCE_URL: https://www.feynmanlectures.caltech.edu/I_11.html
+NOTEBOOKLM_USE: clean lecture text with TeX math and figure captions; reader navigation removed.
+
+# Chapter 11. Vectors
+
+## 11–1 Symmetry in physics
+
+In this chapter we introduce a subject that is technically known in physics assymmetry in physical law. The word “symmetry” is used here with a special meaning, and therefore needs to be defined. When is a thing symmetrical—how can we define it? When we have a picture that is symmetrical, one side is somehow the same as the other side. Professor Hermann Weyl has given this definition of symmetry: a thing is symmetrical if one can subject it to a certain operation and it appears exactly the same after the operation. For instance, if we look at a silhouette of a vase that is left-and-right symmetrical, then turn it \(180^\circ\) around the vertical axis, it looks the same. We shall adopt the definition of symmetry in Weyl’s more general form, and in that form we shall discuss symmetry of physical laws.
+
+Suppose we build a complex machine in a certain place, with a lot of complicated interactions, and balls bouncing around with forces between them, and so on. Now suppose we build exactly the same kind of equipment at some other place, matching part by part, with the same dimensions and the same orientation, everything the same only displaced laterally by some distance. Then, if we start the two machines in the same initial circumstances, in exact correspondence, we ask: will one machine behave exactly the same as the other? Will it follow all the motions in exact parallelism? Of course the answer may well beno, because if we choose the wrong place for our machine it might be inside a wall and interferences from the wall would make the machine not work.
+
+All of our ideas in physics require a certain amount of common sense in their application; they are not purely mathematical or abstract ideas. We have to understand what we mean when we say that the phenomena are the same when we move the apparatus to a new position. We mean that we move everything that we believe is relevant; if the phenomenon is not the same, we suggest that something relevant has not been moved, and we proceed to look for it. If we never find it, then we claim that the laws of physics do not have this symmetry. On the other hand, we may find it—we expect to find it—if the laws of physics do have this symmetry; looking around, we may discover, for instance, that the wall is pushing on the apparatus. The basic question is, if we define things well enough, if all the essential forces are included inside the apparatus, if all the relevant parts are moved from one place to another, will the laws be the same? Will the machinery work the same way?
+
+It is clear that what we want to do is to move all the equipment andessentialinfluences, but noteverythingin the world—planets, stars, and all—for if we do that, we have the same phenomenon again for the trivial reason that we are right back where we started. No, we cannot moveeverything. But it turns out in practice that with a certain amount of intelligence about what to move, the machinery will work. In other words, if we do not go inside a wall, if we know the origin of the outside forces, and arrange that those are moved too, then the machinerywillwork the same in one location as in another.
+
+## 11–2 Translations
+
+We shall limit our analysis to just mechanics, for which we now have sufficient knowledge. In previous chapters we have seen that the laws of mechanics can be summarized by a set of three equations for each particle:
+\[
+\begin{equation}
+\begin{aligned}
+m(d^2x/dt^2)=F_x,\\[.75ex]
+m(d^2y/dt^2)=F_y,\\[.75ex]
+m(d^2z/dt^2)=F_z.
+\end{aligned}
+\label{Eq:I:11:1}
+\end{equation}
+\]
+Now this means that there exists a way tomeasure \(x\) , \(y\) , and \(z\) on three perpendicular axes, and the forces along those directions, such that these laws are true. These must be measured from some origin, butwhere do we put the origin?All that Newton would tell us at first is that thereissome place that we can measure from, perhaps the center of the universe, such that these laws are correct. But we can show immediately that we can never find the center, because if we use some other origin it would make no difference. In other words, suppose that there are two people—Joe, who has an origin in one place, and Moe, who has a parallel system whose origin is somewhere else (Fig.11–1). Now when Joe measures the location of the point in space, he finds it at \(x\) , \(y\) , and \(z\) (we shall usually leave \(z\) out because it is too confusing to draw in a picture). Moe, on the other hand, when measuring the same point, will obtain a different \(x\) (in order to distinguish it, we will call it \(x'\) ), and in principle a different \(y\) , although in our example they are numerically equal. So we have
+\[
+\begin{equation}
+\begin{aligned}
+x'&=x-a,\\[.5ex]
+y'&=y,\\[.5ex]
+z'&=z.
+\end{aligned}
+\label{Eq:I:11:2}
+\end{equation}
+\]
+Now in order to complete our analysis we must know what Moe would obtain for the forces. The force is supposed to act along some line, and by the force in the \(x\) -direction we mean the part of the total which is in the \(x\) -direction, which is the magnitude of the force times this cosine of its angle with the \(x\) -axis. Now we see that Moe would use exactly the same projection as Joe would use, so we have a set of equations
+\[
+\begin{equation}
+\begin{aligned}
+F_{x'}&=F_x,\\[.75ex]
+F_{y'}&=F_y,\\[.75ex]
+F_{z'}&=F_z.
+\end{aligned}
+\label{Eq:I:11:3}
+\end{equation}
+\]
+These would be the relationships between quantities as seen by Joe and Moe.
+
+### Figure Ch11-F1
+Caption: Fig. 11–1.Two parallel coordinate systems.
+Image: figures/Ch11-F1.svg
+![Fig. 11–1.Two parallel coordinate systems.](figures/Ch11-F1.svg)
+
+
+The question is, if Joe knows Newton’s laws, and if Moe tries to write down Newton’s laws, will they also be correct for him? Does it make any difference from which origin we measure the points? In other words, assuming that equations (11.1) are true, and the Eqs. (11.2) and (11.3) give the relationship of the measurements, is it or is it not true that
+\[
+\begin{equation}
+\begin{alignedat}{4}
+&(\text{a})\quad&&m(d^2x'&&/dt^2)=F_{x'}&&,\\[.5ex]
+&(\text{b})\quad&&m(d^2y'&&/dt^2)=F_{y'}&&,\\[.5ex]
+&(\text{c})\quad&&m(d^2z'&&/dt^2)=F_{z'}&&\;?
+\end{alignedat}
+\label{Eq:I:11:4}
+\end{equation}
+\]
+
+In order to test these equations we shall differentiate the formula for \(x'\) twice. First of all
+\[
+\begin{equation*}
+\ddt{x'}{t}=\ddt{}{t}(x-a)=\ddt{x}{t}-\ddt{a}{t}.
+\end{equation*}
+\]
+Now we shall assume that Moe’s origin is fixed (not moving) relative to Joe’s; therefore \(a\) is a constant and \(da/dt=0\) , so we find that
+\[
+\begin{equation*}
+dx'/dt=dx/dt
+\end{equation*}
+\]
+and therefore
+\[
+\begin{equation*}
+d^2x'/dt^2=d^2x/dt^2;
+\end{equation*}
+\]
+therefore we know that Eq. (11.4a) becomes
+\[
+\begin{equation*}
+m(d^2x/dt^2)=F_{x'}.
+\end{equation*}
+\]
+(We also suppose that the masses measured by Joe and Moe are equal.) Thus the acceleration times the mass is the same as the other fellow’s. We have also found the formula for \(F_{x'}\) , for, substituting from Eq. (11.1), we find that
+\[
+\begin{equation*}
+F_{x'}=F_x.
+\end{equation*}
+\]
+
+Therefore the laws as seen by Moe appear the same; he can write Newton’s laws too, with different coordinates, and they will still be right. That means that there is no unique way to define the origin of the world, because the laws will appear the same, from whatever position they are observed.
+
+This is also true: if there is a piece of equipment in one place with a certain kind of machinery in it, the same equipment in another place will behave in the same way. Why? Because one machine, when analyzed by Moe, has exactly the same equations as the other one, analyzed by Joe. Since theequationsare the same, thephenomenaappear the same. So the proof that an apparatus in a new position behaves the same as it did in the old position is the same as the proof that the equations when displaced in space reproduce themselves. Therefore we say thatthe laws of physics are symmetrical for translational displacements, symmetrical in the sense that the laws do not change when we make a translation of our coordinates. Of course it is quite obvious intuitively that this is true, but it is interesting and entertaining to discuss the mathematics of it.
+
+## 11–3 Rotations
+
+The above is the first of a series of ever more complicated propositions concerning the symmetry of a physical law. The next proposition is that it should make no difference in whichdirectionwe choose the axes. In other words, if we build a piece of equipment in some place and watch it operate, and nearby we build the same kind of apparatus but put it up on an angle, will it operate in the same way? Obviously it will not if it is a Grandfather clock, for example! If a pendulum clock stands upright, it works fine, but if it is tilted the pendulum falls against the side of the case and nothing happens. The theorem is then false in the case of the pendulum clock, unless we include the earth, which is pulling on the pendulum. Therefore we can make a prediction about pendulum clocks if we believe in the symmetry of physical law for rotation: something else is involved in the operation of a pendulum clock besides the machinery of the clock, something outside it that we should look for. We may also predict that pendulum clocks will not work the same way when located in different places relative to this mysterious source of asymmetry, perhaps the earth. Indeed, we know that a pendulum clock up in an artificial satellite, for example, would not tick either, because there is no effective force, and on Mars it would go at a different rate. Pendulum clocksdoinvolve something more than just the machinery inside, they involve something on the outside. Once we recognize this factor, we see that we must turn the earth along with the apparatus. Of course we do not have to worry about that, it is easy to do; one simply waits a moment or two and the earth turns; then the pendulum clock ticks again in the new position the same as it did before. While we are rotating in space our angles are always changing, absolutely; this change does not seem to bother us very much, for in the new position we seem to be in the same condition as in the old. This has a certain tendency to confuse one, because it is true that in the new turned position the laws are the same as in the unturned position, but it isnottrue thatas we turna thing it follows the same laws as it does when we are not turning it. If we perform sufficiently delicate experiments, we can tell that the earthis rotating, but not that ithad rotated. In other words, we cannot locate its angular position, but we can tell that it is changing.
+
+### Figure Ch11-F2
+Caption: Fig. 11–2.Two coordinate systems having different angular orientations.
+Image: figures/Ch11-F2.svg
+![Fig. 11–2.Two coordinate systems having different angular orientations.](figures/Ch11-F2.svg)
+
+
+Now we may discuss the effects of angular orientation upon physical laws. Let us find out whether the same game with Joe and Moe works again. This time, to avoid needless complication, we shall suppose that Joe and Moe use the same origin (we have already shown that the axes can be moved by translation to another place). Assume that Moe’s axes have rotated relative to Joe’s by an angle \(\theta\) . The two coordinate systems are shown in Fig.11–2, which is restricted to two dimensions. Consider any point \(P\) having coordinates \((x,y)\) in Joe’s system and \((x',y')\) in Moe’s system. We shall begin, as in the previous case, by expressing the coordinates \(x'\) and \(y'\) in terms of \(x\) , \(y\) , and \(\theta\) . To do so, we first drop perpendiculars from \(P\) to all four axes and draw \(AB\) perpendicular to \(PQ\) . Inspection of the figure shows that \(x'\) can be written as the sum of two lengths along the \(x'\) -axis, and \(y'\) as the difference of two lengths along \(AB\) . All these lengths are expressed in terms of \(x\) , \(y\) , and \(\theta\) in equations (11.5), to which we have added an equation for the third dimension.
+\[
+\begin{equation}
+\begin{alignedat}{4}
+&x'&&=x&&\cos\theta+y&&\sin\theta,\\
+&y'&&=y&&\cos\theta-x&&\sin\theta,\\
+&z'&&=z&&.
+\end{alignedat}
+\label{Eq:I:11:5}
+\end{equation}
+\]
+The next step is to analyze the relationship of forces as seen by the two observers, following the same general method as before. Let us assume that a force \(\FLPF\) , which has already been analyzed as having components \(F_x\) and \(F_y\) (as seen by Joe), is acting on a particle of mass \(m\) , located at point \(P\) in Fig.11–2. For simplicity, let us move both sets of axes so that the origin is at \(P\) , as shown in Fig.11–3. Moe sees the components of \(\FLPF\) along his axes as \(F_{x'}\) and \(F_{y'}\) . \(F_x\) has components along both the \(x'\) - and \(y'\) -axes, and \(F_y\) likewise has components along both these axes. To express \(F_{x'}\) in terms of \(F_x\) and \(F_y\) , we sum these components along the \(x'\) -axis, and in a like manner we can express \(F_{y'}\) in terms of \(F_x\) and \(F_y\) . The results are
+\[
+\begin{equation}
+\begin{alignedat}{4}
+&F_{x'}&&=F_x&&\cos\theta+F_y&&\sin\theta,\\
+&F_{y'}&&=F_y&&\cos\theta-F_x&&\sin\theta,\\
+&F_{z'}&&=F_z&&.
+\end{alignedat}
+\label{Eq:I:11:6}
+\end{equation}
+\]
+It is interesting to note an accident of sorts, which is of extreme importance: the formulas (11.5) and (11.6), for coordinates of \(P\) and components of \(\FLPF\) , respectively,are of identical form.
+
+### Figure Ch11-F3
+Caption: Fig. 11–3.Components of a force in the two systems.
+Image: figures/Ch11-F3.svg
+![Fig. 11–3.Components of a force in the two systems.](figures/Ch11-F3.svg)
+
+
+As before, Newton’s laws are assumed to be true in Joe’s system, and are expressed by equations (11.1). The question, again, is whether Moe can apply Newton’s laws—will the results be correct for his system of rotated axes? In other words, if we assume that Eqs. (11.5) and (11.6) give the relationship of the measurements, is it true or not true that
+\[
+\begin{equation}
+\begin{alignedat}{2}
+&m(d^2x'&&/dt^2)=F_{x'},\\
+&m(d^2y'&&/dt^2)=F_{y'},\\
+&m(d^2z'&&/dt^2)=F_{z'}?
+\end{alignedat}
+\label{Eq:I:11:7}
+\end{equation}
+\]
+To test these equations, we calculate the left and right sides independently, and compare the results. To calculate the left sides, we multiply equations (11.5) by \(m\) , and differentiate twice with respect to time, assuming the angle \(\theta\) to be constant. This gives
+\[
+\begin{equation}
+\begin{aligned}
+m(d^2&x'/dt^2)=\\
+&\;m(d^2x/dt^2)\cos\theta+m(d^2y/dt^2)\sin\theta,\\[1ex]
+m(d^2&y'/dt^2)=\\
+&\;m(d^2y/dt^2)\cos\theta-m(d^2x/dt^2)\sin\theta,\\[1ex]
+m(d^2&z'/dt^2)=\;m(d^2z/dt^2).
+\end{aligned}
+\label{Eq:I:11:8}
+\end{equation}
+\]
+We calculate the right sides of equations (11.7) by substituting equations (11.1) into equations (11.6). This gives
+\[
+\begin{alignat}{4}
+&F_{x'}&&=m(d^2x&&/dt^2)\cos\theta+m(d^2y&&/dt^2)\sin\theta,\notag\\
+&F_{y'}&&=m(d^2y&&/dt^2)\cos\theta-m(d^2x&&/dt^2)\sin\theta,\notag\\
+\label{Eq:I:11:9}
+&F_{z'}&&=m(d^2z&&/dt^2).
+\end{alignat}
+\]
+
+Behold! The right sides of Eqs. (11.8) and (11.9) are identical, so we conclude that if Newton’s laws are correct on one set of axes, they are also valid on any other set of axes. This result, which has now been established for both translation and rotation of axes, has certain consequences: first, no one can claim his particular axes are unique, but of course they can be moreconvenientfor certain particular problems. For example, it is handy to have gravity along one axis, but this is not physically necessary. Second, it means that any piece of equipment which is completely self-contained, with all the force-generating equipment completely inside the apparatus, would work the same when turned at an angle.
+
+## 11–4 Vectors
+
+Not only Newton’s laws, but also the other laws of physics, so far as we know today, have the two properties which we call invariance (or symmetry) under translation of axes and rotation of axes. These properties are so important that a mathematical technique has been developed to take advantage of them in writing and using physical laws.
+
+The foregoing analysis involved considerable tedious mathematical work. To reduce the details to a minimum in the analysis of such questions, a very powerful mathematical machinery has been devised. This system, calledvector analysis, supplies the title of this chapter; strictly speaking, however, this is a chapter on the symmetry of physical laws. By the methods of the preceding analysis we were able to do everything required for obtaining the results that we sought, but in practice we should like to do things more easily and rapidly, so we employ the vector technique.
+
+We began by noting some characteristics of two kinds of quantities that are important in physics. (Actually there are more than two, but let us start out with two.) One of them, like the number of potatoes in a sack, we call an ordinary quantity, or an undirected quantity, or ascalar. Temperature is an example of such a quantity. Other quantities that are important in physics do have direction, for instance velocity: we have to keep track of which way a body is going, not just its speed. Momentum and force also have direction, as does displacement: when someone steps from one place to another in space, we can keep track of how far he went, but if we wish also to knowwherehe went, we have to specify a direction.
+
+All quantities that have a direction, like a step in space, are calledvectors.
+
+A vector is three numbers. In order to represent a step in space, say from the origin to some particular point \(P\) whose location is \((x,y,z)\) , we really need three numbers, but we are going to invent a single mathematical symbol, \(\FLPr\) , which is unlike any other mathematical symbols we have so far used.1It isnota single number, it representsthreenumbers: \(x\) , \(y\) , and \(z\) . It means three numbers, but not really onlythosethree numbers, because if we were to use a different coordinate system, the three numbers would be changed to \(x'\) , \(y'\) , and \(z'\) . However, we want to keep our mathematics simple and so we are going to use thesame markto represent the three numbers \((x,y,z)\) and the three numbers \((x',y',z')\) . That is, we use the same mark to represent the first set of three numbers for one coordinate system, but the second set of three numbers if we are using the other coordinate system. This has the advantage that when we change the coordinate system, we do not have to change the letters of our equations. If we write an equation in terms of \(x,y,z\) , and then use another system, we have to change to \(x',y',z'\) , but we shall just write \(\FLPr\) , with the convention that it represents \((x,y,z)\) if we use one set of axes, or \((x',y',z')\) if we use another set of axes, and so on. The three numbers which describe the quantity in a given coordinate system are called thecomponentsof the vector in the direction of the coordinate axes of that system. That is, we use the same symbol for the three letters that correspond to thesame object, as seen from different axes. The very fact that we can say “the same object” implies a physical intuition about the reality of a step in space, that is independent of the components in terms of which we measure it. So the symbol \(\FLPr\) will represent the same thing no matter how we turn the axes.
+
+Now suppose there is another directed physical quantity, any other quantity, which also has three numbers associated with it, like force, and these three numbers change to three other numbers by a certain mathematical rule, if we change the axes. It must be the same rule that changes \((x,y,z)\) into \((x',y',z')\) . In other words, any physical quantity associated with three numbers which transform as do the components of a step in space is a vector. An equation like
+\[
+\begin{equation*}
+\FLPF=\FLPr
+\end{equation*}
+\]
+would thus be true inanycoordinate system if it were true in one. This equation, of course, stands for the three equations
+\[
+\begin{equation*}
+F_x=x,\quad
+F_y=y,\quad
+F_z=z,
+\end{equation*}
+\]
+or, alternatively, for
+\[
+\begin{equation*}
+F_{x'}=x',\quad
+F_{y'}=y',\quad
+F_{z'}=z'.
+\end{equation*}
+\]
+The fact that a physical relationship can be expressed as a vector equation assures us the relationship is unchanged by a mere rotation of the coordinate system. That is the reason why vectors are so useful in physics.
+
+Now let us examine some of the properties of vectors. As examples of vectors we may mention velocity, momentum, force, and acceleration. For many purposes it is convenient to represent a vector quantity by an arrow that indicates the direction in which it is acting. Why can we represent force, say, by an arrow? Because it has the same mathematical transformation properties as a “step in space.” We thus represent it in a diagram as if it were a step, using a scale such that one unit of force, or one newton, corresponds to a certain convenient length. Once we have done this, all forces can be represented as lengths, because an equation like
+\[
+\begin{equation*}
+\FLPF=k\FLPr,
+\end{equation*}
+\]
+where \(k\) is some constant, is a perfectly legitimate equation. Thus we can always represent forces by lines, which is very convenient, because once we have drawn the line we no longer need the axes. Of course, we can quickly calculate the three components as they change upon turning the axes, because that is just a geometric problem.
+
+## 11–5 Vector algebra
+
+Now we must describe the laws, or rules, for combining vectors in various ways. The first such combination is theadditionof two vectors: suppose that \(\FLPa\) is a vector which in some particular coordinate system has the three components \((a_x,a_y,a_z)\) , and that \(\FLPb\) is another vector which has the three components \((b_x,b_y,b_z)\) . Now let us invent three new numbers \((a_x+b_x,a_y+b_y,a_z+b_z)\) . Do these form a vector? “Well,” we might say, “they are three numbers, and every three numbers form a vector.” No,notevery three numbers form a vector! In order for it to be a vector, not only must there be three numbers, but these must be associated with a coordinate system in such a way that if we turn the coordinate system, the three numbers “revolve” on each other, get “mixed up” in each other, by the precise laws we have already described. So the question is, if we now rotate the coordinate system so that \((a_x,a_y,a_z)\) become \((a_{x'},a_{y'},a_{z'})\) and \((b_x,b_y,b_z)\) become \((b_{x'},b_{y'},b_{z'})\) , what do \((a_x+b_x,a_y+b_y,a_z+b_z)\) become? Do they become \((a_{x'}+b_{x'}, a_{y'}+b_{y'}, a_{z'}+b_{z'})\) or not? The answer is, of course, yes, because the prototype transformations of Eq. (11.5) constitute what we call alineartransformation. If we apply those transformations to \(a_x\) and \(b_x\) to get \(a_{x'} + b_{x'}\) , we find that the transformed \(a_x + b_x\) is indeed the same as \(a_{x'} +
+b_{x'}\) . When \(\FLPa\) and \(\FLPb\) are “added together” in this sense, they will form a vector which we may call \(\FLPc\) . We would write this as
+\[
+\begin{equation*}
+\FLPc = \FLPa + \FLPb.
+\end{equation*}
+\]
+
+Now \(\FLPc\) has the interesting property
+\[
+\begin{equation*}
+\FLPc = \FLPb + \FLPa,
+\end{equation*}
+\]
+as we can immediately see from its components. Thus also,
+\[
+\begin{equation*}
+\FLPa + (\FLPb + \FLPc) = (\FLPa + \FLPb) + \FLPc.
+\end{equation*}
+\]
+We can add vectors in any order.
+
+### Figure Ch11-F4
+Caption: Fig. 11–4.The addition of vectors.
+Image: figures/Ch11-F4.svg
+![Fig. 11–4.The addition of vectors.](figures/Ch11-F4.svg)
+
+
+What is the geometric significance of \(\FLPa + \FLPb\) ? Suppose that \(\FLPa\) and \(\FLPb\) were represented by lines on a piece of paper, what would \(\FLPc\) look like? This is shown in Fig.11–4. We see that we can add the components of \(\FLPb\) to those of \(\FLPa\) most conveniently if we place the rectangle representing the components of \(\FLPb\) next to that representing the components of \(\FLPa\) in the manner indicated. Since \(\FLPb\) just “fits” into its rectangle, as does \(\FLPa\) into its rectangle, this is the same as putting the “tail” of \(\FLPb\) on the “head” of \(\FLPa\) , the arrow from the “tail” of \(\FLPa\) to the “head” of \(\FLPb\) being the vector \(\FLPc\) . Of course, if we added \(\FLPa\) to \(\FLPb\) the other way around, we would put the “tail” of \(\FLPa\) on the “head” of \(\FLPb\) , and by the geometrical properties of parallelograms we would get the same result for \(\FLPc\) . Note that vectors can be added in this way without reference to any coordinate axes.
+
+Suppose we multiply a vector by a number \(\alpha\) , what does this mean? Wedefineit to mean a new vector whose components are \(\alpha
+a_x\) , \(\alpha a_y\) , and \(\alpha a_z\) . We leave it as a problem for the student to prove that itisa vector.
+
+Now let us consider vector subtraction. We may define subtraction in the same way as addition, but instead of adding, we subtract the components. Or we might define subtraction by defining a negative vector, \(-\FLPb =
+-1 \FLPb\) , and then we would add the components. It comes to the same thing. The result is shown in Fig.11–5. This figure shows \(\FLPd =\) \(\FLPa - \FLPb =\) \(\FLPa + (-\FLPb)\) ; we also note that the difference \(\FLPa - \FLPb\) can be found very easily from \(\FLPa\) and \(\FLPb\) by using the equivalent relation \(\FLPa = \FLPb + \FLPd\) . Thus the difference is even easier to find than the sum: we just draw the vector from \(\FLPb\) to \(\FLPa\) , to get \(\FLPa - \FLPb\) !
+
+### Figure Ch11-F5
+Caption: Fig. 11–5.The subtraction of vectors.
+Image: figures/Ch11-F5.svg
+![Fig. 11–5.The subtraction of vectors.](figures/Ch11-F5.svg)
+
+
+Next we discuss velocity. Why is velocity a vector? If position is given by the three coordinates \((x,y,z)\) , what is the velocity? The velocity is given by \(dx/dt\) , \(dy/dt\) , and \(dz/dt\) . Is that a vector, or not? We can find out by differentiating the expressions in Eq. (11.5) to find out whether \(dx'/dt\) transformsin the right way. We see that the components \(dx/dt\) and \(dy/dt\) dotransform according to the same law as \(x\) and \(y\) , and therefore the time derivativeisa vector. So the velocity is a vector. We can write the velocity in an interesting way as
+\[
+\begin{equation*}
+\FLPv=d\FLPr/dt.
+\end{equation*}
+\]
+What the velocity is, and why it is a vector, can also be understood more pictorially: How far does a particle move in a short time \(\Delta
+t\) ? Answer: \(\Delta\FLPr\) , so if a particle is “here” at one instant and “there” at another instant, then the vector difference of the positions \(\Delta\FLPr = \FLPr_2 - \FLPr_1\) , which is in the direction of motion shown in Fig.11–6, divided by the time interval \(\Delta t = t_2 - t_1\) , is the “average velocity” vector.
+
+### Figure Ch11-F6
+Caption: Fig. 11–6.The displacement of a particle in a short time interval \(\Delta
+t = t_2 - t_1\) .
+Image: figures/Ch11-F6.svg
+![Fig. 11–6.The displacement of a particle in a short time interval \(\Delta
+t = t_2 - t_1\) .](figures/Ch11-F6.svg)
+
+
+In other words, by vector velocity we mean the limit, as \(\Delta t\) goes to \(0\) , of the difference between the radius vectors at the time \(t +
+\Delta t\) and the time \(t\) , divided by \(\Delta t\) :
+\[
+\begin{equation}
+\label{Eq:I:11:10}
+\FLPv=\lim_{\Delta t\to0}(\Delta\FLPr/\Delta t)=d\FLPr/dt.
+\end{equation}
+\]
+Thus velocity is a vector because it is the difference of two vectors. It is also the right definition of velocity because its components are \(dx/dt\) , \(dy/dt\) , and \(dz/dt\) . In fact, we see from this argument that if we differentiateanyvector with respect to time we produce a new vector. So we have several ways of producing new vectors: (1) multiply by a constant, (2) differentiate with respect to time, (3) add or subtract two vectors.
+
+## 11–6 Newton’s laws in vector notation
+
+In order to write Newton’s laws in vector form, we have to go just one step further, and define the acceleration vector. This is the time derivative of the velocity vector, and it is easy to demonstrate that its components are the second derivatives of \(x\) , \(y\) , and \(z\) with respect to \(t\) :
+\[
+\begin{equation}
+\label{Eq:I:11:11}
+\FLPa=\ddt{\FLPv}{t} =
+\biggl(\ddt{}{t}\biggr)\biggl(\ddt{\FLPr}{t}\biggr) =
+\frac{d^2\FLPr}{dt^2},
+\end{equation}
+\]
+
+\[
+\begin{equation}
+\begin{alignedat}{2}
+a_x &= \ddt{v_x}{t} &= \frac{d^2x}{dt^2},\\[1ex]
+a_y &= \ddt{v_y}{t} &= \frac{d^2y}{dt^2},\\[1ex]
+a_z &= \ddt{v_z}{t} &= \frac{d^2z}{dt^2}.
+\end{alignedat}
+\label{Eq:I:11:12}
+\end{equation}
+\]
+With this definition, then, Newton’s laws can be written in this way:
+\[
+\begin{equation}
+\label{Eq:I:11:13}
+m\FLPa = \FLPF
+\end{equation}
+\]
+or
+\[
+\begin{equation}
+\label{Eq:I:11:14}
+m(d^2\FLPr/dt^2) = \FLPF.
+\end{equation}
+\]
+
+Now the problem of proving the invariance of Newton’s laws under rotation of coordinates is this: prove that \(\FLPa\) is a vector; this we have just done. Prove that \(\FLPF\) is a vector; wesupposeit is. So if force is a vector, then, since we know acceleration is a vector, Eq. (11.13) will look the same in any coordinate system. Writing it in a form which does not explicitly contain \(x\) ’s, \(y\) ’s, and \(z\) ’s has the advantage that from now on we need not writethreelaws every time we write Newton’s equations or other laws of physics. We write what looks likeonelaw, but really, of course, it is the three laws for any particular set of axes, because any vector equation involves the statement thateach of the components is equal.
+
+### Figure Ch11-F7
+Caption: Fig. 11–7.A curved trajectory.
+Image: figures/Ch11-F7.svg
+![Fig. 11–7.A curved trajectory.](figures/Ch11-F7.svg)
+
+
+### Figure Ch11-F8
+Caption: Fig. 11–8.Diagram for calculating the acceleration.
+Image: figures/Ch11-F8.svg
+![Fig. 11–8.Diagram for calculating the acceleration.](figures/Ch11-F8.svg)
+
+
+The fact that the acceleration is the rate of change of the vector velocity helps us to calculate the acceleration in some rather complicated circumstances. Suppose, for instance, that a particle is moving on some complicated curve (Fig.11–7) and that, at a given instant \(t_1\) , it had a certain velocity \(\FLPv_1\) , but that when we go to another instant \(t_2\) a little later, it has a different velocity \(\FLPv_2\) . What is the acceleration? Answer: Acceleration is the difference in the velocity divided by the small time interval, so we need the difference of the two velocities. How do we get the difference of the velocities? To subtract two vectors, we put the vector across the ends of \(\FLPv_2\) and \(\FLPv_1\) ; that is, we draw \(\Delta\FLPv\) as the difference of the two vectors, right?No!That only works when thetailsof the vectors are in the same place! It has no meaning if we move the vector somewhere else and then draw a line across, so watch out! We have to draw a new diagram to subtract the vectors. In Fig.11–8, \(\FLPv_1\) and \(\FLPv_2\) are both drawn parallel and equal to their counterparts in Fig.11–7, and now we can discuss the acceleration. Of course the acceleration is simply \(\Delta\FLPv/\Delta t\) . It is interesting to note that we can compose the velocity difference out of two parts; we can think of acceleration as havingtwo components, \(\Delta\FLPv_\parallel\) , in the direction tangent to the path and \(\Delta\FLPv_\perp\) at right angles to the path, as indicated in Fig.11–8. The acceleration tangent to the path is, of course, just the change in thelengthof the vector, i.e., the change in thespeed \(v\) :
+\[
+\begin{equation}
+\label{Eq:I:11:15}
+a_\parallel=dv/dt.
+\end{equation}
+\]
+The other component of acceleration, at right angles to the curve, is easy to calculate, using Figs.11–7and11–8. In the short time \(\Delta t\) let the change in angle between \(\FLPv_1\) and \(\FLPv_2\) be the small angle \(\Delta\theta\) . If the magnitude of the velocity is called \(v\) , then of course
+\[
+\begin{equation*}
+\Delta v_\perp=v\,\Delta\theta
+\end{equation*}
+\]
+and the acceleration \(a\) will be
+\[
+\begin{equation*}
+a_\perp=v\,(\Delta\theta/\Delta t).
+\end{equation*}
+\]
+Now we need to know \(\Delta\theta/\Delta t\) , which can be found this way: If, at the given moment, the curve is approximated as a circle of a certain radius \(R\) , then in a time \(\Delta t\) the distance \(s\) is, of course, \(v\,\Delta t\) , where \(v\) is the speed.
+\[
+\begin{equation}
+\Delta\theta=(v\,\Delta t)/R,\quad
+\text{or}\quad
+\Delta\theta/\Delta t=v/R.\notag
+\end{equation}
+\]
+Therefore, we find
+\[
+\begin{equation}
+\label{Eq:I:11:16}
+a_\perp=v^2/R,
+\end{equation}
+\]
+as we have seen before.
+
+## 11–7 Scalar product of vectors
+
+Now let us examine a little further the properties of vectors. It is easy to see that thelengthof a step in space would be the same in any coordinate system. That is, if a particular step \(\FLPr\) is represented by \(x,y,z\) , in one coordinate system, and by \(x',y',z'\) in another coordinate system, surely the distance \(r=\abs{\FLPr}\) would be the same in both. Now
+\[
+\begin{equation*}
+r=\sqrt{x^2+y^2+z^2}
+\end{equation*}
+\]
+and also
+\[
+\begin{equation*}
+r'=\sqrt{x'^2+y'^2+z'^2}.
+\end{equation*}
+\]
+So what we wish to verify is that these two quantities are equal. It is much more convenient not to bother to take the square root, so let us talk about the square of the distance; that is, let us find out whether
+\[
+\begin{equation}
+\label{Eq:I:11:17}
+x^2+y^2+z^2=x'^2+y'^2+z'^2.
+\end{equation}
+\]
+It had better be—and if we substitute Eq. (11.5) we do indeed find that it is. So we see that there are other kinds of equations which are true for any two coordinate systems.
+
+Something new is involved. We can produce a new quantity, a function of \(x\) , \(y\) , and \(z\) , called ascalar function, a quantity which has no direction but which is the same in both systems. Out of a vector we can make a scalar. We have to find a general rule for that. It is clear what the rule is for the case just considered: add the squares of the components. Let us now define a new thing, which we call \(\FLPa\cdot\FLPa\) . This is not a vector, but a scalar; it is a number that is the same in all coordinate systems, and it is defined to be the sum of the squares of the three components of the vector:
+\[
+\begin{equation}
+\label{Eq:I:11:18}
+\FLPa\cdot\FLPa=a_x^2+a_y^2+a_z^2.
+\end{equation}
+\]
+Now you say, “But with what axes?” It does not depend on the axes, the answer is the same ineveryset of axes. So we have a newkindof quantity, a newinvariantorscalarproduced by one vector “squared.” If we now define the following quantity for any two vectors \(\FLPa\) and \(\FLPb\) :
+\[
+\begin{equation}
+\label{Eq:I:11:19}
+\FLPa\cdot\FLPb=a_xb_x+a_yb_y+a_zb_z,
+\end{equation}
+\]
+we find that this quantity, calculated in the primed and unprimed systems, also stays the same. To prove it we note that it is true of \(\FLPa\cdot\FLPa\) , \(\FLPb\cdot\FLPb\) , and \(\FLPc\cdot\FLPc\) , where \(\FLPc = \FLPa + \FLPb\) . Therefore the sum of the squares \((a_x + b_x)^2
++ (a_y + b_y)^2 + (a_z + b_z)^2\) will be invariant:
+\[
+\begin{align}
+(a_x &+ b_x)^2 + (a_y + b_y)^2 +\;(a_z + b_z)^2 = \notag\\[1ex]
+\label{Eq:I:11:20}
+&(a_{x'} + b_{x'})^2 + (a_{y'} + b_{y'})^2 + (a_{z'} + b_{z'})^2.
+\end{align}
+\]
+If both sides of this equation are expanded, there will be cross products of just the type appearing in Eq. (11.19), as well as the sums of squares of the components of \(\FLPa\) and \(\FLPb\) . The invariance of terms of the form of Eq. (11.18) then leaves the cross product terms (11.19) invariant also.
+
+The quantity \(\FLPa\cdot\FLPb\) is called thescalar productof two vectors, \(\FLPa\) and \(\FLPb\) , and it has many interesting and useful properties. For instance, it is easily proved that
+\[
+\begin{equation}
+\label{Eq:I:11:21}
+\FLPa\cdot(\FLPb+\FLPc)=\FLPa\cdot\FLPb+\FLPa\cdot\FLPc.
+\end{equation}
+\]
+Also, there is a simple geometrical way to calculate \(\FLPa\cdot\FLPb\) , without having to calculate the components of \(\FLPa\) and \(\FLPb\) : \(\FLPa\cdot\FLPb\) is the product of the length of \(\FLPa\) and the length of \(\FLPb\) times the cosine of the angle between them. Why? Suppose that we choose a special coordinate system in which the \(x\) -axis lies along \(\FLPa\) ; in those circumstances, the only component of \(\FLPa\) that will be there is \(a_x\) , which is of course the whole length of \(\FLPa\) . Thus Eq. (11.19) reduces to \(\FLPa\cdot\FLPb =
+a_xb_x\) for this case, and this is the length of \(\FLPa\) times the component of \(\FLPb\) in the direction of \(\FLPa\) , that is, \(b\cos\theta\) :
+\[
+\begin{equation*}
+\FLPa\cdot\FLPb=ab\cos\theta.
+\end{equation*}
+\]
+Therefore, in that special coordinate system, we have proved that \(\FLPa\cdot\FLPb\) is the length of \(\FLPa\) times the length of \(\FLPb\) times \(\cos\theta\) . Butif it is true in one coordinate system, it is true in all, because \(\FLPa\cdot\FLPb\) is independent of the coordinate system; that is our argument.
+
+What good is the dot product? Are there any cases in physics where we need it? Yes, we need it all the time. For instance, in Chapter4the kinetic energy was called \(\tfrac{1}{2}mv^2\) , but if the object is moving in space it should be the velocity squared in the \(x\) -direction, the \(y\) -direction, and the \(z\) -direction, and so the formula for kinetic energy according to vector analysis is
+\[
+\begin{equation}
+\label{Eq:I:11:22}
+\text{K.E.}=\tfrac{1}{2}m(\FLPv\cdot\FLPv)=\tfrac{1}{2}m
+(v_x^2+v_y^2+v_z^2).
+\end{equation}
+\]
+Energy does not have direction. Momentum has direction; it is a vector, and it is the mass times the velocity vector.
+
+Another example of a dot product is the work done by a force when something is pushed from one place to the other. We have not yet defined work, but it is equivalent to the energy change, the weights lifted, when a force \(\FLPF\) acts through a distance \(\FLPs\) :
+\[
+\begin{equation}
+\label{Eq:I:11:23}
+\text{Work}=\FLPF\cdot\FLPs.
+\end{equation}
+\]
+
+It is sometimes very convenient to talk about the component of a vector in a certain direction (say the vertical direction because that is the direction of gravity). For such purposes, it is useful to invent what we call aunit vectorin the direction that we want to study. By a unit vector we mean one whose dot product with itself is equal to unity. Let us call this unit vector \(\FLPi\) ; then \(\FLPi\cdot\FLPi = 1\) . Then, if we want the component of some vector in the direction of \(\FLPi\) , we see that the dot product \(\FLPa\cdot\FLPi\) will be \(a\cos\theta\) , i.e., the component of \(\FLPa\) in the direction of \(\FLPi\) . This is a nice way to get the component; in fact, it permits us to getallthe components and to write a rather amusing formula. Suppose that in a given system of coordinates, \(x\) , \(y\) , and \(z\) , we invent three vectors: \(\FLPi\) , a unit vector in the direction \(x\) ; \(\FLPj\) , a unit vector in the direction \(y\) ; and \(\FLPk\) , a unit vector in the direction \(z\) . Note first that \(\FLPi\cdot\FLPi = 1\) . What is \(\FLPi\cdot\FLPj\) ? When two vectors are at right angles, their dot product is zero. Thus
+\[
+\begin{alignat}{6}
+&\FLPi\cdot\FLPi&&=1\notag\\[1ex]
+&\FLPi\cdot\FLPj&&=0&\quad
+&\FLPj\cdot\FLPj&&=1\notag\\[1ex]
+\label{Eq:I:11:24}
+&\FLPi\cdot\FLPk&&=0&\quad
+&\FLPj\cdot\FLPk&&=0&\quad
+&\FLPk\cdot\FLPk&&=1
+\end{alignat}
+\]
+Now with these definitions, any vector whatsoever can be written this way:
+\[
+\begin{equation}
+\label{Eq:I:11:25}
+\FLPa=a_x\FLPi+a_y\FLPj+a_z\FLPk.
+\end{equation}
+\]
+By this means we can go from the components of a vector to the vector itself.
+
+This discussion of vectors is by no means complete. However, rather than try to go more deeply into the subject now, we shall first learn to use in physical situations some of the ideas so far discussed. Then, when we have properly mastered this basic material, we shall find it easier to penetrate more deeply into the subject without getting too confused. We shall later find that it is useful to define another kind of product of two vectors, called the vector product, and written as \(\FLPa\times\FLPb\) . However, we shall undertake a discussion of such matters in a later chapter.
