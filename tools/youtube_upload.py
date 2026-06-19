@@ -285,6 +285,9 @@ def command_batch(args: argparse.Namespace) -> None:
 def command_upload(args: argparse.Namespace) -> None:
     if not args.file.exists():
         raise SystemExit(f"Video file not found: {args.file}")
+    description = args.description
+    if args.description_file:
+        description = args.description_file.read_text(encoding="utf-8")
     if args.dry_run:
         print(f"DRY RUN upload: {args.file} -> {args.title!r}")
         return
@@ -293,7 +296,7 @@ def command_upload(args: argparse.Namespace) -> None:
         youtube,
         args.file,
         title=args.title,
-        description=args.description,
+        description=description,
         privacy=args.privacy,
         category=args.category,
         tags=args.tags,
@@ -316,6 +319,7 @@ def add_common_upload_args(parser: argparse.ArgumentParser) -> None:
     parser.add_argument("--privacy", choices=["private", "unlisted", "public"], default="private")
     parser.add_argument("--category", default="27", help="YouTube category id; 27 is Education.")
     parser.add_argument("--description", default="")
+    parser.add_argument("--description-file", type=Path)
     parser.add_argument("--tags", nargs="*", default=["feynman-reader"])
     parser.add_argument("--manifest", type=Path, default=Path("youtube-upload-manifest.jsonl"))
     parser.add_argument("--dry-run", action="store_true")
