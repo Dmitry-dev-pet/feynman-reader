@@ -185,6 +185,22 @@ def append_manifest(manifest: Path, record: Dict[str, Any]) -> None:
         handle.write(json.dumps(record, ensure_ascii=False, sort_keys=True) + "\n")
 
 
+def uploaded_audio_paths(manifest: Path) -> set[str]:
+    uploaded: set[str] = set()
+    if not manifest.exists():
+        return uploaded
+    for line in manifest.read_text(encoding="utf-8").splitlines():
+        if not line.strip():
+            continue
+        try:
+            record = json.loads(line)
+        except json.JSONDecodeError:
+            continue
+        if record.get("youtube_id") and record.get("audio"):
+            uploaded.add(str(Path(record["audio"]).expanduser()))
+    return uploaded
+
+
 def title_from_template(template: str, audio: Path, index: int) -> str:
     return template.format(stem=audio.stem, name=audio.name, index=index, index1=index + 1)
 
@@ -212,6 +228,14 @@ def command_batch(args: argparse.Namespace) -> None:
     mp3s = collect_mp3s(args.input)
     if not mp3s:
         raise SystemExit(f"No mp3 files found in: {args.input}")
+    if args.skip_uploaded:
+        uploaded = uploaded_audio_paths(args.manifest)
+        before = len(mp3s)
+        mp3s = [audio for audio in mp3s if str(audio.expanduser()) not in uploaded]
+        print(f"Skipping {before - len(mp3s)} already uploaded file(s) from {args.manifest}")
+        if not mp3s:
+            print("Nothing left to upload.")
+            return
 
     youtube = None
     if args.upload and not args.dry_run:
@@ -324,6 +348,7 @@ def build_parser() -> argparse.ArgumentParser:
     batch.add_argument("--audio-bitrate", default="192k")
     batch.add_argument("--overwrite", action="store_true")
     batch.add_argument("--upload", action="store_true")
+    batch.add_argument("--skip-uploaded", action="store_true")
     add_common_upload_args(batch)
     batch.set_defaults(func=command_batch)
 
