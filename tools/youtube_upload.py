@@ -18,7 +18,10 @@ from pathlib import Path
 from typing import Any, Dict, Iterable, List, Optional
 
 
-SCOPES = ["https://www.googleapis.com/auth/youtube.upload"]
+SCOPES = [
+    "https://www.googleapis.com/auth/youtube.upload",
+    "https://www.googleapis.com/auth/youtube.force-ssl",
+]
 DEFAULT_COLOR = "0x111827"
 DEFAULT_SIZE = "1920x1080"
 DEFAULT_FPS = "1"
@@ -113,6 +116,9 @@ def load_youtube_client(client_secrets: Path, token_file: Path) -> Any:
     creds = None
     if token_file.exists():
         creds = Credentials.from_authorized_user_file(str(token_file), SCOPES)
+
+    if creds and not creds.has_scopes(SCOPES):
+        creds = None
 
     if creds and creds.expired and creds.refresh_token:
         creds.refresh(Request())
@@ -313,6 +319,27 @@ def command_upload(args: argparse.Namespace) -> None:
     print(record["youtube_url"])
 
 
+def command_set_privacy(args: argparse.Namespace) -> None:
+    if args.dry_run:
+        for video_id in args.video_id:
+            print(f"DRY RUN set privacy: {video_id} -> {args.privacy}")
+        return
+    youtube = load_youtube_client(args.client_secrets, args.token_file)
+    for video_id in args.video_id:
+        response = youtube.videos().update(
+            part="status",
+            body={
+                "id": video_id,
+                "status": {
+                    "privacyStatus": args.privacy,
+                    "selfDeclaredMadeForKids": False,
+                },
+            },
+        ).execute()
+        privacy = response.get("status", {}).get("privacyStatus", "unknown")
+        print(f"{video_id}: {privacy}")
+
+
 def add_common_upload_args(parser: argparse.ArgumentParser) -> None:
     parser.add_argument("--client-secrets", type=Path, default=Path("youtube-client-secrets.json"))
     parser.add_argument("--token-file", type=Path, default=Path("youtube-token.json"))
@@ -343,6 +370,14 @@ def build_parser() -> argparse.ArgumentParser:
     upload.add_argument("--title", required=True)
     add_common_upload_args(upload)
     upload.set_defaults(func=command_upload)
+
+    set_privacy = subparsers.add_parser("set-privacy", help="Change video privacy.")
+    set_privacy.add_argument("video_id", nargs="+")
+    set_privacy.add_argument("--client-secrets", type=Path, default=Path("youtube-client-secrets.json"))
+    set_privacy.add_argument("--token-file", type=Path, default=Path("youtube-token.json"))
+    set_privacy.add_argument("--privacy", choices=["private", "unlisted", "public"], required=True)
+    set_privacy.add_argument("--dry-run", action="store_true")
+    set_privacy.set_defaults(func=command_set_privacy)
 
     batch = subparsers.add_parser("batch", help="Render a directory of MP3s, optionally upload.")
     batch.add_argument("input", type=Path, help="Directory of mp3 files, or one mp3 file.")
