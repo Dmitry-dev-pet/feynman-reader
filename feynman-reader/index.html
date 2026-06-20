@@ -3,6 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
   <title>Фейнмановские лекции по физике / The Feynman Lectures on Physics</title>
   <link rel="stylesheet" href="reader-index.css">
 </head>
@@ -34,7 +35,7 @@
     <h2 class="section-title" data-i18n data-ru="Аудио" data-en="Audio">Аудио</h2>
     <section class="audio-panel" aria-label="Audio archive">
       <div class="audio-frame-wrap">
-        <iframe id="audio-player" title="Feynman Reader audio" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe id="audio-player" title="Feynman Reader audio" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
       </div>
       <div class="audio-side">
         <div class="audio-tabs" id="audio-tabs" role="tablist" aria-label="Audio videos"></div>
@@ -42,6 +43,7 @@
           <span class="kicker" id="audio-kicker">YouTube</span>
           <strong id="audio-title"></strong>
           <a class="action" id="audio-youtube-link" href="#" target="_blank" rel="noopener">YouTube</a>
+          <p class="audio-local-warning" id="audio-local-warning">YouTube embed may not play from file://. Open the GitHub Pages URL.</p>
         </div>
         <div class="chapter-list" id="audio-chapters" aria-label="Audio chapters"></div>
       </div>
@@ -64,6 +66,7 @@
     const audioKicker = document.getElementById("audio-kicker");
     const audioChapters = document.getElementById("audio-chapters");
     const audioYoutubeLink = document.getElementById("audio-youtube-link");
+    const audioLocalWarning = document.getElementById("audio-local-warning");
     const storage = {
       get(key, fallbackValue) {
         try { return localStorage.getItem(key) ?? fallbackValue; } catch (_) { return fallbackValue; }
@@ -224,6 +227,9 @@
         modestbranding: "1",
         start: String(start)
       });
+      if (/^https?:$/.test(window.location.protocol)) {
+        params.set("origin", window.location.origin);
+      }
       if (autoplay) params.set("autoplay", "1");
       return `https://www.youtube-nocookie.com/embed/${video.youtubeId}?${params}`;
     };
@@ -267,6 +273,9 @@
       }));
     };
     setTheme(storage.get(themeKey, "light"));
+    if (audioLocalWarning) {
+      audioLocalWarning.hidden = window.location.protocol !== "file:";
+    }
     if (continueLink) {
       continueLink.dataset.defaultRu = "../feynman-html-ru/volume-I-reference-guided-inline-svgmath/chapters/ch01.html";
       continueLink.dataset.defaultEn = "../feynman-html-en/volume-I-reference-guided-inline-svgmath/chapters/ch01.html";
