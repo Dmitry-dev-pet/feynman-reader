@@ -325,19 +325,24 @@ def command_set_privacy(args: argparse.Namespace) -> None:
             print(f"DRY RUN set privacy: {video_id} -> {args.privacy}")
         return
     youtube = load_youtube_client(args.client_secrets, args.token_file)
+    existing = youtube.videos().list(part="status", id=",".join(args.video_id)).execute()
+    statuses = {item["id"]: item.get("status", {}) for item in existing.get("items", [])}
     for video_id in args.video_id:
+        status = dict(statuses.get(video_id, {}))
+        status["privacyStatus"] = args.privacy
+        status["selfDeclaredMadeForKids"] = status.get("selfDeclaredMadeForKids", False)
+        status["embeddable"] = True
         response = youtube.videos().update(
             part="status",
             body={
                 "id": video_id,
-                "status": {
-                    "privacyStatus": args.privacy,
-                    "selfDeclaredMadeForKids": False,
-                },
+                "status": status,
             },
         ).execute()
-        privacy = response.get("status", {}).get("privacyStatus", "unknown")
-        print(f"{video_id}: {privacy}")
+        updated_status = response.get("status", {})
+        privacy = updated_status.get("privacyStatus", "unknown")
+        embeddable = updated_status.get("embeddable", "unknown")
+        print(f"{video_id}: {privacy}, embeddable={embeddable}")
 
 
 def add_common_upload_args(parser: argparse.ArgumentParser) -> None:
