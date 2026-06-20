@@ -16,7 +16,7 @@ DEFAULT_MAX_SECONDS = 11 * 3600 + 50 * 60
 
 
 @dataclass
-class AudioItem:
+class MediaItem:
     path: Path
     duration: float
 
@@ -38,14 +38,14 @@ def natural_key(path: Path) -> tuple[int, int, str]:
     return chapter, variant, path.name
 
 
-def collect(root: Path) -> List[AudioItem]:
-    files = sorted(root.glob("*.mp3"), key=natural_key)
-    return [AudioItem(path=file, duration=duration(file)) for file in files]
+def collect(root: Path, pattern: str) -> List[MediaItem]:
+    files = sorted(root.glob(pattern), key=natural_key)
+    return [MediaItem(path=file, duration=duration(file)) for file in files]
 
 
-def split_parts(items: Iterable[AudioItem], max_seconds: float) -> List[List[AudioItem]]:
-    parts: List[List[AudioItem]] = []
-    current: List[AudioItem] = []
+def split_parts(items: Iterable[MediaItem], max_seconds: float) -> List[List[MediaItem]]:
+    parts: List[List[MediaItem]] = []
+    current: List[MediaItem] = []
     total = 0.0
     for item in items:
         if current and total + item.duration > max_seconds:
@@ -70,6 +70,7 @@ def chapter_label(path: Path) -> str:
     stem = path.stem
     stem = stem.replace("-notebooklm-audio-deep-dive", " deep dive")
     stem = stem.replace("-notebooklm-audio", " short audio")
+    stem = stem.replace("-notebooklm-video", " video")
     return stem
 
 
@@ -83,7 +84,7 @@ def write_part_files(
     title: str,
     part_index: int,
     total_parts: int,
-    items: List[AudioItem],
+    items: List[MediaItem],
 ) -> tuple[Path, Path, Path]:
     out_dir.mkdir(parents=True, exist_ok=True)
     base = out_dir / f"{slug}-part-{part_index:02d}"
@@ -98,12 +99,12 @@ def write_part_files(
     for item in items:
         lines.append(f"{fmt_time(cursor)} {chapter_label(item.path)}")
         cursor += item.duration
-    lines += ["", "Uploaded as private archive media for Feynman Reader."]
+    lines += ["", "Uploaded as archive media for Feynman Reader."]
     desc_path.write_text("\n".join(lines) + "\n", encoding="utf-8")
     return list_path, desc_path, video_path
 
 
-def render(list_path: Path, video_path: Path, overwrite: bool) -> None:
+def render_audio(list_path: Path, video_path: Path, overwrite: bool) -> None:
     cmd = ["ffmpeg"]
     cmd.append("-y" if overwrite else "-n")
     cmd += [
@@ -140,20 +141,42 @@ def render(list_path: Path, video_path: Path, overwrite: bool) -> None:
     subprocess.run(cmd, check=True)
 
 
+def render_video(list_path: Path, video_path: Path, overwrite: bool) -> None:
+    cmd = ["ffmpeg"]
+    cmd.append("-y" if overwrite else "-n")
+    cmd += [
+        "-f",
+        "concat",
+        "-safe",
+        "0",
+        "-i",
+        str(list_path),
+        "-c",
+        "copy",
+        "-movflags",
+        "+faststart",
+        str(video_path),
+    ]
+    print("+ " + " ".join(cmd))
+    subprocess.run(cmd, check=True)
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--root", type=Path, required=True)
     parser.add_argument("--title", required=True)
     parser.add_argument("--slug", required=True)
+    parser.add_argument("--pattern", default="*.mp3")
+    parser.add_argument("--mode", choices=["audio", "video-copy"], default="audio")
     parser.add_argument("--out-dir", type=Path, default=Path("youtube-compilations"))
     parser.add_argument("--max-seconds", type=float, default=DEFAULT_MAX_SECONDS)
     parser.add_argument("--render", action="store_true")
     parser.add_argument("--overwrite", action="store_true")
     args = parser.parse_args()
 
-    items = collect(args.root)
+    items = collect(args.root, args.pattern)
     if not items:
-        raise SystemExit(f"No mp3 files found in {args.root}")
+        raise SystemExit(f"No files matching {args.pattern} found in {args.root}")
     parts = split_parts(items, args.max_seconds)
     print(f"items={len(items)} parts={len(parts)} total_hours={sum(item.duration for item in items) / 3600:.2f}")
     for index, part in enumerate(parts, 1):
@@ -161,7 +184,10 @@ def main() -> int:
         list_path, desc_path, video_path = write_part_files(args.out_dir, args.slug, args.title, index, len(parts), part)
         print(f"part={index} files={len(part)} duration={fmt_time(part_seconds)} list={list_path} desc={desc_path} video={video_path}")
         if args.render:
-            render(list_path, video_path, args.overwrite)
+            if args.mode == "audio":
+                render_audio(list_path, video_path, args.overwrite)
+            else:
+                render_video(list_path, video_path, args.overwrite)
     return 0
 
 
