@@ -31,6 +31,21 @@
     <section class="material-grid">
       <article class="material-card"><span class="kicker">NotebookLM</span><strong data-i18n data-ru="Учебные материалы" data-en="Study materials">Учебные материалы</strong><span class="meta">Volume I</span><div class="material-actions"><a class="action" data-reader-link data-i18n-link href="../feynman-html-ru/volume-I-reference-guided-inline-svgmath/chapters/ch01.html#study-panel" data-href-ru="../feynman-html-ru/volume-I-reference-guided-inline-svgmath/chapters/ch01.html#study-panel" data-href-en="../feynman-html-en/volume-I-reference-guided-inline-svgmath/chapters/ch01.html#study-panel" data-ru="Открыть" data-en="Open">Открыть</a></div></article><article class="material-card"><span class="kicker">TIPS</span><strong data-i18n data-ru="Советы Фейнмана" data-en="Feynman&#x27;s Tips on Physics">Советы Фейнмана</strong><span class="meta">PDF</span><div class="material-actions"><a class="action" data-reader-link data-i18n-link href="../feynman-tips-ru-en/release/tips-ru-en-2026-06-14-v5-dom-hybrid/ru/feynmans-tips-ru-full-dom-hybrid-linked.pdf" data-href-ru="../feynman-tips-ru-en/release/tips-ru-en-2026-06-14-v5-dom-hybrid/ru/feynmans-tips-ru-full-dom-hybrid-linked.pdf" data-href-en="../feynman-tips-ru-en/release/tips-ru-en-2026-06-14-v5-dom-hybrid/en/feynmans-tips-en-full-dom-hybrid-linked.pdf" data-ru="Открыть" data-en="Open">Открыть</a></div></article><article class="material-card"><span class="kicker">Exercises</span><strong data-i18n data-ru="Задачник и упражнения" data-en="Exercises and Problems">Задачник и упражнения</strong><span class="meta">source index</span><div class="material-actions"><a class="action" data-reader-link data-i18n-link href="../feynman-exercises-index/index.html" data-href-ru="../feynman-exercises-index/index.html" data-href-en="../feynman-exercises-index/index.html" data-ru="Открыть" data-en="Open">Открыть</a></div></article>
     </section>
+    <h2 class="section-title" data-i18n data-ru="Аудио" data-en="Audio">Аудио</h2>
+    <section class="audio-panel" aria-label="Audio archive">
+      <div class="audio-frame-wrap">
+        <iframe id="audio-player" title="Feynman Reader audio" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      <div class="audio-side">
+        <div class="audio-tabs" id="audio-tabs" role="tablist" aria-label="Audio videos"></div>
+        <div class="audio-current">
+          <span class="kicker" id="audio-kicker">YouTube</span>
+          <strong id="audio-title"></strong>
+          <a class="action" id="audio-youtube-link" href="#" target="_blank" rel="noopener">YouTube</a>
+        </div>
+        <div class="chapter-list" id="audio-chapters" aria-label="Audio chapters"></div>
+      </div>
+    </section>
     <p class="quiet-stats" data-i18n data-ru="Локально собрано: 3 тома, 115 глав, 702 разделов, 1038 рисунков, 12644 формул." data-en="Local build: 3 volumes, 115 chapters, 702 sections, 1038 figures, 12644 formulas.">Локально собрано: 3 тома, 115 глав, 702 разделов, 1038 рисунков, 12644 формул.</p>
   </main>
   <script>
@@ -38,10 +53,17 @@
     const lastEntryKey = "flp-reader-last-entry-v2";
     const themeKey = "flp-reader-theme";
     const languageKey = "flp-reader-language";
+    const audioKey = "flp-reader-audio-video";
     const fallback = "../feynman-html-ru/volume-I-reference-guided-inline-svgmath/chapters/ch01.html";
     const continueLink = document.getElementById("continue-link");
     const themeButton = document.querySelector('[data-reader-action="theme"]');
     const languageButtons = Array.from(document.querySelectorAll("[data-reader-lang]"));
+    const audioPlayer = document.getElementById("audio-player");
+    const audioTabs = document.getElementById("audio-tabs");
+    const audioTitle = document.getElementById("audio-title");
+    const audioKicker = document.getElementById("audio-kicker");
+    const audioChapters = document.getElementById("audio-chapters");
+    const audioYoutubeLink = document.getElementById("audio-youtube-link");
     const storage = {
       get(key, fallbackValue) {
         try { return localStorage.getItem(key) ?? fallbackValue; } catch (_) { return fallbackValue; }
@@ -84,6 +106,165 @@
         button.classList.toggle("is-active", active);
         button.setAttribute("aria-pressed", active ? "true" : "false");
       });
+      if (selectedAudioId) renderAudio(selectedAudioId);
+    };
+    const audioVideos = [
+      {
+        id: "ru-1",
+        youtubeId: "GFbDrD3clBg",
+        kicker: "RU / Volume I",
+        title: { ru: "Том I - аудио, часть 1", en: "Volume I audio - part 1" },
+        tab: { ru: "RU 1", en: "RU 1" },
+        chapters: [
+          ["00:00:00", "ch01 short audio"],
+          ["00:02:53", "ch01 deep dive"],
+          ["00:22:07", "ch02 deep dive"],
+          ["00:46:11", "ch03 deep dive"],
+          ["01:01:42", "ch04 deep dive"],
+          ["01:28:22", "ch05 deep dive"],
+          ["01:47:06", "ch06 deep dive"],
+          ["02:10:16", "ch07 deep dive"],
+          ["02:31:24", "ch08 deep dive"],
+          ["02:49:26", "ch09 deep dive"],
+          ["03:02:05", "ch10 deep dive"],
+          ["03:17:08", "ch11 deep dive"],
+          ["03:39:07", "ch12 deep dive"],
+          ["04:02:37", "ch13 deep dive"],
+          ["04:26:33", "ch14 deep dive"],
+          ["04:57:28", "ch15 deep dive"],
+          ["05:15:43", "ch16 deep dive"],
+          ["05:39:43", "ch17 deep dive"],
+          ["05:55:20", "ch18 deep dive"],
+          ["06:16:15", "ch19 deep dive"],
+          ["06:34:56", "ch20 deep dive"],
+          ["06:56:04", "ch21 deep dive"],
+          ["07:19:09", "ch22 deep dive"],
+          ["07:39:54", "ch23 deep dive"],
+          ["08:03:42", "ch24 deep dive"],
+          ["08:23:41", "ch25 deep dive"],
+          ["08:40:46", "ch26 deep dive"],
+          ["09:03:00", "ch27 deep dive"],
+          ["09:30:06", "ch28 deep dive"],
+          ["09:57:04", "ch29 deep dive"],
+          ["10:22:45", "ch30 deep dive"],
+          ["10:37:41", "ch31 deep dive"],
+          ["11:00:08", "ch32 deep dive"],
+          ["11:14:05", "ch33 deep dive"]
+        ]
+      },
+      {
+        id: "ru-2",
+        youtubeId: "hJWbZRIFZc4",
+        kicker: "RU / Volume I",
+        title: { ru: "Том I - аудио, часть 2", en: "Volume I audio - part 2" },
+        tab: { ru: "RU 2", en: "RU 2" },
+        chapters: [
+          ["00:00:00", "ch34 deep dive"],
+          ["00:24:22", "ch35 deep dive"],
+          ["00:47:01", "ch36 deep dive"],
+          ["01:06:34", "ch37 deep dive"],
+          ["01:28:23", "ch38 deep dive"],
+          ["01:49:34", "ch39 deep dive"],
+          ["02:11:20", "ch40 deep dive"],
+          ["02:37:18", "ch41 deep dive"],
+          ["02:56:41", "ch42 deep dive"],
+          ["03:15:05", "ch43 deep dive"],
+          ["03:39:39", "ch44 deep dive"],
+          ["04:09:32", "ch45 deep dive"],
+          ["04:35:57", "ch46 deep dive"],
+          ["04:54:15", "ch47 deep dive"],
+          ["05:09:00", "ch48 deep dive"],
+          ["05:25:45", "ch49 deep dive"],
+          ["05:46:50", "ch50 deep dive"],
+          ["06:03:46", "ch51 deep dive"],
+          ["06:18:45", "ch52 deep dive"]
+        ]
+      },
+      {
+        id: "en-1",
+        youtubeId: "tmn23ZbuPIA",
+        kicker: "EN / Volume I",
+        title: { ru: "Volume I - audio", en: "Volume I audio" },
+        tab: { ru: "EN", en: "EN" },
+        chapters: [
+          ["00:00:00", "ch01 deep dive"],
+          ["00:22:51", "ch02 deep dive"],
+          ["00:45:32", "ch03 deep dive"],
+          ["01:08:09", "ch04 deep dive"],
+          ["01:31:18", "ch05 deep dive"],
+          ["01:54:54", "ch06 deep dive"],
+          ["02:14:28", "ch07 deep dive"],
+          ["02:36:40", "ch08 deep dive"],
+          ["03:00:11", "ch09 deep dive"],
+          ["03:23:39", "ch10 deep dive"],
+          ["03:48:01", "ch11 deep dive"],
+          ["04:10:42", "ch12 deep dive"],
+          ["04:35:22", "ch13 deep dive"],
+          ["04:57:39", "ch14 deep dive"],
+          ["05:21:34", "ch16 deep dive"],
+          ["05:41:07", "ch17 deep dive"],
+          ["06:01:47", "ch18 deep dive"],
+          ["06:21:59", "ch20 deep dive"],
+          ["06:46:53", "ch22 deep dive"],
+          ["07:03:03", "ch23 deep dive"],
+          ["07:24:07", "ch24 deep dive"],
+          ["07:42:00", "ch27 deep dive"],
+          ["08:04:05", "ch28 deep dive"],
+          ["08:24:20", "ch33 deep dive"],
+          ["08:51:30", "ch38 deep dive"],
+          ["09:14:32", "ch44 deep dive"]
+        ]
+      }
+    ];
+    let selectedAudioId = storage.get(audioKey, "ru-1");
+    const timeToSeconds = (value) => value.split(":").reduce((total, part) => total * 60 + Number(part), 0);
+    const audioEmbedUrl = (video, start = 0, autoplay = false) => {
+      const params = new URLSearchParams({
+        rel: "0",
+        modestbranding: "1",
+        start: String(start)
+      });
+      if (autoplay) params.set("autoplay", "1");
+      return `https://www.youtube-nocookie.com/embed/${video.youtubeId}?${params}`;
+    };
+    const renderAudio = (videoId, start = 0, autoplay = false) => {
+      if (!audioPlayer || !audioTabs || !audioChapters) return;
+      const language = document.body.dataset.language === "en" ? "en" : "ru";
+      const video = audioVideos.find((item) => item.id === videoId) || audioVideos[0];
+      selectedAudioId = video.id;
+      storage.set(audioKey, video.id);
+      audioTabs.replaceChildren(...audioVideos.map((item) => {
+        const button = document.createElement("button");
+        button.className = `audio-tab${item.id === video.id ? " is-active" : ""}`;
+        button.type = "button";
+        button.dataset.audioVideo = item.id;
+        button.setAttribute("role", "tab");
+        button.setAttribute("aria-selected", item.id === video.id ? "true" : "false");
+        button.textContent = item.tab[language];
+        return button;
+      }));
+      audioPlayer.src = audioEmbedUrl(video, start, autoplay);
+      audioPlayer.title = video.title[language];
+      if (audioTitle) audioTitle.textContent = video.title[language];
+      if (audioKicker) audioKicker.textContent = video.kicker;
+      if (audioYoutubeLink) {
+        audioYoutubeLink.href = `https://youtu.be/${video.youtubeId}${start ? `?t=${start}` : ""}`;
+      }
+      audioChapters.replaceChildren(...video.chapters.map(([time, label]) => {
+        const button = document.createElement("button");
+        button.className = "chapter-btn";
+        button.type = "button";
+        button.dataset.audioVideo = video.id;
+        button.dataset.audioTime = String(timeToSeconds(time));
+        const timeNode = document.createElement("span");
+        timeNode.className = "chapter-time";
+        timeNode.textContent = time;
+        const labelNode = document.createElement("span");
+        labelNode.className = "chapter-name";
+        labelNode.textContent = label;
+        button.append(timeNode, labelNode);
+        return button;
+      }));
     };
     setTheme(storage.get(themeKey, "light"));
     if (continueLink) {
@@ -91,7 +272,13 @@
       continueLink.dataset.defaultEn = "../feynman-html-en/volume-I-reference-guided-inline-svgmath/chapters/ch01.html";
     }
     setLanguage(storage.get(languageKey, "ru"));
+    renderAudio(selectedAudioId);
     document.addEventListener("click", (event) => {
+      const audioVideoButton = event.target.closest("[data-audio-video]");
+      if (audioVideoButton) {
+        renderAudio(audioVideoButton.dataset.audioVideo, Number(audioVideoButton.dataset.audioTime || 0), Boolean(audioVideoButton.dataset.audioTime));
+        return;
+      }
       const button = event.target.closest("[data-reader-action]");
       if (button?.dataset.readerAction === "theme") {
         setTheme(document.body.dataset.theme === "dark" ? "light" : "dark");
