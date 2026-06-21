@@ -13,6 +13,8 @@ from urllib.parse import quote
 
 ROOT = Path(__file__).resolve().parents[1]
 BASE_URL = "https://dmitry-dev-pet.github.io/feynman-reader/"
+FAVICON_URL = BASE_URL + "feynman-reader/favicon-192.png"
+APPLE_TOUCH_ICON_URL = BASE_URL + "feynman-reader/apple-touch-icon.png"
 TODAY = date.today().isoformat()
 
 VOLUMES = {
@@ -150,6 +152,8 @@ def seo_block(path: Path, text: str, *, noindex: bool = False) -> str:
     lines.extend(
         [
             f'<link rel="canonical" href="{escape(canonical, quote=True)}">',
+            f'<link rel="icon" type="image/png" sizes="192x192" href="{escape(FAVICON_URL, quote=True)}">',
+            f'<link rel="apple-touch-icon" href="{escape(APPLE_TOUCH_ICON_URL, quote=True)}">',
             f'<meta property="og:title" content="{escape(title, quote=True)}">',
             f'<meta property="og:description" content="{escape(description, quote=True)}">',
             f'<meta property="og:type" content="{og_type}">',
