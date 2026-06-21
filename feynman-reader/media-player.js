@@ -314,6 +314,26 @@
     showMediaSection();
   };
 
+  const openLegacyChapterMediaHash = () => {
+    const hash = decodeURIComponent(window.location.hash || "");
+    if (!hash.startsWith("#chapter-media") || panel) return;
+    const audio = cards.find(isAudioCard);
+    const video = cards.find((card) => !isAudioCard(card));
+    if (hash.includes("audio") && audio) {
+      openStudyAudio(audio);
+      return;
+    }
+    if ((hash.includes("watch") || hash.includes("video")) && video) {
+      scrollToStudyVideo(video);
+      return;
+    }
+    if (video) {
+      scrollToStudyVideo(video);
+    } else if (audio) {
+      openStudyAudio(audio);
+    }
+  };
+
   const injectToolbarControls = () => {
     const toolbar = document.querySelector(".reader-toolbar");
     const title = toolbar?.querySelector(".toolbar-title");
@@ -395,9 +415,11 @@
   removeInlineStudyReports();
   normalizeRetiredStudyHash();
   openStudyMediaHash();
+  openLegacyChapterMediaHash();
   window.addEventListener("hashchange", () => {
     normalizeRetiredStudyHash();
     openStudyMediaHash();
+    openLegacyChapterMediaHash();
     closeEmptyStudyWorkspace();
   });
   window.addEventListener("hashchange", openPanelFromHash);
