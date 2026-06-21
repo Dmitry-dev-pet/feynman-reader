@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Глава 5. Спин один: Учебное пособие - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch05.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1 id="глава-5-спин-один-учебное-пособие">Глава 5. Спин один: Учебное
+пособие</h1>
+<p>Данное пособие систематизирует основные концепции главы, посвященной
+поведению частиц со спином 1, анализирует квантовомеханический подход к
+описанию состояний и предоставляет инструменты для самопроверки.</p>
+<h2 id="i-ключевые-понятия">I. Ключевые понятия</h2>
+<h3 id="1-опыт-штерна--герлаха-для-частиц-со-спином-1">1. Опыт Штерна —
+Герлаха для частиц со спином 1</h3>
+<p>В неоднородном магнитном поле пучок частиц со спином 1 расщепляется
+ровно на <strong>три пучка</strong>. Это количественное различие
+определяет сорт атома и его состояние. В системе координат, где
+магнитное поле и его градиент направлены по оси
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>z</mi><annotation encoding="application/x-tex">z</annotation></semantics></math>,
+эти пучки соответствуют трем состояниям:</p>
+<ul>
+<li><strong>Плюс-состояние (+)</strong>: отклонение вверх.</li>
+<li><strong>Нуль-состояние (0)</strong>: отсутствие отклонения
+(центральный путь).</li>
+<li><strong>Минус-состояние (-)</strong>: отклонение вниз.</li>
+</ul>
+<h3 id="2-фильтрация-и-поляризация">2. Фильтрация и поляризация</h3>
+<ul>
+<li><strong>Фильтр</strong>: прибор Штерна — Герлаха, в котором
+перекрыты определенные пути (каналы).</li>
+<li><strong>Поляризованный (отфильтрованный) пучок</strong>: пучок, в
+котором все атомы находятся в одном определенном состоянии. После
+прохождения через первый фильтр (например, пропускающий только «+»),
+поведение атомов во втором идентичном фильтре становится полностью
+предсказуемым.</li>
+</ul>
+<h3 id="3-усовершенствованный-прибор-штерна--герлаха">3.
+«Усовершенствованный» прибор Штерна — Герлаха</h3>
+<p>Это воображаемая установка из трех последовательных магнитов:</p>
+<ol type="1">
+<li><strong>Первый магнит</strong>: разделяет пучок на три.</li>
+<li><strong>Второй магнит</strong>: имеет противоположную полярность и
+вдвое большую длину; искривляет пути обратно к оси.</li>
+<li><strong>Третий магнит</strong>: сводит пучки в одну точку,
+восстанавливая исходное направление движения. Этот прибор позволяет
+проводить «чистые» эксперименты, сводя частицы в одну точку с нулевой
+скоростью для анализа их внутренних состояний (спина) без учета побочных
+эффектов движения.</li>
+</ol>
+<h3 id="4-амплитуды-вероятности-и-матрицы">4. Амплитуды вероятности и
+матрицы</h3>
+<p>Квантовомеханическое описание основывается на комплексных числах —
+<strong>амплитудах перехода</strong>.</p>
+<ul>
+<li>Символ
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⟨</mo><mi>χ</mi><mo stretchy="false" form="prefix">|</mo><mi>ϕ</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">\langle \chi | \phi \rangle</annotation></semantics></math>
+обозначает амплитуду того, что состояние
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>
+будет обнаружено как состояние
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>χ</mi><annotation encoding="application/x-tex">\chi</annotation></semantics></math>.</li>
+<li><strong>Вероятность</strong> события равна квадрату модуля
+амплитуды:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mo stretchy="false" form="prefix">⟨</mo><mi>χ</mi><mo stretchy="false" form="prefix">|</mo><mi>ϕ</mi><mo stretchy="false" form="postfix">⟩</mo><msup><mo stretchy="false" form="prefix">|</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">|\langle \chi | \phi \rangle|^2</annotation></semantics></math>.</li>
+<li><strong>Матрица</strong>: совокупность девяти чисел (для спина 1),
+полностью описывающая прибор или переход между базисными
+состояниями.</li>
+</ul>
+<h3 id="5-три-фундаментальных-закона-амплитуд">5. Три фундаментальных
+закона амплитуд</h3>
+<p>Любая квантовомеханическая система описывается набором базисных
+состояний
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mo>,</mo><mi>j</mi></mrow><annotation encoding="application/x-tex">i, j</annotation></semantics></math>,
+для которых справедливы следующие правила:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Закон</th>
+<th style="text-align: left;">Формула</th>
+<th style="text-align: left;">Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>I</strong></td>
+<td style="text-align: left;">$\langle j</td>
+<td style="text-align: left;">i \rangle = \delta_{ji}$</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>II</strong></td>
+<td style="text-align: left;">$\langle \chi</td>
+<td style="text-align: left;">\phi \rangle = \sum_i \langle \chi</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>III</strong></td>
+<td style="text-align: left;">$\langle \phi</td>
+<td style="text-align: left;">\chi \rangle = \langle \chi</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="ii-проверочные-вопросы-краткие-ответы">II. Проверочные вопросы
+(краткие ответы)</h2>
+<ol type="1">
+<li><strong>На сколько пучков расщепляется пучок частиц со спином 1 в
+опыте Штерна — Герлаха?</strong>
+<ul>
+<li>На три пучка.</li>
+</ul></li>
+<li><strong>Зависит ли будущее поведение отфильтрованного пучка от его
+предыстории до попадания в фильтр?</strong>
+<ul>
+<li>Нет, поведение в определенном базисном состоянии зависит только от
+природы этого состояния.</li>
+</ul></li>
+<li><strong>Что произойдет, если в «усовершенствованном» приборе открыть
+все три канала?</strong>
+<ul>
+<li>Атомы вернутся в исходное состояние, информация о первоначальном
+состоянии (например, «+S») полностью сохранится, как если бы прибора не
+было.</li>
+</ul></li>
+<li><strong>Как вычислить вероятность того, что атом из состояния (+S)
+перейдет в состояние (0T)?</strong>
+<ul>
+<li>Нужно взять квадрат модуля амплитуды:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mo stretchy="false" form="prefix">⟨</mo><mn>0</mn><mi>T</mi><mo stretchy="false" form="prefix">|</mo><mi>+</mi><mi>S</mi><mo stretchy="false" form="postfix">⟩</mo><msup><mo stretchy="false" form="prefix">|</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">|\langle 0T | +S \rangle|^2</annotation></semantics></math>.</li>
+</ul></li>
+<li><strong>Чему равна сумма вероятностей обнаружить частицу во всех
+возможных базисных состояниях ( +, 0, - )?</strong>
+<ul>
+<li>Сумма вероятностей всегда равна 1 (или 100%).</li>
+</ul></li>
+<li><strong>Почему частицу со спином 1 называют «векторной
+частицей»?</strong>
+<ul>
+<li>Потому что три амплитуды ее состояния преобразуются при повороте
+координат так же, как компоненты вектора
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi></mrow><annotation encoding="application/x-tex">x, y, z</annotation></semantics></math>).</li>
+</ul></li>
+</ol>
+<hr />
+<h2 id="iii-типичные-ошибки-при-изучении">III. Типичные ошибки при
+изучении</h2>
+<ul>
+<li><strong>Ошибка «Потери информации»</strong>: Считается, что
+информация о состоянии теряется в момент разделения пучка на три части.
+<ul>
+<li><em>Факт</em>: Информация теряется только тогда, когда ставятся
+<strong>перегородки</strong>, блокирующие каналы. Если все каналы
+открыты, происходит интерференция амплитуд, и исходное состояние
+восстанавливается.</li>
+</ul></li>
+<li><strong>Смешение классической и квантовой вероятности</strong>:
+Попытка приписать пучку из печи («неполяризованному») единую амплитуду.
+<ul>
+<li><em>Факт</em>: Неполяризованный пучок — это статистическая смесь
+состояний. Для него нужно вычислять средневзвешенную вероятность по всем
+возможным начальным состояниям, а не складывать их амплитуды.</li>
+</ul></li>
+<li><strong>Игнорирование порядка в матричном произведении</strong>:
+Предположение, что порядок следования приборов не важен
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mi>B</mi><mo>=</mo><mi>B</mi><mi>A</mi></mrow><annotation encoding="application/x-tex">AB = BA</annotation></semantics></math>).
+<ul>
+<li><em>Факт</em>: В квантовой механике порядок важен; матрица для
+последовательных приборов — это произведение матриц, где первый прибор
+записывается справа.</li>
+</ul></li>
+<li><strong>Предположение о «единственном» базисе</strong>: Поиск одного
+«правильного» набора состояний.
+<ul>
+<li><em>Факт</em>: Существует бесконечное множество базисных состояний
+(зависящих от угла поворота прибора), и все они равноправны.</li>
+</ul></li>
+</ul>
+<hr />
+<h2 id="iv-темы-для-глубокого-анализа-эссе">IV. Темы для глубокого
+анализа (эссе)</h2>
+<ol type="1">
+<li><strong>Феномен «Шалтая-Болтая» в квантовом мире</strong>:
+Проанализируйте, как возможность собрать расщепленный пучок обратно в
+исходное состояние без изменения его свойств иллюстрирует принцип
+сохранения квантовой информации и роль интерференции амплитуд.</li>
+<li><strong>Матрица преобразования как мост между
+представлениями</strong>: Объясните математическую и физическую
+необходимость матриц преобразования при переходе от одного базиса
+(например, ориентация магнита
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>S</mi><annotation encoding="application/x-tex">S</annotation></semantics></math>)
+к другому (ориентация
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>T</mi><annotation encoding="application/x-tex">T</annotation></semantics></math>).
+Почему результат физического эксперимента не зависит от выбора базиса
+для расчетов?</li>
+<li><strong>Принцип суперпозиции и базисные состояния</strong>: На
+примере уравнения
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⟨</mo><mi>χ</mi><mo stretchy="false" form="prefix">|</mo><mi>ϕ</mi><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><mo>∑</mo><mo stretchy="false" form="prefix">⟨</mo><mi>χ</mi><mo stretchy="false" form="prefix">|</mo><mi>i</mi><mo stretchy="false" form="postfix">⟩</mo><mo stretchy="false" form="prefix">⟨</mo><mi>i</mi><mo stretchy="false" form="prefix">|</mo><mi>ϕ</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">\langle \chi | \phi \rangle = \sum \langle \chi | i \rangle \langle i | \phi \rangle</annotation></semantics></math>
+раскройте суть квантовомеханического описания мира, где любое сложное
+состояние можно разложить по набору простых «чистых» базисных
+состояний.</li>
+</ol>
+<hr />
+<h2 id="v-краткий-глоссарий">V. Краткий глоссарий</h2>
+<ul>
+<li><strong>Амплитуда перехода
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⟨</mo><mi>χ</mi><mo stretchy="false" form="prefix">|</mo><mi>ϕ</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">\langle \chi | \phi \rangle</annotation></semantics></math>)</strong>:
+Комплексное число, характеризующее вероятность перехода системы из
+состояния
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>
+в состояние
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>χ</mi><annotation encoding="application/x-tex">\chi</annotation></semantics></math>.</li>
+<li><strong>Базисные состояния</strong>: Минимальный набор независимых
+состояний (для спина 1 их три), через которые можно выразить любое
+другое состояние системы.</li>
+<li><strong>Интерференция амплитуд</strong>: Процесс сложения амплитуд
+(не вероятностей!) при наличии нескольких альтернативных путей, который
+может привести как к усилению, так и к взаимному уничтожению вероятности
+события.</li>
+<li><strong>Матрица преобразования</strong>: Набор из девяти чисел,
+позволяющий пересчитать амплитуды состояния из одного представления
+(одной ориентации прибора) в другое.</li>
+<li><strong>Символ Кронекера
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>δ</mi><mrow><mi>j</mi><mi>i</mi></mrow></msub><annotation encoding="application/x-tex">\delta_{ji}</annotation></semantics></math>)</strong>:
+Математическое обозначение: равен 1, если индексы совпадают
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi><mo>=</mo><mi>i</mi></mrow><annotation encoding="application/x-tex">j=i</annotation></semantics></math>),
+и 0, если они различны
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi><mo>≠</mo><mi>i</mi></mrow><annotation encoding="application/x-tex">j \neq i</annotation></semantics></math>).
+Используется для описания независимости базисных состояний.</li>
+<li><strong>Спин 1</strong>: Характеристика частиц, пучок которых в
+опыте Штерна — Герлаха расщепляется ровно на три компоненты.</li>
+</ul>
+    </article>
+  </main>
+</body>
+</html>

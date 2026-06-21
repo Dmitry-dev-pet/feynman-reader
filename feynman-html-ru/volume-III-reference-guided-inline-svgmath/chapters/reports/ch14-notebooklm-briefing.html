@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Глава 14. Полупроводники: Аналитический отчет - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch14.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1 id="глава-14-полупроводники-аналитический-отчет">Глава 14.
+Полупроводники: Аналитический отчет</h1>
+<h2 id="исполнительное-резюме">Исполнительное резюме</h2>
+<p>Данный отчет представляет собой глубокий анализ физических принципов
+работы полупроводников, основанный на лекциях Ричарда Фейнмана. Основное
+внимание уделяется поведению электронов и «дырок» в кристаллических
+решетках, механизмам легирования, а также физике полупроводниковых
+приборов, таких как диоды и транзисторы. В основе современной
+электроники лежит управление плотностью носителей заряда и их
+энергетическими состояниями, что позволяет создавать устройства для
+выпрямления, усиления и преобразования сигналов.</p>
+<hr />
+<h2 id="1-физика-носителей-заряда-электроны-и-дырки">1. Физика носителей
+заряда: Электроны и Дырки</h2>
+<h3 id="энергетические-зоны-и-эффективная-масса">Энергетические зоны и
+эффективная масса</h3>
+<p>В полупроводниках, таких как кремний (Si) и германий (Ge), электроны
+могут находиться только в определенных полосах значений энергии —
+<strong>зонах проводимости</strong>. При низких температурах эти
+вещества являются изоляторами, но при комнатной температуре их
+проводимость возрастает.</p>
+<p>Энергия электрона
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math>
+вблизи дна зоны является квадратичной функцией его волнового числа
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math>
+(импульса):
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>=</mo><msub><mi>E</mi><mtext mathvariant="normal">min</mtext></msub><mo>+</mo><mi>α</mi><msup><mi>k</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\begin{equation} E = E_{\text{min}} + \alpha k^2 \end{equation}</annotation></semantics></math>
+Физический смысл этого уравнения заключается в том, что электрон в
+кристалле ведет себя как классическая частица с некоторой
+<strong>эффективной массой</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>m</mi><mi>n</mi></msub><annotation encoding="application/x-tex">m_n</annotation></semantics></math>,
+которая может зависеть от направления движения в некубических
+кристаллах.</p>
+<h3 id="концепция-дырки">Концепция «дырки»</h3>
+<p>Удаление электрона из нейтрального изолятора создает вакансию,
+называемую <strong>дыркой</strong>. Дырка ведет себя как частица с
+<strong>положительным зарядом</strong>, перемещающаяся сквозь кристалл.
+Математическое описание движения дырки идентично описанию электрона, но
+с иными амплитудами прыжков между узлами решетки.</p>
+<h3 id="энергия-образования-пар">Энергия образования пар</h3>
+<p>Для создания пары электрон—дырка необходимо затратить энергию, чтобы
+переместить связанный электрон в зону проводимости.</p>
+<ul>
+<li><strong>Энергия щели
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>E</mi><mtext mathvariant="normal">gap</mtext></msub><annotation encoding="application/x-tex">E_{\text{gap}}</annotation></semantics></math>):</strong>
+Минимальная энергия, требуемая для образования пары.
+<ul>
+<li>Германий:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≈</mo><mn>0.72</mn></mrow><annotation encoding="application/x-tex">\approx 0.72</annotation></semantics></math>
+эВ.</li>
+<li>Кремний:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≈</mo><mn>1.1</mn></mrow><annotation encoding="application/x-tex">\approx 1.1</annotation></semantics></math>
+эВ.</li>
+<li>Алмаз (изолятор):
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>6</mn><mi>–</mi><mn>7</mn></mrow><annotation encoding="application/x-tex">6–7</annotation></semantics></math>
+эВ.</li>
+</ul></li>
+</ul>
+<hr />
+<h2 id="2-термодинамика-и-легирование">2. Термодинамика и
+легирование</h2>
+<h3 id="тепловое-равновесие">Тепловое равновесие</h3>
+<p>При любой конечной температуре тепловые колебания решетки спонтанно
+рождают электронно-дырочные пары. Одновременно происходит процесс
+<strong>аннигиляции (рекомбинации)</strong>. В состоянии равновесия
+произведение плотностей отрицательных
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>N</mi><mi>n</mi></msub><annotation encoding="application/x-tex">N_n</annotation></semantics></math>)
+и положительных
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>N</mi><mi>p</mi></msub><annotation encoding="application/x-tex">N_p</annotation></semantics></math>)
+носителей постоянно для данной температуры:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>N</mi><mi>n</mi></msub><msub><mi>N</mi><mi>p</mi></msub><mo>=</mo><mtext mathvariant="normal">const</mtext><mo>⋅</mo><msup><mi>e</mi><mrow><mi>−</mi><msub><mi>E</mi><mtext mathvariant="normal">gap</mtext></msub><mi>/</mi><mi>κ</mi><mi>T</mi></mrow></msup></mrow><annotation encoding="application/x-tex">\begin{equation} N_n N_p = \text{const} \cdot e^{-E_{\text{gap}}/\kappa T} \end{equation}</annotation></semantics></math>
+Где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>κ</mi><annotation encoding="application/x-tex">\kappa</annotation></semantics></math>
+— постоянная Больцмана,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>T</mi><annotation encoding="application/x-tex">T</annotation></semantics></math>
+— температура. Это объясняет резкую зависимость проводимости чистых
+полупроводников от температуры.</p>
+<h3 id="типы-полупроводников">Типы полупроводников</h3>
+<p>Легирование — это внесение примесей для изменения концентрации
+носителей:</p>
+<ol type="1">
+<li><strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>-тип
+(negative):</strong> Добавление доноров (например, мышьяк, валентность 5
+в решетку Ge с валентностью 4). Лишний электрон становится свободным
+носителем.</li>
+<li><strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math>-тип
+(positive):</strong> Добавление акцепторов (например, алюминий,
+валентность 3). Атом забирает электрон у соседа, создавая подвижную
+дырку.</li>
+</ol>
+<hr />
+<h2 id="3-проводимость-и-эффект-холла">3. Проводимость и Эффект
+Холла</h2>
+<h3 id="электропроводность-sigma">Электропроводность
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>σ</mi><annotation encoding="application/x-tex">\sigma</annotation></semantics></math>)</h3>
+<p>Ток в полупроводнике обусловлен дрейфом носителей в электрическом
+поле между актами рассеяния на примесях или тепловых колебаниях. Полная
+проводимость определяется как сумма вкладов электронов и дырок:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo>=</mo><mfrac><mrow><msub><mi>N</mi><mi>n</mi></msub><msubsup><mi>q</mi><mi>n</mi><mn>2</mn></msubsup><msub><mi>τ</mi><mi>n</mi></msub></mrow><msub><mi>m</mi><mi>n</mi></msub></mfrac><mo>+</mo><mfrac><mrow><msub><mi>N</mi><mi>p</mi></msub><msubsup><mi>q</mi><mi>p</mi><mn>2</mn></msubsup><msub><mi>τ</mi><mi>p</mi></msub></mrow><msub><mi>m</mi><mi>p</mi></msub></mfrac></mrow><annotation encoding="application/x-tex">\begin{equation} \sigma = \frac{N_n q_n^2 \tau_n}{m_n} + \frac{N_p q_p^2 \tau_p}{m_p} \end{equation}</annotation></semantics></math>
+Где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>τ</mi><annotation encoding="application/x-tex">\tau</annotation></semantics></math>
+— среднее время между столкновениями,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>q</mi><annotation encoding="application/x-tex">q</annotation></semantics></math>
+— заряд.</p>
+<h3 id="эффект-холла">Эффект Холла</h3>
+<p>Этот эффект используется для определения знака и плотности носителей.
+При подаче магнитного поля
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+перпендикулярно току
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math>,
+на носители действует сила Лоренца, создающая поперечное электрическое
+поле
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>E</mi><mtext mathvariant="normal">tr</mtext></msub><annotation encoding="application/x-tex">E_{\text{tr}}</annotation></semantics></math>:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mtext mathvariant="normal">tr</mtext></msub><mo>=</mo><mi>−</mi><mfrac><mn>1</mn><mrow><mi>q</mi><mi>N</mi></mrow></mfrac><mi>j</mi><mi>B</mi></mrow><annotation encoding="application/x-tex">\begin{equation} E_{\text{tr}} = -\frac{1}{qN} jB \end{equation}</annotation></semantics></math>
+Коэффициент
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mtext mathvariant="normal">H</mtext></msub><mo>=</mo><mn>1</mn><mi>/</mi><mi>q</mi><mi>N</mi></mrow><annotation encoding="application/x-tex">R_{\text{H}} = 1/qN</annotation></semantics></math>
+называется <strong>коэффициентом Холла</strong>. Измерение знака
+возникающей разности потенциалов подтверждает существование дырочной
+проводимости (аномальный знак у металлов типа бериллия).</p>
+<hr />
+<h2 id="4-полупроводниковые-переходы-и-устройства">4. Полупроводниковые
+переходы и устройства</h2>
+<h3
+id="p-n-переход"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>−</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">p-n</annotation></semantics></math>
+переход</h3>
+<p>При контакте материалов
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+типов электроны диффундируют в
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math>-область,
+а дырки — в
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>-область.
+Это создает область пространственного заряда и <strong>внутренний
+потенциальный барьер</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math>.</p>
+<ul>
+<li><strong>Выпрямление:</strong> При подаче прямого напряжения барьер
+снижается, ток растет экспоненциально. При обратном напряжении барьер
+растет, ток ограничивается малым током утечки
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>I</mi><mn>0</mn></msub><annotation encoding="application/x-tex">I_0</annotation></semantics></math>.</li>
+<li><strong>Уравнение диода:</strong>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mo>=</mo><msub><mi>I</mi><mn>0</mn></msub><mo stretchy="false" form="prefix">(</mo><msup><mi>e</mi><mrow><mi>q</mi><mi mathvariant="normal">Δ</mi><mi>V</mi><mi>/</mi><mi>κ</mi><mi>T</mi></mrow></msup><mo>−</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\begin{equation} I = I_0 (e^{q\Delta V / \kappa T} - 1) \end{equation}</annotation></semantics></math></li>
+</ul>
+<h3 id="транзистор-структура-p-n-p">Транзистор (структура
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>−</mo><mi>n</mi><mo>−</mo><mi>p</mi></mrow><annotation encoding="application/x-tex">p-n-p</annotation></semantics></math>)</h3>
+<p>Транзистор состоит из трех областей: <strong>эмиттер</strong>,
+<strong>база</strong> (очень узкая,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≈</mo><msup><mn>10</mn><mrow><mi>−</mi><mn>3</mn></mrow></msup></mrow><annotation encoding="application/x-tex">\approx 10^{-3}</annotation></semantics></math>
+см) и <strong>коллектор</strong>.</p>
+<ol type="1">
+<li>Дырки инжектируются из эмиттера в базу при небольшом смещении.</li>
+<li>Благодаря малой толщине базы, дырки не успевают рекомбинировать и
+«собираются» коллектором, имеющим большой отрицательный потенциал.</li>
+<li><strong>Принцип усиления:</strong> Слабые изменения потенциала базы
+значительно управляют током коллектора. Отношение коллекторного тока к
+базовому может составлять 100 и более.</li>
+</ol>
+<hr />
+<h2 id="ключевые-графические-зависимости-и-их-смысл">Ключевые
+графические зависимости и их смысл</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Рисунок</th>
+<th style="text-align: left;">Описание</th>
+<th style="text-align: left;">Физический смысл</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Энергетическая
+диаграмма</strong></td>
+<td style="text-align: left;">График
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo stretchy="false" form="prefix">(</mo><mi>k</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">E(k)</annotation></semantics></math>
+(парабола)</td>
+<td style="text-align: left;">Показывает зависимость энергии от импульса
+и наличие минимальной энергии
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>E</mi><mtext mathvariant="normal">min</mtext></msub><annotation encoding="application/x-tex">E_{\text{min}}</annotation></semantics></math>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Диаграмма щели</strong></td>
+<td style="text-align: left;">Зоны проводимости электронов и дырок</td>
+<td style="text-align: left;">Вертикальное расстояние между уровнями —
+это энергия, необходимая для рождения пары.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Вольтамперная
+характеристика</strong></td>
+<td style="text-align: left;">Экспоненциальный рост тока</td>
+<td style="text-align: left;">Демонстрирует одностороннюю проводимость
+(выпрямление)
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>−</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">p-n</annotation></semantics></math>
+перехода.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Распределение
+потенциала</strong></td>
+<td style="text-align: left;">Ступенчатый график вдоль
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>−</mo><mi>n</mi><mo>−</mo><mi>p</mi></mrow><annotation encoding="application/x-tex">p-n-p</annotation></semantics></math>
+структуры</td>
+<td style="text-align: left;">Показывает, как напряжения на электродах
+создают условия для инжекции и сбора носителей.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="важные-цитаты">Важные цитаты</h2>
+<blockquote>
+<p>«Математика для дырки такая же, как для добавочного электрона... У
+дырки тоже есть энергия, связанная с волновым числом ее амплитуд
+вероятности».</p>
+</blockquote>
+<blockquote>
+<p>«Транзистор — это усилитель; небольшой ток
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>I</mi><mi>b</mi></msub><annotation encoding="application/x-tex">I_b</annotation></semantics></math>,
+проходящий через электрод базы, приведет к сильному току — раз в 100 или
+больше — через коллекторный электрод».</p>
+</blockquote>
+<hr />
+<h2 id="практические-выводы-actionable-insights">Практические выводы
+(Actionable Insights)</h2>
+<ul>
+<li><strong>Температурный контроль:</strong> Проводимость
+полупроводников критически зависит от температуры
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>−</mi><msub><mi>E</mi><mtext mathvariant="normal">gap</mtext></msub><mi>/</mi><mn>2</mn><mi>κ</mi><mi>T</mi></mrow></msup><annotation encoding="application/x-tex">e^{-E_{\text{gap}}/2\kappa T}</annotation></semantics></math>),
+что требует термостабилизации в точных приборах.</li>
+<li><strong>Оптические свойства:</strong> Пары электрон-дырка могут
+создаваться светом, что позволяет использовать
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>−</mo><mi>n</mi></mrow><annotation encoding="application/x-tex">p-n</annotation></semantics></math>
+переходы в солнечных батареях и фоторезисторах. Энергия фотона должна
+превышать
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>E</mi><mtext mathvariant="normal">gap</mtext></msub><annotation encoding="application/x-tex">E_{\text{gap}}</annotation></semantics></math>.</li>
+<li><strong>Миниатюризация:</strong> Работа транзистора критически
+зависит от толщины базы. Чем она меньше, тем выше вероятность
+прохождения носителей к коллектору без аннигиляции.</li>
+<li><strong>Диагностика материалов:</strong> Эффект Холла является
+стандартным методом для определения концентрации примесей в
+полупроводниковых материалах.</li>
+</ul>
+    </article>
+  </main>
+</body>
+</html>

@@ -1130,3 +1130,258 @@ figcaption {
     margin: 0.72in 0.62in;
   }
 }
+
+
+/* BEGIN NotebookLM reports */
+.study-mode-switch {
+  align-items: center;
+  display: flex;
+  flex: 0 1 auto;
+  flex-wrap: wrap;
+  gap: 0.25rem;
+  justify-content: center;
+}
+.study-mode-btn.is-active,
+.study-mode-btn[aria-pressed="true"] {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.study-workspace {
+  background: color-mix(in srgb, var(--paper), var(--bg) 16%);
+  border-bottom: 1px solid var(--line);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  padding: 1.25rem 1rem 1.35rem;
+}
+.study-workspace[hidden],
+.study-section[hidden] {
+  display: none;
+}
+.study-workspace-inner {
+  margin: 0 auto;
+  max-width: 76rem;
+}
+.study-workspace-header {
+  align-items: start;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+.study-workspace-header strong {
+  color: var(--accent);
+  display: block;
+  font-size: 1rem;
+  line-height: 1.2;
+}
+.study-workspace-header span {
+  color: var(--muted);
+  display: block;
+  font-size: 0.88rem;
+  line-height: 1.35;
+  margin-top: 0.2rem;
+}
+.study-grid {
+  display: grid;
+  gap: 0.65rem;
+  grid-template-columns: repeat(auto-fit, minmax(13.5rem, 1fr));
+}
+.study-media-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 26rem), 1fr));
+}
+.study-card,
+.study-media-card {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  color: var(--text);
+  display: block;
+  min-width: 0;
+  padding: 0.75rem 0.85rem;
+  text-decoration: none;
+}
+.study-card:hover,
+.study-media-card:hover {
+  border-color: var(--accent);
+}
+.study-card strong,
+.study-media-card strong {
+  color: var(--accent);
+  display: block;
+  font-size: 0.94rem;
+  line-height: 1.25;
+}
+.study-card span,
+.study-media-card span,
+.study-muted {
+  color: var(--muted);
+  display: block;
+  font-size: 0.86rem;
+  line-height: 1.35;
+  margin-top: 0.22rem;
+}
+.study-media-card summary {
+  cursor: pointer;
+  list-style: none;
+}
+.study-media-card summary::-webkit-details-marker {
+  display: none;
+}
+.study-media-card audio,
+.study-media-card video {
+  display: block;
+  margin-top: 0.65rem;
+  max-width: 100%;
+  width: 100%;
+}
+.study-youtube-embed {
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  margin-top: 0.65rem;
+  overflow: hidden;
+  width: 100%;
+}
+.study-youtube-embed iframe {
+  border: 0;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.study-youtube-link {
+  color: var(--accent);
+  display: inline-block;
+  font-size: 0.86rem;
+  margin-top: 0.55rem;
+  text-decoration: none;
+}
+.study-youtube-link:hover {
+  text-decoration: underline;
+}
+.study-file-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+.study-file-row a,
+.study-pill {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--text);
+  display: inline-flex;
+  font-size: 0.86rem;
+  padding: 0.28rem 0.6rem;
+  text-decoration: none;
+}
+.study-file-row a:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.study-empty {
+  color: var(--muted);
+  margin: 0;
+}
+.notebooklm-index-panel {
+  background: color-mix(in srgb, var(--accent-weak), var(--paper) 72%);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  margin: 1rem 0;
+  padding: 0.85rem 1rem;
+}
+.notebooklm-index-panel strong {
+  color: var(--accent);
+  display: block;
+  font-size: 0.95rem;
+  margin-bottom: 0.4rem;
+}
+.notebooklm-index-panel div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+.notebooklm-index-panel a {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--text);
+  font-size: 0.88rem;
+  padding: 0.25rem 0.6rem;
+  text-decoration: none;
+}
+.notebooklm-index-panel a:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.notebooklm-report-shell {
+  margin: 0 auto;
+  max-width: 960px;
+  padding: 2rem 1.25rem 4rem;
+}
+.notebooklm-report-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 1.25rem;
+}
+.notebooklm-report {
+  font-size: var(--reader-text-size);
+}
+.notebooklm-report h1,
+.notebooklm-report h2,
+.notebooklm-report h3 {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.18;
+}
+.notebooklm-report h1 {
+  font-size: clamp(2rem, 5vw, 3rem);
+  margin: 0 0 1rem;
+}
+.notebooklm-report h2 {
+  border-top: 1px solid var(--line);
+  margin-top: 2rem;
+  padding-top: 0.9rem;
+}
+.notebooklm-report p,
+.notebooklm-report li {
+  max-width: 72ch;
+}
+.notebooklm-report table {
+  border-collapse: collapse;
+  display: block;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  margin: 1rem 0;
+  max-width: 100%;
+  overflow-x: auto;
+}
+.notebooklm-report th,
+.notebooklm-report td {
+  border: 1px solid var(--line);
+  padding: 0.45rem 0.55rem;
+  text-align: left;
+  vertical-align: top;
+}
+.notebooklm-report th {
+  background: var(--accent-weak);
+}
+.notebooklm-report blockquote {
+  border-left: 4px solid var(--accent);
+  color: var(--muted);
+  margin-left: 0;
+  padding-left: 1rem;
+}
+@media (max-width: 860px) {
+  .study-mode-switch {
+    flex-basis: 100%;
+    justify-content: flex-start;
+    order: 2;
+  }
+  .study-workspace {
+    padding: 0.8rem 0.75rem 0.9rem;
+  }
+  .study-workspace-header {
+    align-items: start;
+  }
+}
+/* END NotebookLM reports */

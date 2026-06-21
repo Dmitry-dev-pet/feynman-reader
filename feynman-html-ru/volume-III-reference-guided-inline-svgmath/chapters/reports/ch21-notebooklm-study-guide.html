@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Глава 21. Уравнение Шредингера в классическом контексте: семинар по сверхпроводимости - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch21.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1
+id="глава-21-уравнение-шредингера-в-классическом-контексте-семинар-по-сверхпроводимости">Глава
+21. Уравнение Шредингера в классическом контексте: семинар по
+сверхпроводимости</h1>
+<p>Данный учебный конспект составлен на основе материалов лекции Ричарда
+Фейнмана и посвящен макроскопическим квантовым эффектам, в частности
+явлению сверхпроводимости. Основное внимание уделяется поведению
+волновой функции в магнитных полях и тому, как квантовомеханические
+законы проявляются в крупных, «классических» масштабах.</p>
+<hr />
+<h2 id="1-ключевые-понятия">1. Ключевые понятия</h2>
+<h3 id="квантовая-механика-в-макроскопических-масштабах">Квантовая
+механика в макроскопических масштабах</h3>
+<p>Обычно квантовые эффекты заметны только в микромире. Однако при
+экстремально низких температурах системы стремятся к основному
+(наинизшему) энергетическому состоянию. Если огромное число частиц
+оказывается в одном и том же квантовом состоянии, волновая функция
+приобретает макроскопический физический смысл, сопоставимый с
+классическими полями.</p>
+<h3 id="уравнение-шредингера-и-векторный-потенциал">Уравнение Шредингера
+и векторный потенциал</h3>
+<p>Наличие внешнего магнитного поля, описываемого векторным потенциалом
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>,
+модифицирует уравнение Шредингера.</p>
+<ul>
+<li><strong>Принцип фазового сдвига:</strong> Амплитуда перехода частицы
+из точки <em>a</em> в точку <em>b</em> в магнитном поле отличается от
+амплитуды без поля множителем:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">exp</mi><mo>&#8289;</mo></mrow><mrow><mo stretchy="true" form="prefix">[</mo><mfrac><mrow><mi>i</mi><mi>q</mi></mrow><mi>ℏ</mi></mfrac><msubsup><mo>∫</mo><mi>a</mi><mi>b</mi></msubsup><mi mathvariant="bold-italic">𝑨</mi><mo>⋅</mo><mi>d</mi><mi mathvariant="bold-italic">𝒔</mi><mo stretchy="true" form="postfix">]</mo></mrow></mrow><annotation encoding="application/x-tex">\exp\left[\frac{iq}{\hbar}\int_a^b \mathbf{A} \cdot d\mathbf{s}\right]</annotation></semantics></math></li>
+<li><strong>Модификация гамильтониана:</strong> В операторе импульса
+градиент
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>∇</mi><annotation encoding="application/x-tex">\nabla</annotation></semantics></math>
+заменяется на
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>∇</mi><mo>−</mo><mfrac><mrow><mi>i</mi><mi>q</mi></mrow><mi>ℏ</mi></mfrac><mi mathvariant="bold-italic">𝑨</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(\nabla - \frac{iq}{\hbar}\mathbf{A})</annotation></semantics></math>.</li>
+</ul>
+<h3 id="два-рода-импульсов">Два рода импульсов</h3>
+<p>В квантовой механике с магнитными полями различают два определения
+импульса:</p>
+<ol type="1">
+<li><strong>Кинематический
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mi>v</mi></mrow><annotation encoding="application/x-tex">mv</annotation></semantics></math>-импульс):</strong>
+Произведение массы на скорость
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mi mathvariant="bold-italic">𝒗</mi></mrow><annotation encoding="application/x-tex">m\mathbf{v}</annotation></semantics></math>).
+Он непосредственно связан с током вероятности.</li>
+<li><strong>Динамический
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math>-импульс):</strong>
+Математическая величина, соответствующая оператору градиента
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝒑</mi><mo>=</mo><mi>m</mi><mi mathvariant="bold-italic">𝒗</mi><mo>+</mo><mi>q</mi><mi mathvariant="bold-italic">𝑨</mi></mrow><annotation encoding="application/x-tex">\mathbf{p} = m\mathbf{v} + q\mathbf{A}</annotation></semantics></math>).
+Именно
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math>-импульс
+остается неизменным при внезапном включении магнитного поля.</li>
+</ol>
+<h3 id="природа-сверхпроводимости">Природа сверхпроводимости</h3>
+<ul>
+<li><strong>Куперовские пары:</strong> Из-за взаимодействия с решеткой
+электроны образуют связанные пары.</li>
+<li><strong>Бозе-статистика:</strong> Пара из двух электронов
+(фермионов) ведет себя как бозе-частица. При низких температурах пары
+«конденсируются» в одно и то же наинизшее квантовое состояние.</li>
+<li><strong>Волновая функция пары:</strong> Описывается как
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ψ</mi><mo>=</mo><msqrt><mi>ρ</mi></msqrt><msup><mi>e</mi><mrow><mi>i</mi><mi>θ</mi></mrow></msup></mrow><annotation encoding="application/x-tex">\psi = \sqrt{\rho} e^{i\theta}</annotation></semantics></math>,
+где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ρ</mi><annotation encoding="application/x-tex">\rho</annotation></semantics></math>
+— плотность заряда, а
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>θ</mi><annotation encoding="application/x-tex">\theta</annotation></semantics></math>
+— фаза. Плотность тока в такой системе определяется градиентом фазы и
+векторным потенциалом:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑱</mi><mo>=</mo><mfrac><mi>ℏ</mi><mi>m</mi></mfrac><mrow><mo stretchy="true" form="prefix">(</mo><mi>∇</mi><mi>θ</mi><mo>−</mo><mfrac><mi>q</mi><mi>ℏ</mi></mfrac><mi mathvariant="bold-italic">𝑨</mi><mo stretchy="true" form="postfix">)</mo></mrow><mi>ρ</mi></mrow><annotation encoding="application/x-tex">\mathbf{J} = \frac{\hbar}{m}\left(\nabla\theta - \frac{q}{\hbar}\mathbf{A}\right)\rho</annotation></semantics></math></li>
+</ul>
+<h3 id="эффект-мейсснера">Эффект Мейсснера</h3>
+<p>Сверхпроводник выталкивает магнитное поле из своего объема. Внутри
+сплошного сверхпроводника фаза
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>θ</mi><annotation encoding="application/x-tex">\theta</annotation></semantics></math>
+постоянна, и ток пропорционален векторному потенциалу
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑱</mi><mo>∼</mo><mi>−</mi><mi mathvariant="bold-italic">𝑨</mi></mrow><annotation encoding="application/x-tex">\mathbf{J} \sim -\mathbf{A}</annotation></semantics></math>),
+что известно как уравнение Лондонов. Поле проникает лишь в тонкий
+поверхностный слой глубиной
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mi>λ</mi></mrow><annotation encoding="application/x-tex">1/\lambda</annotation></semantics></math>
+(порядка
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>10</mn><mrow><mi>−</mi><mn>6</mn></mrow></msup><annotation encoding="application/x-tex">10^{-6}</annotation></semantics></math>
+см для свинца).</p>
+<h3 id="квантование-магнитного-потока">Квантование магнитного
+потока</h3>
+<p>В сверхпроводящем кольце магнитный поток
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="normal">Φ</mi><annotation encoding="application/x-tex">\Phi</annotation></semantics></math>
+не может быть произвольным. Из требования однозначности волновой функции
+(при обходе кольца фаза
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>θ</mi><annotation encoding="application/x-tex">\theta</annotation></semantics></math>
+должна меняться на
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>π</mi><mi>n</mi></mrow><annotation encoding="application/x-tex">2\pi n</annotation></semantics></math>)
+следует, что поток квантуется:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Φ</mi><mo>=</mo><mi>n</mi><mfrac><mrow><mn>2</mn><mi>π</mi><mi>ℏ</mi></mrow><mi>q</mi></mfrac></mrow><annotation encoding="application/x-tex">\Phi = n \frac{2\pi\hbar}{q}</annotation></semantics></math>
+Поскольку носителем заряда является пара,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi><mo>=</mo><mn>2</mn><msub><mi>q</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">q = 2q_e</annotation></semantics></math>,
+и квант потока
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="normal">Φ</mi><mn>0</mn></msub><mo>=</mo><mfrac><mrow><mi>π</mi><mi>ℏ</mi></mrow><msub><mi>q</mi><mi>e</mi></msub></mfrac><mo>≈</mo><mn>2</mn><mo>⋅</mo><msup><mn>10</mn><mrow><mi>−</mi><mn>7</mn></mrow></msup><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> Гс</mtext></mrow><mo>⋅</mo><msup><mtext mathvariant="normal">см</mtext><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\Phi_0 = \frac{\pi\hbar}{q_e} \approx 2 \cdot 10^{-7} \text{ Гс} \cdot \text{см}^2</annotation></semantics></math>.</p>
+<hr />
+<h2 id="2-проверочные-вопросы-short-answer-quiz">2. Проверочные вопросы
+(Short-answer Quiz)</h2>
+<ol type="1">
+<li><strong>Как меняется уравнение Шредингера для частицы при наличии
+магнитного поля?</strong> <em>Ответ:</em> В гамильтониане оператор
+градиента заменяется на
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>∇</mi><mo>−</mo><mfrac><mrow><mi>i</mi><mi>q</mi></mrow><mi>ℏ</mi></mfrac><mi mathvariant="bold-italic">𝑨</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(\nabla - \frac{iq}{\hbar}\mathbf{A})</annotation></semantics></math>.</li>
+<li><strong>Почему электроны в сверхпроводнике могут находиться в одном
+и том же состоянии?</strong> <em>Ответ:</em> Они образуют связанные
+пары, которые ведут себя как бозоны, на которые не распространяется
+принцип исключения Паули.</li>
+<li><strong>Что происходит с магнитным полем внутри массивного
+сверхпроводника?</strong> <em>Ответ:</em> Оно выталкивается (эффект
+Мейсснера) и остается только в очень тонком приповерхностном слое.</li>
+<li><strong>Какова величина фундаментальной единицы магнитного потока в
+сверхпроводнике?</strong> <em>Ответ:</em>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="normal">Φ</mi><mn>0</mn></msub><mo>=</mo><mfrac><mrow><mi>π</mi><mi>ℏ</mi></mrow><msub><mi>q</mi><mi>e</mi></msub></mfrac></mrow><annotation encoding="application/x-tex">\Phi_0 = \frac{\pi\hbar}{q_e}</annotation></semantics></math>,
+что в два раза меньше значения, предсказанного Лондоном, так как заряд
+носителя равен
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><msub><mi>q</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">2q_e</annotation></semantics></math>.</li>
+<li><strong>Что такое переход Джозефсона?</strong> <em>Ответ:</em> Это
+устройство из двух сверхпроводников, разделенных тонким слоем изолятора,
+через который электроны могут переходить за счет квантового
+туннелирования.</li>
+<li><strong>Как ведет себя ток в переходе Джозефсона при постоянном
+напряжении
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math>?</strong>
+<em>Ответ:</em> Ток начинает быстро осциллировать (переменный ток
+Джозефсона), и его среднее значение стремится к нулю.</li>
+<li><strong>Что доказывает опыт с интерференцией токов в двух
+параллельных переходах Джозефсона?</strong> <em>Ответ:</em> Физическую
+реальность векторного потенциала
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>,
+так как ток зависит от потока внутри контура, даже если магнитное поле
+не касается самих проводников.</li>
+</ol>
+<hr />
+<h2 id="3-типичные-ошибки-при-изучении-темы">3. Типичные ошибки при
+изучении темы</h2>
+<ul>
+<li><strong>Игнорирование заряда пары:</strong> Часто забывают, что в
+формулах сверхпроводимости
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi><mo>=</mo><mn>2</mn><msub><mi>q</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">q = 2q_e</annotation></semantics></math>.
+Это критично для правильного расчета кванта потока.</li>
+<li><strong>Отождествление волновой функции только с
+вероятностью:</strong> В контексте сверхпроводимости
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ψ</mi><annotation encoding="application/x-tex">\psi</annotation></semantics></math>
+следует интерпретировать макроскопически — как плотность частиц и ток,
+обладающие классическим смыслом.</li>
+<li><strong>Ошибочное понимание идеальной проводимости:</strong>
+Сверхпроводимость — это не просто отсутствие сопротивления, а особое
+термодинамическое состояние (эффект Мейсснера доказывает, что поле
+выталкивается активно, а не просто «замораживается»).</li>
+<li><strong>Путаница импульсов:</strong> Смешивание
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mi>v</mi></mrow><annotation encoding="application/x-tex">mv</annotation></semantics></math>-импульса
+(скорость) и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math>-импульса
+(градиент фазы). Важно помнить:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝒑</mi><mo>=</mo><mi>m</mi><mi mathvariant="bold-italic">𝒗</mi><mo>+</mo><mi>q</mi><mi mathvariant="bold-italic">𝑨</mi></mrow><annotation encoding="application/x-tex">\mathbf{p} = m\mathbf{v} + q\mathbf{A}</annotation></semantics></math>.</li>
+</ul>
+<hr />
+<h2 id="4-вопросы-для-углубленного-изучения-эссе">4. Вопросы для
+углубленного изучения (Эссе)</h2>
+<ol type="1">
+<li><strong>Переход от микроскопического к макроскопическому
+описанию:</strong> Проанализируйте, при каких условиях волновая функция
+отдельной частицы превращается в макроскопическое поле. Используйте
+примеры фотонов и электронных пар.</li>
+<li><strong>Векторный потенциал — математическая абстракция или
+физическая реальность?</strong> На основе описанных экспериментов с
+квантовой интерференцией аргументируйте роль векторного потенциала в
+современной физике.</li>
+<li><strong>Сверхпроводящая жидкость как гидродинамическая
+система:</strong> Опишите уравнения движения электронной жидкости в
+сверхпроводнике. В чем сходство и различие с уравнениями идеальной
+классической жидкости?</li>
+</ol>
+<hr />
+<h2 id="5-краткий-глоссарий">5. Краткий глоссарий</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Термин</th>
+<th style="text-align: left;">Определение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Векторный потенциал
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>)</strong></td>
+<td style="text-align: left;">Поле, ротор которого равен магнитной
+индукции
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑩</mi><mo>=</mo><mtext mathvariant="normal">rot</mtext><mi mathvariant="bold-italic">𝑨</mi></mrow><annotation encoding="application/x-tex">\mathbf{B} = \text{rot} \mathbf{A}</annotation></semantics></math>).
+Определяет фазу волновой функции.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Куперовская пара</strong></td>
+<td style="text-align: left;">Связанное состояние двух электронов в
+сверхпроводнике, обладающее целочисленным спином (бозон).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Глубина проникновения
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>λ</mi><annotation encoding="application/x-tex">\lambda</annotation></semantics></math>)</strong></td>
+<td style="text-align: left;">Расстояние от поверхности сверхпроводника,
+на котором магнитное поле затухает в
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>e</mi><annotation encoding="application/x-tex">e</annotation></semantics></math>
+раз.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Квантование потока</strong></td>
+<td style="text-align: left;">Явление, при котором магнитный поток через
+сверхпроводящее кольцо может принимать только дискретные значения.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Переход Джозефсона</strong></td>
+<td style="text-align: left;">Контакт двух сверхпроводников через тонкий
+барьер, в котором ток определяется разностью фаз волновых функций.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Эффект Мейсснера</strong></td>
+<td style="text-align: left;">Полное вытеснение магнитного поля из
+объема сверхпроводника при его переходе в сверхпроводящее
+состояние.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Уравнение Лондонов</strong></td>
+<td style="text-align: left;">Феноменологическое описание тока в
+сверхпроводнике, постулирующее прямую связь между током и векторным
+потенциалом.</td>
+</tr>
+</tbody>
+</table>
+    </article>
+  </main>
+</body>
+</html>

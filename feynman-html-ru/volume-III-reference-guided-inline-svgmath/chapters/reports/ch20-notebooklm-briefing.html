@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Аналитический отчет: Глава 20. Операторы - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch20.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1 id="аналитический-отчет-глава-20-операторы">Аналитический отчет:
+Глава 20. Операторы</h1>
+<p>Данный документ представляет собой подробный синтез материалов 20-й
+главы «Фейнмановских лекций по физике» (том III), посвященной теории
+операторов в квантовой механике. Отчет охватывает концептуальные основы,
+математический аппарат и физический смысл операторного подхода.</p>
+<h2 id="1-резюме-executive-summary">1. Резюме (Executive Summary)</h2>
+<p>Глава 20 переводит описание квантовой механики с языка векторов
+состояний на более абстрактный и мощный язык операторов. Основная идея
+заключается в том, что любой физической операции или наблюдаемой
+величине соответствует математический объект — оператор. Операторный
+формализм позволяет:</p>
+<ul>
+<li>Описывать физические процессы (повороты, смещения, эволюцию во
+времени) без привязки к конкретному базису.</li>
+<li>Вычислять средние значения физических величин (энергии, импульса,
+координаты) через «обкладки» оператора векторами состояний.</li>
+<li>Установить связь между классической и квантовой механикой через
+перестановочные соотношения.</li>
+<li>Находить энергетические уровни сложных систем, не решая
+дифференциальные уравнения напрямую (вариационный метод).</li>
+</ul>
+<hr />
+<h2 id="2-ключевые-концепции-и-определения">2. Ключевые концепции и
+определения</h2>
+<h3 id="21-природа-оператора">2.1. Природа оператора</h3>
+<p>В квантовой механике операция над состоянием <span
+class="math inline">$\ket{\psi}$</span> (например, поворот или ожидание
+времени
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">\Delta t</annotation></semantics></math>)
+порождает новое состояние <span class="math inline">$\ket{\phi}$</span>.
+Это выражается уравнением: <span class="math display">$$\ket{\phi} =
+\hat{A}\ket{\psi}$$</span> где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>A</mi><mo accent="true">̂</mo></mover><annotation encoding="application/x-tex">\hat{A}</annotation></semantics></math>
+— оператор.</p>
+<p><strong>Матричное представление:</strong> В конкретном базисе <span
+class="math inline">$\ket{i}$</span> оператор описывается набором чисел
+(матрицей): <span class="math display">$$A_{ij} =
+\bracket{i}{\hat{A}}{j}$$</span> Алгебраическое выражение для связи
+амплитуд состояний в этом базисе: <span
+class="math display">$$\braket{i}{\phi} = \sum_j \bracket{i}{\hat{A}}{j}
+\braket{j}{\psi}$$</span></p>
+<h3 id="22-эрмитовы-операторы">2.2. Эрмитовы операторы</h3>
+<p>Большинство важных операторов в квантовой механике являются
+<strong>самосопряженными (эрмитовыми)</strong>.</p>
+<ul>
+<li><strong>Эрмитово сопряжение:</strong> <span
+class="math inline">$\bracket{\phi}{\hat{A}}{\psi}^* =
+\bracket{\psi}{\hat{A}^\dagger}{\phi}$</span>.</li>
+<li><strong>Условие самосопряженности:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mover><mi>B</mi><mo accent="true">̂</mo></mover><mo>†</mo></msup><mo>=</mo><mover><mi>B</mi><mo accent="true">̂</mo></mover></mrow><annotation encoding="application/x-tex">\hat{B}^\dagger = \hat{B}</annotation></semantics></math>.
+Эрмитовость гарантирует, что средние значения физических величин будут
+действительными числами.</li>
+</ul>
+<hr />
+<h2 id="3-вычисление-средних-значений">3. Вычисление средних
+значений</h2>
+<p>Среднее значение любой наблюдаемой величины
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>,
+которой соответствует оператор
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>A</mi><mo accent="true">̂</mo></mover><annotation encoding="application/x-tex">\hat{A}</annotation></semantics></math>,
+в состоянии <span class="math inline">$\ket{\psi}$</span> вычисляется по
+формуле: <span class="math display">$$\av{A} =
+\bracket{\psi}{\hat{A}}{\psi}$$</span></p>
+<h3 id="31-средняя-энергия">3.1. Средняя энергия</h3>
+<p>Для энергии оператором является гамильтониан
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>H</mi><mo accent="true">̂</mo></mover><annotation encoding="application/x-tex">\hat{H}</annotation></semantics></math>.
+Средняя энергия: <span class="math display">$$\av{E} =
+\bracket{\psi}{\hat{H}}{\psi}$$</span> Этот результат полезен тем, что
+позволяет вычислять энергию, не зная всех уровней системы, — достаточно
+знать волновую функцию и вид гамильтониана.</p>
+<h3 id="32-вариационный-метод">3.2. Вариационный метод</h3>
+<p>Текст описывает практический метод поиска энергии основного
+состояния:</p>
+<ol type="1">
+<li>Выбирается пробная волновая функция с параметрами.</li>
+<li>Вычисляется средняя энергия <span
+class="math inline">$\av{E}$</span>.</li>
+<li>Параметры варьируются так, чтобы минимизировать <span
+class="math inline">$\av{E}$</span>.</li>
+<li>Полученное минимальное значение будет наиболее близким приближением
+к истинной энергии основного состояния «сверху».</li>
+</ol>
+<hr />
+<h2 id="4-координатное-представление-операторов">4. Координатное
+представление операторов</h2>
+<p>В координатном представлении состоянию соответствует волновая функция
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ψ</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\psi(x)</annotation></semantics></math>,
+а операторам — алгебраические или дифференциальные операции.</p>
+<h3 id="таблица-181-соответствие-операторов">Таблица 18.1: Соответствие
+операторов</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Физическая величина</th>
+<th style="text-align: left;">Оператор</th>
+<th style="text-align: left;">Координатная форма
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi mathvariant="script">𝒜</mi><mo accent="true">̂</mo></mover><annotation encoding="application/x-tex">\hat{\mathcal{A}}</annotation></semantics></math>)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Энергия</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>H</mi><mo accent="true">̂</mo></mover><annotation encoding="application/x-tex">\hat{H}</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi mathvariant="script">ℋ</mi><mo accent="true">̂</mo></mover><mo>=</mo><mi>−</mi><mfrac><msup><mi>ℏ</mi><mn>2</mn></msup><mrow><mn>2</mn><mi>m</mi></mrow></mfrac><msup><mi>∇</mi><mn>2</mn></msup><mo>+</mo><mi>V</mi><mo stretchy="false" form="prefix">(</mo><mi mathvariant="bold-italic">𝒓</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\hat{\mathcal{H}} = -\frac{\hbar^2}{2m}\nabla^2 + V(\mathbf{r})</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Координата</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>x</mi><mo accent="true">̂</mo></mover><mo>,</mo><mover><mi>y</mi><mo accent="true">̂</mo></mover><mo>,</mo><mover><mi>z</mi><mo accent="true">̂</mo></mover></mrow><annotation encoding="application/x-tex">\hat{x}, \hat{y}, \hat{z}</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi></mrow><annotation encoding="application/x-tex">x, y, z</annotation></semantics></math>
+(умножение на координату)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Импульс
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>)</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mover><mi>p</mi><mo accent="true">̂</mo></mover><mi>x</mi></msub><annotation encoding="application/x-tex">\hat{p}_x</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mover><mi mathvariant="script">𝒫</mi><mo accent="true">̂</mo></mover><mi>x</mi></msub><mo>=</mo><mfrac><mi>ℏ</mi><mi>i</mi></mfrac><mfrac><mi>∂</mi><mrow><mi>∂</mi><mi>x</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\hat{\mathcal{P}}_x = \frac{\hbar}{i}\frac{\partial}{\partial x}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Импульс (вектор)</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi mathvariant="bold-italic">𝒑</mi><mo accent="true">̂</mo></mover><annotation encoding="application/x-tex">\hat{\mathbf{p}}</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi mathvariant="script">𝒫</mi><mo accent="true">̂</mo></mover><mo>=</mo><mfrac><mi>ℏ</mi><mi>i</mi></mfrac><mi>∇</mi></mrow><annotation encoding="application/x-tex">\hat{\mathcal{P}} = \frac{\hbar}{i}\nabla</annotation></semantics></math></td>
+</tr>
+</tbody>
+</table>
+<h3 id="визуализация-и-физический-смысл">Визуализация и физический
+смысл</h3>
+<ul>
+<li><strong>Оператор координаты (Фиг. 18.1):</strong> Среднее значение
+координаты <span class="math inline">$\av{x}$</span> соответствует
+«центру тяжести» площади под кривой плотности вероятности
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo stretchy="false" form="prefix">|</mo><mi>ψ</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><msup><mo stretchy="false" form="prefix">|</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">P(x) = |\psi(x)|^2</annotation></semantics></math>.</li>
+<li><strong>Оператор импульса:</strong> Связан с оператором смещения
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mover><mi>D</mi><mo accent="true">̂</mo></mover><mi>x</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>δ</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\hat{D}_x(\delta)</annotation></semantics></math>.
+Импульс определяет, как меняется фаза волновой функции при малом сдвиге
+координат.</li>
+</ul>
+<hr />
+<h2 id="5-момент-количества-движения-и-вращения">5. Момент количества
+движения и вращения</h2>
+<p>Орбитальный момент количества движения
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mover><mi>L</mi><mo accent="true">̂</mo></mover><mi>z</mi></msub><annotation encoding="application/x-tex">\hat{L}_z</annotation></semantics></math>
+определяется через оператор поворота на бесконечно малый угол
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϵ</mi><annotation encoding="application/x-tex">\epsilon</annotation></semantics></math>
+вокруг оси
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>z</mi><annotation encoding="application/x-tex">z</annotation></semantics></math>.</p>
+<p><strong>Геометрическая интерпретация (Рис. 18.2):</strong> При
+повороте осей на угол
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϵ</mi><annotation encoding="application/x-tex">\epsilon</annotation></semantics></math>
+точка
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math>
+с новыми координатами
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(x, y)</annotation></semantics></math>
+в старой системе имела координаты
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><mi>ϵ</mi><mi>y</mi><mo>,</mo><mi>y</mi><mo>+</mo><mi>ϵ</mi><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(x - \epsilon y, y + \epsilon x)</annotation></semantics></math>.
+Это приводит к дифференциальной форме оператора:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mover><mi mathvariant="script">ℒ</mi><mo accent="true">̂</mo></mover><mi>z</mi></msub><mo>=</mo><mfrac><mi>ℏ</mi><mi>i</mi></mfrac><mrow><mo stretchy="true" form="prefix">(</mo><mi>x</mi><mfrac><mi>∂</mi><mrow><mi>∂</mi><mi>y</mi></mrow></mfrac><mo>−</mo><mi>y</mi><mfrac><mi>∂</mi><mrow><mi>∂</mi><mi>x</mi></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><mi>x</mi><msub><mover><mi mathvariant="script">𝒫</mi><mo accent="true">̂</mo></mover><mi>y</mi></msub><mo>−</mo><mi>y</mi><msub><mover><mi mathvariant="script">𝒫</mi><mo accent="true">̂</mo></mover><mi>x</mi></msub></mrow><annotation encoding="application/x-tex">\hat{\mathcal{L}}_z = \frac{\hbar}{i}\left( x\frac{\partial}{\partial y} - y\frac{\partial}{\partial x} \right) = x\hat{\mathcal{P}}_y - y\hat{\mathcal{P}}_x</annotation></semantics></math>
+Это в точности соответствует классической формуле
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑳</mi><mo>=</mo><mi mathvariant="bold-italic">𝒓</mi><mo>×</mo><mi mathvariant="bold-italic">𝒑</mi></mrow><annotation encoding="application/x-tex">\mathbf{L} = \mathbf{r} \times \mathbf{p}</annotation></semantics></math>.</p>
+<hr />
+<h2 id="6-перестановочные-соотношения-коммутаторы">6. Перестановочные
+соотношения (Коммутаторы)</h2>
+<p>Ключевое отличие квантовой механики от классической —
+<strong>некоммутативность</strong> некоторых операторов. Если
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>A</mi><mo accent="true">̂</mo></mover><mover><mi>B</mi><mo accent="true">̂</mo></mover><mo>−</mo><mover><mi>B</mi><mo accent="true">̂</mo></mover><mover><mi>A</mi><mo accent="true">̂</mo></mover><mo>≠</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\hat{A}\hat{B} - \hat{B}\hat{A} \neq 0</annotation></semantics></math>,
+величины нельзя измерить одновременно с произвольной точностью.</p>
+<p><strong>Фундаментальное соотношение:</strong>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>x</mi><mo accent="true">̂</mo></mover><msub><mover><mi>p</mi><mo accent="true">̂</mo></mover><mi>x</mi></msub><mo>−</mo><msub><mover><mi>p</mi><mo accent="true">̂</mo></mover><mi>x</mi></msub><mover><mi>x</mi><mo accent="true">̂</mo></mover><mo>=</mo><mi>i</mi><mi>ℏ</mi></mrow><annotation encoding="application/x-tex">\hat{x}\hat{p}_x - \hat{p}_x\hat{x} = i\hbar</annotation></semantics></math>
+Физический смысл: именно наличие ненулевой правой части
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mi>ℏ</mi></mrow><annotation encoding="application/x-tex">i\hbar</annotation></semantics></math>)
+порождает всю специфику квантовых явлений (интерференцию,
+неопределенность). Если
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ℏ</mi><mo>→</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\hbar \to 0</annotation></semantics></math>,
+квантовая механика переходит в классическую.</p>
+<p><strong>Моменты импульса:</strong>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mover><mi>L</mi><mo accent="true">̂</mo></mover><mi>x</mi></msub><msub><mover><mi>L</mi><mo accent="true">̂</mo></mover><mi>y</mi></msub><mo>−</mo><msub><mover><mi>L</mi><mo accent="true">̂</mo></mover><mi>y</mi></msub><msub><mover><mi>L</mi><mo accent="true">̂</mo></mover><mi>x</mi></msub><mo>=</mo><mi>i</mi><mi>ℏ</mi><msub><mover><mi>L</mi><mo accent="true">̂</mo></mover><mi>z</mi></msub></mrow><annotation encoding="application/x-tex">\hat{L}_x\hat{L}_y - \hat{L}_y\hat{L}_x = i\hbar\hat{L}_z</annotation></semantics></math>
+Это соотношение обусловлено геометрическими свойствами пространства
+(зависимостью результата последовательных поворотов от их порядка).</p>
+<hr />
+<h2 id="7-динамика-средних-величин">7. Динамика средних величин</h2>
+<p>Скорость изменения среднего значения величины <span
+class="math inline">$\av{A}$</span> во времени определяется коммутатором
+оператора с гамильтонианом: <span
+class="math display">$$\frac{d}{dt}\av{A} = \frac{i}{\hbar}
+\bracket{\psi}{[\hat{H}, \hat{A}]}{\psi}$$</span></p>
+<p><strong>Связь с классическими законами:</strong></p>
+<ul>
+<li><strong>Закон для координаты:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mover><mi>x</mi><mo accent="true">̂</mo></mover><mo accent="true">̇</mo></mover><mo>=</mo><mfrac><msub><mover><mi>p</mi><mo accent="true">̂</mo></mover><mi>x</mi></msub><mi>m</mi></mfrac></mrow><annotation encoding="application/x-tex">\dot{\hat{x}} = \frac{\hat{p}_x}{m}</annotation></semantics></math>
+(определение скорости через импульс).</li>
+<li><strong>Закон для импульса:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mover><mi>p</mi><mo accent="true">̂</mo></mover><mo accent="true">̇</mo></mover><mo>=</mo><mi>−</mi><mfrac><mrow><mi>∂</mi><mi>V</mi></mrow><mrow><mi>∂</mi><mi>x</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\dot{\hat{p}} = -\frac{\partial V}{\partial x}</annotation></semantics></math>
+(второй закон Ньютона — сила равна градиенту потенциала).</li>
+</ul>
+<p>Эти уравнения показывают, что <em>средние значения</em> квантовых
+величин подчиняются законам классической механики.</p>
+<hr />
+<h2 id="8-важные-цитаты-с-контекстом">8. Важные цитаты с контекстом</h2>
+<ol type="1">
+<li><strong>О векторе состояния:</strong> <em>«Вектор состояния <span
+class="math inline">$\ket{\psi}$</span> ничего общего, конечно, не имеет
+с геометрическими векторами в трехмерном пространстве; это просто
+отвлеченный символ... законы квантовой механики выглядят как
+алгебраические уравнения».</em>
+<ul>
+<li><em>Контекст:</em> Пояснение удобства операторной записи по
+сравнению с расписыванием компонент.</li>
+</ul></li>
+<li><strong>О квантовой специфике:</strong> <em>«Все поразительные
+сложности интерференции волн и тому подобного проистекают из того
+небольшого факта, что
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>x</mi><mo accent="true">̂</mo></mover><mover><mi>p</mi><mo accent="true">̂</mo></mover><mo>−</mo><mover><mi>p</mi><mo accent="true">̂</mo></mover><mover><mi>x</mi><mo accent="true">̂</mo></mover></mrow><annotation encoding="application/x-tex">\hat{x}\hat{p} - \hat{p}\hat{x}</annotation></semantics></math>
+не совсем нуль».</em>
+<ul>
+<li><em>Контекст:</em> Анализ фундаментального различия между
+классической и квантовой физикой.</li>
+</ul></li>
+<li><strong>Об эквивалентности подходов:</strong> <em>«И то и другое — и
+матричная алгебра Гейзенберга, и дифференциальное уравнение Шредингера —
+объясняли атом водорода. Несколькими месяцами позднее Шредингер смог
+показать, что обе теории эквивалентны».</em>
+<ul>
+<li><em>Контекст:</em> Историческая справка о независимом открытии
+квантовой механики в 1926 году.</li>
+</ul></li>
+</ol>
+<hr />
+<h2 id="9-практические-выводы-insights">9. Практические выводы
+(Insights)</h2>
+<ul>
+<li><strong>Универсальность:</strong> Операторное уравнение <span
+class="math inline">$\ket{\phi} = \hat{A}\ket{\psi}$</span> истинно для
+любого базиса, что делает расчеты более наглядными и менее зависимыми от
+выбора системы координат.</li>
+<li><strong>Приближенные расчеты:</strong> Использование вариационного
+принципа (минимизация средней энергии) — мощный инструмент для систем,
+где точное решение уравнения Шредингера невозможно (например, атом
+гелия).</li>
+<li><strong>Классические аналогии:</strong> Квантовые операторы импульса
+и момента импульса сохраняют структуру классических формул, что упрощает
+их запоминание и понимание (например,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>H</mi><mo accent="true">̂</mo></mover><mo>=</mo><mfrac><msup><mover><mi>p</mi><mo accent="true">̂</mo></mover><mn>2</mn></msup><mrow><mn>2</mn><mi>m</mi></mrow></mfrac><mo>+</mo><mi>V</mi></mrow><annotation encoding="application/x-tex">\hat{H} = \frac{\hat{p}^2}{2m} + V</annotation></semantics></math>).</li>
+<li><strong>Приоритет порядка:</strong> В квантовых вычислениях
+критически важен порядок применения операторов (порядок множителей), так
+как они в общем случае не коммутируют.</li>
+</ul>
+    </article>
+  </main>
+</body>
+</html>

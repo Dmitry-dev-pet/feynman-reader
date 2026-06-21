@@ -1,0 +1,296 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Глава 12. Сверхтонкое расщепление в водороде: Аналитический отчет - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch12.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1
+id="глава-12-сверхтонкое-расщепление-в-водороде-аналитический-отчет">Глава
+12. Сверхтонкое расщепление в водороде: Аналитический отчет</h1>
+<p>Этот отчет представляет собой подробный анализ сверхтонкой структуры
+основного состояния атома водорода. В документе рассматриваются
+квантовомеханические основы взаимодействия спинов, расчет энергетических
+уровней и влияние внешних магнитных полей (эффект Зеемана).</p>
+<hr />
+<h2 id="1-резюме">1. Резюме</h2>
+<p>Сверхтонкое расщепление в водороде является результатом магнитного
+взаимодействия между спинами электрона и протона. Несмотря на то что
+энергия этого взаимодействия крайне мала (около десятимиллионной доли
+электрон-вольта), она приводит к расщеплению основного состояния на
+четыре подуровня. Переход между этими уровнями порождает знаменитую
+радиолинию длиной 21 см
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>1420</mn><annotation encoding="application/x-tex">1420</annotation></semantics></math>
+МГц), имеющую фундаментальное значение для современной
+радиоастрономии.</p>
+<hr />
+<h2 id="2-базисные-состояния-системы">2. Базисные состояния системы</h2>
+<p>Для описания системы из двух частиц со спином
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">1/2</annotation></semantics></math>
+(электрон и протон) в основном состоянии атома водорода выбираются
+четыре базисных состояния, определяемых ориентацией их спинов.</p>
+<h3 id="таблица-1-базисные-состояния-согласно-фиг-101">Таблица 1:
+Базисные состояния (согласно Фиг. 10.1)</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Состояние</th>
+<th style="text-align: left;">Обозначение</th>
+<th style="text-align: left;">Спин электрона</th>
+<th style="text-align: left;">Спин протона</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Состояние 1</td>
+<td style="text-align: left;">$</td>
+<td style="text-align: left;">+ + \rangle$</td>
+<td style="text-align: left;">Вверх</td>
+</tr>
+<tr>
+<td style="text-align: left;">Состояние 2</td>
+<td style="text-align: left;">$</td>
+<td style="text-align: left;">+ - \rangle$</td>
+<td style="text-align: left;">Вверх</td>
+</tr>
+<tr>
+<td style="text-align: left;">Состояние 3</td>
+<td style="text-align: left;">$</td>
+<td style="text-align: left;">- + \rangle$</td>
+<td style="text-align: left;">Вниз</td>
+</tr>
+<tr>
+<td style="text-align: left;">Состояние 4</td>
+<td style="text-align: left;">$</td>
+<td style="text-align: left;">- - \rangle$</td>
+<td style="text-align: left;">Вниз</td>
+</tr>
+</tbody>
+</table>
+<p>Выбор базиса является произвольным и служит «единичными векторами»
+для описания системы. Взаимодействие частиц определяет, как амплитуды
+этих состояний будут меняться во времени.</p>
+<hr />
+<h2 id="3-гамильтониан-и-операторы-взаимодействия">3. Гамильтониан и
+операторы взаимодействия</h2>
+<p>Гамильтониан системы строится на основе соображений пространственной
+симметрии. В отсутствие внешних полей взаимодействие должно быть
+инвариантно относительно поворота осей координат.</p>
+<h3 id="основная-формула-гамильтониана">Основная формула
+Гамильтониана</h3>
+<p>Единственная скалярная инвариантная комбинация двух спиновых векторов
+— это их скалярное произведение:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>H</mi><mo accent="true">̂</mo></mover><mo>=</mo><msub><mi>E</mi><mn>0</mn></msub><mo>+</mo><mi>A</mi><mo stretchy="false" form="prefix">(</mo><msub><mi mathvariant="bold-italic">𝝈</mi><mi>e</mi></msub><mo>⋅</mo><msub><mi mathvariant="bold-italic">𝝈</mi><mi>p</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\hat{H} = E_0 + A(\boldsymbol{\sigma}_e \cdot \boldsymbol{\sigma}_p)</annotation></semantics></math>
+Где:</p>
+<ul>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>E</mi><mn>0</mn></msub><annotation encoding="application/x-tex">E_0</annotation></semantics></math>
+— средняя энергия (часто принимается за
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0</mn><annotation encoding="application/x-tex">0</annotation></semantics></math>).</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+— постоянная сверхтонкого расщепления, характеризующая силу
+взаимодействия магнитных моментов.</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="bold-italic">𝝈</mi><mi>e</mi></msub><mo>,</mo><msub><mi mathvariant="bold-italic">𝝈</mi><mi>p</mi></msub></mrow><annotation encoding="application/x-tex">\boldsymbol{\sigma}_e, \boldsymbol{\sigma}_p</annotation></semantics></math>
+— операторы Паули (сигма-матрицы) для электрона и протона
+соответственно.</li>
+</ul>
+<h3 id="оператор-обмена-спинами-дирака">Оператор обмена спинами
+Дирака</h3>
+<p>Дирак предложил удобное правило для запоминания действия этого
+оператора:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="bold-italic">𝝈</mi><mi>e</mi></msub><mo>⋅</mo><msub><mi mathvariant="bold-italic">𝝈</mi><mi>p</mi></msub><mo>=</mo><mn>2</mn><msub><mi>P</mi><mtext mathvariant="normal">spin exch</mtext></msub><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\boldsymbol{\sigma}_e \cdot \boldsymbol{\sigma}_p = 2P_{\text{spin exch}} - 1</annotation></semantics></math>
+Здесь оператор
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>P</mi><mtext mathvariant="normal">spin exch</mtext></msub><annotation encoding="application/x-tex">P_{\text{spin exch}}</annotation></semantics></math>
+просто обменивает направления спинов двух частиц.</p>
+<hr />
+<h2 id="4-энергетические-уровни-в-отсутствие-магнитного-поля">4.
+Энергетические уровни в отсутствие магнитного поля</h2>
+<p>Решение уравнений Гамильтониана для стационарных состояний
+показывает, что четыре базисных состояния группируются в два
+энергетических уровня.</p>
+<h3 id="распределение-уровней-фиг-102">Распределение уровней (Фиг.
+10.2)</h3>
+<ol type="1">
+<li><strong>Триплет (три состояния) с энергией
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>+</mi><mi>A</mi></mrow><annotation encoding="application/x-tex">+A</annotation></semantics></math>:</strong>
+<ul>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>I</mi><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><mo stretchy="false" form="prefix">|</mo><mi>+</mi><mi>+</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">| I \rangle = | + + \rangle</annotation></semantics></math></li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>I</mi><mi>I</mi><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><mo stretchy="false" form="prefix">|</mo><mi>−</mi><mi>−</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">| II \rangle = | - - \rangle</annotation></semantics></math></li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>I</mi><mi>I</mi><mi>I</mi><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><mfrac><mn>1</mn><msqrt><mn>2</mn></msqrt></mfrac><mo stretchy="false" form="prefix">(</mo><mo stretchy="false" form="prefix">|</mo><mi>+</mi><mi>−</mi><mo stretchy="false" form="postfix">⟩</mo><mo>+</mo><mo stretchy="false" form="prefix">|</mo><mi>−</mi><mi>+</mi><mo stretchy="false" form="postfix">⟩</mo><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">| III \rangle = \frac{1}{\sqrt{2}}(| + - \rangle + | - + \rangle)</annotation></semantics></math></li>
+</ul></li>
+<li><strong>Синглет (одно состояние) с энергией
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>3</mn><mi>A</mi></mrow><annotation encoding="application/x-tex">-3A</annotation></semantics></math>:</strong>
+<ul>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>I</mi><mi>V</mi><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><mfrac><mn>1</mn><msqrt><mn>2</mn></msqrt></mfrac><mo stretchy="false" form="prefix">(</mo><mo stretchy="false" form="prefix">|</mo><mi>+</mi><mi>−</mi><mo stretchy="false" form="postfix">⟩</mo><mo>−</mo><mo stretchy="false" form="prefix">|</mo><mi>−</mi><mi>+</mi><mo stretchy="false" form="postfix">⟩</mo><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">| IV \rangle = \frac{1}{\sqrt{2}}(| + - \rangle - | - + \rangle)</annotation></semantics></math></li>
+</ul></li>
+</ol>
+<p><strong>Физический смысл:</strong> Разность энергий между триплетом и
+синглетом составляет
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><mi>A</mi></mrow><annotation encoding="application/x-tex">4A</annotation></semantics></math>.
+Это приводит к излучению или поглощению кванта с частотой:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>=</mo><mfrac><mi>ω</mi><mrow><mn>2</mn><mi>π</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mn>4</mn><mi>A</mi></mrow><mi>h</mi></mfrac><mo>≈</mo><mn>1</mn><mspace width="0.167em"></mspace><mn>420</mn><mspace width="0.167em"></mspace><mn>405</mn><mspace width="0.167em"></mspace><mn>751.8</mn><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> Гц</mtext></mrow></mrow><annotation encoding="application/x-tex">f = \frac{\omega}{2\pi} = \frac{4A}{h} \approx 1\,420\,405\,751.8 \text{ Гц}</annotation></semantics></math>
+Это измерение является одним из самых точных в физике (погрешность
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>2</mn><annotation encoding="application/x-tex">2</annotation></semantics></math>
+части на
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>100</mn><annotation encoding="application/x-tex">100</annotation></semantics></math>
+миллиардов).</p>
+<hr />
+<h2 id="5-эффект-зеемана-расщепление-в-магнитном-поле">5. Эффект
+Зеемана: расщепление в магнитном поле</h2>
+<p>При помещении атома во внешнее магнитное поле
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\boldsymbol{B}</annotation></semantics></math>
+(направленное по оси
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>z</mi><annotation encoding="application/x-tex">z</annotation></semantics></math>)
+в гамильтониан добавляются члены взаимодействия магнитных моментов с
+полем:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>H</mi><mo accent="true">̂</mo></mover><mo>=</mo><mi>A</mi><mo stretchy="false" form="prefix">(</mo><msub><mi mathvariant="bold-italic">𝝈</mi><mi>e</mi></msub><mo>⋅</mo><msub><mi mathvariant="bold-italic">𝝈</mi><mi>p</mi></msub><mo stretchy="false" form="postfix">)</mo><mo>−</mo><msub><mi>μ</mi><mi>e</mi></msub><msub><mi mathvariant="bold-italic">𝝈</mi><mi>e</mi></msub><mo>⋅</mo><mi mathvariant="bold-italic">𝑩</mi><mo>−</mo><msub><mi>μ</mi><mi>p</mi></msub><msub><mi mathvariant="bold-italic">𝝈</mi><mi>p</mi></msub><mo>⋅</mo><mi mathvariant="bold-italic">𝑩</mi></mrow><annotation encoding="application/x-tex">\hat{H} = A(\boldsymbol{\sigma}_e \cdot \boldsymbol{\sigma}_p) - \mu_e \boldsymbol{\sigma}_e \cdot \boldsymbol{B} - \mu_p \boldsymbol{\sigma}_p \cdot \boldsymbol{B}</annotation></semantics></math></p>
+<h3 id="зависимость-энергии-от-магнитного-поля-фиг-103">Зависимость
+энергии от магнитного поля (Фиг. 10.3)</h3>
+<p>Формулы для четырех уровней энергии принимают вид:</p>
+<ul>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mi>I</mi></msub><mo>=</mo><mi>A</mi><mo>+</mo><mi>μ</mi><mi>B</mi></mrow><annotation encoding="application/x-tex">E_I = A + \mu B</annotation></semantics></math></li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mrow><mi>I</mi><mi>I</mi></mrow></msub><mo>=</mo><mi>A</mi><mo>−</mo><mi>μ</mi><mi>B</mi></mrow><annotation encoding="application/x-tex">E_{II} = A - \mu B</annotation></semantics></math></li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mrow><mi>I</mi><mi>I</mi><mi>I</mi></mrow></msub><mo>=</mo><mi>−</mi><mi>A</mi><mo>+</mo><mn>2</mn><mi>A</mi><msqrt><mrow><mn>1</mn><mo>+</mo><mo stretchy="false" form="prefix">(</mo><msup><mi>μ</mi><mo>′</mo></msup><mi>B</mi><mi>/</mi><mn>2</mn><mi>A</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup></mrow></msqrt></mrow><annotation encoding="application/x-tex">E_{III} = -A + 2A \sqrt{1 + (\mu&#39; B / 2A)^2}</annotation></semantics></math></li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mrow><mi>I</mi><mi>V</mi></mrow></msub><mo>=</mo><mi>−</mi><mi>A</mi><mo>−</mo><mn>2</mn><mi>A</mi><msqrt><mrow><mn>1</mn><mo>+</mo><mo stretchy="false" form="prefix">(</mo><msup><mi>μ</mi><mo>′</mo></msup><mi>B</mi><mi>/</mi><mn>2</mn><mi>A</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup></mrow></msqrt></mrow><annotation encoding="application/x-tex">E_{IV} = -A - 2A \sqrt{1 + (\mu&#39; B / 2A)^2}</annotation></semantics></math>
+<em>(Где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>μ</mi><annotation encoding="application/x-tex">\mu</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>μ</mi><mo>′</mo></msup><annotation encoding="application/x-tex">\mu&#39;</annotation></semantics></math>
+— комбинации магнитных моментов электрона и протона, примерно равные
+магнетону Бора).</em></li>
+</ul>
+<p><strong>Ключевые наблюдения:</strong></p>
+<ul>
+<li><strong>Слабые поля:</strong> Уровни
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mi>I</mi></msub><mo>,</mo><msub><mi>E</mi><mrow><mi>I</mi><mi>I</mi></mrow></msub><mo>,</mo><msub><mi>E</mi><mrow><mi>I</mi><mi>I</mi><mi>I</mi></mrow></msub></mrow><annotation encoding="application/x-tex">E_I, E_{II}, E_{III}</annotation></semantics></math>
+ведут себя как состояния частицы со спином 1, а
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>E</mi><mrow><mi>I</mi><mi>V</mi></mrow></msub><annotation encoding="application/x-tex">E_{IV}</annotation></semantics></math>
+— со спином 0.</li>
+<li><strong>Сильные поля:</strong> Магнитное взаимодействие электрона и
+протона «разрывается». Каждый спин ориентируется вдоль поля независимо.
+Состояния
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>I</mi><mi>I</mi><mi>I</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">| III \rangle</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>I</mi><mi>V</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">| IV \rangle</annotation></semantics></math>,
+которые были смесью в нулевом поле, в сильных полях превращаются в
+чистые состояния
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>+</mi><mi>−</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">| + - \rangle</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>−</mi><mi>+</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">| - + \rangle</annotation></semantics></math>.</li>
+</ul>
+<hr />
+<h2 id="6-ключевые-цитаты-и-их-контекст">6. Ключевые цитаты и их
+контекст</h2>
+<blockquote>
+<p><strong>Об точности эксперимента:</strong> «Вероятно, ни одна из
+фундаментальных физических величин не измерена лучше, чем эта; таково
+одно из наиболее выдающихся по точности измерений в физике».</p>
+</blockquote>
+<ul>
+<li><em>Контекст:</em> Фейнман обсуждает измеренную частоту сверхтонкого
+расщепления водорода
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>1420</mn><annotation encoding="application/x-tex">1420</annotation></semantics></math>
+МГц) и подчеркивает, что экспериментаторы опережают теоретиков в
+точности на несколько порядков.</li>
+</ul>
+<blockquote>
+<p><strong>О практическом применении:</strong> «С помощью
+радиотелескопов, настроенных на волны 21 см... можно наблюдать скорости
+и расположение сгущений атомарного водорода... Это одна из великих
+программ радиоастрономии».</p>
+</blockquote>
+<ul>
+<li><em>Контекст:</em> Объяснение важности перехода между уровнями
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>I</mi><mi>V</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">| IV \rangle</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>I</mi><mo>,</mo><mi>I</mi><mi>I</mi><mo>,</mo><mi>I</mi><mi>I</mi><mi>I</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">| I, II, III \rangle</annotation></semantics></math>
+для изучения структуры нашей Галактики.</li>
+</ul>
+<hr />
+<h2 id="7-аналитические-выводы-и-значимость">7. Аналитические выводы и
+значимость</h2>
+<ol type="1">
+<li><strong>Атом как система спинов:</strong> В задачах сверхтонкого
+расщепления водород можно рассматривать как четырехуровневую систему,
+игнорируя пространственные возбуждения (энергия которых на порядки
+выше).</li>
+<li><strong>Спин 1 и спин 0:</strong> Группировка состояний при
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">B=0</annotation></semantics></math>
+показывает, как две частицы со спином
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">1/2</annotation></semantics></math>
+образуют составную систему. Состояния с энергией
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>+</mi><mi>A</mi></mrow><annotation encoding="application/x-tex">+A</annotation></semantics></math>
+ведут себя как частица со спином
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>1</mn><annotation encoding="application/x-tex">1</annotation></semantics></math>
+(три ориентации), а состояние
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>3</mn><mi>A</mi></mrow><annotation encoding="application/x-tex">-3A</annotation></semantics></math>
+— как частица со спином
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0</mn><annotation encoding="application/x-tex">0</annotation></semantics></math>
+(сферическая симметрия).</li>
+<li><strong>Метод проекционных матриц:</strong> Глава демонстрирует
+способ вывода матриц поворота для спина 1 через произведения амплитуд
+для спина
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">1/2</annotation></semantics></math>.
+Это подтверждает, что свойства систем с высшими спинами могут быть
+выведены из фундаментальных свойств спина
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">1/2</annotation></semantics></math>.</li>
+</ol>
+<h3
+id="таблица-2-сводка-состояний-в-нулевом-поле-фиг-105-и-табл-103">Таблица
+2: Сводка состояний в нулевом поле (Фиг. 10.5 и Табл. 10.3)</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Квантовое число
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math></th>
+<th style="text-align: left;">Магнитное число
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math></th>
+<th style="text-align: left;">Обозначение</th>
+<th style="text-align: left;">Энергия</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">+1</td>
+<td style="text-align: left;">$</td>
+<td style="text-align: left;">I \rangle$</td>
+</tr>
+<tr>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">$</td>
+<td style="text-align: left;">III \rangle$</td>
+</tr>
+<tr>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">-1</td>
+<td style="text-align: left;">$</td>
+<td style="text-align: left;">II \rangle$</td>
+</tr>
+<tr>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">$</td>
+<td style="text-align: left;">IV \rangle$</td>
+</tr>
+</tbody>
+</table>
+    </article>
+  </main>
+</body>
+</html>

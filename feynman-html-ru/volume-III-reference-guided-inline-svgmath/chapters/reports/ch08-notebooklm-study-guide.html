@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Глава 8. Гамильтонова матрица: Учебное пособие - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch08.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1 id="глава-8-гамильтонова-матрица-учебное-пособие">Глава 8.
+Гамильтонова матрица: Учебное пособие</h1>
+<p>Данное учебное пособие синтезирует ключевые положения восьмой главы
+«Фейнмановских лекций по физике» (том III), посвященной математическому
+аппарату квантовой механики, понятию гамильтониана и его применению к
+системе двух состояний на примере молекулы аммиака.</p>
+<hr />
+<h2 id="1-ключевые-понятия-и-теоретические-основы">1. Ключевые понятия и
+теоретические основы</h2>
+<h3 id="амплитуды-и-векторы-состояний">Амплитуды и векторы
+состояний</h3>
+<p>Квантовомеханическое описание системы опирается на глубокую аналогию
+между состояниями и геометрическими векторами.</p>
+<ul>
+<li><strong>Вектор состояния:</strong> Состояние
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>
+можно представить как «вектор». В дираковской нотации полное состояние
+обозначается символом <strong>кет</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>ϕ</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|\phi\rangle</annotation></semantics></math>,
+а сопряженное ему — символом <strong>брэ</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⟨</mo><mi>χ</mi><mo stretchy="false" form="prefix">|</mo></mrow><annotation encoding="application/x-tex">\langle\chi|</annotation></semantics></math>.
+Вместе они образуют <strong>брэ-кет</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⟨</mo><mi>χ</mi><mo stretchy="false" form="prefix">|</mo><mi>ϕ</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">\langle\chi|\phi\rangle</annotation></semantics></math>,
+который является числом (амплитудой вероятности).</li>
+<li><strong>Аналогия со скалярным произведением:</strong>
+<ul>
+<li>Векторное уравнение:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑨</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝑩</mi><mo>=</mo><msub><mo>∑</mo><mi>i</mi></msub><msub><mi>A</mi><mi>i</mi></msub><msub><mi>B</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">\mathbf{A} \cdot \mathbf{B} = \sum_i A_i B_i</annotation></semantics></math>.</li>
+<li>Квантовое уравнение:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⟨</mo><mi>χ</mi><mo stretchy="false" form="prefix">|</mo><mi>ϕ</mi><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><msub><mo>∑</mo><mi>i</mi></msub><mo stretchy="false" form="prefix">⟨</mo><mi>χ</mi><mo stretchy="false" form="prefix">|</mo><mi>i</mi><mo stretchy="false" form="postfix">⟩</mo><mo stretchy="false" form="prefix">⟨</mo><mi>i</mi><mo stretchy="false" form="prefix">|</mo><mi>ϕ</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">\langle\chi|\phi\rangle = \sum_i \langle\chi|i\rangle\langle i|\phi\rangle</annotation></semantics></math>.</li>
+</ul></li>
+<li><strong>Ортогональность базиса:</strong> Базисные состояния
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>i</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|i\rangle</annotation></semantics></math>
+считаются ортогональными, что выражается через символ Кронекера:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⟨</mo><mi>i</mi><mo stretchy="false" form="prefix">|</mo><mi>j</mi><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><msub><mi>δ</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\langle i|j\rangle = \delta_{ij}</annotation></semantics></math>.</li>
+</ul>
+<h3 id="операторы">Операторы</h3>
+<p><strong>Оператор (A)</strong> — это математический объект, который
+«действует» на состояние, превращая его в другое состояние:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>ψ</mi><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><mi>A</mi><mo stretchy="false" form="prefix">|</mo><mi>ϕ</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|\psi\rangle = A|\phi\rangle</annotation></semantics></math>.</p>
+<ul>
+<li>Оператор полностью описывается матрицей амплитуд
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>=</mo><mo stretchy="false" form="prefix">⟨</mo><mi>i</mi><mo stretchy="false" form="prefix">|</mo><mi>A</mi><mo stretchy="false" form="prefix">|</mo><mi>j</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">A_{ij} = \langle i|A|j\rangle</annotation></semantics></math>.</li>
+<li>Уравнение
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⟨</mo><mi>i</mi><mo stretchy="false" form="prefix">|</mo><mi>ψ</mi><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><msub><mo>∑</mo><mi>j</mi></msub><mo stretchy="false" form="prefix">⟨</mo><mi>i</mi><mo stretchy="false" form="prefix">|</mo><mi>A</mi><mo stretchy="false" form="prefix">|</mo><mi>j</mi><mo stretchy="false" form="postfix">⟩</mo><mo stretchy="false" form="prefix">⟨</mo><mi>j</mi><mo stretchy="false" form="prefix">|</mo><mi>ϕ</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">\langle i|\psi\rangle = \sum_j \langle i|A|j\rangle \langle j|\phi\rangle</annotation></semantics></math>
+показывает, как оператор связывает компоненты состояний в выбранном
+базисе.</li>
+</ul>
+<h3 id="динамика-изменение-состояний-во-времени">Динамика: Изменение
+состояний во времени</h3>
+<p>Для описания того, как система эволюционирует от момента
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>t</mi><mn>1</mn></msub><annotation encoding="application/x-tex">t_1</annotation></semantics></math>
+к
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>t</mi><mn>2</mn></msub><annotation encoding="application/x-tex">t_2</annotation></semantics></math>,
+вводится матрица перехода
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>t</mi><mn>2</mn></msub><mo>,</mo><msub><mi>t</mi><mn>1</mn></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">U(t_2, t_1)</annotation></semantics></math>.</p>
+<ul>
+<li><strong>S-матрица:</strong> Частный случай матрицы
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>U</mi><annotation encoding="application/x-tex">U</annotation></semantics></math>,
+когда рассматривается переход из бесконечного прошлого
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>→</mo><mi>−</mi><mi>∞</mi></mrow><annotation encoding="application/x-tex">t \to -\infty</annotation></semantics></math>)
+в бесконечное будущее
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>→</mo><mi>+</mi><mi>∞</mi></mrow><annotation encoding="application/x-tex">t \to +\infty</annotation></semantics></math>).
+Используется в физике высоких энергий для описания столкновений
+частиц.</li>
+<li><strong>Закон произведения:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>t</mi><mn>3</mn></msub><mo>,</mo><msub><mi>t</mi><mn>1</mn></msub><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>U</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>t</mi><mn>3</mn></msub><mo>,</mo><msub><mi>t</mi><mn>2</mn></msub><mo stretchy="false" form="postfix">)</mo><mo>⋅</mo><mi>U</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>t</mi><mn>2</mn></msub><mo>,</mo><msub><mi>t</mi><mn>1</mn></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">U(t_3, t_1) = U(t_3, t_2) \cdot U(t_2, t_1)</annotation></semantics></math>.
+Любой временной интервал можно разбить на бесконечно малые шаги.</li>
+</ul>
+<h3 id="гамильтонова-матрица-гамильтониан">Гамильтонова матрица
+(Гамильтониан)</h3>
+<p>Гамильтониан
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><annotation encoding="application/x-tex">H_{ij}</annotation></semantics></math>
+определяет скорость изменения амплитуд состояний во времени. Основное
+уравнение квантовомеханической динамики:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mi>ℏ</mi><mfrac><mrow><mi>d</mi><msub><mi>C</mi><mi>i</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>=</mo><munder><mo>∑</mo><mi>j</mi></munder><msub><mi>H</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><msub><mi>C</mi><mi>j</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">i\hbar \frac{dC_i(t)}{dt} = \sum_j H_{ij}(t)C_j(t)</annotation></semantics></math></p>
+<p>Где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>C</mi><mi>i</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">C_i(t)</annotation></semantics></math>
+— амплитуда нахождения системы в базисном состоянии
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>i</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|i\rangle</annotation></semantics></math>.</p>
+<ul>
+<li><strong>Свойство эрмитовости:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>H</mi><mrow><mi>i</mi><mi>j</mi></mrow><mo>*</mo></msubsup><mo>=</mo><msub><mi>H</mi><mrow><mi>j</mi><mi>i</mi></mrow></msub></mrow><annotation encoding="application/x-tex">H_{ij}^* = H_{ji}</annotation></semantics></math>.
+Это гарантирует сохранение полной вероятности (сумма квадратов модулей
+амплитуд всегда равна 1).</li>
+<li><strong>Связь с энергией:</strong> Если система находится в
+стационарном состоянии, то
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>11</mn></msub><annotation encoding="application/x-tex">H_{11}</annotation></semantics></math>
+соответствует энергии этого состояния.</li>
+</ul>
+<hr />
+<h2 id="2-анализ-системы-двух-состояний-молекула-аммиака-nh_3">2. Анализ
+системы двух состояний: Молекула аммиака
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><msub><mi>H</mi><mn>3</mn></msub></mrow><annotation encoding="application/x-tex">NH_3</annotation></semantics></math>)</h2>
+<p>Молекула аммиака рассматривается как система, имеющая два основных
+базисных состояния, определяемых положением атома азота относительно
+плоскости атомов водорода.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Состояние</th>
+<th style="text-align: left;">Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">**$</td>
+<td style="text-align: left;">1\rangle$**</td>
+</tr>
+<tr>
+<td style="text-align: left;">**$</td>
+<td style="text-align: left;">2\rangle$**</td>
+</tr>
+</tbody>
+</table>
+<h3 id="особенности-гамильтониана-аммиака">Особенности гамильтониана
+аммиака</h3>
+<ol type="1">
+<li><strong>Симметрия:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>11</mn></msub><mo>=</mo><msub><mi>H</mi><mn>22</mn></msub><mo>=</mo><msub><mi>E</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">H_{11} = H_{22} = E_0</annotation></semantics></math>
+(энергия в отсутствие переходов).</li>
+<li><strong>Туннелирование:</strong> Существует ненулевая амплитуда
+того, что азот проскочит сквозь энергетический барьер (плоскость
+водородов). Это описывается коэффициентом
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>12</mn></msub><mo>=</mo><msub><mi>H</mi><mn>21</mn></msub><mo>=</mo><mi>−</mi><mi>A</mi></mrow><annotation encoding="application/x-tex">H_{12} = H_{21} = -A</annotation></semantics></math>.</li>
+</ol>
+<h3 id="результаты-анализа">Результаты анализа</h3>
+<ul>
+<li><strong>Расщепление уровней:</strong> Вместо одного уровня энергии
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>E</mi><mn>0</mn></msub><annotation encoding="application/x-tex">E_0</annotation></semantics></math>
+возникают два:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mn>0</mn></msub><mo>−</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">E_0 - A</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mn>0</mn></msub><mo>+</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">E_0 + A</annotation></semantics></math>.</li>
+<li><strong>Стационарные состояния:</strong>
+<ul>
+<li>Состояние с энергией
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mn>0</mn></msub><mo>−</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">E_0 - A</annotation></semantics></math>:
+амплитуды равны
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>C</mi><mn>1</mn></msub><mo>=</mo><msub><mi>C</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">C_1 = C_2</annotation></semantics></math>).</li>
+<li>Состояние с энергией
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mn>0</mn></msub><mo>+</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">E_0 + A</annotation></semantics></math>:
+амплитуды равны по величине, но противоположны по знаку
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>C</mi><mn>1</mn></msub><mo>=</mo><mi>−</mi><msub><mi>C</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">C_1 = -C_2</annotation></semantics></math>).</li>
+</ul></li>
+<li><strong>Осцилляции вероятности:</strong> Если в момент
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">t=0</annotation></semantics></math>
+молекула была в состоянии
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mn>1</mn><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|1\rangle</annotation></semantics></math>,
+вероятность обнаружить её в состоянии
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mn>2</mn><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|2\rangle</annotation></semantics></math>
+через время
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math>
+равна:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>P</mi><mn>2</mn></msub><mo>=</mo><msup><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mn>2</mn></msup><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>t</mi><mi>/</mi><mi>ℏ</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">P_2 = \sin^2(At/\hbar)</annotation></semantics></math>.
+Происходит «перекачка» вероятности туда и обратно, аналогично связанным
+маятникам.</li>
+</ul>
+<hr />
+<h2 id="3-проверочные-вопросы-short-answer-quiz">3. Проверочные вопросы
+(Short-answer Quiz)</h2>
+<ol type="1">
+<li><strong>В чем заключается физический смысл «брэ» и «кет» векторов в
+записи Дирака?</strong>
+<ul>
+<li><em>Ответ:</em> Это полусимволы вектора состояния. Кет
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>ϕ</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|\phi\rangle</annotation></semantics></math>
+представляет само состояние, а брэ
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⟨</mo><mi>χ</mi><mo stretchy="false" form="prefix">|</mo></mrow><annotation encoding="application/x-tex">\langle\chi|</annotation></semantics></math>
+— сопряженное ему. Вместе они образуют полную скобку (bracket),
+являющуюся амплитудой перехода.</li>
+</ul></li>
+<li><strong>Какое условие накладывается на базисные состояния для
+возможности их использования в расчетах?</strong>
+<ul>
+<li><em>Ответ:</em> Они должны быть ортогональны
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⟨</mo><mi>i</mi><mo stretchy="false" form="prefix">|</mo><mi>j</mi><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><msub><mi>δ</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\langle i|j\rangle = \delta_{ij}</annotation></semantics></math>)
+и образовывать полную совокупность, описывающую все возможные состояния
+системы.</li>
+</ul></li>
+<li><strong>Почему гамильтониан часто называют «энергетической
+матрицей»?</strong>
+<ul>
+<li><em>Ответ:</em> В простейшем случае системы с одним состоянием
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>11</mn></msub><annotation encoding="application/x-tex">H_{11}</annotation></semantics></math>
+прямо соответствует энергии этого состояния
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>=</mo><msub><mi>H</mi><mn>11</mn></msub></mrow><annotation encoding="application/x-tex">E = H_{11}</annotation></semantics></math>).
+В сложных системах она обобщает понятие энергии.</li>
+</ul></li>
+<li><strong>Какое свойство матрицы
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><annotation encoding="application/x-tex">H_{ij}</annotation></semantics></math>
+обеспечивает сохранение полной вероятности во Вселенной?</strong>
+<ul>
+<li><em>Ответ:</em> Свойство
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>H</mi><mrow><mi>i</mi><mi>j</mi></mrow><mo>*</mo></msubsup><mo>=</mo><msub><mi>H</mi><mrow><mi>j</mi><mi>i</mi></mrow></msub></mrow><annotation encoding="application/x-tex">H_{ij}^* = H_{ji}</annotation></semantics></math>
+(комплексное сопряжение при перестановке индексов).</li>
+</ul></li>
+<li><strong>Что происходит с уровнями энергии молекулы аммиака из-за
+возможности перехода азота через плоскость водородов?</strong>
+<ul>
+<li><em>Ответ:</em> Происходит расщепление уровней энергии на два:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mn>0</mn></msub><mo>+</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">E_0 + A</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mn>0</mn></msub><mo>−</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">E_0 - A</annotation></semantics></math>.</li>
+</ul></li>
+</ol>
+<hr />
+<h2 id="4-типичные-ошибки-при-изучении-темы">4. Типичные ошибки при
+изучении темы</h2>
+<ul>
+<li><strong>Игнорирование комплексного сопряжения:</strong> При
+вычислении амплитуд перехода важно помнить, что
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⟨</mo><mi>ϕ</mi><mo stretchy="false" form="prefix">|</mo><mi>χ</mi><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><mo stretchy="false" form="prefix">⟨</mo><mi>χ</mi><mo stretchy="false" form="prefix">|</mo><mi>ϕ</mi><msup><mo stretchy="false" form="postfix">⟩</mo><mo>*</mo></msup></mrow><annotation encoding="application/x-tex">\langle \phi | \chi \rangle = \langle \chi | \phi \rangle^*</annotation></semantics></math>.
+Порядок множителей в квантовой механике критически важен.</li>
+<li><strong>Смешение операторов и чисел:</strong> Оператор
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+— это «инструкция» к действию, а не конкретное число. Числом (матричным
+элементом) он становится только в конкретном представлении
+(базисе).</li>
+<li><strong>Ошибочное представление о «стационарности»:</strong> Часто
+полагают, что если молекула находится в состоянии
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mn>1</mn><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|1\rangle</annotation></semantics></math>,
+то это и есть её энергия. На самом деле стационарными (с определенной
+энергией) являются только суперпозиции
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mn>1</mn><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|1\rangle</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mn>2</mn><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|2\rangle</annotation></semantics></math>.</li>
+<li><strong>Универсальность базиса:</strong> Ошибка считать, что импульс
+и спин — единственно возможные базисные состояния. Выбор представления
+зависит от задачи (например, для аммиака удобнее использовать
+пространственные положения азота).</li>
+</ul>
+<hr />
+<h2 id="5-темы-для-глубокого-изучения-essay-prompts">5. Темы для
+глубокого изучения (Essay Prompts)</h2>
+<ol type="1">
+<li><strong>Проблема «фундаментальности» частиц:</strong> Основываясь на
+тексте главы, обсудите, как неполнота знаний о внутренней структуре
+частиц (например, протона или электрона) влияет на выбор базисных
+состояний и точность гамильтониана.</li>
+<li><strong>Квантово-механическая аналогия связанных
+осцилляторов:</strong> Проанализируйте математическое сходство между
+уравнениями для амплитуд в системе двух состояний и классическими
+уравнениями для связанных маятников. В чем заключается принципиальное
+«квантовое» различие?</li>
+<li><strong>Роль S-матрицы в современной физике:</strong> Объясните,
+почему для физика-теоретика в области высоких энергий вычисление
+S-матрицы является приоритетным, и какие ограничения накладывает
+релятивистский подход на описание промежуточных состояний во
+времени.</li>
+</ol>
+<hr />
+<h2 id="6-краткий-глоссарий">6. Краткий глоссарий</h2>
+<ul>
+<li><strong>Амплитуда
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⟨</mo><mi>i</mi><mo stretchy="false" form="prefix">|</mo><mi>ϕ</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">\langle i|\phi\rangle</annotation></semantics></math>):</strong>
+Комплексное число, квадрат модуля которого определяет вероятность
+обнаружения системы в состоянии
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math>.</li>
+<li><strong>Базисные состояния:</strong> Набор независимых состояний,
+через линейную комбинацию которых можно выразить любое другое состояние
+системы.</li>
+<li><strong>Брэ (Bra):</strong> Левая часть дираковского обозначения
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⟨</mo><mi>χ</mi><mo stretchy="false" form="prefix">|</mo></mrow><annotation encoding="application/x-tex">\langle\chi|</annotation></semantics></math>.</li>
+<li><strong>Гамильтониан:</strong> Матрица, описывающая физические
+условия системы и определяющая её эволюцию во времени.</li>
+<li><strong>Кет (Ket):</strong> Правая часть дираковского обозначения
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>ϕ</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|\phi\rangle</annotation></semantics></math>.</li>
+<li><strong>Оператор:</strong> Математический объект, переводящий один
+вектор состояния в другой.</li>
+<li><strong>Туннелирование (в контексте аммиака):</strong> Процесс
+перехода атома азота через энергетически «нелегальную» область
+(плоскость водородов).</li>
+<li><strong>Эрмитовость:</strong> Свойство матрицы быть равной своей
+комплексно-сопряженной и транспонированной версии.</li>
+</ul>
+    </article>
+  </main>
+</body>
+</html>

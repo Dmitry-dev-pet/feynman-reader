@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Аналитический отчет: Амплитуды вероятности (Глава III-03) - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch03.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1
+id="аналитический-отчет-амплитуды-вероятности-глава-iii-03">Аналитический
+отчет: Амплитуды вероятности (Глава III-03)</h1>
+<p>Этот документ представляет собой синтез ключевых концепций квантовой
+механики, изложенных в третьей главе лекций Фейнмана. Основное внимание
+уделяется фундаментальной роли амплитуд вероятности, правилам их
+композиции и влиянию различимости состояний на интерференционную
+картину.</p>
+<h2 id="резюме-для-руководителей">Резюме для руководителей</h2>
+<p>В данной главе совершается переход от исторического подхода к
+изучению квантовой механики (через уравнение Шредингера) к более
+фундаментальному и концептуально простому методу, основанному на
+<strong>амплитудах вероятности</strong>. Ключевой тезис заключается в
+том, что поведение квантовых частиц нельзя описывать через привычные
+пространственные траектории. Вместо этого вводится понятие комплексного
+числа — амплитуды, квадрат модуля которой определяет вероятность
+события. Главный вывод анализа: интерференция возникает только тогда,
+когда альтернативные пути частицы принципиально неразличимы. Если же
+существует хотя бы теоретическая возможность определить путь частицы,
+интерференция исчезает, и вероятности складываются классическим
+образом.</p>
+<hr />
+<h2 id="1-основные-принципы-и-законы-композиции-амплитуд">1. Основные
+принципы и законы композиции амплитуд</h2>
+<p>Квантовая механика базируется на трех фундаментальных правилах
+оперирования амплитудами, которые заменяют классические представления о
+движении.</p>
+<h3 id="11-определение-амплитуды-и-вероятности">1.1. Определение
+амплитуды и вероятности</h3>
+<p>Вероятность
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math>
+того, что событие произойдет, равна квадрату модуля комплексного числа
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>,
+называемого амплитудой вероятности:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mo stretchy="false" form="prefix">|</mo><mi>ϕ</mi><msup><mo stretchy="false" form="prefix">|</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">P = |\phi|^2</annotation></semantics></math>
+Для обозначения амплитуд используется нотация Дирака: <span
+class="math inline">$\braket{x}{s}$</span>, где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math>
+— начальное состояние (источник), а
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>
+— конечное состояние (детектор). Запись читается справа налево.</p>
+<h3 id="12-второй-принцип-сложение-амплитуд-суперпозиция">1.2. Второй
+принцип: Сложение амплитуд (Суперпозиция)</h3>
+<p>Если событие может произойти несколькими взаимоисключающими путями, и
+эти пути <strong>неразличимы</strong>, то полная амплитуда является
+суммой амплитуд каждого пути: <span
+class="math display">$$\braket{x}{s}_{\text{полная}} =
+\braket{x}{s}_{\text{путь 1}} + \braket{x}{s}_{\text{путь 2}}$$</span>
+Это приводит к интерференции, так как
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mo stretchy="false" form="prefix">|</mo><msub><mi>ϕ</mi><mn>1</mn></msub><mo>+</mo><msub><mi>ϕ</mi><mn>2</mn></msub><msup><mo stretchy="false" form="prefix">|</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">P = |\phi_1 + \phi_2|^2</annotation></semantics></math>.</p>
+<h3
+id="13-третий-принцип-умножение-амплитуд-последовательные-события">1.3.
+Третий принцип: Умножение амплитуд (Последовательные события)</h3>
+<p>Если событие происходит в несколько последовательных этапов, итоговая
+амплитуда пути равна произведению амплитуд этих этапов: <span
+class="math display">$$\braket{x}{s}_{\text{через 1}} =
+\braket{x}{1}\braket{1}{s}$$</span></p>
+<h3 id="14-обобщенная-формула-для-сложных-систем">1.4. Обобщенная
+формула для сложных систем</h3>
+<p>Для системы с несколькими экранами и множеством щелей (как на Фиг.
+1.2) полная амплитуда перехода из
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math>
+в
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>
+рассчитывается путем суммирования произведений по всем возможным
+промежуточным состояниям
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>α</mi><annotation encoding="application/x-tex">\alpha</annotation></semantics></math>):
+<span class="math display">$$\braket{x}{s} = \sum_{i, \alpha}
+\braket{x}{\alpha}\braket{\alpha}{i}\braket{i}{s}$$</span></p>
+<hr />
+<h2 id="2-проблема-различимости-и-интерференции">2. Проблема
+различимости и интерференции</h2>
+<p>Критическим аспектом квантовой механики является вопрос: «через какую
+щель прошла частица?». Экспериментальные данные показывают, что само
+наличие информации о пути меняет физический результат.</p>
+<h3 id="анализ-эксперимента-с-фотонами-фиг-13-и-14">Анализ эксперимента
+с фотонами (Фиг. 1.3 и 1.4)</h3>
+<p>Если за щелями установить источник света для фиксации пролета
+электрона:</p>
+<ol type="1">
+<li><strong>Короткие волны (высокая точность):</strong> Мы точно знаем
+путь. Интерференция исчезает. Распределение вероятностей становится
+суммой квадратов модулей:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mo stretchy="false" form="prefix">|</mo><msub><mi>ϕ</mi><mn>1</mn></msub><msup><mo stretchy="false" form="prefix">|</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">|</mo><msub><mi>ϕ</mi><mn>2</mn></msub><msup><mo stretchy="false" form="prefix">|</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">P = |\phi_1|^2 + |\phi_2|^2</annotation></semantics></math>.</li>
+<li><strong>Длинные волны (низкая точность):</strong> Рассеянный фотон
+может с определенной амплитудой
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>
+попасть в детектор от «чужой» щели. Если
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo>≈</mo><mi>a</mi></mrow><annotation encoding="application/x-tex">b \approx a</annotation></semantics></math>,
+мы теряем информацию о пути, и интерференция восстанавливается.</li>
+<li><strong>Принцип несложения амплитуд:</strong> Никогда нельзя
+складывать амплитуды для <strong>разных конечных состояний</strong>.
+Если фотон попал в детектор
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>D</mi><mn>1</mn></msub><annotation encoding="application/x-tex">D_1</annotation></semantics></math>,
+это одно состояние; если в
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>D</mi><mn>2</mn></msub><annotation encoding="application/x-tex">D_2</annotation></semantics></math>
+— другое. Нужно сначала вычислить вероятность каждого случая, а затем их
+суммировать.</li>
+</ol>
+<hr />
+<h2 id="3-физические-примеры-и-их-анализ">3. Физические примеры и их
+анализ</h2>
+<h3 id="31-рассеяние-нейтронов-на-кристалле-фиг-15-и-16">3.1. Рассеяние
+нейтронов на кристалле (Фиг. 1.5 и 1.6)</h3>
+<p>Процесс рассеяния нейтрона на периодической структуре ядер выявляет
+роль спина:</p>
+<ul>
+<li><strong>Без изменения спина:</strong> Все ядра остаются в исходном
+состоянии. Пути рассеяния на разных ядрах неразличимы
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>→</mo><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math>
+возникает резкая интерференционная картина (Брэгговские пики).</li>
+<li><strong>С переворотом спина:</strong> Ядро, на котором произошло
+рассеяние, меняет свой спин. Это оставляет «метку» в кристалле. Пути
+становятся различимыми (в принципе можно проверить, какое ядро
+перевернулось)
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>→</mo><annotation encoding="application/x-tex">\rightarrow</annotation></semantics></math>
+интерференция исчезает, возникает плавный фон.</li>
+</ul>
+<h3 id="32-тождественные-частицы-фиг-17-18-19">3.2. Тождественные
+частицы (Фиг. 1.7, 1.8, 1.9)</h3>
+<p>Поведение системы при столкновении частиц зависит от их
+тождественности:</p>
+<ul>
+<li><strong>Различимые частицы
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>α</mi><annotation encoding="application/x-tex">\alpha</annotation></semantics></math>
+на кислороде):</strong> Вероятности просто суммируются:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>θ</mi><mo stretchy="false" form="postfix">)</mo><msup><mo stretchy="false" form="prefix">|</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">|</mo><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>π</mi><mo>−</mo><mi>θ</mi><mo stretchy="false" form="postfix">)</mo><msup><mo stretchy="false" form="prefix">|</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">|f(\theta)|^2 + |f(\pi-\theta)|^2</annotation></semantics></math>.</li>
+<li><strong>Тождественные частицы со спином 0
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>α</mi><annotation encoding="application/x-tex">\alpha</annotation></semantics></math>
+на
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>α</mi><annotation encoding="application/x-tex">\alpha</annotation></semantics></math>):</strong>
+Невозможно отличить рассеянную частицу от частицы мишени. Амплитуды
+складываются:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>θ</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>π</mi><mo>−</mo><mi>θ</mi><mo stretchy="false" form="postfix">)</mo><msup><mo stretchy="false" form="prefix">|</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">|f(\theta) + f(\pi-\theta)|^2</annotation></semantics></math>.
+При
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>90</mn><mo>∘</mo></msup><annotation encoding="application/x-tex">90^\circ</annotation></semantics></math>
+интенсивность вдвое выше классической.</li>
+<li><strong>Тождественные частицы со спином 1/2 (электроны):</strong>
+Действует новое правило — амплитуды при обмене частицами вычитаются:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>θ</mi><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>π</mi><mo>−</mo><mi>θ</mi><mo stretchy="false" form="postfix">)</mo><msup><mo stretchy="false" form="prefix">|</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">|f(\theta) - f(\pi-\theta)|^2</annotation></semantics></math>.</li>
+</ul>
+<p><strong>Таблица 1.1: Рассеяние неполяризованных электронов</strong> |
+Состояние спинов | Результат | Тип сложения | | :--- | :--- | :--- | |
+Параллельные (up-up) | Неразличимы | Разность амплитуд:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>θ</mi><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>π</mi><mo>−</mo><mi>θ</mi><mo stretchy="false" form="postfix">)</mo><msup><mo stretchy="false" form="prefix">|</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">|f(\theta) - f(\pi-\theta)|^2</annotation></semantics></math>
+| | Антипараллельные (up-down) | Различимы по спину | Сумма
+вероятностей:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>θ</mi><mo stretchy="false" form="postfix">)</mo><msup><mo stretchy="false" form="prefix">|</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">|</mo><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>π</mi><mo>−</mo><mi>θ</mi><mo stretchy="false" form="postfix">)</mo><msup><mo stretchy="false" form="prefix">|</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">|f(\theta)|^2 + |f(\pi-\theta)|^2</annotation></semantics></math>
+|</p>
+<hr />
+<h2 id="4-важные-цитаты-и-их-контекст">4. Важные цитаты и их
+контекст</h2>
+<blockquote>
+<p><strong>«Природа не знает, на что вы смотрите, и она ведет себя так,
+как ей положено, независимо от того, утруждаете ли вы себя записью
+данных или нет».</strong> <em>Контекст:</em> Объяснение того, почему
+нельзя складывать амплитуды, если конечное состояние системы (включая
+измерительные приборы) стало различным.</p>
+</blockquote>
+<blockquote>
+<p><strong>«Никогда не складывайте амплитуды разных, отличных друг от
+друга конечных состояний».</strong> <em>Контекст:</em> Базовое
+предостережение против типичной ошибки при расчете вероятностей в
+квантовых системах.</p>
+</blockquote>
+<blockquote>
+<p><strong>«С этой волной нельзя связать никакой реальности, как это
+делается со звуковой волной».</strong> <em>Контекст:</em> Разъяснение
+природы волновой функции. Она является математическим инструментом для
+расчета амплитуд, а не физическим колебанием среды.</p>
+</blockquote>
+<hr />
+<h2 id="5-ключевые-выводы-и-аналитические-инсайты">5. Ключевые выводы и
+аналитические инсайты</h2>
+<ol type="1">
+<li><strong>Квантовая экономия:</strong> Для предсказания будущего
+системы достаточно знать ограниченный набор комплексных чисел (амплитуд)
+в данный момент. Все детали предыдущей истории частицы (откуда она
+пришла к щели) уже заключены в значении этой амплитуды.</li>
+<li><strong>Фундаментальное условие интерференции:</strong> Ключевым
+фактором является не наличие наблюдателя, а <strong>принципиальная
+неразличимость</strong> путей в рамках всей Вселенной. Если
+взаимодействие частицы с чем-либо (фотоном, спином ядра) оставляет след,
+позволяющий идентифицировать путь, интерференция разрушается.</li>
+<li><strong>Принципиальная неточность описания:</strong> На данном этапе
+изучения важно принять абстракцию амплитуд, отказавшись от попыток
+визуализировать движение частицы как классическую траекторию
+(«корпускулярную волну»).</li>
+<li><strong>Специфика тождественности:</strong> В квантовом мире
+тождественность частиц приводит к реальным физическим эффектам (усиление
+или ослабление рассеяния), которые не имеют аналогов в классической
+физике. При этом знак интерференции (плюс для бозонов, минус для
+фермионов) критически важен.</li>
+</ol>
+    </article>
+  </main>
+</body>
+</html>

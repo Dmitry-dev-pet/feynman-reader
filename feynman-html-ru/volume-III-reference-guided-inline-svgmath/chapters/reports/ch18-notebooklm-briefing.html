@@ -1,0 +1,288 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Глава 18. Момент количества движения: Аналитический отчет - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch18.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1 id="глава-18-момент-количества-движения-аналитический-отчет">Глава
+18. Момент количества движения: Аналитический отчет</h1>
+<p>Настоящий документ представляет собой аналитический обзор главы 18
+третьего тома «Феймановских лекций по физике». В главе рассматривается
+фундаментальное значение момента количества движения в
+квантовомеханических системах, анализируются процессы излучения,
+рассеяния и аннигиляции, а также математический аппарат сложения
+спинов.</p>
+<h2 id="1-резюме-для-руководства-executive-summary">1. Резюме для
+руководства (Executive Summary)</h2>
+<p>Центральной темой главы является демонстрация того, как законы
+сохранения момента количества движения и четности позволяют
+предсказывать физические свойства микромира: угловое распределение
+фотонов, поляризацию излучения и возможность или невозможность
+определенных ядерных реакций.</p>
+<p><strong>Ключевые выводы:</strong></p>
+<ul>
+<li><strong>Сохранение момента:</strong> В квантовой механике момент
+количества движения (спин) диктует строгие правила отбора для переходов.
+Например, атом в состоянии
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">m=0</annotation></semantics></math>
+не может испустить фотон вдоль оси
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>z</mi><annotation encoding="application/x-tex">z</annotation></semantics></math>,
+так как фотон всегда уносит
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>±</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">\pm 1</annotation></semantics></math>
+единицу момента.</li>
+<li><strong>Аннигиляция позитрония:</strong> Состояние со спином 1 не
+может распадаться на два фотона из-за принципов симметрии и статистики
+Бозе-частиц.</li>
+<li><strong>Связь с классикой:</strong> Квантовая теория рассеяния света
+на атоме со спином
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">j=1</annotation></semantics></math>
+в возбужденном состоянии и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">j=0</annotation></semantics></math>
+в основном дает результаты, идентичные классической модели электрона на
+пружинке.</li>
+<li><strong>Экспериментальная верификация:</strong> Измерения углового
+распределения продуктов распада возбужденных ядер неона
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi></mi><mn>20</mn></msup><msup><mtext mathvariant="normal">Ne</mtext><mo>*</mo></msup></mrow><annotation encoding="application/x-tex">^{20}\text{Ne}^*</annotation></semantics></math>)
+позволяют однозначно определить их спин, сравнивая данные с
+теоретическими полиномами Лежандра.</li>
+</ul>
+<hr />
+<h2 id="2-детальный-анализ-ключевых-тем">2. Детальный анализ ключевых
+тем</h2>
+<h3 id="181-электрическое-дипольное-излучение">18.1. Электрическое
+дипольное излучение</h3>
+<p>При переходе атома из возбужденного состояния
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">j=1</annotation></semantics></math>)
+в основное
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">j=0</annotation></semantics></math>)
+испускается фотон. Сохранение момента количества движения определяет его
+поляризацию:</p>
+<ul>
+<li>Если начальное состояние
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>=</mo><mi>+</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">m=+1</annotation></semantics></math>,
+испускается <strong>правополяризованный (RHC)</strong> фотон в
+направлении оси
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>+</mi><mi>z</mi></mrow><annotation encoding="application/x-tex">+z</annotation></semantics></math>.</li>
+<li>Если начальное состояние
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>=</mo><mi>−</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">m=-1</annotation></semantics></math>,
+испускается <strong>левополяризованный (LHC)</strong> фотон в
+направлении оси
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>+</mi><mi>z</mi></mrow><annotation encoding="application/x-tex">+z</annotation></semantics></math>.</li>
+<li>Если
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">m=0</annotation></semantics></math>,
+испускание вдоль оси
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>z</mi><annotation encoding="application/x-tex">z</annotation></semantics></math>
+запрещено.</li>
+</ul>
+<p><strong>Математическое описание амплитуд:</strong> Для фотона,
+испущенного под углом
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>θ</mi><annotation encoding="application/x-tex">\theta</annotation></semantics></math>
+к оси
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>z</mi><annotation encoding="application/x-tex">z</annotation></semantics></math>:
+| Тип фотона | Амплитуда | Формула | | :--- | :--- | :--- | | Правый
+(RHC) |
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⟨</mo><msup><mi>R</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">|</mo><mi>S</mi><mo stretchy="false" form="prefix">|</mo><mi>+</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">\langle R&#39; | S | + \rangle</annotation></semantics></math>
+|
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mi>a</mi><mn>2</mn></mfrac><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>θ</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\frac{a}{2}(1 + \cos \theta)</annotation></semantics></math>
+| | Левый (LHC) |
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⟨</mo><msup><mi>L</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">|</mo><mi>S</mi><mo stretchy="false" form="prefix">|</mo><mi>+</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">\langle L&#39; | S | + \rangle</annotation></semantics></math>
+|
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mfrac><mi>a</mi><mn>2</mn></mfrac><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>θ</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">-\frac{a}{2}(1 - \cos \theta)</annotation></semantics></math>
+|</p>
+<p><em>Физический смысл:</em> Амплитуды зависят от четности начального и
+конечного состояний. В случае «электрического дипольного излучения»
+(разная четность состояний) амплитуды имеют противоположные знаки.</p>
+<h3 id="182-рассеяние-света">18.2. Рассеяние света</h3>
+<p>Рассеяние рассматривается как двухступенчатый процесс: поглощение
+фотона (перевод атома в промежуточное состояние
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>=</mo><mi>+</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">m=+1</annotation></semantics></math>
+или
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>=</mo><mi>−</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">m=-1</annotation></semantics></math>)
+и последующее переизлучение.</p>
+<ul>
+<li><strong>Линейная поляризация:</strong> Пучок света, поляризованный
+вдоль оси
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>,
+рассеивается под углом
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>θ</mi><annotation encoding="application/x-tex">\theta</annotation></semantics></math>
+с интенсивностью, пропорциональной
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mn>2</mn></msup><mi>θ</mi></mrow><annotation encoding="application/x-tex">\cos^2 \theta</annotation></semantics></math>.</li>
+<li><strong>Классическое соответствие:</strong> Квантовая механика
+подтверждает классическую теорию рассеяния, где электрон рассматривается
+как осциллятор. Это «единственный по-настоящему законный путь»
+объяснения таких явлений, как поляризация дневного света.</li>
+</ul>
+<h3 id="183-аннигиляция-позитрония">18.3. Аннигиляция позитрония</h3>
+<p>Позитроний
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>e</mi><mo>+</mo></msup><msup><mi>e</mi><mo>−</mo></msup></mrow><annotation encoding="application/x-tex">e^+ e^-</annotation></semantics></math>)
+имеет два основных состояния:</p>
+<ol type="1">
+<li><strong>Парапозитроний
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">j=0</annotation></semantics></math>):</strong>
+Распадается на два фотона за
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≈</mo><msup><mn>10</mn><mrow><mi>−</mi><mn>10</mn></mrow></msup></mrow><annotation encoding="application/x-tex">\approx 10^{-10}</annotation></semantics></math>
+сек.</li>
+<li><strong>Ортопозитроний
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">j=1</annotation></semantics></math>):</strong>
+Двухфотонный распад <strong>запрещен</strong>.</li>
+</ol>
+<p><strong>Причина запрета для
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">j=1</annotation></semantics></math>:</strong>
+Если бы система со спином 1 и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">m=0</annotation></semantics></math>
+распадалась на два фотона, то при повороте на
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>180</mn><mo>∘</mo></msup><annotation encoding="application/x-tex">180^\circ</annotation></semantics></math>
+вокруг оси
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>y</mi><annotation encoding="application/x-tex">y</annotation></semantics></math>
+амплитуда должна была бы изменить знак. Однако, поскольку фотоны —
+бозе-частицы, их перестановка (эквивалентная такому повороту) не должна
+менять знак амплитуды. Это противоречие делает распад невозможным.
+Ортопозитроний распадается на три фотона, что происходит в 1000 раз
+медленнее.</p>
+<p><img src="[SOURCE_IMAGE_8]"
+alt="Фиг. 16.7. Невозможный процесс для j=1" /></p>
+<h3 id="184-сложение-моментов-количества-движения">18.4. Сложение
+моментов количества движения</h3>
+<p>При объединении двух систем со спинами
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>j</mi><mi>a</mi></msub><annotation encoding="application/x-tex">j_a</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>j</mi><mi>b</mi></msub><annotation encoding="application/x-tex">j_b</annotation></semantics></math>
+полный момент системы
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>J</mi><annotation encoding="application/x-tex">J</annotation></semantics></math>
+может принимать значения от
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><msub><mi>j</mi><mi>a</mi></msub><mo>−</mo><msub><mi>j</mi><mi>b</mi></msub><mo stretchy="false" form="prefix">|</mo></mrow><annotation encoding="application/x-tex">|j_a - j_b|</annotation></semantics></math>
+до
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>j</mi><mi>a</mi></msub><mo>+</mo><msub><mi>j</mi><mi>b</mi></msub></mrow><annotation encoding="application/x-tex">j_a + j_b</annotation></semantics></math>
+с шагом в единицу.</p>
+<p><strong>Пример (Дейтерий: электрон
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi><mo>=</mo><mn>1</mn><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">j=1/2</annotation></semantics></math>
+и дейтрон
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">j=1</annotation></semantics></math>):</strong>
+Возможные значения полного спина:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>J</mi><mo>=</mo><mn>3</mn><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">J=3/2</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>J</mi><mo>=</mo><mn>1</mn><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">J=1/2</annotation></semantics></math>.
+Для описания этих состояний используются <strong>коэффициенты Клебша —
+Гордана</strong>, которые определяют вклад каждой комбинации
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>m</mi><mi>a</mi></msub><annotation encoding="application/x-tex">m_a</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>m</mi><mi>b</mi></msub><annotation encoding="application/x-tex">m_b</annotation></semantics></math>
+в результирующее состояние
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>J</mi><mo>,</mo><mi>M</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|J, M\rangle</annotation></semantics></math>.</p>
+<hr />
+<h2 id="3-важные-цитаты-и-их-контекст">3. Важные цитаты и их
+контекст</h2>
+<blockquote>
+<p><strong>«Измерение, в котором действительно реализуется одна из
+возможностей, разрушает интерференцию, но если измерение проделано не
+было, вы не вправе говорить, что "все равно реализуется либо одна
+возможность, либо другая".»</strong></p>
+</blockquote>
+<ul>
+<li><strong>Контекст:</strong> Обсуждение парадокса Эйнштейна —
+Подольского — Розена (ЭПР) при аннигиляции позитрония. Фейнман
+подчеркивает, что квантовая реальность описывается интерферирующими
+амплитудами, а не скрытыми параметрами.</li>
+</ul>
+<blockquote>
+<p><strong>«Природа, по всей видимости, не замечает этого "парадокса",
+потому что опыт свидетельствует о том, что предсказание... в
+действительности верно.»</strong></p>
+</blockquote>
+<ul>
+<li><strong>Контекст:</strong> О корреляции поляризаций двух фотонов,
+разлетающихся в противоположные стороны. Измерение поляризации одного
+фотона мгновенно позволяет предсказать поляризацию другого, что
+подтверждается экспериментально, несмотря на философские возражения
+Эйнштейна.</li>
+</ul>
+<blockquote>
+<p><strong>«В некотором смысле мы подводим весь наш курс к
+истине.»</strong></p>
+</blockquote>
+<ul>
+<li><strong>Контекст:</strong> О том, что сложные квантовые расчеты в
+конечном итоге подтверждают простые классические модели (например,
+модель «электрона на пружинке»), которые ранее вводились как
+допущения.</li>
+</ul>
+<hr />
+<h2 id="4-визуализация-и-формулы">4. Визуализация и формулы</h2>
+<h3 id="матрица-поворота-для-произвольного-спина">Матрица поворота для
+произвольного спина</h3>
+<p>Для системы со спином
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math>
+матричные элементы поворота вокруг оси
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>y</mi><annotation encoding="application/x-tex">y</annotation></semantics></math>
+определяются сложной формулой, включающей факториалы и
+тригонометрические функции углов половинного деления
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>θ</mi><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">\theta/2</annotation></semantics></math>).</p>
+<p>Важным частным случаем являются <strong>полиномы Лежандра</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>P</mi><mi>j</mi></msub><mo stretchy="false" form="prefix">(</mo><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>θ</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">P_j(\cos \theta)</annotation></semantics></math>,
+соответствующие переходам
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>j</mi><mo>,</mo><mn>0</mn><mo stretchy="false" form="postfix">⟩</mo><mo>→</mo><mo stretchy="false" form="prefix">|</mo><mi>j</mi><mo>,</mo><mn>0</mn><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|j, 0\rangle \to |j, 0\rangle</annotation></semantics></math>:</p>
+<ul>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>P</mi><mn>0</mn></msub><mo stretchy="false" form="prefix">(</mo><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>θ</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">P_0(\cos \theta) = 1</annotation></semantics></math></li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>P</mi><mn>1</mn></msub><mo stretchy="false" form="prefix">(</mo><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>θ</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>θ</mi></mrow><annotation encoding="application/x-tex">P_1(\cos \theta) = \cos \theta</annotation></semantics></math></li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>P</mi><mn>2</mn></msub><mo stretchy="false" form="prefix">(</mo><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>θ</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo stretchy="false" form="prefix">(</mo><mn>3</mn><msup><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mn>2</mn></msup><mi>θ</mi><mo>−</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">P_2(\cos \theta) = \frac{1}{2}(3\cos^2 \theta - 1)</annotation></semantics></math></li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>P</mi><mn>3</mn></msub><mo stretchy="false" form="prefix">(</mo><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>θ</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo stretchy="false" form="prefix">(</mo><mn>5</mn><msup><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mn>3</mn></msup><mi>θ</mi><mo>−</mo><mn>3</mn><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>θ</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">P_3(\cos \theta) = \frac{1}{2}(5\cos^3 \theta - 3\cos \theta)</annotation></semantics></math></li>
+</ul>
+<h3 id="схема-измерения-ядерного-спина">Схема измерения ядерного
+спина</h3>
+<p>Эксперимент с ядрами неона иллюстрирует практическое применение
+теории:</p>
+<p><img src="[SOURCE_IMAGE_10]"
+alt="Фиг. 16.9. Схема эксперимента" /></p>
+<p>Результаты (совпадение экспериментальных точек с кривыми
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><msub><mi>P</mi><mi>j</mi></msub><mo stretchy="false" form="prefix">(</mo><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>θ</mi><mo stretchy="false" form="postfix">)</mo><msup><mo stretchy="false" form="postfix">]</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">[P_j(\cos \theta)]^2</annotation></semantics></math>):</p>
+<ul>
+<li>Состояние 5.80 МэВ
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>→</mo><annotation encoding="application/x-tex">\to</annotation></semantics></math>
+спин 1.</li>
+<li>Состояние 5.63 МэВ
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>→</mo><annotation encoding="application/x-tex">\to</annotation></semantics></math>
+спин 3.</li>
+</ul>
+<hr />
+<h2 id="5-основные-физические-выводы-key-takeaways">5. Основные
+физические выводы (Key Takeaways)</h2>
+<ol type="1">
+<li><strong>Универсальность спиновых свойств:</strong> Законы сложения
+моментов и матрицы поворота зависят только от квантового числа
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math>
+и не зависят от внутренней структуры объекта (будь то атом, ядро или
+элементарная частица).</li>
+<li><strong>Роль симметрии:</strong> Инверсия координат (четность) и
+повороты системы являются мощными инструментами для определения правил
+запрета в физике частиц.</li>
+<li><strong>Квантовая корреляция:</strong> В системах с нулевым полным
+моментом (как при аннигиляции
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>e</mi><mo>+</mo></msup><msup><mi>e</mi><mo>−</mo></msup></mrow><annotation encoding="application/x-tex">e^+e^-</annotation></semantics></math>)
+частицы остаются взаимосвязанными на любом расстоянии. Выбор базиса
+измерения (круговая или линейная поляризация) одним наблюдателем
+мгновенно определяет физическую реальность для другого.</li>
+<li><strong>Полиномы Лежандра как «отпечатки пальцев»:</strong> Угловое
+распределение продуктов распада является уникальной характеристикой
+спина возбужденного состояния, что позволяет «заглянуть» внутрь ядра и
+изучать ядерные силы.</li>
+</ol>
+    </article>
+  </main>
+</body>
+</html>

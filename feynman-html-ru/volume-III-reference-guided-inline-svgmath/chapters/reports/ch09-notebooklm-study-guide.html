@@ -1,0 +1,231 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Глава 9. Аммиачный мазер: Учебный конспект - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch09.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1 id="глава-9-аммиачный-мазер-учебный-конспект">Глава 9. Аммиачный
+мазер: Учебный конспект</h1>
+<p>Данный документ представляет собой синтез материалов по
+квантовомеханическому анализу работы аммиачного мазера, основанный на
+лекциях Ричарда Фейнмана. В нем рассматриваются состояния молекулы
+аммиака, её поведение в статических и переменных электрических полях, а
+также принципы усиления излучения.</p>
+<hr />
+<h2 id="1-ключевые-понятия-и-теоретические-основы">1. Ключевые понятия и
+теоретические основы</h2>
+<h3 id="состояния-молекулы-аммиака">Состояния молекулы аммиака</h3>
+<p>Молекула аммиака
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><msub><mi>H</mi><mn>3</mn></msub></mrow><annotation encoding="application/x-tex">NH_3</annotation></semantics></math>)
+рассматривается как система с двумя базисными состояниями, определяемыми
+положением атома азота относительно плоскости атомов водорода:</p>
+<ul>
+<li><strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mn>1</mn><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|1\rangle</annotation></semantics></math></strong>:
+Атом азота находится «сверху» плоскости водородов.</li>
+<li><strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mn>2</mn><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|2\rangle</annotation></semantics></math></strong>:
+Атом азота находится «снизу» плоскости водородов.</li>
+</ul>
+<p>Из-за квантового туннелирования (амплитуда переброса
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>)
+эти состояния не являются стационарными. Стационарными состояниями
+(состояниями с определенной энергией) являются их линейные
+комбинации:</p>
+<ul>
+<li><strong>Состояние
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>I</mi><mi>I</mi><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><mfrac><mn>1</mn><msqrt><mn>2</mn></msqrt></mfrac><mo stretchy="false" form="prefix">(</mo><mo stretchy="false" form="prefix">|</mo><mn>1</mn><mo stretchy="false" form="postfix">⟩</mo><mo>+</mo><mo stretchy="false" form="prefix">|</mo><mn>2</mn><mo stretchy="false" form="postfix">⟩</mo><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">|II\rangle = \frac{1}{\sqrt{2}}(|1\rangle + |2\rangle)</annotation></semantics></math></strong>:
+обладает энергией
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mrow><mi>I</mi><mi>I</mi></mrow></msub><mo>=</mo><msub><mi>E</mi><mn>0</mn></msub><mo>−</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">E_{II} = E_0 - A</annotation></semantics></math>
+(нижний уровень).</li>
+<li><strong>Состояние
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>I</mi><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><mfrac><mn>1</mn><msqrt><mn>2</mn></msqrt></mfrac><mo stretchy="false" form="prefix">(</mo><mo stretchy="false" form="prefix">|</mo><mn>1</mn><mo stretchy="false" form="postfix">⟩</mo><mo>−</mo><mo stretchy="false" form="prefix">|</mo><mn>2</mn><mo stretchy="false" form="postfix">⟩</mo><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">|I\rangle = \frac{1}{\sqrt{2}}(|1\rangle - |2\rangle)</annotation></semantics></math></strong>:
+обладает энергией
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mi>I</mi></msub><mo>=</mo><msub><mi>E</mi><mn>0</mn></msub><mo>+</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">E_I = E_0 + A</annotation></semantics></math>
+(верхний уровень).</li>
+</ul>
+<p>Разность энергий между этими уровнями составляет
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>A</mi></mrow><annotation encoding="application/x-tex">2A</annotation></semantics></math>.
+Экспериментально установлено, что для аммиака частота перехода
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo>=</mo><mn>2</mn><mi>A</mi><mi>/</mi><mi>h</mi></mrow><annotation encoding="application/x-tex">f = 2A/h</annotation></semantics></math>
+составляет примерно <strong>24 000 МГц</strong> (микроволновый диапазон,
+длина волны
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≈</mo><mn>1</mn><mo>,</mo><mn>25</mn></mrow><annotation encoding="application/x-tex">\approx 1,25</annotation></semantics></math>
+см).</p>
+<h3 id="молекула-в-электрическом-поле">Молекула в электрическом
+поле</h3>
+<p>При наложении внешнего электрического поля
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">ℰ</mi><annotation encoding="application/x-tex">\mathcal{E}</annotation></semantics></math>
+уровни энергии смещаются. Матричные элементы гамильтониана принимают
+вид:</p>
+<ul>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>11</mn></msub><mo>=</mo><msub><mi>E</mi><mn>0</mn></msub><mo>+</mo><mi>μ</mi><mi mathvariant="script">ℰ</mi></mrow><annotation encoding="application/x-tex">H_{11} = E_0 + \mu\mathcal{E}</annotation></semantics></math></li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>22</mn></msub><mo>=</mo><msub><mi>E</mi><mn>0</mn></msub><mo>−</mo><mi>μ</mi><mi mathvariant="script">ℰ</mi></mrow><annotation encoding="application/x-tex">H_{22} = E_0 - \mu\mathcal{E}</annotation></semantics></math></li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>12</mn></msub><mo>=</mo><msub><mi>H</mi><mn>21</mn></msub><mo>=</mo><mi>−</mi><mi>A</mi></mrow><annotation encoding="application/x-tex">H_{12} = H_{21} = -A</annotation></semantics></math></li>
+</ul>
+<p>Энергии стационарных состояний в поле:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>=</mo><msub><mi>E</mi><mn>0</mn></msub><mo>±</mo><msqrt><mrow><msup><mi>A</mi><mn>2</mn></msup><mo>+</mo><msup><mi>μ</mi><mn>2</mn></msup><msup><mi mathvariant="script">ℰ</mi><mn>2</mn></msup></mrow></msqrt></mrow><annotation encoding="application/x-tex">E = E_0 \pm \sqrt{A^2 + \mu^2\mathcal{E}^2}</annotation></semantics></math></p>
+<p>В слабых полях
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mi mathvariant="script">ℰ</mi><mo>≪</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">\mu\mathcal{E} \ll A</annotation></semantics></math>)
+энергия уровней меняется пропорционально <strong>квадрату</strong>
+напряженности поля
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi mathvariant="script">ℰ</mi><mn>2</mn></msup><annotation encoding="application/x-tex">\mathcal{E}^2</annotation></semantics></math>).
+Это позволяет разделять состояния в неоднородном поле: молекулы в
+верхнем состоянии
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>I</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|I\rangle</annotation></semantics></math>
+выталкиваются в область более слабого поля, а в нижнем
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>I</mi><mi>I</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|II\rangle</annotation></semantics></math>
+— в область более сильного.</p>
+<h3 id="принцип-работы-мазера">Принцип работы мазера</h3>
+<ol type="1">
+<li><strong>Сортировка</strong>: Пучок молекул пропускается через
+неоднородное электрическое поле, которое отклоняет молекулы в состоянии
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>I</mi><mi>I</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|II\rangle</annotation></semantics></math>,
+оставляя в пучке только молекулы в возбужденном состоянии
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>I</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|I\rangle</annotation></semantics></math>.</li>
+<li><strong>Резонансная полость</strong>: Возбужденные молекулы попадают
+в полость, настроенную на резонансную частоту
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ω</mi><mn>0</mn></msub><mo>=</mo><mn>2</mn><mi>A</mi><mi>/</mi><mi>ℏ</mi></mrow><annotation encoding="application/x-tex">\omega_0 = 2A/\hbar</annotation></semantics></math>.</li>
+<li><strong>Индуцированный переход</strong>: Под действием переменного
+поля в полости молекулы переходят из
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>I</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|I\rangle</annotation></semantics></math>
+в
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>I</mi><mi>I</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|II\rangle</annotation></semantics></math>,
+отдавая избыточную энергию электромагнитному полю полости.</li>
+</ol>
+<hr />
+<h2 id="2-проверочные-вопросы-short-answer-quiz">2. Проверочные вопросы
+(Short-Answer Quiz)</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Вопрос</th>
+<th style="text-align: left;">Краткий ответ на основе источника</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Какова физическая причина
+расщепления уровней энергии в аммиаке?</strong></td>
+<td style="text-align: left;">Возможность атома азота туннелировать
+(«перепрыгивать») сквозь плоскость атомов водорода (амплитуда
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Как зависит энергия молекулы от
+поля в практических (слабых) случаях?</strong></td>
+<td style="text-align: left;">Энергия меняется линейно по отношению к
+квадрату электрического поля
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi mathvariant="script">ℰ</mi><mn>2</mn></msup><annotation encoding="application/x-tex">\mathcal{E}^2</annotation></semantics></math>).</td>
+</tr>
+<tr>
+<td style="text-align: left;">**Какое условие необходимо для 100%
+вероятности перехода молекулы из $</td>
+<td style="text-align: left;">I\rangle$ в $</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Почему мазер не будет работать на
+нефильтрованном пучке молекул?</strong></td>
+<td style="text-align: left;">Молекулы в нижнем состоянии будут
+поглощать энергию поля с той же вероятностью, с какой молекулы в верхнем
+состоянии её отдают.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Какова точность «атомных часов» на
+принципе мазера?</strong></td>
+<td style="text-align: left;">Очень высокая, так как вероятность
+перехода резко падает при малейшем отклонении частоты (порядка
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>10</mn><mrow><mi>−</mi><mn>8</mn></mrow></msup><annotation encoding="application/x-tex">10^{-8}</annotation></semantics></math>).</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3-темы-для-глубокого-анализа-essay-prompts">3. Темы для
+глубокого анализа (Essay Prompts)</h2>
+<ol type="1">
+<li><strong>Роль симметрии и туннелирования в квантовых
+системах.</strong> Опишите, как геометрическая эквивалентность положений
+азота в молекуле аммиака приводит к формированию двух уровней энергии
+вместо одного. Проанализируйте, что произошло бы с уровнями при
+отсутствии туннелирования
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">A=0</annotation></semantics></math>).</li>
+<li><strong>Энергетический баланс в резонансной полости.</strong>
+Объясните, как микроскопическая энергия отдельной молекулы преобразуется
+в макроскопическую энергию электромагнитных колебаний. Почему для этого
+процесса необходимо предварительное разделение состояний?</li>
+<li><strong>От мазера к лазеру: универсальность теории.</strong>
+Используя результаты главы, объясните, почему теорию поглощения и
+испускания света можно свести к анализу двухуровневой системы и расчету
+матричных элементов дипольного момента.</li>
+</ol>
+<hr />
+<h2 id="4-типичные-ошибки-при-изучении-темы">4. Типичные ошибки при
+изучении темы</h2>
+<ul>
+<li><strong>Смешение базисов:</strong> Часто ошибочно полагают, что
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mn>1</mn><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|1\rangle</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mn>2</mn><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|2\rangle</annotation></semantics></math>
+(состояния с определенным положением азота) являются состояниями с
+определенной энергией. На самом деле стационарными являются только их
+комбинации
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>I</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|I\rangle</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>I</mi><mi>I</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|II\rangle</annotation></semantics></math>.</li>
+<li><strong>Игнорирование квадратичной зависимости:</strong> Ошибочно
+считать, что в мазере сила, действующая на молекулу, пропорциональна
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">ℰ</mi><annotation encoding="application/x-tex">\mathcal{E}</annotation></semantics></math>.
+В действительности сила пропорциональна градиенту квадрата поля
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∇</mi><msup><mi mathvariant="script">ℰ</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\nabla\mathcal{E}^2</annotation></semantics></math>),
+так как энергия в слабых полях зависит от
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi mathvariant="script">ℰ</mi><mn>2</mn></msup><annotation encoding="application/x-tex">\mathcal{E}^2</annotation></semantics></math>.</li>
+<li><strong>Неверная трактовка резонанса:</strong> Предположение, что
+переход возможен только при идеальном совпадении частот. Источник
+показывает, что существует спектральная ширина (около
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>π</mi><mi>/</mi><mi>T</mi></mrow><annotation encoding="application/x-tex">2\pi/T</annotation></semantics></math>),
+в пределах которой переход все еще вероятен.</li>
+</ul>
+<hr />
+<h2 id="5-краткий-глоссарий">5. Краткий глоссарий</h2>
+<ul>
+<li><strong>Амплитуда инверсии
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>):</strong>
+Мера вероятности перехода атома азота из одного эквивалентного положения
+в другое через потенциальный барьер.</li>
+<li><strong>Дипольный момент
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>μ</mi><annotation encoding="application/x-tex">\mu</annotation></semantics></math>):</strong>
+Характеристика распределения зарядов в молекуле; в аммиаке он направлен
+от азота к плоскости водородов.</li>
+<li><strong>Лазер:</strong> Мазер, работающий в оптическом (световом)
+диапазоне частот.</li>
+<li><strong>Мазер:</strong> Устройство для усиления микроволн
+посредством вынужденного (индуцированного) излучения.</li>
+<li><strong>Матричный элемент гамильтониана
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><annotation encoding="application/x-tex">H_{ij}</annotation></semantics></math>):</strong>
+Величина, определяющая энергию состояний и связь (амплитуду перехода)
+между ними.</li>
+<li><strong>Стационарное состояние:</strong> Состояние системы с точно
+определенной энергией, вероятность пребывания в котором не меняется со
+временем.</li>
+<li><strong>Трехуровневый мазер:</strong> Система, в которой «накачка»
+(заселение верхнего уровня) осуществляется через промежуточное третье
+состояние с помощью внешнего источника энергии (например, света).</li>
+</ul>
+    </article>
+  </main>
+</body>
+</html>

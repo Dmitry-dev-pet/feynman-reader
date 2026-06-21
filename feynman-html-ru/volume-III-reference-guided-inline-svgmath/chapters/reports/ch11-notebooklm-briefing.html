@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Глава 11. Другие системы с двумя состояниями: Аналитический отчет - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch11.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1
+id="глава-11-другие-системы-с-двумя-состояниями-аналитический-отчет">Глава
+11. Другие системы с двумя состояниями: Аналитический отчет</h1>
+<p>Данный аналитический отчет синтезирует ключевые концепции,
+математический аппарат и физические выводы из 11-й главы III тома
+«Фейнмановских лекций по физике». В главе рассматривается
+универсальность систем с двумя состояниями, от спина электрона до
+поляризации света и осцилляций странных частиц.</p>
+<hr />
+<h2 id="1-основные-идеи-executive-summary">1. Основные идеи (Executive
+Summary)</h2>
+<p>Центральной темой главы является утверждение о том, что <strong>любая
+квантовая система с двумя состояниями может быть описана одним и тем же
+математическим аппаратом</strong>. Фейнман демонстрирует, что такие
+разные явления, как поведение молекулы аммиака в электрическом поле,
+поляризация фотонов и превращения нейтральных К-мезонов, математически
+эквивалентны частице со спином 1/2 в магнитном поле.</p>
+<p><strong>Ключевые выводы:</strong></p>
+<ul>
+<li><strong>Спиновые матрицы Паули</strong> являются «арифметикой»
+квантовой механики для систем с двумя состояниями, позволяя представить
+любой гамильтониан 2x2.</li>
+<li><strong>Операторный подход</strong> упрощает описание динамики
+состояний, переводя дифференциальные уравнения в форму
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mi>ℏ</mi><mfrac><mi>d</mi><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo stretchy="false" form="prefix">|</mo><mi>ψ</mi><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><mover><mi>H</mi><mo accent="true">̂</mo></mover><mo stretchy="false" form="prefix">|</mo><mi>ψ</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">i\hbar \frac{d}{dt} |\psi\rangle = \hat{H} |\psi\rangle</annotation></semantics></math>.</li>
+<li><strong>Квантовая интерференция амплитуд</strong> предсказывает
+уникальные макроскопические эффекты, такие как осцилляции странности
+К-мезонов, которые не имеют аналогов в классической физике.</li>
+<li><strong>Обобщение на N состояний</strong> осуществляется через поиск
+собственных значений (энергий) и собственных состояний матрицы
+гамильтониана.</li>
+</ul>
+<hr />
+<h2 id="2-математический-аппарат-матрицы-паули-и-операторы">2.
+Математический аппарат: Матрицы Паули и Операторы</h2>
+<h3 id="111-спиновые-матрицы-паули">11.1. Спиновые матрицы Паули</h3>
+<p>Любая матрица 2x2 может быть представлена в виде линейной комбинации
+четырех базисных матриц: единичной матрицы (1) и трех матриц Паули
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>σ</mi><mi>x</mi></msub><mo>,</mo><msub><mi>σ</mi><mi>y</mi></msub><mo>,</mo><msub><mi>σ</mi><mi>z</mi></msub></mrow><annotation encoding="application/x-tex">\sigma_x, \sigma_y, \sigma_z</annotation></semantics></math>).</p>
+<p><strong>Таблица 1: Спиновые матрицы Паули</strong></p>
+<p>| Матрица | Вид в базисе
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>+</mi><mo stretchy="false" form="postfix">⟩</mo><mo>,</mo><mo stretchy="false" form="prefix">|</mo><mi>−</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|+\rangle, |-\rangle</annotation></semantics></math>
+| | :--- | :--- | |
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>σ</mi><mi>z</mi></msub><annotation encoding="application/x-tex">\sigma_z</annotation></semantics></math>
+|
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">(</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mi>−</mi><mn>1</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\begin{pmatrix} 1 &amp; 0 \\ 0 &amp; -1 \end{pmatrix}</annotation></semantics></math>
+| |
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>σ</mi><mi>x</mi></msub><annotation encoding="application/x-tex">\sigma_x</annotation></semantics></math>
+|
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">(</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\begin{pmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{pmatrix}</annotation></semantics></math>
+| |
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>σ</mi><mi>y</mi></msub><annotation encoding="application/x-tex">\sigma_y</annotation></semantics></math>
+|
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">(</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mi>−</mi><mi>i</mi></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mi>i</mi></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\begin{pmatrix} 0 &amp; -i \\ i &amp; 0 \end{pmatrix}</annotation></semantics></math>
+| | Единичная (1) |
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">(</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\begin{pmatrix} 1 &amp; 0 \\ 0 &amp; 1 \end{pmatrix}</annotation></semantics></math>
+|</p>
+<p><strong>Гамильтониан частицы со спином 1/2 в магнитном поле
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>:</strong>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi><mo>=</mo><msub><mi>E</mi><mn>0</mn></msub><mo>−</mo><mi>μ</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>σ</mi><mi>x</mi></msub><msub><mi>B</mi><mi>x</mi></msub><mo>+</mo><msub><mi>σ</mi><mi>y</mi></msub><msub><mi>B</mi><mi>y</mi></msub><mo>+</mo><msub><mi>σ</mi><mi>z</mi></msub><msub><mi>B</mi><mi>z</mi></msub><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msub><mi>E</mi><mn>0</mn></msub><mo>−</mo><mi>μ</mi><mi mathvariant="bold-italic">𝝈</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝑩</mi></mrow><annotation encoding="application/x-tex">H = E_0 - \mu(\sigma_x B_x + \sigma_y B_y + \sigma_z B_z) = E_0 - \mu \boldsymbol{\sigma} \cdot \mathbf{B}</annotation></semantics></math></p>
+<h3 id="112-свойства-матриц-и-операторов">11.2. Свойства матриц и
+операторов</h3>
+<p>Матрицы Паули обладают специфическими правилами перемножения (см.
+[SOURCE_IMAGE_1]):</p>
+<ul>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>σ</mi><mi>x</mi><mn>2</mn></msubsup><mo>=</mo><msubsup><mi>σ</mi><mi>y</mi><mn>2</mn></msubsup><mo>=</mo><msubsup><mi>σ</mi><mi>z</mi><mn>2</mn></msubsup><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\sigma_x^2 = \sigma_y^2 = \sigma_z^2 = 1</annotation></semantics></math></li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>σ</mi><mi>x</mi></msub><msub><mi>σ</mi><mi>y</mi></msub><mo>=</mo><mi>i</mi><msub><mi>σ</mi><mi>z</mi></msub></mrow><annotation encoding="application/x-tex">\sigma_x \sigma_y = i\sigma_z</annotation></semantics></math>
+(и другие циклические перестановки)</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>σ</mi><mi>x</mi></msub><msub><mi>σ</mi><mi>y</mi></msub><mo>=</mo><mi>−</mi><msub><mi>σ</mi><mi>y</mi></msub><msub><mi>σ</mi><mi>x</mi></msub></mrow><annotation encoding="application/x-tex">\sigma_x \sigma_y = -\sigma_y \sigma_x</annotation></semantics></math>
+(антикоммутативность)</li>
+</ul>
+<p><strong>Действие операторов
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>σ</mi><mo accent="true">̂</mo></mover><annotation encoding="application/x-tex">\hat{\sigma}</annotation></semantics></math>
+на базисные состояния:</strong></p>
+<ul>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mover><mi>σ</mi><mo accent="true">̂</mo></mover><mi>z</mi></msub><mo stretchy="false" form="prefix">|</mo><mi>+</mi><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><mo stretchy="false" form="prefix">|</mo><mi>+</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">\hat{\sigma}_z |+\rangle = |+\rangle</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mover><mi>σ</mi><mo accent="true">̂</mo></mover><mi>z</mi></msub><mo stretchy="false" form="prefix">|</mo><mi>−</mi><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><mi>−</mi><mo stretchy="false" form="prefix">|</mo><mi>−</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">\hat{\sigma}_z |-\rangle = -|-\rangle</annotation></semantics></math></li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mover><mi>σ</mi><mo accent="true">̂</mo></mover><mi>x</mi></msub><mo stretchy="false" form="prefix">|</mo><mi>+</mi><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><mo stretchy="false" form="prefix">|</mo><mi>−</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">\hat{\sigma}_x |+\rangle = |-\rangle</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mover><mi>σ</mi><mo accent="true">̂</mo></mover><mi>x</mi></msub><mo stretchy="false" form="prefix">|</mo><mi>−</mi><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><mo stretchy="false" form="prefix">|</mo><mi>+</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">\hat{\sigma}_x |-\rangle = |+\rangle</annotation></semantics></math>
+(оператор «переворота» спина)</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mover><mi>σ</mi><mo accent="true">̂</mo></mover><mi>y</mi></msub><mo stretchy="false" form="prefix">|</mo><mi>+</mi><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><mi>i</mi><mo stretchy="false" form="prefix">|</mo><mi>−</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">\hat{\sigma}_y |+\rangle = i|-\rangle</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mover><mi>σ</mi><mo accent="true">̂</mo></mover><mi>y</mi></msub><mo stretchy="false" form="prefix">|</mo><mi>−</mi><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><mi>−</mi><mi>i</mi><mo stretchy="false" form="prefix">|</mo><mi>+</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">\hat{\sigma}_y |-\rangle = -i|+\rangle</annotation></semantics></math></li>
+</ul>
+<hr />
+<h2 id="3-анализ-физических-систем">3. Анализ физических систем</h2>
+<h3 id="31-молекула-аммиака-как-модель">3.1. Молекула аммиака как
+модель</h3>
+<p>Фейнман показывает, что поведение молекулы аммиака в электрическом
+поле
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">ℰ</mi><annotation encoding="application/x-tex">\mathcal{E}</annotation></semantics></math>
+математически тождественно спину в магнитном поле. Искусственное
+«модельное пространство» позволяет сопоставить состояние
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>I</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|I\rangle</annotation></semantics></math>
+направлению «вверх», а
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>I</mi><mi>I</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|II\rangle</annotation></semantics></math>
+— «вниз». Гамильтониан принимает вид:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi><mo>=</mo><mi>A</mi><msub><mi>σ</mi><mi>z</mi></msub><mo>+</mo><mi>μ</mi><mi mathvariant="script">ℰ</mi><msub><mi>σ</mi><mi>x</mi></msub></mrow><annotation encoding="application/x-tex">H = A\sigma_z + \mu\mathcal{E}\sigma_x</annotation></semantics></math>
+Здесь параметр
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+играет роль магнитного поля по оси
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>z</mi><annotation encoding="application/x-tex">z</annotation></semantics></math>,
+а внешнее электрическое поле — роль поля по оси
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>.</p>
+<h3 id="32-поляризация-фотона">3.2. Поляризация фотона</h3>
+<p>Фотон рассматривается как система с двумя базисными состояниями
+поляризации:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>x</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|x\rangle</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>y</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|y\rangle</annotation></semantics></math>.</p>
+<ul>
+<li><strong>Линейная поляризация:</strong> Под углом
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>θ</mi><annotation encoding="application/x-tex">\theta</annotation></semantics></math>
+состояние представляется как
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>ψ</mi><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>θ</mi><mo stretchy="false" form="prefix">|</mo><mi>x</mi><mo stretchy="false" form="postfix">⟩</mo><mo>+</mo><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mi>θ</mi><mo stretchy="false" form="prefix">|</mo><mi>y</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|\psi\rangle = \cos\theta |x\rangle + \sin\theta |y\rangle</annotation></semantics></math>.</li>
+<li><strong>Круговая поляризация:</strong>
+<ul>
+<li>Правая:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>R</mi><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><mfrac><mn>1</mn><msqrt><mn>2</mn></msqrt></mfrac><mo stretchy="false" form="prefix">(</mo><mo stretchy="false" form="prefix">|</mo><mi>x</mi><mo stretchy="false" form="postfix">⟩</mo><mo>+</mo><mi>i</mi><mo stretchy="false" form="prefix">|</mo><mi>y</mi><mo stretchy="false" form="postfix">⟩</mo><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">|R\rangle = \frac{1}{\sqrt{2}}(|x\rangle + i|y\rangle)</annotation></semantics></math></li>
+<li>Левая:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>L</mi><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><mfrac><mn>1</mn><msqrt><mn>2</mn></msqrt></mfrac><mo stretchy="false" form="prefix">(</mo><mo stretchy="false" form="prefix">|</mo><mi>x</mi><mo stretchy="false" form="postfix">⟩</mo><mo>−</mo><mi>i</mi><mo stretchy="false" form="prefix">|</mo><mi>y</mi><mo stretchy="false" form="postfix">⟩</mo><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">|L\rangle = \frac{1}{\sqrt{2}}(|x\rangle - i|y\rangle)</annotation></semantics></math></li>
+</ul></li>
+</ul>
+<p><strong>Физический вывод:</strong> Вероятность прохождения фотона
+через поляроид под углом
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>θ</mi><annotation encoding="application/x-tex">\theta</annotation></semantics></math>
+равна
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mn>2</mn></msup><mi>θ</mi></mrow><annotation encoding="application/x-tex">\cos^2\theta</annotation></semantics></math>
+(закон Малюса), что совпадает с классической теорией интенсивности
+света, но на уровне отдельных квантов интерпретируется
+статистически.</p>
+<h3 id="33-нейтральные-к-мезоны-система-k0---bark0">3.3. Нейтральные
+К-мезоны (Система
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>K</mi><mn>0</mn></msup><mo>−</mo><msup><mover><mi>K</mi><mo accent="true">‾</mo></mover><mn>0</mn></msup></mrow><annotation encoding="application/x-tex">K^0 - \bar{K}^0</annotation></semantics></math>)</h3>
+<p>Это наиболее сложный пример, иллюстрирующий сохранение и нарушение
+«странности».</p>
+<ul>
+<li><strong>Сильное взаимодействие:</strong> Рождает частицы с
+определенной странностью
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>K</mi><mn>0</mn></msup><annotation encoding="application/x-tex">K^0</annotation></semantics></math>
+имеет
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo>=</mo><mi>+</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">S=+1</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mover><mi>K</mi><mo accent="true">‾</mo></mover><mn>0</mn></msup><annotation encoding="application/x-tex">\bar{K}^0</annotation></semantics></math>
+имеет
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo>=</mo><mi>−</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">S=-1</annotation></semantics></math>).</li>
+<li><strong>Слабое взаимодействие:</strong> Приводит к распаду и
+позволяет
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>K</mi><mn>0</mn></msup><annotation encoding="application/x-tex">K^0</annotation></semantics></math>
+превращаться в
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mover><mi>K</mi><mo accent="true">‾</mo></mover><mn>0</mn></msup><annotation encoding="application/x-tex">\bar{K}^0</annotation></semantics></math>
+через промежуточное состояние пионов:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>K</mi><mn>0</mn></msup><mo>⇌</mo><msup><mi>π</mi><mo>+</mo></msup><msup><mi>π</mi><mo>−</mo></msup><mo>⇌</mo><msup><mover><mi>K</mi><mo accent="true">‾</mo></mover><mn>0</mn></msup></mrow><annotation encoding="application/x-tex">K^0 \rightleftharpoons \pi^+\pi^- \rightleftharpoons \bar{K}^0</annotation></semantics></math>.</li>
+</ul>
+<p><strong>Состояния с определенным временем жизни
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>K</mi><mn>1</mn></msub><annotation encoding="application/x-tex">K_1</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>K</mi><mn>2</mn></msub><annotation encoding="application/x-tex">K_2</annotation></semantics></math>):</strong>
+Поскольку
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>K</mi><mn>0</mn></msup><annotation encoding="application/x-tex">K^0</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mover><mi>K</mi><mo accent="true">‾</mo></mover><mn>0</mn></msup><annotation encoding="application/x-tex">\bar{K}^0</annotation></semantics></math>
+связаны, они образуют новые стационарные состояния:</p>
+<ol type="1">
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><msub><mi>K</mi><mn>1</mn></msub><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><mfrac><mn>1</mn><msqrt><mn>2</mn></msqrt></mfrac><mo stretchy="false" form="prefix">(</mo><mo stretchy="false" form="prefix">|</mo><msup><mi>K</mi><mn>0</mn></msup><mo stretchy="false" form="postfix">⟩</mo><mo>+</mo><mo stretchy="false" form="prefix">|</mo><msup><mover><mi>K</mi><mo accent="true">‾</mo></mover><mn>0</mn></msup><mo stretchy="false" form="postfix">⟩</mo><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">|K_1\rangle = \frac{1}{\sqrt{2}}(|K^0\rangle + |\bar{K}^0\rangle)</annotation></semantics></math>
+— распадается быстро
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≈</mo><msup><mn>10</mn><mrow><mi>−</mi><mn>10</mn></mrow></msup></mrow><annotation encoding="application/x-tex">\approx 10^{-10}</annotation></semantics></math>
+сек) на два пиона.</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><msub><mi>K</mi><mn>2</mn></msub><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><mfrac><mn>1</mn><msqrt><mn>2</mn></msqrt></mfrac><mo stretchy="false" form="prefix">(</mo><mo stretchy="false" form="prefix">|</mo><msup><mi>K</mi><mn>0</mn></msup><mo stretchy="false" form="postfix">⟩</mo><mo>−</mo><mo stretchy="false" form="prefix">|</mo><msup><mover><mi>K</mi><mo accent="true">‾</mo></mover><mn>0</mn></msup><mo stretchy="false" form="postfix">⟩</mo><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">|K_2\rangle = \frac{1}{\sqrt{2}}(|K^0\rangle - |\bar{K}^0\rangle)</annotation></semantics></math>
+— распадается медленно (в 600 раз медленнее) на три пиона.</li>
+</ol>
+<p><strong>Эффект осцилляций:</strong> Если в реакции рождается чистый
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>K</mi><mn>0</mn></msup><annotation encoding="application/x-tex">K^0</annotation></semantics></math>,
+то со временем его компонента
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>K</mi><mn>1</mn></msub><annotation encoding="application/x-tex">K_1</annotation></semantics></math>
+быстро вымирает, и система превращается в смесь
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>K</mi><mn>0</mn></msup><annotation encoding="application/x-tex">K^0</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mover><mi>K</mi><mo accent="true">‾</mo></mover><mn>0</mn></msup><annotation encoding="application/x-tex">\bar{K}^0</annotation></semantics></math>.
+Это позволяет мезону, изначально неспособному рождать
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi mathvariant="normal">Λ</mi><mn>0</mn></msup><annotation encoding="application/x-tex">\Lambda^0</annotation></semantics></math>-гипероны,
+через некоторое время начать их производить [SOURCE_IMAGE_5].</p>
+<hr />
+<h2 id="4-обобщение-на-n-состояний">4. Обобщение на N состояний</h2>
+<p>Для системы с
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>N</mi><annotation encoding="application/x-tex">N</annotation></semantics></math>
+состояниями уравнение Шрёдингера представляется в матричном виде:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mi>ℏ</mi><mfrac><mrow><mi>d</mi><msub><mi>C</mi><mi>i</mi></msub></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>=</mo><munder><mo>∑</mo><mi>j</mi></munder><msub><mi>H</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><msub><mi>C</mi><mi>j</mi></msub></mrow><annotation encoding="application/x-tex">i\hbar \frac{dC_i}{dt} = \sum_j H_{ij} C_j</annotation></semantics></math></p>
+<p><strong>Алгоритм решения:</strong></p>
+<ol type="1">
+<li>Составить матрицу гамильтониана
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><annotation encoding="application/x-tex">H_{ij}</annotation></semantics></math>.</li>
+<li>Найти собственные значения энергии
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math>,
+решив характеристическое уравнение (детерминант):
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Det</mtext><mo stretchy="false" form="prefix">(</mo><msub><mi>H</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>−</mo><msub><mi>δ</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mi>E</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\text{Det}(H_{ij} - \delta_{ij}E) = 0</annotation></semantics></math></li>
+<li>Найти собственные состояния (стационарные состояния),
+соответствующие каждой энергии.</li>
+<li><strong>Свойство ортогональности:</strong> Состояния с разными
+энергиями всегда ортогональны
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⟨</mo><mi>n</mi><mo stretchy="false" form="prefix">|</mo><mi>m</mi><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\langle n|m \rangle = 0</annotation></semantics></math>).</li>
+</ol>
+<hr />
+<h2 id="5-важные-цитаты-и-их-контекст">5. Важные цитаты и их
+контекст</h2>
+<blockquote>
+<p><strong>«Классическая механика является лишь приближением; поэтому
+нет никакой загадки в том, что в классической механике есть некоторая
+тень квантовомеханических законов... Уравнение (9.13) — это истина, а
+уравнение (9.14) — это тень».</strong> <em>Контекст:</em> Фейнман
+объясняет связь между классической формулой энергии магнита
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>=</mo><mi>−</mi><mi mathvariant="bold-italic">𝝁</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝑩</mi></mrow><annotation encoding="application/x-tex">U = -\boldsymbol{\mu} \cdot \mathbf{B}</annotation></semantics></math>
+и квантовым гамильтонианом, подчеркивая, что квантовая механика
+фундаментальнее.</p>
+</blockquote>
+<blockquote>
+<p><strong>«Вы создаете отдельную частицу, и она не просто распадается,
+а проделывает нечто совсем иное. Временами она распадается, а порой
+превращается в частицу другого сорта... Ничего другого, похожего на это,
+в природе нет».</strong> <em>Контекст:</em> Описание уникального
+поведения К-мезонов, которые спонтанно меняют свою «странность» в
+процессе полета из-за интерференции амплитуд.</p>
+</blockquote>
+<blockquote>
+<p><strong>«Динамические теории неверны... чрезвычайно поразительно, что
+единственные явления, которые могут быть в мире странных частиц
+предсказаны, вытекают из принципов квантовой механики на том уровне, на
+котором вы их сейчас изучаете».</strong> <em>Контекст:</em> Фейнман
+указывает на то, что детальные модели внутреннего устройства частиц
+часто терпят крах (давая бесконечные значения параметров), в то время
+как общие принципы суперпозиции и систем с двумя состояниями работают
+безотказно.</p>
+</blockquote>
+<hr />
+<h2 id="6-резюме-физического-смысла-insights">6. Резюме физического
+смысла (Insights)</h2>
+<ol type="1">
+<li><strong>Единство природы:</strong> Математическая идентичность
+систем (аммиак, свет, мезоны) позволяет переносить интуицию и решения из
+одной области физики в другую.</li>
+<li><strong>Роль фазы:</strong> В системе К-мезонов комплексный характер
+амплитуды перехода
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+принципиально важен, так как он описывает не только сдвиг энергии, но и
+распад частиц.</li>
+<li><strong>Статистический характер:</strong> Квантовая механика
+объясняет макроскопическую интенсивность (например, света за поляроидом)
+как статистический итог вероятностей поведения отдельных частиц.</li>
+<li><strong>Фундаментальность принципа суперпозиции:</strong> Успех
+предсказаний Гелл-Манна и Пайса подтверждает, что принцип суперпозиции
+амплитуд остается справедливым даже в загадочном мире странных частиц,
+где другие законы еще не до конца ясны.</li>
+</ol>
+    </article>
+  </main>
+</body>
+</html>

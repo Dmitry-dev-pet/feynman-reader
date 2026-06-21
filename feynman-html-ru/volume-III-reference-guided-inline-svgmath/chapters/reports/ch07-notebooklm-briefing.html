@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Глава 7. Зависимость амплитуд от времени: Аналитический отчет - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch07.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1
+id="глава-7-зависимость-амплитуд-от-времени-аналитический-отчет">Глава
+7. Зависимость амплитуд от времени: Аналитический отчет</h1>
+<p>Данный отчет представляет собой синтез материалов седьмой главы
+«Фейнмановских лекций по физике» (Том III), посвященной
+квантовомеханическому описанию поведения амплитуд вероятности во
+времени, переходу к пространственной зависимости, концепции стационарных
+состояний и классическому пределу.</p>
+<h2 id="1-краткий-обзор-executive-summary">1. Краткий обзор (Executive
+Summary)</h2>
+<p>Основная цель рассматриваемого раздела — продемонстрировать, как
+временная зависимость амплитуд вероятности связана с энергией системы.
+Документ последовательно переходит от описания покоящихся частиц к
+частицам в равномерном движении, а затем к поведению в силовых
+полях.</p>
+<p>Ключевой вывод анализа заключается в том, что полная энергия системы
+определяет частоту изменения фазы амплитуды. В классическом пределе
+(когда изменения потенциала плавны по сравнению с длиной волны)
+квантовая механика полностью согласуется с законами Ньютона и законом
+сохранения энергии. Особое внимание уделяется неклассическим эффектам,
+таким как туннелирование (проникновение сквозь барьер) и прецессия спина
+в магнитном поле.</p>
+<hr />
+<h2 id="2-подробный-анализ-ключевых-тем">2. Подробный анализ ключевых
+тем</h2>
+<h3 id="21-стационарные-состояния-и-энергия-покоя">2.1. Стационарные
+состояния и энергия покоя</h3>
+<p>Для частицы с определенной энергией покоя
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>E</mi><mn>0</mn></msub><annotation encoding="application/x-tex">E_0</annotation></semantics></math>
+(где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mn>0</mn></msub><mo>=</mo><mi>M</mi><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">E_0 = Mc^2</annotation></semantics></math>)
+амплитуда обнаружения в любой точке пространства одинакова по модулю, но
+её фаза периодически меняется во времени.</p>
+<ul>
+<li><strong>Математическое выражение:</strong> Амплитуда пропорциональна
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>−</mi><mi>i</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>E</mi><mn>0</mn></msub><mi>/</mi><mi>ℏ</mi><mo stretchy="false" form="postfix">)</mo><mi>t</mi></mrow></msup><annotation encoding="application/x-tex">e^{-i(E_0/\hbar)t}</annotation></semantics></math>.</li>
+<li><strong>Стационарность:</strong> Если энергия состояния точно
+определена, то квадрат модуля амплитуды
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>A</mi><msup><mo stretchy="false" form="prefix">|</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">|A|^2</annotation></semantics></math>)
+не зависит от времени. Это означает, что вероятности любых измерений в
+такой системе остаются постоянными.</li>
+<li><strong>Принцип неопределенности:</strong> Определенная энергия
+подразумевает определенный импульс (для покоящейся частицы
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">p=0</annotation></semantics></math>).
+Согласно соотношению
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>p</mi><mi mathvariant="normal">Δ</mi><mi>x</mi><mo>≈</mo><mi>ℏ</mi></mrow><annotation encoding="application/x-tex">\Delta p \Delta x \approx \hbar</annotation></semantics></math>,
+нулевая неопределенность в импульсе ведет к бесконечной неопределенности
+положения, что объясняет одинаковую амплитуду во всем пространстве.</li>
+</ul>
+<h3 id="22-амплитуда-движущейся-частицы">2.2. Амплитуда движущейся
+частицы</h3>
+<p>Используя преобразования Лоренца, документ выводит вид амплитуды для
+частицы, движущейся равномерно с импульсом
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math>.</p>
+<ul>
+<li><strong>Релятивистский инвариант:</strong> Фаза определяется
+скалярным произведением четырехвекторов энергии-импульса и
+времени-пространства:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mi>t</mi><mo>−</mo><mi mathvariant="bold-italic">𝒑</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝒙</mi></mrow><annotation encoding="application/x-tex">Et - \mathbf{p} \cdot \mathbf{x}</annotation></semantics></math>.</li>
+<li><strong>Волновые характеристики:</strong>
+<ul>
+<li>Длина волны (де Бройля):
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi><mo>=</mo><mi>h</mi><mi>/</mi><mi>p</mi></mrow><annotation encoding="application/x-tex">\lambda = h/p</annotation></semantics></math>.</li>
+<li>Волновое число:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>=</mo><mi>p</mi><mi>/</mi><mi>ℏ</mi></mrow><annotation encoding="application/x-tex">k = p/\hbar</annotation></semantics></math>.</li>
+<li>Частота:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ω</mi><mo>=</mo><mi>E</mi><mi>/</mi><mi>ℏ</mi></mrow><annotation encoding="application/x-tex">\omega = E/\hbar</annotation></semantics></math>.</li>
+</ul></li>
+<li><strong>Групповая скорость:</strong> Интерференция нескольких
+амплитуд с близкими энергиями создает «пакеты» вероятности, движущиеся
+со скоростью
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>v</mi><mi>g</mi></msub><mo>=</mo><mi>d</mi><mi>ω</mi><mi>/</mi><mi>d</mi><mi>k</mi></mrow><annotation encoding="application/x-tex">v_g = d\omega/dk</annotation></semantics></math>.
+Анализ подтверждает, что эта скорость совпадает с классической скоростью
+частицы
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mi>/</mi><mi>M</mi></mrow><annotation encoding="application/x-tex">p/M</annotation></semantics></math>.</li>
+</ul>
+<h3 id="23-потенциальная-энергия-и-квантовое-туннелирование">2.3.
+Потенциальная энергия и квантовое туннелирование</h3>
+<p>Введение потенциала
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math>
+эквивалентно сдвигу нуля шкалы энергии. Полная энергия, определяющая
+частоту амплитуды, становится суммой внутренней, кинетической и
+потенциальной энергий.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Физическая ситуация</th>
+<th style="text-align: left;">Описание поведения амплитуды</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Постоянный потенциал</strong></td>
+<td style="text-align: left;">Все фазы сдвигаются одинаково; физические
+явления внутри области не меняются.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Изменяющийся
+потенциал</strong></td>
+<td style="text-align: left;">Частота остается неизменной (если
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math>
+не зависит от времени), что ведет к изменению длины волны (импульса) для
+сохранения энергии.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Потенциальный барьер
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>&gt;</mo><mi>E</mi></mrow><annotation encoding="application/x-tex">V &gt; E</annotation></semantics></math>)</strong></td>
+<td style="text-align: left;">Импульс становится мнимым
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>=</mo><mi>i</mi><msup><mi>p</mi><mo>′</mo></msup></mrow><annotation encoding="application/x-tex">p = ip&#39;</annotation></semantics></math>),
+и амплитуда убывает экспоненциально:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>−</mi><msup><mi>p</mi><mo>′</mo></msup><mi>x</mi><mi>/</mi><mi>ℏ</mi></mrow></msup><annotation encoding="application/x-tex">e^{-p&#39;x/\hbar}</annotation></semantics></math>.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Пример туннелирования:</strong> Альфа-распад ядер урана.
+Альфа-частица «просачивается» сквозь потенциальный барьер, созданныый
+кулоновским отталкиванием, несмотря на то, что классически её энергии
+недостаточно для преодоления этого барьера. Экспоненциальный множитель
+(порядка
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>−</mi><mn>45</mn></mrow></msup><annotation encoding="application/x-tex">e^{-45}</annotation></semantics></math>)
+объясняет огромную разницу между временем внутренних колебаний ядра
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>10</mn><mrow><mi>−</mi><mn>22</mn></mrow></msup><annotation encoding="application/x-tex">10^{-22}</annotation></semantics></math>
+сек) и периодом полураспада урана
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><mo>,</mo><mn>5</mn><mo>⋅</mo><msup><mn>10</mn><mn>9</mn></msup></mrow><annotation encoding="application/x-tex">4,5 \cdot 10^9</annotation></semantics></math>
+лет).</p>
+<h3 id="24-классический-предел-и-силы">2.4. Классический предел и
+силы</h3>
+<p>Документ обосновывает возникновение классических сил из волновой
+природы амплитуд. При наличии поперечного градиента потенциала
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∂</mi><mi>V</mi><mi>/</mi><mi>∂</mi><mi>y</mi></mrow><annotation encoding="application/x-tex">\partial V / \partial y</annotation></semantics></math>)
+линии равной фазы (фронты волн) искривляются. Это происходит потому, что
+в областях с разным потенциалом частица имеет разную длину волны.
+Результат квантовомеханического расчета угла отклонения
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>δ</mi><mi>θ</mi></mrow><annotation encoding="application/x-tex">\delta\theta</annotation></semantics></math>
+полностью совпадает с классическим расчетом на основе силы
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>=</mo><mi>−</mi><mi>∇</mi><mi>V</mi></mrow><annotation encoding="application/x-tex">F = -\nabla V</annotation></semantics></math>.</p>
+<h3 id="25-прецессия-спина-частицы-на-примере-мюона">2.5. Прецессия
+спина частицы (на примере мюона)</h3>
+<p>Рассматривается поведение частицы со спином 1/2 в магнитном поле
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>.</p>
+<ul>
+<li><strong>Механизм:</strong> Магнитное поле создает разность энергий
+между состояниями «спин вверх» и «спин вниз»
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>±</mi><mi>μ</mi><mi>B</mi></mrow><annotation encoding="application/x-tex">\pm \mu B</annotation></semantics></math>).
+Это заставляет их фазы расходиться с разной скоростью.</li>
+<li><strong>Результат:</strong> Если мюон изначально поляризован по оси
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>,
+вероятность обнаружить его в этом же состоянии в момент
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math>
+колеблется:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>P</mi><mo>+</mo></msub><mo>=</mo><msup><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mn>2</mn></msup><mo stretchy="false" form="prefix">(</mo><mi>μ</mi><mi>B</mi><mi>t</mi><mi>/</mi><mi>ℏ</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">P_+ = \cos^2(\mu Bt/\hbar)</annotation></semantics></math>.</li>
+<li><strong>Частота прецессии:</strong> Спин вращается (прецессирует)
+вокруг направления магнитного поля с частотой
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ω</mi><mi>p</mi></msub><mo>=</mo><mn>2</mn><mi>μ</mi><mi>B</mi><mi>/</mi><mi>ℏ</mi></mrow><annotation encoding="application/x-tex">\omega_p = 2\mu B / \hbar</annotation></semantics></math>.
+Именно так экспериментально измеряется магнитный момент мюона.</li>
+</ul>
+<hr />
+<h2 id="3-ключевые-формулы">3. Ключевые формулы</h2>
+<p>Ниже приведены основные математические зависимости, представленные в
+документе:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Описание</th>
+<th style="text-align: left;">Формула</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Амплитуда покоящейся частицы</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><msup><mi>e</mi><mrow><mi>−</mi><mi>i</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>E</mi><mn>0</mn></msub><mi>/</mi><mi>ℏ</mi><mo stretchy="false" form="postfix">)</mo><mi>t</mi></mrow></msup></mrow><annotation encoding="application/x-tex">ae^{-i(E_0/\hbar)t}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;">Амплитуда движущейся частицы</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>−</mi><mo stretchy="false" form="prefix">(</mo><mi>i</mi><mi>/</mi><mi>ℏ</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>E</mi><mi>p</mi></msub><mi>t</mi><mo>−</mo><mi mathvariant="bold-italic">𝒑</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝒙</mi><mo stretchy="false" form="postfix">)</mo></mrow></msup><annotation encoding="application/x-tex">e^{-(i/\hbar)(E_pt - \mathbf{p} \cdot \mathbf{x})}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;">Релятивистская энергия</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mi>p</mi></msub><mo>=</mo><msqrt><mrow><mo stretchy="false" form="prefix">(</mo><mi>p</mi><mi>c</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><msubsup><mi>E</mi><mn>0</mn><mn>2</mn></msubsup></mrow></msqrt></mrow><annotation encoding="application/x-tex">E_p = \sqrt{(pc)^2 + E_0^2}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;">Групповая скорость пакета</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>v</mi><mi>g</mi></msub><mo>=</mo><mfrac><mrow><mi>∂</mi><mi>ω</mi></mrow><mrow><mi>∂</mi><mi>k</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mi>∂</mi><msub><mi>E</mi><mi>p</mi></msub></mrow><mrow><mi>∂</mi><mi>p</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">v_g = \frac{\partial \omega}{\partial k} = \frac{\partial E_p}{\partial p}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;">Полная нерелятивистская энергия</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ℏ</mi><mi>ω</mi><mo>=</mo><msub><mi>W</mi><mtext mathvariant="normal">int</mtext></msub><mo>+</mo><mfrac><msup><mi>p</mi><mn>2</mn></msup><mrow><mn>2</mn><mi>M</mi></mrow></mfrac><mo>+</mo><mi>V</mi></mrow><annotation encoding="application/x-tex">\hbar\omega = W_{\text{int}} + \frac{p^2}{2M} + V</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;">Частота прецессии спина 1/2</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ω</mi><mi>p</mi></msub><mo>=</mo><mfrac><mrow><mn>2</mn><mi>μ</mi><mi>B</mi></mrow><mi>ℏ</mi></mfrac></mrow><annotation encoding="application/x-tex">\omega_p = \frac{2\mu B}{\hbar}</annotation></semantics></math></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4-важные-цитаты-с-контекстом">4. Важные цитаты с контекстом</h2>
+<blockquote>
+<p><strong>Об определении энергии:</strong> «Существуют три разных
+способа определения энергии: по частоте амплитуды, по энергии в
+классическом смысле или по инертности. Все они равноценны; это просто
+разные способы выражать одно и то же».</p>
+</blockquote>
+<p><em>Контекст:</em> Фейнман поясняет фундаментальную эквивалентность
+массы покоя, классической энергии и квантовой частоты
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ω</mi><annotation encoding="application/x-tex">\omega</annotation></semantics></math>.</p>
+<blockquote>
+<p><strong>О стационарных состояниях:</strong> «Хотя сами амплитуды от
+времени зависят, но если энергия определенная, они изменяются как мнимая
+экспонента и абсолютное значение (модуль) их не меняется».</p>
+</blockquote>
+<p><em>Контекст:</em> Объяснение того, почему атомы на определенных
+энергетических уровнях называются «стационарными», несмотря на динамику
+фазы.</p>
+<blockquote>
+<p><strong>О туннелировании:</strong> «Существует некоторый шанс, что
+она будет обнаружена во второй области — куда классически частица
+попасть не могла, — но амплитуда очень мала, за исключением самой
+границы».</p>
+</blockquote>
+<p><em>Контекст:</em> Описание поведения частицы при столкновении с
+потенциалом, превышающим её кинетическую энергию.</p>
+<hr />
+<h2 id="5-аналитические-выводы">5. Аналитические выводы</h2>
+<ol type="1">
+<li><strong>Энергия как частота:</strong> В квантовой механике энергия —
+это не просто число, а частота временных изменений фазы амплитуды
+вероятности.</li>
+<li><strong>Универсальность фазы:</strong> Физические вероятности
+определяются интерференцией. Сдвиг всех уровней энергии на константу
+добавляет ко всем амплитудам одинаковый фазовый множитель, который
+исчезает при вычислении модуля, что делает выбор «нуля» энергии
+произвольным.</li>
+<li><strong>Природа движения:</strong> Равномерное движение частицы —
+это результат сложения волн с разными частотами и волновыми числами,
+формирующих пакет, центр которого движется с классической
+скоростью.</li>
+<li><strong>Связь с классикой:</strong> Классические силы и траектории
+являются макроскопическим пределом волновой оптики амплитуд вероятности.
+Искривление лучей (траекторий) происходит из-за градиента фазовой
+скорости в неоднородном потенциале.</li>
+<li><strong>Экспериментальное подтверждение:</strong> Эффекты временной
+зависимости фазы (такие как прецессия мюона) позволяют проводить
+сверхточные измерения фундаментальных констант (магнитного
+момента).</li>
+</ol>
+    </article>
+  </main>
+</body>
+</html>

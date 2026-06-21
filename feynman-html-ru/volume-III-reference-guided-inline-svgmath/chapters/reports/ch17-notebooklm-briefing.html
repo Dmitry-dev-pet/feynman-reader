@@ -1,0 +1,282 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Глава 17. Симметрия и законы сохранения: Аналитический отчет - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch17.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1
+id="глава-17-симметрия-и-законы-сохранения-аналитический-отчет">Глава
+17. Симметрия и законы сохранения: Аналитический отчет</h1>
+<p>Данный отчет представляет собой синтез ключевых концепций,
+математических формулировок и физических выводов, изложенных в главе 17
+«Фейнмановских лекций по физике» (том III). Документ исследует
+фундаментальную связь между симметрией физических систем и законами
+сохранения в квантовой механике.</p>
+<h2 id="исполнительное-резюме">Исполнительное резюме</h2>
+<p>В квантовой механике законы сохранения (импульса, энергии, момента
+количества движения) не просто постулируются, а выводятся из симметрии
+физических систем относительно различных преобразований. Основной тезис
+главы заключается в том, что если физическая система симметрична
+относительно определенной операции (например, поворота или отражения),
+то существует соответствующая квантовая величина, которая сохраняется во
+времени. Математически это выражается через коммутацию оператора
+симметрии с гамильтонианом системы. Особое внимание уделяется закону
+сохранения четности и его нарушению в слабых взаимодействиях, что
+иллюстрируется на примере распада
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi mathvariant="normal">Λ</mi><mn>0</mn></msup><annotation encoding="application/x-tex">\Lambda^0</annotation></semantics></math>-частицы.</p>
+<h2 id="1-математическое-определение-симметрии">1. Математическое
+определение симметрии</h2>
+<p>Симметрия в квантовой механике определяется через поведение системы
+при выполнении над ней определенной операции
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>Q</mi><mo accent="true">̂</mo></mover><annotation encoding="application/x-tex">\hat{Q}</annotation></semantics></math>,
+которая оставляет физическую ситуацию неизменной.</p>
+<h3 id="операторы-и-коммутация">Операторы и коммутация</h3>
+<p>Если система симметрична относительно операции
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>Q</mi><mo accent="true">̂</mo></mover><annotation encoding="application/x-tex">\hat{Q}</annotation></semantics></math>,
+то «сначала отразить (или повернуть), а потом подождать» — это то же
+самое, что «сначала подождать, а потом отразить». Математически это
+формулируется как коммутация оператора симметрии
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>Q</mi><mo accent="true">̂</mo></mover><annotation encoding="application/x-tex">\hat{Q}</annotation></semantics></math>
+с оператором эволюции во времени
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>U</mi><mo accent="true">̂</mo></mover><annotation encoding="application/x-tex">\hat{U}</annotation></semantics></math>:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>Q</mi><mo accent="true">̂</mo></mover><mover><mi>U</mi><mo accent="true">̂</mo></mover><mo>=</mo><mover><mi>U</mi><mo accent="true">̂</mo></mover><mover><mi>Q</mi><mo accent="true">̂</mo></mover></mrow><annotation encoding="application/x-tex">\hat{Q}\hat{U} = \hat{U}\hat{Q}</annotation></semantics></math></p>
+<p>Для бесконечно малого промежутка времени это условие переходит в
+коммутацию с гамильтонианом
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>H</mi><mo accent="true">̂</mo></mover><annotation encoding="application/x-tex">\hat{H}</annotation></semantics></math>:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>Q</mi><mo accent="true">̂</mo></mover><mover><mi>H</mi><mo accent="true">̂</mo></mover><mo>=</mo><mover><mi>H</mi><mo accent="true">̂</mo></mover><mover><mi>Q</mi><mo accent="true">̂</mo></mover></mrow><annotation encoding="application/x-tex">\hat{Q}\hat{H} = \hat{H}\hat{Q}</annotation></semantics></math>
+Это уравнение является фундаментальным определением симметрии в
+физике.</p>
+<h3 id="физический-смысл-матричных-элементов">Физический смысл матричных
+элементов</h3>
+<p>Оператор симметрии (например, отражения
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>P</mi><mo accent="true">̂</mo></mover><annotation encoding="application/x-tex">\hat{P}</annotation></semantics></math>)
+имеет матричные элементы. Для системы с двумя состояниями (как ион
+водорода
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msubsup><mi>H</mi><mn>2</mn><mo>+</mo></msubsup><annotation encoding="application/x-tex">H_2^+</annotation></semantics></math>,
+представленный на <strong>[SOURCE_IMAGE_1]</strong>) матрица отражения в
+базисе
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mn>1</mn><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|1\rangle</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mn>2</mn><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|2\rangle</annotation></semantics></math>
+выглядит так:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>1</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr></mtable><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">P = \begin{pmatrix} 0 &amp; 1 \\ 1 &amp; 0 \end{pmatrix}</annotation></semantics></math>
+Это означает, что операция
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>P</mi><mo accent="true">̂</mo></mover><annotation encoding="application/x-tex">\hat{P}</annotation></semantics></math>
+переводит состояние
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mn>1</mn><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|1\rangle</annotation></semantics></math>
+в
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mn>2</mn><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|2\rangle</annotation></semantics></math>
+и наоборот.</p>
+<h2 id="2-симметрия-и-законы-сохранения">2. Симметрия и законы
+сохранения</h2>
+<p>Связь между симметрией и сохранением величин является «основой всех
+законов сохранения квантовой механики». Если операция
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>Q</mi><mo accent="true">̂</mo></mover><annotation encoding="application/x-tex">\hat{Q}</annotation></semantics></math>
+лишь изменяет фазу состояния в начальный момент времени
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>Q</mi><mo accent="true">̂</mo></mover><mo stretchy="false" form="prefix">|</mo><msub><mi>ψ</mi><mn>1</mn></msub><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><msup><mi>e</mi><mrow><mi>i</mi><mi>δ</mi></mrow></msup><mo stretchy="false" form="prefix">|</mo><msub><mi>ψ</mi><mn>1</mn></msub><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">\hat{Q}|\psi_1\rangle = e^{i\delta}|\psi_1\rangle</annotation></semantics></math>),
+то в симметричной системе это свойство сохранится навсегда.</p>
+<h3 id="таблица-соответствий-симметрий-и-сохраняющихся-величин">Таблица
+соответствий симметрий и сохраняющихся величин</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Операция симметрии</th>
+<th style="text-align: left;">Сохраняющаяся величина</th>
+<th style="text-align: left;">Физический смысл</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Сдвиг во времени</strong>
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mover><mi>D</mi><mo accent="true">̂</mo></mover><mi>t</mi></msub><annotation encoding="application/x-tex">\hat{D}_t</annotation></semantics></math>)</td>
+<td style="text-align: left;">Энергия
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math>)</td>
+<td style="text-align: left;">Физика не зависит от абсолютного
+времени.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Пространственный перенос</strong>
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mover><mi>D</mi><mo accent="true">̂</mo></mover><mi>x</mi></msub><annotation encoding="application/x-tex">\hat{D}_x</annotation></semantics></math>)</td>
+<td style="text-align: left;">Импульс
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>p</mi><mi>x</mi></msub><annotation encoding="application/x-tex">p_x</annotation></semantics></math>)</td>
+<td style="text-align: left;">Физика не зависит от положения системы в
+пространстве.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Поворот</strong>
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mover><mi>R</mi><mo accent="true">̂</mo></mover><mi>z</mi></msub><annotation encoding="application/x-tex">\hat{R}_z</annotation></semantics></math>)</td>
+<td style="text-align: left;">Момент количества движения
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>J</mi><mi>z</mi></msub><annotation encoding="application/x-tex">J_z</annotation></semantics></math>)</td>
+<td style="text-align: left;">Физика изотропна (не зависит от
+ориентации).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Инверсия (отражение)</strong>
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>P</mi><mo accent="true">̂</mo></mover><annotation encoding="application/x-tex">\hat{P}</annotation></semantics></math>)</td>
+<td style="text-align: left;">Четность</td>
+<td style="text-align: left;">Симметрия относительно зеркального
+отображения.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Перестановка
+электронов</strong></td>
+<td style="text-align: left;">(Без названия)</td>
+<td style="text-align: left;">Тождественность микрочастиц.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-четность-и-инверсия">3. Четность и инверсия</h2>
+<p>Операция инверсии
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>P</mi><mo accent="true">̂</mo></mover><annotation encoding="application/x-tex">\hat{P}</annotation></semantics></math>
+(координаты
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(x, y, z)</annotation></semantics></math>
+переходят в
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mi>x</mi><mo>,</mo><mi>−</mi><mi>y</mi><mo>,</mo><mi>−</mi><mi>z</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(-x, -y, -z)</annotation></semantics></math>,
+как показано на <strong>[SOURCE_IMAGE_4]</strong>) обладает уникальным
+свойством: при двукратном применении система возвращается в исходное
+состояние.</p>
+<h3 id="положительная-и-отрицательная-четность">Положительная и
+отрицательная четность</h3>
+<p>Из условия
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mover><mi>P</mi><mo accent="true">̂</mo></mover><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">(\hat{P})^2 = 1</annotation></semantics></math>
+следует, что собственные значения оператора четности могут быть только
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>+</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">+1</annotation></semantics></math>
+или
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">-1</annotation></semantics></math>:</p>
+<ul>
+<li><strong>Положительная четность:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>P</mi><mo accent="true">̂</mo></mover><mo stretchy="false" form="prefix">|</mo><mi>ψ</mi><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><mo stretchy="false" form="prefix">|</mo><mi>ψ</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">\hat{P}|\psi\rangle = |\psi\rangle</annotation></semantics></math>.</li>
+<li><strong>Отрицательная четность:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>P</mi><mo accent="true">̂</mo></mover><mo stretchy="false" form="prefix">|</mo><mi>ψ</mi><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><mi>−</mi><mo stretchy="false" form="prefix">|</mo><mi>ψ</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">\hat{P}|\psi\rangle = -|\psi\rangle</annotation></semantics></math>.</li>
+</ul>
+<p>Любое невырожденное состояние с определенной энергией обязано
+обладать определенной четностью (положительной или отрицательной), если
+система симметрична относительно инверсии.</p>
+<h3 id="нарушение-четности">Нарушение четности</h3>
+<p>Хотя законы электродинамики и сильных взаимодействий симметричны
+относительно инверсии, слабые взаимодействия (ответственные за
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>β</mi><annotation encoding="application/x-tex">\beta</annotation></semantics></math>-распад)
+нарушают эту симметрию. В таких процессах четность не сохраняется.</p>
+<h2 id="4-поляризованный-свет-и-момент-импульса">4. Поляризованный свет
+и момент импульса</h2>
+<p>Квантовомеханическое описание света напрямую связывает поляризацию с
+моментом количества движения фотонов.</p>
+<ul>
+<li><strong>Правополяризованный свет:</strong> Каждый фотон несет момент
+количества движения
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>+</mi><mi>ℏ</mi></mrow><annotation encoding="application/x-tex">+\hbar</annotation></semantics></math>
+вдоль оси движения.</li>
+<li><strong>Левополяризованный свет:</strong> Каждый фотон несет момент
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mi>ℏ</mi></mrow><annotation encoding="application/x-tex">-\hbar</annotation></semantics></math>.</li>
+<li><strong>Линейно поляризованный свет:</strong> Является суперпозицией
+правого и левого состояний; средний момент импульса равен нулю, но
+вероятность обнаружить
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>+</mi><mi>ℏ</mi></mrow><annotation encoding="application/x-tex">+\hbar</annotation></semantics></math>
+или
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mi>ℏ</mi></mrow><annotation encoding="application/x-tex">-\hbar</annotation></semantics></math>
+составляет 50%.</li>
+</ul>
+<p>Классический аналог (вращение электрона под действием кругового поля,
+<strong>[SOURCE_IMAGE_5]</strong>) подтверждает соотношение между
+энергией
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>W</mi><annotation encoding="application/x-tex">W</annotation></semantics></math>
+и моментом
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>J</mi><mi>z</mi></msub><annotation encoding="application/x-tex">J_z</annotation></semantics></math>:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>J</mi><mi>z</mi></msub><mo>=</mo><mi>W</mi><mi>/</mi><mi>ω</mi></mrow><annotation encoding="application/x-tex">J_z = W/\omega</annotation></semantics></math>.</p>
+<h2 id="5-анализ-распада-lambda0-практическое-применение">5. Анализ
+распада
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi mathvariant="normal">Λ</mi><mn>0</mn></msup><annotation encoding="application/x-tex">\Lambda^0</annotation></semantics></math>:
+практическое применение</h2>
+<p>Пример распада лямбда-частицы
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi mathvariant="normal">Λ</mi><mn>0</mn></msup><mo>→</mo><mi>p</mi><mo>+</mo><msup><mi>π</mi><mo>−</mo></msup></mrow><annotation encoding="application/x-tex">\Lambda^0 \to p + \pi^-</annotation></semantics></math>)
+демонстрирует мощь законов сохранения.</p>
+<h3 id="сохранение-момента-импульса">Сохранение момента импульса</h3>
+<p>Если частица
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi mathvariant="normal">Λ</mi><mn>0</mn></msup><annotation encoding="application/x-tex">\Lambda^0</annotation></semantics></math>
+(спин 1/2) полностью поляризована «вверх»
+(<strong>[SOURCE_IMAGE_6]</strong>), то при вылете протона вдоль оси
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>z</mi><annotation encoding="application/x-tex">z</annotation></semantics></math>
+его спин также обязан быть направлен «вверх»
+(<strong>[SOURCE_IMAGE_7]</strong>), так как пион имеет спин 0 и не
+может унести орбитальный момент вдоль оси движения.</p>
+<h3 id="угловое-распределение">Угловое распределение</h3>
+<p>Используя матрицы поворота для спина 1/2, выводится вероятность
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>θ</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">f(\theta)</annotation></semantics></math>
+обнаружить протон под углом
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>θ</mi><annotation encoding="application/x-tex">\theta</annotation></semantics></math>:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>θ</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>β</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>α</mi><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>θ</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">f(\theta) = \beta(1 + \alpha \cos\theta)</annotation></semantics></math>
+Экспериментальные данные подтверждают:</p>
+<ol type="1">
+<li><strong>Спин
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi mathvariant="normal">Λ</mi><mn>0</mn></msup><annotation encoding="application/x-tex">\Lambda^0</annotation></semantics></math>
+равен 1/2</strong> (так как распределение зависит от
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>θ</mi></mrow><annotation encoding="application/x-tex">\cos\theta</annotation></semantics></math>).</li>
+<li><strong>Четность не сохраняется</strong> в этом распаде (коэффициент
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi><mo>≈</mo><mi>−</mi><mn>0.62</mn></mrow><annotation encoding="application/x-tex">\alpha \approx -0.62</annotation></semantics></math>,
+что указывает на выраженную асимметрию, невозможную при сохранении
+четности).</li>
+</ol>
+<h2 id="важные-цитаты">Важные цитаты</h2>
+<ul>
+<li><strong>О фундаментальности:</strong> «В квантовой механике законы
+сохранения очень тесно связаны с принципом суперпозиции амплитуд и с
+симметрией физических систем... все теоремы о сохранении каких угодно
+величин всегда связаны — в квантовой механике — с симметриями
+системы».</li>
+<li><strong>О законе сохранения:</strong> «Если вещь вначале находилась
+в состоянии с определенным характером симметрии и если гамильтониан этой
+вещи симметричен относительно этой операции... тогда тот же характер
+симметрии останется у состояния на вечные времена».</li>
+<li><strong>О природе света:</strong> «У света свой нрав: у него только
+два состояния [поляризации]. Состояния с нулем [проекцией спина] у него
+нет. Эта странная потеря связана с тем, что свет не может стоять на
+месте».</li>
+</ul>
+<h2 id="ключевые-выводы-actionable-insights">Ключевые выводы (Actionable
+Insights)</h2>
+<ol type="1">
+<li><strong>Симметрия = Коммутация:</strong> Чтобы проверить,
+сохраняется ли величина, связанная с операцией
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>Q</mi><mo accent="true">̂</mo></mover><annotation encoding="application/x-tex">\hat{Q}</annotation></semantics></math>,
+необходимо убедиться, что
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>Q</mi><mo accent="true">̂</mo></mover><annotation encoding="application/x-tex">\hat{Q}</annotation></semantics></math>
+коммутирует с гамильтонианом системы
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>H</mi><mo accent="true">̂</mo></mover><annotation encoding="application/x-tex">\hat{H}</annotation></semantics></math>.</li>
+<li><strong>Энергия как оператор сдвига:</strong> Энергия системы
+определяется тем, как состояние меняется при бесконечно малом сдвиге во
+времени. Аналогично, импульс — это оператор пространственного
+сдвига.</li>
+<li><strong>Диагностика спина:</strong> Анализ углового распределения
+продуктов распада
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>θ</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">f(\theta)</annotation></semantics></math>)
+позволяет экспериментально определить спин нестабильных частиц.</li>
+<li><strong>Специфика безмассовых частиц:</strong> Для частиц с нулевой
+массой покоя (фотон, нейтрино) число спиновых состояний сокращается до
+двух (компоненты
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>+</mi><mi>j</mi></mrow><annotation encoding="application/x-tex">+j</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mi>j</mi></mrow><annotation encoding="application/x-tex">-j</annotation></semantics></math>
+вдоль направления движения), в отличие от массивных частиц, имеющих
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>j</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">2j+1</annotation></semantics></math>
+состояний.</li>
+</ol>
+    </article>
+  </main>
+</body>
+</html>

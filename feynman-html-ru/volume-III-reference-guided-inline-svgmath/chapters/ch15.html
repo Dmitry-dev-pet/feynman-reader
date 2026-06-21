@@ -53,6 +53,9 @@
         <a class="nav-btn next-chapter" href="ch16.html">Дальше</a>
       </div>
       <a class="toolbar-title" href="#ch15" title="Глава 15. Приближение независимых частиц">Фейнмановские лекции по физике, том III · 15</a>
+<!-- BEGIN NotebookLM toolbar -->
+      <div class="study-mode-switch" aria-label="Материалы главы"><button class="toolbar-btn study-mode-btn is-active" type="button" data-study-mode="lecture" aria-pressed="true">Лекция</button><button class="toolbar-btn study-mode-btn" type="button" data-study-mode="notes" aria-pressed="false">Конспект</button><button class="toolbar-btn study-mode-btn" type="button" data-study-mode="media" aria-pressed="false">Медиа</button><button class="toolbar-btn study-mode-btn" type="button" data-study-mode="files" aria-pressed="false">Файлы</button></div>
+<!-- END NotebookLM toolbar -->
       <div class="toolbar-group toolbar-settings" aria-label="Настройки чтения">
         <a class="toolbar-btn language-toggle is-ru" href="../../../feynman-html-en/volume-III-reference-guided-inline-svgmath/chapters/ch15.html" aria-label="English" title="English"><span class="lang-ru">RU</span><span aria-hidden="true">/</span><span class="lang-en">EN</span></a>
         <button class="toolbar-btn icon-btn" type="button" data-reader-action="theme" aria-label="Сменить тему" title="Сменить тему">◐</button>
@@ -64,7 +67,47 @@
         <button class="toolbar-btn icon-btn" type="button" data-reader-action="tex" aria-label="TeX формул" title="TeX формул">{}</button>
       </div>
     </header>
-    <article class="chapter-flow"><h1 id="ch15">Глава 15. Приближение независимых частиц</h1><h2 id="sec-15-1">15–1 Спиновые волны<a class="permalink" href="#sec-15-1" aria-label="Ссылка на раздел">#</a></h2><p>В гл. 13 мы разработали теорию распространения электрона или любой другой «частицы», например атомного возбуждения, вдоль кристаллической решетки. В предыдущей главе мы применили эту теорию к полупроводникам. Но хотя электронов у нас было много, мы тем не менее неизменно пренебрегали каким-либо взаимодействием между ними. Конечно, это было лишь приближение. В этой главе мы постараемся глубже разобраться в самой мысли о том, что взаимодействием между электронами разрешается пренебрегать. Мы к тому же воспользуемся возможностью продемонстрировать новые применения теории распространения частиц. Поскольку мы по-прежнему будем продолжать пренебрегать взаимодействием между частицами, то фактически в этой главе будет очень мало нового, разве что новые приложения. Однако первый пример, который мы хотим рассмотреть,— это пример, в котором есть возможность совершенно точно выписать правильные уравнения для случая, когда «частиц» больше чем одна. Из них мы сможем увидеть, как делается приближение пренебрежения взаимодействием. Впрочем, мы не будем слишком тщательно анализировать эту проблему.</p><p>В качестве первого примера рассмотрим «спиновую волну» в ферромагнитном кристалле. Теории ферромагнетизма мы касались в гл. 36 (вып. 7). При нулевой температуре все спины электронов, которые дают вклад в магнетизм всего ферромагнитного кристалла, параллельны между собой. Между спинами существует энергия взаимодействия, которая ниже всего тогда, когда все спины направлены вниз. Но при ненулевой температуре имеется какая-то вероятность того, что часть спинов перевернется. Эту вероятность тогда мы приближенно подсчитывали. На этот раз мы разовьем квантовомеханическую теорию явления, чтобы знать, что делать, если нужно будет решить задачу точнее. (Мы по-прежнему будем прибегать к идеализации: будем считать, что электроны расположены вблизи атомов, а спины взаимодействуют только со своими соседями.)</p><p>Рассмотрим модель, в которой все электроны в каждом атоме, за исключением одного, спарены, так что весь магнитный эффект обусловлен наличием одного неспаренного электрона со спином <svg class="math-svg inline" aria-label="\frac{1}{2}" data-tex="\frac{1}{2}" tabindex="0" style="vertical-align: -0.781ex;" xmlns="http://www.w3.org/2000/svg" width="1.795ex" height="2.737ex" role="img" focusable="false" viewBox="0 -864.9 793.6 1209.9"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mfrac"><g data-mml-node="mn" transform="translate(220,394) scale(0.707)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g><g data-mml-node="mn" transform="translate(220,-345) scale(0.707)"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g><rect width="553.6" height="60" x="120" y="220"></rect></g></g></g></svg><span class="math-copy-fallback">\frac{1}{2}</span> на каждый атом. Кроме того, предположим, что эти электроны локализованы в узлах кристаллической решетки. Эта модель в общих чертах отвечает металлическому никелю.</p><p>Мы также предположим, что между любой парой соседних вращающихся электронов существует взаимодействие, которое дает в энергию системы слагаемое</p><div class="display-math" id="eq-15-1"><svg class="math-svg display" aria-label="
+<!-- BEGIN NotebookLM reports -->
+    <section class="study-workspace" id="study-panel" hidden>
+      <div class="study-workspace-inner">
+        <header class="study-workspace-header">
+          <div>
+            <strong>Материалы главы</strong>
+            <span>Сгенерированные учебные материалы NotebookLM для этой главы.</span>
+          </div>
+        </header>
+        <section class="study-section" data-study-section="notes" hidden>
+    <div class="study-grid">
+      <a class="study-card" href="reports/ch15-notebooklm-briefing.html"><strong>Обзор главы</strong><span>HTML · NotebookLM</span></a>
+      <a class="study-card" href="reports/ch15-notebooklm-study-guide.html"><strong>Конспект</strong><span>HTML · NotebookLM</span></a>
+    </div>
+  </section>
+        <section class="study-section" data-study-section="media" hidden>
+    <div class="study-grid study-media-grid">
+      <article class="study-media-card study-youtube-card">
+        <strong>Аудиообзор</strong>
+        <span>NotebookLM audio · том III · старт 04:32:16</span>
+        <div class="study-youtube-embed"><iframe title="Аудиообзор: глава 15" src="https://www.youtube-nocookie.com/embed/B8g9r_mWy5I?start=16336&amp;rel=0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+        <a class="study-youtube-link" href="https://youtu.be/B8g9r_mWy5I?t=16336" target="_blank" rel="noopener">Открыть на YouTube</a>
+      </article>
+      <article class="study-media-card study-youtube-card">
+        <strong>Видеообзор</strong>
+        <span>NotebookLM video · том III · старт 01:57:44</span>
+        <div class="study-youtube-embed"><iframe title="Видеообзор: глава 15" src="https://www.youtube-nocookie.com/embed/Pz84Rg8AURI?start=7064&amp;rel=0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+        <a class="study-youtube-link" href="https://youtu.be/Pz84Rg8AURI?t=7064" target="_blank" rel="noopener">Открыть на YouTube</a>
+      </article>
+    </div>
+  </section>
+        <section class="study-section" data-study-section="files" hidden>
+    <div class="study-card">
+      <strong>Файлы</strong>
+      <span class="study-file-row"><a href="../../../feynman-notebooklm/ru/volume-III/ch15/ch15-full.md">Текст главы для NotebookLM</a><a href="../../../feynman-notebooklm/ru/volume-III/ch15/figure-context/ch15-figures-context.md">Рисунки и контекст</a><a href="../../../feynman-notebooklm/ru/volume-III/ch15/manifest.json">Манифест</a><a href="../../../feynman-notebooklm/ru/volume-III/ch15/sections/">Разделы главы</a><a href="reports/ch15-notebooklm-briefing.md">Обзор главы MD</a><a href="reports/ch15-notebooklm-study-guide.md">Конспект MD</a></span>
+    </div>
+  </section>
+      </div>
+    </section>
+<!-- END NotebookLM reports -->
+    <article class="chapter-flow study-section" data-study-section="lecture"><h1 id="ch15">Глава 15. Приближение независимых частиц</h1><h2 id="sec-15-1">15–1 Спиновые волны<a class="permalink" href="#sec-15-1" aria-label="Ссылка на раздел">#</a></h2><p>В гл. 13 мы разработали теорию распространения электрона или любой другой «частицы», например атомного возбуждения, вдоль кристаллической решетки. В предыдущей главе мы применили эту теорию к полупроводникам. Но хотя электронов у нас было много, мы тем не менее неизменно пренебрегали каким-либо взаимодействием между ними. Конечно, это было лишь приближение. В этой главе мы постараемся глубже разобраться в самой мысли о том, что взаимодействием между электронами разрешается пренебрегать. Мы к тому же воспользуемся возможностью продемонстрировать новые применения теории распространения частиц. Поскольку мы по-прежнему будем продолжать пренебрегать взаимодействием между частицами, то фактически в этой главе будет очень мало нового, разве что новые приложения. Однако первый пример, который мы хотим рассмотреть,— это пример, в котором есть возможность совершенно точно выписать правильные уравнения для случая, когда «частиц» больше чем одна. Из них мы сможем увидеть, как делается приближение пренебрежения взаимодействием. Впрочем, мы не будем слишком тщательно анализировать эту проблему.</p><p>В качестве первого примера рассмотрим «спиновую волну» в ферромагнитном кристалле. Теории ферромагнетизма мы касались в гл. 36 (вып. 7). При нулевой температуре все спины электронов, которые дают вклад в магнетизм всего ферромагнитного кристалла, параллельны между собой. Между спинами существует энергия взаимодействия, которая ниже всего тогда, когда все спины направлены вниз. Но при ненулевой температуре имеется какая-то вероятность того, что часть спинов перевернется. Эту вероятность тогда мы приближенно подсчитывали. На этот раз мы разовьем квантовомеханическую теорию явления, чтобы знать, что делать, если нужно будет решить задачу точнее. (Мы по-прежнему будем прибегать к идеализации: будем считать, что электроны расположены вблизи атомов, а спины взаимодействуют только со своими соседями.)</p><p>Рассмотрим модель, в которой все электроны в каждом атоме, за исключением одного, спарены, так что весь магнитный эффект обусловлен наличием одного неспаренного электрона со спином <svg class="math-svg inline" aria-label="\frac{1}{2}" data-tex="\frac{1}{2}" tabindex="0" style="vertical-align: -0.781ex;" xmlns="http://www.w3.org/2000/svg" width="1.795ex" height="2.737ex" role="img" focusable="false" viewBox="0 -864.9 793.6 1209.9"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mfrac"><g data-mml-node="mn" transform="translate(220,394) scale(0.707)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g><g data-mml-node="mn" transform="translate(220,-345) scale(0.707)"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g><rect width="553.6" height="60" x="120" y="220"></rect></g></g></g></svg><span class="math-copy-fallback">\frac{1}{2}</span> на каждый атом. Кроме того, предположим, что эти электроны локализованы в узлах кристаллической решетки. Эта модель в общих чертах отвечает металлическому никелю.</p><p>Мы также предположим, что между любой парой соседних вращающихся электронов существует взаимодействие, которое дает в энергию системы слагаемое</p><div class="display-math" id="eq-15-1"><svg class="math-svg display" aria-label="
 
 E=-\sum_{i,j}K\mathbf{s}igma_i\cdot\mathbf{s}igma_j,
 " data-tex="
@@ -506,5 +549,38 @@ E&amp;=2(E_0-1.618A)+2(E_0-0.618A)\\[1ex]
 </script>
 
 <footer>Фейнмановские лекции по физике, том III · Ричард Фейнман, Роберт Лейтон, Мэтью Сэндс</footer>
+<!-- BEGIN NotebookLM script -->
+<script>
+(() => {
+  const workspace = document.querySelector(".study-workspace");
+  const buttons = [...document.querySelectorAll("[data-study-mode]")];
+  const sections = [...document.querySelectorAll("[data-study-section]")];
+  if (!workspace || !buttons.length || !sections.length) return;
+  const setMode = (mode) => {
+    const activeMode = sections.some((section) => section.dataset.studySection === mode) ? mode : "lecture";
+    workspace.hidden = activeMode === "lecture";
+    buttons.forEach((button) => {
+      const active = button.dataset.studyMode === activeMode;
+      button.classList.toggle("is-active", active);
+      button.setAttribute("aria-pressed", active ? "true" : "false");
+    });
+    sections.forEach((section) => {
+      section.hidden = section.dataset.studySection !== activeMode;
+    });
+    const target = document.querySelector(`[data-study-section="${activeMode}"]`);
+    if (target) target.scrollIntoView({ block: "start" });
+  };
+  document.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-study-mode]");
+    if (!button) return;
+    event.preventDefault();
+    setMode(button.dataset.studyMode || "lecture");
+  });
+  if (location.hash === "#study-media") setMode("media");
+  else if (location.hash === "#study-panel") setMode("notes");
+  else setMode("lecture");
+})();
+</script>
+<!-- END NotebookLM script -->
 </body>
 </html>

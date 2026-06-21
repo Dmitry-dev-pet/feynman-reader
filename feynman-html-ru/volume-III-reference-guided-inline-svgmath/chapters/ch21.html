@@ -56,6 +56,9 @@
         <span class="nav-btn disabled">Дальше</span>
       </div>
       <a class="toolbar-title" href="#ch21" title="21. Уравнение Шредингера в классическом контексте: семинар по сверхпроводимости">Фейнмановские лекции по физике, том III · 21</a>
+<!-- BEGIN NotebookLM toolbar -->
+      <div class="study-mode-switch" aria-label="Материалы главы"><button class="toolbar-btn study-mode-btn is-active" type="button" data-study-mode="lecture" aria-pressed="true">Лекция</button><button class="toolbar-btn study-mode-btn" type="button" data-study-mode="notes" aria-pressed="false">Конспект</button><button class="toolbar-btn study-mode-btn" type="button" data-study-mode="media" aria-pressed="false">Медиа</button><button class="toolbar-btn study-mode-btn" type="button" data-study-mode="files" aria-pressed="false">Файлы</button></div>
+<!-- END NotebookLM toolbar -->
       <div class="toolbar-group toolbar-settings" aria-label="Настройки чтения">
         <a class="toolbar-btn language-toggle is-ru" href="../../../feynman-html-en/volume-III-reference-guided-inline-svgmath/chapters/ch21.html" aria-label="English" title="English"><span class="lang-ru">RU</span><span aria-hidden="true">/</span><span class="lang-en">EN</span></a>
         <button class="toolbar-btn icon-btn" type="button" data-reader-action="theme" aria-label="Сменить тему" title="Сменить тему">◐</button>
@@ -67,7 +70,47 @@
         <button class="toolbar-btn icon-btn" type="button" data-reader-action="tex" aria-label="TeX формул" title="TeX формул">{}</button>
       </div>
     </header>
-    <article class="chapter-flow"><h1 id="ch21">21. Уравнение Шредингера в классическом контексте: семинар по сверхпроводимости</h1><h2 id="sec-21-1">21–1 Уравнение Шредингера в магнитном поле<a class="permalink" href="#sec-21-1" aria-label="Ссылка на раздел">#</a></h2><p>Эту лекцию я читаю вам для развлечения. Захотелось посмотреть, что получится, если начать читать в немного ином стиле. В курс она не входит, и не думайте, что это попытка обучить вас в последний час чему-то новому. Я скорее воображаю, будто провожу семинар или делаю отчет об исследованиях перед более подготовленной аудиторией, перед людьми, которые в квантовой механике уже многое понимают. Основное различие между семинаром и регулярной лекцией в том, что на семинаре докладчик не приводит все стадии, всю алгебру выкладок. Он просто говорит: «Если вы проделаете то-то и то-то, то получится вот что», а в детали не входит. Вот и в этой лекции будут только высказываться идеи и приводиться результаты расчетов. А вы должны понимать, что вовсе не обязательно во всем немедленно и до конца разбираться, надо только верить, что если проделать все выкладки, то все так и получится.</p><p>Но это не все. Главное — что об этом мне хочется говорить. Это такая свежая, актуальная, современная тема, что вполне законно вынести ее на семинар. Тема эта — классический аспект уравнения Шредингера, явление сверхпроводимости.</p><p>Обычно та волновая функция, которая появляется в уравнении Шредингера, относится только к одной или к двум частицам. И сама волновая функция классическим смыслом не обладает — в отличие от электрического поля, или векторного потенциала, или других подобных вещей. Правда, волновая функция отдельной частицы — это «поле» в том смысле, что она есть функция положения, но классического значения она, вообще говоря, не имеет. Тем не менее бывают иногда обстоятельства, в которых квантовомеханическая волновая функция действительно имеет классическое значение, именно их я и хочу коснуться. Своеобразие квантовомеханического поведения вещества в мелких масштабах обычно не дает себя чувствовать в крупномасштабных явлениях, если не считать стандартных выводов о том, что оно вызывает к жизни законы Ньютона, законы так называемой классической механики. Но существуют порой обстоятельства, в которых особенности квантовой механики могут особым образом сказаться в крупномасштабных явлениях.</p><p>При низких температурах, когда энергия системы очень-очень сильно убывает, вместо прежнего громадного количества состояний в игру включается только очень-очень малое количество состояний — тех, которые расположены неподалеку от основного. При таких условиях квантовомеханический характер этого основного состояния может проявиться на макроскопическом уровне. Вот целью этой лекции и будет продемонстрировать связь между квантовой механикой и крупномасштабными эффектами — не обычное обсуждение пути, по которому квантовая механика в среднем воспроизводится ньютоновой механикой, а специальный случай, когда квантовая механика вызывает свои собственные, характерные для нее эффекты в крупных, «макроскопических» размерах.</p><p>Начну с того, что напомню вам кое-какие свойства уравнения Шредингера. Я хочу с помощью уравнения Шредингера описать поведение частицы в магнитном поле, потому что явления сверхпроводимости связаны с магнитными полями. Внешнее магнитное поле описывается векторным потенциалом, и вопрос состоит в том, каковы законы квантовой механики в поле векторного потенциала. Принцип, определяющий квантовомеханическое поведение частицы в поле векторного потенциала, очень прост. Амплитуда того, что частица при наличии поля перейдет по некоторому пути из одного места в другое, равна амплитуде того, что она прошла бы по этому пути без поля, умноженной на экспоненту от криволинейного интеграла от векторного потенциала, умноженного в свою очередь на электрический заряд и деленного на постоянную Планка (см. <a class="xref xref-figure" href="ch19.html#Ch19-F1">фиг. 19.1</a>):</p><div class="display-math" id="eq-21-1"><svg class="math-svg display" aria-label="
+<!-- BEGIN NotebookLM reports -->
+    <section class="study-workspace" id="study-panel" hidden>
+      <div class="study-workspace-inner">
+        <header class="study-workspace-header">
+          <div>
+            <strong>Материалы главы</strong>
+            <span>Сгенерированные учебные материалы NotebookLM для этой главы.</span>
+          </div>
+        </header>
+        <section class="study-section" data-study-section="notes" hidden>
+    <div class="study-grid">
+      <a class="study-card" href="reports/ch21-notebooklm-briefing.html"><strong>Обзор главы</strong><span>HTML · NotebookLM</span></a>
+      <a class="study-card" href="reports/ch21-notebooklm-study-guide.html"><strong>Конспект</strong><span>HTML · NotebookLM</span></a>
+    </div>
+  </section>
+        <section class="study-section" data-study-section="media" hidden>
+    <div class="study-grid study-media-grid">
+      <article class="study-media-card study-youtube-card">
+        <strong>Аудиообзор</strong>
+        <span>NotebookLM audio · том III · старт 06:52:29</span>
+        <div class="study-youtube-embed"><iframe title="Аудиообзор: глава 21" src="https://www.youtube-nocookie.com/embed/B8g9r_mWy5I?start=24749&amp;rel=0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+        <a class="study-youtube-link" href="https://youtu.be/B8g9r_mWy5I?t=24749" target="_blank" rel="noopener">Открыть на YouTube</a>
+      </article>
+      <article class="study-media-card study-youtube-card">
+        <strong>Видеообзор</strong>
+        <span>NotebookLM video · том III · старт 02:49:11</span>
+        <div class="study-youtube-embed"><iframe title="Видеообзор: глава 21" src="https://www.youtube-nocookie.com/embed/Pz84Rg8AURI?start=10151&amp;rel=0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+        <a class="study-youtube-link" href="https://youtu.be/Pz84Rg8AURI?t=10151" target="_blank" rel="noopener">Открыть на YouTube</a>
+      </article>
+    </div>
+  </section>
+        <section class="study-section" data-study-section="files" hidden>
+    <div class="study-card">
+      <strong>Файлы</strong>
+      <span class="study-file-row"><a href="../../../feynman-notebooklm/ru/volume-III/ch21/ch21-full.md">Текст главы для NotebookLM</a><a href="../../../feynman-notebooklm/ru/volume-III/ch21/figure-context/ch21-figures-context.md">Рисунки и контекст</a><a href="../../../feynman-notebooklm/ru/volume-III/ch21/manifest.json">Манифест</a><a href="../../../feynman-notebooklm/ru/volume-III/ch21/sections/">Разделы главы</a><a href="reports/ch21-notebooklm-briefing.md">Обзор главы MD</a><a href="reports/ch21-notebooklm-study-guide.md">Конспект MD</a></span>
+    </div>
+  </section>
+      </div>
+    </section>
+<!-- END NotebookLM reports -->
+    <article class="chapter-flow study-section" data-study-section="lecture"><h1 id="ch21">21. Уравнение Шредингера в классическом контексте: семинар по сверхпроводимости</h1><h2 id="sec-21-1">21–1 Уравнение Шредингера в магнитном поле<a class="permalink" href="#sec-21-1" aria-label="Ссылка на раздел">#</a></h2><p>Эту лекцию я читаю вам для развлечения. Захотелось посмотреть, что получится, если начать читать в немного ином стиле. В курс она не входит, и не думайте, что это попытка обучить вас в последний час чему-то новому. Я скорее воображаю, будто провожу семинар или делаю отчет об исследованиях перед более подготовленной аудиторией, перед людьми, которые в квантовой механике уже многое понимают. Основное различие между семинаром и регулярной лекцией в том, что на семинаре докладчик не приводит все стадии, всю алгебру выкладок. Он просто говорит: «Если вы проделаете то-то и то-то, то получится вот что», а в детали не входит. Вот и в этой лекции будут только высказываться идеи и приводиться результаты расчетов. А вы должны понимать, что вовсе не обязательно во всем немедленно и до конца разбираться, надо только верить, что если проделать все выкладки, то все так и получится.</p><p>Но это не все. Главное — что об этом мне хочется говорить. Это такая свежая, актуальная, современная тема, что вполне законно вынести ее на семинар. Тема эта — классический аспект уравнения Шредингера, явление сверхпроводимости.</p><p>Обычно та волновая функция, которая появляется в уравнении Шредингера, относится только к одной или к двум частицам. И сама волновая функция классическим смыслом не обладает — в отличие от электрического поля, или векторного потенциала, или других подобных вещей. Правда, волновая функция отдельной частицы — это «поле» в том смысле, что она есть функция положения, но классического значения она, вообще говоря, не имеет. Тем не менее бывают иногда обстоятельства, в которых квантовомеханическая волновая функция действительно имеет классическое значение, именно их я и хочу коснуться. Своеобразие квантовомеханического поведения вещества в мелких масштабах обычно не дает себя чувствовать в крупномасштабных явлениях, если не считать стандартных выводов о том, что оно вызывает к жизни законы Ньютона, законы так называемой классической механики. Но существуют порой обстоятельства, в которых особенности квантовой механики могут особым образом сказаться в крупномасштабных явлениях.</p><p>При низких температурах, когда энергия системы очень-очень сильно убывает, вместо прежнего громадного количества состояний в игру включается только очень-очень малое количество состояний — тех, которые расположены неподалеку от основного. При таких условиях квантовомеханический характер этого основного состояния может проявиться на макроскопическом уровне. Вот целью этой лекции и будет продемонстрировать связь между квантовой механикой и крупномасштабными эффектами — не обычное обсуждение пути, по которому квантовая механика в среднем воспроизводится ньютоновой механикой, а специальный случай, когда квантовая механика вызывает свои собственные, характерные для нее эффекты в крупных, «макроскопических» размерах.</p><p>Начну с того, что напомню вам кое-какие свойства уравнения Шредингера. Я хочу с помощью уравнения Шредингера описать поведение частицы в магнитном поле, потому что явления сверхпроводимости связаны с магнитными полями. Внешнее магнитное поле описывается векторным потенциалом, и вопрос состоит в том, каковы законы квантовой механики в поле векторного потенциала. Принцип, определяющий квантовомеханическое поведение частицы в поле векторного потенциала, очень прост. Амплитуда того, что частица при наличии поля перейдет по некоторому пути из одного места в другое, равна амплитуде того, что она прошла бы по этому пути без поля, умноженной на экспоненту от криволинейного интеграла от векторного потенциала, умноженного в свою очередь на электрический заряд и деленного на постоянную Планка (см. <a class="xref xref-figure" href="ch19.html#Ch19-F1">фиг. 19.1</a>):</p><div class="display-math" id="eq-21-1"><svg class="math-svg display" aria-label="
 
 \braket{b}{a}_{\text{in $\mathbf{A}$}}=\braket{b}{a}_{A=0}\cdot
 \exp\biggl[\frac{iq}{\hbar}\int_a^b\mathbf{A}\cdot d\mathbf{s}\biggr].
@@ -769,5 +812,38 @@ J_{\text{max}}=2J_0\left\lvert
 </script>
 
 <footer>Фейнмановские лекции по физике, том III · Ричард Фейнман, Роберт Лейтон, Мэтью Сэндс</footer>
+<!-- BEGIN NotebookLM script -->
+<script>
+(() => {
+  const workspace = document.querySelector(".study-workspace");
+  const buttons = [...document.querySelectorAll("[data-study-mode]")];
+  const sections = [...document.querySelectorAll("[data-study-section]")];
+  if (!workspace || !buttons.length || !sections.length) return;
+  const setMode = (mode) => {
+    const activeMode = sections.some((section) => section.dataset.studySection === mode) ? mode : "lecture";
+    workspace.hidden = activeMode === "lecture";
+    buttons.forEach((button) => {
+      const active = button.dataset.studyMode === activeMode;
+      button.classList.toggle("is-active", active);
+      button.setAttribute("aria-pressed", active ? "true" : "false");
+    });
+    sections.forEach((section) => {
+      section.hidden = section.dataset.studySection !== activeMode;
+    });
+    const target = document.querySelector(`[data-study-section="${activeMode}"]`);
+    if (target) target.scrollIntoView({ block: "start" });
+  };
+  document.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-study-mode]");
+    if (!button) return;
+    event.preventDefault();
+    setMode(button.dataset.studyMode || "lecture");
+  });
+  if (location.hash === "#study-media") setMode("media");
+  else if (location.hash === "#study-panel") setMode("notes");
+  else setMode("lecture");
+})();
+</script>
+<!-- END NotebookLM script -->
 </body>
 </html>

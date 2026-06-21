@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Глава 19: Атом водорода и периодическая таблица — Аналитический отчет - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch19.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1
+id="глава-19-атом-водорода-и-периодическая-таблица--аналитический-отчет">Глава
+19: Атом водорода и периодическая таблица — Аналитический отчет</h1>
+<p>Данный аналитический отчет синтезирует материалы Главы 19
+«Фейнмановских лекций по физике» (том III), посвященной
+квантовомеханическому описанию атома водорода и теоретическому
+обоснованию периодической таблицы химических элементов.</p>
+<h2 id="1-резюме">1. Резюме</h2>
+<p>Глава описывает один из величайших успехов квантовой механики —
+объяснение спектров атома водорода и фундаментальных закономерностей
+химии. В основе анализа лежит решение уравнения Шредингера для электрона
+в кулоновском поле протона. Исследование выявляет дискретность
+энергетических уровней, вводит квантовые числа
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>,</mo><mi>l</mi><mo>,</mo><mi>m</mi></mrow><annotation encoding="application/x-tex">n, l, m</annotation></semantics></math>)
+и объясняет пространственное распределение электронной плотности. Эти
+принципы затем экстраполируются на многоэлектронные атомы, позволяя
+качественно понять структуру периодической таблицы и геометрию
+химических связей.</p>
+<h2 id="2-математические-основы-и-уравнение-шредингера">2.
+Математические основы и уравнение Шредингера</h2>
+<h3 id="переход-к-сферическим-координатам">Переход к сферическим
+координатам</h3>
+<p>Поскольку потенциальная энергия электрона в поле протона зависит
+только от радиуса
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>=</mo><mi>−</mi><msup><mi>e</mi><mn>2</mn></msup><mi>/</mi><mi>r</mi></mrow><annotation encoding="application/x-tex">V = -e^2/r</annotation></semantics></math>),
+решение уравнения Шредингера (17.5) значительно упрощается при
+использовании сферических координат
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>r</mi><mo>,</mo><mi>θ</mi><mo>,</mo><mi>ϕ</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(r, \theta, \phi)</annotation></semantics></math>
+(см. <strong>Фиг. 17.1</strong>).</p>
+<p>Связь с декартовыми координатами:</p>
+<ul>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mi>r</mi><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mi>θ</mi><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>ϕ</mi></mrow><annotation encoding="application/x-tex">x = r \sin\theta \cos\phi</annotation></semantics></math></li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mo>=</mo><mi>r</mi><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mi>θ</mi><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mi>ϕ</mi></mrow><annotation encoding="application/x-tex">y = r \sin\theta \sin\phi</annotation></semantics></math></li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi><mo>=</mo><mi>r</mi><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>θ</mi></mrow><annotation encoding="application/x-tex">z = r \cos\theta</annotation></semantics></math></li>
+</ul>
+<p>Уравнение Шредингера в полярных координатах принимает вид:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>1</mn><mi>r</mi></mfrac><mfrac><msup><mi>∂</mi><mn>2</mn></msup><mrow><mi>∂</mi><msup><mi>r</mi><mn>2</mn></msup></mrow></mfrac><mo stretchy="false" form="prefix">(</mo><mi>r</mi><mi>ψ</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mfrac><mn>1</mn><msup><mi>r</mi><mn>2</mn></msup></mfrac><mrow><mo stretchy="true" form="prefix">[</mo><mfrac><mn>1</mn><mrow><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mi>θ</mi></mrow></mfrac><mfrac><mi>∂</mi><mrow><mi>∂</mi><mi>θ</mi></mrow></mfrac><mrow><mo stretchy="true" form="prefix">(</mo><mi mathvariant="normal">sin</mi><mi>θ</mi><mfrac><mrow><mi>∂</mi><mi>ψ</mi></mrow><mrow><mi>∂</mi><mi>θ</mi></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo>+</mo><mfrac><mn>1</mn><mrow><msup><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mn>2</mn></msup><mi>θ</mi></mrow></mfrac><mfrac><mrow><msup><mi>∂</mi><mn>2</mn></msup><mi>ψ</mi></mrow><mrow><mi>∂</mi><msup><mi>ϕ</mi><mn>2</mn></msup></mrow></mfrac><mo stretchy="true" form="postfix">]</mo></mrow><mo>=</mo><mi>−</mi><mfrac><mrow><mn>2</mn><mi>m</mi></mrow><msup><mi>ℏ</mi><mn>2</mn></msup></mfrac><mrow><mo stretchy="true" form="prefix">(</mo><mi>E</mi><mo>+</mo><mfrac><msup><mi>e</mi><mn>2</mn></msup><mi>r</mi></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mi>ψ</mi></mrow><annotation encoding="application/x-tex">\frac{1}{r} \frac{\partial^2}{\partial r^2} (r\psi) + \frac{1}{r^2} \left[ \frac{1}{\sin\theta} \frac{\partial}{\partial \theta} \left( \sin\theta \frac{\partial\psi}{\partial \theta} \right) + \frac{1}{\sin^2\theta} \frac{\partial^2\psi}{\partial \phi^2} \right] = -\frac{2m}{\hbar^2} \left( E + \frac{e^2}{r} \right) \psi</annotation></semantics></math></p>
+<h3 id="естественные-атомные-единицы">Естественные атомные единицы</h3>
+<p>Для упрощения вычислений вводятся:</p>
+<ul>
+<li><strong>Боровский радиус
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>r</mi><mi>B</mi></msub><annotation encoding="application/x-tex">r_B</annotation></semantics></math>):</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>r</mi><mi>B</mi></msub><mo>=</mo><msup><mi>ℏ</mi><mn>2</mn></msup><mi>/</mi><mi>m</mi><msup><mi>e</mi><mn>2</mn></msup><mo>≈</mo><mn>0.529</mn><mspace width="0.167em"></mspace><mtext mathvariant="normal">Å</mtext></mrow><annotation encoding="application/x-tex">r_B = \hbar^2/me^2 \approx 0.529 \, \text{Å}</annotation></semantics></math>.</li>
+<li><strong>Ридберг
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>E</mi><mi>R</mi></msub><annotation encoding="application/x-tex">E_R</annotation></semantics></math>):</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mi>R</mi></msub><mo>=</mo><mi>m</mi><msup><mi>e</mi><mn>4</mn></msup><mi>/</mi><mn>2</mn><msup><mi>ℏ</mi><mn>2</mn></msup><mo>≈</mo><mn>13.6</mn><mspace width="0.167em"></mspace><mtext mathvariant="normal">эВ</mtext></mrow><annotation encoding="application/x-tex">E_R = me^4/2\hbar^2 \approx 13.6 \, \text{эВ}</annotation></semantics></math>.</li>
+</ul>
+<h2 id="3-анализ-состояний-атома-водорода">3. Анализ состояний атома
+водорода</h2>
+<h3 id="сферически-симметричные-решения-s-состояния">Сферически
+симметричные решения
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math>-состояния)</h3>
+<p>Это состояния с нулевым орбитальным моментом количества движения
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>l</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">l=0</annotation></semantics></math>).
+Волновая функция
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ψ</mi><annotation encoding="application/x-tex">\psi</annotation></semantics></math>
+зависит только от расстояния
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math>.
+Физически приемлемые решения (где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ψ</mi><mo>→</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\psi \to 0</annotation></semantics></math>
+при
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mo>→</mo><mi>∞</mi></mrow><annotation encoding="application/x-tex">r \to \infty</annotation></semantics></math>)
+существуют только при определенных отрицательных энергиях:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mi>n</mi></msub><mo>=</mo><mi>−</mi><mfrac><msub><mi>E</mi><mi>R</mi></msub><msup><mi>n</mi><mn>2</mn></msup></mfrac><mo>,</mo><mspace width="1.0em"></mspace><mi>n</mi><mo>=</mo><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mi>…</mi></mrow><annotation encoding="application/x-tex">E_n = - \frac{E_R}{n^2}, \quad n = 1, 2, 3, \dots</annotation></semantics></math></p>
+<p><strong>Характеристики первых
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math>-состояний
+(см. Фиг. 17.2):</strong> | Состояние | Квантовое число
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+| Вид волновой функции
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ψ</mi><mo stretchy="false" form="prefix">(</mo><mi>ρ</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\psi(\rho)</annotation></semantics></math>
+| Особенности | | :--- | :--- | :--- | :--- | |
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>s</mi></mrow><annotation encoding="application/x-tex">1s</annotation></semantics></math>
+(основное) |
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n=1</annotation></semantics></math>
+|
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>−</mi><mi>ρ</mi></mrow></msup><annotation encoding="application/x-tex">e^{-\rho}</annotation></semantics></math>
+| Максимум в центре, монотонный спад. | |
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>s</mi></mrow><annotation encoding="application/x-tex">2s</annotation></semantics></math>
+|
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">n=2</annotation></semantics></math>
+|
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mi>ρ</mi><mi>/</mi><mn>2</mn><mo stretchy="false" form="postfix">)</mo><msup><mi>e</mi><mrow><mi>−</mi><mi>ρ</mi><mi>/</mi><mn>2</mn></mrow></msup></mrow><annotation encoding="application/x-tex">(1 - \rho/2)e^{-\rho/2}</annotation></semantics></math>
+| Одно пересечение оси (один узел). | |
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mi>s</mi></mrow><annotation encoding="application/x-tex">3s</annotation></semantics></math>
+|
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">n=3</annotation></semantics></math>
+|
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>2</mn><mi>ρ</mi><mi>/</mi><mn>3</mn><mo>+</mo><mn>2</mn><msup><mi>ρ</mi><mn>2</mn></msup><mi>/</mi><mn>27</mn><mo stretchy="false" form="postfix">)</mo><msup><mi>e</mi><mrow><mi>−</mi><mi>ρ</mi><mi>/</mi><mn>3</mn></mrow></msup></mrow><annotation encoding="application/x-tex">(1 - 2\rho/3 + 2\rho^2/27)e^{-\rho/3}</annotation></semantics></math>
+| Два пересечения оси (два узла). |</p>
+<h3 id="состояния-с-угловой-зависимостью">Состояния с угловой
+зависимостью</h3>
+<p>Для состояний с ненулевым моментом количества движения
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>l</mi><mo>&gt;</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">l &gt; 0</annotation></semantics></math>)
+полная волновая функция представляется в виде:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ψ</mi><mrow><mi>n</mi><mo>,</mo><mi>l</mi><mo>,</mo><mi>m</mi></mrow></msub><mo stretchy="false" form="prefix">(</mo><mi mathvariant="bold-italic">𝒓</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>a</mi><msub><mi>Y</mi><mrow><mi>l</mi><mo>,</mo><mi>m</mi></mrow></msub><mo stretchy="false" form="prefix">(</mo><mi>θ</mi><mo>,</mo><mi>ϕ</mi><mo stretchy="false" form="postfix">)</mo><msub><mi>F</mi><mrow><mi>n</mi><mo>,</mo><mi>l</mi></mrow></msub><mo stretchy="false" form="prefix">(</mo><mi>r</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\psi_{n,l,m}(\mathbf{r}) = a Y_{l,m}(\theta, \phi) F_{n,l}(r)</annotation></semantics></math>
+Где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>Y</mi><mrow><mi>l</mi><mo>,</mo><mi>m</mi></mrow></msub><annotation encoding="application/x-tex">Y_{l,m}</annotation></semantics></math>
+— <strong>сферические гармоники</strong>, определяющие угловое
+распределение (см. <strong>Таблицу 17.1</strong>).</p>
+<p><strong>Квантовые числа:</strong></p>
+<ol type="1">
+<li><strong>Главное
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>):</strong>
+Определяет энергию
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>≥</mo><mi>l</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n \ge l+1</annotation></semantics></math>).</li>
+<li><strong>Орбитальное
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>l</mi><annotation encoding="application/x-tex">l</annotation></semantics></math>):</strong>
+Квантует полный момент количества движения
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>,</mo><mi>p</mi><mo>,</mo><mi>d</mi><mo>,</mo><mi>f</mi></mrow><annotation encoding="application/x-tex">s, p, d, f</annotation></semantics></math>).</li>
+<li><strong>Магнитное
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math>):</strong>
+Проекция момента на ось
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>z</mi><annotation encoding="application/x-tex">z</annotation></semantics></math>
+(от
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mi>l</mi></mrow><annotation encoding="application/x-tex">-l</annotation></semantics></math>
+до
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>+</mi><mi>l</mi></mrow><annotation encoding="application/x-tex">+l</annotation></semantics></math>).</li>
+</ol>
+<h3 id="физический-смысл-центробежного-потенциала">Физический смысл
+"центробежного потенциала"</h3>
+<p>В радиальном уравнении для
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>F</mi><mi>l</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>r</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">F_l(r)</annotation></semantics></math>
+появляется дополнительный член:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mrow><mi>l</mi><mo stretchy="false" form="prefix">(</mo><mi>l</mi><mo>+</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><msup><mi>ℏ</mi><mn>2</mn></msup></mrow><mrow><mn>2</mn><mi>m</mi><msup><mi>r</mi><mn>2</mn></msup></mrow></mfrac><annotation encoding="application/x-tex">\frac{l(l+1)\hbar^2}{2mr^2}</annotation></semantics></math>.
+Это квантовый аналог центробежной силы. Он препятствует нахождению
+электрона вблизи ядра при больших
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>l</mi><annotation encoding="application/x-tex">l</annotation></semantics></math>.
+Чем выше
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>l</mi><annotation encoding="application/x-tex">l</annotation></semantics></math>,
+тем дальше от центра "отталкивается" электронная амплитуда
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>F</mi><mrow><mi>n</mi><mo>,</mo><mi>l</mi></mrow></msub><mo>≈</mo><msup><mi>r</mi><mi>l</mi></msup></mrow><annotation encoding="application/x-tex">F_{n,l} \approx r^l</annotation></semantics></math>
+при малых
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math>).</p>
+<h2 id="4-периодическая-таблица-элементов">4. Периодическая таблица
+элементов</h2>
+<p>При переходе к многоэлектронным атомам используется модель
+независимых частиц, где каждый электрон движется в усредненном
+центральном поле ядра и остальных электронов.</p>
+<h3 id="ключевые-принципы-заполнения-оболочек">Ключевые принципы
+заполнения оболочек:</h3>
+<ul>
+<li><strong>Принцип запрета Паули:</strong> Каждое квантовое состояние
+может быть занято только одним электроном (с учетом спина — два
+электрона на орбиталь).</li>
+<li><strong>Энергетический сдвиг
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>l</mi><annotation encoding="application/x-tex">l</annotation></semantics></math>-состояний:</strong>
+В отличие от водорода, в сложных атомах энергия зависит не только от
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>,
+но и от
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>l</mi><annotation encoding="application/x-tex">l</annotation></semantics></math>.
+Состояния с меньшим
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>l</mi><annotation encoding="application/x-tex">l</annotation></semantics></math>
+(например,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>s</mi></mrow><annotation encoding="application/x-tex">2s</annotation></semantics></math>)
+имеют большую амплитуду вблизи ядра и "ощущают" его полный заряд
+сильнее, чем экранированные
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math>-состояния.
+Это понижает их энергию (см. <strong>Фиг. 17.8</strong>).</li>
+</ul>
+<h3 id="анализ-некоторых-элементов-на-основе-таблицы-172">Анализ
+некоторых элементов (на основе Таблицы 17.2):</h3>
+<ul>
+<li><strong>Гелий
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Z</mi><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">Z=2</annotation></semantics></math>):</strong>
+Заполнена
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>s</mi></mrow><annotation encoding="application/x-tex">1s</annotation></semantics></math>-оболочка.
+Химически инертен.</li>
+<li><strong>Литий
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Z</mi><mo>=</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">Z=3</annotation></semantics></math>):</strong>
+Третий электрон на
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>s</mi></mrow><annotation encoding="application/x-tex">2s</annotation></semantics></math>-уровне.
+Низкая энергия ионизации (5.4 эВ), высокая активность.</li>
+<li><strong>Кислород
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Z</mi><mo>=</mo><mn>8</mn></mrow><annotation encoding="application/x-tex">Z=8</annotation></semantics></math>):</strong>
+Конфигурация
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><msup><mi>s</mi><mn>2</mn></msup><mn>2</mn><msup><mi>s</mi><mn>2</mn></msup><mn>2</mn><msup><mi>p</mi><mn>4</mn></msup></mrow><annotation encoding="application/x-tex">1s^2 2s^2 2p^4</annotation></semantics></math>.
+Наличие вакансий в
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math>-оболочке
+определяет валентность.</li>
+<li><strong>Благородные газы (Ne, Ar, Kr):</strong> Обладают
+заполненными оболочками с относительно низкими энергиями, что
+обуславливает их инертность.</li>
+</ul>
+<h2 id="5-геометрия-химических-связей">5. Геометрия химических
+связей</h2>
+<p>Квантовая механика объясняет направленность валентностей через
+ориентацию
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math>-орбиталей.</p>
+<ul>
+<li><strong>H<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi></mi><mn>2</mn></msub><annotation encoding="application/x-tex">_2</annotation></semantics></math>O:</strong>
+Электроны водорода заполняют вакантные
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><msub><mi>p</mi><mi>x</mi></msub></mrow><annotation encoding="application/x-tex">2p_x</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><msub><mi>p</mi><mi>y</mi></msub></mrow><annotation encoding="application/x-tex">2p_y</annotation></semantics></math>
+состояния кислорода, которые ориентированы под углом
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>90</mn><mo>∘</mo></msup><annotation encoding="application/x-tex">90^\circ</annotation></semantics></math>.
+Реальный угол
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>105</mn><mo>∘</mo></msup><annotation encoding="application/x-tex">105^\circ</annotation></semantics></math>
+обусловлен электрическим отталкиванием протонов.</li>
+<li><strong>NH<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi></mi><mn>3</mn></msub><annotation encoding="application/x-tex">_3</annotation></semantics></math>
+(Аммиак):</strong> Три водорода подсоединяются к вакансиям в
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math>-состояниях
+азота по осям
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi></mrow><annotation encoding="application/x-tex">x, y, z</annotation></semantics></math>.
+Это создает объемную (не плоскую) структуру, что делает возможным работу
+аммиачного мазера.</li>
+</ul>
+<h2 id="6-важные-цитаты-и-их-контекст">6. Важные цитаты и их
+контекст</h2>
+<blockquote>
+<p><em>«Самым замечательным успехом в истории квантовой механики было
+объяснение всех деталей спектров простейших атомов, а также
+периодичностей, обнаруженных в таблице химических элементов».</em>
+<strong>Контекст:</strong> Вступление к главе, подчеркивающее
+фундаментальное значение описываемой теории.</p>
+</blockquote>
+<blockquote>
+<p><em>«Ничего мистического в отрицательных энергиях нет. Они
+отрицательны просто потому, что... в качестве нуля энергии выбрали
+энергию электрона, расположенного вдалеке от протона».</em>
+<strong>Контекст:</strong> Разъяснение шкалы энергий в связанных
+состояниях атома.</p>
+</blockquote>
+<blockquote>
+<p><em>«Уравнение Шредингера явилось одним из величайших триумфов
+физики... оно объяснило атомные спектры и всю химию, благодаря чему
+стала понятна физическая природа материи».</em>
+<strong>Контекст:</strong> Заключительный вывод главы, суммирующий вклад
+теории в науку.</p>
+</blockquote>
+<h2 id="7-ключевые-выводы-actionable-insights">7. Ключевые выводы
+(Actionable Insights)</h2>
+<ol type="1">
+<li><strong>Дискретность как следствие граничных условий:</strong>
+Квантование энергии возникает из физического требования затухания
+волновой функции на бесконечности.</li>
+<li><strong>Природа химической инертности:</strong> Инертность
+благородных газов — это следствие завершенности энергетических оболочек,
+при которой атому невыгодно ни отдавать, ни принимать электроны.</li>
+<li><strong>Геометрия молекул предсказуема:</strong> Углы между
+химическими связями напрямую связаны с взаимной ориентацией угловых
+функций
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math>-орбиталей)
+электронов.</li>
+<li><strong>Универсальность модели:</strong> Несмотря на приближенный
+характер (пренебрежение спином и релятивизмом на первом этапе), модель
+центрального поля успешно объясняет структуру всей периодической
+таблицы.</li>
+</ol>
+    </article>
+  </main>
+</body>
+</html>

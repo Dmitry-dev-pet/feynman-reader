@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Аналитический отчет: Зависимость амплитуд от места (Глава 16) - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch16.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1
+id="аналитический-отчет-зависимость-амплитуд-от-места-глава-16">Аналитический
+отчет: Зависимость амплитуд от места (Глава 16)</h1>
+<p>Данный документ представляет собой всесторонний анализ главы 16
+«Фейнмановских лекций по физике» (том III), посвященной переходу от
+дискретных квантовых систем к непрерывному описанию движения частиц в
+пространстве.</p>
+<h2 id="i-краткое-резюме-executive-summary">I. Краткое резюме (Executive
+Summary)</h2>
+<p>Глава 16 описывает фундаментальный переход квантовой механики от
+аппроксимации «базисных состояний у атомов» к непрерывному
+пространственному континууму. Основная цель текста — продемонстрировать
+происхождение <strong>уравнения Шрёдингера</strong> как предельного
+случая движения электрона в бесконечно плотной решетке. Анализ
+охватывает определение волновой функции
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ψ</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\psi(x)</annotation></semantics></math>,
+введение дельта-функции Дирака для нормировки в непрерывном
+пространстве, количественную формулировку принципа неопределенности
+Гейзенберга и физическое обоснование квантования уровней энергии в
+потенциальных ямах. Ключевой вывод заключается в том, что дискретность
+энергетических спектров атомов является прямым следствием топологических
+требований к решениям дифференциального уравнения Шрёдингера.</p>
+<hr />
+<h2 id="ii-детальный-анализ-ключевых-тем">II. Детальный анализ ключевых
+тем</h2>
+<h3 id="1-переход-к-пространственному-континууму">1. Переход к
+пространственному континууму</h3>
+<p>В предыдущих главах движение электрона рассматривалось как «прыжки»
+между дискретными атомами в решетке с постоянной
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>.
+Глава 16 постулирует, что если расстояние
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>
+стремится к нулю, а амплитуда перехода
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+изменяется так, что произведение
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msup><mi>b</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">Ab^2</annotation></semantics></math>
+остается постоянным, дискретные уравнения переходят в
+дифференциальные.</p>
+<ul>
+<li><strong>Эффективная масса:</strong> Параметр
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>m</mi><mtext mathvariant="normal">eff</mtext></msub><annotation encoding="application/x-tex">m_{\text{eff}}</annotation></semantics></math>
+определяется через параметры решетки:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>m</mi><mtext mathvariant="normal">eff</mtext></msub><mo>=</mo><mfrac><msup><mi>ℏ</mi><mn>2</mn></msup><mrow><mn>2</mn><mi>A</mi><msup><mi>b</mi><mn>2</mn></msup></mrow></mfrac></mrow><annotation encoding="application/x-tex">m_{\text{eff}} = \frac{\hbar^2}{2Ab^2}</annotation></semantics></math></li>
+<li><strong>Диффузия амплитуды:</strong> Уравнение движения электрона в
+вакууме можно представить как процесс «диффузии» амплитуды вероятности
+от точки к точке, где скорость изменения амплитуды в точке
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>
+пропорциональна её второй производной по координате.</li>
+</ul>
+<h3 id="2-волновая-функция-и-плотность-вероятности">2. Волновая функция
+и плотность вероятности</h3>
+<p>Для описания состояния частицы на континууме используется бесконечная
+совокупность базисных состояний
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>x</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|x\rangle</annotation></semantics></math>.
+Амплитуда
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⟨</mo><mi>x</mi><mo stretchy="false" form="prefix">|</mo><mi>ψ</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">\langle x | \psi \rangle</annotation></semantics></math>
+обозначается как <strong>волновая функция
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ψ</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\psi(x)</annotation></semantics></math></strong>.</p>
+<ul>
+<li><strong>Физический смысл:</strong> Поскольку вероятность нахождения
+частицы в <em>точно</em> заданной точке равна нулю,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>ψ</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><msup><mo stretchy="false" form="prefix">|</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">|\psi(x)|^2</annotation></semantics></math>
+интерпретируется как <strong>плотность вероятности</strong>.</li>
+<li><strong>Формула вероятности:</strong> Вероятность обнаружить частицу
+в узком интервале
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">\Delta x</annotation></semantics></math>
+вблизи точки
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>
+составляет:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi mathvariant="normal">Δ</mi><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo stretchy="false" form="prefix">|</mo><mi>ψ</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><msup><mo stretchy="false" form="prefix">|</mo><mn>2</mn></msup><mi mathvariant="normal">Δ</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">P(x, \Delta x) = |\psi(x)|^2 \Delta x</annotation></semantics></math></li>
+</ul>
+<h3
+id="3-состояния-с-определенным-импульсом-и-принцип-неопределенности">3.
+Состояния с определенным импульсом и принцип неопределенности</h3>
+<p>Текст устанавливает связь между пространственным представлением
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>)
+и импульсным представлением
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math>).
+Амплитуда нахождения частицы с импульсом
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math>
+в состоянии
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ψ</mi><annotation encoding="application/x-tex">\psi</annotation></semantics></math>
+вычисляется через интеграл:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⟨</mo><mi>p</mi><mo stretchy="false" form="prefix">|</mo><mi>ψ</mi><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><msubsup><mo>∫</mo><mrow><mi>−</mi><mi>∞</mi></mrow><mrow><mi>+</mi><mi>∞</mi></mrow></msubsup><msup><mi>e</mi><mrow><mi>−</mi><mi>i</mi><mi>p</mi><mi>x</mi><mi>/</mi><mi>ℏ</mi></mrow></msup><mi>ψ</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mi>d</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">\langle p | \psi \rangle = \int_{-\infty}^{+\infty} e^{-ipx/\hbar} \psi(x) dx</annotation></semantics></math></p>
+<p><strong>Анализ на примере Гауссова распределения (Фиг.
+14.1):</strong> Если частица локализована в области
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>σ</mi><annotation encoding="application/x-tex">\sigma</annotation></semantics></math>
+(волновой пакет вида
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi><msup><mi>e</mi><mrow><mi>−</mi><msup><mi>x</mi><mn>2</mn></msup><mi>/</mi><mn>4</mn><msup><mi>σ</mi><mn>2</mn></msup></mrow></msup></mrow><annotation encoding="application/x-tex">Ke^{-x^2/4\sigma^2}</annotation></semantics></math>),
+то распределение её импульсов также будет иметь форму кривой Гаусса с
+полушириной
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>η</mi><annotation encoding="application/x-tex">\eta</annotation></semantics></math>.</p>
+<ul>
+<li><strong>Связь неопределенностей:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>η</mi><mo>=</mo><mfrac><mi>ℏ</mi><mrow><mn>2</mn><mi>σ</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\eta = \frac{\hbar}{2\sigma}</annotation></semantics></math>.</li>
+<li><strong>Принцип неопределенности Гейзенберга:</strong> Для любого
+распределения выполняется условие:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>p</mi><mo>⋅</mo><mi mathvariant="normal">Δ</mi><mi>x</mi><mo>≥</mo><mfrac><mi>ℏ</mi><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">\Delta p \cdot \Delta x \geq \frac{\hbar}{2}</annotation></semantics></math></li>
+</ul>
+<h3 id="4-нормировка-и-дельта-функция-дирака">4. Нормировка и
+дельта-функция Дирака</h3>
+<p>При переходе к континууму условие ортогональности
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⟨</mo><mi>i</mi><mo stretchy="false" form="prefix">|</mo><mi>j</mi><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><msub><mi>δ</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\langle i | j \rangle = \delta_{ij}</annotation></semantics></math>
+заменяется на использование функции Дирака
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>δ</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\delta(x)</annotation></semantics></math>.</p>
+<ul>
+<li><strong>Определение:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>δ</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\delta(x)</annotation></semantics></math>
+— это «функция», которая равна нулю везде, кроме
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">x=0</annotation></semantics></math>,
+но имеет интеграл, равный единице.</li>
+<li><strong>Математическое свойство:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ψ</mi><mo stretchy="false" form="prefix">(</mo><msup><mi>x</mi><mo>′</mo></msup><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo>∫</mo><mi>δ</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><msup><mi>x</mi><mo>′</mo></msup><mo stretchy="false" form="postfix">)</mo><mi>ψ</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mi>d</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">\psi(x&#39;) = \int \delta(x - x&#39;) \psi(x) dx</annotation></semantics></math>.</li>
+<li><strong>Визуализация (Рис. 14.2):</strong> Представляется как предел
+последовательности прямоугольников, становящихся всё уже и выше при
+сохранении единичной площади.</li>
+</ul>
+<h3 id="5-уравнение-шрёдингера">5. Уравнение Шрёдингера</h3>
+<p>Центральный закон квантовой механики для частицы массой
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math>
+в потенциале
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math>:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mi>ℏ</mi><mfrac><mrow><mi>∂</mi><mi>ψ</mi></mrow><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mi>−</mi><mfrac><msup><mi>ℏ</mi><mn>2</mn></msup><mrow><mn>2</mn><mi>m</mi></mrow></mfrac><msup><mi>∇</mi><mn>2</mn></msup><mi>ψ</mi><mo>+</mo><mi>V</mi><mi>ψ</mi></mrow><annotation encoding="application/x-tex">i\hbar \frac{\partial \psi}{\partial t} = -\frac{\hbar^2}{2m} \nabla^2 \psi + V \psi</annotation></semantics></math></p>
+<ul>
+<li><strong>Многочастичные системы:</strong> Для
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>N</mi><annotation encoding="application/x-tex">N</annotation></semantics></math>
+частиц волновая функция
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ψ</mi><mo stretchy="false" form="prefix">(</mo><msub><mi mathvariant="bold-italic">𝒓</mi><mn>1</mn></msub><mo>,</mo><msub><mi mathvariant="bold-italic">𝒓</mi><mn>2</mn></msub><mo>,</mo><mi>…</mi><mo>,</mo><msub><mi mathvariant="bold-italic">𝒓</mi><mi>N</mi></msub><mo>,</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\psi(\mathbf{r}_1, \mathbf{r}_2, \dots, \mathbf{r}_N, t)</annotation></semantics></math>
+является функцией в
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mi>N</mi></mrow><annotation encoding="application/x-tex">3N</annotation></semantics></math>-мерном
+пространстве конфигураций. Это подчеркивает, что квантовая механика
+описывает систему целиком, а не отдельные «волны» для каждой
+частицы.</li>
+</ul>
+<hr />
+<h2 id="iii-физический-смысл-квантования-энергии-глава-16-6">III.
+Физический смысл квантования энергии (Глава 16-6)</h2>
+<p>Одним из самых значимых достижений уравнения Шрёдингера является
+объяснение дискретных уровней энергии без введения дополнительных
+постулатов.</p>
+<h3 id="анализ-поведения-волновой-функции-ax">Анализ поведения волновой
+функции
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">a(x)</annotation></semantics></math></h3>
+<p>Рассматривается стационарное уравнение:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mi>a</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mi>d</mi><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac><mo>=</mo><mfrac><mrow><mn>2</mn><mi>m</mi></mrow><msup><mi>ℏ</mi><mn>2</mn></msup></mfrac><mo stretchy="false" form="prefix">[</mo><mi>V</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mi>E</mi><mo stretchy="false" form="postfix">]</mo><mi>a</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\frac{d^2a(x)}{dx^2} = \frac{2m}{\hbar^2} [V(x) - E] a(x)</annotation></semantics></math>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Условие</th>
+<th style="text-align: left;">Геометрический вид кривой
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">a(x)</annotation></semantics></math></th>
+<th style="text-align: left;">Физический смысл</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td
+style="text-align: left;"><strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>&gt;</mo><mi>E</mi></mrow><annotation encoding="application/x-tex">V &gt; E</annotation></semantics></math></strong></td>
+<td style="text-align: left;">Выпукла к оси
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>
+(экспоненциальный вид)</td>
+<td style="text-align: left;">Подбарьерное проникновение, область
+запрещена классически.</td>
+</tr>
+<tr>
+<td
+style="text-align: left;"><strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>&lt;</mo><mi>E</mi></mrow><annotation encoding="application/x-tex">V &lt; E</annotation></semantics></math></strong></td>
+<td style="text-align: left;">Вогнута к оси
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>
+(синусоидальный вид)</td>
+<td style="text-align: left;">Область классического движения, наличие
+осцилляций.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="механизм-возникновения-дискретных-уровней">Механизм
+возникновения дискретных уровней</h3>
+<ol type="1">
+<li>Для «связанной» частицы амплитуда за пределами потенциальной ямы
+должна стремиться к нулю.</li>
+<li>Если выбрать произвольную энергию
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>E</mi><mi>a</mi></msub><annotation encoding="application/x-tex">E_a</annotation></semantics></math>,
+решение уравнения может неограниченно расти при
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>→</mo><mi>∞</mi></mrow><annotation encoding="application/x-tex">x \to \infty</annotation></semantics></math>
+(<strong>Фиг. 14.6</strong>).</li>
+<li>Небольшое изменение энергии до
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>E</mi><mi>b</mi></msub><annotation encoding="application/x-tex">E_b</annotation></semantics></math>
+может заставить кривую «переброситься» на другую сторону оси
+(<strong>Фиг. 14.7</strong>).</li>
+<li>Только при строго определенных значениях энергии
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>E</mi><mi>c</mi></msub><annotation encoding="application/x-tex">E_c</annotation></semantics></math>
+решение плавно стремится к нулю на бесконечности (<strong>Фиг.
+14.8</strong>).</li>
+<li><strong>Вывод:</strong> Дискретный спектр — это условие
+существования нормируемого решения (связанного состояния) в
+потенциальной яме.</li>
+</ol>
+<hr />
+<h2 id="iv-ключевые-иллюстрации-и-их-контекст">IV. Ключевые иллюстрации
+и их контекст</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Идентификатор</th>
+<th style="text-align: left;">Описание и физический смысл</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>[SOURCE_IMAGE_1]</strong> (Фиг.
+14.1)</td>
+<td style="text-align: left;">Кривая Гаусса для плотности вероятности
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">P(x)</annotation></semantics></math>.
+Показывает локализацию частицы в пределах
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>σ</mi><annotation encoding="application/x-tex">\sigma</annotation></semantics></math>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>[SOURCE_IMAGE_2]</strong> (Рис.
+14.2)</td>
+<td style="text-align: left;">Процесс формирования
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>δ</mi><annotation encoding="application/x-tex">\delta</annotation></semantics></math>-функции
+через сужающиеся прямоугольники единичной площади.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>[SOURCE_IMAGE_3]</strong> (Рис.
+14.3)</td>
+<td style="text-align: left;">Профиль потенциальной ямы
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">V(x)</annotation></semantics></math>.
+Показывает классические точки поворота
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>x</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">x_1, x_2</annotation></semantics></math>,
+где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>=</mo><mi>E</mi></mrow><annotation encoding="application/x-tex">V=E</annotation></semantics></math>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>[SOURCE_IMAGE_4]</strong> (Рис.
+14.4)</td>
+<td style="text-align: left;">Сравнение кривизны
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">a(x)</annotation></semantics></math>:
+(а) при
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>&gt;</mo><mi>E</mi></mrow><annotation encoding="application/x-tex">V&gt;E</annotation></semantics></math>
+кривая уходит от оси; (б) при
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>&lt;</mo><mi>E</mi></mrow><annotation encoding="application/x-tex">V&lt;E</annotation></semantics></math>
+кривая колеблется вокруг оси.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>[SOURCE_IMAGE_8]</strong> (Фиг.
+14.8)</td>
+<td style="text-align: left;">График волновой функции для «разрешенной»
+энергии
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>E</mi><mi>c</mi></msub><annotation encoding="application/x-tex">E_c</annotation></semantics></math>.
+Только такая функция затухает по обе стороны ямы.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>[SOURCE_IMAGE_9]</strong> (Фиг.
+14.9)</td>
+<td style="text-align: left;">Набор волновых функций для первых пяти
+уровней энергии
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mn>0</mn></msub><mi>…</mi><msub><mi>E</mi><mn>4</mn></msub></mrow><annotation encoding="application/x-tex">E_0 \dots E_4</annotation></semantics></math>).
+Видно, что число пересечений оси (узлов) растет с ростом энергии.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="v-важные-цитаты">V. Важные цитаты</h2>
+<ul>
+<li><strong>О происхождении уравнения:</strong> «Откуда мы его взяли?
+Ниоткуда. Его невозможно вывести из чего-либо, что вам известно. Он
+возник в уме Шрёдингера...» (Контекст: объяснение постулативного
+характера фундаментальных законов).</li>
+<li><strong>О природе волновой функции:</strong> «...волновая функция
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ψ</mi><annotation encoding="application/x-tex">\psi</annotation></semantics></math>
+— это не просто обычная волна в пространстве, а функция многих
+переменных... Полное описание может быть дано правильно только в
+терминах функций координат обеих частиц».</li>
+<li><strong>О значении открытия:</strong> «...великий исторический
+момент, ознаменовавший рождение квантовомеханического описания материи,
+наступил тогда, когда Шредингер впервые записал свое уравнение в 1926
+году».</li>
+</ul>
+<hr />
+<h2 id="vi-практические-выводы-actionable-insights">VI. Практические
+выводы (Actionable Insights)</h2>
+<ol type="1">
+<li><strong>Интуиция кривизны:</strong> Чтобы понять форму волновой
+функции, достаточно смотреть на разность
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>V</mi><mo>−</mo><mi>E</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(V - E)</annotation></semantics></math>.
+Если
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>&gt;</mo><mi>E</mi></mrow><annotation encoding="application/x-tex">V &gt; E</annotation></semantics></math>,
+функция «бежит» от оси; если
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>&lt;</mo><mi>E</mi></mrow><annotation encoding="application/x-tex">V &lt; E</annotation></semantics></math>,
+она «тянется» к оси, создавая колебания.</li>
+<li><strong>Универсальность метода:</strong> Метод предельного перехода
+от дискретной решетки к континууму позволяет выводить сложные волновые
+уравнения из простых моделей взаимодействия соседних узлов.</li>
+<li><strong>Граница дискретности:</strong> Дискретные уровни энергии
+существуют только до тех пор, пока энергия
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math>
+ниже «края» потенциальной ямы. Если
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math>
+выше верха ямы, разрешены любые значения энергии (состояния
+рассеяния).</li>
+<li><strong>Ограничения теории:</strong> Описанное уравнение Шрёдингера
+не учитывает магнитные и релятивистские эффекты; для их описания
+требуется уравнение Дирака.</li>
+</ol>
+    </article>
+  </main>
+</body>
+</html>

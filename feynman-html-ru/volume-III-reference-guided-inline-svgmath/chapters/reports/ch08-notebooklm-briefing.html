@@ -1,0 +1,278 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Глава 8. Гамильтонова матрица: Аналитический отчет - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch08.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1 id="глава-8-гамильтонова-матрица-аналитический-отчет">Глава 8.
+Гамильтонова матрица: Аналитический отчет</h1>
+<p>Этот отчет представляет собой глубокий анализ восьмой главы лекций
+Фейнмана по физике (том III), посвященной математическому аппарату
+квантовой механики — векторам состояний, операторам и гамильтоновой
+матрице. Документ структурирован для обеспечения понимания перехода от
+абстрактных амплитуд к динамическим уравнениям на примере молекулы
+аммиака.</p>
+<h2 id="1-резюме-executive-summary">1. Резюме (Executive Summary)</h2>
+<p>Центральная идея главы заключается в том, что любое
+квантовомеханическое состояние можно рассматривать как вектор в
+абстрактном пространстве, а физические процессы — как преобразования
+этих векторов. Фейнман вводит формализм «бра» и «кет» векторов Дирака,
+проводя прямую аналогию со скалярным произведением в обычной векторной
+алгебре. Ключевым достижением является вывод <strong>динамического
+уравнения квантовой механики</strong>, которое описывает изменение
+амплитуд состояний во времени через <strong>Гамильтонову
+матрицу</strong>
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><annotation encoding="application/x-tex">H_{ij}</annotation></semantics></math>),
+также называемую энергетической матрицей. Практическая ценность этого
+аппарата демонстрируется на системе с двумя состояниями — молекуле
+аммиака, где показано, как возможность перехода между конфигурациями
+приводит к расщеплению энергетических уровней и осцилляциям
+вероятности.</p>
+<hr />
+<h2 id="2-математический-фундамент-амплитуды-и-векторы">2.
+Математический фундамент: Амплитуды и векторы</h2>
+<p>Фейнман подчеркивает тесное подобие между уравнениями квантовой
+механики и формулами векторного анализа.</p>
+<h3 id="аналогия-со-скалярным-произведением">Аналогия со скалярным
+произведением</h3>
+<p>Если
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>χ</mi><annotation encoding="application/x-tex">\chi</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>
+— два состояния, то амплитуда перехода между ними <span
+class="math inline">$\braket{\chi}{\phi}$</span> математически
+эквивалентна скалярному произведению векторов.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Понятие</th>
+<th style="text-align: left;">Векторная алгебра</th>
+<th style="text-align: left;">Квантовая механика</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Компоненты</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mi>x</mi></msub><mo>,</mo><msub><mi>A</mi><mi>y</mi></msub><mo>,</mo><msub><mi>A</mi><mi>z</mi></msub></mrow><annotation encoding="application/x-tex">A_x, A_y, A_z</annotation></semantics></math></td>
+<td style="text-align: left;">Амплитуды <span
+class="math inline">$\braket{i}{\phi}$</span> или
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>C</mi><mi>i</mi></msub><annotation encoding="application/x-tex">C_i</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Базис</strong></td>
+<td style="text-align: left;">Единичные векторы <span
+class="math inline">$\FLPe_i$</span></td>
+<td style="text-align: left;">Базисные состояния <span
+class="math inline">$\ket{i}$</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Ортогональность</strong></td>
+<td style="text-align: left;"><span class="math inline">$\FLPe_i \cdot
+\FLPe_j = \delta_{ij}$</span></td>
+<td style="text-align: left;"><span class="math inline">$\braket{i}{j} =
+\delta_{ij}$</span></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Разложение</strong></td>
+<td style="text-align: left;"><span class="math inline">$\FLPA = \sum
+\FLPe_i (\FLPe_i \cdot \FLPA)$</span></td>
+<td style="text-align: left;"><span class="math inline">$\ket{\phi} =
+\sum \ket{i} \braket{i}{\phi}$</span></td>
+</tr>
+</tbody>
+</table>
+<h3 id="нотация-дирака-bra-ket">Нотация Дирака (Bra-Ket)</h3>
+<p>Фейнман вводит обозначения, которые позволяют «абстрагировать» идею
+состояния от конкретных чисел:</p>
+<ul>
+<li><strong>Кет-вектор</strong> <span
+class="math inline">$\ket{\phi}$</span>: Обозначает само состояние
+(аналог вектора).</li>
+<li><strong>Брэ-вектор</strong> <span
+class="math inline">$\bra{\chi}$</span>: Обозначает «незаконченную»
+амплитуду.</li>
+<li><strong>Оператор</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>A</mi><mo accent="true">̂</mo></mover><annotation encoding="application/x-tex">\hat{A}</annotation></semantics></math>:
+Нечто, что «оперирует» над состоянием, создавая новое состояние (<span
+class="math inline">$\ket{\psi} = \hat{A}\ket{\phi}$</span>). Оператор
+полностью описывается матрицей амплитуд <span
+class="math inline">$\bracket{i}{A}{j}$</span>.</li>
+</ul>
+<hr />
+<h2 id="3-динамика-изменение-состояний-во-времени">3. Динамика:
+Изменение состояний во времени</h2>
+<p>Основной вопрос квантовой механики: если состояние известно в момент
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>t</mi><mn>1</mn></msub><annotation encoding="application/x-tex">t_1</annotation></semantics></math>,
+каково оно будет в момент
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>t</mi><mn>2</mn></msub><annotation encoding="application/x-tex">t_2</annotation></semantics></math>?</p>
+<h3 id="матрица-эволюции-u">Матрица эволюции
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>U</mi><annotation encoding="application/x-tex">U</annotation></semantics></math></h3>
+<p>Процесс ожидания рассматривается как «прибор», описываемый матрицей
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>t</mi><mn>2</mn></msub><mo>,</mo><msub><mi>t</mi><mn>1</mn></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">U(t_2, t_1)</annotation></semantics></math>.
+Амплитуда обнаружить систему в состоянии
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>χ</mi><annotation encoding="application/x-tex">\chi</annotation></semantics></math>
+после задержки: <span class="math display">$$\bracket{\chi}{U(t_2,
+t_1)}{\phi}$$</span></p>
+<p>В предельном случае (от
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mi>∞</mi></mrow><annotation encoding="application/x-tex">-\infty</annotation></semantics></math>
+до
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>+</mi><mi>∞</mi></mrow><annotation encoding="application/x-tex">+\infty</annotation></semantics></math>)
+эта матрица называется
+<strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>S</mi><annotation encoding="application/x-tex">S</annotation></semantics></math>-матрицей</strong>
+(матрицей рассеяния).</p>
+<h3 id="уравнение-шредингера-в-матричной-форме">Уравнение Шредингера в
+матричной форме</h3>
+<p>Для бесконечно малого интервала времени
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">\Delta t</annotation></semantics></math>
+матрица
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>U</mi><annotation encoding="application/x-tex">U</annotation></semantics></math>
+записывается как:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>U</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo>+</mo><mi mathvariant="normal">Δ</mi><mi>t</mi><mo>,</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msub><mi>δ</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>−</mo><mfrac><mi>i</mi><mi>ℏ</mi></mfrac><msub><mi>H</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mi mathvariant="normal">Δ</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">U_{ij}(t+\Delta t, t) = \delta_{ij} - \frac{i}{\hbar}H_{ij}(t)\Delta t</annotation></semantics></math></p>
+<p>Это приводит к фундаментальному закону динамики квантового мира
+(уравнению для амплитуд
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>C</mi><mi>i</mi></msub><annotation encoding="application/x-tex">C_i</annotation></semantics></math>):
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mi>ℏ</mi><mfrac><mrow><mi>d</mi><msub><mi>C</mi><mi>i</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>=</mo><munder><mo>∑</mo><mi>j</mi></munder><msub><mi>H</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><msub><mi>C</mi><mi>j</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">i\hbar \frac{dC_i(t)}{dt} = \sum_j H_{ij}(t)C_j(t)</annotation></semantics></math></p>
+<hr />
+<h2 id="4-гамильтонова-матрица-гамильтониан">4. Гамильтонова матрица
+(Гамильтониан)</h2>
+<p>Коэффициенты
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><annotation encoding="application/x-tex">H_{ij}</annotation></semantics></math>
+называются Гамильтоновой матрицей или <strong>энергетической
+матрицей</strong>.</p>
+<p><strong>Ключевые свойства:</strong></p>
+<ol type="1">
+<li><strong>Эрмитовость:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>H</mi><mrow><mi>i</mi><mi>j</mi></mrow><mo>*</mo></msubsup><mo>=</mo><msub><mi>H</mi><mrow><mi>j</mi><mi>i</mi></mrow></msub></mrow><annotation encoding="application/x-tex">H_{ij}^* = H_{ji}</annotation></semantics></math>.
+Это свойство гарантирует сохранение полной вероятности системы во
+времени.</li>
+<li><strong>Физический смысл:</strong> В системе с одним состоянием
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>11</mn></msub><annotation encoding="application/x-tex">H_{11}</annotation></semantics></math>
+— это просто энергия системы
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math>.
+В сложных системах матрица
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>H</mi><annotation encoding="application/x-tex">H</annotation></semantics></math>
+обобщает понятие энергии, учитывая взаимодействия и переходы.</li>
+<li><strong>Зависимость от условий:</strong> Гамильтониан включает в
+себя все внешние факторы (магнитные, электрические поля и т.д.).</li>
+</ol>
+<hr />
+<h2 id="5-анализ-системы-с-двумя-состояниями-молекула-аммиака">5. Анализ
+системы с двумя состояниями: Молекула аммиака</h2>
+<p>Молекула аммиака
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><msub><mi>H</mi><mn>3</mn></msub></mrow><annotation encoding="application/x-tex">NH_3</annotation></semantics></math>)
+— классический пример использования гамильтониана для решения реальной
+физической задачи.</p>
+<h3 id="геометрия-и-базисные-состояния-source_image_1">Геометрия и
+базисные состояния [SOURCE_IMAGE_1]</h3>
+<p>Молекула имеет форму пирамиды (азот над плоскостью трех водородов).
+Хотя у молекулы бесконечно много состояний (вращение, вибрация), Фейнман
+вводит упрощение, рассматривая только два положения азота:</p>
+<ul>
+<li><strong>Состояние <span
+class="math inline">$\ketsl{\slOne}$</span>:</strong> Азот
+«вверху».</li>
+<li><strong>Состояние <span
+class="math inline">$\ketsl{\slTwo}$</span>:</strong> Азот «внизу».</li>
+</ul>
+<h3 id="энергетический-барьер-и-туннелирование">Энергетический барьер и
+туннелирование</h3>
+<p>Классически азот не может пройти сквозь плоскость водородов без
+огромной энергии. Однако в квантовой механике существует амплитуда
+перехода сквозь барьер.</p>
+<ul>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>11</mn></msub><mo>=</mo><msub><mi>H</mi><mn>22</mn></msub><mo>=</mo><msub><mi>E</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">H_{11} = H_{22} = E_0</annotation></semantics></math>
+(энергия в отсутствие переходов).</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>12</mn></msub><mo>=</mo><msub><mi>H</mi><mn>21</mn></msub><mo>=</mo><mi>−</mi><mi>A</mi></mrow><annotation encoding="application/x-tex">H_{12} = H_{21} = -A</annotation></semantics></math>
+(амплитуда «перескока» или туннелирования).</li>
+</ul>
+<h3 id="расщепление-уровней">Расщепление уровней</h3>
+<p>Решение системы уравнений показывает, что вместо одного уровня
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>E</mi><mn>0</mn></msub><annotation encoding="application/x-tex">E_0</annotation></semantics></math>
+возникают два стационарных состояния с разными энергиями:</p>
+<ol type="1">
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>=</mo><msub><mi>E</mi><mn>0</mn></msub><mo>−</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">E = E_0 - A</annotation></semantics></math>
+(амплитуды
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>C</mi><mn>1</mn></msub><mo>=</mo><msub><mi>C</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">C_1 = C_2</annotation></semantics></math>,
+симметричное состояние).</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>=</mo><msub><mi>E</mi><mn>0</mn></msub><mo>+</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">E = E_0 + A</annotation></semantics></math>
+(амплитуды
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>C</mi><mn>1</mn></msub><mo>=</mo><mi>−</mi><msub><mi>C</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">C_1 = -C_2</annotation></semantics></math>,
+антисимметричное состояние).</li>
+</ol>
+<h3 id="осцилляции-вероятности-source_image_2">Осцилляции вероятности
+[SOURCE_IMAGE_2]</h3>
+<p>Если в момент
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">t=0</annotation></semantics></math>
+молекула находилась в состоянии <span
+class="math inline">$\ketsl{\slOne}$</span>, вероятность обнаружить её в
+состоянии <span class="math inline">$\ketsl{\slTwo}$</span> в момент
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math>
+составляет: <span class="math display">$$P_2(t) = \abs{C_2(t)}^2 =
+\sin^2 \frac{At}{\hbar}$$</span></p>
+<p>Вероятность «переливается» туда и обратно между двумя состояниями.
+Фейнман сравнивает это с <strong>двумя связанными маятниками</strong>,
+где энергия переходит от одного к другому со скоростью, зависящей от
+связи (в данном случае — от величины
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>).</p>
+<hr />
+<h2 id="6-важные-цитаты-и-их-контекст">6. Важные цитаты и их
+контекст</h2>
+<blockquote>
+<p><strong>«Вот он каков — великий закон квантовой механики! <span
+class="math inline">$| = \sum_i \ket{i}\bra{i}$</span>»</strong>
+<em>Контекст:</em> Описание полноты набора базисных состояний. Этот
+закон утверждает, что любое состояние можно разложить по базису.</p>
+</blockquote>
+<blockquote>
+<p><strong>«Знай свой гамильтониан!»</strong> <em>Контекст:</em> Фейнман
+указывает, что главная трудность физика — найти правильные коэффициенты
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><annotation encoding="application/x-tex">H_{ij}</annotation></semantics></math>
+для конкретной физической ситуации (поля, частицы).</p>
+</blockquote>
+<blockquote>
+<p><strong>«В квантовой механике разрешается быстро проскакивать через
+энергетически нелегальную область».</strong> <em>Контекст:</em>
+Объяснение способности атома азота переходить из верхнего в нижнее
+положение в молекуле аммиака, несмотря на наличие энергетического
+барьера.</p>
+</blockquote>
+<hr />
+<h2 id="7-основные-выводы-и-инсайты">7. Основные выводы и инсайты</h2>
+<ul>
+<li><strong>Универсальность представления:</strong> Любая физическая
+система (от электрона до Вселенной) описывается набором базисных
+состояний и матрицей взаимодействий.</li>
+<li><strong>Проблема фундаментальности:</strong> Одной из главных задач
+науки является поиск «правильного» представления базисных состояний.
+Фейнман отмечает, что мы не знаем, являются ли электроны или протоны
+фундаментально простыми или имеют внутренние «колесики».</li>
+<li><strong>Приближения:</strong> Физика часто использует приближения,
+отсекая высокоэнергетические состояния (например, пренебрегая
+возбуждением ядер в химии), что позволяет сводить сложные системы к
+простым (как в случае с двумя состояниями аммиака).</li>
+<li><strong>Квантовые биения:</strong> Эффект расщепления уровней в
+аммиаке — это чисто квантовомеханический феномен, имеющий
+фундаментальное практическое значение (основа работы мазеров и атомных
+часов, на что намекает автор).</li>
+</ul>
+    </article>
+  </main>
+</body>
+</html>

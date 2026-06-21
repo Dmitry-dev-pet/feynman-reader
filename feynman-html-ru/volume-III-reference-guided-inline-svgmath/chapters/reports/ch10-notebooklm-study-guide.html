@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Учебное руководство: Другие системы с двумя состояниями (Глава 10) - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch10.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1
+id="учебное-руководство-другие-системы-с-двумя-состояниями-глава-10">Учебное
+руководство: Другие системы с двумя состояниями (Глава 10)</h1>
+<p>Данное руководство составлено на основе материалов 10-й главы лекций
+Фейнмана по физике (том III). В ней рассматриваются физические и
+химические системы, которые можно описать как системы с двумя
+состояниями, от молекулярных связей до ядерных сил и спина
+электрона.</p>
+<hr />
+<h2 id="i-ключевые-понятия">I. Ключевые понятия</h2>
+<h3 id="1-молекулярный-ион-водорода-h_2">1. Молекулярный ион водорода
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msubsup><mi>H</mi><mn>2</mn><mo>+</mo></msubsup><annotation encoding="application/x-tex">H_2^+</annotation></semantics></math>)</h3>
+<ul>
+<li><strong>Система:</strong> Два протона и один электрон.</li>
+<li><strong>Базисные состояния:</strong> Состояние
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mn>1</mn><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|1\rangle</annotation></semantics></math>
+(электрон у первого протона) и состояние
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mn>2</mn><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|2\rangle</annotation></semantics></math>
+(электрон у второго протона).</li>
+<li><strong>Механизм связи:</strong> Квантовомеханическое «просачивание»
+электрона сквозь барьер между протонами создает амплитуду перехода
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>).
+Это приводит к расщеплению уровней энергии на
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mn>0</mn></msub><mo>+</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">E_0 + A</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mn>0</mn></msub><mo>−</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">E_0 - A</annotation></semantics></math>.</li>
+<li><strong>Устойчивость:</strong> Состояние
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>I</mi><mi>I</mi><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><mfrac><mn>1</mn><msqrt><mn>2</mn></msqrt></mfrac><mo stretchy="false" form="prefix">(</mo><mo stretchy="false" form="prefix">|</mo><mn>1</mn><mo stretchy="false" form="postfix">⟩</mo><mo>+</mo><mo stretchy="false" form="prefix">|</mo><mn>2</mn><mo stretchy="false" form="postfix">⟩</mo><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">|II\rangle = \frac{1}{\sqrt{2}}(|1\rangle + |2\rangle)</annotation></semantics></math>
+обладает минимальной энергией, что обеспечивает силу притяжения,
+удерживающую протоны вместе. На очень малых расстояниях вступает в силу
+электростатическое отталкивание протонов.</li>
+</ul>
+<h3 id="2-ядерные-силы-и-потенциал-юкавы">2. Ядерные силы и потенциал
+Юкавы</h3>
+<ul>
+<li><strong>Гипотеза Юкавы:</strong> Силы между нуклонами (протонами и
+нейтронами) возникают из-за виртуального обмена частицами — мезонами
+(пионами).</li>
+<li><strong>Амплитуда обмена:</strong> Для частицы с массой
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math>
+амплитуда обмена
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+на больших расстояниях
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>R</mi><annotation encoding="application/x-tex">R</annotation></semantics></math>
+пропорциональна
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><msup><mi>e</mi><mrow><mi>−</mi><mo stretchy="false" form="prefix">(</mo><mi>m</mi><mi>c</mi><mi>/</mi><mi>ℏ</mi><mo stretchy="false" form="postfix">)</mo><mi>R</mi></mrow></msup><mi>R</mi></mfrac><annotation encoding="application/x-tex">\frac{e^{-(mc/\hbar)R}}{R}</annotation></semantics></math>.</li>
+<li><strong>Сходство с электромагнетизмом:</strong> Кулоновское
+взаимодействие можно рассматривать как обмен виртуальными фотонами с
+массой покоя равной нулю, что дает зависимость энергии
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mi>R</mi></mrow><annotation encoding="application/x-tex">1/R</annotation></semantics></math>.</li>
+</ul>
+<h3 id="3-нейтральная-молекула-водорода-h_2">3. Нейтральная молекула
+водорода
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>2</mn></msub><annotation encoding="application/x-tex">H_2</annotation></semantics></math>)</h3>
+<ul>
+<li><strong>Система:</strong> Два протона и два электрона.</li>
+<li><strong>Роль спина:</strong> Согласно принципу запрета Паули,
+устойчивое связанное состояние молекулы возможно только при
+<strong>антипараллельных</strong> спинах электронов. Если спины
+параллельны, система оказывается в состоянии с более высокой энергией, и
+атомы отталкиваются.</li>
+<li><strong>Химическая связь:</strong> Большинство валентных связей
+являются двухэлектронными (ковалентными), где пара электронов с
+противоположными спинами «обменивается» местами между атомами.</li>
+</ul>
+<h3 id="4-резонанс-в-органических-молекулах-бензол">4. Резонанс в
+органических молекулах (Бензол)</h3>
+<ul>
+<li><strong>Загадка бензола:</strong> Реальная энергия молекулы ниже,
+чем предсказывает классическая теория двойных связей. Также не
+существует двух разных форм орто-дибромбензола.</li>
+<li><strong>Решение:</strong> Бензол — это система с двумя состояниями,
+где электроны постоянно «переключают» конфигурацию связей. Истинное
+основное состояние — это суперпозиция двух классических структур.</li>
+</ul>
+<h3 id="5-спин-12-в-магнитном-поле">5. Спин 1/2 в магнитном поле</h3>
+<ul>
+<li><strong>Гамильтониан:</strong> Матрица гамильтониана для частицы со
+спином 1/2 в произвольном магнитном поле
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+имеет вид:
+<ul>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>11</mn></msub><mo>=</mo><mi>−</mi><mi>μ</mi><msub><mi>B</mi><mi>z</mi></msub></mrow><annotation encoding="application/x-tex">H_{11} = -\mu B_z</annotation></semantics></math></li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>22</mn></msub><mo>=</mo><mi>+</mi><mi>μ</mi><msub><mi>B</mi><mi>z</mi></msub></mrow><annotation encoding="application/x-tex">H_{22} = +\mu B_z</annotation></semantics></math></li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>12</mn></msub><mo>=</mo><mi>−</mi><mi>μ</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>B</mi><mi>x</mi></msub><mo>−</mo><mi>i</mi><msub><mi>B</mi><mi>y</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">H_{12} = -\mu(B_x - iB_y)</annotation></semantics></math></li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>21</mn></msub><mo>=</mo><mi>−</mi><mi>μ</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>B</mi><mi>x</mi></msub><mo>+</mo><mi>i</mi><msub><mi>B</mi><mi>y</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">H_{21} = -\mu(B_x + iB_y)</annotation></semantics></math></li>
+</ul></li>
+<li><strong>Универсальность:</strong> Любую задачу о системе с двумя
+состояниями можно математически свести к задаче об электроне в магнитном
+поле.</li>
+</ul>
+<hr />
+<h2 id="ii-проверочные-вопросы-краткие-ответы">II. Проверочные вопросы
+(Краткие ответы)</h2>
+<ol type="1">
+<li><strong>Почему энергия состояния
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>I</mi><mi>I</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|II\rangle</annotation></semantics></math>
+в ионе
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msubsup><mi>H</mi><mn>2</mn><mo>+</mo></msubsup><annotation encoding="application/x-tex">H_2^+</annotation></semantics></math>
+ниже, чем энергия изолированного атома водорода?</strong>
+<ul>
+<li><em>Ответ:</em> Из-за принципа неопределенности: когда электрону
+доступно пространство у двух протонов, он «размазывается» сильнее, что
+снижает его кинетическую энергию без существенного повышения
+потенциальной.</li>
+</ul></li>
+<li><strong>Какое условие необходимо для образования стабильной молекулы
+водорода
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>2</mn></msub><annotation encoding="application/x-tex">H_2</annotation></semantics></math>
+относительно спинов электронов?</strong>
+<ul>
+<li><em>Ответ:</em> Спины электронов должны быть противоположны
+(антипараллельны).</li>
+</ul></li>
+<li><strong>Что такое «виртуальный обмен» частицей?</strong>
+<ul>
+<li><em>Ответ:</em> Процесс, при котором частица переходит из одного
+состояния в другое через область, где её классическая кинетическая
+энергия была бы отрицательной (мнимый импульс).</li>
+</ul></li>
+<li><strong>Какова причина насыщенного цвета многих красителей
+(например, фуксина)?</strong>
+<ul>
+<li><em>Ответ:</em> Наличие двух симметричных состояний с большой
+амплитудой переброса электронов, что создает разность энергий,
+соответствующую фотонам видимого света, и сильный сдвиг центра
+заряда.</li>
+</ul></li>
+<li><strong>Как меняется направление спина электрона в постоянном
+магнитном поле?</strong>
+<ul>
+<li><em>Ответ:</em> Направление спина прецессирует вокруг оси магнитного
+поля с угловой скоростью
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ω</mi><mo>=</mo><mn>2</mn><mi>μ</mi><mi>B</mi><mi>/</mi><mi>ℏ</mi></mrow><annotation encoding="application/x-tex">\omega = 2\mu B / \hbar</annotation></semantics></math>.</li>
+</ul></li>
+</ol>
+<hr />
+<h2 id="iii-темы-для-углубленного-изучения-эссе">III. Темы для
+углубленного изучения (Эссе)</h2>
+<ol type="1">
+<li><strong>Принцип запрета Паули как движущая сила химической
+связи.</strong>
+<ul>
+<li>Проанализируйте, как требование антисимметричности волновой функции
+фермионов (электронов) определяет возможность образования устойчивой
+молекулы водорода и структуру ковалентных связей.</li>
+</ul></li>
+<li><strong>Геометрическая аналогия систем с двумя состояниями.</strong>
+<ul>
+<li>Объясните, почему любая двухуровневая система (аммиак, бензол,
+красители) может быть описана уравнениями прецессии спина в магнитном
+поле. В чем ценность такой универсальности для физика?</li>
+</ul></li>
+<li><strong>От микромира к макросвойствам: квантовая природа
+красителей.</strong>
+<ul>
+<li>На примере молекулы фуксина или бензола покажите, как амплитуда
+перескока электронов
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>)
+влияет на макроскопические характеристики вещества (цвет, спектр
+поглощения).</li>
+</ul></li>
+</ol>
+<hr />
+<h2 id="iv-типичные-ошибки-при-изучении-темы">IV. Типичные ошибки при
+изучении темы</h2>
+<ul>
+<li><strong>Ошибка:</strong> Считать, что в ионе
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msubsup><mi>H</mi><mn>2</mn><mo>+</mo></msubsup><annotation encoding="application/x-tex">H_2^+</annotation></semantics></math>
+электрон физически находится «посередине» между протонами.
+<ul>
+<li><em>Разъяснение:</em> Электрон обладает <em>амплитудой</em>
+нахождения у каждого протона. Состояние с наинизшей энергией — это
+суперпозиция, а не классическое зависание в центре.</li>
+</ul></li>
+<li><strong>Ошибка:</strong> Путать «одноэлектронную» и
+«двухэлектронную» связи.
+<ul>
+<li><em>Разъяснение:</em> Одноэлектронная связь
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msubsup><mi>H</mi><mn>2</mn><mo>+</mo></msubsup><annotation encoding="application/x-tex">H_2^+</annotation></semantics></math>)
+встречается редко; большинство химических связей в природе
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>2</mn></msub><annotation encoding="application/x-tex">H_2</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mi>a</mi><mi>C</mi><mi>l</mi></mrow><annotation encoding="application/x-tex">NaCl</annotation></semantics></math>,
+органика) — двухэлектронные.</li>
+</ul></li>
+<li><strong>Ошибка:</strong> Полагать, что в бензоле существуют две
+разные формы молекулы, которые быстро превращаются друг в друга.
+<ul>
+<li><em>Разъяснение:</em> Существует только одно стационарное состояние
+— квантовая суперпозиция двух структур. Это не смесь двух типов молекул,
+а единое состояние с наинизшей энергией.</li>
+</ul></li>
+</ul>
+<hr />
+<h2 id="v-краткий-глоссарий">V. Краткий глоссарий</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Термин</th>
+<th style="text-align: left;">Определение из контекста</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Амплитуда переброса
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>)</strong></td>
+<td style="text-align: left;">Мера вероятности квантового перехода
+системы из одного базисного состояния в другое; определяет величину
+расщепления уровней энергии.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Базисные состояния</strong></td>
+<td style="text-align: left;">Набор независимых состояний системы
+(например, $</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Виртуальный пион</strong></td>
+<td style="text-align: left;">Частица-посредник, обмениваясь которой,
+нуклоны взаимодействуют друг с другом, создавая ядерные силы.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Ковалентная связь</strong></td>
+<td style="text-align: left;">Химическая связь, образующаяся за счет
+обмена парой электронов с противоположными спинами между атомами.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Потенциал Юкавы</strong></td>
+<td style="text-align: left;">Математическое описание зависимости
+энергии взаимодействия от расстояния
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>e</mi><mrow><mi>−</mi><mi>α</mi><mi>R</mi></mrow></msup><mi>/</mi><mi>R</mi></mrow><annotation encoding="application/x-tex">e^{-\alpha R}/R</annotation></semantics></math>),
+характерное для обмена частицами с отличной от нуля массой покоя.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Прецессия спина</strong></td>
+<td style="text-align: left;">Вращение оси спина вокруг направления
+магнитного поля.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Резонанс (в химии)</strong></td>
+<td style="text-align: left;">Явление, при котором истинное состояние
+молекулы является суперпозицией нескольких классических структур
+(например, в бензоле).</td>
+</tr>
+</tbody>
+</table>
+    </article>
+  </main>
+</body>
+</html>

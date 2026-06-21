@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Глава 16. Зависимость амплитуд от места: Учебное пособие - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch16.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1 id="глава-16-зависимость-амплитуд-от-места-учебное-пособие">Глава
+16. Зависимость амплитуд от места: Учебное пособие</h1>
+<p>Данное пособие синтезирует ключевые положения главы 16 «Фейнмановских
+лекций по физике» (том III), посвященной переходу от дискретных
+квантовых систем к непрерывному пространственному описанию, волновым
+функциям и фундаментальному уравнению Шрёдингера.</p>
+<hr />
+<h2 id="i-ключевые-понятия-и-тезисы">I. Ключевые понятия и тезисы</h2>
+<h3 id="1-переход-от-решетки-к-континууму">1. Переход от решетки к
+континууму</h3>
+<p>Квантовомеханическое описание частицы в пустом пространстве можно
+представить как предельный случай движения электрона по одномерной
+цепочке атомов.</p>
+<ul>
+<li><strong>Дискретный случай:</strong> Амплитуды вероятности связаны
+гамильтоновым уравнением, описывающим «прыжки» между соседними
+атомами.</li>
+<li><strong>Непрерывный предел:</strong> Когда расстояние между узлами
+решетки
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mo>→</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">b \to 0</annotation></semantics></math>,
+а произведение
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msup><mi>b</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">Ab^2</annotation></semantics></math>
+(где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+— амплитуда перехода) остается постоянным, дискретное уравнение
+переходит во вторую производную по координате.</li>
+<li><strong>Эффективная масса:</strong> Параметры решетки определяют
+эффективную массу частицы:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>m</mi><mtext mathvariant="normal">eff</mtext></msub><mo>=</mo><mfrac><msup><mi>ℏ</mi><mn>2</mn></msup><mrow><mn>2</mn><mi>A</mi><msup><mi>b</mi><mn>2</mn></msup></mrow></mfrac></mrow><annotation encoding="application/x-tex">m_{\text{eff}} = \frac{\hbar^2}{2Ab^2}</annotation></semantics></math>.
+В свободном пространстве она заменяется на массу покоя электрона
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math>.</li>
+</ul>
+<h3 id="2-волновая-функция-и-плотность-вероятности">2. Волновая функция
+и плотность вероятности</h3>
+<p>Для описания частицы на континууме используется бесконечное множество
+базисных состояний
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>x</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|x\rangle</annotation></semantics></math>.</p>
+<ul>
+<li><strong>Определение:</strong> Амплитуда
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⟨</mo><mi>x</mi><mo stretchy="false" form="prefix">|</mo><mi>ψ</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">\langle x | \psi \rangle</annotation></semantics></math>
+обозначается как
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ψ</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\psi(x)</annotation></semantics></math>
+и называется <strong>волновой функцией</strong>.</li>
+<li><strong>Плотность вероятности:</strong> Вероятность обнаружить
+частицу точно в точке равна нулю. Физический смысл имеет вероятность
+обнаружения в узком интервале
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">\Delta x</annotation></semantics></math>:
+<span class="math display">$$\prob(x, \Delta x) = |\psi(x)|^2 \Delta
+x$$</span></li>
+<li><strong>Нормировка:</strong> Сумма вероятностей по всем возможным
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>
+должна быть равна единице, что выражается через интеграл:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mo>∫</mo><mrow><mi>−</mi><mi>∞</mi></mrow><mrow><mi>+</mi><mi>∞</mi></mrow></msubsup><mo stretchy="false" form="prefix">|</mo><mi>ψ</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><msup><mo stretchy="false" form="prefix">|</mo><mn>2</mn></msup><mi>d</mi><mi>x</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\int_{-\infty}^{+\infty} |\psi(x)|^2 dx = 1</annotation></semantics></math>.</li>
+</ul>
+<h3
+id="3-состояния-с-определенным-импульсом-и-принцип-неопределенности">3.
+Состояния с определенным импульсом и принцип неопределенности</h3>
+<p>Между координатным и импульсным представлениями существует связь
+через преобразование Фурье.</p>
+<ul>
+<li><strong>Связь амплитуд:</strong> Амплитуда нахождения частицы с
+импульсом
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math>
+в состоянии
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>ψ</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|\psi\rangle</annotation></semantics></math>
+определяется как:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⟨</mo><mi>p</mi><mo stretchy="false" form="prefix">|</mo><mi>ψ</mi><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><msubsup><mo>∫</mo><mrow><mi>−</mi><mi>∞</mi></mrow><mrow><mi>+</mi><mi>∞</mi></mrow></msubsup><msup><mi>e</mi><mrow><mi>−</mi><mi>i</mi><mi>p</mi><mi>x</mi><mi>/</mi><mi>ℏ</mi></mrow></msup><mi>ψ</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mi>d</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">\langle p | \psi \rangle = \int_{-\infty}^{+\infty} e^{-ipx/\hbar} \psi(x) dx</annotation></semantics></math></li>
+<li><strong>Гауссово распределение:</strong> Если распределение по
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>
+имеет вид кривой Гаусса с полушириной
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>σ</mi><annotation encoding="application/x-tex">\sigma</annotation></semantics></math>,
+то распределение по
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math>
+также будет гауссовым с полушириной
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>η</mi><mo>=</mo><mfrac><mi>ℏ</mi><mrow><mn>2</mn><mi>σ</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\eta = \frac{\hbar}{2\sigma}</annotation></semantics></math>.</li>
+<li><strong>Принцип Гейзенберга:</strong> Произведение неопределенностей
+координаты и импульса всегда ограничено снизу:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>p</mi><mo>⋅</mo><mi mathvariant="normal">Δ</mi><mi>x</mi><mo>≥</mo><mfrac><mi>ℏ</mi><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">\Delta p \cdot \Delta x \geq \frac{\hbar}{2}</annotation></semantics></math></li>
+</ul>
+<h3 id="4-дельта-функция-дирака-delta">4. Дельта-функция Дирака
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>δ</mi><annotation encoding="application/x-tex">\delta</annotation></semantics></math>)</h3>
+<p>В континууме условие ортогональности базисных состояний
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⟨</mo><mi>i</mi><mo stretchy="false" form="prefix">|</mo><mi>j</mi><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><msub><mi>δ</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\langle i | j \rangle = \delta_{ij}</annotation></semantics></math>
+заменяется на использование дельта-функции:</p>
+<ul>
+<li><strong>Свойство:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>δ</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><msup><mi>x</mi><mo>′</mo></msup><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\delta(x - x&#39;) = 0</annotation></semantics></math>
+при
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>≠</mo><msup><mi>x</mi><mo>′</mo></msup></mrow><annotation encoding="application/x-tex">x \neq x&#39;</annotation></semantics></math>,
+но интеграл
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∫</mo><mi>δ</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><msup><mi>x</mi><mo>′</mo></msup><mo stretchy="false" form="postfix">)</mo><mi>ψ</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mi>d</mi><mi>x</mi><mo>=</mo><mi>ψ</mi><mo stretchy="false" form="prefix">(</mo><msup><mi>x</mi><mo>′</mo></msup><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\int \delta(x - x&#39;) \psi(x) dx = \psi(x&#39;)</annotation></semantics></math>.</li>
+<li><strong>Физический смысл:</strong> Это математическая абстракция
+функции, которая везде равна нулю, кроме одной точки, где она бесконечна
+настолько, что площадь под ней равна единице.</li>
+</ul>
+<h3 id="5-уравнение-шрёдингера">5. Уравнение Шрёдингера</h3>
+<p>Фундаментальное уравнение, описывающее изменение волновой функции во
+времени под влиянием потенциала
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">V(x, y, z)</annotation></semantics></math>.</p>
+<ul>
+<li><strong>Вид уравнения (3D):</strong>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mi>ℏ</mi><mfrac><mrow><mi>∂</mi><mi>ψ</mi></mrow><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mi>−</mi><mfrac><msup><mi>ℏ</mi><mn>2</mn></msup><mrow><mn>2</mn><mi>m</mi></mrow></mfrac><msup><mi>∇</mi><mn>2</mn></msup><mi>ψ</mi><mo>+</mo><mi>V</mi><mi>ψ</mi></mrow><annotation encoding="application/x-tex">i\hbar \frac{\partial \psi}{\partial t} = -\frac{\hbar^2}{2m} \nabla^2 \psi + V \psi</annotation></semantics></math></li>
+<li><strong>Значение:</strong> Открытое в 1926 году, оно объясняет
+структуру атомов, химические связи и устойчивость материи (при энергиях
+ниже релятивистских и без учета магнитных эффектов).</li>
+<li><strong>Многочастичные системы:</strong> Для
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>N</mi><annotation encoding="application/x-tex">N</annotation></semantics></math>
+частиц волновая функция является функцией
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mi>N</mi></mrow><annotation encoding="application/x-tex">3N</annotation></semantics></math>
+переменных. Это не «волны в пространстве», а единая функция в
+многомерном конфигурационном пространстве.</li>
+</ul>
+<hr />
+<h2 id="ii-проверочные-вопросы-краткие-ответы">II. Проверочные вопросы
+(краткие ответы)</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Вопрос</th>
+<th style="text-align: left;">Краткий ответ</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Что заменяет знак суммы при
+переходе к континууму?</strong></td>
+<td style="text-align: left;">Интегрирование по координате
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>.</td>
+</tr>
+<tr>
+<td style="text-align: left;">**Как интерпретируется квадрат модуля
+волновой функции $</td>
+<td style="text-align: left;">\psi(x)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Какая форма распределения дает
+минимально возможное значение
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>p</mi><mi mathvariant="normal">Δ</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">\Delta p \Delta x</annotation></semantics></math>?</strong></td>
+<td style="text-align: left;">Распределение Гаусса (кривая Гаусса).</td>
+</tr>
+<tr>
+<td style="text-align: left;">**Чему равно значение $\langle x'</td>
+<td style="text-align: left;">x \rangle$?**</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Какие факторы не учитывает базовое
+уравнение Шрёдингера?</strong></td>
+<td style="text-align: left;">Магнитные эффекты и релятивистские
+поправки (требуется уравнение Дирака).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Почему для двух частиц нельзя
+использовать две отдельные 3D-волны?</strong></td>
+<td style="text-align: left;">Потому что частицы могут
+взаимодействовать; общее состояние описывается одной 6-мерной функцией
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ψ</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>r</mi><mn>1</mn></msub><mo>,</mo><msub><mi>r</mi><mn>2</mn></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\psi(r_1, r_2)</annotation></semantics></math>.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="iii-типичные-ошибки-при-изучении">III. Типичные ошибки при
+изучении</h2>
+<ol type="1">
+<li><strong>Отождествление волновой функции с физической
+волной:</strong> Ошибочно думать, что
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ψ</mi><annotation encoding="application/x-tex">\psi</annotation></semantics></math>
+— это колебание какой-то среды в 3D-пространстве. Это комплексная
+амплитуда вероятности, которая для системы многих частиц становится
+многомерной.</li>
+<li><strong>Попытка «вывести» уравнение Шрёдингера:</strong> Это
+уравнение невозможно вывести логически из классической физики. Оно было
+постулировано Шрёдингером как блестящая догадка, подтвержденная
+экспериментом.</li>
+<li><strong>Неверная интерпретация
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>p</mi><mi mathvariant="normal">Δ</mi><mi>x</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\Delta p \Delta x = 0</annotation></semantics></math>:</strong>
+Иногда полагают, что можно точно измерить оба параметра одновременно.
+Принцип Гейзенберга утверждает обратное: сужение распределения в одном
+пространстве (координатном) неизбежно ведет к расширению в другом
+(импульсном).</li>
+<li><strong>Забывание мнимой единицы
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math>):</strong>
+В уравнении Шрёдингера наличие
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math>
+принципиально отличает его от уравнения классической диффузии. Квантовая
+«диффузия амплитуды» порождает комплексные волны, а не простое
+затухание.</li>
+</ol>
+<hr />
+<h2 id="iv-темы-для-глубокого-разбора-эссе">IV. Темы для глубокого
+разбора (эссе)</h2>
+<ol type="1">
+<li><strong>Дискретность против непрерывности:</strong> Как переход к
+бесконечному числу базисных состояний меняет математический аппарат
+квантовой механики (от матриц к дифференциальным операторам).</li>
+<li><strong>Природа квантования энергии:</strong> Объясните графически
+(используя понятия вогнутости и выпуклости функции
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">a(x)</annotation></semantics></math>
+к оси), почему частица в потенциальной яме может обладать только
+дискретным набором энергий.</li>
+<li><strong>Историческое значение 1926 года:</strong> Роль уравнения
+Шрёдингера в разрешении загадки устойчивости атома Бора и создании
+количественной химии.</li>
+</ol>
+<hr />
+<h2 id="v-краткий-глоссарий">V. Краткий глоссарий</h2>
+<ul>
+<li><strong>Амплитуда вероятности (Волновая функция
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ψ</mi><annotation encoding="application/x-tex">\psi</annotation></semantics></math>):</strong>
+Комплексное число, квадрат модуля которого определяет вероятность
+состояния.</li>
+<li><strong>Гамильтониан
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>H</mi><annotation encoding="application/x-tex">H</annotation></semantics></math>):</strong>
+Оператор полной энергии системы, определяющий ее эволюцию во
+времени.</li>
+<li><strong>Дельта-функция
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>δ</mi><annotation encoding="application/x-tex">\delta</annotation></semantics></math>):</strong>
+Математический инструмент для описания точечных объектов и нормировки
+состояний в континууме.</li>
+<li><strong>Дискретный энергетический спектр:</strong> Набор
+фиксированных значений энергии, разрешенных для частицы в связанном
+состоянии (в «яме»).</li>
+<li><strong>Потенциальная яма:</strong> Область пространства, где
+потенциальная энергия частицы
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">V(x)</annotation></semantics></math>
+меньше её полной энергии
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math>,
+что «запирает» частицу.</li>
+<li><strong>Рассеяние:</strong> Состояние частицы с энергией выше
+потенциального барьера, при котором энергетический спектр
+непрерывен.</li>
+<li><strong>Стационарное состояние:</strong> Состояние с определенной
+энергией, где временная зависимость выражена множителем
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>−</mi><mi>i</mi><mi>E</mi><mi>t</mi><mi>/</mi><mi>ℏ</mi></mrow></msup><annotation encoding="application/x-tex">e^{-iEt/\hbar}</annotation></semantics></math>.</li>
+</ul>
+    </article>
+  </main>
+</body>
+</html>
