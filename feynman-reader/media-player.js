@@ -3,10 +3,35 @@
     cards: [...document.querySelectorAll(".study-youtube-card")],
     reportCards: [...document.querySelectorAll(".study-card[href*='notebooklm-briefing.html'], .study-card[href*='notebooklm-study-guide.html']")],
   };
-  if (!dom.cards.length && !dom.reportCards.length) return;
+  let manifestChapter = null;
 
   const MEDIA_INTENT_KEY = "flp-reader-media-intent";
   const isRu = () => (document.documentElement.lang || "").toLowerCase().startsWith("ru");
+
+  const ReaderManifest = {
+    url() {
+      const scriptUrl = document.currentScript?.src || document.querySelector('script[src*="media-player.js"]')?.src || "";
+      return scriptUrl ? new URL("media-manifest.json", scriptUrl).href : "";
+    },
+    chapterKey() {
+      const match = window.location.pathname.match(/feynman-html-(ru|en)\/volume-([IVX]+)-[^/]+\/chapters\/ch(\d+)\.html$/);
+      if (!match) return "";
+      return `${match[1]}-${match[2]}/ch${match[3].padStart(2, "0")}`;
+    },
+    async load() {
+      const url = this.url();
+      const key = this.chapterKey();
+      if (!url || !key || window.location.protocol === "file:") return null;
+      try {
+        const response = await fetch(url, { cache: "force-cache" });
+        if (!response.ok) return null;
+        const manifest = await response.json();
+        return manifest?.chapters?.[key] || null;
+      } catch (_) {
+        return null;
+      }
+    },
+  };
 
   const MediaIntent = {
     read() {
@@ -117,7 +142,14 @@
   };
 
   const StudyCards = {
+    manifestItems() {
+      return (manifestChapter?.media || []).map((entry) => ({ source: "manifest", entry }));
+    },
+    isManifestItem(item) {
+      return item?.source === "manifest";
+    },
     isAudio(card) {
+      if (this.isManifestItem(card)) return card.entry.type === "audio";
       const title = card.querySelector("strong")?.textContent || "";
       const text = [
         title,
@@ -127,6 +159,7 @@
       return /аудио|audio/i.test(text) && !/видео|video/i.test(title);
     },
     type(card) {
+      if (this.isManifestItem(card)) return card.entry.type;
       return this.isAudio(card) ? "audio" : "video";
     },
     prepare() {
@@ -149,6 +182,7 @@
       });
     },
     open(card, type = this.type(card)) {
+      if (this.isManifestItem(card)) return this.openManifest(card.entry, type);
       const iframe = card.querySelector("iframe");
       const src = iframe?.dataset.src || iframe?.src || "";
       if (!src) return false;
@@ -161,13 +195,38 @@
       card.classList.add("is-playing");
       return true;
     },
+    openManifest(entry, type = entry.type) {
+      const embed = new URL(`https://www.youtube-nocookie.com/embed/${entry.youtube_id}`);
+      embed.searchParams.set("rel", "0");
+      embed.searchParams.set("modestbranding", "1");
+      embed.searchParams.set("playsinline", "1");
+      embed.searchParams.set("autoplay", "1");
+      if (entry.start) embed.searchParams.set("start", String(entry.start));
+      FloatingPlayer.open({
+        embedUrl: embed.toString(),
+        label: entry.label || entry.title || (isRu() ? (type === "audio" ? "Аудиообзор" : "Видеообзор") : (type === "audio" ? "Audio" : "Video")),
+        href: entry.watch_url || `https://youtu.be/${entry.youtube_id}${entry.start ? `?t=${entry.start}` : ""}`,
+        type,
+      });
+      document.querySelectorAll(".study-youtube-card.is-playing").forEach((item) => item.classList.remove("is-playing"));
+      return true;
+    },
     first(type) {
+      const manifestItem = this.manifestItems().find((item) => item.entry.type === type);
+      if (manifestItem) return manifestItem;
       return dom.cards.find((card) => this.type(card) === type);
     },
   };
 
   const StudyReports = {
     links() {
+      if (manifestChapter?.reports) {
+        const reports = manifestChapter.reports;
+        return [
+          reports.overview ? { type: "overview", href: new URL(reports.overview, window.location.href).href } : null,
+          reports.guide ? { type: "guide", href: new URL(reports.guide, window.location.href).href } : null,
+        ].filter(Boolean);
+      }
       const overview = dom.reportCards.find((link) => /notebooklm-briefing\.html/i.test(link.getAttribute("href") || ""));
       const guide = dom.reportCards.find((link) => /notebooklm-study-guide\.html/i.test(link.getAttribute("href") || ""));
       return [
@@ -308,13 +367,19 @@
     },
   };
 
-  StudyCards.prepare();
-  Toolbar.injectMediaControls();
-  StudyReports.injectToolbarLinks();
-  StudyReports.removeInlineReports();
-  StudyWorkspace.normalizeRetiredHash();
-  HashRoutes.openStudyMedia();
-  HashRoutes.openMigratedChapterMedia();
-  window.addEventListener("hashchange", () => HashRoutes.handleHashChange());
-  HashRoutes.openStoredIntent();
+  const init = async () => {
+    manifestChapter = await ReaderManifest.load();
+    if (!dom.cards.length && !dom.reportCards.length && !manifestChapter) return;
+    StudyCards.prepare();
+    Toolbar.injectMediaControls();
+    StudyReports.injectToolbarLinks();
+    StudyReports.removeInlineReports();
+    StudyWorkspace.normalizeRetiredHash();
+    HashRoutes.openStudyMedia();
+    HashRoutes.openMigratedChapterMedia();
+    window.addEventListener("hashchange", () => HashRoutes.handleHashChange());
+    HashRoutes.openStoredIntent();
+  };
+
+  init();
 })();

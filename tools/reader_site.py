@@ -13,7 +13,7 @@ from urllib.parse import parse_qs, urlparse
 ROOT = Path(__file__).resolve().parents[1]
 READER_DIR = ROOT / "feynman-reader"
 MEDIA_MANIFEST = READER_DIR / "media-manifest.json"
-CURRENT_ASSET_VERSION = "20260621-floating-video"
+CURRENT_ASSET_VERSION = "20260621-manifest-runtime"
 
 
 @dataclass(frozen=True)
