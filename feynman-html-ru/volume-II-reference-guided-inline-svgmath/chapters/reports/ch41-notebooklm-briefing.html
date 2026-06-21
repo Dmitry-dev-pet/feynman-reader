@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Глава 41. ТЕЧЕНИЕ «МОКРОЙ» ВОДЫ: Аналитический отчет - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch41.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1 id="глава-41-течение-мокрой-воды-аналитический-отчет">Глава 41.
+ТЕЧЕНИЕ «МОКРОЙ» ВОДЫ: Аналитический отчет</h1>
+<p>Данный отчет представляет собой глубокий анализ главы 41
+«Фейнмановских лекций по физике», посвященной динамике реальных
+жидкостей. В отличие от идеализированной «сухой» воды, рассматривавшейся
+ранее, «мокрая» вода характеризуется наличием вязкости (внутреннего
+трения), что кардинально меняет характер ее течения и приводит к
+возникновению сложных явлений: от пограничных слоев до
+турбулентности.</p>
+<hr />
+<h2 id="1-резюме-executive-summary">1. Резюме (Executive Summary)</h2>
+<p>Основная концепция главы заключается в переходе от теории
+потенциального потока к описанию реальных жидкостей, в которых вязкость
+играет определяющую роль. Ключевым экспериментальным фактом является
+<strong>условие прилипания</strong>: скорость жидкости на поверхности
+твердого тела всегда равна нулю.</p>
+<p>Центральным инструментом анализа выступает <strong>число Рейнольдса
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">ℛ</mi><annotation encoding="application/x-tex">\mathcal{R}</annotation></semantics></math>)</strong>
+— безразмерный параметр, определяющий подобие потоков. Рост
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">ℛ</mi><annotation encoding="application/x-tex">\mathcal{R}</annotation></semantics></math>
+переводит систему из режима плавного (ламинарного) течения в режимы с
+образованием периодических вихрей и, в конечном итоге, в состояние
+хаотической турбулентности. Документ постулирует, что даже простые
+уравнения гидродинамики содержат в себе невероятное разнообразие сложных
+явлений, которые современная математика пока не способна полностью
+предсказать аналитически.</p>
+<hr />
+<h2 id="2-подробный-анализ-ключевых-тем">2. Подробный анализ ключевых
+тем</h2>
+<h3 id="21-физическая-природа-вязкости">2.1. Физическая природа
+вязкости</h3>
+<p>Вязкость описывает силы сдвига, возникающие в движущейся жидкости. В
+статическом состоянии напряжений сдвига нет, но при движении они
+пропорциональны скорости изменения деформаций.</p>
+<p><strong>Основные математические выражения:</strong></p>
+<ul>
+<li><strong>Напряжение сдвига</strong> между параллельными пластинами
+(фиг. 41.1):
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mi>F</mi><mi>A</mi></mfrac><mo>=</mo><mi>η</mi><mfrac><msub><mi>v</mi><mn>0</mn></msub><mi>d</mi></mfrac></mrow><annotation encoding="application/x-tex">\frac{F}{A} = \eta \frac{v_0}{d}</annotation></semantics></math>
+где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>η</mi><annotation encoding="application/x-tex">\eta</annotation></semantics></math>
+— коэффициент вязкости (единица измерения: ньютон
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>⋅</mi><annotation encoding="application/x-tex">\cdot</annotation></semantics></math>
+сек/м²).</li>
+<li><strong>Общий тензор напряжений</strong> для сжимаемой жидкости:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>=</mo><mi>η</mi><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mi>∂</mi><msub><mi>v</mi><mi>i</mi></msub></mrow><mrow><mi>∂</mi><msub><mi>x</mi><mi>j</mi></msub></mrow></mfrac><mo>+</mo><mfrac><mrow><mi>∂</mi><msub><mi>v</mi><mi>j</mi></msub></mrow><mrow><mi>∂</mi><msub><mi>x</mi><mi>i</mi></msub></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo>+</mo><msup><mi>η</mi><mo>′</mo></msup><msub><mi>δ</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo stretchy="false" form="prefix">(</mo><mi>∇</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝒗</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">S_{ij} = \eta \left( \frac{\partial v_i}{\partial x_j} + \frac{\partial v_j}{\partial x_i} \right) + \eta&#39; \delta_{ij} (\nabla \cdot \mathbf{v})</annotation></semantics></math>
+Здесь
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>η</mi><annotation encoding="application/x-tex">\eta</annotation></semantics></math>
+— первый коэффициент (сдвиговая вязкость), а
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>η</mi><mo>′</mo></msup><annotation encoding="application/x-tex">\eta&#39;</annotation></semantics></math>
+— второй коэффициент вязкости.</li>
+</ul>
+<h3 id="22-уравнение-движения-реальной-жидкости">2.2. Уравнение движения
+реальной жидкости</h3>
+<p>Добавление вязкой силы
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="bold-italic">𝒇</mi><mtext mathvariant="normal">visc</mtext></msub><annotation encoding="application/x-tex">\mathbf{f}_{\text{visc}}</annotation></semantics></math>
+в уравнение движения приводит к более сложной форме, учитывающей вторые
+производные скорости. Для несжимаемой жидкости
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∇</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝒗</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\nabla \cdot \mathbf{v} = 0</annotation></semantics></math>)
+вязкая сила на единицу объема равна
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>η</mi><msup><mi>∇</mi><mn>2</mn></msup><mi mathvariant="bold-italic">𝒗</mi></mrow><annotation encoding="application/x-tex">\eta \nabla^2 \mathbf{v}</annotation></semantics></math>.</p>
+<p><strong>Уравнение движения (аналог Навье-Стокса):</strong>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ρ</mi><mrow><mo stretchy="true" form="prefix">{</mo><mfrac><mrow><mi>∂</mi><mi mathvariant="bold-italic">𝒗</mi></mrow><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mi mathvariant="bold-italic">𝒗</mi><mo>⋅</mo><mi>∇</mi><mo stretchy="false" form="postfix">)</mo><mi mathvariant="bold-italic">𝒗</mi><mo stretchy="true" form="postfix">}</mo></mrow><mo>=</mo><mi>−</mi><mi>∇</mi><mi>p</mi><mo>−</mo><mi>ρ</mi><mi>∇</mi><mi>ϕ</mi><mo>+</mo><mi>η</mi><msup><mi>∇</mi><mn>2</mn></msup><mi mathvariant="bold-italic">𝒗</mi><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mi>η</mi><mo>+</mo><msup><mi>η</mi><mo>′</mo></msup><mo stretchy="false" form="postfix">)</mo><mi>∇</mi><mo stretchy="false" form="prefix">(</mo><mi>∇</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝒗</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\rho \left\{ \frac{\partial \mathbf{v}}{\partial t} + (\mathbf{v} \cdot \nabla) \mathbf{v} \right\} = -\nabla p - \rho \nabla \phi + \eta \nabla^2 \mathbf{v} + (\eta + \eta&#39;) \nabla (\nabla \cdot \mathbf{v})</annotation></semantics></math></p>
+<p><strong>Диффузия завихренности:</strong> Если ввести завихренность
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold">𝛀</mi><mo>=</mo><mi>∇</mi><mo>×</mo><mi mathvariant="bold-italic">𝒗</mi></mrow><annotation encoding="application/x-tex">\mathbf{\Omega} = \nabla \times \mathbf{v}</annotation></semantics></math>,
+уравнение для несжимаемой жидкости принимает вид:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi>∂</mi><mi mathvariant="bold">𝛀</mi></mrow><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac><mo>+</mo><mi>∇</mi><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mi mathvariant="bold">𝛀</mi><mo>×</mo><mi mathvariant="bold-italic">𝒗</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><mi>η</mi><mi>ρ</mi></mfrac><msup><mi>∇</mi><mn>2</mn></msup><mi mathvariant="bold">𝛀</mi></mrow><annotation encoding="application/x-tex">\frac{\partial \mathbf{\Omega}}{\partial t} + \nabla \times (\mathbf{\Omega} \times \mathbf{v}) = \frac{\eta}{\rho} \nabla^2 \mathbf{\Omega}</annotation></semantics></math>
+Это означает, что завихренность не просто переносится потоком, но и
+<strong>диффундирует</strong> (расползается) в жидкости.</p>
+<h3 id="23-число-рейнольдса-и-принцип-подобия">2.3. Число Рейнольдса и
+принцип подобия</h3>
+<p>Важнейший вывод главы: характер течения зависит не от отдельных
+параметров
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>,</mo><mi>D</mi><mo>,</mo><mi>η</mi><mo>,</mo><mi>ρ</mi></mrow><annotation encoding="application/x-tex">V, D, \eta, \rho</annotation></semantics></math>),
+а от их безразмерной комбинации.</p>
+<p><strong>Формула числа Рейнольдса:</strong>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">ℛ</mi><mo>=</mo><mfrac><mrow><mi>ρ</mi><mi>V</mi><mi>D</mi></mrow><mi>η</mi></mfrac></mrow><annotation encoding="application/x-tex">\mathcal{R} = \frac{\rho V D}{\eta}</annotation></semantics></math></p>
+<p><strong>Физический смысл:</strong> Потоки с одинаковым числом
+Рейнольдса геометрически подобны. Это позволяет испытывать маленькие
+модели самолетов или кораблей в аэродинамических трубах и бассейнах,
+масштабируя результаты на реальные объекты (при условии совпадения числа
+Маха для высоких скоростей).</p>
+<h3 id="24-режимы-обтекания-цилиндра">2.4. Режимы обтекания
+цилиндра</h3>
+<p>Анализ коэффициента увлечения
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>C</mi><mi>D</mi></msub><annotation encoding="application/x-tex">C_D</annotation></semantics></math>
+(фиг. 41.4) показывает качественные изменения потока при росте
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">ℛ</mi><annotation encoding="application/x-tex">\mathcal{R}</annotation></semantics></math>:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Диапазон
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">ℛ</mi><annotation encoding="application/x-tex">\mathcal{R}</annotation></semantics></math></th>
+<th style="text-align: left;">Характер течения</th>
+<th style="text-align: left;">Особенности</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">ℛ</mi><mo>&lt;</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\mathcal{R} &lt; 1</annotation></semantics></math></td>
+<td style="text-align: left;">Стационарный вязкий поток</td>
+<td style="text-align: left;">Плавное обтекание («решение Стокса»).</td>
+</tr>
+<tr>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>10</mn><mo>&lt;</mo><mi mathvariant="script">ℛ</mi><mo>&lt;</mo><mn>30</mn></mrow><annotation encoding="application/x-tex">10 &lt; \mathcal{R} &lt; 30</annotation></semantics></math></td>
+<td style="text-align: left;">Образование пары вихрей</td>
+<td style="text-align: left;">За цилиндром возникают два симметричных
+вихря.</td>
+</tr>
+<tr>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">ℛ</mi><mo>&gt;</mo><mn>40</mn></mrow><annotation encoding="application/x-tex">\mathcal{R} &gt; 40</annotation></semantics></math></td>
+<td style="text-align: left;">Вихревая дорожка Кармана</td>
+<td style="text-align: left;">Вихри поочередно отрываются, создавая
+периодические колебания.</td>
+</tr>
+<tr>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>10</mn><mn>3</mn></msup><mo>&lt;</mo><mi mathvariant="script">ℛ</mi><mo>&lt;</mo><msup><mn>10</mn><mn>5</mn></msup></mrow><annotation encoding="application/x-tex">10^3 &lt; \mathcal{R} &lt; 10^5</annotation></semantics></math></td>
+<td style="text-align: left;">Пограничный слой и турбулентный след</td>
+<td style="text-align: left;">Завихренность сосредоточена в тонком слое;
+след турбулентный.</td>
+</tr>
+<tr>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">ℛ</mi><mo>≈</mo><msup><mn>10</mn><mn>5</mn></msup></mrow><annotation encoding="application/x-tex">\mathcal{R} \approx 10^5</annotation></semantics></math></td>
+<td style="text-align: left;">Кризис сопротивления</td>
+<td style="text-align: left;">Резкое падение
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>C</mi><mi>D</mi></msub><annotation encoding="application/x-tex">C_D</annotation></semantics></math>
+из-за перехода к турбулентному пограничному слою.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3-анализ-специальных-случаев-течения">3. Анализ специальных
+случаев течения</h2>
+<h3 id="31-течение-куэтта-между-цилиндрами">3.1. Течение Куэтта (между
+цилиндрами)</h3>
+<p>При вращении жидкости между двумя концентрическими цилиндрами
+наблюдаются специфические нестабильности:</p>
+<ol type="1">
+<li><strong>Вращение внешнего цилиндра:</strong> Поток остается
+стабильным.</li>
+<li><strong>Вращение внутреннего цилиндра:</strong> При определенных
+скоростях возникают центробежные силы, выбрасывающие внутренние слои
+наружу. Жидкость разбивается на горизонтальные полосы (ячейки) — фиг.
+41.8(b).</li>
+<li><strong>Аномалия волн:</strong> При повышении скорости полосы
+становятся волнистыми и движутся со скоростью, составляющей примерно
+<strong>1/3</strong> скорости внутреннего цилиндра. Физического
+объяснения этому точному числу (1/3) на момент лекции не
+существовало.</li>
+</ol>
+<h3 id="32-предел-нулевой-вязкости">3.2. Предел нулевой вязкости</h3>
+<p>Интуитивное предположение, что при
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>η</mi><mo>→</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\eta \to 0</annotation></semantics></math>
+реальный поток станет эквивалентен «сухой» воде, ошибочно. Малый
+коэффициент при вторых производных в уравнении
+(1/<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">ℛ</mi><annotation encoding="application/x-tex">\mathcal{R}</annotation></semantics></math>)
+не позволяет пренебречь ими, так как вблизи поверхностей возникают
+огромные градиенты скорости (пограничные слои), компенсирующие малость
+вязкости.</p>
+<hr />
+<h2 id="4-важные-цитаты-с-контекстом">4. Важные цитаты с контекстом</h2>
+<ol type="1">
+<li><p><strong>Об условии прилипания:</strong></p>
+<blockquote>
+<p>«Скорость жидкости на поверхности твердого тела в точности равна
+нулю. Вы замечали, конечно, что лопасти вентилятора собирают на себя
+тонкий слой пыли... Почему же пыль не сдувается воздухом? Скорость
+воздуха относительно них, измеренная непосредственно на их поверхности,
+равна нулю». <em>Контекст: Обоснование необходимости модификации теории
+идеальной жидкости.</em></p>
+</blockquote></li>
+<li><p><strong>О сложности простых уравнений:</strong></p>
+<blockquote>
+<p>«Тот факт, что мы записали уравнение, нисколько не лишает движение
+жидкостей его очарования, загадочности или способности удивлять».
+<em>Контекст: Размышления о том, что из простых законов гидродинамики
+вытекает бесконечное разнообразие форм.</em></p>
+</blockquote></li>
+<li><p><strong>О загадке «одной трети»:</strong></p>
+<blockquote>
+<p>«Скорость этих волн легко измерить. При высоких скоростях вращения
+они приближаются к 1/3 скорости внутреннего цилиндра. И никто не знает
+почему! Простое число, вроде 1/3, и никакого объяснения». <em>Контекст:
+Описание течения Куэтта и границ текущего понимания физики.</em></p>
+</blockquote></li>
+</ol>
+<hr />
+<h2 id="5-практические-выводы-и-идеи-actionable-insights">5.
+Практические выводы и идеи (Actionable Insights)</h2>
+<ul>
+<li><strong>Моделирование и масштабирование:</strong> При проектировании
+любых систем, взаимодействующих с жидкостью или газом (крылья, трубы,
+корпуса), необходимо стремиться к сохранению числа Рейнольдса для
+адекватного переноса данных с моделей на реальные объекты.</li>
+<li><strong>Учет пограничного слоя:</strong> Вне зависимости от того,
+насколько «невязкой» кажется жидкость, пограничный слой всегда
+существует и определяет силы сопротивления. Обтекаемая форма тел
+(аэродинамичность) — единственный способ минимизировать влияние
+турбулентного следа.</li>
+<li><strong>Границы аналитических решений:</strong> Следует понимать,
+что точные решения уравнений гидродинамики возможны только для очень
+малых
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">ℛ</mi><annotation encoding="application/x-tex">\mathcal{R}</annotation></semantics></math>
+(полностью вязкий режим). В большинстве реальных задач (высокие
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">ℛ</mi><annotation encoding="application/x-tex">\mathcal{R}</annotation></semantics></math>)
+необходимо полагаться на эксперимент и качественные модели (вихревые
+дорожки, пограничные слои).</li>
+<li><strong>Философия сложности:</strong> Глава дает важный
+методологический урок: наличие фундаментального уравнения (например,
+уравнения Шредингера или Навье-Стокса) не означает автоматического
+понимания всех явлений, которые оно описывает. Понимание качественного
+содержания уравнений — следующая великая эра в науке.</li>
+</ul>
+    </article>
+  </main>
+</body>
+</html>

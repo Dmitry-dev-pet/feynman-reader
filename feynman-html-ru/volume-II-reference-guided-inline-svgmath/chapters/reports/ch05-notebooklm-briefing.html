@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Глава 5. Применения закона Гаусса: Аналитический отчет - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch05.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1 id="глава-5-применения-закона-гаусса-аналитический-отчет">Глава 5.
+Применения закона Гаусса: Аналитический отчет</h1>
+<p>Настоящий отчет представляет собой синтез ключевых концепций,
+математических формулировок и физических следствий, изложенных в Главе 5
+«Фейнмановских лекций по физике». Документ анализирует применение закона
+Гаусса в электростатике, вопросы устойчивости систем зарядов и
+экспериментальную точность фундаментальных законов физики.</p>
+<h2 id="1-исполнительное-резюме">1. Исполнительное резюме</h2>
+<p>Электростатика базируется на двух ключевых принципах: законе Гаусса
+(поток электрического поля пропорционален заряду) и законе о нулевой
+циркуляции поля (поле — это градиент потенциала). Основное внимание в
+главе уделяется практическому использованию закона Гаусса для расчета
+полей в симметричных системах, доказательству невозможности устойчивого
+статического равновесия и анализу свойств проводников. Ключевой вывод
+заключается в том, что закон Гаусса является следствием точной обратно
+квадратичной зависимости в законе Кулона
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><msup><mi>r</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">1/r^2</annotation></semantics></math>),
+что подтверждается экспериментами с точностью до одной миллиардной.</p>
+<h2 id="2-анализ-ключевых-тем">2. Анализ ключевых тем</h2>
+<h3 id="21-равновесие-в-электростатическом-поле">2.1. Равновесие в
+электростатическом поле</h3>
+<p>Центральным утверждением является невозможность достижения
+устойчивого равновесия точечного заряда в пустом пространстве под
+действием одних лишь электростатических сил.</p>
+<ul>
+<li><strong>Физическое обоснование:</strong> Для устойчивого равновесия
+в точке
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>P</mi><mn>0</mn></msub><annotation encoding="application/x-tex">P_0</annotation></semantics></math>
+векторы электрического поля во всех соседних точках должны быть
+направлены внутрь, к
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>P</mi><mn>0</mn></msub><annotation encoding="application/x-tex">P_0</annotation></semantics></math>
+[SOURCE_IMAGE_1]. Однако, согласно закону Гаусса, поток через малую
+поверхность вокруг
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>P</mi><mn>0</mn></msub><annotation encoding="application/x-tex">P_0</annotation></semantics></math>
+в таком случае был бы отрицательным, что невозможно, если в самой точке
+нет отрицательного заряда.</li>
+<li><strong>Механические ограничения:</strong> Равновесие возможно
+только при наличии неэлектрических сил (например, стенок трубки
+[SOURCE_IMAGE_5]), которые компенсируют боковое смещение.</li>
+</ul>
+<h3 id="22-устойчивость-атомов">2.2. Устойчивость атомов</h3>
+<p>Анализ электростатики доказывает, что вещество не может состоять из
+неподвижных точечных зарядов.</p>
+<ul>
+<li><strong>Модель Томсона:</strong> Предполагала распределение
+положительного заряда по всему объему шара [SOURCE_IMAGE_6].</li>
+<li><strong>Модель Резерфорда-Бора:</strong> Ввела динамическое
+равновесие (орбитальное движение [SOURCE_IMAGE_7]), но столкнулась с
+проблемой потери энергии на излучение.</li>
+<li><strong>Квантовомеханическое решение:</strong> Стабильность
+обеспечивается принципом неопределенности, который не позволяет
+электрону локализоваться слишком близко к ядру, так как это привело бы к
+чрезмерному росту его кинетической энергии.</li>
+</ul>
+<h3 id="23-применение-закона-гаусса-к-симметричным-системам">2.3.
+Применение закона Гаусса к симметричным системам</h3>
+<p>Закон Гаусса позволяет быстро рассчитать напряженность поля
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math>)
+для систем с высокой степенью симметрии:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Геометрия заряда</th>
+<th style="text-align: left;">Гауссова поверхность</th>
+<th style="text-align: left;">Формула поля
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math>)</th>
+<th style="text-align: left;">Физическая особенность</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Заряженная прямая</strong></td>
+<td style="text-align: left;">Цилиндр [SOURCE_IMAGE_8]</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>=</mo><mfrac><mi>λ</mi><mrow><mn>2</mn><mi>π</mi><msub><mi>ϵ</mi><mn>0</mn></msub><mi>r</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">E = \frac{\lambda}{2\pi\epsilon_0 r}</annotation></semantics></math></td>
+<td style="text-align: left;">Поле обратно пропорционально расстоянию
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mi>r</mi></mrow><annotation encoding="application/x-tex">1/r</annotation></semantics></math>).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Заряженная плоскость</strong></td>
+<td style="text-align: left;">Прямоугольный ящик [SOURCE_IMAGE_9]</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>=</mo><mfrac><mi>σ</mi><mrow><mn>2</mn><msub><mi>ϵ</mi><mn>0</mn></msub></mrow></mfrac></mrow><annotation encoding="application/x-tex">E = \frac{\sigma}{2\epsilon_0}</annotation></semantics></math></td>
+<td style="text-align: left;">Поле однородно и не зависит от
+расстояния.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Пара плоскостей
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>+</mi><mi>σ</mi><mo>,</mo><mi>−</mi><mi>σ</mi></mrow><annotation encoding="application/x-tex">+\sigma, -\sigma</annotation></semantics></math>)</strong></td>
+<td style="text-align: left;">Прямоугольный ящик</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>=</mo><mi>σ</mi><mi>/</mi><msub><mi>ϵ</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">E = \sigma/\epsilon_0</annotation></semantics></math>
+(внутри)</td>
+<td style="text-align: left;">Поле вне пластин равно нулю
+[SOURCE_IMAGE_10].</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Равномерно заряженный
+шар</strong></td>
+<td style="text-align: left;">Сфера [SOURCE_IMAGE_11]</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>=</mo><mfrac><mrow><mi>ρ</mi><mi>r</mi></mrow><mrow><mn>3</mn><msub><mi>ϵ</mi><mn>0</mn></msub></mrow></mfrac></mrow><annotation encoding="application/x-tex">E = \frac{\rho r}{3\epsilon_0}</annotation></semantics></math>
+(внутри)</td>
+<td style="text-align: left;">Внутри шара поле растет линейно с радиусом
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math>).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Заряженная сфера
+(оболочка)</strong></td>
+<td style="text-align: left;">Сфера</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">E = 0</annotation></semantics></math>
+(внутри)</td>
+<td style="text-align: left;">Поле внутри сферы полностью
+отсутствует.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="3-точность-закона-кулона">3. Точность закона Кулона</h2>
+<p>Справедливость закона Гаусса неразрывно связана с тем, что сила
+взаимодействия зарядов пропорциональна именно
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><msup><mi>r</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">1/r^2</annotation></semantics></math>.
+Любое отклонение показателя степени от 2 привело бы к появлению
+электрического поля внутри заряженной сферы.</p>
+<h3 id="экспериментальные-доказательства">Экспериментальные
+доказательства:</h3>
+<ol type="1">
+<li><strong>Максвелл:</strong> Установил, что отклонение показателя
+степени
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϵ</mi><annotation encoding="application/x-tex">\epsilon</annotation></semantics></math>)
+меньше
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mn>10</mn><mspace width="0.167em"></mspace><mn>000</mn></mrow><annotation encoding="application/x-tex">1/10\,000</annotation></semantics></math>.</li>
+<li><strong>Плимптон и Лафтон (1936 г.):</strong> Снизили предел
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϵ</mi><annotation encoding="application/x-tex">\epsilon</annotation></semantics></math>
+до одной миллиардной.</li>
+<li><strong>Лэмб и Ризерфорд (1947 г.):</strong> Используя квантовые
+эффекты в атоме водорода, подтвердили точность закона на атомных
+расстояниях
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>10</mn><mrow><mi>−</mi><mn>8</mn></mrow></msup><annotation encoding="application/x-tex">10^{-8}</annotation></semantics></math>
+см) с точностью до одной миллиардной.</li>
+<li><strong>Ядерные расстояния:</strong> Закон сохраняет силу до
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>10</mn><mrow><mi>−</mi><mn>13</mn></mrow></msup><annotation encoding="application/x-tex">10^{-13}</annotation></semantics></math>
+см, но на дистанциях менее
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>10</mn><mrow><mi>−</mi><mn>14</mn></mrow></msup><annotation encoding="application/x-tex">10^{-14}</annotation></semantics></math>
+см он, вероятно, нарушается из-за структуры самих частиц
+(протонов).</li>
+</ol>
+<h2 id="4-поля-и-полости-в-проводниках">4. Поля и полости в
+проводниках</h2>
+<p>Проводник — это область, где электрическое поле в статическом
+состоянии всегда равно нулю.</p>
+<ul>
+<li><strong>Распределение заряда:</strong> Весь избыточный заряд
+собирается исключительно в тонком поверхностном слое (толщиной в 1–2
+атома).</li>
+<li><strong>Поле у поверхности:</strong> Всегда перпендикулярно
+поверхности проводника [SOURCE_IMAGE_3]. Его величина составляет
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>=</mo><mi>σ</mi><mi>/</mi><msub><mi>ϵ</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">E = \sigma/\epsilon_0</annotation></semantics></math>.</li>
+<li><strong>Эффект экранирования:</strong> Внутри пустой полости
+проводника любой формы поле равно нулю [SOURCE_IMAGE_4]. Это позволяет
+использовать металлические корпуса для защиты чувствительного
+оборудования.</li>
+<li><strong>Доказательство:</strong> Отсутствие поля в полости
+доказывается через закон о нулевой циркуляции
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∮</mo><mi mathvariant="bold-italic">𝑬</mi><mo>⋅</mo><mi>d</mi><mi mathvariant="bold-italic">𝒔</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\oint \mathbf{E} \cdot d\mathbf{s} = 0</annotation></semantics></math>).
+Если бы в полости были линии поля, можно было бы построить контур,
+интеграл по которому не был бы равен нулю, что противоречит законам
+электростатики [SOURCE_IMAGE_12].</li>
+</ul>
+<h2 id="5-ключевые-цитаты">5. Ключевые цитаты</h2>
+<blockquote>
+<p>«Ни в каком электростатическом поле не существует никаких точек
+устойчивого равновесия, за исключением случая, когда заряды сидят друг
+на друге».</p>
+</blockquote>
+<blockquote>
+<p>«Закон Гаусса обязан своим происхождением закону Кулона, то есть
+точной зависимости силы от второй степени расстояния».</p>
+</blockquote>
+<blockquote>
+<p>«Вас охраняет сам Гаусс!» — автор подчеркивает безопасность
+нахождения внутри высоковольтного генератора, защищенного проводящим
+корпусом.</p>
+</blockquote>
+<h2 id="6-аналитические-выводы">6. Аналитические выводы</h2>
+<ol type="1">
+<li><strong>Инструментальная ценность:</strong> Закон Гаусса — мощный
+инструмент для систем с симметрией, но он требует дополнения другими
+законами (например, отсутствием циркуляции) для решения общих
+задач.</li>
+<li><strong>Фундаментальная взаимосвязь:</strong> Нулевое поле внутри
+проводящей оболочки является самым строгим тестом точности закона
+Кулона.</li>
+<li><strong>Практическое применение:</strong> Принципы электростатики
+проводников лежат в основе создания систем защиты (экранирования) и
+понимания структуры вещества на атомном уровне.</li>
+<li><strong>Границы применимости:</strong> Хотя закон Кулона крайне
+точен в макро- и микромире, на субъядерных расстояниях
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>&lt;</mo><msup><mn>10</mn><mrow><mi>−</mi><mn>14</mn></mrow></msup></mrow><annotation encoding="application/x-tex">&lt; 10^{-14}</annotation></semantics></math>
+см) классическая электростатика сталкивается с необходимостью учета
+внутренней структуры частиц.</li>
+</ol>
+    </article>
+  </main>
+</body>
+</html>

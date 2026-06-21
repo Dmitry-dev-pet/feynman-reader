@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Глава 31. ТЕНЗОРЫ: Учебное пособие - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch31.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1 id="глава-31-тензоры-учебное-пособие">Глава 31. ТЕНЗОРЫ: Учебное
+пособие</h1>
+<p>Данное учебное пособие составлено на основе материалов лекции Ричарда
+Фейнмана и посвящено изучению тензоров — математического аппарата,
+необходимого для описания физических свойств анизотропных веществ и
+сложных систем.</p>
+<hr />
+<h2 id="i-краткий-конспект-ключевых-понятий">I. Краткий конспект
+ключевых понятий</h2>
+<h3 id="1-определение-и-физическая-суть-тензора">1. Определение и
+физическая суть тензора</h3>
+<p>Тензор — это набор величин (компонент), которые преобразуются
+определенным образом при смене системы координат.</p>
+<ul>
+<li><strong>Ранг тензора:</strong> Количество индексов определяет его
+ранг. Скаляр — тензор нулевого ранга, вектор — тензор первого ранга, а
+величины с двумя индексами (например,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>α</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><annotation encoding="application/x-tex">\alpha_{ij}</annotation></semantics></math>)
+— тензоры второго ранга.</li>
+<li><strong>Анизотропия:</strong> Свойство вещества, при котором его
+реакция на внешнее воздействие (например, электрическое поле) зависит от
+направления этого воздействия. Тензоры незаменимы для описания таких
+систем.</li>
+</ul>
+<h3 id="2-тензор-поляризуемости-alpha_ij">2. Тензор поляризуемости
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>α</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><annotation encoding="application/x-tex">\alpha_{ij}</annotation></semantics></math>)</h3>
+<p>В анизотропных кристаллах вектор поляризации
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑷</mi><annotation encoding="application/x-tex">\mathbf{P}</annotation></semantics></math>
+не всегда параллелен вектору электрического поля
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>.
+Соотношение записывается как:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>P</mi><mi>i</mi></msub><mo>=</mo><munder><mo>∑</mo><mi>j</mi></munder><msub><mi>α</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><msub><mi>E</mi><mi>j</mi></msub></mrow><annotation encoding="application/x-tex">P_i = \sum_j \alpha_{ij} E_j</annotation></semantics></math>
+Девять коэффициентов
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>α</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><annotation encoding="application/x-tex">\alpha_{ij}</annotation></semantics></math>
+образуют тензор поляризуемости. В случае изотропного вещества тензор
+становится диагональным, где все три компонента равны
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>α</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>=</mo><mi>α</mi><msub><mi>δ</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\alpha_{ij} = \alpha \delta_{ij}</annotation></semantics></math>),
+а эллипсоид энергии превращается в сферу.</p>
+<h3 id="3-эллипсоид-энергии-и-главные-оси">3. Эллипсоид энергии и
+главные оси</h3>
+<p>Любой симметричный тензор второго ранга можно наглядно представить в
+виде эллипсоида.</p>
+<ul>
+<li><strong>Симметрия:</strong> Большинство физических тензоров
+(поляризуемости, инерции, напряжений) симметричны:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>=</mo><msub><mi>S</mi><mrow><mi>j</mi><mi>i</mi></mrow></msub></mrow><annotation encoding="application/x-tex">S_{ij} = S_{ji}</annotation></semantics></math>.</li>
+<li><strong>Главные оси:</strong> Существует такая система координат, в
+которой тензор становится <strong>диагональным</strong> (все компоненты,
+кроме
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi></mrow><annotation encoding="application/x-tex">x, y, z</annotation></semantics></math>,
+равны нулю). Эти оси называются главными осями. Вдоль этих направлений
+воздействие и отклик (например,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑷</mi><annotation encoding="application/x-tex">\mathbf{P}</annotation></semantics></math>)
+параллельны.</li>
+</ul>
+<h3 id="4-тензор-инерции-i_ij">4. Тензор инерции
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>I</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><annotation encoding="application/x-tex">I_{ij}</annotation></semantics></math>)</h3>
+<p>Связывает угловую скорость
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝝎</mi><annotation encoding="application/x-tex">\mathbf{\omega}</annotation></semantics></math>
+с моментом количества движения
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑳</mi><annotation encoding="application/x-tex">\mathbf{L}</annotation></semantics></math>:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>L</mi><mi>i</mi></msub><mo>=</mo><munder><mo>∑</mo><mi>j</mi></munder><msub><mi>I</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><msub><mi>ω</mi><mi>j</mi></msub></mrow><annotation encoding="application/x-tex">L_i = \sum_j I_{ij} \omega_j</annotation></semantics></math>
+Компоненты тензора вычисляются через массы и координаты частиц тела:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>=</mo><mo>∑</mo><mi>m</mi><mo stretchy="false" form="prefix">(</mo><msup><mi>r</mi><mn>2</mn></msup><msub><mi>δ</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>−</mo><msub><mi>r</mi><mi>i</mi></msub><msub><mi>r</mi><mi>j</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">I_{ij} = \sum m(r^2 \delta_{ij} - r_i r_j)</annotation></semantics></math>.</p>
+<h3 id="5-тензор-напряжений-s_ij">5. Тензор напряжений
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><annotation encoding="application/x-tex">S_{ij}</annotation></semantics></math>)</h3>
+<p>Описывает внутренние силы в материале. Компонента
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mrow><mi>y</mi><mi>x</mi></mrow></msub><annotation encoding="application/x-tex">S_{yx}</annotation></semantics></math>
+означает:</p>
+<ul>
+<li>Первый индекс
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>y</mi><annotation encoding="application/x-tex">y</annotation></semantics></math>)
+— направление компоненты силы.</li>
+<li>Второй индекс
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>)
+— направление нормали к плоскости, на которую действует сила. Тензор
+напряжений симметричен
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mrow><mi>x</mi><mi>y</mi></mrow></msub><mo>=</mo><msub><mi>S</mi><mrow><mi>y</mi><mi>x</mi></mrow></msub></mrow><annotation encoding="application/x-tex">S_{xy} = S_{yx}</annotation></semantics></math>),
+что обусловлено отсутствием моментов сил, которые могли бы привести
+бесконечно малый объем вещества во вращение.</li>
+</ul>
+<h3 id="6-тензоры-высших-рангов">6. Тензоры высших рангов</h3>
+<ul>
+<li><strong>Третий ранг:</strong> Пьезоэлектрические коэффициенты
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>P</mi><mrow><mi>i</mi><mi>j</mi><mi>k</mi></mrow></msub><annotation encoding="application/x-tex">P_{ijk}</annotation></semantics></math>,
+связывающие поле с тензором напряжений.</li>
+<li><strong>Четвертый ранг:</strong> Коэффициенты упругости
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>γ</mi><mrow><mi>i</mi><mi>j</mi><mi>k</mi><mi>l</mi></mrow></msub><annotation encoding="application/x-tex">\gamma_{ijkl}</annotation></semantics></math>,
+связывающие тензор напряжений с тензором деформаций. Полное описание
+упругости кристалла с минимальной симметрией требует 21 константы.</li>
+</ul>
+<hr />
+<h2 id="ii-проверочные-вопросы-short-answer-quiz">II. Проверочные
+вопросы (Short-Answer Quiz)</h2>
+<ol type="1">
+<li><p><strong>В чем основное отличие вектора от тензора второго
+ранга?</strong> <em>Ответ:</em> Вектор описывается тремя компонентами
+(один индекс), тензор второго ранга — девятью компонентами (два
+индекса). Тензор связывает один вектор с другим, когда их направления не
+совпадают.</p></li>
+<li><p><strong>Почему тензор напряжений
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><annotation encoding="application/x-tex">S_{ij}</annotation></semantics></math>
+должен быть симметричным?</strong> <em>Ответ:</em> Если бы
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mrow><mi>x</mi><mi>y</mi></mrow></msub><mo>≠</mo><msub><mi>S</mi><mrow><mi>y</mi><mi>x</mi></mrow></msub></mrow><annotation encoding="application/x-tex">S_{xy} \neq S_{yx}</annotation></semantics></math>,
+то на бесконечно малый кубик материала действовал бы ненулевой момент
+сил, вызывающий его вращение.</p></li>
+<li><p><strong>Что такое «главные оси» тензора?</strong> <em>Ответ:</em>
+Это направления, при выборе которых в качестве осей координат тензор
+становится диагональным (все недиагональные компоненты равны
+нулю).</p></li>
+<li><p><strong>Как записывается тензор для полностью изотропного
+материала?</strong> <em>Ответ:</em> Через символ Кронекера:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi><msub><mi>δ</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\alpha \delta_{ij}</annotation></semantics></math>,
+где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>δ</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\delta_{ij} = 1</annotation></semantics></math>
+при
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mo>=</mo><mi>j</mi></mrow><annotation encoding="application/x-tex">i=j</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0</mn><annotation encoding="application/x-tex">0</annotation></semantics></math>
+в остальных случаях.</p></li>
+<li><p><strong>Сколько независимых констант требуется для описания
+упругости изотропного вещества?</strong> <em>Ответ:</em> Две
+константы.</p></li>
+<li><p><strong>Каков физический смысл компоненты
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mrow><mi>t</mi><mi>t</mi></mrow></msub><annotation encoding="application/x-tex">S_{tt}</annotation></semantics></math>
+в четырехмерном тензоре энергии-импульса?</strong> <em>Ответ:</em>
+Плотность энергии.</p></li>
+</ol>
+<hr />
+<h2 id="iii-темы-для-глубокого-изучения-essay-prompts">III. Темы для
+глубокого изучения (Essay Prompts)</h2>
+<ol type="1">
+<li><strong>Взаимосвязь кристаллической симметрии и формы
+тензора.</strong> Опишите, как геометрическая симметрия кристаллической
+решетки (кубическая, тетрагональная, моноклинная) накладывает
+ограничения на эллипсоид поляризуемости. Почему в кубическом кристалле
+тензор поляризуемости всегда превращается в скаляр?</li>
+<li><strong>Тензор напряжений как поле.</strong> Объясните концепцию
+тензорного поля. Как шесть функций (компонент симметричного тензора
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><annotation encoding="application/x-tex">S_{ij}</annotation></semantics></math>)
+позволяют полностью описать состояние деформированного твердого тела в
+каждой его точке?</li>
+<li><strong>Переход к четырехмерному пространству.</strong>
+Проанализируйте структуру тензора энергии-импульса
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mrow><mi>μ</mi><mi>ν</mi></mrow></msub><annotation encoding="application/x-tex">S_{\mu\nu}</annotation></semantics></math>.
+Каким образом понятия «плотность импульса» и «поток энергии»
+объединяются в рамках релятивистской теории в единый математический
+объект?</li>
+</ol>
+<hr />
+<h2 id="iv-типичные-ошибки-при-изучении-тензоров">IV. Типичные ошибки
+при изучении тензоров</h2>
+<ul>
+<li><strong>Ошибка параллельности:</strong> Предположение, что отклик
+системы всегда направлен вдоль воздействия (например, что момент
+импульса
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑳</mi><annotation encoding="application/x-tex">\mathbf{L}</annotation></semantics></math>
+всегда параллелен угловой скорости
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝝎</mi><annotation encoding="application/x-tex">\mathbf{\omega}</annotation></semantics></math>).
+В анизотропных средах это верно только для главных осей.</li>
+<li><strong>Путаница с индексами:</strong> Ошибка в интерпретации
+индексов тензора напряжений. Важно помнить: один индекс указывает
+направление силы, другой — ориентацию площадки.</li>
+<li><strong>Игнорирование ранга:</strong> Отношение к векторному
+произведению как к «просто вектору». На самом деле в трехмерном
+пространстве антисимметричный тензор второго ранга лишь «по счастливой
+случайности» (по совпадению числа компонент) может быть представлен как
+псевдовектор.</li>
+<li><strong>Забытая симметрия:</strong> Использование всех 9 компонент
+там, где физические условия (отсутствие вращения или сохранение энергии)
+требуют симметрии тензора, оставляя лишь 6 независимых величин.</li>
+</ul>
+<hr />
+<h2 id="v-глоссарий-важных-терминов">V. Глоссарий важных терминов</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Термин</th>
+<th style="text-align: left;">Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Анизотропия</strong></td>
+<td style="text-align: left;">Зависимость физических свойств вещества от
+направления.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Главные оси</strong></td>
+<td style="text-align: left;">Система координат, в которой тензор имеет
+только диагональные компоненты.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Символ Кронекера
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>δ</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><annotation encoding="application/x-tex">\delta_{ij}</annotation></semantics></math>)</strong></td>
+<td style="text-align: left;">Единичный тензор: равен 1, если индексы
+совпадают, и 0, если они различны.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Сдвигающая сила</strong></td>
+<td style="text-align: left;">Тангенциальная компонента силы,
+действующая вдоль поверхности (в отличие от давления).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Тензор второго ранга</strong></td>
+<td style="text-align: left;">Объект, описываемый 9 компонентами,
+преобразующийся при повороте осей как произведение компонент двух
+векторов.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Тензор напряжений
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><annotation encoding="application/x-tex">S_{ij}</annotation></semantics></math>)</strong></td>
+<td style="text-align: left;">Тензорное поле, описывающее внутренние
+силы в деформированной среде.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Тензор
+энергии-импульса</strong></td>
+<td style="text-align: left;">Четырехмерный тензор, объединяющий
+плотность и потоки энергии и импульса.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Эллипсоид энергии</strong></td>
+<td style="text-align: left;">Геометрическое представление квадратичной
+формы, связанной с симметричным тензором.</td>
+</tr>
+</tbody>
+</table>
+    </article>
+  </main>
+</body>
+</html>

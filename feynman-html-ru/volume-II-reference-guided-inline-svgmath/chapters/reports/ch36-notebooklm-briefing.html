@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Глава 36. Ферромагнетизм: Аналитический отчет - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch36.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1 id="глава-36-ферромагнетизм-аналитический-отчет">Глава 36.
+Ферромагнетизм: Аналитический отчет</h1>
+<p>В данной главе рассматривается природа и математическое описание
+ферромагнетизма — явления, при котором индуцированные магнитные моменты
+настолько велики, что они часто вносят основной вклад в наблюдаемые
+магнитные поля. В отличие от парамагнетиков и диамагнетиков,
+ферромагнитные материалы требуют более сложной макроскопической теории,
+учитывающей их внутреннее состояние и историю намагничивания.</p>
+<hr />
+<h2 id="1-исполнительное-резюме-executive-summary">1. Исполнительное
+резюме (Executive Summary)</h2>
+<p>Ферромагнетизм представляет собой макроскопическое проявление сильных
+взаимодействий между атомными магнитными моментами. Основные идеи главы
+включают:</p>
+<ul>
+<li><strong>Макроскопическое описание:</strong> Введение вектора
+намагниченности
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑴</mi><annotation encoding="application/x-tex">\mathbf{M}</annotation></semantics></math>
+(магнитный момент единицы объема) и его связь с токами намагничивания
+через
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="bold-italic">𝒋</mi><mtext mathvariant="normal">mag</mtext></msub><mo>=</mo><mi>∇</mi><mo>×</mo><mi mathvariant="bold-italic">𝑴</mi></mrow><annotation encoding="application/x-tex">\mathbf{j}_{\text{mag}} = \nabla \times \mathbf{M}</annotation></semantics></math>.</li>
+<li><strong>Поле
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑯</mi><annotation encoding="application/x-tex">\mathbf{H}</annotation></semantics></math>:</strong>
+Введение вспомогательного поля
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑯</mi><annotation encoding="application/x-tex">\mathbf{H}</annotation></semantics></math>
+для упрощения уравнений Максвелла в присутствии магнитных
+материалов.</li>
+<li><strong>Нелинейность и Гистерезис:</strong> Отсутствие однозначной
+функциональной связи между полями
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑯</mi><annotation encoding="application/x-tex">\mathbf{H}</annotation></semantics></math>
+из-за зависимости состояния материала от его предыстории.</li>
+<li><strong>Спонтанная намагниченность:</strong> Анализ того, почему
+материалы самопроизвольно намагничиваются при температурах ниже точки
+Кюри
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>T</mi><mi>c</mi></msub><annotation encoding="application/x-tex">T_c</annotation></semantics></math>),
+и признание того, что классическая магнитная теория не способна
+полностью объяснить величину взаимодействий, требуя
+квантовомеханического подхода.</li>
+</ul>
+<hr />
+<h2 id="2-анализ-ключевых-тем">2. Анализ ключевых тем</h2>
+<h3 id="21-токи-намагничивания-и-вектор-mathbfm">2.1. Токи
+намагничивания и вектор
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑴</mi><annotation encoding="application/x-tex">\mathbf{M}</annotation></semantics></math></h3>
+<p>Намагничивание вещества происходит за счет микроскопических атомных
+токов (амперовских токов). Для практических задач используется средний
+магнитный момент единицы объема — вектор
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑴</mi><annotation encoding="application/x-tex">\mathbf{M}</annotation></semantics></math>.</p>
+<ul>
+<li><strong>Физический смысл:</strong> Внутри равномерно намагниченного
+материала атомные циркулирующие токи соседних атомов компенсируют друг
+друга. Однако на поверхности компенсации не происходит, что создает
+эффективный поверхностный ток, эквивалентный току в соленоиде (Фиг.
+36.2).</li>
+<li><strong>Математическая связь:</strong> Плотность макроскопического
+тока намагничивания определяется ротором намагниченности:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="bold-italic">𝒋</mi><mtext mathvariant="normal">mag</mtext></msub><mo>=</mo><mi>∇</mi><mo>×</mo><mi mathvariant="bold-italic">𝑴</mi></mrow><annotation encoding="application/x-tex">\mathbf{j}_{\text{mag}} = \nabla \times \mathbf{M}</annotation></semantics></math></li>
+<li><strong>Полный ток:</strong> В общем случае плотность тока в
+веществе включает токи проводимости, поляризации и намагничивания:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝒋</mi><mo>=</mo><msub><mi mathvariant="bold-italic">𝒋</mi><mtext mathvariant="normal">cond</mtext></msub><mo>+</mo><mi>∇</mi><mo>×</mo><mi mathvariant="bold-italic">𝑴</mi><mo>+</mo><mfrac><mrow><mi>∂</mi><mi mathvariant="bold-italic">𝑷</mi></mrow><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\mathbf{j} = \mathbf{j}_{\text{cond}} + \nabla \times \mathbf{M} + \frac{\partial \mathbf{P}}{\partial t}</annotation></semantics></math></li>
+</ul>
+<h3 id="22-вспомогательное-поле-mathbfh-и-проблема-единиц">2.2.
+Вспомогательное поле
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑯</mi><annotation encoding="application/x-tex">\mathbf{H}</annotation></semantics></math>
+и проблема единиц</h3>
+<p>Для удобства расчетов вводится поле
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑯</mi><annotation encoding="application/x-tex">\mathbf{H}</annotation></semantics></math>,
+которое в источнике определяется как:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑯</mi><mo>=</mo><mi mathvariant="bold-italic">𝑩</mi><mo>−</mo><mfrac><mi mathvariant="bold-italic">𝑴</mi><mrow><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup></mrow></mfrac></mrow><annotation encoding="application/x-tex">\mathbf{H} = \mathbf{B} - \frac{\mathbf{M}}{\epsilon_0 c^2}</annotation></semantics></math>
+Это позволяет переписать уравнение Максвелла для стационарного случая в
+виде:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup><mi>∇</mi><mo>×</mo><mi mathvariant="bold-italic">𝑯</mi><mo>=</mo><msub><mi mathvariant="bold-italic">𝒋</mi><mtext mathvariant="normal">cond</mtext></msub></mrow><annotation encoding="application/x-tex">\epsilon_0 c^2 \nabla \times \mathbf{H} = \mathbf{j}_{\text{cond}}</annotation></semantics></math></p>
+<p><strong>Таблица 36-1: Единицы магнитных величин</strong> | Величина |
+Система СИ | Традиционные / Другие системы | | :--- | :--- | :--- | |
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+| Вебер / м² |
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>10</mn><mn>4</mn></msup><annotation encoding="application/x-tex">10^4</annotation></semantics></math>
+Гаусс | |
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑯</mi><annotation encoding="application/x-tex">\mathbf{H}</annotation></semantics></math>
+| Вебер / м² |
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>10</mn><mn>4</mn></msup><annotation encoding="application/x-tex">10^4</annotation></semantics></math>
+Гаусс (или Эрстед) | |
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑴</mi><annotation encoding="application/x-tex">\mathbf{M}</annotation></semantics></math>
+| Ампер / метр | - | |
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi mathvariant="bold-italic">𝑯</mi><mo mathvariant="bold">′</mo></msup><annotation encoding="application/x-tex">\mathbf{H&#39;}</annotation></semantics></math>
+(в СИ) | Ампер / метр |
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> (гаусс)</mtext></mrow><mo>=</mo><mn>0.0126</mn><msup><mi>H</mi><mo>′</mo></msup><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> (а/м)</mtext></mrow></mrow><annotation encoding="application/x-tex">H \text{ (гаусс)} = 0.0126 H&#39; \text{ (а/м)}</annotation></semantics></math>
+|</p>
+<p><em>Важное замечание:</em> В инженерной практике и различных системах
+единиц определения
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑯</mi><annotation encoding="application/x-tex">\mathbf{H}</annotation></semantics></math>
+могут существенно различаться, что требует осторожности при работе со
+справочниками.</p>
+<h3 id="23-кривая-намагничивания-и-гистерезис">2.3. Кривая
+намагничивания и гистерезис</h3>
+<p>Для ферромагнетиков не существует простой функциональной связи
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑩</mi><mo>=</mo><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi mathvariant="bold-italic">𝑯</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mathbf{B} = f(\mathbf{H})</annotation></semantics></math>.</p>
+<ul>
+<li><strong>Кривая намагничивания (Фиг. 36.8):</strong> При первом
+включении тока поле
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+растет по нелинейной кривой (a) до насыщения.</li>
+<li><strong>Петля гистерезиса:</strong> При уменьшении и последующем
+изменении направления тока
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+следует по ветвям (b) и (c). При
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">H=0</annotation></semantics></math>
+сохраняется остаточное намагничивание.</li>
+<li><strong>Энергетические потери:</strong> Площадь петли гистерезиса
+пропорциональна энергии, которая превращается в тепло в железе за один
+цикл:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi><mo>=</mo><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup><mo>∫</mo><mi>H</mi><mspace width="0.167em"></mspace><mi>d</mi><mi>B</mi></mrow><annotation encoding="application/x-tex">u = \epsilon_0 c^2 \int H \, dB</annotation></semantics></math></li>
+<li><strong>Магнитная проницаемость
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>μ</mi><annotation encoding="application/x-tex">\mu</annotation></semantics></math>):</strong>
+В случае малых петель гистерезиса используют приближение
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>=</mo><mi>μ</mi><mi>H</mi></mrow><annotation encoding="application/x-tex">B = \mu H</annotation></semantics></math>,
+где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>μ</mi><annotation encoding="application/x-tex">\mu</annotation></semantics></math>
+— проницаемость, достигающая у специальных сплавов (супермаллой)
+значений порядка миллиона.</li>
+</ul>
+<h3 id="24-электромагниты-и-зазоры">2.4. Электромагниты и зазоры</h3>
+<p>При расчете электромагнитов (Фиг. 36.10, 36.11) важным условием
+является непрерывность потока
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+через границу железо-воздух
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>B</mi><mn>1</mn></msub><mo>=</mo><msub><mi>B</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">B_1 = B_2</annotation></semantics></math>).
+Уравнение для контурного интеграла поля
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑯</mi><annotation encoding="application/x-tex">\mathbf{H}</annotation></semantics></math>
+принимает вид:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>1</mn></msub><msub><mi>l</mi><mn>1</mn></msub><mo>+</mo><msub><mi>H</mi><mn>2</mn></msub><msub><mi>l</mi><mn>2</mn></msub><mo>=</mo><mfrac><mrow><mi>N</mi><mi>I</mi></mrow><mrow><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup></mrow></mfrac></mrow><annotation encoding="application/x-tex">H_1 l_1 + H_2 l_2 = \frac{NI}{\epsilon_0 c^2}</annotation></semantics></math>
+Где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>l</mi><mn>1</mn></msub><annotation encoding="application/x-tex">l_1</annotation></semantics></math>
+— ширина зазора,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>l</mi><mn>2</mn></msub><annotation encoding="application/x-tex">l_2</annotation></semantics></math>
+— длина пути в железе. Поле в зазоре определяется графическим методом
+пересечения линии нагрузки и кривой намагничивания (Фиг. 36.12).</p>
+<hr />
+<h2 id="3-спонтанная-намагниченность-и-теория-вейсса">3. Спонтанная
+намагниченность и Теория Вейсса</h2>
+<p>Основной вопрос ферромагнетизма: почему атомные магнитики
+выстраиваются параллельно даже при очень малых полях?</p>
+<h3 id="31-локальное-поле-и-температура-кюри">3.1. Локальное поле и
+температура Кюри</h3>
+<p>Предполагается, что на отдельный атом действует локальное поле
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>B</mi><mi>a</mi></msub><annotation encoding="application/x-tex">B_a</annotation></semantics></math>,
+зависящее от средней намагниченности:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>B</mi><mi>a</mi></msub><mo>=</mo><mi>H</mi><mo>+</mo><mi>λ</mi><mfrac><mi>M</mi><mrow><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup></mrow></mfrac></mrow><annotation encoding="application/x-tex">B_a = H + \lambda \frac{M}{\epsilon_0 c^2}</annotation></semantics></math></p>
+<ul>
+<li><strong>Графическое решение (Фиг. 36.13, 36.14):</strong>
+Пересечение функции
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">tanh</mi><mo>&#8289;</mo></mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">\tanh x</annotation></semantics></math>
+(тепловое движение) и прямой линии (взаимодействие) определяет состояние
+системы.</li>
+<li><strong>Температура Кюри
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>T</mi><mi>c</mi></msub><annotation encoding="application/x-tex">T_c</annotation></semantics></math>):</strong>
+Температура, выше которой спонтанная намагниченность исчезает, и
+материал ведет себя как парамагнетик (закон Кюри-Вейсса):
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mi>M</mi><msub><mi>M</mi><mtext mathvariant="normal">sat</mtext></msub></mfrac><mo>=</mo><mfrac><mrow><mi>μ</mi><mi>H</mi></mrow><mrow><mi>k</mi><mo stretchy="false" form="prefix">(</mo><mi>T</mi><mo>−</mo><msub><mi>T</mi><mi>c</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{M}{M_{\text{sat}}} = \frac{\mu H}{k(T - T_c)}</annotation></semantics></math></li>
+</ul>
+<h3 id="32-провал-классической-теории">3.2. Провал классической
+теории</h3>
+<p>Источник указывает на критическое расхождение теории и эксперимента.
+Для никеля классический расчет коэффициента
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>λ</mi><annotation encoding="application/x-tex">\lambda</annotation></semantics></math>
+(сферическая полость,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi><mo>=</mo><mn>1</mn><mi>/</mi><mn>3</mn></mrow><annotation encoding="application/x-tex">\lambda=1/3</annotation></semantics></math>)
+дает
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mi>c</mi></msub><mo>=</mo><msup><mn>0.24</mn><mo>∘</mo></msup><mtext mathvariant="normal">K</mtext></mrow><annotation encoding="application/x-tex">T_c = 0.24^\circ \text{K}</annotation></semantics></math>,
+тогда как реальное значение составляет
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>631</mn><mo>∘</mo></msup><mtext mathvariant="normal">K</mtext></mrow><annotation encoding="application/x-tex">631^\circ \text{K}</annotation></semantics></math>.
+<strong>Вывод:</strong> Взаимодействие, ответственное за ферромагнетизм,
+имеет немагнитную природу. Это квантовомеханическое обменное
+взаимодействие, связанное с принципом запрета Паули.</p>
+<h3 id="33-доменная-структура">3.3. Доменная структура</h3>
+<p>Хотя микроскопически ферромагнетик намагничен спонтанно, большой
+кусок железа может иметь нулевой суммарный момент. Это объясняется
+наличием <strong>доменов</strong> — областей, намагниченных в разных
+направлениях. Процесс намагничивания макроскопического тела — это
+процесс переориентации этих доменов.</p>
+<hr />
+<h2 id="4-важные-цитаты">4. Важные цитаты</h2>
+<blockquote>
+<p>«В физическом мире не существует такой штуки, как "магнитный заряд".
+[...] Это, однако, не помешает нам провести искусственную аналогию [...]
+и использовать все старые электростатические уравнения».</p>
+</blockquote>
+<blockquote>
+<p>«Поле в зазоре зависит от того, как вы поступали в прошлом». (О
+влиянии гистерезиса на работу электромагнитов).</p>
+</blockquote>
+<blockquote>
+<p>«Наша теория ферромагнетизма полностью провалилась! [...] Мы
+вынуждены заключить, что в ферромагнетизме мы имеем дело с какими-то
+немагнитными взаимодействиями между вращающимися электронами соседних
+атомов».</p>
+</blockquote>
+<hr />
+<h2 id="5-практические-выводы-actionable-insights">5. Практические
+выводы (Actionable Insights)</h2>
+<ol type="1">
+<li><strong>Проектирование устройств:</strong> При создании
+трансформаторов и индуктивностей необходимо выбирать материалы с узкой
+петлей гистерезиса для минимизации тепловых потерь.</li>
+<li><strong>Выбор материалов:</strong> Для постоянных магнитов требуются
+сплавы с широкой петлей гистерезиса (например, Алнико V), обеспечивающие
+высокое остаточное поле.</li>
+<li><strong>Нелинейность:</strong> В высокоточных системах (например,
+звуковых усилителях) следует работать на линейных участках кривой
+намагничивания, в то время как для генерации гармоник намеренно
+используются нелинейные свойства сердечника.</li>
+<li><strong>Температурный режим:</strong> Необходимо учитывать, что при
+достижении температуры Кюри ферромагнитные свойства материала полностью
+исчезают, что критично для работы датчиков и исполнительных
+механизмов.</li>
+</ol>
+    </article>
+  </main>
+</body>
+</html>

@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Глава 32. Показатель преломления плотного вещества: Аналитический отчет - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch32.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1
+id="глава-32-показатель-преломления-плотного-вещества-аналитический-отчет">Глава
+32. Показатель преломления плотного вещества: Аналитический отчет</h1>
+<p>Настоящий документ представляет собой углубленный анализ механизмов
+преломления и поглощения электромагнитных волн в плотных средах
+(диэлектриках и металлах) на основе лекций Ричарда Фейнмана. В отчете
+рассматриваются физические основы поляризации, математическое описание
+комплексного показателя преломления и специфическое поведение радиоволн
+и света в проводящих материалах.</p>
+<h2 id="1-резюме-для-руководителей">1. Резюме для руководителей</h2>
+<p>Центральной идеей анализа является то, что показатель преломления
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>)
+не является просто константой скорости света в среде, а представляет
+собой результат сложной интерференции между падающим полем и вторичными
+волнами, излучаемыми осциллирующими диполями вещества. В плотных
+материалах этот процесс осложняется «локальным полем» (влиянием соседних
+атомов), что описывается формулой Клаузиуса — Моссотти.</p>
+<p><strong>Ключевые выводы:</strong></p>
+<ul>
+<li><strong>Комплексная природа
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>:</strong>
+Показатель преломления представим в виде
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><msub><mi>n</mi><mi>R</mi></msub><mo>−</mo><mi>i</mi><msub><mi>n</mi><mi>I</mi></msub></mrow><annotation encoding="application/x-tex">n = n_R - i n_I</annotation></semantics></math>,
+где мнимая часть отвечает за поглощение (затухание) энергии.</li>
+<li><strong>Металлы как предельный случай:</strong> В металлах свободные
+электроны (отсутствие восстанавливающей силы) определяют оптические
+свойства.</li>
+<li><strong>Частотная зависимость:</strong> На низких частотах металлы
+практически полностью поглощают или отражают волны (скин-эффект), но
+выше определенной «плазменной частоты» становятся прозрачными.</li>
+<li><strong>Универсальность теории:</strong> Математический аппарат
+применим ко всем средам со свободными зарядами — от меди до ионосферы и
+звездных атмосфер.</li>
+</ul>
+<hr />
+<h2 id="2-анализ-ключевых-тем">2. Анализ ключевых тем</h2>
+<h3 id="21-механизм-поляризации-и-уравнения-максвелла">2.1. Механизм
+поляризации и уравнения Максвелла</h3>
+<p>Физический процесс преломления начинается с того, что электрическое
+поле световой волны поляризует молекулы, создавая осциллирующие
+дипольные моменты. Ускорение зарядов приводит к излучению новых волн,
+которые, интерферируя с исходной, создают фазовый сдвиг.</p>
+<p>В плотных средах уравнения Максвелла учитывают поляризационные заряды
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ρ</mi><mtext mathvariant="normal">pol</mtext></msub><mo>=</mo><mi>−</mi><mi>∇</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝑷</mi></mrow><annotation encoding="application/x-tex">\rho_{\text{pol}} = -\nabla \cdot \mathbf{P}</annotation></semantics></math>)
+и токи
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="bold-italic">𝒋</mi><mtext mathvariant="normal">pol</mtext></msub><mo>=</mo><mi>∂</mi><mi mathvariant="bold-italic">𝑷</mi><mi>/</mi><mi>∂</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">\mathbf{j}_{\text{pol}} = \partial \mathbf{P}/\partial t</annotation></semantics></math>).
+Это приводит к модифицированному волновому уравнению, где даламбертиан
+поля
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>
+зависит от поляризации
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑷</mi><annotation encoding="application/x-tex">\mathbf{P}</annotation></semantics></math>:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>∇</mi><mn>2</mn></msup><mi mathvariant="bold-italic">𝑬</mi><mo>−</mo><mfrac><mn>1</mn><msup><mi>c</mi><mn>2</mn></msup></mfrac><mfrac><mrow><msup><mi>∂</mi><mn>2</mn></msup><mi mathvariant="bold-italic">𝑬</mi></mrow><mrow><mi>∂</mi><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac><mo>=</mo><mi>−</mi><mfrac><mn>1</mn><msub><mi>ϵ</mi><mn>0</mn></msub></mfrac><mi>∇</mi><mo stretchy="false" form="prefix">(</mo><mi>∇</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝑷</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mfrac><mn>1</mn><mrow><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup></mrow></mfrac><mfrac><mrow><msup><mi>∂</mi><mn>2</mn></msup><mi mathvariant="bold-italic">𝑷</mi></mrow><mrow><mi>∂</mi><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac></mrow><annotation encoding="application/x-tex">\nabla^2\mathbf{E} - \frac{1}{c^2}\frac{\partial^2\mathbf{E}}{\partial t^2} = -\frac{1}{\epsilon_0}\nabla(\nabla\cdot\mathbf{P}) + \frac{1}{\epsilon_0 c^2}\frac{\partial^2\mathbf{P}}{\partial t^2}</annotation></semantics></math></p>
+<h3 id="22-плотные-диэлектрики-и-локальное-поле">2.2. Плотные
+диэлектрики и локальное поле</h3>
+<p>В отличие от разреженных газов, в плотном веществе на атом действует
+не среднее макроскопическое поле
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>,
+а «локальное поле»
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="bold-italic">𝑬</mi><mtext mathvariant="normal">local</mtext></msub><annotation encoding="application/x-tex">\mathbf{E}_{\text{local}}</annotation></semantics></math>,
+усиленное вкладом соседних диполей:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="bold-italic">𝑬</mi><mtext mathvariant="normal">local</mtext></msub><mo>=</mo><mi mathvariant="bold-italic">𝑬</mi><mo>+</mo><mfrac><mi mathvariant="bold-italic">𝑷</mi><mrow><mn>3</mn><msub><mi>ϵ</mi><mn>0</mn></msub></mrow></mfrac></mrow><annotation encoding="application/x-tex">\mathbf{E}_{\text{local}} = \mathbf{E} + \frac{\mathbf{P}}{3\epsilon_0}</annotation></semantics></math></p>
+<p>Это различие приводит к <strong>формуле Клаузиуса —
+Моссотти</strong>, связывающей макроскопический показатель преломления с
+микроскопической поляризуемостью атомов
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>α</mi><annotation encoding="application/x-tex">\alpha</annotation></semantics></math>:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mfrac><mrow><msup><mi>n</mi><mn>2</mn></msup><mo>−</mo><mn>1</mn></mrow><mrow><msup><mi>n</mi><mn>2</mn></msup><mo>+</mo><mn>2</mn></mrow></mfrac><mo>=</mo><mi>N</mi><mi>α</mi></mrow><annotation encoding="application/x-tex">3 \frac{n^2-1}{n^2+2} = N\alpha</annotation></semantics></math></p>
+<h3 id="23-комплексный-показатель-преломления-и-поглощение">2.3.
+Комплексный показатель преломления и поглощение</h3>
+<p>Если учитывать силу торможения (затухание) в атомных осцилляторах,
+показатель преломления становится комплексным:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><msub><mi>n</mi><mi>R</mi></msub><mo>−</mo><mi>i</mi><msub><mi>n</mi><mi>I</mi></msub></mrow><annotation encoding="application/x-tex">n = n_R - i n_I</annotation></semantics></math>.</p>
+<ul>
+<li><strong>Вещественная часть
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>n</mi><mi>R</mi></msub><annotation encoding="application/x-tex">n_R</annotation></semantics></math>):</strong>
+Определяет фазовую скорость распространения
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>v</mi><mtext mathvariant="normal">ph</mtext></msub><mo>=</mo><mi>c</mi><mi>/</mi><msub><mi>n</mi><mi>R</mi></msub></mrow><annotation encoding="application/x-tex">v_{\text{ph}} = c/n_R</annotation></semantics></math>).</li>
+<li><strong>Мнимая часть
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>n</mi><mi>I</mi></msub><annotation encoding="application/x-tex">n_I</annotation></semantics></math>):</strong>
+Определяет коэффициент поглощения
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>β</mi><mo>=</mo><mn>2</mn><mi>ω</mi><msub><mi>n</mi><mi>I</mi></msub><mi>/</mi><mi>c</mi></mrow><annotation encoding="application/x-tex">\beta = 2\omega n_I/c</annotation></semantics></math>.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Параметр</th>
+<th style="text-align: left;">Физический смысл</th>
+<th style="text-align: left;">Математическое выражение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Амплитуда</strong></td>
+<td style="text-align: left;">Затухание волны по оси
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>z</mi><annotation encoding="application/x-tex">z</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mn>0</mn></msub><msup><mi>e</mi><mrow><mi>−</mi><mi>ω</mi><msub><mi>n</mi><mi>I</mi></msub><mi>z</mi><mi>/</mi><mi>c</mi></mrow></msup></mrow><annotation encoding="application/x-tex">E_0 e^{-\omega n_I z/c}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Интенсивность</strong></td>
+<td style="text-align: left;">Потеря энергии в среде</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Intensity</mtext><mo>∝</mo><msup><mi>e</mi><mrow><mi>−</mi><mi>β</mi><mi>z</mi></mrow></msup></mrow><annotation encoding="application/x-tex">\text{Intensity} \propto e^{-\beta z}</annotation></semantics></math></td>
+</tr>
+</tbody>
+</table>
+<p>[SOURCE_IMAGE_1] демонстрирует график напряженности поля
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>E</mi><mi>x</mi></msub><annotation encoding="application/x-tex">E_x</annotation></semantics></math>,
+где волна синусоидально осциллирует с частотой
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ω</mi><annotation encoding="application/x-tex">\omega</annotation></semantics></math>,
+но ее огибающая экспоненциально убывает из-за множителя
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>−</mi><mi>ω</mi><msub><mi>n</mi><mi>I</mi></msub><mi>z</mi><mi>/</mi><mi>c</mi></mrow></msup><annotation encoding="application/x-tex">e^{-\omega n_I z/c}</annotation></semantics></math>.</p>
+<hr />
+<h2 id="3-волны-в-металлах-и-проводниках">3. Волны в металлах и
+проводниках</h2>
+<h3 id="31-модель-свободных-электронов">3.1. Модель свободных
+электронов</h3>
+<p>В металлах электроны проводимости не имеют восстанавливающей силы
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ω</mi><mn>0</mn></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\omega_0 = 0</annotation></semantics></math>).
+Поле, действующее на них, в среднем равно макроскопическому полю
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>,
+так как они постоянно перемещаются [SOURCE_IMAGE_2]. Уравнение для
+показателя преломления в металле принимает вид:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>n</mi><mn>2</mn></msup><mo>=</mo><mn>1</mn><mo>+</mo><mfrac><mrow><mi>σ</mi><mi>/</mi><msub><mi>ϵ</mi><mn>0</mn></msub></mrow><mrow><mi>i</mi><mi>ω</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>i</mi><mi>ω</mi><mi>τ</mi><mo stretchy="false" form="postfix">)</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">n^2 = 1 + \frac{\sigma/\epsilon_0}{i\omega(1 + i\omega\tau)}</annotation></semantics></math>
+где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>σ</mi><annotation encoding="application/x-tex">\sigma</annotation></semantics></math>
+— проводимость, а
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>τ</mi><annotation encoding="application/x-tex">\tau</annotation></semantics></math>
+— среднее время между соударениями электронов.</p>
+<h3 id="32-низкочастотный-предел-и-скин-слой">3.2. Низкочастотный предел
+и скин-слой</h3>
+<p>На низких частотах
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ω</mi><mo>≪</mo><mn>1</mn><mi>/</mi><mi>τ</mi></mrow><annotation encoding="application/x-tex">\omega \ll 1/\tau</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ω</mi><mo>≪</mo><mi>σ</mi><mi>/</mi><msub><mi>ϵ</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">\omega \ll \sigma/\epsilon_0</annotation></semantics></math>)
+волны проникают в металл на крайне малую глубину. Это расстояние
+называется <strong>глубиной скин-слоя
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>δ</mi><annotation encoding="application/x-tex">\delta</annotation></semantics></math>)</strong>:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>δ</mi><mo>=</mo><msqrt><mfrac><mrow><mn>2</mn><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup></mrow><mrow><mi>σ</mi><mi>ω</mi></mrow></mfrac></msqrt></mrow><annotation encoding="application/x-tex">\delta = \sqrt{\frac{2\epsilon_0 c^2}{\sigma\omega}}</annotation></semantics></math></p>
+<p>[SOURCE_IMAGE_3] иллюстрирует быстрое затухание амплитуды поперечной
+волны в металле. Для меди на частоте 10 ГГц
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>δ</mi><mo>≈</mo><mn>6.7</mn><mo>×</mo><msup><mn>10</mn><mrow><mi>−</mi><mn>5</mn></mrow></msup></mrow><annotation encoding="application/x-tex">\delta \approx 6.7 \times 10^{-5}</annotation></semantics></math>
+см.</p>
+<h3 id="33-высокочастотный-предел-и-плазменная-частота">3.3.
+Высокочастотный предел и плазменная частота</h3>
+<p>На очень высоких частотах металл ведет себя как прозрачный диэлектрик
+с показателем преломления меньше единицы:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>n</mi><mn>2</mn></msup><mo>=</mo><mn>1</mn><mo>−</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><msub><mi>ω</mi><mi>p</mi></msub><mi>ω</mi></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">n^2 = 1 - \left(\frac{\omega_p}{\omega}\right)^2</annotation></semantics></math>
+Где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ω</mi><mi>p</mi></msub><mo>=</mo><msqrt><mrow><mi>N</mi><msubsup><mi>q</mi><mi>e</mi><mn>2</mn></msubsup><mi>/</mi><msub><mi>ϵ</mi><mn>0</mn></msub><mi>m</mi></mrow></msqrt></mrow><annotation encoding="application/x-tex">\omega_p = \sqrt{Nq_e^2/\epsilon_0 m}</annotation></semantics></math>
+— <strong>плазменная частота</strong>. Если частота падающего света
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ω</mi><mo>&gt;</mo><msub><mi>ω</mi><mi>p</mi></msub></mrow><annotation encoding="application/x-tex">\omega &gt; \omega_p</annotation></semantics></math>,
+металл становится прозрачным.</p>
+<p><strong>Таблица: Критические длины волн прозрачности
+металлов</strong> | Металл | Экспериментальное значение
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>λ</mi><annotation encoding="application/x-tex">\lambda</annotation></semantics></math>,
+Å) | Теоретическое значение
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>λ</mi><mi>p</mi></msub><annotation encoding="application/x-tex">\lambda_p</annotation></semantics></math>,
+Å) | | :--- | :--- | :--- | | Li | 1550 | 1550 | | Na | 2100 | 2090 | |
+K | 3150 | 2870 | | Rb | 3400 | 3220 |</p>
+<hr />
+<h2 id="4-ключевые-цитаты-и-их-контекст">4. Ключевые цитаты и их
+контекст</h2>
+<blockquote>
+<p><strong>«Дифференциальные уравнения затуманивают физическую причину
+возникновения преломления (как результата интерференции вновь излученных
+волн с первоначальными), но зато они упрощают теорию плотного
+материала».</strong> <em>Контекст:</em> Фейнман объясняет переход от
+качественного описания интерференции к строгому математическому аппарату
+Максвелла для решения задач в плотных средах.</p>
+</blockquote>
+<blockquote>
+<p><strong>«Мнимая часть показателя преломления представляет затухание
+волны из-за потерь энергии в атомных осцилляторах».</strong>
+<em>Контекст:</em> Обоснование физического смысла комплексных чисел в
+оптике, связывающее абстрактную математику с реальным поглощением света
+веществом.</p>
+</blockquote>
+<blockquote>
+<p><strong>«Для связи с искусственными спутниками Земли должны
+применяться короткие волны».</strong> <em>Контекст:</em> Практическое
+приложение теории плазменной частоты к ионосфере Земли, которая отражает
+длинные радиоволны (где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ω</mi><mo>&lt;</mo><msub><mi>ω</mi><mi>p</mi></msub></mrow><annotation encoding="application/x-tex">\omega &lt; \omega_p</annotation></semantics></math>),
+но прозрачна для высоких частот.</p>
+</blockquote>
+<hr />
+<h2 id="5-практические-выводы-и-идеи">5. Практические выводы и идеи</h2>
+<ol type="1">
+<li><strong>Проверка чистоты и концентрации веществ:</strong> Согласно
+данным по растворам сахарозы (Таблица 32.2), формула Клаузиуса —
+Моссотти позволяет с высокой точностью определять поляризуемость молекул
+и прогнозировать показатель преломления смесей, если известны свойства
+компонентов.</li>
+<li><strong>Проектирование волноводов и резонаторов:</strong> Благодаря
+крайне малой глубине скин-слоя в металлах, для минимизации потерь в
+высокочастотных устройствах достаточно тонкого слоя золочения или
+серебрения внутренней поверхности, так как токи текут только в
+поверхностном слое.</li>
+<li><strong>Оптические фильтры:</strong> Металлические напыления могут
+использоваться для создания селективных фильтров. Например, тонкий слой
+золота пропускает видимый свет (зеленоватый оттенок), но эффективно
+поглощает и отражает инфракрасное излучение, что используется в защитных
+очках для работы у печей.</li>
+<li><strong>Анализ состояния плазмы:</strong> Измерение частоты, при
+которой среда становится прозрачной, позволяет напрямую вычислить
+плотность свободных электронов
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>N</mi><annotation encoding="application/x-tex">N</annotation></semantics></math>)
+в плазме или металле.</li>
+</ol>
+    </article>
+  </main>
+</body>
+</html>

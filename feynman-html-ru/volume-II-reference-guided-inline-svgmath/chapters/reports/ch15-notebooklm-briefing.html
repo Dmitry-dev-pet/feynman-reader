@@ -1,0 +1,324 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Аналитический отчет: Глава 15. Векторный потенциал - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch15.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1 id="аналитический-отчет-глава-15-векторный-потенциал">Аналитический
+отчет: Глава 15. Векторный потенциал</h1>
+<p>Данный документ представляет собой всесторонний анализ главы 15
+«Фейнмановских лекций по физике», посвященной концепции векторного
+потенциала
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>A</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{A}</annotation></semantics></math>).
+В отчете рассматриваются механические и электрические аспекты энергии
+токов, переход от классического к квантовому описанию электромагнетизма
+и физическая реальность потенциалов.</p>
+<hr />
+<h2 id="1-резюме-executive-summary">1. Резюме (Executive Summary)</h2>
+<p>Основная цель главы — обосновать переход от использования векторов
+магнитного поля
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>B</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{B}</annotation></semantics></math>)
+к векторному потенциалу
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>A</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{A}</annotation></semantics></math>)
+как более фундаментальной физической величине.</p>
+<p><strong>Ключевые выводы:</strong></p>
+<ul>
+<li><strong>Энергетический баланс:</strong> При перемещении петли с
+током в магнитном поле механическая работа в точности компенсируется
+электрической работой источника, поддерживающего ток. Полная энергия
+системы в два раза превышает «механическую» энергию и имеет
+противоположный знак
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>U</mi><mrow><mi>t</mi><mi>o</mi><mi>t</mi><mi>a</mi><mi>l</mi></mrow></msub><mo>=</mo><mi>−</mi><msub><mi>U</mi><mrow><mi>m</mi><mi>e</mi><mi>c</mi><mi>h</mi></mrow></msub><mo>=</mo><mover><mi>μ</mi><mo accent="true">→</mo></mover><mo>⋅</mo><mover><mi>B</mi><mo accent="true">→</mo></mover></mrow><annotation encoding="application/x-tex">U_{total} = -U_{mech} = \vec{\mu} \cdot \vec{B}</annotation></semantics></math>).</li>
+<li><strong>Физическая реальность
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>A</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{A}</annotation></semantics></math>:</strong>
+В классической механике
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>A</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{A}</annotation></semantics></math>
+можно считать математическим удобством. Однако в квантовой механике
+векторный потенциал является «реальным» полем, так как он напрямую
+определяет фазу волновой функции частицы.</li>
+<li><strong>Эффект Аронова — Бома:</strong> Экспериментально доказано,
+что магнитное поле может влиять на движение электронов (через изменение
+интерференционной картины), даже если электроны проходят только через
+области, где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>B</mi><mo accent="true">→</mo></mover><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\vec{B} = 0</annotation></semantics></math>,
+но
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>A</mi><mo accent="true">→</mo></mover><mo>≠</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\vec{A} \neq 0</annotation></semantics></math>.</li>
+<li><strong>Динамика против статики:</strong> Статические формулы (закон
+Кулона, закон Ампера) являются лишь частными случаями. В динамике
+влияние зарядов и токов распространяется с конечной скоростью
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>c</mi><annotation encoding="application/x-tex">c</annotation></semantics></math>,
+что требует использования запаздывающих потенциалов.</li>
+</ul>
+<hr />
+<h2 id="2-подробный-анализ-ключевых-тем">2. Подробный анализ ключевых
+тем</h2>
+<h3 id="21-силы-и-энергия-магнитного-диполя">2.1. Силы и энергия
+магнитного диполя</h3>
+<p>Магнитная петля (диполь) в однородном поле испытывает вращательный
+момент, но не испытывает результирующей силы. В неоднородном поле на
+петлю действует сила, пропорциональная производной магнитного поля.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Параметр</th>
+<th style="text-align: left;">Формула</th>
+<th style="text-align: left;">Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Магнитный момент</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>μ</mi><mo accent="true">→</mo></mover><mo>=</mo><mi>I</mi><mi>A</mi><mover><mi>n</mi><mo accent="true">→</mo></mover></mrow><annotation encoding="application/x-tex">\vec{\mu} = IA\vec{n}</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>I</mi><annotation encoding="application/x-tex">I</annotation></semantics></math>
+— ток,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+— площадь,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>n</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{n}</annotation></semantics></math>
+— нормаль.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Вращательный момент</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>τ</mi><mo accent="true">→</mo></mover><mo>=</mo><mover><mi>μ</mi><mo accent="true">→</mo></mover><mo>×</mo><mover><mi>B</mi><mo accent="true">→</mo></mover></mrow><annotation encoding="application/x-tex">\vec{\tau} = \vec{\mu} \times \vec{B}</annotation></semantics></math></td>
+<td style="text-align: left;">Стремится развернуть момент по полю.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Механическая энергия</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>U</mi><mrow><mi>m</mi><mi>e</mi><mi>c</mi><mi>h</mi></mrow></msub><mo>=</mo><mi>−</mi><mover><mi>μ</mi><mo accent="true">→</mo></mover><mo>⋅</mo><mover><mi>B</mi><mo accent="true">→</mo></mover></mrow><annotation encoding="application/x-tex">U_{mech} = -\vec{\mu} \cdot \vec{B}</annotation></semantics></math></td>
+<td style="text-align: left;">Минимальна, когда
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>μ</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{\mu}</annotation></semantics></math>
+параллелен
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>B</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{B}</annotation></semantics></math>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Полная энергия</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>U</mi><mrow><mi>t</mi><mi>o</mi><mi>t</mi><mi>a</mi><mi>l</mi></mrow></msub><mo>=</mo><mover><mi>μ</mi><mo accent="true">→</mo></mover><mo>⋅</mo><mover><mi>B</mi><mo accent="true">→</mo></mover></mrow><annotation encoding="application/x-tex">U_{total} = \vec{\mu} \cdot \vec{B}</annotation></semantics></math></td>
+<td style="text-align: left;">Учитывает работу источников тока.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Физический смысл:</strong> Энергия
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>U</mi><mrow><mi>m</mi><mi>e</mi><mi>c</mi><mi>h</mi></mrow></msub><annotation encoding="application/x-tex">U_{mech}</annotation></semantics></math>
+— это «псевдоэнергия», удобная для расчета сил через принцип виртуальной
+работы при условии постоянства токов. Однако она не учитывает энергию,
+затрачиваемую батареей на противодействие ЭДС индукции при движении
+петли.</p>
+<h3 id="22-векторный-потенциал-в-квантовой-механике">2.2. Векторный
+потенциал в квантовой механике</h3>
+<p>В квантовом мире понятие силы
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>F</mi><mo accent="true">→</mo></mover><mo>=</mo><mi>q</mi><mover><mi>v</mi><mo accent="true">→</mo></mover><mo>×</mo><mover><mi>B</mi><mo accent="true">→</mo></mover></mrow><annotation encoding="application/x-tex">\vec{F} = q\vec{v} \times \vec{B}</annotation></semantics></math>)
+уступает место фазовым сдвигам. Взаимодействие частицы с магнитным полем
+описывается изменением фазы ее амплитуды вероятности.</p>
+<p><strong>Закон изменения фазы:</strong> Присутствие магнитного поля
+меняет фазу амплитуды на величину:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi mathvariant="normal">Φ</mi><mo>=</mo><mfrac><mi>q</mi><mi>ℏ</mi></mfrac><msub><mo>∫</mo><mrow><mi>t</mi><mi>r</mi><mi>a</mi><mi>j</mi><mi>e</mi><mi>c</mi><mi>t</mi><mi>o</mi><mi>r</mi><mi>y</mi></mrow></msub><mover><mi>A</mi><mo accent="true">→</mo></mover><mo>⋅</mo><mi>d</mi><mover><mi>s</mi><mo accent="true">→</mo></mover></mrow><annotation encoding="application/x-tex">\Delta \Phi = \frac{q}{\hbar} \int_{trajectory} \vec{A} \cdot d\vec{s}</annotation></semantics></math></p>
+<p><strong>Физический смысл эффекта Аронова — Бома:</strong> На примере
+интерференционного эксперимента (две щели и соленоид между ними)
+показано, что даже если магнитное поле
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>B</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{B}</annotation></semantics></math>
+полностью сосредоточено внутри соленоида (где электронов нет), наличие
+циркулирующего вокруг соленоида векторного потенциала
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>A</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{A}</annotation></semantics></math>
+приводит к наблюдаемому сдвигу интерференционных полос. Это
+подтверждает, что
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>A</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{A}</annotation></semantics></math>
+— фундаментальное поле, действующее локально на частицу.</p>
+<h3 id="23-переход-к-электродинамике">2.3. Переход к
+электродинамике</h3>
+<p>Глава устанавливает четкую границу между тем, что верно в статике, и
+тем, что остается верным в динамике.</p>
+<ul>
+<li><strong>Запаздывание:</strong> В динамике потенциалы в точке (1) в
+момент
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math>
+зависят от распределения зарядов и токов в точке (2) в более ранний
+момент времени
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>t</mi><mo>′</mo></msup><mo>=</mo><mi>t</mi><mo>−</mo><msub><mi>r</mi><mn>12</mn></msub><mi>/</mi><mi>c</mi></mrow><annotation encoding="application/x-tex">t&#39; = t - r_{12}/c</annotation></semantics></math>.</li>
+<li><strong>Уравнения Максвелла:</strong> Векторы
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>E</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{E}</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>B</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{B}</annotation></semantics></math>
+являются производными от потенциалов
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>A</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{A}</annotation></semantics></math>.
+В современной физике потенциалы вытесняют поля
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>E</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{E}</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>B</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{B}</annotation></semantics></math>
+из фундаментальных записей законов.</li>
+</ul>
+<hr />
+<h2 id="3-сводная-таблица-статика-vs-динамика">3. Сводная таблица:
+Статика vs Динамика</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Концепция</th>
+<th style="text-align: left;">Верно только в статике</th>
+<th style="text-align: left;"><strong>Верно ВСЕГДА</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Сила</strong></td>
+<td style="text-align: left;">Закон Кулона</td>
+<td style="text-align: left;">Сила Лоренца:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>F</mi><mo accent="true">→</mo></mover><mo>=</mo><mi>q</mi><mo stretchy="false" form="prefix">(</mo><mover><mi>E</mi><mo accent="true">→</mo></mover><mo>+</mo><mover><mi>v</mi><mo accent="true">→</mo></mover><mo>×</mo><mover><mi>B</mi><mo accent="true">→</mo></mover><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\vec{F} = q(\vec{E} + \vec{v} \times \vec{B})</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Ротор
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>E</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{E}</annotation></semantics></math></strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>∇</mi><mo accent="true">→</mo></mover><mo>×</mo><mover><mi>E</mi><mo accent="true">→</mo></mover><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\vec{\nabla} \times \vec{E} = 0</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>∇</mi><mo accent="true">→</mo></mover><mo>×</mo><mover><mi>E</mi><mo accent="true">→</mo></mover><mo>=</mo><mi>−</mi><mi>∂</mi><mover><mi>B</mi><mo accent="true">→</mo></mover><mi>/</mi><mi>∂</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">\vec{\nabla} \times \vec{E} = -\partial \vec{B} / \partial t</annotation></semantics></math>
+(Закон Фарадея)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Потенциал
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>E</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{E}</annotation></semantics></math></strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>E</mi><mo accent="true">→</mo></mover><mo>=</mo><mi>−</mi><mover><mi>∇</mi><mo accent="true">→</mo></mover><mi>ϕ</mi></mrow><annotation encoding="application/x-tex">\vec{E} = -\vec{\nabla}\phi</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>E</mi><mo accent="true">→</mo></mover><mo>=</mo><mi>−</mi><mover><mi>∇</mi><mo accent="true">→</mo></mover><mi>ϕ</mi><mo>−</mo><mi>∂</mi><mover><mi>A</mi><mo accent="true">→</mo></mover><mi>/</mi><mi>∂</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">\vec{E} = -\vec{\nabla}\phi - \partial \vec{A} / \partial t</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Ротор
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>B</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{B}</annotation></semantics></math></strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>c</mi><mn>2</mn></msup><mover><mi>∇</mi><mo accent="true">→</mo></mover><mo>×</mo><mover><mi>B</mi><mo accent="true">→</mo></mover><mo>=</mo><mover><mi>j</mi><mo accent="true">→</mo></mover><mi>/</mi><msub><mi>ϵ</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">c^2 \vec{\nabla} \times \vec{B} = \vec{j}/\epsilon_0</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>c</mi><mn>2</mn></msup><mover><mi>∇</mi><mo accent="true">→</mo></mover><mo>×</mo><mover><mi>B</mi><mo accent="true">→</mo></mover><mo>=</mo><mover><mi>j</mi><mo accent="true">→</mo></mover><mi>/</mi><msub><mi>ϵ</mi><mn>0</mn></msub><mo>+</mo><mi>∂</mi><mover><mi>E</mi><mo accent="true">→</mo></mover><mi>/</mi><mi>∂</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">c^2 \vec{\nabla} \times \vec{B} = \vec{j}/\epsilon_0 + \partial \vec{E} / \partial t</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Уравнение Пуассона</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>∇</mi><mn>2</mn></msup><mi>ϕ</mi><mo>=</mo><mi>−</mi><mi>ρ</mi><mi>/</mi><msub><mi>ϵ</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">\nabla^2 \phi = -\rho/\epsilon_0</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>∇</mi><mn>2</mn></msup><mi>ϕ</mi><mo>−</mo><mfrac><mn>1</mn><msup><mi>c</mi><mn>2</mn></msup></mfrac><mfrac><mrow><msup><mi>∂</mi><mn>2</mn></msup><mi>ϕ</mi></mrow><mrow><mi>∂</mi><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac><mo>=</mo><mi>−</mi><mi>ρ</mi><mi>/</mi><msub><mi>ϵ</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">\nabla^2 \phi - \frac{1}{c^2}\frac{\partial^2 \phi}{\partial t^2} = -\rho/\epsilon_0</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Интеграл потенциала</strong></td>
+<td style="text-align: left;">Обычный объемный интеграл</td>
+<td style="text-align: left;">Интеграл с запаздыванием
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>t</mi><mo>′</mo></msup><mo>=</mo><mi>t</mi><mo>−</mo><mi>r</mi><mi>/</mi><mi>c</mi></mrow><annotation encoding="application/x-tex">t&#39; = t - r/c</annotation></semantics></math>)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4-иллюстративный-ряд-описание-по-источнику">4. Иллюстративный
+ряд (описание по источнику)</h2>
+<ul>
+<li><strong>Фиг. 15.1:</strong> Прямоугольная петля в поле
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>B</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{B}</annotation></semantics></math>.
+Демонстрирует возникновение вращающего момента
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>τ</mi><mo accent="true">→</mo></mover><mo>=</mo><mover><mi>μ</mi><mo accent="true">→</mo></mover><mo>×</mo><mover><mi>B</mi><mo accent="true">→</mo></mover></mrow><annotation encoding="application/x-tex">\vec{\tau} = \vec{\mu} \times \vec{B}</annotation></semantics></math>
+и плечо силы
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mi>θ</mi></mrow><annotation encoding="application/x-tex">a \sin\theta</annotation></semantics></math>.</li>
+<li><strong>Фиг. 15.4:</strong> Показывает, как энергию большого контура
+можно представить как сумму энергий бесконечно малых петелек, что
+приводит к интегральной форме
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>=</mo><mi>I</mi><mo>∮</mo><mover><mi>A</mi><mo accent="true">→</mo></mover><mo>⋅</mo><mi>d</mi><mover><mi>s</mi><mo accent="true">→</mo></mover></mrow><annotation encoding="application/x-tex">U = I \oint \vec{A} \cdot d\vec{s}</annotation></semantics></math>.</li>
+<li><strong>Фиг. 15.6 и 15.7:</strong> Ключевые схемы эксперимента
+Аронова — Бома. Длинный соленоид создает поле
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>B</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{B}</annotation></semantics></math>
+только внутри себя, но векторный потенциал
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>A</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{A}</annotation></semantics></math>
+существует снаружи и сдвигает фазы электронных волн, проходящих
+мимо.</li>
+<li><strong>Фиг. 15.10:</strong> Визуализация принципа запаздывания.
+Сигнал от источника в точке (2) достигает точки наблюдения (1) со
+скоростью света, определяя потенциал в текущий момент времени.</li>
+</ul>
+<hr />
+<h2 id="5-важные-цитаты-и-их-контекст">5. Важные цитаты и их
+контекст</h2>
+<blockquote>
+<p><em>«В квантовой механике фундаментальными величинами являются
+импульс и энергия... самый прямой путь введения электромагнитных
+эффектов — сделать это с помощью
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>A</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{A}</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>.»</em></p>
+</blockquote>
+<ul>
+<li><strong>Контекст:</strong> Объяснение того, почему в современной
+физике понятие «силы» отходит на второй план, а потенциалы становятся
+первичными.</li>
+</ul>
+<blockquote>
+<p><em>«Квантовая механика утверждает, что наличие магнитного поля в
+соленоиде можно установить, просто обойдя его, даже не приближаясь к
+нему вплотную!»</em></p>
+</blockquote>
+<ul>
+<li><strong>Контекст:</strong> Описание фундаментального отличия
+квантового предсказания от классических представлений, где сила
+действует только при непосредственном контакте с полем
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>B</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{B}</annotation></semantics></math>.</li>
+</ul>
+<blockquote>
+<p><em>«Занятно, что подобные вещи могут тридцать лет быть на виду у
+всех, но из-за определенных предрассудков... могут всеми
+игнорироваться.»</em></p>
+</blockquote>
+<ul>
+<li><strong>Контекст:</strong> Комментарий Фейнмана об истории эффекта
+Аронова — Бома (предложен в 1956 г.), который фактически содержался в
+уравнениях Шредингера с 1926 г., но не осознавался как физический
+эффект.</li>
+</ul>
+<hr />
+<h2 id="6-практические-выводы-actionable-insights">6. Практические
+выводы (Actionable Insights)</h2>
+<ol type="1">
+<li><strong>Приоритет потенциалов:</strong> При анализе квантовых систем
+или задач электродинамики следует начинать с вычисления
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>A</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{A}</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>,
+а не
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>E</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{E}</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>B</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{B}</annotation></semantics></math>.</li>
+<li><strong>Осторожность с энергией:</strong> Нельзя использовать
+выражение
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>∫</mo><mi>ρ</mi><mi>ϕ</mi><mi>d</mi><mi>V</mi></mrow><annotation encoding="application/x-tex">U = \frac{1}{2} \int \rho\phi dV</annotation></semantics></math>
+или
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>∫</mo><mover><mi>j</mi><mo accent="true">→</mo></mover><mover><mi>A</mi><mo accent="true">→</mo></mover><mi>d</mi><mi>V</mi></mrow><annotation encoding="application/x-tex">\frac{1}{2} \int \vec{j} \vec{A} dV</annotation></semantics></math>
+для быстро меняющихся полей; эти формулы — строгая статика.</li>
+<li><strong>Локальность взаимодействия:</strong> Для корректного
+описания взаимодействия частицы с полем необходимо знать значение
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>A</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{A}</annotation></semantics></math>
+непосредственно в месте нахождения частицы, даже если
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>B</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{B}</annotation></semantics></math>
+там отсутствует.</li>
+<li><strong>Учет запаздывания:</strong> В динамических задачах (антенны,
+излучение) любые изменения в распределении зарядов должны рассчитываться
+с учетом времени распространения сигнала до точки наблюдения.</li>
+</ol>
+    </article>
+  </main>
+</body>
+</html>

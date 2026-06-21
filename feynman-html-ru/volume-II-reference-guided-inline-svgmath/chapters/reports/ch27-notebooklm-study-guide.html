@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Глава 27. Энергия поля и импульс поля - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch27.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1 id="глава-27-энергия-поля-и-импульс-поля">Глава 27. Энергия поля и
+импульс поля</h1>
+<p>Это учебное пособие посвящено анализу механизмов сохранения энергии и
+импульса в электромагнитных полях. Глава рассматривает переход от
+«всемирных» к «локальным» законам сохранения, выводит фундаментальные
+формулы плотности энергии и вектора Пойнтинга, а также объясняет
+парадоксальные на первый взгляд физические явления, такие как поток
+энергии в статических полях.</p>
+<hr />
+<h2 id="1-ключевые-понятия">1. Ключевые понятия</h2>
+<h3 id="локальные-законы-сохранения">Локальные законы сохранения</h3>
+<p>В отличие от «всемирного» сохранения (где величина может просто
+исчезнуть в одной точке и мгновенно появиться в другой),
+<strong>локальное сохранение</strong> утверждает: если величина убывает
+в некотором объеме, она должна вытекать через его границы.</p>
+<ul>
+<li><strong>Математическая форма (для заряда):</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∇</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝒋</mi><mo>=</mo><mi>−</mi><mfrac><mrow><mi>∂</mi><mi>ρ</mi></mrow><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\nabla \cdot \mathbf{j} = -\frac{\partial \rho}{\partial t}</annotation></semantics></math>.</li>
+<li><strong>Релятивистская важность:</strong> Только локальные законы
+могут быть релятивистски инвариантными (лоренц-инвариантными), так как
+понятие одновременности для удаленных точек зависит от системы
+отсчета.</li>
+</ul>
+<h3 id="плотность-и-поток-энергии">Плотность и поток энергии</h3>
+<p>Энергия электромагнитного поля описывается двумя величинами:</p>
+<ol type="1">
+<li><strong>Плотность энергии
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>u</mi><annotation encoding="application/x-tex">u</annotation></semantics></math>):</strong>
+Количество энергии в единице объема.
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi><mo>=</mo><mfrac><msub><mi>ϵ</mi><mn>0</mn></msub><mn>2</mn></mfrac><msup><mi>E</mi><mn>2</mn></msup><mo>+</mo><mfrac><mrow><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup></mrow><mn>2</mn></mfrac><msup><mi>B</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">u = \frac{\epsilon_0}{2} E^2 + \frac{\epsilon_0 c^2}{2} B^2</annotation></semantics></math></li>
+<li><strong>Вектор Пойнтинга
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑺</mi><annotation encoding="application/x-tex">\mathbf{S}</annotation></semantics></math>):</strong>
+Поток энергии, то есть количество энергии, проходящее в единицу времени
+через единичную площадь, перпендикулярную потоку.
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑺</mi><mo>=</mo><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup><mo stretchy="false" form="prefix">(</mo><mi mathvariant="bold-italic">𝑬</mi><mo>×</mo><mi mathvariant="bold-italic">𝑩</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mathbf{S} = \epsilon_0 c^2 (\mathbf{E} \times \mathbf{B})</annotation></semantics></math></li>
+</ol>
+<h3 id="импульс-поля">Импульс поля</h3>
+<p>Поле обладает не только энергией, но и импульсом.</p>
+<ul>
+<li><strong>Плотность импульса
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝒈</mi><annotation encoding="application/x-tex">\mathbf{g}</annotation></semantics></math>):</strong>
+Количество импульса в единице объема. Связана с вектором Пойнтинга общим
+законом физики:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝒈</mi><mo>=</mo><mfrac><mi mathvariant="bold-italic">𝑺</mi><msup><mi>c</mi><mn>2</mn></msup></mfrac></mrow><annotation encoding="application/x-tex">\mathbf{g} = \frac{\mathbf{S}}{c^2}</annotation></semantics></math></li>
+<li><strong>Связь с массой:</strong> Энергии
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>U</mi><annotation encoding="application/x-tex">U</annotation></semantics></math>
+соответствует масса
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mi>/</mi><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">U/c^2</annotation></semantics></math>.
+Перемещение энергии всегда эквивалентно перемещению массы, что
+необходимо для сохранения положения центра масс системы.</li>
+</ul>
+<hr />
+<h2 id="2-примеры-потоков-энергии-в-различных-системах">2. Примеры
+потоков энергии в различных системах</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Система</th>
+<th style="text-align: left;">Описание потока энергии</th>
+<th style="text-align: left;">Физический смысл</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Световая волна</strong></td>
+<td style="text-align: left;">Энергия движется в направлении
+распространения волны.</td>
+<td style="text-align: left;">Интенсивность света
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⟨</mo><mi>S</mi><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><msub><mi>ϵ</mi><mn>0</mn></msub><mi>c</mi><mo stretchy="false" form="prefix">⟨</mo><msup><mi>E</mi><mn>2</mn></msup><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">\langle S \rangle = \epsilon_0 c \langle E^2 \rangle</annotation></semantics></math>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Заряжающийся
+конденсатор</strong></td>
+<td style="text-align: left;">Энергия входит в пространство между
+пластинами <strong>сбоку</strong>, через зазор.</td>
+<td style="text-align: left;">Поле создается внешними зарядами и
+«втекает» внутрь, а не идет по проводам.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Проводник с током</strong></td>
+<td style="text-align: left;">Энергия втекает в проводник
+<strong>радиально снаружи</strong>.</td>
+<td style="text-align: left;">Электроны получают энергию для нагрева из
+внешнего поля, созданного удаленными зарядами.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Статичный заряд и
+магнит</strong></td>
+<td style="text-align: left;">Энергия циркулирует по замкнутым петлям
+вокруг системы.</td>
+<td style="text-align: left;">Хотя энергия не меняется, поток
+существует. Это необходимо для сохранения момента количества
+движения.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3-проверочные-вопросы-short-answer-quiz">3. Проверочные вопросы
+(Short-Answer Quiz)</h2>
+<ol type="1">
+<li><strong>Почему закон сохранения заряда должен быть именно
+локальным?</strong>
+<ul>
+<li><em>Ответ:</em> Чтобы соответствовать принципу относительности. В
+разных системах отсчета события потери и приобретения заряда в удаленных
+точках не будут одновременными, что нарушило бы закон сохранения, если
+бы заряд не перемещался физически через пространство между ними.</li>
+</ul></li>
+<li><strong>Как записывается полное уравнение сохранения энергии поля
+при наличии вещества?</strong>
+<ul>
+<li><em>Ответ:</em>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mfrac><mrow><mi>∂</mi><mi>u</mi></mrow><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mi>∇</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝑺</mi><mo>+</mo><mi mathvariant="bold-italic">𝑬</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝒋</mi></mrow><annotation encoding="application/x-tex">-\frac{\partial u}{\partial t} = \nabla \cdot \mathbf{S} + \mathbf{E} \cdot \mathbf{j}</annotation></semantics></math>.
+Последнее слагаемое описывает работу поля над веществом.</li>
+</ul></li>
+<li><strong>Откуда берется энергия, выделяющаяся в виде тепла в обычном
+проводе с сопротивлением?</strong>
+<ul>
+<li><em>Ответ:</em> Из окружающего электромагнитного поля. Вектор
+Пойнтинга направлен внутрь провода из внешнего пространства.</li>
+</ul></li>
+<li><strong>Какова связь между импульсом поля и вектором
+Пойнтинга?</strong>
+<ul>
+<li><em>Ответ:</em> Плотность импульса
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝒈</mi><annotation encoding="application/x-tex">\mathbf{g}</annotation></semantics></math>
+равна вектору Пойнтинга
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑺</mi><annotation encoding="application/x-tex">\mathbf{S}</annotation></semantics></math>,
+деленному на
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>c</mi><mn>2</mn></msup><annotation encoding="application/x-tex">c^2</annotation></semantics></math>.</li>
+</ul></li>
+<li><strong>Существует ли поток энергии в системе, где точечный заряд
+неподвижно висит рядом с постоянным магнитом?</strong>
+<ul>
+<li><em>Ответ:</em> Да, вектор Пойнтинга в такой системе не равен нулю,
+и энергия циркулирует по кругу.</li>
+</ul></li>
+</ol>
+<hr />
+<h2 id="4-темы-для-глубокого-изучения-essay-prompts">4. Темы для
+глубокого изучения (Essay Prompts)</h2>
+<ul>
+<li><strong>«Неопределенность локализации энергии поля»:</strong>
+Обсудите тезис о том, что точное местонахождение энергии в пространстве
+экспериментально не подтверждено. Почему физики выбирают простейшие
+формулы для
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>u</mi><annotation encoding="application/x-tex">u</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑺</mi><annotation encoding="application/x-tex">\mathbf{S}</annotation></semantics></math>,
+и какие аргументы в пользу этого дает теория гравитации?</li>
+<li><strong>«Мысленный эксперимент Эйнштейна с вагоном»:</strong>
+Проанализируйте, как перемещение вспышки света внутри изолированного
+вагона доказывает наличие импульса у поля. Как это связано с сохранением
+положения центра масс?</li>
+<li><strong>«Парадокс момента количества движения»:</strong> Объясните,
+как циркулирующий поток энергии в статической системе «заряд + магнит»
+разрешает парадокс возникновения вращения при выключении тока в
+соленоиде.</li>
+</ul>
+<hr />
+<h2 id="5-типичные-ошибки-при-изучении-темы">5. Типичные ошибки при
+изучении темы</h2>
+<ul>
+<li><strong>Игнорирование члена
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑬</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝒋</mi></mrow><annotation encoding="application/x-tex">\mathbf{E} \cdot \mathbf{j}</annotation></semantics></math>:</strong>
+Часто забывают, что энергия поля сама по себе не сохраняется, если оно
+взаимодействует с зарядами (веществом).</li>
+<li><strong>Представление о потоке энергии «вдоль проводов»:</strong>
+Интуитивно кажется, что энергия течет по металлу провода, тогда как
+теория Пойнтинга показывает, что она втекает в него из окружающего
+пространства.</li>
+<li><strong>Разрыв связи между энергией и импульсом:</strong> Забывают,
+что любой поток энергии (даже в статике) неизбежно означает наличие
+импульса в этой области пространства.</li>
+<li><strong>Ошибка в векторном произведении:</strong> Путаница в
+направлении вектора
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑺</mi><mo>=</mo><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup><mo stretchy="false" form="prefix">(</mo><mi mathvariant="bold-italic">𝑬</mi><mo>×</mo><mi mathvariant="bold-italic">𝑩</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mathbf{S} = \epsilon_0 c^2 (\mathbf{E} \times \mathbf{B})</annotation></semantics></math>
+(например, направление
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑩</mi><mo>×</mo><mi mathvariant="bold-italic">𝑬</mi></mrow><annotation encoding="application/x-tex">\mathbf{B} \times \mathbf{E}</annotation></semantics></math>
+даст неверный знак потока).</li>
+</ul>
+<hr />
+<h2 id="6-краткий-глоссарий">6. Краткий глоссарий</h2>
+<ul>
+<li><strong>Вектор Пойнтинга
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑺</mi><annotation encoding="application/x-tex">\mathbf{S}</annotation></semantics></math>):</strong>
+Векторная величина, описывающая плотность потока электромагнитной
+энергии. Направлен перпендикулярно векторам
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>.</li>
+<li><strong>Дивергенция вектора Пойнтинга
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∇</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝑺</mi></mrow><annotation encoding="application/x-tex">\nabla \cdot \mathbf{S}</annotation></semantics></math>):</strong>
+Величина, определяющая скорость вытекания энергии из единицы
+объема.</li>
+<li><strong>Интенсивность света:</strong> Среднее значение потока
+энергии световой волны через единичную площадь за единицу времени.</li>
+<li><strong>Лоренцева инвариантность:</strong> Свойство физических
+законов сохранять свой вид при переходах между инерциальными системами
+отсчета.</li>
+<li><strong>Плотность импульса поля
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝒈</mi><annotation encoding="application/x-tex">\mathbf{g}</annotation></semantics></math>):</strong>
+Импульс, приходящийся на единицу объема электромагнитного поля; прямо
+пропорционален вектору Пойнтинга.</li>
+<li><strong>Четырехвектор:</strong> Релятивистское понятие, объединяющее
+энергию и импульс в единый математический объект.</li>
+</ul>
+    </article>
+  </main>
+</body>
+</html>

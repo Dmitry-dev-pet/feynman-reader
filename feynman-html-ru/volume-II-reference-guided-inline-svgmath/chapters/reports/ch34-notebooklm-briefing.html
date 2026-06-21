@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Аналитический отчет: Магнетизм вещества (Глава 34) - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch34.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1 id="аналитический-отчет-магнетизм-вещества-глава-34">Аналитический
+отчет: Магнетизм вещества (Глава 34)</h1>
+<p>Данный отчет представляет собой синтез материалов главы 34
+«Фейнмановских лекций по физике», посвященной физическим основам
+магнетизма в веществе. В документе рассматриваются классические и
+квантовомеханические интерпретации магнитных явлений, классификация
+магнетиков и фундаментальные теоремы, определяющие поведение атомов в
+магнитных полях.</p>
+<hr />
+<h2 id="1-резюме">1. Резюме</h2>
+<p>Магнетизм вещества — это исключительно квантовомеханическое явление.
+Несмотря на то что классическая физика позволяет описать некоторые
+аспекты диамагнетизма и парамагнетизма, последовательный классический
+анализ приводит к выводу об отсутствии любых магнитных эффектов в
+состоянии теплового равновесия. Основное различие между типами
+магнетизма заключается в наличии или отсутствии у атомов постоянных
+магнитных моментов и их реакции на внешнее поле.</p>
+<hr />
+<h2 id="2-основные-темы-и-анализ">2. Основные темы и анализ</h2>
+<h3 id="21-классификация-типов-магнетизма">2.1. Классификация типов
+магнетизма</h3>
+<p>В источнике выделяются три основных вида магнетизма, различающихся по
+силе эффекта и физической природе:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Тип магнетизма</th>
+<th style="text-align: left;">Механизм</th>
+<th style="text-align: left;">Сила эффекта</th>
+<th style="text-align: left;">Зависимость от температуры</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Диамагнетизм</strong></td>
+<td style="text-align: left;">Индуцированные токи (закон Ленца) в атомах
+без собственного момента.</td>
+<td style="text-align: left;">Очень слабый (отталкивание).</td>
+<td style="text-align: left;">Практически не зависит.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Парамагнетизм</strong></td>
+<td style="text-align: left;">Ориентация постоянных магнитных моментов
+по полю.</td>
+<td style="text-align: left;">Слабый (притяжение).</td>
+<td style="text-align: left;">Сильно зависит (усиливается при
+охлаждении).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Ферромагнетизм</strong></td>
+<td style="text-align: left;">Спонтанное выравнивание моментов из-за
+квантовых сил.</td>
+<td style="text-align: left;">Очень сильный (в
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>10</mn><mn>3</mn></msup><mi>–</mi><msup><mn>10</mn><mn>6</mn></msup></mrow><annotation encoding="application/x-tex">10^3–10^6</annotation></semantics></math>
+раз сильнее обычного).</td>
+<td style="text-align: left;">Зависит (обсуждается в спец. главах).</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ключевой эксперимент:</strong> Использование электромагнита с
+одним заостренным полюсом (Фиг. 34.1). Диамагнетики (например, висмут)
+выталкиваются из области сильного поля, парамагнетики (например,
+алюминий) — втягиваются.</p>
+<h3 id="22-магнитный-момент-и-момент-количества-движения">2.2. Магнитный
+момент и момент количества движения</h3>
+<p>Фундаментальная связь между магнитным моментом
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>μ</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{\mu}</annotation></semantics></math>)
+и моментом количества движения
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>J</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{J}</annotation></semantics></math>)
+является основой понимания магнетизма на атомном уровне.</p>
+<ul>
+<li><strong>Классическая орбита электрона:</strong> Магнитный момент
+пропорционален моменту количества движения:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>μ</mi><mo accent="true">→</mo></mover><mo>=</mo><mi>−</mi><mfrac><msub><mi>q</mi><mi>e</mi></msub><mrow><mn>2</mn><mi>m</mi></mrow></mfrac><mover><mi>J</mi><mo accent="true">→</mo></mover><mspace width="1.0em"></mspace><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">Eq: 34.4</mtext><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\vec{\mu} = -\frac{q_e}{2m}\vec{J} \quad (\text{Eq: 34.4})</annotation></semantics></math></li>
+<li><strong>Квантовый спин электрона:</strong> Отношение в два раза
+больше:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>μ</mi><mo accent="true">→</mo></mover><mo>=</mo><mi>−</mi><mfrac><msub><mi>q</mi><mi>e</mi></msub><mi>m</mi></mfrac><mover><mi>J</mi><mo accent="true">→</mo></mover><mspace width="1.0em"></mspace><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">Eq: 34.5</mtext><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\vec{\mu} = -\frac{q_e}{m}\vec{J} \quad (\text{Eq: 34.5})</annotation></semantics></math></li>
+<li><strong>Общий случай (Атом):</strong> Вводится фактор Ланде
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>g</mi><annotation encoding="application/x-tex">g</annotation></semantics></math>):
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>μ</mi><mo accent="true">→</mo></mover><mo>=</mo><mi>−</mi><mi>g</mi><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><msub><mi>q</mi><mi>e</mi></msub><mrow><mn>2</mn><mi>m</mi></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mover><mi>J</mi><mo accent="true">→</mo></mover><mspace width="1.0em"></mspace><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">Eq: 34.6</mtext><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\vec{\mu} = -g\left(\frac{q_e}{2m}\right)\vec{J} \quad (\text{Eq: 34.6})</annotation></semantics></math>
+<ul>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">g = 1</annotation></semantics></math>
+для орбитального движения;</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">g = 2</annotation></semantics></math>
+для спина электрона;</li>
+<li>Для ядер используется масса протона
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>m</mi><mi>p</mi></msub><annotation encoding="application/x-tex">m_p</annotation></semantics></math>
+(Eq: 34.7).</li>
+</ul></li>
+</ul>
+<h3 id="23-прецессия-и-теорема-лармора">2.3. Прецессия и теорема
+Лармора</h3>
+<p>Атомные магнитики в магнитном поле ведут себя как гироскопы.</p>
+<ul>
+<li><strong>Прецессия:</strong> Вместо поворота к полю
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>B</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{B}</annotation></semantics></math>,
+вектор
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>J</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{J}</annotation></semantics></math>
+вращается вокруг него (Фиг. 34.3). Угловая скорость прецессии:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ω</mi><mi>p</mi></msub><mo>=</mo><mi>g</mi><mfrac><mrow><msub><mi>q</mi><mi>e</mi></msub><mi>B</mi></mrow><mrow><mn>2</mn><mi>m</mi></mrow></mfrac><mspace width="1.0em"></mspace><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">Eq: 34.11</mtext><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\omega_p = g\frac{q_e B}{2m} \quad (\text{Eq: 34.11})</annotation></semantics></math></li>
+<li><strong>Теорема Лармора:</strong> Движение системы электронов в
+слабом магнитном поле идентично движению без поля, но с наложенным
+вращением с частотой Лармора
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ω</mi><mi>L</mi></msub><mo>=</mo><mfrac><mrow><msub><mi>q</mi><mi>e</mi></msub><mi>B</mi></mrow><mrow><mn>2</mn><mi>m</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\omega_L = \frac{q_e B}{2m}</annotation></semantics></math>.</li>
+</ul>
+<h3 id="24-теорема-об-отсутствии-классического-магнетизма">2.4. Теорема
+об отсутствии классического магнетизма</h3>
+<p>Один из наиболее важных выводов главы: <strong>классическая
+статистическая механика не может объяснить магнетизм</strong>. Согласно
+расчетам, если система находится в тепловом равновесии и ограничена
+стенками (не может вращаться как целое), полная энергия не зависит от
+магнитного поля (так как сила Лоренца не совершает работы).
+Следовательно, конфигурация скоростей и положений частиц остается
+неизменной, и суммарный наведенный магнитный момент равен нулю.
+Магнетизм существует в реальности только благодаря квантовым
+эффектам.</p>
+<hr />
+<h2 id="3-квантовомеханическое-описание">3. Квантовомеханическое
+описание</h2>
+<p>В квантовой механике момент количества движения и энергия принимают
+дискретные значения.</p>
+<h3 id="31-дискретность-состояний">3.1. Дискретность состояний</h3>
+<p>Для системы со спином
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math>
+компонента момента количества движения вдоль оси
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>z</mi><annotation encoding="application/x-tex">z</annotation></semantics></math>
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>J</mi><mi>z</mi></msub><annotation encoding="application/x-tex">J_z</annotation></semantics></math>)
+может принимать только
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>j</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">2j + 1</annotation></semantics></math>
+значений:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi><mi>ℏ</mi><mo>,</mo><mo stretchy="false" form="prefix">(</mo><mi>j</mi><mo>−</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mi>ℏ</mi><mo>,</mo><mi>…</mi><mo>,</mo><mi>−</mi><mi>j</mi><mi>ℏ</mi></mrow><annotation encoding="application/x-tex">j\hbar, (j-1)\hbar, \dots, -j\hbar</annotation></semantics></math></p>
+<ul>
+<li><strong>Пример:</strong> Для электрона
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi><mo>=</mo><mn>1</mn><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">j=1/2</annotation></semantics></math>)
+возможны только два состояния: спин «вверх» и спин «вниз» (Фиг.
+34.6).</li>
+<li><strong>Магнитная энергия:</strong> Уровни энергии расщепляются в
+магнитном поле:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>U</mi><mtext mathvariant="normal">mag</mtext></msub><mo>=</mo><mi>g</mi><msub><mi>μ</mi><mi>B</mi></msub><mi>B</mi><mfrac><msub><mi>J</mi><mi>z</mi></msub><mi>ℏ</mi></mfrac><mspace width="1.0em"></mspace><mrow><mtext mathvariant="normal">где </mtext><mspace width="0.333em"></mspace></mrow><msub><mi>μ</mi><mi>B</mi></msub><mo>=</mo><mfrac><mrow><msub><mi>q</mi><mi>e</mi></msub><mi>ℏ</mi></mrow><mrow><mn>2</mn><mi>m</mi></mrow></mfrac><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> (магнетон Бора)</mtext></mrow></mrow><annotation encoding="application/x-tex">U_{\text{mag}} = g \mu_B B \frac{J_z}{\hbar} \quad \text{где } \mu_B = \frac{q_e\hbar}{2m} \text{ (магнетон Бора)}</annotation></semantics></math></li>
+</ul>
+<h3 id="32-квадрат-момента-количества-движения">3.2. Квадрат момента
+количества движения</h3>
+<p>В квантовых расчетах квадрат вектора
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>J</mi><mo accent="true">→</mo></mover><mo>⋅</mo><mover><mi>J</mi><mo accent="true">→</mo></mover></mrow><annotation encoding="application/x-tex">\vec{J} \cdot \vec{J}</annotation></semantics></math>
+заменяется на:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>J</mi><mo accent="true">→</mo></mover><mo>⋅</mo><mover><mi>J</mi><mo accent="true">→</mo></mover><mo>=</mo><mi>j</mi><mo stretchy="false" form="prefix">(</mo><mi>j</mi><mo>+</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><msup><mi>ℏ</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\vec{J} \cdot \vec{J} = j(j+1)\hbar^2</annotation></semantics></math>
+Это означает, что момент количества движения никогда не может быть
+направлен «полностью» вдоль оси поля, так как максимальное значение
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>J</mi><mi>z</mi></msub><annotation encoding="application/x-tex">J_z</annotation></semantics></math>
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi><mi>ℏ</mi></mrow><annotation encoding="application/x-tex">j\hbar</annotation></semantics></math>)
+всегда меньше модуля вектора
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msqrt><mrow><mi>j</mi><mo stretchy="false" form="prefix">(</mo><mi>j</mi><mo>+</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow></msqrt><mi>ℏ</mi></mrow><annotation encoding="application/x-tex">\sqrt{j(j+1)}\hbar</annotation></semantics></math>).</p>
+<hr />
+<h2 id="4-иллюстративный-материал-и-формулы">4. Иллюстративный материал
+и формулы</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Фигура</th>
+<th style="text-align: left;">Описание</th>
+<th style="text-align: left;">Физический смысл</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Фиг. 34.1</strong></td>
+<td style="text-align: left;">Цилиндр висмута и алюминия в поле.</td>
+<td style="text-align: left;">Демонстрация диа- и парамагнетизма.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Фиг. 34.2</strong></td>
+<td style="text-align: left;">Круговая орбита электрона.</td>
+<td style="text-align: left;">Связь
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>μ</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{\mu}</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>J</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{J}</annotation></semantics></math>
+через параметры орбиты.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Фиг. 34.3</strong></td>
+<td style="text-align: left;">Векторная диаграмма прецессии.</td>
+<td style="text-align: left;">Геометрическое обоснование скорости
+прецессии
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ω</mi><mi>p</mi></msub><annotation encoding="application/x-tex">\omega_p</annotation></semantics></math>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Фиг. 34.4</strong></td>
+<td style="text-align: left;">Контур
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="normal">Γ</mi><annotation encoding="application/x-tex">\Gamma</annotation></semantics></math>
+вокруг атома.</td>
+<td style="text-align: left;">Индукция электрического поля при включении
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>B</mi><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{B}</annotation></semantics></math>,
+порождающая диамагнетизм.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Фиг. 34.5</strong></td>
+<td style="text-align: left;">4 уровня энергии для
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi><mo>=</mo><mn>3</mn><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">j=3/2</annotation></semantics></math>.</td>
+<td style="text-align: left;">Квантовое расщепление уровней в магнитном
+поле.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="5-важные-цитаты">5. Важные цитаты</h2>
+<ul>
+<li><strong>О природе явления:</strong> «...с точки зрения классической
+механики честным путем понять магнитные эффекты невозможно. Подобные
+магнитные эффекты — явления целиком квантовомеханические».</li>
+<li><strong>О диамагнетизме:</strong> «В соответствии с законом Ленца
+эти токи действуют так, чтобы сопротивляться увеличивающемуся магнитному
+полю. Таким образом, наведенный магнитный момент атомов направлен
+противоположно магнитному полю».</li>
+<li><strong>О парамагнетизме:</strong> «Магнитные моменты в этом случае
+стараются выстроиться по направлению магнитного поля... парамагнетизм
+обычно чувствителен к температуре».</li>
+<li><strong>Об аномалии нейтрона:</strong> «Крайне удивительно, что
+спиновый магнитный момент есть и у нейтрона... нейтрон в магнитном
+смысле не будет в точности "нейтральным"».</li>
+</ul>
+<hr />
+<h2 id="6-аналитические-выводы-actionable-insights">6. Аналитические
+выводы (Actionable Insights)</h2>
+<ol type="1">
+<li><strong>Признание ограничений классики:</strong> При анализе
+магнитных свойств материалов нельзя полагаться на классические модели,
+так как они предсказывают нулевой результат для систем в тепловом
+равновесии. Любое использование классических формул (например, для
+диамагнетизма) является лишь приближенной аналогией.</li>
+<li><strong>Температурный фактор:</strong> При проектировании систем с
+использованием парамагнетиков необходимо учитывать, что их эффективность
+резко падает с ростом температуры из-за теплового разупорядочивания.
+Диамагнетики, напротив, стабильны в широком диапазоне температур.</li>
+<li><strong>Квантовое расщепление:</strong> Взаимодействие атома с
+магнитным полем приводит к расщеплению энергетических уровней на
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>j</mi><mo>+</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">2j+1</annotation></semantics></math>
+подуровней. Это фундаментальный факт для спектроскопии и понимания
+магнитной энергии вещества.</li>
+<li><strong>Роль
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>g</mi><annotation encoding="application/x-tex">g</annotation></semantics></math>-фактора:</strong>
+Для точных расчетов необходимо знать не только спин системы, но и её
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>g</mi><annotation encoding="application/x-tex">g</annotation></semantics></math>-фактор,
+который определяет реальную силу взаимодействия магнитного момента с
+полем и частоту прецессии.</li>
+</ol>
+    </article>
+  </main>
+</body>
+</html>

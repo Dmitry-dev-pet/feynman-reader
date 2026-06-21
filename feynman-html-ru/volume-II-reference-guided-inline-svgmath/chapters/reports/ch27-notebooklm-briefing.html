@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Глава 27. Энергия поля и импульс поля: Аналитический отчет - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch27.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1 id="глава-27-энергия-поля-и-импульс-поля-аналитический-отчет">Глава
+27. Энергия поля и импульс поля: Аналитический отчет</h1>
+<p>Данный отчет представляет собой синтез ключевых концепций,
+математических формулировок и физических интерпретаций, изложенных в
+главе 27 «Фейнмановских лекций по физике». Рассматриваются
+фундаментальные вопросы локализации, потока и сохранения энергии и
+импульса в электромагнитных полях.</p>
+<h2 id="1-исполнительное-резюме">1. Исполнительное резюме</h2>
+<p>Традиционный закон сохранения энергии дополняется признанием того,
+что электромагнитное поле само по себе обладает энергией и импульсом.
+Основной сдвиг в парадигме заключается в переходе от «всемирного»
+(глобального) сохранения к <strong>локальному сохранению</strong>.
+Согласно этой концепции, энергия не может просто исчезнуть в одной точке
+и появиться в другой; она должна физически протекать через пространство
+между ними. Математическим выражением этого процесса является вектор
+Пойнтинга
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑺</mi><annotation encoding="application/x-tex">\mathbf{S}</annotation></semantics></math>),
+описывающий поток энергии, и плотность энергии
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>u</mi><annotation encoding="application/x-tex">u</annotation></semantics></math>).
+Анализ показывает, что интуитивные представления о пути движения энергии
+(например, в проводах или конденсаторах) часто оказываются ошибочными, и
+только строгий математический аппарат Максвелла дает верную картину.</p>
+<h2 id="2-локальные-законы-сохранения-и-теория-относительности">2.
+Локальные законы сохранения и теория относительности</h2>
+<p>Локальное сохранение — это более сильная формулировка закона
+сохранения. Она утверждает, что изменение количества величины (заряда,
+энергии) внутри объема возможно только за счет ее протекания через
+границы этого объема.</p>
+<h3 id="сравнение-типов-сохранения-на-примере-заряда">Сравнение типов
+сохранения (на примере заряда)</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Тип сохранения</th>
+<th style="text-align: left;">Описание</th>
+<th style="text-align: left;">Совместимость с теорией
+относительности</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>«Всемирное»</strong></td>
+<td style="text-align: left;">Заряд исчезает в точке (1) и одновременно
+появляется в точке (2).</td>
+<td style="text-align: left;"><strong>Нет.</strong> Понятие
+одновременности относительно; в разных системах отсчета закон будет
+нарушаться.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Локальное</strong></td>
+<td style="text-align: left;">Заряд перемещается непрерывно; существует
+плотность тока
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝒋</mi><annotation encoding="application/x-tex">\mathbf{j}</annotation></semantics></math>.</td>
+<td style="text-align: left;"><strong>Да.</strong> Требует, чтобы любое
+перемещение происходило через промежуточное пространство.</td>
+</tr>
+</tbody>
+</table>
+<p>Математическая форма локального сохранения заряда:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∇</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝒋</mi><mo>=</mo><mi>−</mi><mfrac><mrow><mi>∂</mi><mi>ρ</mi></mrow><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\nabla \cdot \mathbf{j} = -\frac{\partial \rho}{\partial t}</annotation></semantics></math></p>
+<h2 id="3-энергия-электромагнитного-поля">3. Энергия электромагнитного
+поля</h2>
+<p>Энергия поля в заданном объеме уменьшается либо из-за ее вытекания
+через поверхность, либо из-за работы, совершаемой полем над
+веществом.</p>
+<h3 id="ключевые-формулы">Ключевые формулы</h3>
+<ol type="1">
+<li><strong>Плотность энергии
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>u</mi><annotation encoding="application/x-tex">u</annotation></semantics></math>):</strong>
+Сумма электрической и магнитной плотностей энергии.
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi><mo>=</mo><mfrac><msub><mi>ϵ</mi><mn>0</mn></msub><mn>2</mn></mfrac><mi mathvariant="bold-italic">𝑬</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝑬</mi><mo>+</mo><mfrac><mrow><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup></mrow><mn>2</mn></mfrac><mi mathvariant="bold-italic">𝑩</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝑩</mi></mrow><annotation encoding="application/x-tex">u = \frac{\epsilon_0}{2}\mathbf{E}\cdot\mathbf{E} + \frac{\epsilon_0 c^2}{2}\mathbf{B}\cdot\mathbf{B}</annotation></semantics></math></li>
+<li><strong>Вектор Пойнтинга
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑺</mi><annotation encoding="application/x-tex">\mathbf{S}</annotation></semantics></math>):</strong>
+Определяет направление и величину потока энергии (энергия в секунду
+через единичную площадь).
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑺</mi><mo>=</mo><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup><mi mathvariant="bold-italic">𝑬</mi><mo>×</mo><mi mathvariant="bold-italic">𝑩</mi></mrow><annotation encoding="application/x-tex">\mathbf{S} = \epsilon_0 c^2 \mathbf{E} \times \mathbf{B}</annotation></semantics></math></li>
+<li><strong>Дифференциальный закон сохранения энергии поля:</strong>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mfrac><mrow><mi>∂</mi><mi>u</mi></mrow><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mi>∇</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝑺</mi><mo>+</mo><mi mathvariant="bold-italic">𝑬</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝒋</mi></mrow><annotation encoding="application/x-tex">-\frac{\partial u}{\partial t} = \nabla \cdot \mathbf{S} + \mathbf{E} \cdot \mathbf{j}</annotation></semantics></math>
+Где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑬</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝒋</mi></mrow><annotation encoding="application/x-tex">\mathbf{E} \cdot \mathbf{j}</annotation></semantics></math>
+— мощность, передаваемая веществу в единице объема.</li>
+</ol>
+<h2 id="4-анализ-потоков-энергии-в-физических-системах">4. Анализ
+потоков энергии в физических системах</h2>
+<p>Применение вектора Пойнтинга приводит к выводам, которые могут
+казаться контринтуитивными, но являются физически корректными.</p>
+<h3 id="примеры-и-их-интерпретация">Примеры и их интерпретация</h3>
+<ul>
+<li><strong>Световая волна:</strong> Векторы
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+перпендикулярны друг другу и направлению распространения. Интенсивность
+света (средний поток энергии) равна
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⟨</mo><mi>S</mi><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><msub><mi>ϵ</mi><mn>0</mn></msub><mi>c</mi><mo stretchy="false" form="prefix">⟨</mo><msup><mi>E</mi><mn>2</mn></msup><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">\langle S \rangle = \epsilon_0 c \langle E^2 \rangle</annotation></semantics></math>.</li>
+<li><strong>Заряжающийся конденсатор (Фиг. 27.3, 27.4):</strong> Энергия
+поступает в конденсатор <strong>не через провода</strong>, а из
+окружающего пространства через боковые зазоры между пластинами. Поле,
+изначально распределенное в пространстве, «стягивается» к конденсатору
+по мере роста его заряда.</li>
+<li><strong>Проводник с током (Фиг. 27.5):</strong> Энергия, теряемая в
+виде тепла (джоулево тепло), втекает в провод <strong>радиально
+снаружи</strong>. Электроны получают энергию из внешнего
+электромагнитного поля, а не из «давления» внутри провода.</li>
+<li><strong>Статический заряд и магнит (Фиг. 27.6):</strong> В системе,
+где заряд и магнит неподвижны, существует постоянная циркуляция энергии
+по замкнутым петлям
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑬</mi><mo>×</mo><mi mathvariant="bold-italic">𝑩</mi><mo>≠</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\mathbf{E} \times \mathbf{B} \neq 0</annotation></semantics></math>).
+Хотя энергия не накапливается и не убывает, этот поток необходим для
+сохранения момента количества движения.</li>
+</ul>
+<h2 id="5-импульс-электромагнитного-поля">5. Импульс электромагнитного
+поля</h2>
+<p>Поле обладает не только энергией, но и импульсом. Плотность импульса
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝒈</mi><annotation encoding="application/x-tex">\mathbf{g}</annotation></semantics></math>
+напрямую связана с вектором Пойнтинга.</p>
+<h3 id="основные-положения">Основные положения</h3>
+<ul>
+<li><strong>Формула плотности импульса:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝒈</mi><mo>=</mo><mfrac><mn>1</mn><msup><mi>c</mi><mn>2</mn></msup></mfrac><mi mathvariant="bold-italic">𝑺</mi></mrow><annotation encoding="application/x-tex">\mathbf{g} = \frac{1}{c^2}\mathbf{S}</annotation></semantics></math>.</li>
+<li><strong>Теорема о центре масс:</strong> Эйнштейн показал, что
+перенос энергии
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>U</mi><annotation encoding="application/x-tex">U</annotation></semantics></math>
+на расстояние
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>L</mi><annotation encoding="application/x-tex">L</annotation></semantics></math>
+эквивалентен переносу массы
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>=</mo><mi>U</mi><mi>/</mi><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">m = U/c^2</annotation></semantics></math>.
+Чтобы центр масс системы оставался неподвижным при внутреннем
+перемещении энергии (например, вспышке света в вагоне), поле должно
+передавать импульс самому устройству (Фиг. 27.7).</li>
+<li><strong>Сохранение момента количества движения:</strong> В
+статических системах (заряд + магнит) циркулирующий поток энергии (и,
+следовательно, импульса) создает момент количества движения поля. Если
+поле выключить (например, остановить ток в соленоиде), этот момент
+передается веществу, заставляя систему вращаться (Фиг. 27.8).</li>
+</ul>
+<h2 id="6-важные-цитаты-и-их-контекст">6. Важные цитаты и их
+контекст</h2>
+<blockquote>
+<p><em>«По-видимому, способа сделать закон сохранения заряда
+релятивистски инвариантным, не делая его „локальным“, не
+существует».</em> <strong>Контекст:</strong> Обоснование того, почему
+современная физика отказывается от дальнодействия в пользу полевого
+взаимодействия.</p>
+</blockquote>
+<blockquote>
+<p><em>«Внутрь проводника со всех сторон втекает энергия... наша
+„сумасшедшая“ теория говорит, что электроны получают свою энергию... из
+потока энергии внешнего поля».</em> <strong>Контекст:</strong>
+Обсуждение процесса выделения тепла в проводнике с сопротивлением, где
+вектор Пойнтинга направлен радиально внутрь.</p>
+</blockquote>
+<blockquote>
+<p><em>«Мы так и не знаем, где же на самом деле в пространстве
+локализована энергия электромагнитного поля».</em>
+<strong>Контекст:</strong> Признание того, что формулы для
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>u</mi><annotation encoding="application/x-tex">u</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑺</mi><annotation encoding="application/x-tex">\mathbf{S}</annotation></semantics></math>
+не единственны (существуют другие математические варианты), но принятые
+формулы являются простейшими и не противоречат эксперименту.</p>
+</blockquote>
+<h2 id="7-аналитические-выводы">7. Аналитические выводы</h2>
+<ol type="1">
+<li><strong>Поле как физическая реальность:</strong> Электромагнитное
+поле — это не просто математическая абстракция для расчета сил, а
+физический объект, способный хранить и переносить энергию и
+импульс.</li>
+<li><strong>Единство энергии и массы:</strong> Взаимосвязь импульса поля
+и вектора Пойнтинга
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝒈</mi><mo>=</mo><mi mathvariant="bold-italic">𝑺</mi><mi>/</mi><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\mathbf{g} = \mathbf{S}/c^2</annotation></semantics></math>)
+является прямым следствием релятивистского соотношения энергии и
+массы.</li>
+<li><strong>Необходимость полевого импульса:</strong> Без учета
+импульса, скрытого в полях, законы сохранения (импульса, момента
+количества движения, движения центра масс) для движущихся зарядов будут
+нарушаться. Изменение импульса частиц всегда компенсируется изменением
+импульса поля.</li>
+</ol>
+    </article>
+  </main>
+</body>
+</html>

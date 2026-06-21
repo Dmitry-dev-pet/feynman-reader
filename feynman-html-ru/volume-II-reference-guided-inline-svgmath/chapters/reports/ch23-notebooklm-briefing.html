@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Аналитический отчет по главе 23: Полые резонаторы - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch23.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1 id="аналитический-отчет-по-главе-23-полые-резонаторы">Аналитический
+отчет по главе 23: Полые резонаторы</h1>
+<p>Этот отчет представляет собой глубокий анализ физических принципов,
+математических моделей и практических применений полых резонаторов,
+основанный на лекциях Ричарда Фейнмана. Документ охватывает переход от
+классических цепей с сосредоточенными параметрами к электромагнитным
+системам сверхвысоких частот.</p>
+<h2 id="1-резюме">1. Резюме</h2>
+<p>Основная идея главы заключается в том, что при повышении частоты
+переменного тока традиционные представления об идеальных элементах цепи
+(сопротивлениях, индуктивностях и емкостях) становятся неприменимыми.
+Физические размеры элементов начинают соотноситься с длиной волны, что
+приводит к появлению «паразитных» эффектов.</p>
+<p>Полый резонатор представляет собой логический предел эволюции
+резонансного контура, в котором электрические и магнитные поля не
+разделены пространственно (как в катушке и конденсаторе), а полностью
+перемешаны внутри закрытой проводящей полости. Такие системы
+характеризуются дискретным набором собственных частот (мод) и
+чрезвычайно высокой добротностью
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Q</mi><annotation encoding="application/x-tex">Q</annotation></semantics></math>).</p>
+<hr />
+<h2 id="2-анализ-ключевых-тем">2. Анализ ключевых тем</h2>
+<h3 id="21-ограничения-идеальных-элементов-на-высоких-частотах">2.1.
+Ограничения идеальных элементов на высоких частотах</h3>
+<p>Любой реальный элемент цепи обладает свойствами всех трех идеальных
+компонентов одновременно:</p>
+<ul>
+<li><strong>Реальное сопротивление:</strong> Имеет индуктивность (из-за
+создаваемого магнитного поля) и емкость (из-за накопления зарядов на
+концах). На фиг. 23.1 представлена его эквивалентная схема.</li>
+<li><strong>Реальная индуктивность:</strong> На низких частотах
+эквивалентна последовательному соединению
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>L</mi><annotation encoding="application/x-tex">L</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>R</mi><annotation encoding="application/x-tex">R</annotation></semantics></math>
+(фиг. 23.2, а). На высоких частотах между витками возникают емкости
+(фиг. 23.3, а), и ток начинает течь «напрямик» через емкости, минуя
+витки.</li>
+</ul>
+<p><strong>Физический барьер:</strong> Эффект, при котором устройство,
+сконструированное как «индуктивность», на СВЧ перестает выполнять свою
+функцию. Это требует изменения самой конструкции резонатора.</p>
+<h3 id="22-физика-конденсатора-на-высоких-частотах">2.2. Физика
+конденсатора на высоких частотах</h3>
+<p>При рассмотрении идеального плоского конденсатора с круговыми
+обкладками (фиг. 23.4) обнаруживается, что при увеличении частоты
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ω</mi><annotation encoding="application/x-tex">\omega</annotation></semantics></math>:</p>
+<ol type="1">
+<li>Изменяющееся электрическое поле
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math>
+создает магнитное поле
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>.</li>
+<li>Изменяющееся магнитное поле
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>,
+в свою очередь, индуцирует дополнительное электрическое поле.</li>
+<li>Это приводит к тому, что электрическое поле перестает быть
+однородным и начинает зависеть от радиуса
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math>.</li>
+</ol>
+<p><strong>Математическое описание:</strong> Распределение
+электрического поля описывается функцией Бесселя нулевого порядка
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>J</mi><mn>0</mn></msub><annotation encoding="application/x-tex">J_0</annotation></semantics></math>:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>=</mo><msub><mi>E</mi><mn>0</mn></msub><msup><mi>e</mi><mrow><mi>i</mi><mi>ω</mi><mi>t</mi></mrow></msup><msub><mi>J</mi><mn>0</mn></msub><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mi>ω</mi><mi>r</mi></mrow><mi>c</mi></mfrac><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">E = E_0 e^{i\omega t} J_0\left(\frac{\omega r}{c}\right)</annotation></semantics></math>
+Где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>J</mi><mn>0</mn></msub><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">J_0(x)</annotation></semantics></math>
+— бесконечный ряд:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>J</mi><mn>0</mn></msub><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>1</mn><mo>−</mo><mfrac><mn>1</mn><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mi>!</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup></mrow></mfrac><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mi>x</mi><mn>2</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup><mo>+</mo><mfrac><mn>1</mn><mrow><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mi>!</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup></mrow></mfrac><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mi>x</mi><mn>2</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>4</mn></msup><mo>−</mo><mi>…</mi></mrow><annotation encoding="application/x-tex">J_0(x) = 1 - \frac{1}{(1!)^2}\left(\frac{x}{2}\right)^2 + \frac{1}{(2!)^2}\left(\frac{x}{2}\right)^4 - \dots</annotation></semantics></math></p>
+<h3 id="23-формирование-полого-резонатора">2.3. Формирование полого
+резонатора</h3>
+<p>Если частота
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ω</mi><annotation encoding="application/x-tex">\omega</annotation></semantics></math>
+такова, что на радиусе
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+значение функции
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>J</mi><mn>0</mn></msub><mo stretchy="false" form="prefix">(</mo><mi>ω</mi><mi>a</mi><mi>/</mi><mi>c</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">J_0(\omega a/c)</annotation></semantics></math>
+равно нулю, то на этом расстоянии электрическое поле отсутствует. Это
+позволяет «закоротить» обкладки цилиндрической стенкой, не искажая поля.
+В результате получается закрытая банка (фиг. 23.7), способная
+поддерживать электромагнитные колебания без внешней связи.</p>
+<p><strong>Резонансная частота цилиндрической полости:</strong> Условие
+резонанса определяется первым нулем функции Бесселя
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>≈</mo><mn>2.405</mn></mrow><annotation encoding="application/x-tex">x \approx 2.405</annotation></semantics></math>):
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ω</mi><mn>0</mn></msub><mo>=</mo><mn>2.405</mn><mfrac><mi>c</mi><mi>r</mi></mfrac></mrow><annotation encoding="application/x-tex">\omega_0 = 2.405 \frac{c}{r}</annotation></semantics></math></p>
+<hr />
+<h2 id="3-собственные-колебания-моды-и-резонансы">3. Собственные
+колебания (моды) и резонансы</h2>
+<p>В полом резонаторе может существовать бесконечное множество типов
+колебаний, называемых <strong>собственными колебаниями</strong> или
+<strong>модами</strong>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Тип резонанса</th>
+<th style="text-align: left;">Характеристика поля</th>
+<th style="text-align: left;">Приблизительная частота (для
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>=</mo><msup><mn>3</mn><mo>″</mo></msup></mrow><annotation encoding="application/x-tex">d=3&#39;&#39;</annotation></semantics></math>)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Основная мода</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math>
+вертикально,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+— горизонтальные круги. Один максимум
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math>
+в центре.</td>
+<td style="text-align: left;">~3050 МГц</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Высшая мода J0</strong></td>
+<td style="text-align: left;">Использование второго нуля функции
+Бесселя. Полное колебание поля от центра к краю (фиг. 23.12).</td>
+<td style="text-align: left;">&gt;6000 МГц</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Поперечная мода</strong></td>
+<td style="text-align: left;">Электрическое поле направлено вдоль
+диаметра (фиг. 23.13).</td>
+<td style="text-align: left;">~3300 МГц</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Сложная мода</strong></td>
+<td style="text-align: left;">Поле направлено от боковых стенок к торцам
+(фиг. 23.14).</td>
+<td style="text-align: left;">~3820 МГц</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4-ключевые-формулы-и-их-физический-смысл">4. Ключевые формулы и
+их физический смысл</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Формула</th>
+<th style="text-align: left;">Физический смысл</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>c</mi><mn>2</mn></msup><msub><mo>∮</mo><mi mathvariant="normal">Γ</mi></msub><mi mathvariant="bold-italic">𝑩</mi><mo>⋅</mo><mi>d</mi><mi mathvariant="bold-italic">𝒔</mi><mo>=</mo><mfrac><mi>∂</mi><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac><mo>∫</mo><mi mathvariant="bold-italic">𝑬</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝒏</mi><mspace width="0.167em"></mspace><mi>d</mi><mi>a</mi></mrow><annotation encoding="application/x-tex">c^2 \oint_\Gamma \mathbf{B} \cdot d\mathbf{s} = \frac{\partial}{\partial t} \int \mathbf{E} \cdot \mathbf{n} \, da</annotation></semantics></math></td>
+<td style="text-align: left;">Изменяющийся поток электрического поля
+порождает циркуляцию магнитного поля.</td>
+</tr>
+<tr>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mn>2</mn></msub><mo stretchy="false" form="prefix">(</mo><mi>r</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><mi>∂</mi><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac><mo>∫</mo><mi>B</mi><mo stretchy="false" form="prefix">(</mo><mi>r</mi><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mi>d</mi><mi>r</mi></mrow><annotation encoding="application/x-tex">E_2(r) = \frac{\partial}{\partial t} \int B(r) \, dr</annotation></semantics></math></td>
+<td style="text-align: left;">Поправка к электрическому полю,
+возникающая из-за закона индукции Фарадея в конденсаторе.</td>
+</tr>
+<tr>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Q</mi><mo>=</mo><mtext mathvariant="normal">Добротность</mtext></mrow><annotation encoding="application/x-tex">Q = \text{Добротность}</annotation></semantics></math></td>
+<td style="text-align: left;">Отношение накопленной энергии к потерям. В
+полостях может достигать 100,000 и выше.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="5-важные-цитаты-с-контекстом">5. Важные цитаты с контекстом</h2>
+<ul>
+<li><strong>О «высокочастотном барьере»:</strong> <em>«...наша катушка,
+которую первоначально сконструировали как "индуктивность", на очень
+высоких частотах работает не как хорошая индуктивность, а как что-то
+другое. Для высоких частот нам нужно изобрести новое
+устройство».</em></li>
+<li><strong>О самоподдержании полей:</strong> <em>«Электрическое и
+магнитное поля сами себя поддерживают: изменение
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>
+создает
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>,
+а изменение
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+создает
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>,
+— все в согласии с уравнениями Максвелла».</em></li>
+<li><strong>О связи с LC-контурами:</strong> <em>«Магнитное поле теснее
+и теснее сближалось с электрическим, пока в полом резонаторе
+окончательно не перемешалось с ним».</em></li>
+</ul>
+<hr />
+<h2 id="6-практические-и-аналитические-выводы">6. Практические и
+аналитические выводы</h2>
+<ol type="1">
+<li><strong>Переход от LC к полостям:</strong> Повышение частоты требует
+уменьшения индуктивности. Это достигается «запараллеливанием» витков,
+что в конечном итоге превращает катушку в сплошную стенку цилиндра (фиг.
+23.16).</li>
+<li><strong>Методы возбуждения:</strong> Энергию в резонатор можно
+вводить с помощью небольших петель связи (фиг. 23.8). Резонанс возникает
+только тогда, когда частота источника совпадает с собственной частотой
+полости.</li>
+<li><strong>Диагностика мод:</strong> Чтобы определить тип возбужденного
+колебания, в полость можно вводить тонкую проволочку (фиг. 23.15). Если
+проволочка параллельна вектору
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>,
+она будет поглощать энергию и подавлять резонанс.</li>
+<li><strong>Универсальность формы:</strong> Хотя расчеты проще для
+цилиндра, полость любой формы (например, фиг. 23.17) обладает своим
+набором резонансных частот.</li>
+<li><strong>Высокая добротность:</strong> Благодаря малым потерям в
+проводящих стенках (особенно при серебрении), полые резонаторы
+значительно превосходят классические контуры по избирательности.</li>
+</ol>
+    </article>
+  </main>
+</body>
+</html>

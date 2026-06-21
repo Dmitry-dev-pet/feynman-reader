@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Учебное пособие по главе 18: Уравнения Максвелла - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch18.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1 id="учебное-пособие-по-главе-18-уравнения-максвелла">Учебное пособие
+по главе 18: Уравнения Максвелла</h1>
+<p>Это учебное пособие синтезирует ключевые положения главы 18
+«Фейнмановских лекций по физике», посвященной полной системе уравнений
+электродинамики, теоретическому предсказанию электромагнитных волн и
+объединению оптики с теорией электромагнетизма.</p>
+<h2 id="1-ключевые-понятия-и-теоретические-основы">1. Ключевые понятия и
+теоретические основы</h2>
+<h3 id="полная-система-уравнений-максвелла">Полная система уравнений
+Максвелла</h3>
+<p>В данной главе классическая физика достигает своей вершины через
+объединение четырех фундаментальных уравнений, которые описывают
+поведение электрических
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>)
+и магнитных
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>)
+полей.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">№</th>
+<th style="text-align: left;">Уравнение (дифференциальная форма)</th>
+<th style="text-align: left;">Словесная формулировка</th>
+<th style="text-align: left;">Физический смысл</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>I</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∇</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝑬</mi><mo>=</mo><mfrac><mi>ρ</mi><msub><mi>ϵ</mi><mn>0</mn></msub></mfrac></mrow><annotation encoding="application/x-tex">\nabla \cdot \mathbf{E} = \frac{\rho}{\epsilon_0}</annotation></semantics></math></td>
+<td style="text-align: left;">Поток
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>
+через замкнутую поверхность равен
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><msub><mi>ϵ</mi><mn>0</mn></msub><mo>×</mo></mrow><annotation encoding="application/x-tex">1/\epsilon_0 \times</annotation></semantics></math>
+(заряд внутри).</td>
+<td style="text-align: left;">Закон Гаусса: источником электрического
+поля является заряд.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>II</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∇</mi><mo>×</mo><mi mathvariant="bold-italic">𝑬</mi><mo>=</mo><mi>−</mi><mfrac><mrow><mi>∂</mi><mi mathvariant="bold-italic">𝑩</mi></mrow><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t}</annotation></semantics></math></td>
+<td style="text-align: left;">Линейный интеграл от
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>
+по контуру равен отрицательной скорости изменения потока
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+через этот контур.</td>
+<td style="text-align: left;">Закон Фарадея: изменяющееся магнитное поле
+порождает электрическое.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>III</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∇</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝑩</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\nabla \cdot \mathbf{B} = 0</annotation></semantics></math></td>
+<td style="text-align: left;">Поток
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+через замкнутую поверхность всегда равен нулю.</td>
+<td style="text-align: left;">Отсутствие магнитных зарядов
+(монополей).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>IV</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>c</mi><mn>2</mn></msup><mi>∇</mi><mo>×</mo><mi mathvariant="bold-italic">𝑩</mi><mo>=</mo><mfrac><mi mathvariant="bold-italic">𝒋</mi><msub><mi>ϵ</mi><mn>0</mn></msub></mfrac><mo>+</mo><mfrac><mrow><mi>∂</mi><mi mathvariant="bold-italic">𝑬</mi></mrow><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">c^2 \nabla \times \mathbf{B} = \frac{\mathbf{j}}{\epsilon_0} + \frac{\partial \mathbf{E}}{\partial t}</annotation></semantics></math></td>
+<td style="text-align: left;">Интеграл от
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>c</mi><mn>2</mn></msup><mi mathvariant="bold-italic">𝑩</mi></mrow><annotation encoding="application/x-tex">c^2 \mathbf{B}</annotation></semantics></math>
+по контуру равен (ток через
+контур)/<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ϵ</mi><mn>0</mn></msub><annotation encoding="application/x-tex">\epsilon_0</annotation></semantics></math>
+плюс скорость изменения потока
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>
+через этот контур.</td>
+<td style="text-align: left;">Закон Ампера — Максвелла: магнитное поле
+порождается токами и изменяющимся электрическим полем.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="добавка-максвелла-и-сохранение-заряда">Добавка Максвелла и
+сохранение заряда</h3>
+<p>Главным вкладом Максвелла стало введение члена
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mrow><mi>∂</mi><mi mathvariant="bold-italic">𝑬</mi></mrow><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac><annotation encoding="application/x-tex">\frac{\partial \mathbf{E}}{\partial t}</annotation></semantics></math>
+в уравнение IV. Без этого слагаемого уравнение
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∇</mi><mo>×</mo><mi mathvariant="bold-italic">𝑩</mi><mo>=</mo><mi mathvariant="bold-italic">𝒋</mi><mi>/</mi><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\nabla \times \mathbf{B} = \mathbf{j}/\epsilon_0 c^2</annotation></semantics></math>
+приводило бы к математическому противоречию: дивергенция ротора (всегда
+равная нулю) требовала бы, чтобы
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∇</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝒋</mi></mrow><annotation encoding="application/x-tex">\nabla \cdot \mathbf{j}</annotation></semantics></math>
+всегда была равна нулю. Однако закон сохранения заряда гласит:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∇</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝒋</mi><mo>=</mo><mi>−</mi><mfrac><mrow><mi>∂</mi><mi>ρ</mi></mrow><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\nabla \cdot \mathbf{j} = -\frac{\partial \rho}{\partial t}</annotation></semantics></math>
+Добавочный член Максвелла устраняет это противоречие, делая уравнения
+согласованными с принципом сохранения заряда.</p>
+<h3 id="электромагнитные-волны">Электромагнитные волны</h3>
+<p>Сочетание закона Фарадея и дополненного уравнения Ампера порождает
+эффект «самоподдерживающихся» полей. Изменение одного поля порождает
+другое, которое, в свою очередь, при изменении снова порождает первое.
+Этот процесс распространяется в пространстве в виде волны со скоростью
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>c</mi><annotation encoding="application/x-tex">c</annotation></semantics></math>.</p>
+<p><strong>Свойства электромагнитных волн в свободном
+пространстве:</strong></p>
+<ol type="1">
+<li><strong>Поперечность:</strong> Поля
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+перпендикулярны направлению распространения волны.</li>
+<li><strong>Взаимная перпендикулярность:</strong> Вектор
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>
+всегда перпендикулярен вектору
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>.</li>
+<li><strong>Соотношение величин:</strong> Амплитуды полей связаны
+соотношением
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>=</mo><mi>c</mi><mi>B</mi></mrow><annotation encoding="application/x-tex">E = cB</annotation></semantics></math>.</li>
+</ol>
+<hr />
+<h2 id="2-проверочные-вопросы-краткие-ответы">2. Проверочные вопросы
+(краткие ответы)</h2>
+<p><strong>Вопрос 1: Почему в случае сферически симметричного
+радиального тока магнитное поле равно нулю?</strong> <em>Ответ:</em>
+Согласно уравнению IV, магнитное поле порождается суммой тока
+проводимости и скорости изменения электрического поля. В данной
+симметрии член
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝒋</mi><mi>/</mi><msub><mi>ϵ</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">\mathbf{j}/\epsilon_0</annotation></semantics></math>
+и член
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∂</mi><mi mathvariant="bold-italic">𝑬</mi><mi>/</mi><mi>∂</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">\partial \mathbf{E}/\partial t</annotation></semantics></math>
+в точности компенсируют друг друга, в результате чего ротор
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+(и само поле) равен нулю.</p>
+<p><strong>Вопрос 2: Как уравнения Максвелла объясняют наличие
+магнитного поля между обкладками заряжающегося конденсатора, где нет
+тока проводимости?</strong> <em>Ответ:</em> Между пластинами ток
+проводимости равен нулю, однако существует изменяющееся электрическое
+поле. Согласно добавке Максвелла, скорость изменения потока
+электрического поля
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∂</mi><mi mathvariant="bold-italic">𝑬</mi><mi>/</mi><mi>∂</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">\partial \mathbf{E}/\partial t</annotation></semantics></math>)
+создает магнитное поле, идентичное тому, которое создавал бы ток в
+подводящих проводах.</p>
+<p><strong>Вопрос 3: Какое фундаментальное открытие было сделано
+Максвеллом при сопоставлении электромагнитных констант со скоростью
+света?</strong> <em>Ответ:</em> Максвелл обнаружил, что отношение
+электростатической константы к магнитостатической дает скорость, в
+точности равную скорости света. Это позволило ему сделать вывод, что
+свет — это электромагнитная волна.</p>
+<p><strong>Вопрос 4: Что происходит с полями, если внезапно остановить
+движущийся заряженный лист?</strong> <em>Ответ:</em> При остановке листа
+создается новый импульс полей противоположного знака. В результате
+«кусок» электромагнитного поля (брусок определенной толщины) отрывается
+от источника и продолжает самостоятельно распространяться в пространстве
+со скоростью
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>c</mi><annotation encoding="application/x-tex">c</annotation></semantics></math>.</p>
+<hr />
+<h2 id="3-темы-для-глубокого-анализа-эссе">3. Темы для глубокого анализа
+(эссе)</h2>
+<ol type="1">
+<li><strong>«Великий водораздел» классической физики:</strong> Опишите,
+каким образом таблица 18.1 резюмирует все знания классической эпохи (до
+1905 года). Объясните роль законов Максвелла, законов движения Ньютона
+(с учетом релятивистских поправок Эйнштейна) и закона тяготения в
+формировании единой картины мира.</li>
+<li><strong>Механизм самоподдержания электромагнитного поля:</strong>
+Проанализируйте метафору Фейнмана о «танце полей». Как именно
+взаимосвязь уравнений II и IV позволяет полям существовать и
+перемещаться в пустом пространстве без привязки к
+зарядам-источникам?</li>
+<li><strong>Математическое изящество потенциалов:</strong> Объясните
+переход от векторов
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+к скалярному
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>)
+и векторному
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>)
+потенциалам. Почему использование калибровки Лоренца
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∇</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝑨</mi><mo>=</mo><mi>−</mi><mfrac><mn>1</mn><msup><mi>c</mi><mn>2</mn></msup></mfrac><mfrac><mrow><mi>∂</mi><mi>ϕ</mi></mrow><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\nabla \cdot \mathbf{A} = -\frac{1}{c^2} \frac{\partial \phi}{\partial t}</annotation></semantics></math>)
+приводит к более симметричным и простым волновым уравнениям?</li>
+</ol>
+<hr />
+<h2 id="4-типичные-ошибки-при-изучении-темы">4. Типичные ошибки при
+изучении темы</h2>
+<ul>
+<li><strong>Игнорирование тока смещения:</strong> Распространенная
+ошибка — использование старой формы закона Ампера
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∇</mi><mo>×</mo><mi mathvariant="bold-italic">𝑩</mi><mo>=</mo><mi mathvariant="bold-italic">𝒋</mi><mi>/</mi><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\nabla \times \mathbf{B} = \mathbf{j}/\epsilon_0 c^2</annotation></semantics></math>)
+для быстро меняющихся полей, что ведет к нарушению закона сохранения
+заряда.</li>
+<li><strong>Материальная среда для волн:</strong> Ошибочное
+представление о том, что электромагнитным волнам необходима упругая
+среда (эфир) для распространения. Уравнения Максвелла показывают, что
+поля поддерживают друг друга сами по себе в вакууме.</li>
+<li><strong>Путаница в направлении векторов:</strong> Забывание о том,
+что в электромагнитной волне векторы
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+должны быть строго перпендикулярны не только друг другу, но и вектору
+скорости распространения волны.</li>
+<li><strong>Ограничение законов Гаусса и Фарадея:</strong>
+Предположение, что закон Гаусса или закон Фарадея работают только в
+статике. На самом деле, как подчеркивает Фейнман, эти уравнения (I, II и
+III) верны всегда и без ограничений.</li>
+</ul>
+<hr />
+<h2 id="5-глоссарий-важных-терминов">5. Глоссарий важных терминов</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Термин</th>
+<th style="text-align: left;">Определение согласно источнику</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Добавка Максвелла (Ток
+смещения)</strong></td>
+<td style="text-align: left;">Член
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∂</mi><mi mathvariant="bold-italic">𝑬</mi><mi>/</mi><mi>∂</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">\partial \mathbf{E}/\partial t</annotation></semantics></math>
+в уравнении IV, описывающий генерацию магнитного поля изменяющимся
+электрическим полем.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Сохранение заряда</strong></td>
+<td style="text-align: left;">Фундаментальный закон, утверждающий, что
+любой поток заряда из замкнутой области должен приводить к уменьшению
+заряда внутри неё
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∇</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝒋</mi><mo>=</mo><mi>−</mi><mi>∂</mi><mi>ρ</mi><mi>/</mi><mi>∂</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">\nabla \cdot \mathbf{j} = -\partial \rho / \partial t</annotation></semantics></math>).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Векторный потенциал
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>)</strong></td>
+<td style="text-align: left;">Векторное поле, ротор которого равен
+магнитному полю
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑩</mi><mo>=</mo><mi>∇</mi><mo>×</mo><mi mathvariant="bold-italic">𝑨</mi></mrow><annotation encoding="application/x-tex">\mathbf{B} = \nabla \times \mathbf{A}</annotation></semantics></math>).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Скалярный потенциал
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>)</strong></td>
+<td style="text-align: left;">Поле, которое вместе с производной
+векторного потенциала по времени определяет электрическое поле
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑬</mi><mo>=</mo><mi>−</mi><mi>∇</mi><mi>ϕ</mi><mo>−</mo><mi>∂</mi><mi mathvariant="bold-italic">𝑨</mi><mi>/</mi><mi>∂</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">\mathbf{E} = -\nabla \phi - \partial \mathbf{A} / \partial t</annotation></semantics></math>).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Волновое уравнение</strong></td>
+<td style="text-align: left;">Математическое выражение (вторые
+производные по координатам минус вторая производная по времени),
+описывающее распространение возмущений со скоростью
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>c</mi><annotation encoding="application/x-tex">c</annotation></semantics></math>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Калибровка (выбор дивергенции
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>)</strong></td>
+<td style="text-align: left;">Свобода выбора дополнительного условия для
+векторного потенциала, позволяющая упростить решение уравнений.</td>
+</tr>
+</tbody>
+</table>
+    </article>
+  </main>
+</body>
+</html>

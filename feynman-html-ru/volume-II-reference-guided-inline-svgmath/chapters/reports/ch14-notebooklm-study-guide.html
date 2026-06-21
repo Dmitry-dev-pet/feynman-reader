@@ -1,0 +1,320 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Глава 14. Магнитное поле в разных случаях: Учебное пособие - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch14.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1 id="глава-14-магнитное-поле-в-разных-случаях-учебное-пособие">Глава
+14. Магнитное поле в разных случаях: Учебное пособие</h1>
+<p>Данное пособие синтезирует основные теоретические положения,
+математические выкладки и практические примеры из 14-й главы лекций
+Фейнмана, посвященной магнитостатике и векторному потенциалу.</p>
+<hr />
+<h2 id="i-ключевые-понятия-и-теоретический-конспект">I. Ключевые понятия
+и теоретический конспект</h2>
+<h3 id="1-векторный-потенциал-mathbfa">1. Векторный потенциал
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>)</h3>
+<p>В отличие от электростатики, где электрическое поле
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>
+можно представить как градиент скалярного потенциала
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑬</mi><mo>=</mo><mi>−</mi><mi>∇</mi><mi>ϕ</mi></mrow><annotation encoding="application/x-tex">\mathbf{E} = -\nabla\phi</annotation></semantics></math>),
+магнитное поле
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+не всегда представимо в виде градиента, так как его ротор
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">rot</mtext><mspace width="0.167em"></mspace><mi mathvariant="bold-italic">𝑩</mi></mrow><annotation encoding="application/x-tex">\text{rot}\,\mathbf{B}</annotation></semantics></math>)
+не везде равен нулю. Однако, согласно уравнению
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∇</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝑩</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\nabla \cdot \mathbf{B} = 0</annotation></semantics></math>,
+дивергенция магнитного поля всегда равна нулю. Это позволяет представить
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+как ротор другого векторного поля
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑩</mi><mo>=</mo><mi>∇</mi><mo>×</mo><mi mathvariant="bold-italic">𝑨</mi></mrow><annotation encoding="application/x-tex">\mathbf{B} = \nabla \times \mathbf{A}</annotation></semantics></math></p>
+<ul>
+<li><strong>Неоднозначность (Калибровка):</strong> Векторный потенциал
+не определен однозначно. К любому вектору
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>
+можно прибавить градиент любого скалярного поля
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ψ</mi><annotation encoding="application/x-tex">\psi</annotation></semantics></math>
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi mathvariant="bold-italic">𝑨</mi><mo>′</mo></msup><mo>=</mo><mi mathvariant="bold-italic">𝑨</mi><mo>+</mo><mi>∇</mi><mi>ψ</mi></mrow><annotation encoding="application/x-tex">\mathbf{A}&#39; = \mathbf{A} + \nabla\psi</annotation></semantics></math>),
+и ротор (магнитное поле) останется неизменным.</li>
+<li><strong>Условие для магнитостатики:</strong> Для удобства расчетов
+обычно выбирают условие
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∇</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝑨</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\nabla \cdot \mathbf{A} = 0</annotation></semantics></math>.</li>
+<li><strong>Связь с потоком:</strong> Согласно теореме Стокса,
+циркуляция векторного потенциала вдоль замкнутого контура равна
+магнитному потоку сквозь этот контур:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mo>∮</mo><mi mathvariant="normal">Γ</mi></msub><mi mathvariant="bold-italic">𝑨</mi><mo>⋅</mo><mi>d</mi><mi mathvariant="bold-italic">𝒔</mi><mo>=</mo><mo>∫</mo><mo stretchy="false" form="prefix">(</mo><mi>∇</mi><mo>×</mo><mi mathvariant="bold-italic">𝑨</mi><mo stretchy="false" form="postfix">)</mo><mo>⋅</mo><mi mathvariant="bold-italic">𝒏</mi><mspace width="0.167em"></mspace><mi>d</mi><mi>a</mi><mo>=</mo><mrow><mtext mathvariant="normal">Поток </mtext><mspace width="0.333em"></mspace></mrow><mi mathvariant="bold-italic">𝑩</mi></mrow><annotation encoding="application/x-tex">\oint_\Gamma \mathbf{A} \cdot d\mathbf{s} = \int (\nabla \times \mathbf{A}) \cdot \mathbf{n} \, da = \text{Поток } \mathbf{B}</annotation></semantics></math></li>
+</ul>
+<h3 id="2-уравнение-пуассона-для-векторного-потенциала">2. Уравнение
+Пуассона для векторного потенциала</h3>
+<p>При выборе условия
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∇</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝑨</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\nabla \cdot \mathbf{A} = 0</annotation></semantics></math>,
+уравнение
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>c</mi><mn>2</mn></msup><mi>∇</mi><mo>×</mo><mi mathvariant="bold-italic">𝑩</mi><mo>=</mo><mi mathvariant="bold-italic">𝒋</mi><mi>/</mi><msub><mi>ϵ</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">c^2 \nabla \times \mathbf{B} = \mathbf{j}/\epsilon_0</annotation></semantics></math>
+преобразуется в:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>∇</mi><mn>2</mn></msup><mi mathvariant="bold-italic">𝑨</mi><mo>=</mo><mi>−</mi><mfrac><mi mathvariant="bold-italic">𝒋</mi><mrow><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup></mrow></mfrac></mrow><annotation encoding="application/x-tex">\nabla^2 \mathbf{A} = -\frac{\mathbf{j}}{\epsilon_0 c^2}</annotation></semantics></math>
+Это векторное уравнение распадается на три скалярных уравнения для
+каждой декартовой компоненты
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mi>x</mi></msub><mo>,</mo><msub><mi>A</mi><mi>y</mi></msub><mo>,</mo><msub><mi>A</mi><mi>z</mi></msub></mrow><annotation encoding="application/x-tex">A_x, A_y, A_z</annotation></semantics></math>),
+каждое из которых математически идентично уравнению для
+электростатического потенциала
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>∇</mi><mn>2</mn></msup><mi>ϕ</mi><mo>=</mo><mi>−</mi><mi>ρ</mi><mi>/</mi><msub><mi>ϵ</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">\nabla^2\phi = -\rho/\epsilon_0</annotation></semantics></math>).</p>
+<h3 id="3-магнитный-диполь">3. Магнитный диполь</h3>
+<p>Любая маленькая петля с током на больших расстояниях создает
+магнитное поле, аналогичное полю электрического диполя.</p>
+<ul>
+<li><strong>Магнитный момент
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>μ</mi><annotation encoding="application/x-tex">\mu</annotation></semantics></math>):</strong>
+Произведение силы тока на площадь петли. В векторном виде
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝝁</mi><mo>=</mo><mi>I</mi><mo>⋅</mo><mtext mathvariant="normal">Area</mtext></mrow><annotation encoding="application/x-tex">\boldsymbol{\mu} = I \cdot \text{Area}</annotation></semantics></math>,
+направление определяется по правилу правой руки.</li>
+<li><strong>Векторный потенциал диполя:</strong>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑨</mi><mo>=</mo><mfrac><mn>1</mn><mrow><mn>4</mn><mi>π</mi><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup></mrow></mfrac><mfrac><mrow><mi mathvariant="bold-italic">𝝁</mi><mo>×</mo><msub><mi mathvariant="bold-italic">𝒆</mi><mi>R</mi></msub></mrow><msup><mi>R</mi><mn>2</mn></msup></mfrac></mrow><annotation encoding="application/x-tex">\mathbf{A} = \frac{1}{4\pi\epsilon_0 c^2} \frac{\boldsymbol{\mu} \times \mathbf{e}_R}{R^2}</annotation></semantics></math></li>
+</ul>
+<h3 id="4-закон-био--савара">4. Закон Био — Савара</h3>
+<p>Закон позволяет напрямую вычислить магнитное поле
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+в точке (1), создаваемое токами в точках (2):
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑩</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><mn>1</mn><mrow><mn>4</mn><mi>π</mi><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup></mrow></mfrac><mo>∫</mo><mfrac><mrow><mi mathvariant="bold-italic">𝒋</mi><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo stretchy="false" form="postfix">)</mo><mo>×</mo><msub><mi mathvariant="bold-italic">𝒆</mi><mn>12</mn></msub></mrow><msubsup><mi>r</mi><mn>12</mn><mn>2</mn></msubsup></mfrac><mi>d</mi><msub><mi>V</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">\mathbf{B}(1) = \frac{1}{4\pi\epsilon_0 c^2} \int \frac{\mathbf{j}(2) \times \mathbf{e}_{12}}{r_{12}^2} dV_2</annotation></semantics></math>
+Для тонких проводов формула принимает вид:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑩</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><mi>I</mi><mrow><mn>4</mn><mi>π</mi><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup></mrow></mfrac><mo>∫</mo><mfrac><mrow><mi>d</mi><msub><mi mathvariant="bold-italic">𝒔</mi><mn>2</mn></msub><mo>×</mo><msub><mi mathvariant="bold-italic">𝒆</mi><mn>12</mn></msub></mrow><msubsup><mi>r</mi><mn>12</mn><mn>2</mn></msubsup></mfrac></mrow><annotation encoding="application/x-tex">\mathbf{B}(1) = \frac{I}{4\pi\epsilon_0 c^2} \int \frac{d\mathbf{s}_2 \times \mathbf{e}_{12}}{r_{12}^2}</annotation></semantics></math></p>
+<hr />
+<h2 id="ii-примеры-магнитных-систем">II. Примеры магнитных систем</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Система</th>
+<th style="text-align: left;">Векторный потенциал
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>)</th>
+<th style="text-align: left;">Магнитное поле
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Однородное поле
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="bold-italic">𝑩</mi><mn>0</mn></msub><annotation encoding="application/x-tex">\mathbf{B}_0</annotation></semantics></math></strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑨</mi><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><msub><mi mathvariant="bold-italic">𝑩</mi><mn>0</mn></msub><mo>×</mo><msup><mi mathvariant="bold-italic">𝒓</mi><mo>′</mo></msup></mrow><annotation encoding="application/x-tex">\mathbf{A} = \frac{1}{2} \mathbf{B}_0 \times \mathbf{r}&#39;</annotation></semantics></math>
+(вращается вокруг оси
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>z</mi><annotation encoding="application/x-tex">z</annotation></semantics></math>)</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑩</mi><mo>=</mo><mtext mathvariant="normal">const</mtext></mrow><annotation encoding="application/x-tex">\mathbf{B} = \text{const}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Прямой провод</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mi>z</mi></msub><mo>=</mo><mi>−</mi><mfrac><mi>I</mi><mrow><mn>2</mn><mi>π</mi><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup></mrow></mfrac><mrow><mi mathvariant="normal">ln</mi><mo>&#8289;</mo></mrow><msup><mi>r</mi><mo>′</mo></msup></mrow><annotation encoding="application/x-tex">A_z = -\frac{I}{2\pi\epsilon_0 c^2} \ln r&#39;</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>=</mo><mfrac><mrow><mn>2</mn><mi>I</mi></mrow><mrow><mn>4</mn><mi>π</mi><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup><msup><mi>r</mi><mo>′</mo></msup></mrow></mfrac></mrow><annotation encoding="application/x-tex">B = \frac{2I}{4\pi\epsilon_0 c^2 r&#39;}</annotation></semantics></math>
+(по окружности)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Длинный соленоид
+(внутри)</strong></td>
+<td style="text-align: left;">Линейно растет с расстоянием от оси</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>=</mo><mfrac><mrow><mi>n</mi><mi>I</mi></mrow><mrow><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup></mrow></mfrac></mrow><annotation encoding="application/x-tex">B = \frac{nI}{\epsilon_0 c^2}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Длинный соленоид
+(снаружи)</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mfrac><mrow><mi>n</mi><mi>I</mi><msup><mi>a</mi><mn>2</mn></msup></mrow><mrow><mn>2</mn><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup></mrow></mfrac><mo>⋅</mo><mfrac><mn>1</mn><msup><mi>r</mi><mo>′</mo></msup></mfrac></mrow><annotation encoding="application/x-tex">A = \frac{nIa^2}{2\epsilon_0 c^2} \cdot \frac{1}{r&#39;}</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">B = 0</annotation></semantics></math></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="iii-типичные-ошибки-и-нюансы">III. Типичные ошибки и нюансы</h2>
+<ol type="1">
+<li><strong>Компоненты потенциала:</strong> Принцип аналогии между
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>
+работает только для <strong>декартовых</strong> компонент. Радиальная
+компонента
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>
+не связана простым уравнением Пуассона с радиальной компонентой
+плотности тока
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝒋</mi><annotation encoding="application/x-tex">\mathbf{j}</annotation></semantics></math>.</li>
+<li><strong>Поле вне соленоида:</strong> Распространенное заблуждение —
+считать, что если
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑩</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\mathbf{B} = 0</annotation></semantics></math>,
+то и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑨</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\mathbf{A} = 0</annotation></semantics></math>.
+Вне бесконечного соленоида магнитное поле отсутствует, но векторный
+потенциал отличен от нуля и имеет отличную от нуля циркуляцию.</li>
+<li><strong>Относительность вращения:</strong> Попытка применить законы
+электродинамики во вращающейся (неинерциальной) системе отсчета без
+учета изменения самих законов. Вращающийся заряженный цилиндр создает
+магнитное поле, которое можно измерить «угловым скоростемером», и это не
+противоречит принципам относительности, так как вращение абсолютно.</li>
+<li><strong>Природа магнитного диполя:</strong> Важно помнить, что
+магнитное дипольное поле создается циркулирующим током, а не парой
+«магнитных зарядов», которых в природе не существует.</li>
+</ol>
+<hr />
+<h2 id="iv-проверочные-вопросы">IV. Проверочные вопросы</h2>
+<ol type="1">
+<li><strong>Почему
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+всегда можно представить как
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∇</mi><mo>×</mo><mi mathvariant="bold-italic">𝑨</mi></mrow><annotation encoding="application/x-tex">\nabla \times \mathbf{A}</annotation></semantics></math>?</strong>
+<ul>
+<li><em>Ответ:</em> Потому что дивергенция магнитного поля всегда равна
+нулю
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∇</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝑩</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\nabla \cdot \mathbf{B} = 0</annotation></semantics></math>),
+а дивергенция ротора любого векторного поля всегда равна нулю.</li>
+</ul></li>
+<li><strong>Что произойдет с магнитным полем, если к векторному
+потенциалу прибавить градиент скалярной функции?</strong>
+<ul>
+<li><em>Ответ:</em> Магнитное поле не изменится, так как ротор градиента
+равен нулю.</li>
+</ul></li>
+<li><strong>Какое условие накладывается на
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>
+в магнитостатике для упрощения уравнений?</strong>
+<ul>
+<li><em>Ответ:</em> Условие соленоидальности:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∇</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝑨</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\nabla \cdot \mathbf{A} = 0</annotation></semantics></math>.</li>
+</ul></li>
+<li><strong>Чему равна циркуляция
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>
+по замкнутому контуру?</strong>
+<ul>
+<li><em>Ответ:</em> Она равна магнитному потоку поля
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+через поверхность, ограниченную этим контуром.</li>
+</ul></li>
+<li><strong>Как найти
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>-компоненту
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>,
+зная плотность тока?</strong>
+<ul>
+<li><em>Ответ:</em> Решить задачу, аналогичную электростатической,
+заменив плотность заряда
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ρ</mi><annotation encoding="application/x-tex">\rho</annotation></semantics></math>
+на
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>j</mi><mi>x</mi></msub><mi>/</mi><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">j_x/c^2</annotation></semantics></math>.</li>
+</ul></li>
+<li><strong>Существует ли магнитное поле вне бесконечно длинного
+соленоида? А векторный потенциал?</strong>
+<ul>
+<li><em>Ответ:</em> Поле
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+равно нулю, но векторный потенциал
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>
+не равен нулю (он убывает как
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><msup><mi>r</mi><mo>′</mo></msup></mrow><annotation encoding="application/x-tex">1/r&#39;</annotation></semantics></math>).</li>
+</ul></li>
+<li><strong>Что такое магнитный момент петли с током?</strong>
+<ul>
+<li><em>Ответ:</em> Это произведение силы тока на площадь петли
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>=</mo><mi>I</mi><mo>⋅</mo><mi>S</mi></mrow><annotation encoding="application/x-tex">\mu = I \cdot S</annotation></semantics></math>).</li>
+</ul></li>
+<li><strong>Почему на больших расстояниях поля всех маленьких петель с
+током выглядят одинаково?</strong>
+<ul>
+<li><em>Ответ:</em> Потому что на больших расстояниях они все ведут себя
+как магнитные диполи, чье поле определяется только их магнитным
+моментом.</li>
+</ul></li>
+<li><strong>В чем основная сложность вычисления поля
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+напрямую через закон Био — Савара по сравнению с вычислением через
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>?</strong>
+<ul>
+<li><em>Ответ:</em> Интегралы для
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+сложнее из-за наличия векторного произведения в подынтегральном
+выражении.</li>
+</ul></li>
+<li><strong>Где, помимо классической магнитостатики, векторный потенциал
+играет важную роль?</strong>
+<ul>
+<li><em>Ответ:</em> В теории относительности, принципе наименьшего
+действия и квантовой механике.</li>
+</ul></li>
+</ol>
+<hr />
+<h2 id="v-темы-для-эссе-глубокое-изучение">V. Темы для эссе (глубокое
+изучение)</h2>
+<ol type="1">
+<li><strong>«Физический смысл векторного потенциала: математическая
+фикция или реальность?»</strong> Рассмотрите пример с соленоидом, где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑩</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\mathbf{B}=0</annotation></semantics></math>,
+но
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑨</mi><mo>≠</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\mathbf{A} \neq 0</annotation></semantics></math>.
+Обсудите, почему в современной физике (квантовой механике, теории
+относительности)
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>
+считается более фундаментальным, чем
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>.</li>
+<li><strong>«Аналогия между электростатикой и магнитостатикой через
+призму уравнения Пуассона».</strong> Проанализируйте, как методы решения
+задач для скалярного потенциала
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>
+могут быть перенесены на вычисление векторного потенциала
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>.
+Приведите примеры (прямой провод, цилиндр).</li>
+<li><strong>«Проблема абсолютного вращения в электродинамике».</strong>
+Опишите концепцию «углового скоростемера» на базе вращающегося
+заряженного цилиндра. Почему этот эффект доказывает неинерциальность
+вращающихся систем?</li>
+</ol>
+<hr />
+<h2 id="vi-глоссарий">VI. Глоссарий</h2>
+<ul>
+<li><strong>Векторный потенциал
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>):</strong>
+Вспомогательное векторное поле, ротор которого равен магнитной
+индукции.</li>
+<li><strong>Дивергенция
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∇</mi><mo>⋅</mo></mrow><annotation encoding="application/x-tex">\nabla \cdot</annotation></semantics></math>):</strong>
+Оператор, характеризующий плотность источников поля. Для магнитного поля
+всегда равна нулю.</li>
+<li><strong>Ротор
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∇</mi><mo>×</mo></mrow><annotation encoding="application/x-tex">\nabla \times</annotation></semantics></math>):</strong>
+Оператор, характеризующий «вращательную способность» или завихренность
+поля. Ротор
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>
+дает поле
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>.</li>
+<li><strong>Калибровка (градиентное преобразование):</strong> Изменение
+потенциала, не меняющее наблюдаемых физических полей.</li>
+<li><strong>Магнитный диполь:</strong> Модель маленького замкнутого
+контура с током, создающего характерное поле, убывающее с расстоянием
+как
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><msup><mi>R</mi><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">1/R^3</annotation></semantics></math>.</li>
+<li><strong>Магнитный момент
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>μ</mi><annotation encoding="application/x-tex">\mu</annotation></semantics></math>):</strong>
+Векторная величина, определяющая дипольные свойства системы токов.</li>
+<li><strong>Закон Био — Савара:</strong> Эмпирический закон для
+определения индукции магнитного поля, создаваемого элементом тока.</li>
+<li><strong>Теорема Стокса:</strong> Математическая теорема, связывающая
+интеграл по поверхности от ротора вектора с циркуляцией этого вектора по
+контуру данной поверхности.</li>
+</ul>
+    </article>
+  </main>
+</body>
+</html>

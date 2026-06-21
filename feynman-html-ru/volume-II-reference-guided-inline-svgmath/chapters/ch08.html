@@ -74,6 +74,9 @@
         <a class="nav-btn next-chapter" href="ch09.html">Дальше</a>
       </div>
       <a class="toolbar-title" href="#ch08" title="8. Электростатическая энергия">Фейнмановские лекции по физике, том II · 8</a>
+<!-- BEGIN NotebookLM toolbar -->
+      <div class="study-mode-switch" aria-label="Материалы главы"><button class="toolbar-btn study-mode-btn is-active" type="button" data-study-mode="lecture" aria-pressed="true">Лекция</button><button class="toolbar-btn study-mode-btn" type="button" data-study-mode="notes" aria-pressed="false">Конспект</button><button class="toolbar-btn study-mode-btn" type="button" data-study-mode="media" aria-pressed="false">Медиа</button><button class="toolbar-btn study-mode-btn" type="button" data-study-mode="files" aria-pressed="false">Файлы</button></div>
+<!-- END NotebookLM toolbar -->
       <div class="toolbar-group toolbar-settings" aria-label="Настройки чтения">
         <a class="toolbar-btn language-toggle is-ru" href="../../../feynman-html-en/volume-II-reference-guided-inline-svgmath/chapters/ch08.html" aria-label="English" title="English"><span class="lang-ru">RU</span><span aria-hidden="true">/</span><span class="lang-en">EN</span></a>
         <button class="toolbar-btn icon-btn" type="button" data-reader-action="theme" aria-label="Сменить тему" title="Сменить тему">◐</button>
@@ -85,7 +88,36 @@
         <button class="toolbar-btn icon-btn" type="button" data-reader-action="tex" aria-label="TeX формул" title="TeX формул">{}</button>
       </div>
     </header>
-    <article class="chapter-flow"><h1 id="ch08">8. Электростатическая энергия</h1><h2 id="sec-8-1">8–1 Электростатическая энергия зарядов. Однородный шар<a class="permalink" href="#sec-8-1" aria-label="Ссылка на раздел">#</a></h2><p>Одно из самых интересных и полезных открытий в механике — это закон сохранения энергии. Зная формулы для кинетической и потенциальной энергий механической системы, мы были способны обнаруживать связь между состояниями системы в два разных момента времени, не вникая в подробности того, что происходит между этими моментами. Мы хотим определить теперь энергию электростатических систем. В электричестве закон сохранения энергии окажется столь же полезным для обнаружения многих любопытных фактов.</p><p>Закон, по которому меняется энергия при электростатическом взаимодействии, очень прост; на самом деле мы его уже обсуждали. Пусть имеются заряды <svg class="math-svg inline" aria-label="q_1" data-tex="q_1" tabindex="0" style="vertical-align: -0.439ex;" xmlns="http://www.w3.org/2000/svg" width="1.997ex" height="1.439ex" role="img" focusable="false" viewBox="0 -442 882.6 636"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><path data-c="1D45E" d="M33 157Q33 258 109 349T280 441Q340 441 372 389Q373 390 377 395T388 406T404 418Q438 442 450 442Q454 442 457 439T460 434Q460 425 391 149Q320 -135 320 -139Q320 -147 365 -148H390Q396 -156 396 -157T393 -175Q389 -188 383 -194H370Q339 -192 262 -192Q234 -192 211 -192T174 -192T157 -193Q143 -193 143 -185Q143 -182 145 -170Q149 -154 152 -151T172 -148Q220 -148 230 -141Q238 -136 258 -53T279 32Q279 33 272 29Q224 -10 172 -10Q117 -10 75 30T33 157ZM352 326Q329 405 277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q233 26 290 98L298 109L352 326Z"></path></g><g data-mml-node="mn" transform="translate(479,-150) scale(0.707)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g></g></g></g></svg><span class="math-copy-fallback">q_1</span> и <svg class="math-svg inline" aria-label="q_2" data-tex="q_2" tabindex="0" style="vertical-align: -0.439ex;" xmlns="http://www.w3.org/2000/svg" width="1.997ex" height="1.439ex" role="img" focusable="false" viewBox="0 -442 882.6 636"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><path data-c="1D45E" d="M33 157Q33 258 109 349T280 441Q340 441 372 389Q373 390 377 395T388 406T404 418Q438 442 450 442Q454 442 457 439T460 434Q460 425 391 149Q320 -135 320 -139Q320 -147 365 -148H390Q396 -156 396 -157T393 -175Q389 -188 383 -194H370Q339 -192 262 -192Q234 -192 211 -192T174 -192T157 -193Q143 -193 143 -185Q143 -182 145 -170Q149 -154 152 -151T172 -148Q220 -148 230 -141Q238 -136 258 -53T279 32Q279 33 272 29Q224 -10 172 -10Q117 -10 75 30T33 157ZM352 326Q329 405 277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q233 26 290 98L298 109L352 326Z"></path></g><g data-mml-node="mn" transform="translate(479,-150) scale(0.707)"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g></g></g></g></svg><span class="math-copy-fallback">q_2</span>, разделенные промежутком <svg class="math-svg inline" aria-label="r_{12}" data-tex="r_{12}" tabindex="0" style="vertical-align: -0.339ex;" xmlns="http://www.w3.org/2000/svg" width="2.808ex" height="1.339ex" role="img" focusable="false" viewBox="0 -442 1241.1 592"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><path data-c="1D45F" d="M21 287Q22 290 23 295T28 317T38 348T53 381T73 411T99 433T132 442Q161 442 183 430T214 408T225 388Q227 382 228 382T236 389Q284 441 347 441H350Q398 441 422 400Q430 381 430 363Q430 333 417 315T391 292T366 288Q346 288 334 299T322 328Q322 376 378 392Q356 405 342 405Q286 405 239 331Q229 315 224 298T190 165Q156 25 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 114 189T154 366Q154 405 128 405Q107 405 92 377T68 316T57 280Q55 278 41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="TeXAtom" transform="translate(484,-150) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mn"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z" transform="translate(500,0)"></path></g></g></g></g></g></svg><span class="math-copy-fallback">r_{12}</span>. У этой системы есть какая-то энергия, потому что понадобилась какая-то работа, чтобы сблизить заряды. Мы подсчитывали работу, производимую при сближении двух зарядов с большого расстояния; она равна</p><div class="display-math" id="eq-8-1"><svg class="math-svg display" aria-label="
+<!-- BEGIN NotebookLM reports -->
+    <section class="study-workspace" id="study-panel" hidden>
+      <div class="study-workspace-inner">
+        <header class="study-workspace-header">
+          <div>
+            <strong>Материалы главы</strong>
+            <span>Сгенерированные учебные материалы NotebookLM для этой главы.</span>
+          </div>
+        </header>
+        <section class="study-section" data-study-section="notes" hidden>
+    <div class="study-grid">
+      <a class="study-card" href="reports/ch08-notebooklm-briefing.html"><strong>Обзор главы</strong><span>HTML · NotebookLM</span></a>
+      <a class="study-card" href="reports/ch08-notebooklm-study-guide.html"><strong>Конспект</strong><span>HTML · NotebookLM</span></a>
+    </div>
+  </section>
+        <section class="study-section" data-study-section="media" hidden>
+    <div class="study-grid">
+      <p class="study-empty">Для этой главы медиа пока нет.</p>
+    </div>
+  </section>
+        <section class="study-section" data-study-section="files" hidden>
+    <div class="study-card">
+      <strong>Файлы</strong>
+      <span class="study-file-row"><a href="../../../feynman-notebooklm/ru/volume-II/ch08/ch08-full.md">Текст главы для NotebookLM</a><a href="../../../feynman-notebooklm/ru/volume-II/ch08/figure-context/ch08-figures-context.md">Рисунки и контекст</a><a href="../../../feynman-notebooklm/ru/volume-II/ch08/manifest.json">Манифест</a><a href="../../../feynman-notebooklm/ru/volume-II/ch08/sections/">Разделы главы</a><a href="reports/ch08-notebooklm-briefing.md">Обзор главы MD</a><a href="reports/ch08-notebooklm-study-guide.md">Конспект MD</a></span>
+    </div>
+  </section>
+      </div>
+    </section>
+<!-- END NotebookLM reports -->
+    <article class="chapter-flow study-section" data-study-section="lecture"><h1 id="ch08">8. Электростатическая энергия</h1><h2 id="sec-8-1">8–1 Электростатическая энергия зарядов. Однородный шар<a class="permalink" href="#sec-8-1" aria-label="Ссылка на раздел">#</a></h2><p>Одно из самых интересных и полезных открытий в механике — это закон сохранения энергии. Зная формулы для кинетической и потенциальной энергий механической системы, мы были способны обнаруживать связь между состояниями системы в два разных момента времени, не вникая в подробности того, что происходит между этими моментами. Мы хотим определить теперь энергию электростатических систем. В электричестве закон сохранения энергии окажется столь же полезным для обнаружения многих любопытных фактов.</p><p>Закон, по которому меняется энергия при электростатическом взаимодействии, очень прост; на самом деле мы его уже обсуждали. Пусть имеются заряды <svg class="math-svg inline" aria-label="q_1" data-tex="q_1" tabindex="0" style="vertical-align: -0.439ex;" xmlns="http://www.w3.org/2000/svg" width="1.997ex" height="1.439ex" role="img" focusable="false" viewBox="0 -442 882.6 636"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><path data-c="1D45E" d="M33 157Q33 258 109 349T280 441Q340 441 372 389Q373 390 377 395T388 406T404 418Q438 442 450 442Q454 442 457 439T460 434Q460 425 391 149Q320 -135 320 -139Q320 -147 365 -148H390Q396 -156 396 -157T393 -175Q389 -188 383 -194H370Q339 -192 262 -192Q234 -192 211 -192T174 -192T157 -193Q143 -193 143 -185Q143 -182 145 -170Q149 -154 152 -151T172 -148Q220 -148 230 -141Q238 -136 258 -53T279 32Q279 33 272 29Q224 -10 172 -10Q117 -10 75 30T33 157ZM352 326Q329 405 277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q233 26 290 98L298 109L352 326Z"></path></g><g data-mml-node="mn" transform="translate(479,-150) scale(0.707)"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path></g></g></g></g></svg><span class="math-copy-fallback">q_1</span> и <svg class="math-svg inline" aria-label="q_2" data-tex="q_2" tabindex="0" style="vertical-align: -0.439ex;" xmlns="http://www.w3.org/2000/svg" width="1.997ex" height="1.439ex" role="img" focusable="false" viewBox="0 -442 882.6 636"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><path data-c="1D45E" d="M33 157Q33 258 109 349T280 441Q340 441 372 389Q373 390 377 395T388 406T404 418Q438 442 450 442Q454 442 457 439T460 434Q460 425 391 149Q320 -135 320 -139Q320 -147 365 -148H390Q396 -156 396 -157T393 -175Q389 -188 383 -194H370Q339 -192 262 -192Q234 -192 211 -192T174 -192T157 -193Q143 -193 143 -185Q143 -182 145 -170Q149 -154 152 -151T172 -148Q220 -148 230 -141Q238 -136 258 -53T279 32Q279 33 272 29Q224 -10 172 -10Q117 -10 75 30T33 157ZM352 326Q329 405 277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q233 26 290 98L298 109L352 326Z"></path></g><g data-mml-node="mn" transform="translate(479,-150) scale(0.707)"><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z"></path></g></g></g></g></svg><span class="math-copy-fallback">q_2</span>, разделенные промежутком <svg class="math-svg inline" aria-label="r_{12}" data-tex="r_{12}" tabindex="0" style="vertical-align: -0.339ex;" xmlns="http://www.w3.org/2000/svg" width="2.808ex" height="1.339ex" role="img" focusable="false" viewBox="0 -442 1241.1 592"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="msub"><g data-mml-node="mi"><path data-c="1D45F" d="M21 287Q22 290 23 295T28 317T38 348T53 381T73 411T99 433T132 442Q161 442 183 430T214 408T225 388Q227 382 228 382T236 389Q284 441 347 441H350Q398 441 422 400Q430 381 430 363Q430 333 417 315T391 292T366 288Q346 288 334 299T322 328Q322 376 378 392Q356 405 342 405Q286 405 239 331Q229 315 224 298T190 165Q156 25 151 16Q138 -11 108 -11Q95 -11 87 -5T76 7T74 17Q74 30 114 189T154 366Q154 405 128 405Q107 405 92 377T68 316T57 280Q55 278 41 278H27Q21 284 21 287Z"></path></g><g data-mml-node="TeXAtom" transform="translate(484,-150) scale(0.707)" data-mjx-texclass="ORD"><g data-mml-node="mn"><path data-c="31" d="M213 578L200 573Q186 568 160 563T102 556H83V602H102Q149 604 189 617T245 641T273 663Q275 666 285 666Q294 666 302 660V361L303 61Q310 54 315 52T339 48T401 46H427V0H416Q395 3 257 3Q121 3 100 0H88V46H114Q136 46 152 46T177 47T193 50T201 52T207 57T213 61V578Z"></path><path data-c="32" d="M109 429Q82 429 66 447T50 491Q50 562 103 614T235 666Q326 666 387 610T449 465Q449 422 429 383T381 315T301 241Q265 210 201 149L142 93L218 92Q375 92 385 97Q392 99 409 186V189H449V186Q448 183 436 95T421 3V0H50V19V31Q50 38 56 46T86 81Q115 113 136 137Q145 147 170 174T204 211T233 244T261 278T284 308T305 340T320 369T333 401T340 431T343 464Q343 527 309 573T212 619Q179 619 154 602T119 569T109 550Q109 549 114 549Q132 549 151 535T170 489Q170 464 154 447T109 429Z" transform="translate(500,0)"></path></g></g></g></g></g></svg><span class="math-copy-fallback">r_{12}</span>. У этой системы есть какая-то энергия, потому что понадобилась какая-то работа, чтобы сблизить заряды. Мы подсчитывали работу, производимую при сближении двух зарядов с большого расстояния; она равна</p><div class="display-math" id="eq-8-1"><svg class="math-svg display" aria-label="
 
 \frac{q_1q_2}{4\pi\epsilon_0 r_{12}}.
 " data-tex="
@@ -684,5 +716,37 @@ U=\int\limits_{r=0}^\infty\frac{q^2}{8\pi\epsilon_0 r^2}\,dr=
 </script>
 
 <footer>Фейнмановские лекции по физике, том II · Ричард Фейнман, Роберт Лейтон, Мэтью Сэндс</footer>
+<!-- BEGIN NotebookLM script -->
+<script>
+(() => {
+  const workspace = document.querySelector(".study-workspace");
+  const buttons = [...document.querySelectorAll("[data-study-mode]")];
+  const sections = [...document.querySelectorAll("[data-study-section]")];
+  if (!workspace || !buttons.length || !sections.length) return;
+  const setMode = (mode) => {
+    const activeMode = sections.some((section) => section.dataset.studySection === mode) ? mode : "lecture";
+    workspace.hidden = activeMode === "lecture";
+    buttons.forEach((button) => {
+      const active = button.dataset.studyMode === activeMode;
+      button.classList.toggle("is-active", active);
+      button.setAttribute("aria-pressed", active ? "true" : "false");
+    });
+    sections.forEach((section) => {
+      section.hidden = section.dataset.studySection !== activeMode;
+    });
+    const target = document.querySelector(`[data-study-section="${activeMode}"]`);
+    if (target) target.scrollIntoView({ block: "start" });
+  };
+  document.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-study-mode]");
+    if (!button) return;
+    event.preventDefault();
+    setMode(button.dataset.studyMode || "lecture");
+  });
+  if (location.hash === "#study-panel") setMode("notes");
+  else setMode("lecture");
+})();
+</script>
+<!-- END NotebookLM script -->
 </body>
 </html>

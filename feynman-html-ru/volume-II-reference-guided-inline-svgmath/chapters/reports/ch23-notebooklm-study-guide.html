@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Глава 23. ПОЛЫЕ РЕЗОНАТОРЫ - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch23.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1 id="глава-23-полые-резонаторы">Глава 23. ПОЛЫЕ РЕЗОНАТОРЫ</h1>
+<p>Настоящее учебное пособие составлено на основе материалов лекции
+Ричарда Фейнмана и посвящено переходу от классических идеализированных
+цепей к электромагнитным системам СВЧ-диапазона. Документ охватывает
+физику реальных элементов цепи, математическое описание полей в
+конденсаторе на высоких частотах и принципы работы полых
+резонаторов.</p>
+<h2 id="i-ключевые-понятия">I. Ключевые понятия</h2>
+<h3 id="1-реальные-vs-идеальные-элементы-цепи">1. Реальные vs. Идеальные
+элементы цепи</h3>
+<p>В электротехнике на низких частотах используются идеальные понятия:
+сопротивление
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>R</mi><annotation encoding="application/x-tex">R</annotation></semantics></math>),
+индуктивность
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>L</mi><annotation encoding="application/x-tex">L</annotation></semantics></math>)
+и емкость
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math>).
+Однако реальные физические объекты всегда обладают «паразитарными»
+свойствами:</p>
+<ul>
+<li><strong>Реальное сопротивление:</strong> обладает индуктивностью
+(из-за создаваемого магнитного поля) и емкостью (из-за накопления
+зарядов на концах). При сверхвысоких частотах оно начинает вести себя
+как резонансный контур.</li>
+<li><strong>Реальная индуктивность:</strong> помимо основного параметра
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>L</mi><annotation encoding="application/x-tex">L</annotation></semantics></math>,
+имеет сопротивление провода и межвитковую емкость. На высоких частотах
+ток начинает течь через емкости между витками («путь наименьшего
+импеданса»), и катушка перестает выполнять функцию индуктивности.</li>
+</ul>
+<h3 id="2-конденсатор-на-высоких-частотах">2. Конденсатор на высоких
+частотах</h3>
+<p>При подаче на обкладки кругового конденсатора переменного напряжения
+высокой частоты возникают следующие эффекты:</p>
+<ol type="1">
+<li><strong>Индукция магнитного поля:</strong> изменяющееся
+электрическое поле
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math>)
+создает круговое магнитное поле
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>).</li>
+<li><strong>Обратное влияние на электрическое поле:</strong>
+изменяющееся магнитное поле, в свою очередь, порождает добавочное
+электрическое поле, которое стремится скомпенсировать
+первоначальное.</li>
+<li><strong>Распределение поля:</strong> электрическое поле перестает
+быть однородным и приобретает параболическую форму, убывая от центра к
+краям.</li>
+</ol>
+<h3 id="3-функция-бесселя-j_0">3. Функция Бесселя
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>J</mi><mn>0</mn></msub><annotation encoding="application/x-tex">J_0</annotation></semantics></math></h3>
+<p>Математическим решением, описывающим распределение электрического
+поля в цилиндрическом конденсаторе на любой частоте, является функция
+Бесселя нулевого порядка:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>=</mo><msub><mi>E</mi><mn>0</mn></msub><msup><mi>e</mi><mrow><mi>i</mi><mi>ω</mi><mi>t</mi></mrow></msup><msub><mi>J</mi><mn>0</mn></msub><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mi>ω</mi><mi>r</mi></mrow><mi>c</mi></mfrac><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">E = E_0 e^{i\omega t} J_0\left(\frac{\omega r}{c}\right)</annotation></semantics></math>
+Функция
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>J</mi><mn>0</mn></msub><annotation encoding="application/x-tex">J_0</annotation></semantics></math>
+имеет колебательный характер и проходит через нуль при определенных
+значениях аргумента (первый нуль — при
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>≈</mo><mn>2.405</mn></mrow><annotation encoding="application/x-tex">x \approx 2.405</annotation></semantics></math>).</p>
+<h3 id="4-резонансная-полость-банка">4. Резонансная полость (банка)</h3>
+<p>Если подобрать частоту
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ω</mi><annotation encoding="application/x-tex">\omega</annotation></semantics></math>
+так, чтобы первый нуль функции Бесселя пришелся точно на радиус обкладок
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>,
+электрическое поле на краю станет равным нулю. В этом месте можно
+установить проводящую стенку, «закоротив» обкладки, что не изменит
+распределение полей внутри. Полученная закрытая металлическая банка
+называется <strong>полым резонатором</strong>.</p>
+<ul>
+<li><strong>Резонансная частота цилиндрической полости:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ω</mi><mn>0</mn></msub><mo>=</mo><mn>2.405</mn><mfrac><mi>c</mi><mi>r</mi></mfrac></mrow><annotation encoding="application/x-tex">\omega_0 = 2.405 \frac{c}{r}</annotation></semantics></math>.</li>
+<li><strong>Добротность
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Q</mi><annotation encoding="application/x-tex">Q</annotation></semantics></math>):</strong>
+полые резонаторы обладают крайне высокими значениями
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Q</mi><annotation encoding="application/x-tex">Q</annotation></semantics></math>
+(порядка 100 000 и выше), что значительно превосходит показатели обычных
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mi>C</mi></mrow><annotation encoding="application/x-tex">LC</annotation></semantics></math>-контуров.</li>
+</ul>
+<hr />
+<h2 id="ii-проверочные-вопросы-краткие-ответы">II. Проверочные вопросы
+(краткие ответы)</h2>
+<ol type="1">
+<li><strong>Почему эквивалентная схема реального сопротивления на
+высоких частотах включает
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>L</mi><annotation encoding="application/x-tex">L</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math>?</strong>
+<em>Ответ:</em> Потому что протекающий ток неизбежно создает магнитное
+поле (индуктивность), а разность потенциалов — электрическое поле и
+связанные с ним заряды (емкость).</li>
+<li><strong>Что происходит с током в катушке индуктивности при
+достижении «высокочастотного барьера»?</strong> <em>Ответ:</em> Ток
+перестает течь по виткам катушки и начинает «прыгать» между ними через
+межвитковую емкость, выбирая путь наименьшего импеданса.</li>
+<li><strong>Какова геометрическая форма распределения электрического
+поля в круговом конденсаторе на умеренно высоких частотах?</strong>
+<em>Ответ:</em> Параболическая (максимум в центре, убывание к
+краям).</li>
+<li><strong>При каком условии в закрытой металлической банке могут
+существовать незатухающие (в идеале) колебания?</strong> <em>Ответ:</em>
+Когда частота колебаний совпадает с резонансной частотой полости,
+определяемой её размерами (собственное колебание).</li>
+<li><strong>Как можно подавить определенный тип колебаний (моду) в
+резонаторе экспериментально?</strong> <em>Ответ:</em> Введением в
+полость тонкой проволочки. Если проволочка параллельна вектору
+электрического поля
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>,
+в ней возникнут токи, которые поглотят энергию и подавят резонанс.</li>
+<li><strong>В чем конструктивное отличие «нагруженной» полости от
+обычной цилиндрической банки?</strong> <em>Ответ:</em> В нагруженной
+полости области максимального электрического поля (емкостная часть) и
+магнитного поля (индуктивная часть) пространственно разделены сильнее,
+чем в пустой банке.</li>
+</ol>
+<hr />
+<h2 id="iii-темы-для-эссе-и-глубокого-анализа">III. Темы для эссе и
+глубокого анализа</h2>
+<ol type="1">
+<li><strong>Итерационный метод вычисления полей:</strong> Опишите логику
+последовательных поправок
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mn>1</mn></msub><mo>→</mo><msub><mi>B</mi><mn>1</mn></msub><mo>→</mo><msub><mi>E</mi><mn>2</mn></msub><mo>→</mo><msub><mi>B</mi><mn>2</mn></msub><mi>…</mi></mrow><annotation encoding="application/x-tex">E_1 \rightarrow B_1 \rightarrow E_2 \rightarrow B_2 \dots</annotation></semantics></math>),
+приводящую к выводу функции Бесселя. Почему на низких частотах
+достаточно только первого приближения?</li>
+<li><strong>Эволюция резонансных систем:</strong> Проследите путь
+трансформации от классического
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mi>C</mi></mrow><annotation encoding="application/x-tex">LC</annotation></semantics></math>-контура
+к полому резонатору. Как при этом меняется взаимное расположение
+электрического и магнитного полей?</li>
+<li><strong>Многомодовость резонаторов:</strong> Объясните, почему одна
+и та же металлическая полость может резонировать на разных частотах
+(3050 МГц, 3300 МГц, 3820 МГц и т.д.). Какие физические факторы
+определяют структуру этих «собственных колебаний»?</li>
+<li><strong>Роль граничных условий:</strong> Проанализируйте, почему
+электрическое поле обязано входить в стенки резонатора под прямым углом
+и как это требование ограничивает возможные типы колебаний внутри
+банки.</li>
+</ol>
+<hr />
+<h2 id="iv-типичные-ошибки">IV. Типичные ошибки</h2>
+<ul>
+<li><strong>Игнорирование паразитных элементов:</strong> Ошибка считать,
+что катушка всегда остается индуктивностью, а конденсатор — емкостью. На
+частотах СВЧ их функции могут полностью инвертироваться.</li>
+<li><strong>Представление о поле в конденсаторе как о всегда
+однородном:</strong> В реальности, согласно уравнениям Максвелла,
+переменное магнитное поле всегда искажает однородность электрического
+поля.</li>
+<li><strong>Смешение понятий:</strong> Попытка рассчитать полый
+резонатор только через сосредоточенные параметры
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>L</mi><annotation encoding="application/x-tex">L</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math>.
+На высоких частотах необходимо переходить к уравнениям поля в
+пространстве.</li>
+<li><strong>Забывание о фазовом сдвиге:</strong> Важно помнить, что в
+резонаторе электрическое и магнитное поля колеблются со сдвигом по фазе
+на 90° относительно друг друга.</li>
+</ul>
+<hr />
+<h2 id="v-глоссарий">V. Глоссарий</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Термин</th>
+<th style="text-align: left;">Определение из контекста</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Импеданс
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>z</mi><annotation encoding="application/x-tex">z</annotation></semantics></math>)</strong></td>
+<td style="text-align: left;">Комплексное сопротивление устройства,
+определяющее линейную связь между током и напряжением на данной
+частоте.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Паразитарные
+элементы</strong></td>
+<td style="text-align: left;">Нежелательные индуктивности и емкости,
+присущие реальным деталям (резисторам, проводам) и проявляющиеся на
+высоких частотах.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Функция Бесселя
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>J</mi><mn>0</mn></msub><annotation encoding="application/x-tex">J_0</annotation></semantics></math>)</strong></td>
+<td style="text-align: left;">Математическая функция, описывающая
+радиальное распределение амплитуды цилиндрических волн.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Собственное колебание
+(Мода)</strong></td>
+<td style="text-align: left;">Частное пространственное расположение
+электрических и магнитных полей в полости, имеющее свою резонансную
+частоту.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Добротность
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Q</mi><annotation encoding="application/x-tex">Q</annotation></semantics></math>)</strong></td>
+<td style="text-align: left;">Параметр, характеризующий остроту
+резонанса и степень затухания энергии в системе.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Связующая петля</strong></td>
+<td style="text-align: left;">Небольшая проволочная петля, вводимая в
+полость для ввода (возбуждения) или вывода (детектирования)
+электромагнитной энергии.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Нагруженная полость</strong></td>
+<td style="text-align: left;">Переходная форма между
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mi>C</mi></mrow><annotation encoding="application/x-tex">LC</annotation></semantics></math>-контуром
+и чистой полостью, где выделены области преимущественного сосредоточения
+электрического и магнитного полей.</td>
+</tr>
+</tbody>
+</table>
+    </article>
+  </main>
+</body>
+</html>

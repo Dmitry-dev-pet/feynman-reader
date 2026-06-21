@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Глава 33. Отражение от поверхности: Учебное пособие - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch33.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1 id="глава-33-отражение-от-поверхности-учебное-пособие">Глава 33.
+Отражение от поверхности: Учебное пособие</h1>
+<p>Данное пособие синтезирует основные теоретические положения,
+математические выводы и физические принципы, изложенные в главе 33
+«Фейнмановских лекций по физике».</p>
+<hr />
+<h2 id="1-ключевые-понятия-и-теоретические-основы">1. Ключевые понятия и
+теоретические основы</h2>
+<h3 id="основные-законы-отражения-и-преломления">Основные законы
+отражения и преломления</h3>
+<p>Классическая оптика выделяет четыре фундаментальных факта, касающихся
+взаимодействия света с поверхностью раздела сред:</p>
+<ol type="1">
+<li><strong>Равенство углов:</strong> Угол отражения
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>θ</mi><mi>r</mi></msub><annotation encoding="application/x-tex">\theta_r</annotation></semantics></math>
+равен углу падения
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>θ</mi><mi>i</mi></msub><annotation encoding="application/x-tex">\theta_i</annotation></semantics></math>
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>θ</mi><mi>r</mi></msub><mo>=</mo><msub><mi>θ</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">\theta_r = \theta_i</annotation></semantics></math>).</li>
+<li><strong>Закон Снелла:</strong> Произведение показателя преломления
+на синус угла наклона луча постоянно для падающего и преломленного
+лучей:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>n</mi><mn>1</mn></msub><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><msub><mi>θ</mi><mi>i</mi></msub><mo>=</mo><msub><mi>n</mi><mn>2</mn></msub><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><msub><mi>θ</mi><mi>t</mi></msub></mrow><annotation encoding="application/x-tex">n_1 \sin \theta_i = n_2 \sin \theta_t</annotation></semantics></math>.</li>
+<li><strong>Зависимость от поляризации:</strong> Интенсивность
+отраженного света определяется углом падения и направлением
+электрического вектора
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>
+(параллельно или перпендикулярно плоскости падения).</li>
+<li><strong>Нормальное падение:</strong> Для луча, падающего
+перпендикулярно поверхности, коэффициент отражения равен
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><msub><mi>I</mi><mi>r</mi></msub><msub><mi>I</mi><mi>i</mi></msub></mfrac><mo>=</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><msub><mi>n</mi><mn>2</mn></msub><mo>−</mo><msub><mi>n</mi><mn>1</mn></msub></mrow><mrow><msub><mi>n</mi><mn>2</mn></msub><mo>+</mo><msub><mi>n</mi><mn>1</mn></msub></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\frac{I_r}{I_i} = \left( \frac{n_2 - n_1}{n_2 + n_1} \right)^2</annotation></semantics></math>.</li>
+</ol>
+<h3 id="математическое-описание-волн">Математическое описание волн</h3>
+<p>Для анализа используется форма записи плоской синусоидальной волны:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>=</mo><msub><mi>E</mi><mn>0</mn></msub><msup><mi>e</mi><mrow><mi>i</mi><mo stretchy="false" form="prefix">(</mo><mi>ω</mi><mi>t</mi><mo>−</mo><mi mathvariant="bold-italic">𝒌</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝒓</mi><mo stretchy="false" form="postfix">)</mo></mrow></msup></mrow><annotation encoding="application/x-tex">E = E_0 e^{i(\omega t - \mathbf{k} \cdot \mathbf{r})}</annotation></semantics></math></p>
+<ul>
+<li><strong>Волновой вектор
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝒌</mi><annotation encoding="application/x-tex">\mathbf{k}</annotation></semantics></math>:</strong>
+Указывает направление распространения. Его величина
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>=</mo><mi>ω</mi><mi>n</mi><mi>/</mi><mi>c</mi></mrow><annotation encoding="application/x-tex">k = \omega n / c</annotation></semantics></math>.</li>
+<li><strong>Операторная замена:</strong> В уравнениях Максвелла
+дифференцирование заменяется умножением:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mi>∂</mi><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac><mo>→</mo><mi>i</mi><mi>ω</mi></mrow><annotation encoding="application/x-tex">\frac{\partial}{\partial t} \to i\omega</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∇</mi><mo>→</mo><mi>−</mi><mi>i</mi><mi mathvariant="bold-italic">𝒌</mi></mrow><annotation encoding="application/x-tex">\nabla \to -i\mathbf{k}</annotation></semantics></math>.
+Это позволяет преобразовывать дифференциальные уравнения в
+алгебраические.</li>
+<li><strong>Связь полей:</strong> Вектор магнитной индукции
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+выражается через электрическое поле как
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑩</mi><mo>=</mo><mfrac><mrow><mi mathvariant="bold-italic">𝒌</mi><mo>×</mo><mi mathvariant="bold-italic">𝑬</mi></mrow><mi>ω</mi></mfrac></mrow><annotation encoding="application/x-tex">\mathbf{B} = \frac{\mathbf{k} \times \mathbf{E}}{\omega}</annotation></semantics></math>.</li>
+</ul>
+<h3 id="граничные-условия">Граничные условия</h3>
+<p>Уравнения Максвелла должны выполняться не только внутри однородного
+материала, но и на границе раздела. Основной метод их нахождения —
+анализ поведения производных в очень тонком переходном слое.</p>
+<p><strong>Таблица 33.1. Граничные условия на поверхности
+диэлектрика</strong> (При условии, что граница находится в плоскости
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mi>z</mi></mrow><annotation encoding="application/x-tex">yz</annotation></semantics></math>)</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Компонента</th>
+<th style="text-align: left;">Условие непрерывности (сохранения)</th>
+<th style="text-align: left;">Физическое обоснование</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Нормальная E</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><msub><mi>ϵ</mi><mn>0</mn></msub><msub><mi mathvariant="bold-italic">𝑬</mi><mn>1</mn></msub><mo>+</mo><msub><mi mathvariant="bold-italic">𝑷</mi><mn>1</mn></msub><msub><mo stretchy="false" form="postfix">)</mo><mi>x</mi></msub><mo>=</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>ϵ</mi><mn>0</mn></msub><msub><mi mathvariant="bold-italic">𝑬</mi><mn>2</mn></msub><mo>+</mo><msub><mi mathvariant="bold-italic">𝑷</mi><mn>2</mn></msub><msub><mo stretchy="false" form="postfix">)</mo><mi>x</mi></msub></mrow><annotation encoding="application/x-tex">(\epsilon_0 \mathbf{E}_1 + \mathbf{P}_1)_x = (\epsilon_0 \mathbf{E}_2 + \mathbf{P}_2)_x</annotation></semantics></math></td>
+<td style="text-align: left;">Уравнение
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∇</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝑬</mi><mo>=</mo><mi>−</mi><mfrac><mrow><mi>∇</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝑷</mi></mrow><msub><mi>ϵ</mi><mn>0</mn></msub></mfrac></mrow><annotation encoding="application/x-tex">\nabla \cdot \mathbf{E} = -\frac{\nabla \cdot \mathbf{P}}{\epsilon_0}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Тангенциальная E</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mrow><mi>y</mi><mn>1</mn></mrow></msub><mo>=</mo><msub><mi>E</mi><mrow><mi>y</mi><mn>2</mn></mrow></msub></mrow><annotation encoding="application/x-tex">E_{y1} = E_{y2}</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mrow><mi>z</mi><mn>1</mn></mrow></msub><mo>=</mo><msub><mi>E</mi><mrow><mi>z</mi><mn>2</mn></mrow></msub></mrow><annotation encoding="application/x-tex">E_{z1} = E_{z2}</annotation></semantics></math></td>
+<td style="text-align: left;">Закон Фарадея
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∇</mi><mo>×</mo><mi mathvariant="bold-italic">𝑬</mi><mo>=</mo><mi>−</mi><mfrac><mrow><mi>∂</mi><mi mathvariant="bold-italic">𝑩</mi></mrow><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Магнитное поле</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="bold-italic">𝑩</mi><mn>1</mn></msub><mo>=</mo><msub><mi mathvariant="bold-italic">𝑩</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">\mathbf{B}_1 = \mathbf{B}_2</annotation></semantics></math></td>
+<td style="text-align: left;">Для немагнитных материалов</td>
+</tr>
+</tbody>
+</table>
+<h3 id="отражение-от-металлов-и-сильных-поглотителей">Отражение от
+металлов и сильных поглотителей</h3>
+<p>Металлы обладают комплексным показателем преломления с большой мнимой
+частью.</p>
+<ul>
+<li><strong>Металлический блеск:</strong> Вещества, которые сильно
+поглощают свет на определенной частоте, также сильно отражают его на
+этой же частоте.</li>
+<li><strong>Идеальное отражение:</strong> Материал с чисто мнимым
+показателем преломления теоретически дает 100% отражение.</li>
+</ul>
+<h3 id="полное-внутреннее-отражение">Полное внутреннее отражение</h3>
+<p>При переходе из более плотной среды в менее плотную
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>n</mi><mn>1</mn></msub><mo>&gt;</mo><msub><mi>n</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">n_1 &gt; n_2</annotation></semantics></math>)
+существует критический угол
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>θ</mi><mi>c</mi></msub><annotation encoding="application/x-tex">\theta_c</annotation></semantics></math>,
+при котором
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><msub><mi>θ</mi><mi>c</mi></msub><mo>=</mo><msub><mi>n</mi><mn>2</mn></msub><mi>/</mi><msub><mi>n</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">\sin \theta_c = n_2 / n_1</annotation></semantics></math>.</p>
+<ul>
+<li><strong>Мнимое волновое число:</strong> Если угол падения больше
+критического, компонента волнового вектора
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msubsup><mi>k</mi><mi>x</mi><mo>″</mo></msubsup><annotation encoding="application/x-tex">k_x&#39;&#39;</annotation></semantics></math>
+становится чисто мнимой.</li>
+<li><strong>Экспоненциальный хвост:</strong> За пределами поверхности
+поле не исчезает мгновенно, а затухает экспоненциально на расстоянии
+порядка длины волны
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>λ</mi><mn>0</mn></msub><annotation encoding="application/x-tex">\lambda_0</annotation></semantics></math>).</li>
+<li><strong>Нарушенное полное отражение:</strong> Если к поверхности
+поднести второй кусок материала на расстояние меньше длины волны, свет
+пройдет сквозь щель («просачивание» волны).</li>
+</ul>
+<hr />
+<h2 id="2-проверочные-вопросы">2. Проверочные вопросы</h2>
+<ol type="1">
+<li><strong>Почему для анализа отражения недостаточно знать только
+показатель преломления
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>?</strong>
+<ul>
+<li><em>Ответ:</em> Амплитуда отражения зависит от «поверхностных
+свойств» и резкости перехода показателя преломления на расстояниях,
+соизмеримых с длиной волны.</li>
+</ul></li>
+<li><strong>Какое важное допущение делается при выводе равенства
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="bold-italic">𝑩</mi><mn>1</mn></msub><mo>=</mo><msub><mi mathvariant="bold-italic">𝑩</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">\mathbf{B}_1 = \mathbf{B}_2</annotation></semantics></math>
+на границе?</strong>
+<ul>
+<li><em>Ответ:</em> Предполагается, что материалы по обе стороны границы
+являются немагнитными (эффектами магнитной поляризации можно
+пренебречь).</li>
+</ul></li>
+<li><strong>Что происходит с частотой волны при отражении и
+преломлении?</strong>
+<ul>
+<li><em>Ответ:</em> Частоты всех волн (падающей, отраженной и
+преломленной) должны быть одинаковы, иначе граничные условия не смогут
+выполняться в любой момент времени.</li>
+</ul></li>
+<li><strong>Какова геометрическая интерпретация комплексных углов
+преломления?</strong>
+<ul>
+<li><em>Ответ:</em> При комплексных показателях преломления углы теряют
+прямую геометрическую интерпретацию; физически это означает изменение
+фазы и амплитуды волны, что удобнее описывать через комплексные волновые
+числа
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math>.</li>
+</ul></li>
+<li><strong>Как доказать наличие электрического поля в воздухе при
+полном внутреннем отражении света внутри стекла?</strong>
+<ul>
+<li><em>Ответ:</em> Это можно сделать с помощью второй призмы,
+поднесенной очень близко к первой: часть энергии «перетечет» во вторую
+призму через экспоненциально затухающее поле в щели.</li>
+</ul></li>
+</ol>
+<hr />
+<h2 id="3-темы-для-эссе-и-глубокого-анализа">3. Темы для эссе и
+глубокого анализа</h2>
+<ul>
+<li><strong>«Дифференциальный метод vs Интегральный метод»:</strong>
+Сравните вывод граничных условий через контурные интегралы (циркуляцию)
+и через анализ скачков производных в уравнениях Максвелла. В каких
+случаях предпочтителен второй метод?</li>
+<li><strong>«Физика металлического блеска чернил»:</strong> На основе
+концепции комплексного показателя преломления объясните, почему засохшие
+красные чернила могут давать зеленоватый металлический отблеск.</li>
+<li><strong>«Туннелирование электромагнитных волн»:</strong>
+Проанализируйте аналогию между нарушенным полным внутренним отражением и
+квантовомеханическим туннелированием частиц через потенциальный барьер,
+используя понятие экспоненциально затухающего поля.</li>
+</ul>
+<hr />
+<h2 id="4-типичные-ошибки">4. Типичные ошибки</h2>
+<ul>
+<li><strong>Предположение о вещественности
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>:</strong>
+Ошибка считать, что формулы для идеальных диэлектриков применимы к
+металлам без учета мнимой части показателя преломления.</li>
+<li><strong>Игнорирование поляризации:</strong> Неверно ожидать
+одинаковой интенсивности отражения для волн, поляризованных параллельно
+и перпендикулярно плоскости падения, особенно при углах, отличных от
+нормали.</li>
+<li><strong>Мнение о «нулевом поле» при полном отражении:</strong>
+Ошибочно полагать, что при полном внутреннем отражении поле во второй
+среде строго равно нулю. Там существует экспоненциально затухающая
+волна.</li>
+<li><strong>Неправильный выбор знака в экспоненте:</strong> При работе с
+мнимым волновым числом
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>k</mi><mi>I</mi></msub><annotation encoding="application/x-tex">k_I</annotation></semantics></math>
+важно выбирать отрицательный знак в экспоненте
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>−</mi><msub><mi>k</mi><mi>I</mi></msub><mi>x</mi></mrow></msup><annotation encoding="application/x-tex">e^{-k_I x}</annotation></semantics></math>),
+чтобы решение не расходилось в бесконечность.</li>
+</ul>
+<hr />
+<h2 id="5-краткий-глоссарий">5. Краткий глоссарий</h2>
+<ul>
+<li><strong>Волновое число
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math>):</strong>
+Величина волнового вектора, равная
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>π</mi><mi>/</mi><mi>λ</mi></mrow><annotation encoding="application/x-tex">2\pi/\lambda</annotation></semantics></math>.
+Определяет фазовую скорость и затухание волны.</li>
+<li><strong>Граничные условия:</strong> Набор уравнений, связывающих
+компоненты электромагнитного поля по разные стороны поверхности раздела
+сред.</li>
+<li><strong>Инвариант фазы:</strong> Утверждение о том, что фаза волны
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ϕ</mi><mo>=</mo><mi>ω</mi><mi>t</mi><mo>−</mo><mi mathvariant="bold-italic">𝒌</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝒓</mi></mrow><annotation encoding="application/x-tex">\phi = \omega t - \mathbf{k} \cdot \mathbf{r}</annotation></semantics></math>
+одинакова во всех системах координат (скалярное произведение
+четырехвекторов).</li>
+<li><strong>Критический угол
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>θ</mi><mi>c</mi></msub><annotation encoding="application/x-tex">\theta_c</annotation></semantics></math>):</strong>
+Угол падения, начиная с которого преломленный луч не может существовать
+в виде распространяющейся волны во второй среде.</li>
+<li><strong>Плоскость падения:</strong> Плоскость, содержащая падающий
+луч и нормаль к поверхности.</li>
+<li><strong>Показатель преломления
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>):</strong>
+Отношение скорости света в вакууме к фазовой скорости в среде. Может
+быть комплексным (мнимая часть отвечает за поглощение).</li>
+<li><strong>Экспоненциальный «хвост»:</strong> Область пространства за
+границей раздела при полном внутреннем отражении, где амплитуда поля
+быстро убывает с расстоянием.</li>
+</ul>
+    </article>
+  </main>
+</body>
+</html>

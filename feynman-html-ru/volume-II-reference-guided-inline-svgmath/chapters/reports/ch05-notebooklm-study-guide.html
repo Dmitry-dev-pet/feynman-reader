@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Глава 5. Применения закона Гаусса: Учебное руководство - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch05.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1 id="глава-5-применения-закона-гаусса-учебное-руководство">Глава 5.
+Применения закона Гаусса: Учебное руководство</h1>
+<p>Данное руководство синтезирует ключевые положения пятой главы
+«Фейнмановских лекций по физике», посвященной практическому применению
+закона Гаусса, анализу устойчивости электрических систем и свойствам
+проводников в электростатическом поле.</p>
+<h2 id="i-ключевые-понятия-и-теоретические-основы">I. Ключевые понятия и
+теоретические основы</h2>
+<h3 id="1-фундаментальные-законы-электростатики">1. Фундаментальные
+законы электростатики</h3>
+<p>Электростатика основывается на двух главных принципах:</p>
+<ul>
+<li><strong>Закон Гаусса:</strong> Поток электрического поля из любого
+объема пропорционален заряду, заключенному внутри этого объема.</li>
+<li><strong>Нулевая циркуляция:</strong> Циркуляция электрического поля
+по любому замкнутому контуру равна нулю
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∮</mo><mi mathvariant="bold-italic">𝑬</mi><mo>⋅</mo><mi>d</mi><mi mathvariant="bold-italic">𝒔</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\oint \mathbf{E} \cdot d\mathbf{s} = 0</annotation></semantics></math>),
+что означает, что поле является градиентом потенциала
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑬</mi><mo>=</mo><mi>−</mi><mi>∇</mi><mi>ϕ</mi></mrow><annotation encoding="application/x-tex">\mathbf{E} = -\nabla \phi</annotation></semantics></math>).</li>
+</ul>
+<h3 id="2-равновесие-в-электростатическом-поле">2. Равновесие в
+электростатическом поле</h3>
+<ul>
+<li><strong>Невозможность устойчивого равновесия:</strong> В пустом
+пространстве невозможно достичь устойчивого равновесия точечного заряда
+или жесткой системы зарядов только электростатическими силами. Для
+устойчивости поле в окрестности точки равновесия
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>P</mi><mn>0</mn></msub><annotation encoding="application/x-tex">P_0</annotation></semantics></math>
+должно быть направлено внутрь, что создает отрицательный поток через
+воображаемую поверхность. Согласно закону Гаусса, это невозможно, если в
+самой точке
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>P</mi><mn>0</mn></msub><annotation encoding="application/x-tex">P_0</annotation></semantics></math>
+нет заряда.</li>
+<li><strong>Механические ограничения:</strong> Равновесие становится
+возможным при наличии неэлектрических сил (например, стенок трубки),
+которые компенсируют составляющие поля, направленные от точки
+равновесия.</li>
+</ul>
+<h3 id="3-устойчивость-атомов">3. Устойчивость атомов</h3>
+<ul>
+<li><strong>Модель Томсона:</strong> Положительный заряд распределен по
+шару, электроны — внутри него. Модель была отвергнута после опытов
+Резерфорда, показавших концентрацию заряда в ядре.</li>
+<li><strong>Модель Резерфорда — Бора:</strong> Планетарная модель, где
+электроны движутся по орбитам. Проблема: ускоренно движущиеся заряды
+должны излучать энергию и падать на ядро.</li>
+<li><strong>Квантовомеханическое решение:</strong> Стабильность
+обеспечивается принципом неопределенности. Электрон «размазан» в
+пространстве; попытка локализовать его слишком близко к ядру резко
+увеличивает его импульс и энергию, позволяя преодолеть притяжение.</li>
+</ul>
+<h3 id="4-расчет-полей-с-высокой-симметрией">4. Расчет полей с высокой
+симметрией</h3>
+<p>Закон Гаусса позволяет вычислять напряженность поля
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math>
+для систем с выраженной симметрией без сложного интегрирования.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Система</th>
+<th style="text-align: left;">Тип симметрии</th>
+<th style="text-align: left;">Формула поля
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math>)</th>
+<th style="text-align: left;">Особенности</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Заряженная прямая</strong></td>
+<td style="text-align: left;">Цилиндрическая</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>=</mo><mfrac><mi>λ</mi><mrow><mn>2</mn><mi>π</mi><msub><mi>ϵ</mi><mn>0</mn></msub><mi>r</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">E = \frac{\lambda}{2\pi\epsilon_0 r}</annotation></semantics></math></td>
+<td style="text-align: left;">Обратно пропорционально первой степени
+расстояния.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Заряженная плоскость</strong></td>
+<td style="text-align: left;">Плоская</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>=</mo><mfrac><mi>σ</mi><mrow><mn>2</mn><msub><mi>ϵ</mi><mn>0</mn></msub></mrow></mfrac></mrow><annotation encoding="application/x-tex">E = \frac{\sigma}{2\epsilon_0}</annotation></semantics></math></td>
+<td style="text-align: left;">Поле однородно и не зависит от
+расстояния.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Две параллельные
+плоскости</strong></td>
+<td style="text-align: left;">Плоская</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>=</mo><mfrac><mi>σ</mi><msub><mi>ϵ</mi><mn>0</mn></msub></mfrac></mrow><annotation encoding="application/x-tex">E = \frac{\sigma}{\epsilon_0}</annotation></semantics></math>
+(внутри),
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">E = 0</annotation></semantics></math>
+(снаружи)</td>
+<td style="text-align: left;">Поля плоскостей суммируются между ними и
+вычитаются снаружи.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Однородно заряженный
+шар</strong></td>
+<td style="text-align: left;">Сферическая</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>=</mo><mfrac><mrow><mi>ρ</mi><mi>r</mi></mrow><mrow><mn>3</mn><msub><mi>ϵ</mi><mn>0</mn></msub></mrow></mfrac></mrow><annotation encoding="application/x-tex">E = \frac{\rho r}{3\epsilon_0}</annotation></semantics></math>
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mo>&lt;</mo><mi>R</mi></mrow><annotation encoding="application/x-tex">r &lt; R</annotation></semantics></math>)</td>
+<td style="text-align: left;">Внутри шара поле растет пропорционально
+расстоянию от центра.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="5-поля-в-проводниках">5. Поля в проводниках</h3>
+<ul>
+<li><strong>Внутри металла:</strong> В электростатических условиях поле
+внутри проводника всегда равно нулю
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑬</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\mathbf{E} = 0</annotation></semantics></math>).
+Если бы поле существовало, свободные электроны пришли бы в
+движение.</li>
+<li><strong>Распределение заряда:</strong> Весь избыточный заряд
+располагается в тонком слое на поверхности (толщиной в 1–2 атома).</li>
+<li><strong>Поле у поверхности:</strong> Всегда направлено
+перпендикулярно поверхности. Его величина
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>=</mo><mfrac><mi>σ</mi><msub><mi>ϵ</mi><mn>0</mn></msub></mfrac></mrow><annotation encoding="application/x-tex">E = \frac{\sigma}{\epsilon_0}</annotation></semantics></math>,
+что в два раза больше поля одиночного слоя из-за влияния остальных
+зарядов проводника.</li>
+<li><strong>Полость в проводнике:</strong> В пустой полости внутри
+проводника любой формы поле равно нулю. Это обеспечивает
+<strong>электростатическую защиту</strong> (экранирование).</li>
+</ul>
+<hr />
+<h2 id="ii-проверочные-вопросы-короткие-ответы">II. Проверочные вопросы
+(короткие ответы)</h2>
+<ol type="1">
+<li><p><strong>Почему поле внутри пустой полости проводника равно
+нулю?</strong> <em>Ответ:</em> Если бы в полости было поле, линии
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>
+начинались бы на одном участке внутренней поверхности и заканчивались на
+другом. Интеграл по такому контуру (через полость и тело проводника) не
+был бы равен нулю, что нарушает закон о нулевой циркуляции
+электростатического поля.</p></li>
+<li><p><strong>Как закон Гаусса связан с законом Кулона?</strong>
+<em>Ответ:</em> Закон Гаусса математически вытекает из того, что сила
+взаимодействия убывает именно как квадрат расстояния
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><msup><mi>r</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">1/r^2</annotation></semantics></math>).
+Если бы показатель степени отличался от 2, поле внутри заряженной сферы
+не было бы нулевым.</p></li>
+<li><p><strong>Где находится избыточный заряд в проводнике?</strong>
+<em>Ответ:</em> Исключительно на внешней поверхности
+проводника.</p></li>
+<li><p><strong>Какова напряженность поля вне бесконечной заряженной
+плоскости?</strong> <em>Ответ:</em>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>=</mo><mfrac><mi>σ</mi><mrow><mn>2</mn><msub><mi>ϵ</mi><mn>0</mn></msub></mrow></mfrac></mrow><annotation encoding="application/x-tex">E = \frac{\sigma}{2\epsilon_0}</annotation></semantics></math>,
+поле постоянно во всем пространстве.</p></li>
+<li><p><strong>В чем заключалась ошибка статической модели атома
+Томсона?</strong> <em>Ответ:</em> Она не соответствовала результатам
+экспериментов по рассеянию (Гейгера-Марсдена), которые доказали наличие
+плотного положительного ядра.</p></li>
+</ol>
+<hr />
+<h2 id="iii-темы-для-глубокого-изучения-эссе">III. Темы для глубокого
+изучения (эссе)</h2>
+<ol type="1">
+<li><strong>Эволюция представлений об устойчивости материи: от Томсона
+до квантовой механики.</strong> Опишите, как невозможность статического
+равновесия зарядов (согласно закону Гаусса) и проблемы динамической
+модели Резерфорда привели к необходимости введения квантовомеханических
+принципов.</li>
+<li><strong>Точность закона Кулона и современные эксперименты.</strong>
+Проанализируйте методы проверки закона обратных квадратов (опыты
+Максвелла, Плимптона-Лафтона, Лэмба-Ризерфорда). Почему для таких
+измерений форма проводника не имеет критического значения?</li>
+<li><strong>Границы применимости классической электростатики на малых
+расстояниях.</strong> Рассмотрите поведение электрических сил на
+расстояниях порядка
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>10</mn><mrow><mi>−</mi><mn>14</mn></mrow></msup><annotation encoding="application/x-tex">10^{-14}</annotation></semantics></math>
+см. Почему на этих масштабах закон Кулона может «отказывать» и как это
+связано со структурой протона?</li>
+</ol>
+<hr />
+<h2 id="iv-типичные-ошибки-при-изучении-темы">IV. Типичные ошибки при
+изучении темы</h2>
+<ul>
+<li><strong>Путаница в коэффициентах:</strong> Часто путают поле
+одиночного заряженного листа
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>=</mo><mfrac><mi>σ</mi><mrow><mn>2</mn><msub><mi>ϵ</mi><mn>0</mn></msub></mrow></mfrac></mrow><annotation encoding="application/x-tex">E = \frac{\sigma}{2\epsilon_0}</annotation></semantics></math>)
+и поле у поверхности проводника
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>=</mo><mfrac><mi>σ</mi><msub><mi>ϵ</mi><mn>0</mn></msub></mfrac></mrow><annotation encoding="application/x-tex">E = \frac{\sigma}{\epsilon_0}</annotation></semantics></math>).
+Важно помнить, что в проводнике другие заряды создают дополнительное
+поле, удваивающее внешний результат и обнуляющее внутренний.</li>
+<li><strong>Игнорирование условий симметрии:</strong> Использование
+закона Гаусса для прямого вычисления
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math>
+возможно только при наличии строгой симметрии (сфера, цилиндр,
+плоскость). В иных случаях закон Гаусса верен, но не позволяет легко
+найти напряженность поля.</li>
+<li><strong>Забывание о «пустоте» полости:</strong> Электростатическая
+защита (нулевое поле в полости) работает только в том случае, если в
+самой полости нет изолированных от проводника зарядов.</li>
+</ul>
+<hr />
+<h2 id="v-глоссарий">V. Глоссарий</h2>
+<ul>
+<li><strong>Дивергенция
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑭</mi><annotation encoding="application/x-tex">\mathbf{F}</annotation></semantics></math>:</strong>
+Математическая мера «исхождения» векторного поля из точки. В
+электростатике дивергенция поля
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>
+пропорциональна плотности заряда.</li>
+<li><strong>Закон Гаусса:</strong> Поток вектора напряженности
+электрического поля через замкнутую поверхность равен суммарному заряду
+внутри нее, деленному на
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ϵ</mi><mn>0</mn></msub><annotation encoding="application/x-tex">\epsilon_0</annotation></semantics></math>.</li>
+<li><strong>Локальная поверхностная плотность заряда
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>σ</mi><annotation encoding="application/x-tex">\sigma</annotation></semantics></math>):</strong>
+Количество заряда, приходящееся на единицу площади поверхности
+проводника в данной точке.</li>
+<li><strong>Принцип неопределенности:</strong> Квантовый принцип,
+ограничивающий одновременную точность определения координат и импульса
+частицы; ключевой фактор стабильности атома.</li>
+<li><strong>Эквипотенциальная область:</strong> Область пространства
+(например, тело проводника), во всех точках которой электрический
+потенциал одинаков.</li>
+<li><strong>Электростатическая защита:</strong> Эффект отсутствия
+влияния внешних электрических полей на пространство внутри замкнутой
+проводящей оболочки.</li>
+</ul>
+    </article>
+  </main>
+</body>
+</html>

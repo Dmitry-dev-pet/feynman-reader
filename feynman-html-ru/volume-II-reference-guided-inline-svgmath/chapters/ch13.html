@@ -76,6 +76,9 @@
         <a class="nav-btn next-chapter" href="ch14.html">Дальше</a>
       </div>
       <a class="toolbar-title" href="#ch13" title="13. Магнитостатика">Фейнмановские лекции по физике, том II · 13</a>
+<!-- BEGIN NotebookLM toolbar -->
+      <div class="study-mode-switch" aria-label="Материалы главы"><button class="toolbar-btn study-mode-btn is-active" type="button" data-study-mode="lecture" aria-pressed="true">Лекция</button><button class="toolbar-btn study-mode-btn" type="button" data-study-mode="notes" aria-pressed="false">Конспект</button><button class="toolbar-btn study-mode-btn" type="button" data-study-mode="media" aria-pressed="false">Медиа</button><button class="toolbar-btn study-mode-btn" type="button" data-study-mode="files" aria-pressed="false">Файлы</button></div>
+<!-- END NotebookLM toolbar -->
       <div class="toolbar-group toolbar-settings" aria-label="Настройки чтения">
         <a class="toolbar-btn language-toggle is-ru" href="../../../feynman-html-en/volume-II-reference-guided-inline-svgmath/chapters/ch13.html" aria-label="English" title="English"><span class="lang-ru">RU</span><span aria-hidden="true">/</span><span class="lang-en">EN</span></a>
         <button class="toolbar-btn icon-btn" type="button" data-reader-action="theme" aria-label="Сменить тему" title="Сменить тему">◐</button>
@@ -87,7 +90,36 @@
         <button class="toolbar-btn icon-btn" type="button" data-reader-action="tex" aria-label="TeX формул" title="TeX формул">{}</button>
       </div>
     </header>
-    <article class="chapter-flow"><h1 id="ch13">13. Магнитостатика</h1><h2 id="sec-13-1">13–1 Магнитное поле<a class="permalink" href="#sec-13-1" aria-label="Ссылка на раздел">#</a></h2><p>Сила, действующая на электрический заряд, зависит не только от того, где он находится, но и от того, с какой скоростью он движется. Каждая точка в пространстве характеризуется двумя векторными величинами, которые определяют силу, действующую на любой заряд. Во-первых, имеется электрическая сила, дающая ту часть силы, которая не зависит от движения заряда. Мы описываем ее с помощью электрического поля <svg class="math-svg inline" aria-label="\mathbf{E}" data-tex="\mathbf{E}" tabindex="0" style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="1.71ex" height="1.538ex" role="img" focusable="false" viewBox="0 -680 756 680"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="mi"><path data-c="1D404" d="M723 286Q721 284 700 145T677 3V0H39V62H147V618H39V680H660V676Q662 670 675 552T691 428V424H629V428Q629 429 627 448T618 494T601 541Q574 593 527 605T382 618H374H304V384H336Q338 384 347 384T361 384T376 386T392 390T407 397T421 407T432 423Q442 444 443 482V501H505V205H443V224Q442 258 435 278T411 307T380 318T336 322H304V62H375H394Q429 62 449 62T497 66T541 76T577 95T609 126T632 170T651 232Q661 287 661 289H723V286Z"></path></g></g></g></g></svg><span class="math-copy-fallback">\mathbf{E}</span>. Во-вторых, есть еще добавочная компонента силы, называемая магнитной силой, которая зависит от скорости заряда. Эта магнитная сила имеет удивительное свойство: в любой данной точке пространства как направление, так и величина силы зависят от направления движения частицы; в каждый момент сила всегда перпендикулярна вектору скорости; кроме того, в любом месте сила всегда перпендикулярна определенному направлению в пространстве (<a class="xref xref-figure" href="ch13.html#Ch13-F1">фиг. 13.1</a>), и, наконец, величина силы пропорциональна компоненте скорости, перпендикулярной этому выделенному направлению. Все эти свойства можно описать, если ввести вектор магнитного поля <svg class="math-svg inline" aria-label="\mathbf{B}" data-tex="\mathbf{B}" tabindex="0" style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="1.851ex" height="1.552ex" role="img" focusable="false" viewBox="0 -686 818 686"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="mi"><path data-c="1D401" d="M720 510Q720 476 704 448T665 404T619 377T580 362L564 359L583 356Q602 353 632 342T690 312Q712 292 725 276Q752 235 752 189V183Q752 160 741 125Q698 18 547 2Q543 1 288 0H39V62H147V624H39V686H264H409Q502 686 542 681T624 655Q720 607 720 510ZM563 513Q563 553 548 578T518 611T486 622Q479 624 385 624H293V382H375Q458 383 467 385Q563 405 563 513ZM590 192Q590 307 505 329Q504 330 503 330L398 331H293V62H391H400H444Q496 62 528 75T580 131Q590 155 590 192Z"></path></g></g></g></g></svg><span class="math-copy-fallback">\mathbf{B}</span>, который определяет выделенное направление в пространстве и одновременно служит константой пропорциональности между силой и скоростью, и записать магнитную силу в виде <svg class="math-svg inline" aria-label="q\mathbf{v}\times\mathbf{B}" data-tex="q\mathbf{v}\times\mathbf{B}" tabindex="0" style="vertical-align: -0.439ex;" xmlns="http://www.w3.org/2000/svg" width="7.03ex" height="1.991ex" role="img" focusable="false" viewBox="0 -686 3107.4 880"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D45E" d="M33 157Q33 258 109 349T280 441Q340 441 372 389Q373 390 377 395T388 406T404 418Q438 442 450 442Q454 442 457 439T460 434Q460 425 391 149Q320 -135 320 -139Q320 -147 365 -148H390Q396 -156 396 -157T393 -175Q389 -188 383 -194H370Q339 -192 262 -192Q234 -192 211 -192T174 -192T157 -193Q143 -193 143 -185Q143 -182 145 -170Q149 -154 152 -151T172 -148Q220 -148 230 -141Q238 -136 258 -53T279 32Q279 33 272 29Q224 -10 172 -10Q117 -10 75 30T33 157ZM352 326Q329 405 277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q233 26 290 98L298 109L352 326Z"></path></g><g data-mml-node="TeXAtom" data-mjx-texclass="ORD" transform="translate(460,0)"><g data-mml-node="mi"><path data-c="1D42F" d="M401 444Q413 441 495 441Q568 441 574 444H580V382H510L409 156Q348 18 339 6Q331 -4 320 -4Q318 -4 313 -4T303 -3H288Q273 -3 264 12T221 102Q206 135 197 156L96 382H26V444H34Q49 441 145 441Q252 441 270 444H279V382H231L284 264Q335 149 338 149Q338 150 389 264T442 381Q442 382 418 382H394V444H401Z"></path></g></g><g data-mml-node="mo" transform="translate(1289.2,0)"><path data-c="D7" d="M630 29Q630 9 609 9Q604 9 587 25T493 118L389 222L284 117Q178 13 175 11Q171 9 168 9Q160 9 154 15T147 29Q147 36 161 51T255 146L359 250L255 354Q174 435 161 449T147 471Q147 480 153 485T168 490Q173 490 175 489Q178 487 284 383L389 278L493 382Q570 459 587 475T609 491Q630 491 630 471Q630 464 620 453T522 355L418 250L522 145Q606 61 618 48T630 29Z"></path></g><g data-mml-node="TeXAtom" data-mjx-texclass="ORD" transform="translate(2289.4,0)"><g data-mml-node="mi"><path data-c="1D401" d="M720 510Q720 476 704 448T665 404T619 377T580 362L564 359L583 356Q602 353 632 342T690 312Q712 292 725 276Q752 235 752 189V183Q752 160 741 125Q698 18 547 2Q543 1 288 0H39V62H147V624H39V686H264H409Q502 686 542 681T624 655Q720 607 720 510ZM563 513Q563 553 548 578T518 611T486 622Q479 624 385 624H293V382H375Q458 383 467 385Q563 405 563 513ZM590 192Q590 307 505 329Q504 330 503 330L398 331H293V62H391H400H444Q496 62 528 75T580 131Q590 155 590 192Z"></path></g></g></g></g></svg><span class="math-copy-fallback">q\mathbf{v}\times\mathbf{B}</span>. Полная электромагнитная сила, действующая на заряд, может тогда быть записана так:</p><div class="display-math" id="eq-13-1"><svg class="math-svg display" aria-label="
+<!-- BEGIN NotebookLM reports -->
+    <section class="study-workspace" id="study-panel" hidden>
+      <div class="study-workspace-inner">
+        <header class="study-workspace-header">
+          <div>
+            <strong>Материалы главы</strong>
+            <span>Сгенерированные учебные материалы NotebookLM для этой главы.</span>
+          </div>
+        </header>
+        <section class="study-section" data-study-section="notes" hidden>
+    <div class="study-grid">
+      <a class="study-card" href="reports/ch13-notebooklm-briefing.html"><strong>Обзор главы</strong><span>HTML · NotebookLM</span></a>
+      <a class="study-card" href="reports/ch13-notebooklm-study-guide.html"><strong>Конспект</strong><span>HTML · NotebookLM</span></a>
+    </div>
+  </section>
+        <section class="study-section" data-study-section="media" hidden>
+    <div class="study-grid">
+      <p class="study-empty">Для этой главы медиа пока нет.</p>
+    </div>
+  </section>
+        <section class="study-section" data-study-section="files" hidden>
+    <div class="study-card">
+      <strong>Файлы</strong>
+      <span class="study-file-row"><a href="../../../feynman-notebooklm/ru/volume-II/ch13/ch13-full.md">Текст главы для NotebookLM</a><a href="../../../feynman-notebooklm/ru/volume-II/ch13/figure-context/ch13-figures-context.md">Рисунки и контекст</a><a href="../../../feynman-notebooklm/ru/volume-II/ch13/manifest.json">Манифест</a><a href="../../../feynman-notebooklm/ru/volume-II/ch13/sections/">Разделы главы</a><a href="reports/ch13-notebooklm-briefing.md">Обзор главы MD</a><a href="reports/ch13-notebooklm-study-guide.md">Конспект MD</a></span>
+    </div>
+  </section>
+      </div>
+    </section>
+<!-- END NotebookLM reports -->
+    <article class="chapter-flow study-section" data-study-section="lecture"><h1 id="ch13">13. Магнитостатика</h1><h2 id="sec-13-1">13–1 Магнитное поле<a class="permalink" href="#sec-13-1" aria-label="Ссылка на раздел">#</a></h2><p>Сила, действующая на электрический заряд, зависит не только от того, где он находится, но и от того, с какой скоростью он движется. Каждая точка в пространстве характеризуется двумя векторными величинами, которые определяют силу, действующую на любой заряд. Во-первых, имеется электрическая сила, дающая ту часть силы, которая не зависит от движения заряда. Мы описываем ее с помощью электрического поля <svg class="math-svg inline" aria-label="\mathbf{E}" data-tex="\mathbf{E}" tabindex="0" style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="1.71ex" height="1.538ex" role="img" focusable="false" viewBox="0 -680 756 680"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="mi"><path data-c="1D404" d="M723 286Q721 284 700 145T677 3V0H39V62H147V618H39V680H660V676Q662 670 675 552T691 428V424H629V428Q629 429 627 448T618 494T601 541Q574 593 527 605T382 618H374H304V384H336Q338 384 347 384T361 384T376 386T392 390T407 397T421 407T432 423Q442 444 443 482V501H505V205H443V224Q442 258 435 278T411 307T380 318T336 322H304V62H375H394Q429 62 449 62T497 66T541 76T577 95T609 126T632 170T651 232Q661 287 661 289H723V286Z"></path></g></g></g></g></svg><span class="math-copy-fallback">\mathbf{E}</span>. Во-вторых, есть еще добавочная компонента силы, называемая магнитной силой, которая зависит от скорости заряда. Эта магнитная сила имеет удивительное свойство: в любой данной точке пространства как направление, так и величина силы зависят от направления движения частицы; в каждый момент сила всегда перпендикулярна вектору скорости; кроме того, в любом месте сила всегда перпендикулярна определенному направлению в пространстве (<a class="xref xref-figure" href="ch13.html#Ch13-F1">фиг. 13.1</a>), и, наконец, величина силы пропорциональна компоненте скорости, перпендикулярной этому выделенному направлению. Все эти свойства можно описать, если ввести вектор магнитного поля <svg class="math-svg inline" aria-label="\mathbf{B}" data-tex="\mathbf{B}" tabindex="0" style="vertical-align: 0;" xmlns="http://www.w3.org/2000/svg" width="1.851ex" height="1.552ex" role="img" focusable="false" viewBox="0 -686 818 686"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="TeXAtom" data-mjx-texclass="ORD"><g data-mml-node="mi"><path data-c="1D401" d="M720 510Q720 476 704 448T665 404T619 377T580 362L564 359L583 356Q602 353 632 342T690 312Q712 292 725 276Q752 235 752 189V183Q752 160 741 125Q698 18 547 2Q543 1 288 0H39V62H147V624H39V686H264H409Q502 686 542 681T624 655Q720 607 720 510ZM563 513Q563 553 548 578T518 611T486 622Q479 624 385 624H293V382H375Q458 383 467 385Q563 405 563 513ZM590 192Q590 307 505 329Q504 330 503 330L398 331H293V62H391H400H444Q496 62 528 75T580 131Q590 155 590 192Z"></path></g></g></g></g></svg><span class="math-copy-fallback">\mathbf{B}</span>, который определяет выделенное направление в пространстве и одновременно служит константой пропорциональности между силой и скоростью, и записать магнитную силу в виде <svg class="math-svg inline" aria-label="q\mathbf{v}\times\mathbf{B}" data-tex="q\mathbf{v}\times\mathbf{B}" tabindex="0" style="vertical-align: -0.439ex;" xmlns="http://www.w3.org/2000/svg" width="7.03ex" height="1.991ex" role="img" focusable="false" viewBox="0 -686 3107.4 880"><g stroke="currentColor" fill="currentColor" stroke-width="0" transform="scale(1,-1)"><g data-mml-node="math"><g data-mml-node="mi"><path data-c="1D45E" d="M33 157Q33 258 109 349T280 441Q340 441 372 389Q373 390 377 395T388 406T404 418Q438 442 450 442Q454 442 457 439T460 434Q460 425 391 149Q320 -135 320 -139Q320 -147 365 -148H390Q396 -156 396 -157T393 -175Q389 -188 383 -194H370Q339 -192 262 -192Q234 -192 211 -192T174 -192T157 -193Q143 -193 143 -185Q143 -182 145 -170Q149 -154 152 -151T172 -148Q220 -148 230 -141Q238 -136 258 -53T279 32Q279 33 272 29Q224 -10 172 -10Q117 -10 75 30T33 157ZM352 326Q329 405 277 405Q242 405 210 374T160 293Q131 214 119 129Q119 126 119 118T118 106Q118 61 136 44T179 26Q233 26 290 98L298 109L352 326Z"></path></g><g data-mml-node="TeXAtom" data-mjx-texclass="ORD" transform="translate(460,0)"><g data-mml-node="mi"><path data-c="1D42F" d="M401 444Q413 441 495 441Q568 441 574 444H580V382H510L409 156Q348 18 339 6Q331 -4 320 -4Q318 -4 313 -4T303 -3H288Q273 -3 264 12T221 102Q206 135 197 156L96 382H26V444H34Q49 441 145 441Q252 441 270 444H279V382H231L284 264Q335 149 338 149Q338 150 389 264T442 381Q442 382 418 382H394V444H401Z"></path></g></g><g data-mml-node="mo" transform="translate(1289.2,0)"><path data-c="D7" d="M630 29Q630 9 609 9Q604 9 587 25T493 118L389 222L284 117Q178 13 175 11Q171 9 168 9Q160 9 154 15T147 29Q147 36 161 51T255 146L359 250L255 354Q174 435 161 449T147 471Q147 480 153 485T168 490Q173 490 175 489Q178 487 284 383L389 278L493 382Q570 459 587 475T609 491Q630 491 630 471Q630 464 620 453T522 355L418 250L522 145Q606 61 618 48T630 29Z"></path></g><g data-mml-node="TeXAtom" data-mjx-texclass="ORD" transform="translate(2289.4,0)"><g data-mml-node="mi"><path data-c="1D401" d="M720 510Q720 476 704 448T665 404T619 377T580 362L564 359L583 356Q602 353 632 342T690 312Q712 292 725 276Q752 235 752 189V183Q752 160 741 125Q698 18 547 2Q543 1 288 0H39V62H147V624H39V686H264H409Q502 686 542 681T624 655Q720 607 720 510ZM563 513Q563 553 548 578T518 611T486 622Q479 624 385 624H293V382H375Q458 383 467 385Q563 405 563 513ZM590 192Q590 307 505 329Q504 330 503 330L398 331H293V62H391H400H444Q496 62 528 75T580 131Q590 155 590 192Z"></path></g></g></g></g></svg><span class="math-copy-fallback">q\mathbf{v}\times\mathbf{B}</span>. Полная электромагнитная сила, действующая на заряд, может тогда быть записана так:</p><div class="display-math" id="eq-13-1"><svg class="math-svg display" aria-label="
 
 \mathbf{F}=q(\mathbf{E}+\mathbf{v}\times\mathbf{B}).
 " data-tex="
@@ -590,5 +622,37 @@ t&#x27;&amp;=\frac{t-ux/c^2}{\sqrt{1-u^2/c^2}},
 </script>
 
 <footer>Фейнмановские лекции по физике, том II · Ричард Фейнман, Роберт Лейтон, Мэтью Сэндс</footer>
+<!-- BEGIN NotebookLM script -->
+<script>
+(() => {
+  const workspace = document.querySelector(".study-workspace");
+  const buttons = [...document.querySelectorAll("[data-study-mode]")];
+  const sections = [...document.querySelectorAll("[data-study-section]")];
+  if (!workspace || !buttons.length || !sections.length) return;
+  const setMode = (mode) => {
+    const activeMode = sections.some((section) => section.dataset.studySection === mode) ? mode : "lecture";
+    workspace.hidden = activeMode === "lecture";
+    buttons.forEach((button) => {
+      const active = button.dataset.studyMode === activeMode;
+      button.classList.toggle("is-active", active);
+      button.setAttribute("aria-pressed", active ? "true" : "false");
+    });
+    sections.forEach((section) => {
+      section.hidden = section.dataset.studySection !== activeMode;
+    });
+    const target = document.querySelector(`[data-study-section="${activeMode}"]`);
+    if (target) target.scrollIntoView({ block: "start" });
+  };
+  document.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-study-mode]");
+    if (!button) return;
+    event.preventDefault();
+    setMode(button.dataset.studyMode || "lecture");
+  });
+  if (location.hash === "#study-panel") setMode("notes");
+  else setMode("lecture");
+})();
+</script>
+<!-- END NotebookLM script -->
 </body>
 </html>

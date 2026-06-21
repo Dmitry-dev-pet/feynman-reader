@@ -72,6 +72,9 @@
         <a class="nav-btn next-chapter" href="ch21.html">Дальше</a>
       </div>
       <a class="toolbar-title" href="#ch20" title="Глава 20. Решения уравнений максвелла в пустом пространстве">Фейнмановские лекции по физике, том II · 20</a>
+<!-- BEGIN NotebookLM toolbar -->
+      <div class="study-mode-switch" aria-label="Материалы главы"><button class="toolbar-btn study-mode-btn is-active" type="button" data-study-mode="lecture" aria-pressed="true">Лекция</button><button class="toolbar-btn study-mode-btn" type="button" data-study-mode="notes" aria-pressed="false">Конспект</button><button class="toolbar-btn study-mode-btn" type="button" data-study-mode="media" aria-pressed="false">Медиа</button><button class="toolbar-btn study-mode-btn" type="button" data-study-mode="files" aria-pressed="false">Файлы</button></div>
+<!-- END NotebookLM toolbar -->
       <div class="toolbar-group toolbar-settings" aria-label="Настройки чтения">
         <a class="toolbar-btn language-toggle is-ru" href="../../../feynman-html-en/volume-II-reference-guided-inline-svgmath/chapters/ch20.html" aria-label="English" title="English"><span class="lang-ru">RU</span><span aria-hidden="true">/</span><span class="lang-en">EN</span></a>
         <button class="toolbar-btn icon-btn" type="button" data-reader-action="theme" aria-label="Сменить тему" title="Сменить тему">◐</button>
@@ -83,7 +86,36 @@
         <button class="toolbar-btn icon-btn" type="button" data-reader-action="tex" aria-label="TeX формул" title="TeX формул">{}</button>
       </div>
     </header>
-    <article class="chapter-flow"><h1 id="ch20">Глава 20. Решения уравнений максвелла в пустом пространстве</h1><h2 id="sec-20-1">20–1 Волны в пустом пространстве; плоские волны<a class="permalink" href="#sec-20-1" aria-label="Ссылка на раздел">#</a></h2><p>В гл. 18 мы достигли того, что уравнения Максвелла появились в полном виде. Все, что есть в классической теории электрических и магнитных полей, вытекает из четырех уравнений:</p><div class="display-math" id="eq-20-1"><svg class="math-svg display" aria-label="
+<!-- BEGIN NotebookLM reports -->
+    <section class="study-workspace" id="study-panel" hidden>
+      <div class="study-workspace-inner">
+        <header class="study-workspace-header">
+          <div>
+            <strong>Материалы главы</strong>
+            <span>Сгенерированные учебные материалы NotebookLM для этой главы.</span>
+          </div>
+        </header>
+        <section class="study-section" data-study-section="notes" hidden>
+    <div class="study-grid">
+      <a class="study-card" href="reports/ch20-notebooklm-briefing.html"><strong>Обзор главы</strong><span>HTML · NotebookLM</span></a>
+      <a class="study-card" href="reports/ch20-notebooklm-study-guide.html"><strong>Конспект</strong><span>HTML · NotebookLM</span></a>
+    </div>
+  </section>
+        <section class="study-section" data-study-section="media" hidden>
+    <div class="study-grid">
+      <p class="study-empty">Для этой главы медиа пока нет.</p>
+    </div>
+  </section>
+        <section class="study-section" data-study-section="files" hidden>
+    <div class="study-card">
+      <strong>Файлы</strong>
+      <span class="study-file-row"><a href="../../../feynman-notebooklm/ru/volume-II/ch20/ch20-full.md">Текст главы для NotebookLM</a><a href="../../../feynman-notebooklm/ru/volume-II/ch20/figure-context/ch20-figures-context.md">Рисунки и контекст</a><a href="../../../feynman-notebooklm/ru/volume-II/ch20/manifest.json">Манифест</a><a href="../../../feynman-notebooklm/ru/volume-II/ch20/sections/">Разделы главы</a><a href="reports/ch20-notebooklm-briefing.md">Обзор главы MD</a><a href="reports/ch20-notebooklm-study-guide.md">Конспект MD</a></span>
+    </div>
+  </section>
+      </div>
+    </section>
+<!-- END NotebookLM reports -->
+    <article class="chapter-flow study-section" data-study-section="lecture"><h1 id="ch20">Глава 20. Решения уравнений максвелла в пустом пространстве</h1><h2 id="sec-20-1">20–1 Волны в пустом пространстве; плоские волны<a class="permalink" href="#sec-20-1" aria-label="Ссылка на раздел">#</a></h2><p>В гл. 18 мы достигли того, что уравнения Максвелла появились в полном виде. Все, что есть в классической теории электрических и магнитных полей, вытекает из четырех уравнений:</p><div class="display-math" id="eq-20-1"><svg class="math-svg display" aria-label="
  \begin{alignedat}{3}
 &amp;\text{I.}&amp;&amp;\mathbf{d}iv{\mathbf{E}}&amp;\;=&amp;\;\frac{\rho}{\epsilon_0}\\[1ex]
 &amp;\text{II.}&amp;&amp;\mathbf{c}url{\mathbf{E}}&amp;\;=&amp;\;-\frac{\partial \mathbf{B}}{\partial t}\\[1ex]
@@ -691,5 +723,37 @@ r\phi=ar+b,
 </script>
 
 <footer>Фейнмановские лекции по физике, том II · Ричард Фейнман, Роберт Лейтон, Мэтью Сэндс</footer>
+<!-- BEGIN NotebookLM script -->
+<script>
+(() => {
+  const workspace = document.querySelector(".study-workspace");
+  const buttons = [...document.querySelectorAll("[data-study-mode]")];
+  const sections = [...document.querySelectorAll("[data-study-section]")];
+  if (!workspace || !buttons.length || !sections.length) return;
+  const setMode = (mode) => {
+    const activeMode = sections.some((section) => section.dataset.studySection === mode) ? mode : "lecture";
+    workspace.hidden = activeMode === "lecture";
+    buttons.forEach((button) => {
+      const active = button.dataset.studyMode === activeMode;
+      button.classList.toggle("is-active", active);
+      button.setAttribute("aria-pressed", active ? "true" : "false");
+    });
+    sections.forEach((section) => {
+      section.hidden = section.dataset.studySection !== activeMode;
+    });
+    const target = document.querySelector(`[data-study-section="${activeMode}"]`);
+    if (target) target.scrollIntoView({ block: "start" });
+  };
+  document.addEventListener("click", (event) => {
+    const button = event.target.closest("[data-study-mode]");
+    if (!button) return;
+    event.preventDefault();
+    setMode(button.dataset.studyMode || "lecture");
+  });
+  if (location.hash === "#study-panel") setMode("notes");
+  else setMode("lecture");
+})();
+</script>
+<!-- END NotebookLM script -->
 </body>
 </html>

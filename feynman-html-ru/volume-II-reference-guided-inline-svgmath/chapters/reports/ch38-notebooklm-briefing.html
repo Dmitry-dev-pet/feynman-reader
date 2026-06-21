@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Глава 38. Упругость: Аналитический отчет - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch38.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1 id="глава-38-упругость-аналитический-отчет">Глава 38. Упругость:
+Аналитический отчет</h1>
+<p>Этот отчет представляет собой глубокий анализ принципов упругости,
+изложенных в 38-й главе «Фейнмановских лекций по физике». Документ
+охватывает фундаментальные законы, математические формулировки и их
+практическое применение к различным физическим ситуациям, от
+гидростатического давления до изгиба балок.</p>
+<hr />
+<h2 id="1-резюме-executive-summary">1. Резюме (Executive Summary)</h2>
+<p>Упругость определяется как свойство твердых тел восстанавливать свои
+размеры и форму после снятия деформирующих сил. Основной акцент главы
+сделан на изотропных материалах, чьи свойства полностью описываются
+двумя постоянными: <strong>модулем Юнга
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Y</mi><annotation encoding="application/x-tex">Y</annotation></semantics></math>)</strong>
+и <strong>коэффициентом Пуассона
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>σ</mi><annotation encoding="application/x-tex">\sigma</annotation></semantics></math>)</strong>.</p>
+<p>Анализ строится на <strong>законе Гука</strong>, утверждающем
+линейную зависимость между напряжением (силой на единицу площади) и
+деформацией (относительным изменением размеров) при малых воздействиях.
+В отчете рассматриваются три ключевых типа деформаций:</p>
+<ol type="1">
+<li><strong>Однородная деформация:</strong> сжатие, растяжение и
+сдвиг.</li>
+<li><strong>Кручение:</strong> деформация цилиндрических стержней и
+распространение волн сдвига.</li>
+<li><strong>Изгиб:</strong> статическое отклонение балок под нагрузкой и
+критическая потеря устойчивости (продольный изгиб).</li>
+</ol>
+<hr />
+<h2 id="2-фундаментальные-основы-и-параметры-материала">2.
+Фундаментальные основы и параметры материала</h2>
+<h3 id="закон-гука">Закон Гука</h3>
+<p>Для большинства материалов при малых удлинениях сила
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>F</mi><annotation encoding="application/x-tex">F</annotation></semantics></math>)
+пропорциональна приращению длины
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>l</mi></mrow><annotation encoding="application/x-tex">\Delta l</annotation></semantics></math>):
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>∝</mo><mi mathvariant="normal">Δ</mi><mi>l</mi></mrow><annotation encoding="application/x-tex">F \propto \Delta l</annotation></semantics></math>
+Чтобы сделать этот коэффициент независимым от размеров тела, закон Гука
+формулируется через <strong>напряжение</strong>
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mi>/</mi><mi>A</mi></mrow><annotation encoding="application/x-tex">F/A</annotation></semantics></math>)
+и <strong>относительную деформацию</strong>
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>l</mi><mi>/</mi><mi>l</mi></mrow><annotation encoding="application/x-tex">\Delta l/l</annotation></semantics></math>):
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mi>F</mi><mi>A</mi></mfrac><mo>=</mo><mi>Y</mi><mfrac><mrow><mi mathvariant="normal">Δ</mi><mi>l</mi></mrow><mi>l</mi></mfrac></mrow><annotation encoding="application/x-tex">\frac{F}{A} = Y \frac{\Delta l}{l}</annotation></semantics></math>
+где
+<strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Y</mi><annotation encoding="application/x-tex">Y</annotation></semantics></math>
+(Модуль Юнга)</strong> — константа, характеризующая жесткость
+материала.</p>
+<h3 id="коэффициент-пуассона-sigma">Коэффициент Пуассона
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>σ</mi><annotation encoding="application/x-tex">\sigma</annotation></semantics></math>)</h3>
+<p>При растяжении бруска в одном направлении происходит его сокращение в
+поперечных направлениях. Относительное боковое сжатие описывается
+формулой:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi mathvariant="normal">Δ</mi><mi>w</mi></mrow><mi>w</mi></mfrac><mo>=</mo><mfrac><mrow><mi mathvariant="normal">Δ</mi><mi>h</mi></mrow><mi>h</mi></mfrac><mo>=</mo><mi>−</mi><mi>σ</mi><mfrac><mrow><mi mathvariant="normal">Δ</mi><mi>l</mi></mrow><mi>l</mi></mfrac></mrow><annotation encoding="application/x-tex">\frac{\Delta w}{w} = \frac{\Delta h}{h} = -\sigma \frac{\Delta l}{l}</annotation></semantics></math>
+Коэффициент Пуассона
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>σ</mi><annotation encoding="application/x-tex">\sigma</annotation></semantics></math>)
+всегда положителен и лежит в пределах от
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0</mn><annotation encoding="application/x-tex">0</annotation></semantics></math>
+до
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>,</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">0,5</annotation></semantics></math>
+для реальных материалов (теоретически от
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">-1</annotation></semantics></math>
+до
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>0</mn><mo>,</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">0,5</annotation></semantics></math>).</p>
+<h3 id="принцип-суперпозиции">Принцип суперпозиции</h3>
+<p>Поскольку законы упругости линейны, результирующие перемещения при
+действии нескольких наборов сил равны сумме перемещений, вызванных
+каждым набором сил независимо.</p>
+<hr />
+<h2 id="3-анализ-типов-деформаций">3. Анализ типов деформаций</h2>
+<h3 id="однородное-гидростатическое-сжатие">Однородное гидростатическое
+сжатие</h3>
+<p>При погружении тела в жидкость на него действует равномерное давление
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math>).
+Относительное изменение длины стороны бруска:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi mathvariant="normal">Δ</mi><mi>l</mi></mrow><mi>l</mi></mfrac><mo>=</mo><mi>−</mi><mfrac><mi>p</mi><mi>Y</mi></mfrac><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>2</mn><mi>σ</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\frac{\Delta l}{l} = -\frac{p}{Y}(1 - 2\sigma)</annotation></semantics></math>
+Объемная деформация
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>V</mi><mi>/</mi><mi>V</mi></mrow><annotation encoding="application/x-tex">\Delta V/V</annotation></semantics></math>)
+связана с давлением через <strong>объемный модуль
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>K</mi><annotation encoding="application/x-tex">K</annotation></semantics></math>)</strong>:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>=</mo><mi>−</mi><mi>K</mi><mfrac><mrow><mi mathvariant="normal">Δ</mi><mi>V</mi></mrow><mi>V</mi></mfrac><mo>,</mo><mspace width="1.0em"></mspace><mi>K</mi><mo>=</mo><mfrac><mi>Y</mi><mrow><mn>3</mn><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>2</mn><mi>σ</mi><mo stretchy="false" form="postfix">)</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">p = -K \frac{\Delta V}{V}, \quad K = \frac{Y}{3(1 - 2\sigma)}</annotation></semantics></math>
+<em>Физический смысл:</em> Если
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo>&gt;</mo><mn>0</mn><mo>,</mo><mn>5</mn></mrow><annotation encoding="application/x-tex">\sigma &gt; 0,5</annotation></semantics></math>,
+то
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>K</mi><annotation encoding="application/x-tex">K</annotation></semantics></math>
+стал бы отрицательным, и материал расширялся бы при росте давления, что
+означало бы состояние неустойчивого равновесия.</p>
+<h3 id="чистый-сдвиг-shear">Чистый сдвиг (Shear)</h3>
+<p>Сдвиг — это искажение формы без изменения объема. Напряжение сдвига
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>g</mi><annotation encoding="application/x-tex">g</annotation></semantics></math>)
+пропорционально углу сдвига
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>θ</mi><annotation encoding="application/x-tex">\theta</annotation></semantics></math>):
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo>=</mo><mi>μ</mi><mi>θ</mi></mrow><annotation encoding="application/x-tex">g = \mu\theta</annotation></semantics></math>
+Коэффициент
+<strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>μ</mi><annotation encoding="application/x-tex">\mu</annotation></semantics></math>
+(модуль сдвига)</strong> выражается через основные константы:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>=</mo><mfrac><mi>Y</mi><mrow><mn>2</mn><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>σ</mi><mo stretchy="false" form="postfix">)</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">\mu = \frac{Y}{2(1 + \sigma)}</annotation></semantics></math>
+<em>Важное наблюдение:</em> Напряжение при чистом сдвиге эквивалентно
+комбинации растягивающего и сжимающего напряжений, действующих под углом
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>45</mn><mo>∘</mo></msup><annotation encoding="application/x-tex">45^\circ</annotation></semantics></math>
+к граням (см. [SOURCE_IMAGE_15]).</p>
+<h3 id="кручение-стержня">Кручение стержня</h3>
+<p>При закручивании цилиндрического стержня радиусом
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+на угол
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>,
+крутящий момент
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>τ</mi><annotation encoding="application/x-tex">\tau</annotation></semantics></math>)
+равен:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>τ</mi><mo>=</mo><mi>μ</mi><mfrac><mrow><mi>π</mi><msup><mi>a</mi><mn>4</mn></msup></mrow><mrow><mn>2</mn><mi>L</mi></mrow></mfrac><mi>ϕ</mi></mrow><annotation encoding="application/x-tex">\tau = \mu \frac{\pi a^4}{2L} \phi</annotation></semantics></math>
+<em>Вывод:</em> Жесткость стержня при кручении пропорциональна четвертой
+степени его радиуса. Увеличение радиуса в 2 раза делает стержень в 16
+раз жестче.</p>
+<hr />
+<h2 id="4-упругие-волны">4. Упругие волны</h2>
+<p>В твердом теле могут распространяться два основных типа волн:</p>
+<ol type="1">
+<li><strong>Волны сдвига (поперечные):</strong> Скорость
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>C</mi><mrow><mi>s</mi><mi>h</mi><mi>e</mi><mi>a</mi><mi>r</mi></mrow></msub><mo>=</mo><msqrt><mrow><mi>μ</mi><mi>/</mi><mi>ρ</mi></mrow></msqrt></mrow><annotation encoding="application/x-tex">C_{shear} = \sqrt{\mu/\rho}</annotation></semantics></math>.
+Деформация не меняет объема.</li>
+<li><strong>Волны сжатия (продольные):</strong> Скорость
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>C</mi><mrow><mi>l</mi><mi>o</mi><mi>n</mi><mi>g</mi></mrow></msub><mo>=</mo><msqrt><mrow><msup><mi>Y</mi><mo>′</mo></msup><mi>/</mi><mi>ρ</mi></mrow></msqrt></mrow><annotation encoding="application/x-tex">C_{long} = \sqrt{Y&#39;/\rho}</annotation></semantics></math>,
+где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>Y</mi><mo>′</mo></msup><annotation encoding="application/x-tex">Y&#39;</annotation></semantics></math>
+— продольный модуль.</li>
+</ol>
+<p><strong>Сравнение скоростей:</strong> Продольные волны всегда
+распространяются быстрее поперечных
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>C</mi><mrow><mi>l</mi><mi>o</mi><mi>n</mi><mi>g</mi></mrow></msub><mo>&gt;</mo><msub><mi>C</mi><mrow><mi>s</mi><mi>h</mi><mi>e</mi><mi>a</mi><mi>r</mi></mrow></msub></mrow><annotation encoding="application/x-tex">C_{long} &gt; C_{shear}</annotation></semantics></math>),
+так как продольный модуль
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>Y</mi><mo>′</mo></msup><annotation encoding="application/x-tex">Y&#39;</annotation></semantics></math>
+больше модуля Юнга и модуля сдвига. <em>Практическое применение:</em>
+Сейсмологи определяют расстояние до эпицентра землетрясения по разности
+времени прихода этих двух типов волн.</p>
+<hr />
+<h2 id="5-изгиб-балок-и-конструктивные-решения">5. Изгиб балок и
+конструктивные решения</h2>
+<h3 id="геометрия-изгиба">Геометрия изгиба</h3>
+<p>В изогнутой балке существует <strong>нейтральная
+поверхность</strong>, которая не испытывает ни сжатия, ни растяжения.
+Она проходит через «центр тяжести» поперечного сечения. Связь
+изгибающего момента (<span class="math inline">$\bendingMom$</span>) и
+радиуса кривизны
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>R</mi><annotation encoding="application/x-tex">R</annotation></semantics></math>):
+<span class="math display">$$\bendingMom = \frac{YI}{R}$$</span> Где
+<strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mo>=</mo><mo>∫</mo><msup><mi>y</mi><mn>2</mn></msup><mi>d</mi><mi>A</mi></mrow><annotation encoding="application/x-tex">I = \int y^2 dA</annotation></semantics></math></strong>
+— момент инерции сечения.</p>
+<h3 id="эффективность-конструкции">Эффективность конструкции</h3>
+<p>Жесткость балки пропорциональна ее моменту инерции. Для максимизации
+жесткости при заданном количестве материала его следует располагать как
+можно дальше от нейтральной поверхности.</p>
+<ul>
+<li><strong>Двутавровые балки (I-образные):</strong> Идеальный пример
+инженерного решения для увеличения жесткости (см.
+[SOURCE_IMAGE_5]).</li>
+</ul>
+<h3 id="продольный-изгиб-buckling">Продольный изгиб (Buckling)</h3>
+<p>Когда на прямой стержень действует сжимающая сила вдоль его оси, при
+достижении критического значения происходит внезапный резкий изгиб.
+Критическая сила (сила Эйлера) составляет:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>=</mo><msup><mi>π</mi><mn>2</mn></msup><mfrac><mrow><mi>Y</mi><mi>I</mi></mrow><msup><mi>L</mi><mn>2</mn></msup></mfrac></mrow><annotation encoding="application/x-tex">F = \pi^2 \frac{YI}{L^2}</annotation></semantics></math>
+<em>Физический смысл:</em> Если нагрузка превышает силу Эйлера,
+конструкция (например, колонна здания) мгновенно теряет устойчивость и
+разрушается.</p>
+<hr />
+<h2 id="6-важные-цитаты-и-их-контекст">6. Важные цитаты и их
+контекст</h2>
+<blockquote>
+<p><strong>«Силу, действующую на единичной площади, называют
+напряжением, а удлинение участка, отнесенное к его длине... называют
+деформацией».</strong> <em>Контекст:</em> Определение базовых понятий
+для формулировки закона Гука в универсальном виде.</p>
+</blockquote>
+<blockquote>
+<p><strong>«Растянуть брусок, когда его бока удерживаются, гораздо
+труднее... брусок становится жестче».</strong> <em>Контекст:</em> Анализ
+деформации при невозможности бокового сокращения, что приводит к
+увеличению эффективного модуля упругости.</p>
+</blockquote>
+<blockquote>
+<p><strong>«Если нагрузка на втором этаже здания превысит силу Эйлера
+для поддерживающих колонн, здание рухнет».</strong> <em>Контекст:</em>
+Иллюстрация критической важности расчетов на продольный изгиб в
+архитектуре и строительстве.</p>
+</blockquote>
+<hr />
+<h2 id="7-сводная-таблица-параметров-и-формул">7. Сводная таблица
+параметров и формул</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Параметр</th>
+<th style="text-align: center;">Символ</th>
+<th style="text-align: left;">Формула / Связь</th>
+<th style="text-align: left;">Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Модуль Юнга</strong></td>
+<td
+style="text-align: center;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Y</mi><annotation encoding="application/x-tex">Y</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mi>/</mi><mi>A</mi><mo>=</mo><mi>Y</mi><mo stretchy="false" form="prefix">(</mo><mi mathvariant="normal">Δ</mi><mi>l</mi><mi>/</mi><mi>l</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">F/A = Y(\Delta l / l)</annotation></semantics></math></td>
+<td style="text-align: left;">Сопротивление линейному
+растяжению/сжатию.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Коэф. Пуассона</strong></td>
+<td
+style="text-align: center;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>σ</mi><annotation encoding="application/x-tex">\sigma</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mfrac><mrow><mi mathvariant="normal">Δ</mi><mi>w</mi><mi>/</mi><mi>w</mi></mrow><mrow><mi mathvariant="normal">Δ</mi><mi>l</mi><mi>/</mi><mi>l</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">-\frac{\Delta w/w}{\Delta l/l}</annotation></semantics></math></td>
+<td style="text-align: left;">Отношение поперечного сжатия к продольному
+растяжению.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Модуль сдвига</strong></td>
+<td
+style="text-align: center;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>μ</mi><annotation encoding="application/x-tex">\mu</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Y</mi><mi>/</mi><mo stretchy="false" form="prefix">[</mo><mn>2</mn><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mi>σ</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">Y / [2(1+\sigma)]</annotation></semantics></math></td>
+<td style="text-align: left;">Сопротивление изменению формы.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Объемный модуль</strong></td>
+<td
+style="text-align: center;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>K</mi><annotation encoding="application/x-tex">K</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Y</mi><mi>/</mi><mo stretchy="false" form="prefix">[</mo><mn>3</mn><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mn>2</mn><mi>σ</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">Y / [3(1-2\sigma)]</annotation></semantics></math></td>
+<td style="text-align: left;">Сопротивление всестороннему сжатию.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Сила Эйлера</strong></td>
+<td
+style="text-align: center;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>F</mi><annotation encoding="application/x-tex">F</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>π</mi><mn>2</mn></msup><mi>Y</mi><mi>I</mi><mi>/</mi><msup><mi>L</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\pi^2 YI / L^2</annotation></semantics></math></td>
+<td style="text-align: left;">Критическая нагрузка при продольном
+сжатии.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="8-заключительные-выводы-insights">8. Заключительные выводы
+(Insights)</h2>
+<ol type="1">
+<li><strong>Геометрический фактор:</strong> В задачах на изгиб и
+кручение геометрия сечения (радиус в 4-й степени, момент инерции) играет
+более значительную роль, чем просто свойства самого материала.</li>
+<li><strong>Ограничения теории:</strong> Представленные законы применимы
+только для малых деформаций (обычно до нескольких процентов), за
+пределами которых начинаются пластические течения и разрушение.</li>
+<li><strong>Единство принципов:</strong> Задачи упругости, несмотря на
+кажущуюся сложность, сводятся к линейным дифференциальным уравнениям,
+часто имеющим те же решения, что и в других областях физики (например,
+уравнение волны или уравнение маятника для больших изгибов
+«эластики»).</li>
+</ol>
+    </article>
+  </main>
+</body>
+</html>

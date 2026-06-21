@@ -1,0 +1,263 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Аналитический отчет: Глава 22. Цепи переменного тока - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch22.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1
+id="аналитический-отчет-глава-22-цепи-переменного-тока">Аналитический
+отчет: Глава 22. Цепи переменного тока</h1>
+<h2 id="краткое-резюме">Краткое резюме</h2>
+<p>Глава 22 «Фейнмановских лекций по физике» посвящена переходу от
+фундаментальных уравнений Максвелла к практическому анализу
+электрических цепей при низких частотах. Основная концепция заключается
+в использовании «квазистатического приближения», которое позволяет
+рассматривать сложные электромагнитные поля через упрощенные
+«сосредоточенные» элементы: индуктивность, емкость и сопротивление.
+Центральным инструментом анализа выступает понятие импеданса
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>z</mi><annotation encoding="application/x-tex">z</annotation></semantics></math>)
+— комплексного коэффициента пропорциональности между напряжением и током
+в линейных системах. В документе рассматриваются правила Кирхгофа,
+методы упрощения цепей через эквивалентные схемы, физика распространения
+энергии в бесконечных лестничных сетях и принципы работы электрических
+фильтров.</p>
+<hr />
+<h2 id="подробный-анализ-ключевых-тем">Подробный анализ ключевых
+тем</h2>
+<h3 id="1-сосредоточенные-элементы-и-понятие-импеданса">1.
+Сосредоточенные элементы и понятие импеданса</h3>
+<p>Для упрощения анализа Фейнман вводит понятие идеализированных
+пассивных элементов, свойства которых полностью описываются токами и
+напряжениями на их зажимах, игнорируя сложность внутренних полей.</p>
+<p>Для синусоидально меняющихся величин
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>,</mo><mi>I</mi><mo>∼</mo><msup><mi>e</mi><mrow><mi>i</mi><mi>ω</mi><mi>t</mi></mrow></msup></mrow><annotation encoding="application/x-tex">V, I \sim e^{i\omega t}</annotation></semantics></math>)
+отношение напряжения к току определяется как импеданс
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>z</mi><annotation encoding="application/x-tex">z</annotation></semantics></math>):
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mi>V</mi><mi>I</mi></mfrac><mo>=</mo><mi>z</mi></mrow><annotation encoding="application/x-tex">\frac{V}{I} = z</annotation></semantics></math></p>
+<p><strong>Таблица 1. Характеристики идеальных элементов</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Элемент</th>
+<th style="text-align: center;">Обозначение</th>
+<th style="text-align: center;">Импеданс
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>z</mi><annotation encoding="application/x-tex">z</annotation></semantics></math>)</th>
+<th style="text-align: left;">Физический смысл / Условия</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Индуктивность</strong></td>
+<td
+style="text-align: center;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>L</mi><annotation encoding="application/x-tex">L</annotation></semantics></math></td>
+<td
+style="text-align: center;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mi>ω</mi><mi>L</mi></mrow><annotation encoding="application/x-tex">i\omega L</annotation></semantics></math></td>
+<td style="text-align: left;">Напряжение пропорционально скорости
+изменения тока
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mi>d</mi><mi>I</mi><mi>/</mi><mi>d</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">L dI/dt</annotation></semantics></math>).
+Поля ограничены внутри катушки.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Емкость</strong></td>
+<td
+style="text-align: center;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math></td>
+<td
+style="text-align: center;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>1</mn><mrow><mi>i</mi><mi>ω</mi><mi>C</mi></mrow></mfrac><annotation encoding="application/x-tex">\frac{1}{i\omega C}</annotation></semantics></math></td>
+<td style="text-align: left;">Напряжение пропорционально накопленному
+заряду
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Q</mi><mi>/</mi><mi>C</mi></mrow><annotation encoding="application/x-tex">Q/C</annotation></semantics></math>).
+Магнитные поля отсутствуют.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Сопротивление</strong></td>
+<td
+style="text-align: center;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>R</mi><annotation encoding="application/x-tex">R</annotation></semantics></math></td>
+<td
+style="text-align: center;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>R</mi><annotation encoding="application/x-tex">R</annotation></semantics></math></td>
+<td style="text-align: left;">Напряжение в фазе с током. Характеризует
+диссипацию энергии в тепло.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="2-активные-элементы-генераторы">2. Активные элементы:
+Генераторы</h3>
+<p>Генератор рассматривается как источник ЭДС (<span
+class="math inline">$\emf$</span>), разность потенциалов на зажимах
+которого определяется внутренними условиями (например, скоростью
+вращения магнита) и не зависит от тока в цепи.</p>
+<ul>
+<li><strong>Принцип работы:</strong> Напряжение возникает либо из-за
+переменного магнитного поля в неподвижной катушке (<span
+class="math inline">$V = \ddt{}{t}(\text{поток})$</span>), либо из-за
+движения проводника в постоянном магнитном поле (сила Лоренца <span
+class="math inline">$\FLPF = q(\FLPE + \FLPv \times
+\FLPB)$</span>).</li>
+<li><strong>Химические элементы:</strong> Батареи также являются
+генераторами, где ЭДС поддерживается за счет диффузии ионов, создающей
+электрическое поле, уравновешивающее химические силы.</li>
+</ul>
+<h3 id="3-правила-кирхгофа-и-эквивалентные-схемы">3. Правила Кирхгофа и
+эквивалентные схемы</h3>
+<p>Анализ любой сложной сети сводится к применению двух линейных правил,
+вытекающих из уравнений Максвелла и закона сохранения заряда:</p>
+<ol type="1">
+<li><strong>Первое правило (для контуров):</strong> Сумма падений
+напряжений вдоль любого замкнутого пути равна нулю
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∑</mo><msub><mi>V</mi><mi>n</mi></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\sum V_n = 0</annotation></semantics></math>).
+Это справедливо, если в пространстве вне элементов нет меняющихся
+магнитных полей.</li>
+<li><strong>Второе правило (для узлов):</strong> Алгебраическая сумма
+токов, входящих в узел, равна нулю
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∑</mo><msub><mi>I</mi><mi>n</mi></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\sum I_n = 0</annotation></semantics></math>).
+Это следствие пренебрежимо малого накопления заряда на проводах.</li>
+</ol>
+<p><strong>Эквивалентность:</strong></p>
+<ul>
+<li>Любая пассивная цепь с двумя выводами эквивалентна одному
+эффективному импедансу
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>z</mi><mtext mathvariant="normal">eff</mtext></msub><annotation encoding="application/x-tex">z_{\text{eff}}</annotation></semantics></math>).</li>
+<li>Любая цепь с генераторами и импедансами эквивалентна одному
+идеальному генератору (<span
+class="math inline">$\emf_{\text{eff}}$</span>) с последовательно
+соединенным импедансом
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>z</mi><mtext mathvariant="normal">eff</mtext></msub><annotation encoding="application/x-tex">z_{\text{eff}}</annotation></semantics></math>).</li>
+</ul>
+<h3 id="4-энергия-и-мощность">4. Энергия и мощность</h3>
+<ul>
+<li><strong>Реактивные элементы
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo>,</mo><mi>C</mi></mrow><annotation encoding="application/x-tex">L, C</annotation></semantics></math>):</strong>
+Являются недиссипативными. Энергия перетекает между элементом и цепью,
+но средние потери за цикл равны нулю.</li>
+<li><strong>Активные элементы
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>R</mi><annotation encoding="application/x-tex">R</annotation></semantics></math>):</strong>
+Энергия необратимо рассеивается в виде тепла. Средняя мощность потерь:
+<span class="math inline">$\av{P} = \frac{1}{2} I_0^2 R$</span>, где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>R</mi><annotation encoding="application/x-tex">R</annotation></semantics></math>
+— действительная часть импеданса
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi><mo>=</mo><mi>R</mi><mo>+</mo><mi>i</mi><mi>X</mi></mrow><annotation encoding="application/x-tex">z = R + iX</annotation></semantics></math>).</li>
+</ul>
+<h3 id="5-лестничные-сети-и-фильтры">5. Лестничные сети и фильтры</h3>
+<p>Лестничная сеть — это бесконечная последовательность повторяющихся
+звеньев (например,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>L</mi><annotation encoding="application/x-tex">L</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math>).</p>
+<ul>
+<li><strong>Характеристический импеданс
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>z</mi><mn>0</mn></msub><annotation encoding="application/x-tex">z_0</annotation></semantics></math>):</strong>
+Для
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo>−</mo><mi>C</mi></mrow><annotation encoding="application/x-tex">L-C</annotation></semantics></math>
+лестницы
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>z</mi><mn>0</mn></msub><mo>=</mo><msqrt><mrow><mo stretchy="false" form="prefix">(</mo><mi>L</mi><mi>/</mi><mi>C</mi><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mo stretchy="false" form="prefix">(</mo><msup><mi>ω</mi><mn>2</mn></msup><msup><mi>L</mi><mn>2</mn></msup><mi>/</mi><mn>4</mn><mo stretchy="false" form="postfix">)</mo></mrow></msqrt></mrow><annotation encoding="application/x-tex">z_0 = \sqrt{(L/C) - (\omega^2 L^2 / 4)}</annotation></semantics></math>.</li>
+<li><strong>Граничная частота
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ω</mi><mn>0</mn></msub><mo>=</mo><msqrt><mrow><mn>4</mn><mi>/</mi><mi>L</mi><mi>C</mi></mrow></msqrt></mrow><annotation encoding="application/x-tex">\omega_0 = \sqrt{4/LC}</annotation></semantics></math>):</strong>
+<ul>
+<li>При
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ω</mi><mo>&lt;</mo><msub><mi>ω</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">\omega &lt; \omega_0</annotation></semantics></math>:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>z</mi><mn>0</mn></msub><annotation encoding="application/x-tex">z_0</annotation></semantics></math>
+— чистое сопротивление. Энергия бесконечно уходит в линию (эффект
+распространения волны).</li>
+<li>При
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ω</mi><mo>&gt;</mo><msub><mi>ω</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">\omega &gt; \omega_0</annotation></semantics></math>:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>z</mi><mn>0</mn></msub><annotation encoding="application/x-tex">z_0</annotation></semantics></math>
+— чисто мнимое число. Энергия не поглощается, напряжение быстро затухает
+вдоль цепи.</li>
+</ul></li>
+</ul>
+<p><strong>Применение фильтров:</strong></p>
+<ul>
+<li><strong>Фильтр низких частот (ФНЧ):</strong> Пропускает сигналы ниже
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ω</mi><mn>0</mn></msub><annotation encoding="application/x-tex">\omega_0</annotation></semantics></math>.
+Используется для сглаживания пульсаций выпрямителей.</li>
+<li><strong>Фильтр высоких частот (ФВЧ):</strong> Получается сменой мест
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>L</mi><annotation encoding="application/x-tex">L</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math>.
+Используется, например, в усилителях для удаления низкочастотного гула
+моторов.</li>
+<li><strong>Полосовые фильтры:</strong> Пропускают сигналы только в
+заданном интервале частот
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ω</mi><mn>1</mn></msub><mo>&lt;</mo><mi>ω</mi><mo>&lt;</mo><msub><mi>ω</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">\omega_1 &lt; \omega &lt; \omega_2</annotation></semantics></math>).</li>
+</ul>
+<h3 id="6-моделирование-сложных-устройств">6. Моделирование сложных
+устройств</h3>
+<p>Транзисторы и радиолампы, несмотря на их нелинейную природу, в
+рабочих режимах часто ведут себя линейно. Их можно представлять в виде
+эквивалентных схем, содержащих импедансы и зависимые генераторы (сила
+которых пропорциональна току или напряжению в другой части цепи).</p>
+<ul>
+<li><strong>Отрицательное сопротивление:</strong> Активные устройства
+(транзисторы) могут иметь отрицательную действительную часть
+эффективного импеданса, что означает поставку энергии в цепь переменного
+тока за счет источника постоянного тока.</li>
+</ul>
+<hr />
+<h2 id="важные-цитаты-и-их-контекст">Важные цитаты и их контекст</h2>
+<blockquote>
+<p><em>«Свойства элемента полностью описываются на языке токов и
+напряжений, возникающих на его зажимах. Прибегнув к подходящим
+приближениям, можно игнорировать огромную сложность тех полей, которые
+возникают внутри объекта».</em> — <strong>Контекст:</strong> Объяснение
+перехода от уравнений Максвелла к «сосредоточенным» элементам
+(индуктивности, емкости), что является основой электротехники.</p>
+</blockquote>
+<blockquote>
+<p><em>«Как может цепь, подобно сопротивлению, непрерывно поглощать
+энергию, если она составлена только из индуктивностей и емкостей? Ответ
+состоит в том, что этих емкостей и самоиндукций бесконечное множество...
+энергия непрерывно и с постоянной скоростью отсасывается из генератора и
+безостановочно течет в цепь».</em> — <strong>Контекст:</strong> Описание
+физического смысла характеристического импеданса бесконечной
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo>−</mo><mi>C</mi></mrow><annotation encoding="application/x-tex">L-C</annotation></semantics></math>
+лестницы при частотах ниже граничной.</p>
+</blockquote>
+<blockquote>
+<p><em>«У идеальной передающей линии нет граничной частоты».</em> —
+<strong>Контекст:</strong> Рассуждение о предельном случае лестничной
+сети, когда длина звеньев стремится к нулю, что приводит к модели фидера
+(коаксиального кабеля).</p>
+</blockquote>
+<hr />
+<h2 id="практические-выводы">Практические выводы</h2>
+<ol type="1">
+<li><strong>Упрощение анализа:</strong> Любую сложную линейную сеть
+между двумя точками можно свести к двум компонентам: эквивалентному
+генератору и эквивалентному импедансу. Это радикально упрощает расчет
+нагрузки.</li>
+<li><strong>Проектирование фильтров:</strong> Для создания эффективного
+сглаживающего фильтра необходимо выбирать параметры
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>L</mi><annotation encoding="application/x-tex">L</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math>
+так, чтобы граничная частота
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ω</mi><mn>0</mn></msub><annotation encoding="application/x-tex">\omega_0</annotation></semantics></math>
+была значительно ниже частоты пульсаций выпрямленного тока.</li>
+<li><strong>Согласование импедансов:</strong> Чтобы конечная лестничная
+сеть (фильтр) вела себя как бесконечная, её необходимо нагрузить
+сопротивлением, равным характеристическому импедансу
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>z</mi><mn>0</mn></msub><annotation encoding="application/x-tex">z_0</annotation></semantics></math>.</li>
+<li><strong>Понимание потерь:</strong> Потери энергии в любой сложной
+цепи переменного тока определяются исключительно действительной частью
+её полного импеданса. Мнимая часть (реактанс) не приводит к диссипации
+тепла.</li>
+</ol>
+    </article>
+  </main>
+</body>
+</html>

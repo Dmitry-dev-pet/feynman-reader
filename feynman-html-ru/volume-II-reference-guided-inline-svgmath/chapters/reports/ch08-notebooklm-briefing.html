@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Аналитический отчет: Электростатическая энергия (Глава 8) - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch08.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1
+id="аналитический-отчет-электростатическая-энергия-глава-8">Аналитический
+отчет: Электростатическая энергия (Глава 8)</h1>
+<p>Этот аналитический документ представляет собой подробный обзор
+электростатической энергии на основе предоставленного источника. В
+отчете рассматриваются фундаментальные принципы накопления энергии, её
+математическое описание, применение к физическим системам (от
+конденсаторов до атомных ядер) и концептуальный переход от энергии
+зарядов к энергии поля.</p>
+<h2 id="1-резюме">1. Резюме</h2>
+<p>Глава посвящена определению и применению закона сохранения энергии в
+электростатике. Основная идея заключается в том, что электростатическая
+энергия системы эквивалентна работе, затраченной на её сборку из
+зарядов, бесконечно удаленных друг от друга. Энергия может
+рассматриваться двояко: как сумма взаимодействий между парами зарядов
+или как распределенная плотность энергии в электрическом поле. Эти
+концепции применяются для расчета сил в проводниках, анализа
+стабильности ионных кристаллов и оценки радиусов атомных ядер.</p>
+<h2 id="2-основные-концепции-и-формулы">2. Основные концепции и
+формулы</h2>
+<h3 id="21-энергия-системы-зарядов">2.1. Энергия системы зарядов</h3>
+<p>Энергия системы дискретных зарядов определяется как сумма
+потенциальных энергий взаимодействия всех возможных пар:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>=</mo><munder><mo>∑</mo><mtext mathvariant="normal">все пары</mtext></munder><mfrac><mrow><msub><mi>q</mi><mi>i</mi></msub><msub><mi>q</mi><mi>j</mi></msub></mrow><mrow><mn>4</mn><mi>π</mi><msub><mi>ϵ</mi><mn>0</mn></msub><msub><mi>r</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub></mrow></mfrac></mrow><annotation encoding="application/x-tex">\begin{equation} U = \sum_{\text{все пары}} \frac{q_i q_j}{4\pi\epsilon_0 r_{ij}} \end{equation}</annotation></semantics></math></p>
+<p>Для непрерывного распределения заряда с плотностью
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ρ</mi><annotation encoding="application/x-tex">\rho</annotation></semantics></math>
+и потенциалом
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>
+формула принимает вид:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>∫</mo><mi>ρ</mi><mi>ϕ</mi><mspace width="0.167em"></mspace><mi>d</mi><mi>V</mi></mrow><annotation encoding="application/x-tex">\begin{equation} U = \frac{1}{2} \int \rho \phi \, dV \end{equation}</annotation></semantics></math></p>
+<p>Множитель
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">1/2</annotation></semantics></math>
+необходим, чтобы избежать двойного учета взаимодействия каждой пары
+зарядов.</p>
+<h3 id="22-энергия-однородно-заряженного-шара">2.2. Энергия однородно
+заряженного шара</h3>
+<p>Расчет энергии шара радиусом
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+с общим зарядом
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Q</mi><annotation encoding="application/x-tex">Q</annotation></semantics></math>
+производится путем последовательного «наслаивания» сферических слоев
+(см. <strong>фиг. 8.2</strong>).</p>
+<ul>
+<li><strong>Формула для шара:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>=</mo><mfrac><mn>3</mn><mn>5</mn></mfrac><mfrac><msup><mi>Q</mi><mn>2</mn></msup><mrow><mn>4</mn><mi>π</mi><msub><mi>ϵ</mi><mn>0</mn></msub><mi>a</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">U = \frac{3}{5} \frac{Q^2}{4\pi\epsilon_0 a}</annotation></semantics></math>.</li>
+<li><strong>Формула для тонкой сферы:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mfrac><msup><mi>Q</mi><mn>2</mn></msup><mrow><mn>4</mn><mi>π</mi><msub><mi>ϵ</mi><mn>0</mn></msub><mi>a</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">U = \frac{1}{2} \frac{Q^2}{4\pi\epsilon_0 a}</annotation></semantics></math>
+(что составляет
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>5</mn><mi>/</mi><mn>6</mn></mrow><annotation encoding="application/x-tex">5/6</annotation></semantics></math>
+от энергии сплошного шара).</li>
+</ul>
+<h3 id="23-энергия-конденсатора-и-принцип-виртуальной-работы">2.3.
+Энергия конденсатора и принцип виртуальной работы</h3>
+<p>Для конденсатора емкостью
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math>
+энергия выражается как:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mfrac><msup><mi>Q</mi><mn>2</mn></msup><mi>C</mi></mfrac><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>C</mi><msup><mi>V</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\begin{equation} U = \frac{1}{2} \frac{Q^2}{C} = \frac{1}{2} CV^2 \end{equation}</annotation></semantics></math></p>
+<p><strong>Метод виртуальной работы:</strong> позволяет вычислять
+механические силы и вращательные моменты. Работа
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>W</mi><mo>=</mo><mi>F</mi><mi mathvariant="normal">Δ</mi><mi>z</mi></mrow><annotation encoding="application/x-tex">\Delta W = F \Delta z</annotation></semantics></math>,
+совершаемая внешней силой, должна быть равна изменению
+электростатической энергии
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>U</mi></mrow><annotation encoding="application/x-tex">\Delta U</annotation></semantics></math>.</p>
+<ul>
+<li><strong>Сила между пластинами:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>Q</mi><msub><mi>E</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">F = \frac{1}{2} Q E_0</annotation></semantics></math>.</li>
+<li><strong>Физический смысл множителя 1/2:</strong> Поле внутри
+проводника равно нулю, а снаружи равно
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>E</mi><mn>0</mn></msub><annotation encoding="application/x-tex">E_0</annotation></semantics></math>.
+Среднее поле, действующее на поверхностный заряд, составляет
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mn>0</mn></msub><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">E_0/2</annotation></semantics></math>
+(<strong>фиг. 8.4</strong>).</li>
+</ul>
+<h2 id="3-применение-в-атомной-и-ядерной-физике">3. Применение в атомной
+и ядерной физике</h2>
+<h3 id="31-электростатическая-энергия-ионного-кристалла-nacl">3.1.
+Электростатическая энергия ионного кристалла (NaCl)</h3>
+<p>Кристалл соли рассматривается как кубическая решетка ионов
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><msup><mi>a</mi><mo>+</mo></msup></mrow><annotation encoding="application/x-tex">Na^+</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><msup><mi>l</mi><mo>−</mo></msup></mrow><annotation encoding="application/x-tex">Cl^-</annotation></semantics></math>
+(<strong>фиг. 8.5</strong>).</p>
+<ul>
+<li><strong>Энергия на молекулу:</strong> рассчитывается путем
+суммирования потенциальных энергий иона со всеми остальными ионами
+решетки. Итог:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>=</mo><mi>−</mi><mn>1.747</mn><mfrac><msup><mi>e</mi><mn>2</mn></msup><mi>a</mi></mfrac></mrow><annotation encoding="application/x-tex">U = -1.747 \frac{e^2}{a}</annotation></semantics></math>.</li>
+<li><strong>Сравнение с экспериментом:</strong> Теоретическое значение
+(около 8.94 эВ) на 10% выше экспериментального (7.92 эВ). Разница
+объясняется силами отталкивания и кинетической энергией тепловых
+колебаний.</li>
+</ul>
+<h3 id="32-электростатическая-энергия-и-радиус-ядра">3.2.
+Электростатическая энергия и радиус ядра</h3>
+<p>Анализ ядер
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>B</mi><mn>11</mn></msup><annotation encoding="application/x-tex">B^{11}</annotation></semantics></math>
+(5 протонов, 6 нейтронов) и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>C</mi><mn>11</mn></msup><annotation encoding="application/x-tex">C^{11}</annotation></semantics></math>
+(6 протонов, 5 нейтронов) показывает поразительное сходство их
+энергетических уровней (<strong>фиг. 8.7</strong>). Это подтверждает
+принцип <strong>зарядовой независимости ядерных сил</strong>: силы p-p,
+n-n и n-p идентичны.</p>
+<ul>
+<li><strong>Разность масс:</strong> Различие в энергиях основных
+состояний этих ядер (после поправки на разность масс нейтрона и протона)
+обусловлено почти исключительно электростатическим отталкиванием
+протонов.</li>
+<li><strong>Оценка радиуса:</strong> Исходя из этой разности, радиус
+ядра вычисляется как
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mo>≈</mo><mn>3.12</mn><mo>×</mo><msup><mn>10</mn><mrow><mi>−</mi><mn>13</mn></mrow></msup></mrow><annotation encoding="application/x-tex">r \approx 3.12 \times 10^{-13}</annotation></semantics></math>
+см, что хорошо согласуется с данными по рассеянию частиц.</li>
+</ul>
+<h2 id="4-энергия-в-электрическом-поле">4. Энергия в электрическом
+поле</h2>
+<p>Документ описывает концептуальный сдвиг от энергии зарядов к энергии,
+локализованной в поле.</p>
+<h3 id="41-плотность-энергии-поля">4.1. Плотность энергии поля</h3>
+<p>Энергия заключена в пространстве, где существует электрическое поле.
+Плотность энергии
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>u</mi><annotation encoding="application/x-tex">u</annotation></semantics></math>
+(энергия в единице объема) составляет:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi><mo>=</mo><mfrac><mrow><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>E</mi><mn>2</mn></msup></mrow><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">\begin{equation} u = \frac{\epsilon_0 E^2}{2} \end{equation}</annotation></semantics></math>
+Полная энергия системы:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>=</mo><mfrac><msub><mi>ϵ</mi><mn>0</mn></msub><mn>2</mn></mfrac><mo>∫</mo><msup><mi>E</mi><mn>2</mn></msup><mspace width="0.167em"></mspace><mi>d</mi><mi>V</mi></mrow><annotation encoding="application/x-tex">U = \frac{\epsilon_0}{2} \int E^2 \, dV</annotation></semantics></math>
+(<strong>фиг. 8.8</strong>).</p>
+<h3 id="42-локальное-сохранение-энергии">4.2. Локальное сохранение
+энергии</h3>
+<p>Принятие идеи о том, что энергия находится в поле, позволяет
+сформулировать принцип <strong>локального сохранения энергии</strong>:
+изменение энергии в объеме равно её притоку или убыли через поверхность.
+Это критически важно для теории тяготения, так как энергия обладает
+массой
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>=</mo><mi>m</mi><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">E=mc^2</annotation></semantics></math>)
+и является источником гравитации.</p>
+<h2 id="5-важные-цитаты-и-их-контекст">5. Важные цитаты и их
+контекст</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Цитата</th>
+<th style="text-align: left;">Контекст</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">«...полная энергия системы нескольких
+зарядов есть сумма членов, выражающих взаимодействие каждой пары зарядов
+по отдельности».</td>
+<td style="text-align: left;">Фундаментальное определение
+электростатической энергии через принцип суперпозиции.</td>
+</tr>
+<tr>
+<td style="text-align: left;">«Среднее поле, действующее на
+поверхностные заряды, равно
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mn>0</mn></msub><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">E_0/2</annotation></semantics></math>.
+Вот отчего... стоит множитель 1/2».</td>
+<td style="text-align: left;">Объяснение парадокса силы в конденсаторе,
+где поле резко меняется в слое заряда (<strong>фиг. 8.4</strong>).</td>
+</tr>
+<tr>
+<td style="text-align: left;">«Ядерные силы... сложны настолько,
+насколько возможно себе представить».</td>
+<td style="text-align: left;">Описание сложности ядерных взаимодействий,
+зависящих от спина, скорости и ориентации протонов (<strong>фиг.
+8.6</strong>).</td>
+</tr>
+<tr>
+<td style="text-align: left;">«Представление о том, будто энергия
+сосредоточена в поле, не согласуется с предположением о существовании
+точечных зарядов».</td>
+<td style="text-align: left;">Описание фундаментальной проблемы
+бесконечной собственной энергии точечного электрона.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="6-проблемные-аспекты-энергия-точечного-заряда">6. Проблемные
+аспекты (Энергия точечного заряда)</h2>
+<p>Источник выделяет серьезную теоретическую трудность: согласно формуле
+плотности энергии поля, энергия точечного заряда бесконечна
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>∼</mo><msubsup><mo>∫</mo><mn>0</mn><mi>∞</mi></msubsup><mfrac><mn>1</mn><msup><mi>r</mi><mn>2</mn></msup></mfrac><mi>d</mi><mi>r</mi></mrow><annotation encoding="application/x-tex">U \sim \int_{0}^{\infty} \frac{1}{r^2} dr</annotation></semantics></math>).</p>
+<ul>
+<li><strong>Противоречие:</strong> При дискретном подходе энергия
+взаимодействия заряда с самим собой не учитывается. При полевом подходе
+она включена и дает бесконечный результат.</li>
+<li><strong>Статус проблемы:</strong> Эта трудность в понимании природы
+(является ли электрон точкой или распределенным зарядом) не преодолена
+до сих пор.</li>
+</ul>
+<h2 id="7-аналитические-выводы">7. Аналитические выводы</h2>
+<ol type="1">
+<li><strong>Универсальность электростатики:</strong> Законы
+электростатики сохраняют свою силу на масштабах вплоть до ядерных
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>10</mn><mrow><mi>−</mi><mn>13</mn></mrow></msup><annotation encoding="application/x-tex">10^{-13}</annotation></semantics></math>
+см).</li>
+<li><strong>Энергетический метод:</strong> Использование понятия энергии
+и виртуальных перемещений часто оказывается эффективнее прямого
+суммирования сил для сложных систем.</li>
+<li><strong>Полевая парадигма:</strong> Перенос фокуса с зарядов на поля
+необходим для создания полной физической картины, включающей
+электродинамику и теорию относительности.</li>
+<li><strong>Связь микро- и макромира:</strong> Электростатическая
+энергия является доминирующим компонентом химической энергии связи в
+ионных кристаллах.</li>
+</ol>
+<hr />
+<p><strong>Визуальные материалы (согласно контексту
+источника):</strong></p>
+<ul>
+<li><strong>Фиг. 8.1:</strong> Схема взаимодействия пар зарядов
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>q</mi><mi>i</mi></msub><mo>,</mo><msub><mi>q</mi><mi>j</mi></msub></mrow><annotation encoding="application/x-tex">q_i, q_j</annotation></semantics></math>
+на расстоянии
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>r</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><annotation encoding="application/x-tex">r_{ij}</annotation></semantics></math>.</li>
+<li><strong>Фиг. 8.3:</strong> Конструкция переменного конденсатора для
+иллюстрации вращательного момента.</li>
+<li><strong>Фиг. 8.6:</strong> Схемы спиновых взаимодействий протонов
+(параллельные, антипараллельные, спин-орбитальные).</li>
+<li><strong>Фиг. 8.7:</strong> Сравнительная диаграмма энергетических
+уровней бора-11 и углерода-11.</li>
+</ul>
+    </article>
+  </main>
+</body>
+</html>

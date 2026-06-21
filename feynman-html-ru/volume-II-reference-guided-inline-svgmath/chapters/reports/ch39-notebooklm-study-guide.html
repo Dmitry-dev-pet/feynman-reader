@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Глава 39: Упругие материалы. Учебное руководство - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch39.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1 id="глава-39-упругие-материалы-учебное-руководство">Глава 39:
+Упругие материалы. Учебное руководство</h1>
+<p>Данное руководство систематизирует основные теоретические положения
+главы 39 «Фейнмановских лекций по физике», посвященной описанию
+внутренних деформаций и напряжений в упругих телах, волновым процессам в
+твердых телах и связи макроскопических свойств с атомной структурой.</p>
+<hr />
+<h2 id="1-ключевые-понятия">1. Ключевые понятия</h2>
+<h3 id="тензор-деформации-e_ij">Тензор деформации
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>e</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><annotation encoding="application/x-tex">e_{ij}</annotation></semantics></math>)</h3>
+<p>Для описания локальной деформации в каждой точке тела используется
+симметричный тензор второго ранга.</p>
+<ul>
+<li><strong>Вектор перемещения (<span
+class="math inline">$\FLPu$</span>):</strong> Описывает смещение точки
+из начального положения <span class="math inline">$P(\FLPr)$</span> в
+новое положение <span class="math inline">$P'(\FLPr')$</span>, где <span
+class="math inline">$\FLPu = \FLPr' - \FLPr$</span>.</li>
+<li><strong>Компоненты тензора:</strong> Определяются через частные
+производные компонент вектора перемещения:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>e</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mi>∂</mi><msub><mi>u</mi><mi>j</mi></msub></mrow><mrow><mi>∂</mi><msub><mi>x</mi><mi>i</mi></msub></mrow></mfrac><mo>+</mo><mfrac><mrow><mi>∂</mi><msub><mi>u</mi><mi>i</mi></msub></mrow><mrow><mi>∂</mi><msub><mi>x</mi><mi>j</mi></msub></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">e_{ij} = \frac{1}{2}\left(\frac{\partial u_j}{\partial x_i} + \frac{\partial u_i}{\partial x_j}\right)</annotation></semantics></math></li>
+<li><strong>Физический смысл:</strong> Диагональные компоненты
+(например,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>e</mi><mrow><mi>x</mi><mi>x</mi></mrow></msub><annotation encoding="application/x-tex">e_{xx}</annotation></semantics></math>)
+описывают относительное растяжение вдоль осей, а недиагональные
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>e</mi><mrow><mi>x</mi><mi>y</mi></mrow></msub><annotation encoding="application/x-tex">e_{xy}</annotation></semantics></math>)
+— деформацию сдвига. Симметричность тензора
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>e</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>=</mo><msub><mi>e</mi><mrow><mi>j</mi><mi>i</mi></mrow></msub></mrow><annotation encoding="application/x-tex">e_{ij} = e_{ji}</annotation></semantics></math>)
+позволяет исключить из рассмотрения чистое вращение тела.</li>
+</ul>
+<h3 id="тензор-упругости-c_ijkl">Тензор упругости
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>C</mi><mrow><mi>i</mi><mi>j</mi><mi>k</mi><mi>l</mi></mrow></msub><annotation encoding="application/x-tex">C_{ijkl}</annotation></semantics></math>)</h3>
+<p>Обобщенный закон Гука связывает тензор напряжений
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><annotation encoding="application/x-tex">S_{ij}</annotation></semantics></math>)
+с тензором деформации
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>e</mi><mrow><mi>k</mi><mi>l</mi></mrow></msub><annotation encoding="application/x-tex">e_{kl}</annotation></semantics></math>):
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>=</mo><munder><mo>∑</mo><mrow><mi>k</mi><mo>,</mo><mi>l</mi></mrow></munder><msub><mi>C</mi><mrow><mi>i</mi><mi>j</mi><mi>k</mi><mi>l</mi></mrow></msub><msub><mi>e</mi><mrow><mi>k</mi><mi>l</mi></mrow></msub></mrow><annotation encoding="application/x-tex">S_{ij} = \sum_{k,l} C_{ijkl} e_{kl}</annotation></semantics></math></p>
+<ul>
+<li>Это тензор четвертого ранга, содержащий в общем случае 81
+компонент.</li>
+<li>Количество независимых компонент сокращается благодаря симметрии
+материала:
+<ul>
+<li><strong>Кубический кристалл:</strong> 3 независимые константы
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>C</mi><mrow><mi>x</mi><mi>x</mi><mi>x</mi><mi>x</mi></mrow></msub><mo>,</mo><msub><mi>C</mi><mrow><mi>x</mi><mi>x</mi><mi>y</mi><mi>y</mi></mrow></msub><mo>,</mo><msub><mi>C</mi><mrow><mi>x</mi><mi>y</mi><mi>x</mi><mi>y</mi></mrow></msub></mrow><annotation encoding="application/x-tex">C_{xxxx}, C_{xxyy}, C_{xyxy}</annotation></semantics></math>).</li>
+<li><strong>Изотропный материал:</strong> 2 независимые константы
+(постоянные Лямэ
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>λ</mi><annotation encoding="application/x-tex">\lambda</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>μ</mi><annotation encoding="application/x-tex">\mu</annotation></semantics></math>).</li>
+</ul></li>
+</ul>
+<h3 id="динамика-и-волны">Динамика и волны</h3>
+<p>В упругом изотропном теле возможны два типа волн, распространяющихся
+с разными скоростями:</p>
+<ol type="1">
+<li><strong>Продольные волны (волны сжатия):</strong> Связаны с
+изменением объема (<span class="math inline">$\FLPdiv{\FLPu} \neq 0,
+\FLPcurl{\FLPu} = 0$</span>). Скорость:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>C</mi><mtext mathvariant="normal">long</mtext></msub><mo>=</mo><msqrt><mrow><mo stretchy="false" form="prefix">(</mo><mi>λ</mi><mo>+</mo><mn>2</mn><mi>μ</mi><mo stretchy="false" form="postfix">)</mo><mi>/</mi><mi>ρ</mi></mrow></msqrt></mrow><annotation encoding="application/x-tex">C_{\text{long}} = \sqrt{(\lambda + 2\mu)/\rho}</annotation></semantics></math>.</li>
+<li><strong>Поперечные волны (сдвиговые волны):</strong> Не вызывают
+изменения плотности (<span class="math inline">$\FLPdiv{\FLPu} = 0,
+\FLPcurl{\FLPu} \neq 0$</span>). Скорость:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>C</mi><mtext mathvariant="normal">shear</mtext></msub><mo>=</mo><msqrt><mrow><mi>μ</mi><mi>/</mi><mi>ρ</mi></mrow></msqrt></mrow><annotation encoding="application/x-tex">C_{\text{shear}} = \sqrt{\mu/\rho}</annotation></semantics></math>.</li>
+</ol>
+<hr />
+<h2 id="2-учебный-конспект">2. Учебный конспект</h2>
+<h3 id="описание-деформаций">Описание деформаций</h3>
+<ul>
+<li><strong>Однородная деформация:</strong> Характеризуется постоянством
+тензора
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>e</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><annotation encoding="application/x-tex">e_{ij}</annotation></semantics></math>
+во всем объеме. Пример: равномерное растяжение стержня.</li>
+<li><strong>Неоднородная деформация:</strong> Сопровождается местными
+поворотами и искажениями, зависящими от координат. Общее возмущение
+включает деформацию (симметричный тензор
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>e</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><annotation encoding="application/x-tex">e_{ij}</annotation></semantics></math>)
+и поворот (антисимметричный тензор
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ω</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><annotation encoding="application/x-tex">\omega_{ij}</annotation></semantics></math>).</li>
+</ul>
+<h3 id="энергия-деформации">Энергия деформации</h3>
+<p>Плотность энергии
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>w</mi><annotation encoding="application/x-tex">w</annotation></semantics></math>
+(энергия в единице объема) квадратично зависит от деформаций:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>w</mi><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><munder><mo>∑</mo><mrow><mi>i</mi><mi>j</mi><mi>k</mi><mi>l</mi></mrow></munder><msub><mi>C</mi><mrow><mi>i</mi><mi>j</mi><mi>k</mi><mi>l</mi></mrow></msub><msub><mi>e</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><msub><mi>e</mi><mrow><mi>k</mi><mi>l</mi></mrow></msub></mrow><annotation encoding="application/x-tex">w = \frac{1}{2} \sum_{ijkl} C_{ijkl} e_{ij} e_{kl}</annotation></semantics></math>
+В состоянии равновесия упругого тела его внутренняя энергия должна быть
+минимальной.</p>
+<h3 id="методы-измерения-напряжений">Методы измерения напряжений</h3>
+<ul>
+<li><strong>Фотоупругость:</strong> Изотропные прозрачные материалы
+(например, плексиглас) под нагрузкой становятся оптически анизотропными
+(двойное лучепреломление). Это позволяет визуализировать распределение
+напряжений с помощью поляризованного света.</li>
+</ul>
+<h3 id="неупругое-поведение-и-разрушение">Неупругое поведение и
+разрушение</h3>
+<ul>
+<li><strong>Линейная область:</strong> Соблюдение закона Гука
+(напряжение пропорционально деформации).</li>
+<li><strong>Гистерезис:</strong> Эффект, при котором кривая разгрузки
+материала не совпадает с кривой нагрузки.</li>
+<li><strong>Разрушение:</strong> Разные материалы разрушаются
+по-разному. Мел слаб на растяжение, но крепок на сдвиг. При скручивании
+мела он ломается под углом 45°, так как именно под этим углом при сдвиге
+возникают максимальные растягивающие напряжения.</li>
+</ul>
+<h3 id="атомная-модель-упругости">Атомная модель упругости</h3>
+<p>Для кубических ионных кристаллов (NaCl, LiF) упругие константы можно
+вычислить, представив межатомные связи в виде пружинок с жесткостью
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>k</mi><mn>1</mn></msub><annotation encoding="application/x-tex">k_1</annotation></semantics></math>
+(между ближайшими соседями) и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>k</mi><mn>2</mn></msub><annotation encoding="application/x-tex">k_2</annotation></semantics></math>
+(между соседями по диагонали).</p>
+<ul>
+<li>Если силы центральные (действуют строго по линии связи), то для
+кубического кристалла выполняется соотношение:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>C</mi><mrow><mi>x</mi><mi>x</mi><mi>y</mi><mi>y</mi></mrow></msub><mo>=</mo><msub><mi>C</mi><mrow><mi>x</mi><mi>y</mi><mi>x</mi><mi>y</mi></mrow></msub></mrow><annotation encoding="application/x-tex">C_{xxyy} = C_{xyxy}</annotation></semantics></math>.</li>
+</ul>
+<hr />
+<h2 id="3-проверочные-вопросы-короткие-ответы">3. Проверочные вопросы
+(короткие ответы)</h2>
+<ol type="1">
+<li><strong>Почему в определении тензора деформации используется
+полусумма производных
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo stretchy="false" form="prefix">(</mo><mi>∂</mi><msub><mi>u</mi><mi>j</mi></msub><mi>/</mi><mi>∂</mi><msub><mi>x</mi><mi>i</mi></msub><mo>+</mo><mi>∂</mi><msub><mi>u</mi><mi>i</mi></msub><mi>/</mi><mi>∂</mi><msub><mi>x</mi><mi>j</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\frac{1}{2}(\partial u_j/\partial x_i + \partial u_i/\partial x_j)</annotation></semantics></math>?</strong>
+<ul>
+<li><em>Ответ:</em> Чтобы исключить вклад чистого вращения тела, при
+котором относительное положение атомов не меняется и напряжения не
+возникают.</li>
+</ul></li>
+<li><strong>Сколько независимых упругих постоянных необходимо для
+описания изотропного материала?</strong>
+<ul>
+<li><em>Ответ:</em> Две (постоянные Лямэ
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>λ</mi><annotation encoding="application/x-tex">\lambda</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>μ</mi><annotation encoding="application/x-tex">\mu</annotation></semantics></math>,
+или модуль Юнга и коэффициент Пуассона).</li>
+</ul></li>
+<li><strong>Какой тип волн в твердом теле распространяется быстрее —
+продольный или поперечный?</strong>
+<ul>
+<li><em>Ответ:</em> Продольный (поскольку
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi><mo>+</mo><mn>2</mn><mi>μ</mi><mo>&gt;</mo><mi>μ</mi></mrow><annotation encoding="application/x-tex">\lambda + 2\mu &gt; \mu</annotation></semantics></math>).</li>
+</ul></li>
+<li><strong>В чем причина отклонения поведения алмаза от модели
+центральных сил?</strong>
+<ul>
+<li><em>Ответ:</em> В наличии ковалентных связей, которые обладают
+направленностью и создают сопротивление изменению углов между связями
+(боковое давление).</li>
+</ul></li>
+<li><strong>Что такое фотоупругость?</strong>
+<ul>
+<li><em>Ответ:</em> Возникновение двойного лучепреломления в изотропном
+материале под действием механических напряжений.</li>
+</ul></li>
+</ol>
+<hr />
+<h2 id="4-вопросы-для-глубокого-изучения-темы-эссе">4. Вопросы для
+глубокого изучения (темы эссе)</h2>
+<ol type="1">
+<li><strong>Сравнение макроскопического и микроскопического подходов к
+описанию упругости.</strong> Опишите, как феноменологические
+коэффициенты
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>C</mi><mrow><mi>i</mi><mi>j</mi><mi>k</mi><mi>l</mi></mrow></msub><annotation encoding="application/x-tex">C_{ijkl}</annotation></semantics></math>
+выводятся из потенциальной энергии взаимодействия атомов в
+кристаллической решетке.</li>
+<li><strong>Физика разрушения хрупких материалов.</strong>
+Проанализируйте на примере мела, почему направление разлома зависит от
+способа приложения силы (растяжение vs скручивание).</li>
+<li><strong>Сложные механизмы неупругости.</strong> Объясните на
+предложенной модели «нитей и вязкой жидкости», почему некоторые
+полимерные материалы (например, саран) медленно восстанавливают форму
+после деформации.</li>
+</ol>
+<hr />
+<h2 id="5-типичные-ошибки">5. Типичные ошибки</h2>
+<ul>
+<li><strong>Ошибочное отождествление смещения и деформации:</strong>
+Смещение тела как целого (вектор <span
+class="math inline">$\FLPu$</span>) не означает наличия деформации.
+Деформация возникает только при наличии градиентов смещения (разных
+значений <span class="math inline">$\FLPu$</span> в разных точках).</li>
+<li><strong>Игнорирование симметрии:</strong> Попытка использовать все
+81 компоненту тензора
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>C</mi><mrow><mi>i</mi><mi>j</mi><mi>k</mi><mi>l</mi></mrow></msub><annotation encoding="application/x-tex">C_{ijkl}</annotation></semantics></math>
+для простых кристаллов. Важно помнить, что симметрия (повороты на 90°,
+отражения) обнуляет большинство коэффициентов.</li>
+<li><strong>Путаница в типах волн:</strong> Предположение, что в твердых
+телах, как и в газах, возможны только продольные волны. В твердых телах
+сопротивление сдвигу делает возможным распространение поперечных
+волн.</li>
+</ul>
+<hr />
+<h2 id="6-краткий-глоссарий">6. Краткий глоссарий</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Термин</th>
+<th style="text-align: left;">Определение</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Тензор деформации</strong></td>
+<td style="text-align: left;">Набор из 6 независимых чисел, описывающих
+локальное изменение формы и объема материала.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Тензор напряжений</strong></td>
+<td style="text-align: left;">Описание внутренних сил;
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><annotation encoding="application/x-tex">S_{ij}</annotation></semantics></math>
+— это
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math>-я
+компонента силы, действующая на единичную площадку, перпендикулярную оси
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Изотропность</strong></td>
+<td style="text-align: left;">Свойство материала, при котором его
+физические характеристики не зависят от направления.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Постоянные Лямэ</strong></td>
+<td style="text-align: left;">Параметры
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>λ</mi><annotation encoding="application/x-tex">\lambda</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>μ</mi><annotation encoding="application/x-tex">\mu</annotation></semantics></math>,
+полностью определяющие упругие свойства изотропного тела.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Двойное
+лучепреломление</strong></td>
+<td style="text-align: left;">Оптический эффект расщепления луча света,
+возникающий в напряженных прозрачных материалах.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Гистерезис</strong></td>
+<td style="text-align: left;">Зависимость состояния системы от ее
+предыстории; несовпадение путей нагрузки и разгрузки на диаграмме.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Центральные силы</strong></td>
+<td style="text-align: left;">Межатомные силы, действующие строго вдоль
+линии, соединяющей центры атомов.</td>
+</tr>
+</tbody>
+</table>
+    </article>
+  </main>
+</body>
+</html>

@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Глава 24. Волноводы: Аналитический отчет - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch24.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1 id="глава-24-волноводы-аналитический-отчет">Глава 24. Волноводы:
+Аналитический отчет</h1>
+<p>Настоящий документ представляет собой углубленный анализ материалов
+Главы 24 «Фейнмановских лекций по физике» (Том II), посвященной теории и
+практическому применению волноводов. В отчете рассматриваются принципы
+передачи электромагнитной энергии на высоких частотах, математическое
+описание полей в ограниченных пространствах и физические основы
+функционирования микроволновых устройств.</p>
+<hr />
+<h2 id="1-исполнительное-резюме">1. Исполнительное резюме</h2>
+<p>Основная проблема высокочастотной передачи энергии заключается в том,
+что обычные проводники на частотах выше нескольких сотен мегагерц
+начинают интенсивно излучать энергию в окружающее пространство. Переход
+от открытых линий к коаксиальным кабелям, а затем к полым волноводам
+обусловлен необходимостью минимизации потерь и предотвращения пробоя
+изоляции.</p>
+<p><strong>Ключевые выводы анализа:</strong></p>
+<ul>
+<li>Передача сигналов по коаксиальным линиям и волноводам подчиняется
+волновому уравнению.</li>
+<li>В полых трубах существует критическая частота (граничная частота
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ω</mi><mi>c</mi></msub><annotation encoding="application/x-tex">\omega_c</annotation></semantics></math>),
+ниже которой распространение волн невозможно.</li>
+<li>Фазовая скорость в волноводе всегда превышает скорость света
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>c</mi><annotation encoding="application/x-tex">c</annotation></semantics></math>),
+в то время как групповая скорость (скорость передачи энергии) всегда
+ниже
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>c</mi><annotation encoding="application/x-tex">c</annotation></semantics></math>.</li>
+<li>Поля в волноводе можно интерпретировать как результат интерференции
+плоских волн, многократно отражающихся от стенок.</li>
+</ul>
+<hr />
+<h2 id="2-передающие-линии-основы">2. Передающие линии: Основы</h2>
+<p>Поведение передающей линии при низких частотах описывается через её
+погонные параметры: индуктивность
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>L</mi><mn>0</mn></msub><annotation encoding="application/x-tex">L_0</annotation></semantics></math>)
+и емкость
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>C</mi><mn>0</mn></msub><annotation encoding="application/x-tex">C_0</annotation></semantics></math>)
+на единицу длины.</p>
+<h3 id="основные-уравнения-линии">Основные уравнения линии</h3>
+<p>Изменение тока
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>I</mi><annotation encoding="application/x-tex">I</annotation></semantics></math>)
+и напряжения
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math>)
+вдоль линии описывается системой дифференциальных уравнений:</p>
+<ol type="1">
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi>∂</mi><mi>V</mi></mrow><mrow><mi>∂</mi><mi>x</mi></mrow></mfrac><mo>=</mo><mi>−</mi><msub><mi>L</mi><mn>0</mn></msub><mfrac><mrow><mi>∂</mi><mi>I</mi></mrow><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{\partial V}{\partial x} = -L_0 \frac{\partial I}{\partial t}</annotation></semantics></math>
+(падение напряжения из-за индуктивности).</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi>∂</mi><mi>I</mi></mrow><mrow><mi>∂</mi><mi>x</mi></mrow></mfrac><mo>=</mo><mi>−</mi><msub><mi>C</mi><mn>0</mn></msub><mfrac><mrow><mi>∂</mi><mi>V</mi></mrow><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{\partial I}{\partial x} = -C_0 \frac{\partial V}{\partial t}</annotation></semantics></math>
+(изменение тока из-за емкости).</li>
+</ol>
+<p>Объединение этих уравнений приводит к волновому уравнению, где
+скорость распространения сигнала
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>v</mi><annotation encoding="application/x-tex">v</annotation></semantics></math>
+определяется как:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mo>=</mo><mfrac><mn>1</mn><msqrt><mrow><msub><mi>L</mi><mn>0</mn></msub><msub><mi>C</mi><mn>0</mn></msub></mrow></msqrt></mfrac></mrow><annotation encoding="application/x-tex">v = \frac{1}{\sqrt{L_0 C_0}}</annotation></semantics></math></p>
+<h3 id="коаксиальный-кабель">Коаксиальный кабель</h3>
+<p>Для коаксиальной линии, состоящей из проводников радиусами
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>
+(см. [SOURCE_IMAGE_1]), погонные параметры рассчитываются следующим
+образом:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Параметр</th>
+<th style="text-align: left;">Формула</th>
+<th style="text-align: left;">Физический смысл</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Индуктивность
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>L</mi><mn>0</mn></msub><annotation encoding="application/x-tex">L_0</annotation></semantics></math>)</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mrow><mrow><mi mathvariant="normal">ln</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>b</mi><mi>/</mi><mi>a</mi><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mn>2</mn><mi>π</mi><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup></mrow></mfrac><annotation encoding="application/x-tex">\frac{\ln(b/a)}{2\pi\epsilon_0 c^2}</annotation></semantics></math></td>
+<td style="text-align: left;">Зависит от геометрии и магнитной
+энергии.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Емкость
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>C</mi><mn>0</mn></msub><annotation encoding="application/x-tex">C_0</annotation></semantics></math>)</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mrow><mn>2</mn><mi>π</mi><msub><mi>ϵ</mi><mn>0</mn></msub></mrow><mrow><mrow><mi mathvariant="normal">ln</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>b</mi><mi>/</mi><mi>a</mi><mo stretchy="false" form="postfix">)</mo></mrow></mfrac><annotation encoding="application/x-tex">\frac{2\pi\epsilon_0}{\ln(b/a)}</annotation></semantics></math></td>
+<td style="text-align: left;">Зависит от геометрии цилиндрического
+конденсатора.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Импеданс
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>z</mi><mn>0</mn></msub><annotation encoding="application/x-tex">z_0</annotation></semantics></math>)</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msqrt><mfrac><msub><mi>L</mi><mn>0</mn></msub><msub><mi>C</mi><mn>0</mn></msub></mfrac></msqrt><mo>=</mo><mfrac><mrow><mrow><mi mathvariant="normal">ln</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>b</mi><mi>/</mi><mi>a</mi><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mn>2</mn><mi>π</mi><msub><mi>ϵ</mi><mn>0</mn></msub><mi>c</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\sqrt{\frac{L_0}{C_0}} = \frac{\ln(b/a)}{2\pi\epsilon_0 c}</annotation></semantics></math></td>
+<td style="text-align: left;">Характеристическое сопротивление
+линии.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Важное свойство:</strong> Для любой пары параллельных
+проводников без диэлектрика произведение
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>L</mi><mn>0</mn></msub><msub><mi>C</mi><mn>0</mn></msub><mo>=</mo><mn>1</mn><mi>/</mi><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">L_0 C_0 = 1/c^2</annotation></semantics></math>,
+что означает распространение волны со скоростью света.</p>
+<hr />
+<h2 id="3-прямоугольный-волновод-математический-анализ">3. Прямоугольный
+волновод: Математический анализ</h2>
+<p>При удалении центрального проводника коаксиальная линия превращается
+в полый волновод. Электромагнитные волны могут распространяться внутри
+него только в том случае, если их длина волны достаточно мала по
+сравнению с размерами трубы.</p>
+<h3 id="конфигурация-поля">Конфигурация поля</h3>
+<p>Рассматривается прямоугольная труба с шириной
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+по оси
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>
+и высотой
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>
+по оси
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>y</mi><annotation encoding="application/x-tex">y</annotation></semantics></math>
+(см. [SOURCE_IMAGE_11] и [SOURCE_IMAGE_12]). Для простейшего типа волн
+(мода
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><msub><mi>E</mi><mn>10</mn></msub></mrow><annotation encoding="application/x-tex">TE_{10}</annotation></semantics></math>):</p>
+<ul>
+<li>Электрическое поле
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math>
+имеет только
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>y</mi><annotation encoding="application/x-tex">y</annotation></semantics></math>-компоненту
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>E</mi><mi>y</mi></msub><annotation encoding="application/x-tex">E_y</annotation></semantics></math>).</li>
+<li>Поле должно обращаться в нуль на боковых стенках
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">x=0</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><mi>a</mi></mrow><annotation encoding="application/x-tex">x=a</annotation></semantics></math>),
+что требует укладки целого числа полуволн по ширине трубы.</li>
+</ul>
+<p>Математическая форма волны:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mi>y</mi></msub><mo>=</mo><msub><mi>E</mi><mn>0</mn></msub><msup><mi>e</mi><mrow><mi>i</mi><mo stretchy="false" form="prefix">(</mo><mi>ω</mi><mi>t</mi><mo>−</mo><msub><mi>k</mi><mi>z</mi></msub><mi>z</mi><mo stretchy="false" form="postfix">)</mo></mrow></msup><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><msub><mi>k</mi><mi>x</mi></msub><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">E_y = E_0 e^{i(\omega t - k_z z)} \sin(k_x x)</annotation></semantics></math>
+где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mi>x</mi></msub><mo>=</mo><mi>π</mi><mi>/</mi><mi>a</mi></mrow><annotation encoding="application/x-tex">k_x = \pi/a</annotation></semantics></math>
+для простейшего случая.</p>
+<h3 id="волновое-число-и-длина-волны">Волновое число и длина волны</h3>
+<p>Волновое число вдоль оси волновода
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>k</mi><mi>z</mi></msub><annotation encoding="application/x-tex">k_z</annotation></semantics></math>
+определяется из уравнения:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mi>z</mi></msub><mo>=</mo><msqrt><mrow><mfrac><msup><mi>ω</mi><mn>2</mn></msup><msup><mi>c</mi><mn>2</mn></msup></mfrac><mo>−</mo><mfrac><msup><mi>π</mi><mn>2</mn></msup><msup><mi>a</mi><mn>2</mn></msup></mfrac></mrow></msqrt></mrow><annotation encoding="application/x-tex">k_z = \sqrt{\frac{\omega^2}{c^2} - \frac{\pi^2}{a^2}}</annotation></semantics></math></p>
+<p>Длина волны в волноводе
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>λ</mi><mi>g</mi></msub><annotation encoding="application/x-tex">\lambda_g</annotation></semantics></math>)
+всегда больше длины волны в пустом пространстве
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>λ</mi><mn>0</mn></msub><annotation encoding="application/x-tex">\lambda_0</annotation></semantics></math>):
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>λ</mi><mi>g</mi></msub><mo>=</mo><mfrac><msub><mi>λ</mi><mn>0</mn></msub><msqrt><mrow><mn>1</mn><mo>−</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>λ</mi><mn>0</mn></msub><mi>/</mi><mn>2</mn><mi>a</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup></mrow></msqrt></mfrac></mrow><annotation encoding="application/x-tex">\lambda_g = \frac{\lambda_0}{\sqrt{1 - (\lambda_0/2a)^2}}</annotation></semantics></math></p>
+<hr />
+<h2 id="4-граничная-частота-и-режимы-работы">4. Граничная частота и
+режимы работы</h2>
+<p>Волновод действует как фильтр высоких частот. Существует критическое
+значение — <strong>граничная частота</strong>
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ω</mi><mi>c</mi></msub><annotation encoding="application/x-tex">\omega_c</annotation></semantics></math>):
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ω</mi><mi>c</mi></msub><mo>=</mo><mfrac><mrow><mi>π</mi><mi>c</mi></mrow><mi>a</mi></mfrac></mrow><annotation encoding="application/x-tex">\omega_c = \frac{\pi c}{a}</annotation></semantics></math></p>
+<h3 id="физический-смысл-частотных-режимов">Физический смысл частотных
+режимов</h3>
+<ol type="1">
+<li><strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ω</mi><mo>&gt;</mo><msub><mi>ω</mi><mi>c</mi></msub></mrow><annotation encoding="application/x-tex">\omega &gt; \omega_c</annotation></semantics></math>
+(Режим распространения):</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>k</mi><mi>z</mi></msub><annotation encoding="application/x-tex">k_z</annotation></semantics></math>
+— действительное число. Волны свободно бегут вдоль трубы.</li>
+<li><strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ω</mi><mo>&lt;</mo><msub><mi>ω</mi><mi>c</mi></msub></mrow><annotation encoding="application/x-tex">\omega &lt; \omega_c</annotation></semantics></math>
+(Режим затухания):</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>k</mi><mi>z</mi></msub><annotation encoding="application/x-tex">k_z</annotation></semantics></math>
+становится мнимым
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>k</mi><mi>z</mi></msub><mo>=</mo><mi>±</mi><mi>i</mi><msup><mi>k</mi><mo>′</mo></msup></mrow><annotation encoding="application/x-tex">k_z = \pm ik&#39;</annotation></semantics></math>).
+Поле не распространяется, а экспоненциально убывает при удалении от
+источника (см. [SOURCE_IMAGE_15]). При
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ω</mi><mo>≪</mo><msub><mi>ω</mi><mi>c</mi></msub></mrow><annotation encoding="application/x-tex">\omega \ll \omega_c</annotation></semantics></math>
+поле убывает в
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>e</mi><annotation encoding="application/x-tex">e</annotation></semantics></math>
+раз на расстоянии около
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mn>3</mn></mrow><annotation encoding="application/x-tex">1/3</annotation></semantics></math>
+ширины волновода.</li>
+</ol>
+<hr />
+<h2 id="5-скорости-и-поток-энергии">5. Скорости и поток энергии</h2>
+<p>В волноводе необходимо различать две скорости:</p>
+<ul>
+<li><strong>Фазовая скорость
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>v</mi><mtext mathvariant="normal">phase</mtext></msub><mo>=</mo><mi>ω</mi><mi>/</mi><msub><mi>k</mi><mi>z</mi></msub></mrow><annotation encoding="application/x-tex">v_{\text{phase}} = \omega/k_z</annotation></semantics></math>):</strong>
+Скорость движения узлов волны. Она всегда <strong>больше</strong>
+скорости света
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>c</mi><annotation encoding="application/x-tex">c</annotation></semantics></math>).</li>
+<li><strong>Групповая скорость
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>v</mi><mtext mathvariant="normal">group</mtext></msub><mo>=</mo><mi>d</mi><mi>ω</mi><mi>/</mi><mi>d</mi><mi>k</mi></mrow><annotation encoding="application/x-tex">v_{\text{group}} = d\omega/dk</annotation></semantics></math>):</strong>
+Скорость, с которой движутся сигналы и передается энергия. Она всегда
+<strong>меньше</strong> скорости света
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>c</mi><annotation encoding="application/x-tex">c</annotation></semantics></math>).</li>
+</ul>
+<p><strong>Фундаментальное соотношение:</strong>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>v</mi><mtext mathvariant="normal">phase</mtext></msub><mo>⋅</mo><msub><mi>v</mi><mtext mathvariant="normal">group</mtext></msub><mo>=</mo><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">v_{\text{phase}} \cdot v_{\text{group}} = c^2</annotation></semantics></math></p>
+<p>Поток энергии (мощность) в волноводе пропорционален квадрату
+напряженности поля, площади сечения и групповой скорости:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi>d</mi><mi>U</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>=</mo><msub><mi>ϵ</mi><mn>0</mn></msub><msubsup><mi>E</mi><mn>0</mn><mn>2</mn></msubsup><mi>a</mi><mi>b</mi><msub><mi>v</mi><mtext mathvariant="normal">group</mtext></msub></mrow><annotation encoding="application/x-tex">\frac{dU}{dt} = \epsilon_0 E_0^2 ab v_{\text{group}}</annotation></semantics></math></p>
+<hr />
+<h2 id="6-микроволновые-устройства-и-сочленения">6. Микроволновые
+устройства и сочленения</h2>
+<p>Соединение волноводов требует специальных конструктивных решений для
+минимизации потерь и отражений.</p>
+<h3 id="ключевые-компоненты">Ключевые компоненты</h3>
+<ul>
+<li><strong>Фланцы с резонансными полостями:</strong> Используются для
+соединения секций волновода без значительных утечек тока через
+механический контакт. Резонансная полость (желобок) создает высокий
+импеданс, минимизируя потери на сопротивление (см.
+[SOURCE_IMAGE_2]).</li>
+<li><strong>Поглощающие окончания:</strong> Клинья из поглощающего
+материала, имитирующие бесконечный волновод и предотвращающие
+отражения.</li>
+<li><strong>Т-образные сочленения:</strong> Позволяют разделять мощность
+между двумя плечами (см. [SOURCE_IMAGE_3], [SOURCE_IMAGE_4]).</li>
+<li><strong>Направленный ответвитель:</strong> Устройство для измерения
+мощности волны, бегущей только в одном направлении. Работает на принципе
+интерференции сигналов от двух отверстий, расположенных на расстоянии
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>λ</mi><mi>g</mi></msub><mi>/</mi><mn>4</mn></mrow><annotation encoding="application/x-tex">\lambda_g/4</annotation></semantics></math>
+друг от друга (см. [SOURCE_IMAGE_5]).</li>
+</ul>
+<hr />
+<h2 id="7-метод-изображений-физическая-интерпретация">7. Метод
+изображений: Физическая интерпретация</h2>
+<p>Альтернативный взгляд на волновод заключается в рассмотрении
+источника между двумя проводящими плоскостями. Согласно методу
+изображений, стенки можно заменить бесконечной цепочкой фиктивных
+источников с чередующейся полярностью (см. [SOURCE_IMAGE_7]).</p>
+<p><strong>Суть метода:</strong></p>
+<ul>
+<li>При низких частотах поля соседних источников (имеющих
+противоположные фазы) гасят друг друга почти полностью — это объясняет
+экспоненциальное затухание ниже граничной частоты.</li>
+<li>При высоких частотах возникает эффект <strong>запаздывания</strong>.
+На определенных углах
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>θ</mi><annotation encoding="application/x-tex">\theta</annotation></semantics></math>
+фазы источников складываются конструктивно, формируя плоские волны (см.
+[SOURCE_IMAGE_8]).</li>
+<li>Полное поле в волноводе — это суперпозиция двух систем плоских волн,
+бегущих под углами
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>θ</mi><annotation encoding="application/x-tex">\theta</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mi>θ</mi></mrow><annotation encoding="application/x-tex">-\theta</annotation></semantics></math>
+к оси (см. [SOURCE_IMAGE_9]).</li>
+</ul>
+<p>Условие конструктивной интерференции (появления бегущей волны):
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mi>θ</mi><mo>=</mo><mfrac><msub><mi>λ</mi><mn>0</mn></msub><mrow><mn>2</mn><mi>a</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\sin \theta = \frac{\lambda_0}{2a}</annotation></semantics></math>
+Если
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>λ</mi><mn>0</mn></msub><mo>&gt;</mo><mn>2</mn><mi>a</mi></mrow><annotation encoding="application/x-tex">\lambda_0 &gt; 2a</annotation></semantics></math>,
+угла
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>θ</mi><annotation encoding="application/x-tex">\theta</annotation></semantics></math>
+не существует, что соответствует физическому пределу граничной
+частоты.</p>
+<hr />
+<h2 id="8-важные-цитаты">8. Важные цитаты</h2>
+<blockquote>
+<p>«Для волн... мнимое волновое число действительно нечто означает...
+оно только означает, что решение приводит к экспоненциально убывающему
+полю вместо распространяющихся волн».</p>
+</blockquote>
+<blockquote>
+<p>«Фазовые скорости, большие скорости света, возможны, потому что это
+просто движутся узлы волн, а не энергия и не информация».</p>
+</blockquote>
+<blockquote>
+<p>«В прямоугольном волноводе всегда возможно (и так обычно делают)
+использовать такой волновод, в котором частота немного превышает
+граничную частоту наинизшего типа колебаний, но находится ниже граничных
+частот всех других типов».</p>
+</blockquote>
+<hr />
+<h2 id="9-сводная-таблица-параметров">9. Сводная таблица параметров</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Явление / Параметр</th>
+<th style="text-align: left;">Физическая природа</th>
+<th style="text-align: left;">Формула / Условие</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Граничная частота
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ω</mi><mi>c</mi></msub><annotation encoding="application/x-tex">\omega_c</annotation></semantics></math>)</strong></td>
+<td style="text-align: left;">Порог, ниже которого волна «не пролезает»
+в трубу.</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>π</mi><mi>c</mi><mi>/</mi><mi>a</mi></mrow><annotation encoding="application/x-tex">\pi c / a</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Мнимое
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>k</mi><mi>z</mi></msub><annotation encoding="application/x-tex">k_z</annotation></semantics></math></strong></td>
+<td style="text-align: left;">Означает переход от синусоидальной волны к
+экспоненте.</td>
+<td style="text-align: left;">При
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ω</mi><mo>&lt;</mo><msub><mi>ω</mi><mi>c</mi></msub></mrow><annotation encoding="application/x-tex">\omega &lt; \omega_c</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>TE-мода</strong></td>
+<td style="text-align: left;">Поперечное электрическое поле (Electric
+transverse to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>z</mi><annotation encoding="application/x-tex">z</annotation></semantics></math>).</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mi>z</mi></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">E_z = 0</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>TM-мода</strong></td>
+<td style="text-align: left;">Поперечное магнитное поле (Magnetic
+transverse to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>z</mi><annotation encoding="application/x-tex">z</annotation></semantics></math>).</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>B</mi><mi>z</mi></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">B_z = 0</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Групповая скорость</strong></td>
+<td style="text-align: left;">Скорость огибающей всплеска (передача
+информации).</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><msqrt><mrow><mn>1</mn><mo>−</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>ω</mi><mi>c</mi></msub><mi>/</mi><mi>ω</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup></mrow></msqrt></mrow><annotation encoding="application/x-tex">c\sqrt{1-(\omega_c/\omega)^2}</annotation></semantics></math></td>
+</tr>
+</tbody>
+</table>
+    </article>
+  </main>
+</body>
+</html>

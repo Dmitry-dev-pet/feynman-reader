@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Аналитический отчет: Лоренцевы преобразования полей (Глава 26) - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch26.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1
+id="аналитический-отчет-лоренцевы-преобразования-полей-глава-26">Аналитический
+отчет: Лоренцевы преобразования полей (Глава 26)</h1>
+<h2 id="исполнительное-резюме">Исполнительное резюме</h2>
+<p>Данный отчет представляет собой глубокий анализ главы 26
+«Фейнмановских лекций по физике», посвященной релятивистскому описанию
+электромагнитных полей. Основная идея главы заключается в том, что
+разделение электродинамики на «электричество» и «магнетизм» является
+относительным и зависит от системы отсчета наблюдателя.</p>
+<p>Центральным объектом анализа выступает <strong>тензор
+электромагнитного поля
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>F</mi><mrow><mi>μ</mi><mi>ν</mi></mrow></msub><annotation encoding="application/x-tex">F_{\mu\nu}</annotation></semantics></math></strong>
+— шестикомпонентный антисимметричный объект в четырехмерном
+пространстве-времени, объединяющий векторы
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>.
+В отчете рассматриваются механизмы трансформации полей при переходе
+между инерциальными системами, особенности поля быстро движущегося
+заряда и релятивистская форма уравнений движения, завершающая построение
+единой картины электродинамики в рамках теории относительности.</p>
+<hr />
+<h2 id="1-четырехмерный-потенциал-и-принцип-запаздывания">1.
+Четырехмерный потенциал и принцип запаздывания</h2>
+<p>Потенциал электромагнитного поля представляет собой четырехвектор
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mi>μ</mi></msub><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mi>ϕ</mi><mo>,</mo><mi mathvariant="bold-italic">𝑨</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">A_\mu = (\phi, \mathbf{A})</annotation></semantics></math>,
+где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>
+— скалярный потенциал, а
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>
+— векторный потенциал.</p>
+<h3 id="ключевые-положения">Ключевые положения:</h3>
+<ul>
+<li><strong>Связь с движением:</strong> Для заряда, движущегося с
+постоянной скоростью
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>v</mi><annotation encoding="application/x-tex">v</annotation></semantics></math>
+вдоль оси
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>,
+потенциалы в точке
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(x, y, z)</annotation></semantics></math>
+определяются через координаты относительно «текущего» положения заряда
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo stretchy="false" form="prefix">(</mo><mi>v</mi><mi>t</mi><mo>,</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">P(vt, 0, 0)</annotation></semantics></math>.</li>
+<li><strong>Запаздывающее положение
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>P</mi><mo>′</mo></msup><annotation encoding="application/x-tex">P&#39;</annotation></semantics></math>):</strong>
+Несмотря на то что формулы можно выразить через текущее положение,
+физическое влияние распространяется со скоростью
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>c</mi><annotation encoding="application/x-tex">c</annotation></semantics></math>,
+поэтому поле определяется состоянием заряда в момент
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>t</mi><mo>′</mo></msup><mo>=</mo><mi>t</mi><mo>−</mo><msup><mi>r</mi><mo>′</mo></msup><mi>/</mi><mi>c</mi></mrow><annotation encoding="application/x-tex">t&#39; = t - r&#39;/c</annotation></semantics></math>.</li>
+<li><strong>Проекционное положение
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>P</mi><mtext mathvariant="normal">proj</mtext></msub><annotation encoding="application/x-tex">P_{\text{proj}}</annotation></semantics></math>):</strong>
+Для заряда, движущегося произвольно, потенциалы в момент
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math>
+ведут себя так, будто заряд продолжал двигаться равномерно из
+запаздывающей точки
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>P</mi><mo>′</mo></msup><annotation encoding="application/x-tex">P&#39;</annotation></semantics></math>
+со скоростью
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi mathvariant="bold-italic">𝒗</mi><mo mathvariant="bold">′</mo></msup><annotation encoding="application/x-tex">\mathbf{v&#39;}</annotation></semantics></math>,
+достигнув фиктивной точки
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>P</mi><mtext mathvariant="normal">proj</mtext></msub><annotation encoding="application/x-tex">P_{\text{proj}}</annotation></semantics></math>.</li>
+</ul>
+<p><strong>Три столпа электродинамики (по Фейнману):</strong></p>
+<ol type="1">
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>A</mi><mi>μ</mi></msub><annotation encoding="application/x-tex">A_\mu</annotation></semantics></math>
+является четырехвектором.</li>
+<li>Кулонов потенциал покоящегося заряда равен
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi><mi>/</mi><mo stretchy="false" form="prefix">(</mo><mn>4</mn><mi>π</mi><msub><mi>ϵ</mi><mn>0</mn></msub><mi>r</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">q / (4\pi\epsilon_0 r)</annotation></semantics></math>.</li>
+<li>Потенциал зависит только от положения и скорости в запаздывающий
+момент времени.</li>
+</ol>
+<hr />
+<h2 id="2-поля-точечного-заряда-в-равномерном-движении">2. Поля
+точечного заряда в равномерном движении</h2>
+<p>При вычислении полей
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+через производные потенциалов для равномерно движущегося заряда
+обнаруживаются фундаментальные релятивистские эффекты.</p>
+<h3 id="электрическое-поле-mathbfe">Электрическое поле
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>):</h3>
+<ul>
+<li><strong>Направление:</strong> Поле остается радиальным относительно
+<em>текущего</em> положения заряда (фиг. 26.3).</li>
+<li><strong>Искажение (Лоренцево сокращение):</strong> Силовые линии не
+распределены изотропно. Из-за фактора
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mi>v</mi><mn>2</mn></msup></mrow></msqrt><annotation encoding="application/x-tex">\sqrt{1-v^2}</annotation></semantics></math>
+поле «сжимается» вдоль направления движения.</li>
+<li><strong>Анизотропия интенсивности:</strong>
+<ul>
+<li><strong>Сбоку от заряда:</strong> Поле сильнее кулоновского в
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mi>v</mi><mn>2</mn></msup></mrow></msqrt></mrow><annotation encoding="application/x-tex">1/\sqrt{1-v^2}</annotation></semantics></math>
+раз.</li>
+<li><strong>Впереди/сзади заряда:</strong> Поле ослаблено множителем
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><msup><mi>v</mi><mn>2</mn></msup><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(1-v^2)</annotation></semantics></math>.</li>
+</ul></li>
+</ul>
+<h3 id="магнитное-поле-mathbfb">Магнитное поле
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>):</h3>
+<p>Магнитное поле движущегося заряда всегда перпендикулярно вектору
+скорости и электрическому полю:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑩</mi><mo>=</mo><mfrac><mrow><mi mathvariant="bold-italic">𝒗</mi><mo>×</mo><mi mathvariant="bold-italic">𝑬</mi></mrow><msup><mi>c</mi><mn>2</mn></msup></mfrac></mrow><annotation encoding="application/x-tex">\mathbf{B} = \frac{\mathbf{v} \times \mathbf{E}}{c^2}</annotation></semantics></math>
+Силовые линии магнитного поля образуют окружности вокруг траектории
+движения заряда (фиг. 26.5).</p>
+<h3 id="нарушение-третьего-закона-ньютона">Нарушение третьего закона
+Ньютона:</h3>
+<p>В релятивистской электродинамике действие не всегда равно
+противодействию. При движении двух зарядов по пересекающимся
+перпендикулярным траекториям магнитные силы, действующие на них, могут
+не компенсировать друг друга, что ставит вопрос о сохранении импульса
+(решаемый учетом импульса самого поля).</p>
+<hr />
+<h2 id="3-тензор-электромагнитного-поля-f_munu">3. Тензор
+электромагнитного поля
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>F</mi><mrow><mi>μ</mi><mi>ν</mi></mrow></msub><annotation encoding="application/x-tex">F_{\mu\nu}</annotation></semantics></math></h2>
+<p>Фейнман подчеркивает, что электрическое и магнитное поля не являются
+независимыми четырехвекторами. Они представляют собой компоненты единого
+антисимметричного тензора второго ранга.</p>
+<h3 id="определение-тензора">Определение тензора:</h3>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>F</mi><mrow><mi>μ</mi><mi>ν</mi></mrow></msub><mo>=</mo><msub><mi>∇</mi><mi>μ</mi></msub><msub><mi>A</mi><mi>ν</mi></msub><mo>−</mo><msub><mi>∇</mi><mi>ν</mi></msub><msub><mi>A</mi><mi>μ</mi></msub></mrow><annotation encoding="application/x-tex">F_{\mu\nu} = \nabla_\mu A_\nu - \nabla_\nu A_\mu</annotation></semantics></math>
+Где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>∇</mi><mi>μ</mi></msub><annotation encoding="application/x-tex">\nabla_\mu</annotation></semantics></math>
+— четырехмерный градиент, а
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>A</mi><mi>μ</mi></msub><annotation encoding="application/x-tex">A_\mu</annotation></semantics></math>
+— четырехпотенциал.</p>
+<p><strong>Таблица 26.1: Компоненты
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>F</mi><mrow><mi>μ</mi><mi>ν</mi></mrow></msub><annotation encoding="application/x-tex">F_{\mu\nu}</annotation></semantics></math></strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Индексы</th>
+<th style="text-align: left;">Компонента тензора</th>
+<th style="text-align: left;">Физическое поле</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mi>t</mi><mo>,</mo><mi>y</mi><mi>t</mi><mo>,</mo><mi>z</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">xt, yt, zt</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>F</mi><mrow><mi>x</mi><mi>t</mi></mrow></msub><mo>,</mo><msub><mi>F</mi><mrow><mi>y</mi><mi>t</mi></mrow></msub><mo>,</mo><msub><mi>F</mi><mrow><mi>z</mi><mi>t</mi></mrow></msub></mrow><annotation encoding="application/x-tex">F_{xt}, F_{yt}, F_{zt}</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mi>x</mi></msub><mo>,</mo><msub><mi>E</mi><mi>y</mi></msub><mo>,</mo><msub><mi>E</mi><mi>z</mi></msub></mrow><annotation encoding="application/x-tex">E_x, E_y, E_z</annotation></semantics></math></td>
+</tr>
+<tr>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mi>y</mi><mo>,</mo><mi>y</mi><mi>z</mi><mo>,</mo><mi>z</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">xy, yz, zx</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>F</mi><mrow><mi>x</mi><mi>y</mi></mrow></msub><mo>,</mo><msub><mi>F</mi><mrow><mi>y</mi><mi>z</mi></mrow></msub><mo>,</mo><msub><mi>F</mi><mrow><mi>z</mi><mi>x</mi></mrow></msub></mrow><annotation encoding="application/x-tex">F_{xy}, F_{yz}, F_{zx}</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><msub><mi>B</mi><mi>z</mi></msub><mo>,</mo><mi>−</mi><msub><mi>B</mi><mi>x</mi></msub><mo>,</mo><mi>−</mi><msub><mi>B</mi><mi>y</mi></msub></mrow><annotation encoding="application/x-tex">-B_z, -B_x, -B_y</annotation></semantics></math></td>
+</tr>
+<tr>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mi>μ</mi></mrow><annotation encoding="application/x-tex">\mu\mu</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>F</mi><mrow><mi>t</mi><mi>t</mi></mrow></msub><mo>,</mo><msub><mi>F</mi><mrow><mi>x</mi><mi>x</mi></mrow></msub><mo>,</mo><mi>…</mi></mrow><annotation encoding="application/x-tex">F_{tt}, F_{xx}, \dots</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0</mn><annotation encoding="application/x-tex">0</annotation></semantics></math>
+(антисимметрия)</td>
+</tr>
+</tbody>
+</table>
+<p>Этот объект имеет 6 независимых компонент, что делает невозможным его
+представление в виде одного четырехвектора (у которого всего 4
+компоненты).</p>
+<hr />
+<h2 id="4-лоренцевы-преобразования-полей">4. Лоренцевы преобразования
+полей</h2>
+<p>Зная поля в «покоящейся» системе
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>S</mi><annotation encoding="application/x-tex">S</annotation></semantics></math>,
+можно вычислить их значения в системе
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>S</mi><mo>′</mo></msup><annotation encoding="application/x-tex">S&#39;</annotation></semantics></math>,
+движущейся со скоростью
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>v</mi><annotation encoding="application/x-tex">v</annotation></semantics></math>.</p>
+<p><strong>Основные правила трансформации (Таблица 26.4):</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Компонента</th>
+<th style="text-align: left;">Электрическое поле
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi mathvariant="bold-italic">𝑬</mi><mo mathvariant="bold">′</mo></msup><annotation encoding="application/x-tex">\mathbf{E&#39;}</annotation></semantics></math>)</th>
+<th style="text-align: left;">Магнитное поле
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi mathvariant="bold-italic">𝑩</mi><mo mathvariant="bold">′</mo></msup><annotation encoding="application/x-tex">\mathbf{B&#39;}</annotation></semantics></math>)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Параллельная
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>∥</mo><annotation encoding="application/x-tex">\parallel</annotation></semantics></math>)</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>E</mi><mo>∥</mo><mo>′</mo></msubsup><mo>=</mo><msub><mi>E</mi><mo>∥</mo></msub></mrow><annotation encoding="application/x-tex">E_\parallel&#39; = E_\parallel</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>B</mi><mo>∥</mo><mo>′</mo></msubsup><mo>=</mo><msub><mi>B</mi><mo>∥</mo></msub></mrow><annotation encoding="application/x-tex">B_\parallel&#39; = B_\parallel</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Перпендикулярная
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mo>⟂</mo><annotation encoding="application/x-tex">\perp</annotation></semantics></math>)</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>E</mi><mo>⟂</mo><mo>′</mo></msubsup><mo>=</mo><mfrac><mrow><mo stretchy="false" form="prefix">(</mo><mi mathvariant="bold-italic">𝑬</mi><mo>+</mo><mi mathvariant="bold-italic">𝒗</mi><mo>×</mo><mi mathvariant="bold-italic">𝑩</mi><msub><mo stretchy="false" form="postfix">)</mo><mo>⟂</mo></msub></mrow><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mi>v</mi><mn>2</mn></msup><mi>/</mi><msup><mi>c</mi><mn>2</mn></msup></mrow></msqrt></mfrac></mrow><annotation encoding="application/x-tex">E_\perp&#39; = \frac{(\mathbf{E} + \mathbf{v} \times \mathbf{B})_\perp}{\sqrt{1-v^2/c^2}}</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>B</mi><mo>⟂</mo><mo>′</mo></msubsup><mo>=</mo><mfrac><mrow><mo stretchy="false" form="prefix">(</mo><mi mathvariant="bold-italic">𝑩</mi><mo>−</mo><mfrac><mrow><mi mathvariant="bold-italic">𝒗</mi><mo>×</mo><mi mathvariant="bold-italic">𝑬</mi></mrow><msup><mi>c</mi><mn>2</mn></msup></mfrac><msub><mo stretchy="false" form="postfix">)</mo><mo>⟂</mo></msub></mrow><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mi>v</mi><mn>2</mn></msup><mi>/</mi><msup><mi>c</mi><mn>2</mn></msup></mrow></msqrt></mfrac></mrow><annotation encoding="application/x-tex">B_\perp&#39; = \frac{(\mathbf{B} - \frac{\mathbf{v} \times \mathbf{E}}{c^2})_\perp}{\sqrt{1-v^2/c^2}}</annotation></semantics></math></td>
+</tr>
+</tbody>
+</table>
+<h3 id="физический-смысл">Физический смысл:</h3>
+<ul>
+<li>Движение в статическом электрическом поле порождает магнитное
+поле.</li>
+<li>Движение в статическом магнитном поле порождает электрическое
+поле.</li>
+<li><strong>Пример:</strong> Попытка измерения скорости самолета по
+магнитному полю Земли. В теории, движение самолета порождает
+электрическое поле
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝒗</mi><mo>×</mo><mi mathvariant="bold-italic">𝑩</mi></mrow><annotation encoding="application/x-tex">\mathbf{v} \times \mathbf{B}</annotation></semantics></math>,
+которое можно измерить. На практике эффект (милливольты) маскируется
+мощными флуктуациями атмосферного электричества (до 100 В/м).</li>
+</ul>
+<hr />
+<h2 id="5-релятивистские-уравнения-движения">5. Релятивистские уравнения
+движения</h2>
+<p>Завершающим этапом является запись закона движения заряда в
+четырехмерной форме, объединяющей силу Лоренца и релятивистскую
+динамику.</p>
+<h3 id="4-сила-f_mu">4-сила
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mi>μ</mi></msub><annotation encoding="application/x-tex">f_\mu</annotation></semantics></math>):</h3>
+<p>Для получения четырехвектора силы необходимо использовать
+дифференцирование по <strong>собственному времени</strong>
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math>
+или
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>τ</mi><annotation encoding="application/x-tex">\tau</annotation></semantics></math>),
+которое инвариантно:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>s</mi><mo>=</mo><mi>d</mi><mi>t</mi><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mi>v</mi><mn>2</mn></msup><mi>/</mi><msup><mi>c</mi><mn>2</mn></msup></mrow></msqrt></mrow><annotation encoding="application/x-tex">ds = dt\sqrt{1-v^2/c^2}</annotation></semantics></math></p>
+<p>Четырехвектор силы определяется как:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mi>μ</mi></msub><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mi mathvariant="bold-italic">𝑭</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝒗</mi><mi>/</mi><mi>c</mi></mrow><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mi>v</mi><mn>2</mn></msup><mi>/</mi><msup><mi>c</mi><mn>2</mn></msup></mrow></msqrt></mfrac><mo>,</mo><mfrac><mi mathvariant="bold-italic">𝑭</mi><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mi>v</mi><mn>2</mn></msup><mi>/</mi><msup><mi>c</mi><mn>2</mn></msup></mrow></msqrt></mfrac><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">f_\mu = \left( \frac{\mathbf{F} \cdot \mathbf{v}/c}{\sqrt{1-v^2/c^2}}, \frac{\mathbf{F}}{\sqrt{1-v^2/c^2}} \right)</annotation></semantics></math></p>
+<h3 id="элегантная-форма-уравнения">Элегантная форма уравнения:</h3>
+<p>Уравнение движения частицы массой
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>m</mi><mn>0</mn></msub><annotation encoding="application/x-tex">m_0</annotation></semantics></math>
+и зарядом
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>q</mi><annotation encoding="application/x-tex">q</annotation></semantics></math>
+принимает вид:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>m</mi><mn>0</mn></msub><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><msub><mi>x</mi><mi>μ</mi></msub></mrow><mrow><mi>d</mi><msup><mi>s</mi><mn>2</mn></msup></mrow></mfrac><mo>=</mo><msub><mi>f</mi><mi>μ</mi></msub><mo>=</mo><mi>q</mi><msub><mi>u</mi><mi>ν</mi></msub><msub><mi>F</mi><mrow><mi>μ</mi><mi>ν</mi></mrow></msub></mrow><annotation encoding="application/x-tex">m_0 \frac{d^2x_\mu}{ds^2} = f_\mu = q u_\nu F_{\mu\nu}</annotation></semantics></math>
+Здесь
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>u</mi><mi>ν</mi></msub><annotation encoding="application/x-tex">u_\nu</annotation></semantics></math>
+— четырехмерная скорость. Это уравнение компактно выражает всё
+взаимодействие заряда с электромагнитным полем, включая изменение
+импульса и энергии (работу поля).</p>
+<hr />
+<h2 id="важные-цитаты-и-их-контекст">Важные цитаты и их контекст</h2>
+<blockquote>
+<p><strong>«Запомните их на случай, если вы вдруг очутитесь на
+необитаемом острове... Преобразования Лоренца вы, конечно, помните. Не
+забывайте их ни на необитаемом острове, ни в каком-либо другом
+месте».</strong> <em>Контекст:</em> О трех фундаментальных замечаниях
+(принципах), из которых можно восстановить всю электродинамику без
+уравнений Максвелла.</p>
+</blockquote>
+<blockquote>
+<p><strong>«Всегда, когда вы слышите подобное эффектное утверждение, что
+нечто большое можно построить на основе малого числа предположений,—
+ищите ошибку».</strong> <em>Контекст:</em> Критика утверждения, что вся
+электродинамика выводится <em>только</em> из закона Кулона и
+преобразований Лоренца (необходимы допущения о 4-векторной природе
+потенциалов и принципе запаздывания).</p>
+</blockquote>
+<blockquote>
+<p><strong>«Действие, оказывается, не равно противодействию».</strong>
+<em>Контекст:</em> Обсуждение сил между двумя движущимися протонами
+(фиг. 26.6), где возникает нескомпенсированная боковая магнитная
+сила.</p>
+</blockquote>
+<hr />
+<h2 id="практические-выводы-actionable-insights">Практические выводы
+(Actionable Insights)</h2>
+<ol type="1">
+<li><strong>Визуализация полей:</strong> При анализе быстро движущихся
+частиц (космические лучи, электроны в ускорителях) необходимо учитывать
+«сплющивание» электрического поля вдоль оси движения и резкое усиление
+его поперечных компонент.</li>
+<li><strong>Метод расчета:</strong> Расчет полей движущейся системы
+проще производить не через дифференцирование запаздывающих потенциалов,
+а путем трансформации известных статических полей из системы покоя
+заряда по формулам из Таблицы 26.4.</li>
+<li><strong>Единая природа полей:</strong> Следует воспринимать
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+не как две разные сущности, а как разные проекции тензора
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>F</mi><mrow><mi>μ</mi><mi>ν</mi></mrow></msub><annotation encoding="application/x-tex">F_{\mu\nu}</annotation></semantics></math>.
+Это позволяет упростить решение задач, переходя в систему отсчета, где
+одно из полей отсутствует или максимально упрощено.</li>
+<li><strong>Собственное время:</strong> Для корректного описания
+динамики частиц на релятивистских скоростях необходимо использовать
+инвариантный интервал
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">ds</annotation></semantics></math>,
+так как обычное время
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">dt</annotation></semantics></math>
+зависит от выбора системы отсчета.</li>
+</ol>
+    </article>
+  </main>
+</body>
+</html>

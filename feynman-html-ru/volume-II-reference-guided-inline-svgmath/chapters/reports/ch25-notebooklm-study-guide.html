@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Глава 25. Электродинамика в релятивистских обозначениях: Учебное пособие - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch25.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1
+id="глава-25-электродинамика-в-релятивистских-обозначениях-учебное-пособие">Глава
+25. Электродинамика в релятивистских обозначениях: Учебное пособие</h1>
+<p>Данное учебное пособие синтезировано на основе материалов 25-й главы
+«Феймановских лекций по физике». Оно охватывает применение специальной
+теории относительности к электродинамике, использование четырехвекторных
+обозначений и математический аппарат, обеспечивающий инвариантность
+физических законов.</p>
+<hr />
+<h2 id="1-ключевые-понятия-и-теоретические-основы">1. Ключевые понятия и
+теоретические основы</h2>
+<h3 id="четырехвекторы-и-их-свойства">Четырехвекторы и их свойства</h3>
+<p>В четырехмерном пространстве-времени физические величины объединяются
+в <strong>четырехвекторы</strong> — наборы из четырех компонентов,
+которые преобразуются при переходе в движущуюся систему координат
+аналогично компонентам радиус-вектора
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo>,</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(t, x, y, z)</annotation></semantics></math>
+согласно преобразованиям Лоренца.</p>
+<ul>
+<li><strong>Обозначение:</strong> Четырехвектор записывается как
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>μ</mi></msub><mo>=</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>a</mi><mi>t</mi></msub><mo>,</mo><msub><mi>a</mi><mi>x</mi></msub><mo>,</mo><msub><mi>a</mi><mi>y</mi></msub><mo>,</mo><msub><mi>a</mi><mi>z</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">a_\mu = (a_t, a_x, a_y, a_z)</annotation></semantics></math>
+или
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>μ</mi></msub><mo>=</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>a</mi><mi>t</mi></msub><mo>,</mo><mi mathvariant="bold-italic">𝒂</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">a_\mu = (a_t, \mathbf{a})</annotation></semantics></math>,
+где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝒂</mi><annotation encoding="application/x-tex">\mathbf{a}</annotation></semantics></math>
+— трехмерный вектор.</li>
+<li><strong>Единицы измерения:</strong> Для упрощения уравнений скорость
+света
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>c</mi><annotation encoding="application/x-tex">c</annotation></semantics></math>
+принимается равной
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>1</mn><annotation encoding="application/x-tex">1</annotation></semantics></math>.
+Это позволяет измерять время в единицах расстояния (например, в
+«световых метрах»).</li>
+<li><strong>Четырехвектор энергии-импульса:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>p</mi><mi>μ</mi></msub><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mi>E</mi><mo>,</mo><mi mathvariant="bold-italic">𝒑</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">p_\mu = (E, \mathbf{p})</annotation></semantics></math>.
+Длина этого вектора инвариантна:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>p</mi><mi>μ</mi></msub><msub><mi>p</mi><mi>μ</mi></msub><mo>=</mo><msup><mi>E</mi><mn>2</mn></msup><mo>−</mo><msup><mi mathvariant="bold-italic">𝒑</mi><mn>2</mn></msup><mo>=</mo><msup><mi>M</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">p_\mu p_\mu = E^2 - \mathbf{p}^2 = M^2</annotation></semantics></math>,
+где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>M</mi><annotation encoding="application/x-tex">M</annotation></semantics></math>
+— масса покоя частицы.</li>
+<li><strong>Четырехвектор скорости
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>u</mi><mi>μ</mi></msub><annotation encoding="application/x-tex">u_\mu</annotation></semantics></math>):</strong>
+Определяется через деление дифференциалов координат на собственное время
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>τ</mi></mrow><annotation encoding="application/x-tex">d\tau</annotation></semantics></math>
+(инвариант). Компоненты:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>u</mi><mi>μ</mi></msub><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mn>1</mn><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mi>v</mi><mn>2</mn></msup></mrow></msqrt></mfrac><mo>,</mo><mfrac><mi mathvariant="bold-italic">𝒗</mi><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mi>v</mi><mn>2</mn></msup></mrow></msqrt></mfrac><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">u_\mu = \left( \frac{1}{\sqrt{1-v^2}}, \frac{\mathbf{v}}{\sqrt{1-v^2}} \right)</annotation></semantics></math>.
+Длина 4-скорости всегда равна единице
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>u</mi><mi>μ</mi></msub><msub><mi>u</mi><mi>μ</mi></msub><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">u_\mu u_\mu = 1</annotation></semantics></math>).</li>
+</ul>
+<h3 id="скалярное-произведение-и-инвариантность">Скалярное произведение
+и инвариантность</h3>
+<p>Скалярное произведение двух четырехвекторов
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>a</mi><mi>μ</mi></msub><annotation encoding="application/x-tex">a_\mu</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>b</mi><mi>μ</mi></msub><annotation encoding="application/x-tex">b_\mu</annotation></semantics></math>
+определяется формулой:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>μ</mi></msub><msub><mi>b</mi><mi>μ</mi></msub><mo>=</mo><msub><mi>a</mi><mi>t</mi></msub><msub><mi>b</mi><mi>t</mi></msub><mo>−</mo><msub><mi>a</mi><mi>x</mi></msub><msub><mi>b</mi><mi>x</mi></msub><mo>−</mo><msub><mi>a</mi><mi>y</mi></msub><msub><mi>b</mi><mi>y</mi></msub><mo>−</mo><msub><mi>a</mi><mi>z</mi></msub><msub><mi>b</mi><mi>z</mi></msub><mo>=</mo><msub><mi>a</mi><mi>t</mi></msub><msub><mi>b</mi><mi>t</mi></msub><mo>−</mo><mi mathvariant="bold-italic">𝒂</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝒃</mi></mrow><annotation encoding="application/x-tex">a_\mu b_\mu = a_t b_t - a_x b_x - a_y b_y - a_z b_z = a_t b_t - \mathbf{a} \cdot \mathbf{b}</annotation></semantics></math>
+Эта величина является <strong>инвариантом</strong>, то есть её значение
+одинаково во всех инерциальных системах отсчета.</p>
+<h3 id="релятивистская-электродинамика">Релятивистская
+электродинамика</h3>
+<p>Электродинамика естественным образом вписывается в четырехмерную
+геометрию:</p>
+<ol type="1">
+<li><strong>Четырехмерный потенциал (4-потенциал):</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mi>μ</mi></msub><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mi>ϕ</mi><mo>,</mo><mi mathvariant="bold-italic">𝑨</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">A_\mu = (\phi, \mathbf{A})</annotation></semantics></math>,
+где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>
+— скалярный потенциал, а
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>
+— векторный потенциал.</li>
+<li><strong>Четырехвектор плотности тока:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>j</mi><mi>μ</mi></msub><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mi>ρ</mi><mo>,</mo><mi mathvariant="bold-italic">𝒋</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">j_\mu = (\rho, \mathbf{j})</annotation></semantics></math>,
+где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ρ</mi><annotation encoding="application/x-tex">\rho</annotation></semantics></math>
+— плотность заряда, а
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝒋</mi><annotation encoding="application/x-tex">\mathbf{j}</annotation></semantics></math>
+— плотность тока.</li>
+<li><strong>Уравнение Максвелла в 4-обозначениях:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mo>□</mo><mn>2</mn></msup><msub><mi>A</mi><mi>μ</mi></msub><mo>=</mo><mfrac><msub><mi>j</mi><mi>μ</mi></msub><msub><mi>ϵ</mi><mn>0</mn></msub></mfrac></mrow><annotation encoding="application/x-tex">\Box^2 A_\mu = \frac{j_\mu}{\epsilon_0}</annotation></semantics></math>.
+Это изящное уравнение заменяет собой сложную систему дифференциальных
+уравнений для потенциалов.</li>
+</ol>
+<hr />
+<h2 id="2-операторы-четырехмерного-анализа">2. Операторы четырехмерного
+анализа</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Оператор</th>
+<th style="text-align: left;">Трехмерный вид</th>
+<th style="text-align: left;">Четырехмерный вид</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Градиент</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∇</mi><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mfrac><mi>∂</mi><mrow><mi>∂</mi><mi>x</mi></mrow></mfrac><mo>,</mo><mfrac><mi>∂</mi><mrow><mi>∂</mi><mi>y</mi></mrow></mfrac><mo>,</mo><mfrac><mi>∂</mi><mrow><mi>∂</mi><mi>z</mi></mrow></mfrac><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\nabla = (\frac{\partial}{\partial x}, \frac{\partial}{\partial y}, \frac{\partial}{\partial z})</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>▫</mi><mi>μ</mi></msub><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mfrac><mi>∂</mi><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac><mo>,</mo><mi>−</mi><mi>∇</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\square_\mu = (\frac{\partial}{\partial t}, -\nabla)</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Дивергенция</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mtext mathvariant="normal">div </mtext><mspace width="0.333em"></mspace></mrow><mi mathvariant="bold-italic">𝑨</mi><mo>=</mo><mi>∇</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝑨</mi></mrow><annotation encoding="application/x-tex">\text{div } \mathbf{A} = \nabla \cdot \mathbf{A}</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>▫</mi><mi>μ</mi></msub><msub><mi>a</mi><mi>μ</mi></msub><mo>=</mo><mfrac><mrow><mi>∂</mi><msub><mi>a</mi><mi>t</mi></msub></mrow><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac><mo>+</mo><mrow><mtext mathvariant="normal">div </mtext><mspace width="0.333em"></mspace></mrow><mi mathvariant="bold-italic">𝒂</mi></mrow><annotation encoding="application/x-tex">\square_\mu a_\mu = \frac{\partial a_t}{\partial t} + \text{div } \mathbf{a}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Инвариантный
+оператор</strong></td>
+<td style="text-align: left;">Лапласиан
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>∇</mi><mn>2</mn></msup><annotation encoding="application/x-tex">\nabla^2</annotation></semantics></math></td>
+<td style="text-align: left;">Даламбертиан
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mo>□</mo><mn>2</mn></msup><mo>=</mo><mfrac><msup><mi>∂</mi><mn>2</mn></msup><mrow><mi>∂</mi><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac><mo>−</mo><msup><mi>∇</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\Box^2 = \frac{\partial^2}{\partial t^2} - \nabla^2</annotation></semantics></math></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3-проверочные-вопросы-short-answer-quiz">3. Проверочные вопросы
+(Short-answer Quiz)</h2>
+<ol type="1">
+<li><strong>Почему простое деление пространственных координат на время
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">dt</annotation></semantics></math>
+не дает четырехвектор скорости?</strong>
+<ul>
+<li><em>Ответ:</em> Потому что
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">dt</annotation></semantics></math>
+не является инвариантом при преобразованиях Лоренца; оно меняется при
+переходе из одной системы в другую.</li>
+</ul></li>
+<li><strong>Чему равна «длина» четырехвектора скорости
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>u</mi><mi>μ</mi></msub><annotation encoding="application/x-tex">u_\mu</annotation></semantics></math>?</strong>
+<ul>
+<li><em>Ответ:</em> Единице
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>u</mi><mi>μ</mi></msub><msub><mi>u</mi><mi>μ</mi></msub><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">u_\mu u_\mu = 1</annotation></semantics></math>).</li>
+</ul></li>
+<li><strong>Как записывается закон сохранения заряда в четырехмерных
+обозначениях?</strong>
+<ul>
+<li><em>Ответ:</em>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>▫</mi><mi>μ</mi></msub><msub><mi>j</mi><mi>μ</mi></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\square_\mu j_\mu = 0</annotation></semantics></math>
+(дивергенция четырехвектора тока равна нулю).</li>
+</ul></li>
+<li><strong>Что такое условие Лоренца и как оно выглядит в 4-векторной
+форме?</strong>
+<ul>
+<li><em>Ответ:</em> Это требование градиентной инвариантности,
+записываемое как
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>▫</mi><mi>μ</mi></msub><msub><mi>A</mi><mi>μ</mi></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\square_\mu A_\mu = 0</annotation></semantics></math>.</li>
+</ul></li>
+<li><strong>Какие величины объединяются в четырехвектор плотности тока
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>j</mi><mi>μ</mi></msub><annotation encoding="application/x-tex">j_\mu</annotation></semantics></math>?</strong>
+<ul>
+<li><em>Ответ:</em> Плотность электрического заряда
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ρ</mi><annotation encoding="application/x-tex">\rho</annotation></semantics></math>)
+и плотность тока
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝒋</mi><annotation encoding="application/x-tex">\mathbf{j}</annotation></semantics></math>).</li>
+</ul></li>
+</ol>
+<hr />
+<h2 id="4-типичные-ошибки-при-изучении-темы">4. Типичные ошибки при
+изучении темы</h2>
+<ul>
+<li><strong>Игнорирование знаков в скалярном произведении:</strong>
+Часто забывают, что пространственные компоненты в произведении
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>μ</mi></msub><msub><mi>b</mi><mi>μ</mi></msub></mrow><annotation encoding="application/x-tex">a_\mu b_\mu</annotation></semantics></math>
+входят со знаком «минус».</li>
+<li><strong>Ошибки в 4-градиенте:</strong> Неверное определение знака
+перед пространственной частью оператора
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>▫</mi><mi>μ</mi></msub><annotation encoding="application/x-tex">\square_\mu</annotation></semantics></math>.
+Правильно:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mfrac><mi>∂</mi><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac><mo>,</mo><mi>−</mi><mi>∇</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(\frac{\partial}{\partial t}, -\nabla)</annotation></semantics></math>.</li>
+<li><strong>Смешение систем единиц:</strong> Попытка использовать
+формулы с
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">c=1</annotation></semantics></math>
+в задачах, где величины даны в системе СИ, без предварительного
+приведения размерностей.</li>
+<li><strong>Принятие простоты обозначений за простоту физики:</strong>
+Фейнман подчеркивает, что запись законов в одну строку (например,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">U=0</annotation></semantics></math>)
+— это математический «трюк», который не отменяет сложности физических
+процессов, а лишь отражает их инвариантность.</li>
+</ul>
+<hr />
+<h2 id="5-темы-для-глубокого-изучения-essay-prompts">5. Темы для
+глубокого изучения (Essay Prompts)</h2>
+<ol type="1">
+<li><strong>Инвариантность как критерий истинности физического
+закона.</strong> Проанализируйте тезис о том, что любой истинный закон
+природы должен быть «встроен» в структуру пространства-времени
+Лоренца.</li>
+<li><strong>Энергетический порог рождения античастиц.</strong> На
+примере реакции
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>+</mo><mi>P</mi><mo>→</mo><mn>3</mn><mi>P</mi><mo>+</mo><mover><mi>P</mi><mo accent="true">‾</mo></mover></mrow><annotation encoding="application/x-tex">P+P \to 3P + \bar{P}</annotation></semantics></math>
+объясните преимущество вычислений в системе центра масс по сравнению с
+лабораторной системой.</li>
+<li><strong>Единство электрического и магнитного полей.</strong>
+Используя формулы преобразования 4-потенциала
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>A</mi><mi>μ</mi></msub><annotation encoding="application/x-tex">A_\mu</annotation></semantics></math>,
+покажите, как чисто электрическое поле в одной системе отсчета может
+порождать векторный потенциал (и, следовательно, магнитное поле) в
+другой.</li>
+</ol>
+<hr />
+<h2 id="6-краткий-глоссарий">6. Краткий глоссарий</h2>
+<ul>
+<li><strong>Даламбертиан
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mo>□</mo><mn>2</mn></msup><annotation encoding="application/x-tex">\Box^2</annotation></semantics></math>):</strong>
+Четырехмерный аналог оператора Лапласа, инвариантный скалярный оператор
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><msup><mi>∂</mi><mn>2</mn></msup><mrow><mi>∂</mi><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac><mo>−</mo><msup><mi>∇</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\frac{\partial^2}{\partial t^2} - \nabla^2</annotation></semantics></math>.</li>
+<li><strong>Инвариант Лоренца:</strong> Физическая величина, значение
+которой остается неизменным при преобразованиях Лоренца (например,
+скалярное произведение 4-векторов или масса покоя).</li>
+<li><strong>Система центра масс (ц. м.):</strong> Система отсчета, в
+которой суммарный трехмерный импульс всех частиц равен нулю
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝒑</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\mathbf{p} = 0</annotation></semantics></math>).</li>
+<li><strong>Собственное время
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>τ</mi><annotation encoding="application/x-tex">\tau</annotation></semantics></math>):</strong>
+Время, измеряемое часами, движущимися вместе с объектом; является
+инвариантом.</li>
+<li><strong>Четырехмерный потенциал (4-потенциал):</strong> Единый
+объект, объединяющий скалярный потенциал
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>
+и векторный потенциал
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>,
+что подчеркивает их неразрывную связь.</li>
+</ul>
+    </article>
+  </main>
+</body>
+</html>

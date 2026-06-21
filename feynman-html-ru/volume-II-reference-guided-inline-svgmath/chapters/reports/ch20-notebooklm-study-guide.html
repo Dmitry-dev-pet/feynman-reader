@@ -1,0 +1,294 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Глава 20. Решения уравнений Максвелла в пустом пространстве: Учебный конспект - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch20.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1
+id="глава-20-решения-уравнений-максвелла-в-пустом-пространстве-учебный-конспект">Глава
+20. Решения уравнений Максвелла в пустом пространстве: Учебный
+конспект</h1>
+<p>Данный документ представляет собой всестороннее руководство по
+изучению главы 20, посвященной поведению электромагнитных полей в
+вакууме, вдали от зарядов и токов.</p>
+<hr />
+<h2 id="1-ключевые-понятия">1. Ключевые понятия</h2>
+<h3 id="уравнения-максвелла-в-пустом-пространстве">Уравнения Максвелла в
+пустом пространстве</h3>
+<p>В областях, где плотность заряда
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ρ</mi><annotation encoding="application/x-tex">\rho</annotation></semantics></math>)
+и плотность тока
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝒋</mi><annotation encoding="application/x-tex">\mathbf{j}</annotation></semantics></math>)
+равны нулю, уравнения Максвелла принимают следующий вид:</p>
+<ul>
+<li><strong>I.</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∇</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝑬</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\nabla \cdot \mathbf{E} = 0</annotation></semantics></math></li>
+<li><strong>II.</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∇</mi><mo>×</mo><mi mathvariant="bold-italic">𝑬</mi><mo>=</mo><mi>−</mi><mfrac><mrow><mi>∂</mi><mi mathvariant="bold-italic">𝑩</mi></mrow><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t}</annotation></semantics></math></li>
+<li><strong>III.</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∇</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝑩</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\nabla \cdot \mathbf{B} = 0</annotation></semantics></math></li>
+<li><strong>IV.</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>c</mi><mn>2</mn></msup><mi>∇</mi><mo>×</mo><mi mathvariant="bold-italic">𝑩</mi><mo>=</mo><mfrac><mrow><mi>∂</mi><mi mathvariant="bold-italic">𝑬</mi></mrow><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">c^2 \nabla \times \mathbf{B} = \frac{\partial \mathbf{E}}{\partial t}</annotation></semantics></math></li>
+</ul>
+<p>Из этих уравнений следует, что в пустом пространстве каждая
+компонента электрического и магнитного полей, а также скалярный
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>)
+и векторный
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>)
+потенциалы удовлетворяют <strong>трехмерному волновому
+уравнению</strong>:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>∇</mi><mn>2</mn></msup><mi>ψ</mi><mo>−</mo><mfrac><mn>1</mn><msup><mi>c</mi><mn>2</mn></msup></mfrac><mfrac><mrow><msup><mi>∂</mi><mn>2</mn></msup><mi>ψ</mi></mrow><mrow><mi>∂</mi><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\nabla^2\psi - \frac{1}{c^2}\frac{\partial^2\psi}{\partial t^2} = 0</annotation></semantics></math></p>
+<h3 id="плоские-волны">Плоские волны</h3>
+<p>Плоская волна — это решение, в котором поля зависят только от одной
+пространственной координаты (например,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>)
+и времени.</p>
+<ul>
+<li><strong>Поперечность:</strong> В плоской электромагнитной волне
+векторы
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+всегда перпендикулярны направлению распространения (оси
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>).
+Продольные компоненты для динамических полей равны нулю.</li>
+<li><strong>Взаимная ориентация:</strong> Векторы
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+перпендикулярны друг другу.</li>
+<li><strong>Связь амплитуд:</strong> Для волны, идущей в положительном
+направлении
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>,
+выполняется соотношение
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mi>y</mi></msub><mo>=</mo><mi>c</mi><msub><mi>B</mi><mi>z</mi></msub></mrow><annotation encoding="application/x-tex">E_y = cB_z</annotation></semantics></math>.</li>
+<li><strong>Направление распространения:</strong> Определяется векторным
+произведением
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑬</mi><mo>×</mo><mi mathvariant="bold-italic">𝑩</mi></mrow><annotation encoding="application/x-tex">\mathbf{E} \times \mathbf{B}</annotation></semantics></math>.</li>
+</ul>
+<h3 id="принцип-суперпозиции">Принцип суперпозиции</h3>
+<p>Поскольку уравнения Максвелла линейны, любое сложное поле можно
+представить как наложение (суперпозицию) простых решений. Например:</p>
+<ol type="1">
+<li>Поле от источника с переменным током можно рассчитать, складывая
+решения для разных моментов включения тока.</li>
+<li>Общее решение трехмерного волнового уравнения является суперпозицией
+плоских волн, бегущих во всех возможных направлениях.</li>
+</ol>
+<h3 id="сферические-волны">Сферические волны</h3>
+<p>Сферические волны расходятся из одной точки (центра). Математически
+общее решение для сферически симметричного поля имеет вид:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ψ</mi><mo>=</mo><mfrac><mrow><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo>−</mo><mi>r</mi><mi>/</mi><mi>c</mi><mo stretchy="false" form="postfix">)</mo></mrow><mi>r</mi></mfrac></mrow><annotation encoding="application/x-tex">\psi = \frac{f(t - r/c)}{r}</annotation></semantics></math></p>
+<ul>
+<li><strong>Затухание:</strong> Амплитуда сферической волны убывает как
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mi>r</mi></mrow><annotation encoding="application/x-tex">1/r</annotation></semantics></math>.
+Это обусловлено законом сохранения энергии: так как энергия
+распределяется по поверхности сферы
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><mi>π</mi><msup><mi>r</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">4\pi r^2</annotation></semantics></math>),
+плотность энергии падает как
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><msup><mi>r</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">1/r^2</annotation></semantics></math>,
+а амплитуда поля — как корень из плотности энергии.</li>
+<li><strong>Источники:</strong> Решение типа
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mi>r</mi></mrow><annotation encoding="application/x-tex">1/r</annotation></semantics></math>
+подразумевает наличие источника в начале координат
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">r=0</annotation></semantics></math>).</li>
+</ul>
+<h3 id="научное-воображение-и-красота">Научное воображение и
+красота</h3>
+<p>Физика требует способности воображать объекты, которые невозможно
+увидеть напрямую.</p>
+<ul>
+<li><strong>Абстракция:</strong> Электромагнитное поле невозможно
+представить как «студень» (эфир); попытки таких визуализаций исторически
+тормозили прогресс.</li>
+<li><strong>Ограничения:</strong> Научное воображение — это
+«смирительная рубашка», так как новые идеи должны строго соответствовать
+всем известным законам природы.</li>
+<li><strong>Интеллектуальная красота:</strong> Проявляется в симметрии
+уравнений, например, в равнозначности координат
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo>,</mo><mi>t</mi></mrow><annotation encoding="application/x-tex">x, y, z, t</annotation></semantics></math>
+в волновом уравнении, что ведет к теории относительности.</li>
+</ul>
+<hr />
+<h2 id="2-проверочные-вопросы-короткие-ответы">2. Проверочные вопросы
+(короткие ответы)</h2>
+<ol type="1">
+<li><strong>Какое уравнение описывает поведение потенциалов
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>
+в пустом пространстве?</strong>
+<ul>
+<li><em>Ответ:</em> Трехмерное волновое уравнение.</li>
+</ul></li>
+<li><strong>Как связаны направления векторов
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+и вектора скорости волны?</strong>
+<ul>
+<li><em>Ответ:</em> Они взаимно перпендикулярны; направление скорости
+совпадает с направлением вектора
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑬</mi><mo>×</mo><mi mathvariant="bold-italic">𝑩</mi></mrow><annotation encoding="application/x-tex">\mathbf{E} \times \mathbf{B}</annotation></semantics></math>.</li>
+</ul></li>
+<li><strong>Чему равна скорость распространения электромагнитных
+возмущений в вакууме?</strong>
+<ul>
+<li><em>Ответ:</em> Скорости света
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>c</mi><annotation encoding="application/x-tex">c</annotation></semantics></math>.</li>
+</ul></li>
+<li><strong>Почему в плоской волне, идущей вдоль оси
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>,
+компонента
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>E</mi><mi>x</mi></msub><annotation encoding="application/x-tex">E_x</annotation></semantics></math>
+должна быть равна нулю (для динамических полей)?</strong>
+<ul>
+<li><em>Ответ:</em> Это следует из уравнения
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∇</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝑬</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\nabla \cdot \mathbf{E} = 0</annotation></semantics></math>
+при отсутствии зависимости от
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>y</mi><annotation encoding="application/x-tex">y</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>z</mi><annotation encoding="application/x-tex">z</annotation></semantics></math>.</li>
+</ul></li>
+<li><strong>Как ведет себя амплитуда сферической волны при увеличении
+расстояния от источника?</strong>
+<ul>
+<li><em>Ответ:</em> Убывает пропорционально
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mi>r</mi></mrow><annotation encoding="application/x-tex">1/r</annotation></semantics></math>.</li>
+</ul></li>
+<li><strong>Что представляет собой функция
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><mi>c</mi><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">f(x - ct)</annotation></semantics></math>?</strong>
+<ul>
+<li><em>Ответ:</em> Жесткий контур (волну), движущийся в положительном
+направлении оси
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>
+со скоростью
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>c</mi><annotation encoding="application/x-tex">c</annotation></semantics></math>.</li>
+</ul></li>
+<li><strong>Существуют ли в пустом пространстве сферические волны,
+бегущие к центру?</strong>
+<ul>
+<li><em>Ответ:</em> Математически — да
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo>+</mo><mi>r</mi><mi>/</mi><mi>c</mi><mo stretchy="false" form="postfix">)</mo><mi>/</mi><mi>r</mi></mrow><annotation encoding="application/x-tex">g(t + r/c)/r</annotation></semantics></math>),
+но физический опыт показывает, что источники создают только расходящиеся
+волны.</li>
+</ul></li>
+<li><strong>Какое свойство уравнений Максвелла позволяет нам слышать
+радио и видеть свет звезд одновременно?</strong>
+<ul>
+<li><em>Ответ:</em> Линейность уравнений и вытекающий из неё принцип
+суперпозиции.</li>
+</ul></li>
+</ol>
+<hr />
+<h2 id="3-типичные-ошибки-при-изучении">3. Типичные ошибки при
+изучении</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Ошибка</th>
+<th style="text-align: left;">Разъяснение из источника</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Попытка представить поле как
+механическую среду (эфир)</strong></td>
+<td style="text-align: left;">Поля — это самостоятельная физическая
+реальность; использование аналогий вроде «студня» может мешать
+пониманию.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Представление об электромагнитных
+волнах как о продольных</strong></td>
+<td style="text-align: left;">Уравнения Максвелла доказывают, что
+свободные волны в вакууме могут быть только поперечными.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Игнорирование источника в центре
+сферической волны</strong></td>
+<td style="text-align: left;">Решение
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mi>r</mi></mrow><annotation encoding="application/x-tex">1/r</annotation></semantics></math>
+математически некорректно в точке
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">r=0</annotation></semantics></math>,
+что физически указывает на присутствие в этой точке источника (заряда
+или тока).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Забывание о симметрии
+времени</strong></td>
+<td style="text-align: left;">Уравнения Максвелла не меняются при замене
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math>
+на
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">-t</annotation></semantics></math>.
+Выбор только расходящихся волн — это дополнительное допущение,
+основанное на опыте.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4-темы-для-эссе-глубокое-изучение">4. Темы для эссе (глубокое
+изучение)</h2>
+<ol type="1">
+<li><strong>«Реальность невидимого: электромагнитное поле как физический
+объект».</strong> Проанализируйте, почему поля в пустом пространстве
+считаются реальными, даже если в данной области нет зарядов и токов.
+Используйте примеры сигналов от межпланетных станций (Маринер II) и
+радиогалактик.</li>
+<li><strong>«Смирительная рубашка научного воображения».</strong>
+Обсудите тезис о том, что воображение физика ограничено законами
+природы. В чем разница между представлением «невидимых ангелов» и
+электромагнитных полей?</li>
+<li><strong>«Симметрия и интеллектуальная красота уравнений
+Максвелла».</strong> Как математическая форма уравнений (например,
+волнового уравнения) предвосхищает развитие физических теорий, таких как
+специальная теория относительности?</li>
+</ol>
+<hr />
+<h2 id="5-краткий-глоссарий">5. Краткий глоссарий</h2>
+<ul>
+<li><strong>Волновое уравнение:</strong> Дифференциальное уравнение в
+частных производных, описывающее распространение волн в среде или
+вакууме.</li>
+<li><strong>Дивергенция
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∇</mi><mo>⋅</mo></mrow><annotation encoding="application/x-tex">\nabla \cdot</annotation></semantics></math>):</strong>
+Математическая операция, характеризующая наличие источников или стоков
+поля в данной точке.</li>
+<li><strong>Лапласиан
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>∇</mi><mn>2</mn></msup><annotation encoding="application/x-tex">\nabla^2</annotation></semantics></math>):</strong>
+Скалярный дифференциальный оператор, сумма вторых производных по
+координатам.</li>
+<li><strong>Поляризация:</strong> Характеристика ориентации вектора
+электрического поля в пространстве для поперечных волн.</li>
+<li><strong>Принцип суперпозиции:</strong> Свойство линейных систем,
+согласно которому результат воздействия нескольких источников равен
+сумме результатов от каждого источника в отдельности.</li>
+<li><strong>Ротор
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∇</mi><mo>×</mo></mrow><annotation encoding="application/x-tex">\nabla \times</annotation></semantics></math>):</strong>
+Математическая операция, описывающая вращательную способность или
+«вихревой» характер поля.</li>
+<li><strong>Сферическая волна:</strong> Волна, фазовые поверхности
+которой представляют собой концентрические сферы.</li>
+<li><strong>Эфир:</strong> Гипотетическая среда, которой в прошлом
+пытались объяснить распространение света (в современной физике
+отвергнута в пользу концепции поля).</li>
+</ul>
+    </article>
+  </main>
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Глава 19: Принцип наименьшего действия — Учебное пособие - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch19.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1 id="глава-19-принцип-наименьшего-действия--учебное-пособие">Глава
+19: Принцип наименьшего действия — Учебное пособие</h1>
+<p>Данное пособие составлено на основе материалов девятнадцатой главы
+второго тома «Фейнмановских лекций по физике». Оно охватывает
+фундаментальные аспекты принципа наименьшего действия, его
+математическое обоснование, связь с квантовой механикой и практическое
+применение.</p>
+<hr />
+<h2 id="1-ключевые-понятия">1. Ключевые понятия</h2>
+<h3 id="определение-действия">Определение «Действия»</h3>
+<p><strong>Действие
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>S</mi><annotation encoding="application/x-tex">S</annotation></semantics></math>)</strong>
+— это физическая величина, представляющая собой интеграл по времени от
+разности между кинетической и потенциальной энергией частицы на пути от
+начальной точки в момент времени
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>t</mi><mn>1</mn></msub><annotation encoding="application/x-tex">t_1</annotation></semantics></math>
+до конечной точки в момент
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>t</mi><mn>2</mn></msub><annotation encoding="application/x-tex">t_2</annotation></semantics></math>.</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo>=</mo><msubsup><mo>∫</mo><msub><mi>t</mi><mn>1</mn></msub><msub><mi>t</mi><mn>2</mn></msub></msubsup><mo stretchy="false" form="prefix">(</mo><mi>K</mi><mi>E</mi><mo>−</mo><mi>P</mi><mi>E</mi><mo stretchy="false" form="postfix">)</mo><mi>d</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">S = \int_{t_1}^{t_2} (KE - PE) dt</annotation></semantics></math></p>
+<h3 id="принцип-наименьшего-действия">Принцип наименьшего действия</h3>
+<p>Согласно этому принципу, истинная траектория, по которой объект
+движется в действительности, — это тот путь, для которого значение
+интеграла действия является минимальным (или, точнее, стационарным) по
+сравнению со всеми другими возможными путями между теми же двумя точками
+за то же время.</p>
+<h3 id="вариационное-исчисление">Вариационное исчисление</h3>
+<p>В отличие от обычного дифференциального исчисления, где ищется точка
+минимума функции, вариационное исчисление занимается поиском
+<strong>целой кривой (пути)</strong>, которая минимизирует значение
+интеграла.</p>
+<h3 id="связь-с-законами-ньютона">Связь с законами Ньютона</h3>
+<p>Принцип наименьшего действия полностью эквивалентен законам Ньютона
+для консервативных систем. Математический вывод показывает, что условие
+минимума действия приводит к дифференциальному уравнению
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>=</mo><mi>m</mi><mi>a</mi></mrow><annotation encoding="application/x-tex">F = ma</annotation></semantics></math>.</p>
+<hr />
+<h2 id="2-методология-и-формулы">2. Методология и формулы</h2>
+<h3 id="лагранжиан-mathcall">Лагранжиан
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">ℒ</mi><annotation encoding="application/x-tex">\mathcal{L}</annotation></semantics></math>)</h3>
+<p>Функция, стоящая под знаком интеграла в формуле действия, называется
+<strong>лагранжианом</strong>. Для нерелятивистской частицы:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">ℒ</mi><mo>=</mo><mi>K</mi><mi>E</mi><mo>−</mo><mi>P</mi><mi>E</mi><mo>=</mo><mfrac><mi>m</mi><mn>2</mn></mfrac><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mi>d</mi><mi>x</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup><mo>−</mo><mi>V</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mathcal{L} = KE - PE = \frac{m}{2} \left(\frac{dx}{dt}\right)^2 - V(x)</annotation></semantics></math></p>
+<h3 id="математический-метод-вариация">Математический метод
+(Вариация)</h3>
+<p>Для поиска истинного пути
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><munder><mi>x</mi><mo accent="true">_</mo></munder><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\underline{x}(t)</annotation></semantics></math>
+используется метод варьирования:</p>
+<ol type="1">
+<li>Представляется пробный путь
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><munder><mi>x</mi><mo accent="true">_</mo></munder><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>η</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">x(t) = \underline{x}(t) + \eta(t)</annotation></semantics></math>,
+где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>η</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\eta(t)</annotation></semantics></math>
+— малая величина («вариация»), равная нулю в конечных точках
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>t</mi><mn>1</mn></msub><annotation encoding="application/x-tex">t_1</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>t</mi><mn>2</mn></msub><annotation encoding="application/x-tex">t_2</annotation></semantics></math>).</li>
+<li>Вычисляется изменение действия
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>δ</mi><mi>S</mi></mrow><annotation encoding="application/x-tex">\delta S</annotation></semantics></math>.</li>
+<li>Основное свойство минимума: изменение первого порядка по
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>η</mi><annotation encoding="application/x-tex">\eta</annotation></semantics></math>
+должно быть равно нулю
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>δ</mi><mi>S</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\delta S = 0</annotation></semantics></math>).</li>
+<li>С помощью <strong>интегрирования по частям</strong> производная от
+вариации
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mrow><mi>d</mi><mi>η</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><annotation encoding="application/x-tex">\frac{d\eta}{dt}</annotation></semantics></math>
+переносится на функцию скорости, что позволяет выделить общий множитель
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>η</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\eta(t)</annotation></semantics></math>.</li>
+</ol>
+<hr />
+<h2 id="3-практическое-применение-метод-минимизации-энергии">3.
+Практическое применение: Метод минимизации энергии</h2>
+<p>Принцип минимума применим не только в механике, но и в
+электростатике.</p>
+<ul>
+<li><strong>Электростатическая энергия:</strong> В системе проводников с
+заданными потенциалами истинное электрическое поле распределяется так,
+чтобы полная энергия была минимальной.</li>
+<li><strong>Расчет емкости:</strong> Если взять приближенную (неверную)
+функцию потенциала и вычислить емкость
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math>,
+результат всегда будет <strong>выше</strong> истинного значения. Это
+позволяет находить емкость сложных конфигураций методом последовательных
+приближений (подбором параметров функции для минимизации
+результата).</li>
+</ul>
+<hr />
+<h2 id="4-проверочные-вопросы-short-answer-quiz">4. Проверочные вопросы
+(Short-answer Quiz)</h2>
+<ol type="1">
+<li><strong>В чем заключается основное отличие вариационного исчисления
+от обычного анализа максимумов и минимумов?</strong>
+<ul>
+<li><em>Ответ:</em> Обычный анализ ищет конкретное значение переменной
+(точку), а вариационное исчисление ищет форму целой функции (путь),
+доставляющую минимум интегралу.</li>
+</ul></li>
+<li><strong>Как записывается формула лагранжиана для нерелятивистской
+частицы?</strong>
+<ul>
+<li><em>Ответ:</em>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">ℒ</mi><mo>=</mo><mi>K</mi><mi>E</mi><mo>−</mo><mi>P</mi><mi>E</mi></mrow><annotation encoding="application/x-tex">\mathcal{L} = KE - PE</annotation></semantics></math>
+(кинетическая энергия минус потенциальная энергия).</li>
+</ul></li>
+<li><strong>Почему при отсутствии внешних сил частица движется с
+постоянной скоростью, исходя из принципа действия?</strong>
+<ul>
+<li><em>Ответ:</em> В этом случае действие зависит только от
+кинетической энергии
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>v</mi><mn>2</mn></msup><annotation encoding="application/x-tex">v^2</annotation></semantics></math>).
+Любое отклонение от постоянной скорости увеличивает средний квадрат
+скорости, а значит, и интеграл действия.</li>
+</ul></li>
+<li><strong>Какое условие накладывается на вариацию
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>η</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\eta(t)</annotation></semantics></math>
+в начальный и конечный моменты времени?</strong>
+<ul>
+<li><em>Ответ:</em> Она должна быть равна нулю
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>η</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>t</mi><mn>1</mn></msub><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\eta(t_1) = 0</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>η</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>t</mi><mn>2</mn></msub><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\eta(t_2) = 0</annotation></semantics></math>),
+так как мы сравниваем пути, начинающиеся и заканчивающиеся в одних и тех
+же точках.</li>
+</ul></li>
+<li><strong>Всегда ли действие должно быть именно минимальным?</strong>
+<ul>
+<li><em>Ответ:</em> Нет, как и в принципе Ферма для света, оно должно
+быть стационарным (изменение первого порядка равно нулю). В некоторых
+случаях это может быть максимум или точка перегиба.</li>
+</ul></li>
+</ol>
+<hr />
+<h2 id="5-темы-для-глубокого-анализа-essay-questions">5. Темы для
+глубокого анализа (Essay Questions)</h2>
+<ol type="1">
+<li><strong>Механизм «выбора» пути: от классики к квантовой
+механике.</strong> Объясните, каким образом, согласно Фейнману, частица
+«узнает», какой путь является наилучшим. Раскройте роль фазы
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>i</mi><mi>S</mi><mi>/</mi><mi>ℏ</mi></mrow></msup><annotation encoding="application/x-tex">e^{iS/\hbar}</annotation></semantics></math>
+и процесса интерференции амплитуд по всем возможным траекториям.</li>
+<li><strong>Глобальный закон против локального.</strong> Сравните
+философский и физический смысл принципа наименьшего действия
+(описывающего весь путь целиком) и законов Ньютона (описывающих движение
+шаг за шагом). Как математически доказывается связь между этими
+подходами через бесконечно малые участки пути?</li>
+<li><strong>Принцип минимума в электростатике как инструмент инженерного
+расчета.</strong> Опишите процесс аппроксимации емкости конденсатора.
+Почему ошибка в конечном результате (емкости) оказывается второго
+порядка малости по сравнению с ошибкой в принятой функции
+потенциала?</li>
+</ol>
+<hr />
+<h2 id="6-типичные-ошибки">6. Типичные ошибки</h2>
+<ul>
+<li><strong>Путаница с полной энергией:</strong> Ошибочно полагать, что
+действие — это интеграл от <em>полной</em> энергии
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi><mi>E</mi><mo>+</mo><mi>P</mi><mi>E</mi></mrow><annotation encoding="application/x-tex">KE + PE</annotation></semantics></math>).
+На самом деле это интеграл от <em>разности</em>
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi><mi>E</mi><mo>−</mo><mi>P</mi><mi>E</mi></mrow><annotation encoding="application/x-tex">KE - PE</annotation></semantics></math>).</li>
+<li><strong>Игнорирование временных рамок:</strong> Принцип работает
+только при условии, что время перехода из точки А в точку Б фиксировано.
+Если менять время, значение действия изменится.</li>
+<li><strong>Забывание об интегрировании по частям:</strong> При выводе
+уравнения движения из вариации действия часто забывают, что нужно
+избавиться от производной вариации
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mrow><mi>d</mi><mi>η</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><annotation encoding="application/x-tex">\frac{d\eta}{dt}</annotation></semantics></math>),
+иначе нельзя сделать вывод о равенстве нулю коэффициента при
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>η</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\eta(t)</annotation></semantics></math>.</li>
+<li><strong>Представление о «сознательном выборе»:</strong> Ошибка
+считать, что частица физически «ощупывает» пути. Это классическая
+интерпретация; реальный физический механизм кроется в квантовой
+интерференции фаз.</li>
+</ul>
+<hr />
+<h2 id="7-краткий-глоссарий">7. Краткий глоссарий</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Термин</th>
+<th style="text-align: left;">Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Действие
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>S</mi><annotation encoding="application/x-tex">S</annotation></semantics></math>)</strong></td>
+<td style="text-align: left;">Величина, минимизация которой определяет
+истинную траекторию системы.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Лагранжиан
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">ℒ</mi><annotation encoding="application/x-tex">\mathcal{L}</annotation></semantics></math>)</strong></td>
+<td style="text-align: left;">Функция
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi><mi>E</mi><mo>−</mo><mi>P</mi><mi>E</mi></mrow><annotation encoding="application/x-tex">KE - PE</annotation></semantics></math>;
+подынтегральное выражение в формуле действия.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Вариация
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>η</mi><annotation encoding="application/x-tex">\eta</annotation></semantics></math>)</strong></td>
+<td style="text-align: left;">Произвольное бесконечно малое отклонение
+от истинного пути.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Истинный путь</strong></td>
+<td style="text-align: left;">Траектория, удовлетворяющая законам
+движения (Ньютона или квантовым).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Консервативная
+система</strong></td>
+<td style="text-align: left;">Система, в которой все силы могут быть
+получены из потенциальной энергии (нет трения).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Стационарная фаза</strong></td>
+<td style="text-align: left;">Область путей, где действие почти не
+меняется; именно эти пути дают основной вклад в движение частицы.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Первая главная функция
+Гамильтона</strong></td>
+<td style="text-align: left;">Строгое научное название величины, которую
+в физике обычно называют «действием».</td>
+</tr>
+</tbody>
+</table>
+    </article>
+  </main>
+</body>
+</html>

@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Аналитический отчет по Главе 40: Течение «сухой» воды - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch40.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1
+id="аналитический-отчет-по-главе-40-течение-сухой-воды">Аналитический
+отчет по Главе 40: Течение «сухой» воды</h1>
+<h2 id="1-резюме-executive-summary">1. Резюме (Executive Summary)</h2>
+<p>Данный отчет представляет собой глубокий анализ Главы 40 второго тома
+«Фейнмановских лекций по физике». Основная тема главы — поведение
+идеальной жидкости, которую Джон фон Нейман иронично назвал «сухой
+водой». Под этим термином понимается несжимаемая жидкость с нулевой
+вязкостью
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ρ</mi><mo>=</mo><mtext mathvariant="normal">const</mtext></mrow><annotation encoding="application/x-tex">\rho = \text{const}</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mtext mathvariant="normal">visc</mtext></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">f_{\text{visc}} = 0</annotation></semantics></math>).</p>
+<p>Документ охватывает переход от гидростатики к динамике потоков, вывод
+фундаментальных уравнений движения (уравнение Эйлера), теорему Бернулли,
+а также концепции завихренности и циркуляции. Несмотря на математическое
+изящество модели «сухой воды», в главе подчеркивается её ограниченность
+в описании реальных физических процессов, таких как возникновение
+завихренности из состояния покоя и взаимодействие жидкости с твердыми
+телами.</p>
+<hr />
+<h2 id="2-подробный-анализ-ключевых-тем">2. Подробный анализ ключевых
+тем</h2>
+<h3 id="21-гидростатика-основы-равновесия">2.1. Гидростатика: Основы
+равновесия</h3>
+<p>В неподвижной жидкости отсутствуют напряжения сдвига, поэтому
+давление
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math>)
+всегда направлено по нормали к поверхности и одинаково во всех
+направлениях (фиг. 40.1).</p>
+<ul>
+<li><strong>Основное уравнение гидростатики:</strong>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∇</mi><mi>p</mi><mo>+</mo><mi>ρ</mi><mi>∇</mi><mi>ϕ</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\nabla p + \rho \nabla \phi = 0</annotation></semantics></math>
+Где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>
+— потенциальная энергия единицы массы (для гравитации
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ϕ</mi><mo>=</mo><mi>g</mi><mi>z</mi></mrow><annotation encoding="application/x-tex">\phi = gz</annotation></semantics></math>).</li>
+<li><strong>Физический смысл:</strong> Сила давления на единицу объема
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mi>∇</mi><mi>p</mi></mrow><annotation encoding="application/x-tex">-\nabla p</annotation></semantics></math>)
+должна уравновешиваться внешней силой (например, тяжестью
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mi>ρ</mi><mi>∇</mi><mi>ϕ</mi></mrow><annotation encoding="application/x-tex">-\rho \nabla \phi</annotation></semantics></math>).
+В случае постоянной плотности это приводит к закону:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>+</mo><mi>ρ</mi><mi>g</mi><mi>h</mi><mo>=</mo><mtext mathvariant="normal">const</mtext></mrow><annotation encoding="application/x-tex">p + \rho gh = \text{const}</annotation></semantics></math>
+(фиг. 40.2).</li>
+</ul>
+<h3 id="22-уравнения-движения-идеальной-жидкости">2.2. Уравнения
+движения идеальной жидкости</h3>
+<p>Переход к динамике требует учета ускорения частиц жидкости. Фейнман
+подчеркивает различие между изменением скорости в фиксированной точке
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∂</mi><mi mathvariant="bold-italic">𝒗</mi><mi>/</mi><mi>∂</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">\partial \mathbf{v} / \partial t</annotation></semantics></math>)
+и ускорением конкретной движущейся «капли» жидкости.</p>
+<ul>
+<li><strong>Полное ускорение частицы (фиг. 40.4):</strong>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝒂</mi><mo>=</mo><mfrac><mrow><mi>∂</mi><mi mathvariant="bold-italic">𝒗</mi></mrow><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mi mathvariant="bold-italic">𝒗</mi><mo>⋅</mo><mi>∇</mi><mo stretchy="false" form="postfix">)</mo><mi mathvariant="bold-italic">𝒗</mi></mrow><annotation encoding="application/x-tex">\mathbf{a} = \frac{\partial \mathbf{v}}{\partial t} + (\mathbf{v} \cdot \nabla) \mathbf{v}</annotation></semantics></math></li>
+<li><strong>Уравнение движения (без вязкости):</strong>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi>∂</mi><mi mathvariant="bold-italic">𝒗</mi></mrow><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mi mathvariant="bold-italic">𝒗</mi><mo>⋅</mo><mi>∇</mi><mo stretchy="false" form="postfix">)</mo><mi mathvariant="bold-italic">𝒗</mi><mo>=</mo><mi>−</mi><mfrac><mrow><mi>∇</mi><mi>p</mi></mrow><mi>ρ</mi></mfrac><mo>−</mo><mi>∇</mi><mi>ϕ</mi></mrow><annotation encoding="application/x-tex">\frac{\partial \mathbf{v}}{\partial t} + (\mathbf{v} \cdot \nabla) \mathbf{v} = -\frac{\nabla p}{\rho} - \nabla \phi</annotation></semantics></math>
+С использованием векторного тождества
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi mathvariant="bold-italic">𝒗</mi><mo>⋅</mo><mi>∇</mi><mo stretchy="false" form="postfix">)</mo><mi mathvariant="bold-italic">𝒗</mi><mo>=</mo><mi mathvariant="bold">𝛀</mi><mo>×</mo><mi mathvariant="bold-italic">𝒗</mi><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>∇</mi><msup><mi>v</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">(\mathbf{v} \cdot \nabla) \mathbf{v} = \mathbf{\Omega} \times \mathbf{v} + \frac{1}{2} \nabla v^2</annotation></semantics></math>,
+где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold">𝛀</mi><mo>=</mo><mi>∇</mi><mo>×</mo><mi mathvariant="bold-italic">𝒗</mi></mrow><annotation encoding="application/x-tex">\mathbf{\Omega} = \nabla \times \mathbf{v}</annotation></semantics></math>
+— завихренность.</li>
+</ul>
+<h3 id="23-теорема-бернулли">2.3. Теорема Бернулли</h3>
+<p>Для стационарного потока
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∂</mi><mi mathvariant="bold-italic">𝒗</mi><mi>/</mi><mi>∂</mi><mi>t</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\partial \mathbf{v} / \partial t = 0</annotation></semantics></math>)
+вдоль линии тока (фиг. 40.5) выполняется закон сохранения энергии.</p>
+<ul>
+<li><strong>Уравнение Бернулли:</strong>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mi>p</mi><mi>ρ</mi></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><msup><mi>v</mi><mn>2</mn></msup><mo>+</mo><mi>ϕ</mi><mo>=</mo><mtext mathvariant="normal">const</mtext></mrow><annotation encoding="application/x-tex">\frac{p}{\rho} + \frac{1}{2}v^2 + \phi = \text{const}</annotation></semantics></math></li>
+<li><strong>Применение:</strong>
+<ul>
+<li><strong>Истечение из резервуара (фиг. 40.7):</strong> Скорость струи
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mo>=</mo><msqrt><mrow><mn>2</mn><mi>g</mi><mi>h</mi></mrow></msqrt></mrow><annotation encoding="application/x-tex">v = \sqrt{2gh}</annotation></semantics></math>.
+Однако реальный поток зависит от «коэффициента истечения». Если
+отверстие имеет острые края, струя сжимается до 62% площади
+отверстия.</li>
+<li><strong>Эффект Борда (фиг. 40.8):</strong> Если выходная труба
+вдается внутрь резервуара, коэффициент истечения составляет ровно 50%
+из-за закона сохранения импульса.</li>
+<li><strong>Изменение давления в трубе (фиг. 40.9):</strong> Там, где
+скорость выше (сужение), давление ниже.</li>
+</ul></li>
+</ul>
+<h3 id="24-циркуляция-и-безвихревое-течение">2.4. Циркуляция и
+безвихревое течение</h3>
+<p>Если завихренность
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold">𝛀</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\mathbf{\Omega} = 0</annotation></semantics></math>,
+уравнения движения становятся аналогичными уравнениям электростатики или
+магнитостатики
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∇</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝒗</mi><mo>=</mo><mn>0</mn><mo>,</mo><mi>∇</mi><mo>×</mo><mi mathvariant="bold-italic">𝒗</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\nabla \cdot \mathbf{v} = 0, \nabla \times \mathbf{v} = 0</annotation></semantics></math>).</p>
+<ul>
+<li><strong>Обтекание тел:</strong> Задачу об обтекании цилиндра или
+сферы можно решить методами электростатики (фиг. 40.11а).</li>
+<li><strong>Подъемная сила:</strong> При наложении чистого потока на
+циркуляцию вокруг цилиндра возникает разность давлений (сверху ниже,
+снизу выше), создающая вертикальную подъемную силу (фиг. 40.11в).</li>
+<li><strong>Закон сохранения момента импульса:</strong> При стоке воды в
+отверстие тангенциальная скорость растет как
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mi>r</mi></mrow><annotation encoding="application/x-tex">1/r</annotation></semantics></math>,
+образуя характерную воронку (фиг. 40.12).</li>
+</ul>
+<h3 id="25-вихревые-линии-и-теоремы-гельмгольца">2.5. Вихревые линии и
+теоремы Гельмгольца</h3>
+<p>Вихревые линии (аналоги магнитных линий
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>)
+движутся вместе с веществом в отсутствие вязкости.</p>
+<ul>
+<li><strong>Вихревые кольца (фиг. 40.14, 40.15):</strong> Кольцевой
+вихрь (например, дымовое кольцо) перемещается вперед со скоростью,
+определяемой собственной циркуляцией. Вихревые линии в нем замкнуты в
+тороид.</li>
+</ul>
+<hr />
+<h2 id="3-математический-аппарат-и-физический-смысл">3. Математический
+аппарат и Физический смысл</h2>
+<h3 id="сводная-таблица-уравнений">Сводная таблица уравнений</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Название</th>
+<th style="text-align: left;">Формула</th>
+<th style="text-align: left;">Физический смысл</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Уравнение
+непрерывности</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∇</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝒗</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\nabla \cdot \mathbf{v} = 0</annotation></semantics></math></td>
+<td style="text-align: left;">Несжимаемость: сколько втекло, столько и
+вытекло.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Завихренность</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold">𝛀</mi><mo>=</mo><mi>∇</mi><mo>×</mo><mi mathvariant="bold-italic">𝒗</mi></mrow><annotation encoding="application/x-tex">\mathbf{\Omega} = \nabla \times \mathbf{v}</annotation></semantics></math></td>
+<td style="text-align: left;">Описывает локальное вращение элементов
+жидкости.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Уравнение
+завихренности</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi>∂</mi><mi mathvariant="bold">𝛀</mi></mrow><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac><mo>+</mo><mi>∇</mi><mo>×</mo><mo stretchy="false" form="prefix">(</mo><mi mathvariant="bold">𝛀</mi><mo>×</mo><mi mathvariant="bold-italic">𝒗</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\frac{\partial \mathbf{\Omega}}{\partial t} + \nabla \times (\mathbf{\Omega} \times \mathbf{v}) = 0</annotation></semantics></math></td>
+<td style="text-align: left;">Динамика вихрей в идеальной жидкости
+(теоремы Гельмгольца).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Теорема Бернулли</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mi>p</mi><mi>ρ</mi></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><msup><mi>v</mi><mn>2</mn></msup><mo>+</mo><mi>ϕ</mi><mo>=</mo><mtext mathvariant="normal">const</mtext></mrow><annotation encoding="application/x-tex">\frac{p}{\rho} + \frac{1}{2}v^2 + \phi = \text{const}</annotation></semantics></math></td>
+<td style="text-align: left;">Закон сохранения энергии вдоль линии
+тока.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4-иллюстрации-и-их-контекст">4. Иллюстрации и их контекст</h2>
+<p>В тексте используются следующие ключевые визуализации:</p>
+<ol type="1">
+<li><strong>Фиг. 40.3:</strong> Анализ сил давления на элементарный куб
+жидкости, показывающий, что сила равна
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mi>∇</mi><mi>p</mi></mrow><annotation encoding="application/x-tex">-\nabla p</annotation></semantics></math>
+на единицу объема.</li>
+<li><strong>Фиг. 40.6:</strong> Трубка тока, используемая для
+альтернативного вывода теоремы Бернулли через работу сил давления.</li>
+<li><strong>Фиг. 40.10:</strong> Эксперимент со струей, направленной
+вверх. В реальности вода не достигает исходного уровня из-за вязкого
+трения, что доказывает несовершенство модели «сухой воды».</li>
+<li><strong>Фиг. 40.13:</strong> Иллюстрация сохранения момента
+количества движения: при уменьшении сечения трубки вихревых линий
+завихренность увеличивается.</li>
+</ol>
+<hr />
+<h2 id="5-важные-цитаты-и-концептуальные-выводы">5. Важные цитаты и
+концептуальные выводы</h2>
+<blockquote>
+<p><strong>О «сухой воде»:</strong> «Теоретиков, которые занимались
+подобными веществами, [Джон фон Нейманн] называл людьми, изучающими
+"сухую воду". Они отбрасывали важнейшее свойство жидкости».</p>
+</blockquote>
+<blockquote>
+<p><strong>О парадоксе возникновения вихрей:</strong> «Уравнение
+говорит, что если первоначально
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold">𝛀</mi><annotation encoding="application/x-tex">\mathbf{\Omega}</annotation></semantics></math>
+было равно нулю, то оно всегда останется равным нулю. Этот результат —
+крушение теории "сухой" воды, ибо... ни при каких обстоятельствах
+создать завихренность нельзя. Однако в нашем простом опыте с барабаном
+мы могли породить вихревое кольцо».</p>
+</blockquote>
+<p><strong>Концептуальный итог:</strong> Теория «сухой воды» (идеальной
+жидкости) дает прекрасные математические решения и объясняет многие
+эффекты (подъемная сила, уравнение Бернулли), но она принципиально
+ошибочна в двух аспектах:</p>
+<ol type="1">
+<li><strong>Граничные условия:</strong> В реальности скорость жидкости
+на поверхности твердого тела всегда равна нулю (вязкое прилипание), а не
+скользит по ней.</li>
+<li><strong>Генерация вихрей:</strong> Вихри в реальной жизни создаются
+именно благодаря вязкости, которую данная глава сознательно
+игнорирует.</li>
+</ol>
+<hr />
+<h2 id="6-actionable-insights-практические-выводы">6. Actionable
+Insights (Практические выводы)</h2>
+<ol type="1">
+<li><strong>Применение модели:</strong> Модель идеальной жидкости
+применима только в тех случаях, когда скорость потока значительно меньше
+скорости звука и эффектами вязкости можно пренебречь (например, вдали от
+стенок или в тонких слоях).</li>
+<li><strong>Инструмент оценки:</strong> Уравнение Бернулли является
+мощным инструментом для быстрой оценки давления и скорости в
+стационарных потоках, но всегда требует внесения поправочных
+коэффициентов (коэффициенты истечения, потери на трение).</li>
+<li><strong>Аналогия полей:</strong> Для решения задач безвихревого
+обтекания можно использовать весь математический аппарат электростатики,
+заменяя потенциал
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>
+на потенциал скоростей.</li>
+<li><strong>Понимание ограничений:</strong> При проектировании систем,
+где важно возникновение турбулентности или сопротивление трения, расчеты
+на основе Главы 40 будут неверными и потребуют перехода к теории
+«мокрой» (вязкой) воды.</li>
+</ol>
+    </article>
+  </main>
+</body>
+</html>

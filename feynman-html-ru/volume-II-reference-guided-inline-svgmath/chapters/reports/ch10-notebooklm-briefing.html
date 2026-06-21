@@ -1,0 +1,275 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Глава 10. Диэлектрики: Аналитический отчет - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch10.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1 id="глава-10-диэлектрики-аналитический-отчет">Глава 10. Диэлектрики:
+Аналитический отчет</h1>
+<p>Данный отчет представляет собой синтез материалов 10-й главы
+«Фейнмановских лекций по физике» (Том II), посвященной изучению
+диэлектриков — изолирующих материалов и их поведению в электрических
+полях.</p>
+<h2 id="1-краткий-обзор-executive-summary">1. Краткий обзор (Executive
+Summary)</h2>
+<p>Центральной темой главы является объяснение того, почему изоляторы
+(диэлектрики), не проводящие электричество, тем не менее оказывают
+существенное влияние на электрические поля. Основной экспериментальный
+факт, установленный Фарадеем, заключается в том, что при заполнении
+пространства между обкладками конденсатора диэлектриком его емкость
+увеличивается в
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>κ</mi><annotation encoding="application/x-tex">\kappa</annotation></semantics></math>
+раз.</p>
+<p>Этот эффект объясняется <strong>поляризацией</strong> —
+возникновением множества малых дипольных моментов внутри материала под
+действием внешнего поля. Поляризация приводит к появлению индуцированных
+(поляризационных) зарядов на поверхности и в объеме диэлектрика, которые
+частично компенсируют внешнее поле. В отчете рассматриваются
+математические модели этого явления, вводятся векторы поляризации
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑷</mi><annotation encoding="application/x-tex">\mathbf{P}</annotation></semantics></math>)
+и электрического смещения
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑫</mi><annotation encoding="application/x-tex">\mathbf{D}</annotation></semantics></math>),
+а также анализируются силы, действующие на диэлектрики в неоднородных
+полях.</p>
+<hr />
+<h2 id="2-ключевые-аналитические-темы">2. Ключевые аналитические
+темы</h2>
+<h3 id="21-понятие-диэлектрической-проницаемости-kappa">2.1. Понятие
+диэлектрической проницаемости
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>κ</mi><annotation encoding="application/x-tex">\kappa</annotation></semantics></math>)</h3>
+<p>Эксперименты показали, что емкость плоского конденсатора
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo>=</mo><mfrac><mrow><msub><mi>ϵ</mi><mn>0</mn></msub><mi>A</mi></mrow><mi>d</mi></mfrac></mrow><annotation encoding="application/x-tex">C = \frac{\epsilon_0 A}{d}</annotation></semantics></math>
+увеличивается до
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo>=</mo><mfrac><mrow><mi>κ</mi><msub><mi>ϵ</mi><mn>0</mn></msub><mi>A</mi></mrow><mi>d</mi></mfrac></mrow><annotation encoding="application/x-tex">C = \frac{\kappa \epsilon_0 A}{d}</annotation></semantics></math>
+при введении изолятора.</p>
+<ul>
+<li><strong>Физический смысл:</strong> Поле внутри диэлектрика
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math>)
+становится меньше внешнего поля
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>E</mi><mn>0</mn></msub><annotation encoding="application/x-tex">E_0</annotation></semantics></math>)
+при тех же свободных зарядах на пластинах.</li>
+<li><strong>Связь с потенциалом:</strong> Поскольку
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>=</mo><mi>E</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">V = Ed</annotation></semantics></math>,
+уменьшение поля ведет к уменьшению разности потенциалов при неизменном
+заряде
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Q</mi><annotation encoding="application/x-tex">Q</annotation></semantics></math>,
+что, согласно формуле
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Q</mi><mo>=</mo><mi>C</mi><mi>V</mi></mrow><annotation encoding="application/x-tex">Q = CV</annotation></semantics></math>,
+означает рост емкости.</li>
+</ul>
+<h3 id="22-механизм-поляризации-и-вектор-mathbfp">2.2. Механизм
+поляризации и вектор
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑷</mi><annotation encoding="application/x-tex">\mathbf{P}</annotation></semantics></math></h3>
+<p>На атомном уровне диэлектрик не содержит свободных зарядов, но
+внешнее поле вызывает смещение положительных ядер и отрицательных
+электронных облаков (см. [SOURCE_IMAGE_4]).</p>
+<ul>
+<li><strong>Вектор поляризации
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑷</mi><annotation encoding="application/x-tex">\mathbf{P}</annotation></semantics></math>):</strong>
+Определяется как дипольный момент единицы объема.
+<ul>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑷</mi><mo>=</mo><mi>N</mi><mi>q</mi><mi mathvariant="bold-italic">𝜹</mi></mrow><annotation encoding="application/x-tex">\mathbf{P} = Nq\mathbf{\delta}</annotation></semantics></math>,
+где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>N</mi><annotation encoding="application/x-tex">N</annotation></semantics></math>
+— число атомов в объеме,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>q</mi><annotation encoding="application/x-tex">q</annotation></semantics></math>
+— заряд,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝜹</mi><annotation encoding="application/x-tex">\mathbf{\delta}</annotation></semantics></math>
+— вектор смещения.</li>
+</ul></li>
+<li><strong>Диэлектрическая восприимчивость
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>χ</mi><annotation encoding="application/x-tex">\chi</annotation></semantics></math>):</strong>
+В большинстве материалов (при не слишком сильных полях) поляризация
+пропорциональна полю:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑷</mi><mo>=</mo><mi>χ</mi><msub><mi>ϵ</mi><mn>0</mn></msub><mi mathvariant="bold-italic">𝑬</mi></mrow><annotation encoding="application/x-tex">\mathbf{P} = \chi \epsilon_0 \mathbf{E}</annotation></semantics></math></li>
+<li><strong>Связь с проницаемостью:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>κ</mi><mo>=</mo><mn>1</mn><mo>+</mo><mi>χ</mi></mrow><annotation encoding="application/x-tex">\kappa = 1 + \chi</annotation></semantics></math>.</li>
+</ul>
+<h3 id="23-поляризационные-заряды">2.3. Поляризационные заряды</h3>
+<p>Смещение зарядов внутри диэлектрика приводит к появлению эффективных
+зарядов, которые не могут «стечь» с материала:</p>
+<ol type="1">
+<li><strong>Поверхностный заряд
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>σ</mi><mrow><mi>p</mi><mi>o</mi><mi>l</mi></mrow></msub><annotation encoding="application/x-tex">\sigma_{pol}</annotation></semantics></math>):</strong>
+Возникает на границах диэлектрика. Его плотность численно равна
+нормальной компоненте вектора поляризации:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>σ</mi><mrow><mi>p</mi><mi>o</mi><mi>l</mi></mrow></msub><mo>=</mo><mi mathvariant="bold-italic">𝑷</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝒏</mi></mrow><annotation encoding="application/x-tex">\sigma_{pol} = \mathbf{P} \cdot \mathbf{n}</annotation></semantics></math>
+(см. [SOURCE_IMAGE_5], [SOURCE_IMAGE_6]).</li>
+<li><strong>Объемный заряд
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ρ</mi><mrow><mi>p</mi><mi>o</mi><mi>l</mi></mrow></msub><annotation encoding="application/x-tex">\rho_{pol}</annotation></semantics></math>):</strong>
+Возникает в случае неоднородной поляризации. Математически описывается
+дивергенцией вектора
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑷</mi><annotation encoding="application/x-tex">\mathbf{P}</annotation></semantics></math>
+(см. [SOURCE_IMAGE_7]):
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ρ</mi><mrow><mi>p</mi><mi>o</mi><mi>l</mi></mrow></msub><mo>=</mo><mi>−</mi><mi>∇</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝑷</mi></mrow><annotation encoding="application/x-tex">\rho_{pol} = -\nabla \cdot \mathbf{P}</annotation></semantics></math></li>
+</ol>
+<h3 id="24-вектор-электрического-смещения-mathbfd">2.4. Вектор
+электрического смещения
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑫</mi><annotation encoding="application/x-tex">\mathbf{D}</annotation></semantics></math>)</h3>
+<p>Для удобства расчетов, чтобы отделить «свободные» заряды
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ρ</mi><mrow><mi>f</mi><mi>r</mi><mi>e</mi><mi>e</mi></mrow></msub><annotation encoding="application/x-tex">\rho_{free}</annotation></semantics></math>),
+которыми можно манипулировать (заряжать проводники), от «связанных»
+поляризационных зарядов, вводится вектор
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑫</mi><annotation encoding="application/x-tex">\mathbf{D}</annotation></semantics></math>:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑫</mi><mo>=</mo><msub><mi>ϵ</mi><mn>0</mn></msub><mi mathvariant="bold-italic">𝑬</mi><mo>+</mo><mi mathvariant="bold-italic">𝑷</mi></mrow><annotation encoding="application/x-tex">\mathbf{D} = \epsilon_0 \mathbf{E} + \mathbf{P}</annotation></semantics></math>
+Основное уравнение электростатики в диэлектриках принимает вид:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∇</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝑫</mi><mo>=</mo><msub><mi>ρ</mi><mrow><mi>f</mi><mi>r</mi><mi>e</mi><mi>e</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\nabla \cdot \mathbf{D} = \rho_{free}</annotation></semantics></math></p>
+<hr />
+<h2 id="3-математический-аппарат-основные-формулы">3. Математический
+аппарат (Основные формулы)</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Формула</th>
+<th style="text-align: left;">Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo>=</mo><mfrac><mrow><mi>κ</mi><msub><mi>ϵ</mi><mn>0</mn></msub><mi>A</mi></mrow><mi>d</mi></mfrac></mrow><annotation encoding="application/x-tex">C = \frac{\kappa \epsilon_0 A}{d}</annotation></semantics></math></td>
+<td style="text-align: left;">Емкость плоского конденсатора с
+диэлектриком.</td>
+</tr>
+<tr>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑷</mi><mo>=</mo><mi>N</mi><mi>q</mi><mi mathvariant="bold-italic">𝜹</mi></mrow><annotation encoding="application/x-tex">\mathbf{P} = Nq\mathbf{\delta}</annotation></semantics></math></td>
+<td style="text-align: left;">Определение вектора поляризации.</td>
+</tr>
+<tr>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>=</mo><mfrac><mrow><msub><mi>σ</mi><mrow><mi>f</mi><mi>r</mi><mi>e</mi><mi>e</mi></mrow></msub><mo>−</mo><msub><mi>σ</mi><mrow><mi>p</mi><mi>o</mi><mi>l</mi></mrow></msub></mrow><msub><mi>ϵ</mi><mn>0</mn></msub></mfrac></mrow><annotation encoding="application/x-tex">E = \frac{\sigma_{free} - \sigma_{pol}}{\epsilon_0}</annotation></semantics></math></td>
+<td style="text-align: left;">Результирующее поле внутри
+диэлектрика.</td>
+</tr>
+<tr>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>σ</mi><mrow><mi>p</mi><mi>o</mi><mi>l</mi></mrow></msub><mo>=</mo><mi>P</mi></mrow><annotation encoding="application/x-tex">\sigma_{pol} = P</annotation></semantics></math></td>
+<td style="text-align: left;">Плотность поверхностного поляризационного
+заряда (для плоского случая).</td>
+</tr>
+<tr>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ρ</mi><mrow><mi>p</mi><mi>o</mi><mi>l</mi></mrow></msub><mo>=</mo><mi>−</mi><mi>∇</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝑷</mi></mrow><annotation encoding="application/x-tex">\rho_{pol} = -\nabla \cdot \mathbf{P}</annotation></semantics></math></td>
+<td style="text-align: left;">Плотность объемного поляризационного
+заряда.</td>
+</tr>
+<tr>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑫</mi><mo>=</mo><mi>ϵ</mi><mi mathvariant="bold-italic">𝑬</mi><mo>=</mo><mi>κ</mi><msub><mi>ϵ</mi><mn>0</mn></msub><mi mathvariant="bold-italic">𝑬</mi></mrow><annotation encoding="application/x-tex">\mathbf{D} = \epsilon \mathbf{E} = \kappa \epsilon_0 \mathbf{E}</annotation></semantics></math></td>
+<td style="text-align: left;">Связь между смещением и напряженностью в
+линейном диэлектрике.</td>
+</tr>
+<tr>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>F</mi><mi>x</mi></msub><mo>=</mo><mfrac><msup><mi>V</mi><mn>2</mn></msup><mn>2</mn></mfrac><mfrac><mrow><mi>d</mi><mi>C</mi></mrow><mrow><mi>d</mi><mi>x</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">F_x = \frac{V^2}{2} \frac{dC}{dx}</annotation></semantics></math></td>
+<td style="text-align: left;">Сила, действующая на диэлектрик,
+вычисленная через изменение емкости.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4-физический-смысл-иллюстраций">4. Физический смысл
+иллюстраций</h2>
+<ul>
+<li><strong>[SOURCE_IMAGE_1] (Фиг. 10.1):</strong> Демонстрирует
+поверхность Гаусса
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>S</mi><annotation encoding="application/x-tex">S</annotation></semantics></math>
+в конденсаторе. Видно, что внутри поверхности суммарный заряд меньше
+из-за появления
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>σ</mi><mrow><mi>p</mi><mi>o</mi><mi>l</mi></mrow></msub><annotation encoding="application/x-tex">\sigma_{pol}</annotation></semantics></math>,
+что объясняет уменьшение поля
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math>.</li>
+<li><strong>[SOURCE_IMAGE_2] и [SOURCE_IMAGE_3]:</strong> Сравнение
+проводника и модели диэлектрика. В проводнике поле полностью
+компенсируется до нуля. Диэлектрик же можно представить как совокупность
+мелких проводящих шариков, в каждом из которых индуцируется диполь.</li>
+<li><strong>[SOURCE_IMAGE_4] (Фиг. 10.4):</strong> Наглядная модель
+атомной поляризации — искажение электронной оболочки относительно ядра
+под действием поля.</li>
+<li><strong>[SOURCE_IMAGE_8] (Фиг. 10.8):</strong> Объясняет, почему
+нейтральные объекты притягиваются к заряженным телам (например, бумага к
+расческе). В неоднородном поле сила, действующая на ближний к заряду
+индуцированный полюс диполя, сильнее силы, действующей на дальний полюс.
+<strong>Вывод:</strong> диэлектрик всегда втягивается в область более
+сильного поля.</li>
+<li><strong>[SOURCE_IMAGE_9] (Фиг. 10.9):</strong> Иллюстрация силы,
+втягивающей диэлектрическую пластину в конденсатор. Расчет этой силы
+проще всего проводить через закон сохранения энергии и изменение емкости
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">C(x)</annotation></semantics></math>.</li>
+</ul>
+<hr />
+<h2 id="5-важные-цитаты-и-их-контекст">5. Важные цитаты и их
+контекст</h2>
+<blockquote>
+<p><em>«Следовательно, электрическое поле внутри конденсатора стало
+меньше, хотя заряды на пластинах и не изменились».</em>
+<strong>Контекст:</strong> Описание фундаментального экспериментального
+факта при введении диэлектрика в заряженный конденсатор.</p>
+</blockquote>
+<blockquote>
+<p><em>«Поляризационный заряд... не стечет по проволоке, которой
+разряжают конденсатор, а уйдет назад внутрь материала за счет релаксации
+поляризации».</em> <strong>Контекст:</strong> Разъяснение природы
+связанных зарядов в отличие от свободных зарядов в проводнике.</p>
+</blockquote>
+<blockquote>
+<p><em>«Уравнение такого типа
+[<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑫</mi><mo>=</mo><mi>ϵ</mi><mi mathvariant="bold-italic">𝑬</mi></mrow><annotation encoding="application/x-tex">\mathbf{D} = \epsilon \mathbf{E}</annotation></semantics></math>]
+есть нечто вроде приближенного уравнения типа закона Гука. Оно не может
+быть глубоким, фундаментальным уравнением».</em>
+<strong>Контекст:</strong> Предостережение о том, что линейная
+зависимость — это лишь приближение, которое нарушается в сильных или
+быстро меняющихся полях.</p>
+</blockquote>
+<hr />
+<h2 id="6-ключевые-выводы-actionable-insights">6. Ключевые выводы
+(Actionable Insights)</h2>
+<ol type="1">
+<li><strong>Эффект среды:</strong> Помещение любого диэлектрика в
+электрическое поле ослабляет это поле внутри материала в
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>κ</mi><annotation encoding="application/x-tex">\kappa</annotation></semantics></math>
+раз.</li>
+<li><strong>Универсальность емкости:</strong> Если всё пространство
+вокруг проводников любой формы заполнено однородным диэлектриком, их
+емкость всегда увеличивается ровно в
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>κ</mi><annotation encoding="application/x-tex">\kappa</annotation></semantics></math>
+раз.</li>
+<li><strong>Силы в жидкостях:</strong> В жидких диэлектриках силы между
+зарядами уменьшаются в
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>κ</mi><annotation encoding="application/x-tex">\kappa</annotation></semantics></math>
+раз (закон Кулона
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>=</mo><mfrac><mrow><msub><mi>q</mi><mn>1</mn></msub><msub><mi>q</mi><mn>2</mn></msub></mrow><mrow><mn>4</mn><mi>π</mi><msub><mi>ϵ</mi><mn>0</mn></msub><mi>κ</mi><msup><mi>r</mi><mn>2</mn></msup></mrow></mfrac></mrow><annotation encoding="application/x-tex">F = \frac{q_1 q_2}{4\pi \epsilon_0 \kappa r^2}</annotation></semantics></math>).
+Для твердых тел ситуация сложнее из-за возникающих механических
+напряжений.</li>
+<li><strong>Притяжение нейтральных тел:</strong> Нейтральный диэлектрик
+притягивается к заряженному телу только в <strong>неоднородном</strong>
+поле. В идеально однородном поле плоского конденсатора сила притяжения к
+пластинам действовать не будет.</li>
+<li><strong>Метод расчета сил:</strong> При расчете сил, действующих на
+диэлектрики (например, втягивание пластины в конденсатор), использование
+производной энергии по координате
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>F</mi><mi>x</mi></msub><mo>=</mo><mi>−</mi><mfrac><mrow><mi>d</mi><mi>U</mi></mrow><mrow><mi>d</mi><mi>x</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">F_x = -\frac{dU}{dx}</annotation></semantics></math>)
+гораздо эффективнее и проще, чем прямой учет неоднородностей поля на
+краях.</li>
+</ol>
+    </article>
+  </main>
+</body>
+</html>

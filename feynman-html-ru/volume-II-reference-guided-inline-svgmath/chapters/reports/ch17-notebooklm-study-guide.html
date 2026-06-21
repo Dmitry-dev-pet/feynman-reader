@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Глава 17. ЗАКОНЫ ИНДУКЦИИ: Учебное руководство - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch17.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1 id="глава-17-законы-индукции-учебное-руководство">Глава 17. ЗАКОНЫ
+ИНДУКЦИИ: Учебное руководство</h1>
+<p>Данное руководство составлено на основе материалов лекций Фейнмана
+(Глава 17, Том II) и охватывает фундаментальные принципы
+электромагнитной индукции, их математическое выражение и практическое
+применение.</p>
+<h2 id="i-ключевые-понятия-и-теоретические-основы">I. Ключевые понятия и
+теоретические основы</h2>
+<h3 id="1-правило-потока-и-два-его-аспекта">1. «Правило потока» и два
+его аспекта</h3>
+<p>Согласно «правилу потока», электродвижущая сила (э. д. с.),
+возникающая в проводящем контуре, равна скорости изменения магнитного
+потока через этот контур. Уникальность этого закона заключается в том,
+что он является совместным эффектом двух совершенно различных физических
+явлений:</p>
+<ul>
+<li><strong>Движение контура в постоянном поле:</strong> Э. д. с.
+возникает за счет магнитной силы
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝒗</mi><mo>×</mo><mi mathvariant="bold-italic">𝑩</mi></mrow><annotation encoding="application/x-tex">\mathbf{v} \times \mathbf{B}</annotation></semantics></math>),
+действующей на заряды в движущемся проводнике.</li>
+<li><strong>Изменение магнитного поля при неподвижном контуре:</strong>
+Э. д. с. порождается индуцированным электрическим полем
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>),
+которое возникает в пространстве, где меняется магнитное поле. Это
+описывается законом Фарадея в дифференциальной форме:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∇</mi><mo>×</mo><mi mathvariant="bold-italic">𝑬</mi><mo>=</mo><mi>−</mi><mfrac><mrow><mi>∂</mi><mi mathvariant="bold-italic">𝑩</mi></mrow><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t}</annotation></semantics></math></li>
+</ul>
+<h3 id="2-исключения-из-правила-потока">2. Исключения из «правила
+потока»</h3>
+<p>Правило потока неприменимо в случаях, когда меняется сам материал или
+форма контура (путь протекания тока), а не просто его положение.</p>
+<ul>
+<li><strong>Диск Фарадея (Фиг. 17.2):</strong> При вращении проводящего
+диска в магнитном поле поток через контур не меняется, однако за счет
+силы
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝒗</mi><mo>×</mo><mi mathvariant="bold-italic">𝑩</mi></mrow><annotation encoding="application/x-tex">\mathbf{v} \times \mathbf{B}</annotation></semantics></math>
+в диске возникает э. д. с.</li>
+<li><strong>Качающиеся пластины (Фиг. 17.3):</strong> Магнитный поток
+через воображаемую цепь внутри пластин меняется значительно, но из-за
+малости
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝒗</mi><mo>×</mo><mi mathvariant="bold-italic">𝑩</mi></mrow><annotation encoding="application/x-tex">\mathbf{v} \times \mathbf{B}</annotation></semantics></math>
+э. д. с. практически отсутствует.</li>
+</ul>
+<h3 id="3-ускорение-частиц-бетатрон">3. Ускорение частиц (Бетатрон)</h3>
+<p>Индуцированное электрическое поле может существовать в пустом
+пространстве без проводов. На этом основан принцип работы
+<strong>бетатрона</strong> — ускорителя электронов.</p>
+<ul>
+<li><strong>Условие работы бетатрона:</strong> Для удержания электрона
+на орбите постоянного радиуса среднее магнитное поле внутри орбиты
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><msub><mi>B</mi><mrow><mi>a</mi><mi>v</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\Delta B_{av}</annotation></semantics></math>)
+должно расти в два раза быстрее, чем магнитное поле на самой орбите
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><msub><mi>B</mi><mrow><mi>o</mi><mi>r</mi><mi>b</mi><mi>i</mi><mi>t</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\Delta B_{orbit}</annotation></semantics></math>):
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><msub><mi>B</mi><mrow><mi>a</mi><mi>v</mi></mrow></msub><mo>=</mo><mn>2</mn><mi mathvariant="normal">Δ</mi><msub><mi>B</mi><mrow><mi>o</mi><mi>r</mi><mi>b</mi><mi>i</mi><mi>t</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\Delta B_{av} = 2 \Delta B_{orbit}</annotation></semantics></math></li>
+</ul>
+<h3 id="4-генератор-переменного-тока">4. Генератор переменного тока</h3>
+<p>Устройство состоит из катушки площадью
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>S</mi><annotation encoding="application/x-tex">S</annotation></semantics></math>
+с числом витков
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>N</mi><annotation encoding="application/x-tex">N</annotation></semantics></math>,
+вращающейся в однородном поле
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+с угловой скоростью
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ω</mi><annotation encoding="application/x-tex">\omega</annotation></semantics></math>.</p>
+<ul>
+<li><strong>Формула э. д. с.:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">ℰ</mi><mo>=</mo><mi>N</mi><mi>B</mi><mi>S</mi><mi>ω</mi><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>ω</mi><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mathcal{E} = NBS\omega \sin(\omega t)</annotation></semantics></math>.</li>
+<li><strong>Энергетический баланс:</strong> Механическая работа,
+затрачиваемая на вращение катушки против магнитных сил, в точности равна
+вырабатываемой электрической энергии
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Power</mtext><mo>=</mo><mi mathvariant="script">ℰ</mi><mi>I</mi></mrow><annotation encoding="application/x-tex">\text{Power} = \mathcal{E}I</annotation></semantics></math>).</li>
+</ul>
+<h3 id="5-индуктивность-и-энергия">5. Индуктивность и энергия</h3>
+<ul>
+<li><strong>Взаимная индукция:</strong> Э. д. с. в одной катушке
+пропорциональна скорости изменения тока в другой:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="script">ℰ</mi><mn>2</mn></msub><mo>=</mo><msub><mi>M</mi><mn>21</mn></msub><mfrac><mrow><mi>d</mi><msub><mi>I</mi><mn>1</mn></msub></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\mathcal{E}_2 = M_{21} \frac{dI_1}{dt}</annotation></semantics></math>.
+Коэффициенты взаимной индукции всегда равны:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>M</mi><mn>12</mn></msub><mo>=</mo><msub><mi>M</mi><mn>21</mn></msub><mo>=</mo><mi>M</mi></mrow><annotation encoding="application/x-tex">M_{12} = M_{21} = M</annotation></semantics></math>.</li>
+<li><strong>Самоиндукция:</strong> Возникновение «обратной э. д. с.» в
+катушке при изменении тока в ней самой:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">ℰ</mi><mo>=</mo><mi>−</mi><mi>L</mi><mfrac><mrow><mi>d</mi><mi>I</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\mathcal{E} = -L \frac{dI}{dt}</annotation></semantics></math>.</li>
+<li><strong>Магнитная энергия:</strong> Энергия, запасенная в
+индуктивности, равна
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>L</mi><msup><mi>I</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">U = \frac{1}{2} L I^2</annotation></semantics></math>.
+В общем виде энергия магнитного поля выражается через интеграл от
+квадрата индукции:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>=</mo><mfrac><mrow><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup></mrow><mn>2</mn></mfrac><mo>∫</mo><msup><mi>B</mi><mn>2</mn></msup><mi>d</mi><mi>V</mi></mrow><annotation encoding="application/x-tex">U = \frac{\epsilon_0 c^2}{2} \int B^2 dV</annotation></semantics></math></li>
+</ul>
+<hr />
+<h2 id="ii-проверочные-вопросы-краткие-ответы">II. Проверочные вопросы
+(краткие ответы)</h2>
+<ol type="1">
+<li><strong>Какие две разные силы могут давать вклад в э. д. с. согласно
+главе?</strong>
+<ul>
+<li><em>Ответ:</em> Сила Лоренца
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi><mo stretchy="false" form="prefix">(</mo><mi mathvariant="bold-italic">𝒗</mi><mo>×</mo><mi mathvariant="bold-italic">𝑩</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">q(\mathbf{v} \times \mathbf{B})</annotation></semantics></math>)
+при движении проводника и индуцированное электрическое поле
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>),
+возникающее при изменении магнитного поля во времени.</li>
+</ul></li>
+<li><strong>Почему правило потока не работает для вращающегося медного
+диска в постоянном поле?</strong>
+<ul>
+<li><em>Ответ:</em> Потому что поток через геометрический контур
+остается неизменным, но в движущемся материале диска действует магнитная
+сила, порождающая ток.</li>
+</ul></li>
+<li><strong>Какое соотношение полей необходимо для работы
+бетатрона?</strong>
+<ul>
+<li><em>Ответ:</em> Изменение среднего поля внутри орбиты должно быть в
+два раза больше изменения поля на самой орбите.</li>
+</ul></li>
+<li><strong>Как связаны коэффициенты взаимной индукции двух катушек
+разной формы?</strong>
+<ul>
+<li><em>Ответ:</em> Они всегда идентичны
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>M</mi><mn>12</mn></msub><mo>=</mo><msub><mi>M</mi><mn>21</mn></msub></mrow><annotation encoding="application/x-tex">M_{12} = M_{21}</annotation></semantics></math>)
+и зависят только от геометрии систем.</li>
+</ul></li>
+<li><strong>Что такое коэффициент связи
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math>
+и в каких пределах он находится?</strong>
+<ul>
+<li><em>Ответ:</em> Это величина, определяющая степень взаимного
+проникновения магнитных потоков катушек.
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>=</mo><mi>M</mi><mi>/</mi><msqrt><mrow><msub><mi>L</mi><mn>1</mn></msub><msub><mi>L</mi><mn>2</mn></msub></mrow></msqrt></mrow><annotation encoding="application/x-tex">k = M / \sqrt{L_1 L_2}</annotation></semantics></math>,
+и по модулю он всегда меньше или равен 1.</li>
+</ul></li>
+</ol>
+<hr />
+<h2 id="iii-механическая-аналогия-таблица">III. Механическая аналогия
+(Таблица)</h2>
+<p>В главе проводится глубокая аналогия между электрической цепью с
+индуктивностью и механической системой Ньютона.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Механическая система (частица)</th>
+<th style="text-align: left;">Электрическая система (катушка)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Сила
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>F</mi><annotation encoding="application/x-tex">F</annotation></semantics></math>)</td>
+<td style="text-align: left;">Разность потенциалов
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math>)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Скорость
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>v</mi><annotation encoding="application/x-tex">v</annotation></semantics></math>)</td>
+<td style="text-align: left;">Ток
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>I</mi><annotation encoding="application/x-tex">I</annotation></semantics></math>)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Масса
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math>)</td>
+<td style="text-align: left;">Индуктивность
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>L</mi><annotation encoding="application/x-tex">L</annotation></semantics></math>)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Импульс
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mi>v</mi></mrow><annotation encoding="application/x-tex">mv</annotation></semantics></math>)</td>
+<td style="text-align: left;">Величина
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mi>I</mi></mrow><annotation encoding="application/x-tex">LI</annotation></semantics></math>)</td>
+</tr>
+<tr>
+<td style="text-align: left;">Кинетическая энергия
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>m</mi><msup><mi>v</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\frac{1}{2}mv^2</annotation></semantics></math>)</td>
+<td style="text-align: left;">Магнитная энергия
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>L</mi><msup><mi>I</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\frac{1}{2}LI^2</annotation></semantics></math>)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="iv-типичные-ошибки-при-изучении-темы">IV. Типичные ошибки при
+изучении темы</h2>
+<ul>
+<li><strong>Смешение причин индукции:</strong> Ошибка заключается в
+попытке объяснить возникновение э. д. с. в неподвижном контуре только
+через силу Лоренца
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝒗</mi><mo>×</mo><mi mathvariant="bold-italic">𝑩</mi></mrow><annotation encoding="application/x-tex">\mathbf{v} \times \mathbf{B}</annotation></semantics></math>.
+В этом случае работает исключительно поле
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>.</li>
+<li><strong>Некорректное применение правила потока:</strong> Применение
+правила к ситуациям, где происходит изменение «контакта» или материала
+контура (как в примере с пластинами на Фиг. 17.3), ведет к неверным
+выводам. В таких случаях нужно возвращаться к фундаментальным законам
+(силе Лоренца и уравнениям Максвелла).</li>
+<li><strong>Расчет самоиндукции как контурного интеграла:</strong>
+Попытка рассчитать
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>L</mi><annotation encoding="application/x-tex">L</annotation></semantics></math>
+через двойной линейный интеграл (как для взаимной индукции) приводит к
+бесконечности. Для корректного расчета
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>L</mi><annotation encoding="application/x-tex">L</annotation></semantics></math>
+необходимо учитывать распределение токов внутри объема проводника и
+использовать энергетический метод.</li>
+</ul>
+<hr />
+<h2 id="v-вопросы-для-углубленного-изучения-эссе">V. Вопросы для
+углубленного изучения (эссе)</h2>
+<ol type="1">
+<li><strong>Физический смысл парадокса диска с заряженными
+шариками:</strong> Опишите ситуацию с пластмассовым диском (Фиг. 17.5).
+Как закон сохранения момента количества движения согласуется с
+возникновением индуцированного электрического поля при выключении тока в
+соленоиде?</li>
+<li><strong>Энергия магнитного поля:</strong> Проанализируйте переход от
+формулы энергии через токи
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>L</mi><msup><mi>I</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\frac{1}{2} LI^2</annotation></semantics></math>)
+к формуле через объемный интеграл поля
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>B</mi><mn>2</mn></msup><annotation encoding="application/x-tex">B^2</annotation></semantics></math>.
+Почему вторая форма считается более фундаментальной для динамических
+полей?</li>
+<li><strong>Ограничения бетатрона:</strong> Почему бетатрон становится
+неэффективным при энергиях электронов выше нескольких сотен миллионов
+электронвольт? Рассмотрите роль синхротронного излучения.</li>
+</ol>
+<hr />
+<h2 id="vi-краткий-глоссарий">VI. Краткий глоссарий</h2>
+<ul>
+<li><strong>Векторный потенциал
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>):</strong>
+Поле, через которое можно выразить магнитную индукцию
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑩</mi><mo>=</mo><mi>∇</mi><mo>×</mo><mi mathvariant="bold-italic">𝑨</mi></mrow><annotation encoding="application/x-tex">\mathbf{B} = \nabla \times \mathbf{A}</annotation></semantics></math>).
+Позволяет свести расчет потока к линейному интегралу.</li>
+<li><strong>Вихревые токи:</strong> Индуцированные токи, возникающие в
+объеме массивных проводников при их движении в магнитном поле или
+воздействии переменного поля.</li>
+<li><strong>Обратная э. д. с.:</strong> Электродвижущая сила
+самоиндукции, которая всегда направлена так, чтобы противодействовать
+изменению тока в цепи.</li>
+<li><strong>Синхротрон:</strong> Тип ускорителя, приходящий на смену
+бетатрону при сверхвысоких энергиях, где учитываются потери на
+излучение.</li>
+<li><strong>Электродвижущая сила (э. д. с.):</strong> Работа сторонних
+сил по перемещению единичного заряда вдоль замкнутого контура.</li>
+</ul>
+    </article>
+  </main>
+</body>
+</html>

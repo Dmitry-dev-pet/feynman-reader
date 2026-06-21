@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Глава 39. Упругие материалы: Аналитический отчет - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch39.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1 id="глава-39-упругие-материалы-аналитический-отчет">Глава 39.
+Упругие материалы: Аналитический отчет</h1>
+<p>Этот отчет представляет собой глубокий анализ Главы 39 «Фейнмановских
+лекций по физике», посвященной математическому описанию и физической
+природе упругости в твердых телах. В документе рассматриваются механизмы
+деформации, тензорный аппарат, динамика упругих сред и микроскопические
+основы упругих постоянных.</p>
+<h2 id="1-исполнительное-резюме-executive-summary">1. Исполнительное
+резюме (Executive Summary)</h2>
+<p>Основная цель данной главы — переход от простых случаев деформации
+(растяжение стержня, скручивание) к общему описанию поведения упругих
+тел произвольной формы под воздействием сложных сил. Ключевым
+инструментом этого описания является введение <strong>тензора
+деформации</strong> и <strong>тензора упругости</strong>.</p>
+<p>Анализ охватывает:</p>
+<ul>
+<li>Математическое разделение чистой деформации и вращения.</li>
+<li>Связь между напряжениями и деформациями через обобщенный закон
+Гука.</li>
+<li>Влияние симметрии кристаллов на количество независимых упругих
+постоянных.</li>
+<li>Распространение продольных и поперечных волн в изотропных
+средах.</li>
+<li>Вычисление макроскопических свойств материала на основе межатомных
+сил.</li>
+</ul>
+<h2 id="2-анализ-ключевых-тем">2. Анализ ключевых тем</h2>
+<h3 id="21-описание-локальной-деформации-тензор-деформации">2.1.
+Описание локальной деформации: Тензор деформации</h3>
+<p>Для описания того, что происходит внутри «куска желе»,
+деформированного сложным образом, вводится вектор перемещения <span
+class="math inline">$\FLPu$</span>, который является функцией начального
+положения точки <span class="math inline">$\FLPr$</span>.</p>
+<ul>
+<li><strong>Однородная деформация:</strong> Перемещение пропорционально
+координате (например,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>u</mi><mi>x</mi></msub><mo>=</mo><msub><mi>e</mi><mrow><mi>x</mi><mi>x</mi></mrow></msub><mi>x</mi></mrow><annotation encoding="application/x-tex">u_x = e_{xx}x</annotation></semantics></math>).</li>
+<li><strong>Тензор деформации
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>e</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><annotation encoding="application/x-tex">e_{ij}</annotation></semantics></math>):</strong>
+Чтобы исключить из описания чистое вращение тела (при котором взаимное
+расположение атомов не меняется), тензор деформации определяется как
+симметричная комбинация производных перемещения:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>e</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>=</mo><mstyle displaystyle="false"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mi>∂</mi><msub><mi>u</mi><mi>j</mi></msub></mrow><mrow><mi>∂</mi><msub><mi>x</mi><mi>i</mi></msub></mrow></mfrac><mo>+</mo><mfrac><mrow><mi>∂</mi><msub><mi>u</mi><mi>i</mi></msub></mrow><mrow><mi>∂</mi><msub><mi>x</mi><mi>j</mi></msub></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">e_{ij} = \tfrac{1}{2}\left(\frac{\partial u_j}{\partial x_i} + \frac{\partial u_i}{\partial x_j}\right)</annotation></semantics></math></li>
+<li><strong>Вращение:</strong> Описывается антисимметричным тензором
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ω</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><annotation encoding="application/x-tex">\omega_{ij}</annotation></semantics></math>.
+Для малых возмущений общее изменение перемещения есть сумма деформации и
+поворота.</li>
+</ul>
+<h3 id="22-обобщенный-закон-гука-и-тензор-упругости">2.2. Обобщенный
+закон Гука и тензор упругости</h3>
+<p>Связь между тензором напряжений
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><annotation encoding="application/x-tex">S_{ij}</annotation></semantics></math>)
+и тензором деформации
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>e</mi><mrow><mi>k</mi><mi>l</mi></mrow></msub><annotation encoding="application/x-tex">e_{kl}</annotation></semantics></math>)
+линейна для малых возмущений:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>=</mo><munder><mo>∑</mo><mrow><mi>k</mi><mo>,</mo><mi>l</mi></mrow></munder><msub><mi>C</mi><mrow><mi>i</mi><mi>j</mi><mi>k</mi><mi>l</mi></mrow></msub><msub><mi>e</mi><mrow><mi>k</mi><mi>l</mi></mrow></msub></mrow><annotation encoding="application/x-tex">S_{ij} = \sum_{k,l} C_{ijkl} e_{kl}</annotation></semantics></math>
+Коэффициенты
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>C</mi><mrow><mi>i</mi><mi>j</mi><mi>k</mi><mi>l</mi></mrow></msub><annotation encoding="application/x-tex">C_{ijkl}</annotation></semantics></math>
+образуют <strong>тензор упругости четвертого ранга</strong>. Хотя
+теоретически он содержит 81 компоненту, симметрия напряжений и
+деформаций сокращает это число до 36, а симметрия материала — еще
+существеннее.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Тип материала</th>
+<th style="text-align: center;">Количество независимых констант</th>
+<th style="text-align: left;">Ключевые параметры</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Кубический кристалл</strong></td>
+<td style="text-align: center;">3</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>C</mi><mrow><mi>x</mi><mi>x</mi><mi>x</mi><mi>x</mi></mrow></msub><mo>,</mo><msub><mi>C</mi><mrow><mi>x</mi><mi>x</mi><mi>y</mi><mi>y</mi></mrow></msub><mo>,</mo><msub><mi>C</mi><mrow><mi>x</mi><mi>y</mi><mi>x</mi><mi>y</mi></mrow></msub></mrow><annotation encoding="application/x-tex">C_{xxxx}, C_{xxyy}, C_{xyxy}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Изотропный материал</strong></td>
+<td style="text-align: center;">2</td>
+<td style="text-align: left;">Постоянные Лямэ
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi><mo>,</mo><mi>μ</mi></mrow><annotation encoding="application/x-tex">\lambda, \mu</annotation></semantics></math>),
+модуль Юнга
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Y</mi><annotation encoding="application/x-tex">Y</annotation></semantics></math>),
+коэффициент Пуассона
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>σ</mi><annotation encoding="application/x-tex">\sigma</annotation></semantics></math>)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="23-динамика-и-волновые-процессы">2.3. Динамика и волновые
+процессы</h3>
+<p>Уравнения движения в упругой среде связывают ускорение материала с
+дивергенцией тензора напряжений. Для изотропного материала векторное
+уравнение имеет вид: <span class="math display">$$\rho \frac{\partial^2
+\FLPu}{\partial t^2} = (\lambda + \mu) \nabla (\nabla \cdot \FLPu) + \mu
+\nabla^2 \FLPu$$</span></p>
+<p>Это уравнение предсказывает существование двух типов волн:</p>
+<ol type="1">
+<li><strong>Продольные волны (сжатия):</strong> Скорость
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>C</mi><mrow><mi>l</mi><mi>o</mi><mi>n</mi><mi>g</mi></mrow></msub><mo>=</mo><msqrt><mrow><mo stretchy="false" form="prefix">(</mo><mi>λ</mi><mo>+</mo><mn>2</mn><mi>μ</mi><mo stretchy="false" form="postfix">)</mo><mi>/</mi><mi>ρ</mi></mrow></msqrt></mrow><annotation encoding="application/x-tex">C_{long} = \sqrt{(\lambda + 2\mu)/\rho}</annotation></semantics></math>.
+Ротор перемещения равен нулю.</li>
+<li><strong>Поперечные волны (сдвига):</strong> Скорость
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>C</mi><mrow><mi>s</mi><mi>h</mi><mi>e</mi><mi>a</mi><mi>r</mi></mrow></msub><mo>=</mo><msqrt><mrow><mi>μ</mi><mi>/</mi><mi>ρ</mi></mrow></msqrt></mrow><annotation encoding="application/x-tex">C_{shear} = \sqrt{\mu/\rho}</annotation></semantics></math>.
+Дивергенция перемещения равна нулю (плотность не меняется).</li>
+</ol>
+<h3 id="24-микроскопическая-теория">2.4. Микроскопическая теория</h3>
+<p>Упругость макроскопического тела определяется потенциальной энергией
+взаимодействия атомов. В модели простого кубического кристалла (типа
+NaCl):</p>
+<ul>
+<li>Атомы связаны «пружинками» с жесткостью
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>k</mi><mn>1</mn></msub><annotation encoding="application/x-tex">k_1</annotation></semantics></math>
+(ближайшие соседи) и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>k</mi><mn>2</mn></msub><annotation encoding="application/x-tex">k_2</annotation></semantics></math>
+(следующие за ними).</li>
+<li>Если силы центральные (действуют строго по линии связи), то для
+кубического кристалла выполняется соотношение
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>C</mi><mrow><mi>x</mi><mi>x</mi><mi>y</mi><mi>y</mi></mrow></msub><mo>=</mo><msub><mi>C</mi><mrow><mi>x</mi><mi>y</mi><mi>x</mi><mi>y</mi></mrow></msub></mrow><annotation encoding="application/x-tex">C_{xxyy} = C_{xyxy}</annotation></semantics></math>.</li>
+<li>Экспериментальные данные подтверждают это для ионных кристаллов
+(NaCl, LiF), но не для металлов или алмаза, где силы имеют направленный
+(ковалентный) характер.</li>
+</ul>
+<hr />
+<h2 id="3-основные-формулы-и-физический-смысл">3. Основные формулы и
+физический смысл</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Формула</th>
+<th style="text-align: left;">Физический смысл</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>w</mi><mo>=</mo><mstyle displaystyle="false"><mfrac><mn>1</mn><mn>2</mn></mfrac></mstyle><mo>∑</mo><msub><mi>C</mi><mrow><mi>i</mi><mi>j</mi><mi>k</mi><mi>l</mi></mrow></msub><msub><mi>e</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><msub><mi>e</mi><mrow><mi>k</mi><mi>l</mi></mrow></msub></mrow><annotation encoding="application/x-tex">w = \tfrac{1}{2}\sum C_{ijkl}e_{ij}e_{kl}</annotation></semantics></math></td>
+<td style="text-align: left;"><strong>Плотность энергии:</strong>
+Работа, затраченная на деформацию единицы объема. В равновесии эта
+энергия минимальна.</td>
+</tr>
+<tr>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>=</mo><mn>2</mn><mi>μ</mi><msub><mi>e</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>+</mo><mi>λ</mi><mo stretchy="false" form="prefix">(</mo><mo>∑</mo><msub><mi>e</mi><mrow><mi>k</mi><mi>k</mi></mrow></msub><mo stretchy="false" form="postfix">)</mo><msub><mi>δ</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub></mrow><annotation encoding="application/x-tex">S_{ij} = 2\mu e_{ij} + \lambda(\sum e_{kk})\delta_{ij}</annotation></semantics></math></td>
+<td style="text-align: left;"><strong>Закон Гука для изотропного
+тела:</strong> Описывает связь напряжений и деформаций через две
+константы.</td>
+</tr>
+<tr>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>C</mi><mrow><mi>x</mi><mi>x</mi><mi>x</mi><mi>x</mi></mrow></msub><mo>=</mo><msub><mi>C</mi><mrow><mi>x</mi><mi>x</mi><mi>y</mi><mi>y</mi></mrow></msub><mo>+</mo><mn>2</mn><msub><mi>C</mi><mrow><mi>x</mi><mi>y</mi><mi>x</mi><mi>y</mi></mrow></msub></mrow><annotation encoding="application/x-tex">C_{xxxx} = C_{xxyy} + 2C_{xyxy}</annotation></semantics></math></td>
+<td style="text-align: left;"><strong>Условие изотропности:</strong>
+Связь между компонентами тензора упругости для некристаллических
+тел.</td>
+</tr>
+<tr>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mi>i</mi></msub><mo>=</mo><msub><mo>∑</mo><mi>j</mi></msub><mfrac><mrow><mi>∂</mi><msub><mi>S</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub></mrow><mrow><mi>∂</mi><msub><mi>x</mi><mi>j</mi></msub></mrow></mfrac></mrow><annotation encoding="application/x-tex">f_i = \sum_j \frac{\partial S_{ij}}{\partial x_j}</annotation></semantics></math></td>
+<td style="text-align: left;"><strong>Плотность силы:</strong> Связывает
+внутренние напряжения с силой, действующей на объем. Аналог теоремы
+Гаусса.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4-визуальный-анализ-и-важные-иллюстрации">4. Визуальный анализ и
+важные иллюстрации</h2>
+<p>В контексте главы представлены ключевые визуальные доказательства
+физических принципов:</p>
+<ol type="1">
+<li><strong>Тензор деформации (Фиг. 39.1–39.4):</strong> Иллюстрируют
+различие между растяжением (изменение длины), сдвигом (изменение формы)
+и поворотом (сохранение формы и размера). <strong>Фиг. 39.4</strong>
+критически важна: она показывает, что изменение координат может не
+приводить к деформации, если это чистый поворот.</li>
+<li><strong>Поляризационный метод (Фиг. 39.6–39.7):</strong>
+Демонстрируют использование двойного лучепреломления для визуализации
+напряжений в сложных объектах (например, в деталях машин). Оптические
+картины позволяют находить концентраторы напряжений.</li>
+<li><strong>Разрушение мела (Фиг. 39.9):</strong> Наглядный пример
+неупругого поведения. Мел ломается перпендикулярно при растяжении, но
+под углом 45° при скручивании. Это объясняется тем, что сдвиг
+эквивалентен комбинации растяжения и сжатия под углом 45°, а мел крайне
+слаб на разрыв.</li>
+<li><strong>Атомная модель (Фиг. 39.10–39.11):</strong> Показывает
+переход от межатомных сил («пружинок») к макроскопическим
+константам.</li>
+</ol>
+<hr />
+<h2 id="5-важные-цитаты">5. Важные цитаты</h2>
+<blockquote>
+<p><em>«Нужно как-то устроить так, чтобы чистое вращение не входило в
+наше определение деформации сдвига».</em> — Обоснование необходимости
+использования симметричного тензора
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>e</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><annotation encoding="application/x-tex">e_{ij}</annotation></semantics></math>.</p>
+</blockquote>
+<blockquote>
+<p><em>«В теории упругости нам приходится заниматься объектами гораздо
+более сложной формы, например крюком подъемного крана... Такие задачи
+иногда можно решить... измеряя внутренние напряжения экспериментально с
+помощью поляризованного света».</em> — О практической сложности
+аналитических решений.</p>
+</blockquote>
+<blockquote>
+<p><em>«Наиболее удивительно все же не нарушение закона Гука при больших
+деформациях, а его универсальность».</em> — Комментарий к тому, что
+любое разложение энергии в ряд Тейлора начинается с квадратичного члена
+(что дает линейную силу).</p>
+</blockquote>
+<hr />
+<h2 id="6-действенные-выводы-actionable-insights">6. Действенные выводы
+(Actionable Insights)</h2>
+<ul>
+<li><strong>Принцип минимизации:</strong> Проблема определения
+деформаций в теле любой формы сводится к нахождению таких перемещений
+<span class="math inline">$\FLPu$</span>, при которых полная
+потенциальная энергия
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>W</mi><annotation encoding="application/x-tex">W</annotation></semantics></math>
+минимальна.</li>
+<li><strong>Идентификация материалов:</strong> Сравнение компонент
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>C</mi><mrow><mi>x</mi><mi>x</mi><mi>y</mi><mi>y</mi></mrow></msub><annotation encoding="application/x-tex">C_{xxyy}</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>C</mi><mrow><mi>x</mi><mi>y</mi><mi>x</mi><mi>y</mi></mrow></msub><annotation encoding="application/x-tex">C_{xyxy}</annotation></semantics></math>
+позволяет судить о характере межатомных сил. Их равенство указывает на
+центральные силы (ионные связи), а значительное различие — на
+направленные ковалентные связи или электронные эффекты в металлах.</li>
+<li><strong>Метод моделей:</strong> Для анализа напряжений в деталях
+сложной геометрии (где уравнения Navier-Cauchy не решаются аналитически)
+эффективно использование прозрачных пластмассовых моделей и
+поляризованного света.</li>
+<li><strong>Вязкоупругость:</strong> Медленное возвращение материала
+(как Saran wrap) к исходной форме объясняется конкуренцией механизмов
+«памяти» молекулярных цепей и сопротивления вязкой среды. Нагрев
+ускоряет восстановление, снижая вязкость.</li>
+</ul>
+    </article>
+  </main>
+</body>
+</html>

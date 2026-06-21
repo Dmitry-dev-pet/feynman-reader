@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Решения уравнений Максвелла с токами и зарядами: Аналитический отчет - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch21.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1
+id="решения-уравнений-максвелла-с-токами-и-зарядами-аналитический-отчет">Решения
+уравнений Максвелла с токами и зарядами: Аналитический отчет</h1>
+<p>Этот отчет представляет собой глубокий анализ главы 21 «Фейнмановских
+лекций по физике» (том II), посвященной математическим и физическим
+решениям уравнений Максвелла при наличии источников (токов и зарядов).
+Документ исследует механизмы возникновения электромагнитных волн,
+природу запаздывающих потенциалов и фундаментальную связь между
+электродинамикой и теорией относительности.</p>
+<h2 id="1-резюме-executive-summary">1. Резюме (Executive Summary)</h2>
+<p>Основная цель рассматриваемого материала — установление прямой связи
+между уравнениями Максвелла и наблюдаемыми явлениями света и
+электромагнитного излучения. Ключевым выводом является то, что
+электрические и магнитные поля в заданной точке пространства
+определяются не мгновенным положением зарядов, а их состоянием в
+«запаздывающий» момент времени.</p>
+<p>Анализ переходит от простых сферических волн к общим решениям в виде
+потенциалов Льенара — Вихерта. Важнейшим концептуальным достижением
+главы является демонстрация того, что уравнения Максвелла естественным
+образом содержат в себе преобразования Лоренца, что делает
+электродинамику изначально релятивистской теорией, не требующей
+корректировок в рамках специальной теории относительности.</p>
+<hr />
+<h2 id="2-ключевые-темы-и-физический-анализ">2. Ключевые темы и
+физический анализ</h2>
+<h3 id="21-концепция-запаздывания-и-природа-электромагнитного-поля">2.1.
+Концепция запаздывания и природа электромагнитного поля</h3>
+<p>Электрическое поле в точке (1) в момент времени
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math>
+зависит исключительно от положения и движения заряда в более ранний
+момент
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo>−</mo><msup><mi>r</mi><mo>′</mo></msup><mi>/</mi><mi>c</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(t - r&#39;/c)</annotation></semantics></math>.
+Это время необходимо свету, чтобы пройти расстояние
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>r</mi><mo>′</mo></msup><annotation encoding="application/x-tex">r&#39;</annotation></semantics></math>
+от источника до точки наблюдения.</p>
+<p><strong>Основные компоненты уравнения поля (21.1):</strong></p>
+<ol type="1">
+<li><strong>Запаздывающее кулоново поле:</strong> Описывает поле, как
+если бы заряд оставался в своей запаздывающей позиции.</li>
+<li><strong>Поправочное слагаемое:</strong> Учитывает скорость изменения
+запаздывающего кулонова поля, фактически экстраполируя его
+положение.</li>
+<li><strong>Радиационное слагаемое:</strong> Вторая производная
+единичного вектора
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="bold-italic">𝒆</mi><msup><mi>r</mi><mo>′</mo></msup></msub><annotation encoding="application/x-tex">\mathbf{e}_{r&#39;}</annotation></semantics></math>.
+Это слагаемое убывает как
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mi>r</mi></mrow><annotation encoding="application/x-tex">1/r</annotation></semantics></math>
+и доминирует на больших расстояниях, формируя световое излучение.</li>
+</ol>
+<h3 id="22-общее-решение-уравнений-максвелла">2.2. Общее решение
+уравнений Максвелла</h3>
+<p>Уравнения Максвелла сводятся к решению волновых уравнений для
+скалярного
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>)
+и векторного
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>)
+потенциалов:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Потенциал</th>
+<th style="text-align: left;">Уравнение (Источник)</th>
+<th style="text-align: left;">Решение (Интеграл)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Скалярный
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>)</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>∇</mi><mn>2</mn></msup><mi>ϕ</mi><mo>−</mo><mfrac><mn>1</mn><msup><mi>c</mi><mn>2</mn></msup></mfrac><mfrac><mrow><msup><mi>∂</mi><mn>2</mn></msup><mi>ϕ</mi></mrow><mrow><mi>∂</mi><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac><mo>=</mo><mi>−</mi><mfrac><mi>ρ</mi><msub><mi>ϵ</mi><mn>0</mn></msub></mfrac></mrow><annotation encoding="application/x-tex">\nabla^2\phi - \frac{1}{c^2}\frac{\partial^2\phi}{\partial t^2} = -\frac{\rho}{\epsilon_0}</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∫</mo><mfrac><mrow><mi>ρ</mi><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo>,</mo><mi>t</mi><mo>−</mo><msub><mi>r</mi><mn>12</mn></msub><mi>/</mi><mi>c</mi><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mn>4</mn><mi>π</mi><msub><mi>ϵ</mi><mn>0</mn></msub><msub><mi>r</mi><mn>12</mn></msub></mrow></mfrac><mi>d</mi><msub><mi>V</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">\int \frac{\rho(2, t - r_{12}/c)}{4\pi\epsilon_0 r_{12}} dV_2</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Векторный
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>)</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>∇</mi><mn>2</mn></msup><mi mathvariant="bold-italic">𝑨</mi><mo>−</mo><mfrac><mn>1</mn><msup><mi>c</mi><mn>2</mn></msup></mfrac><mfrac><mrow><msup><mi>∂</mi><mn>2</mn></msup><mi mathvariant="bold-italic">𝑨</mi></mrow><mrow><mi>∂</mi><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac><mo>=</mo><mi>−</mi><mfrac><mi mathvariant="bold-italic">𝒋</mi><mrow><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup></mrow></mfrac></mrow><annotation encoding="application/x-tex">\nabla^2\mathbf{A} - \frac{1}{c^2}\frac{\partial^2\mathbf{A}}{\partial t^2} = -\frac{\mathbf{j}}{\epsilon_0 c^2}</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∫</mo><mfrac><mrow><mi mathvariant="bold-italic">𝒋</mi><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo>,</mo><mi>t</mi><mo>−</mo><msub><mi>r</mi><mn>12</mn></msub><mi>/</mi><mi>c</mi><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mn>4</mn><mi>π</mi><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup><msub><mi>r</mi><mn>12</mn></msub></mrow></mfrac><mi>d</mi><msub><mi>V</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">\int \frac{\mathbf{j}(2, t - r_{12}/c)}{4\pi\epsilon_0 c^2 r_{12}} dV_2</annotation></semantics></math></td>
+</tr>
+</tbody>
+</table>
+<p>Это решение показывает, что потенциалы представляют собой
+суперпозицию сферических волн, испускаемых каждым элементом источника в
+соответствующий запаздывающий момент времени.</p>
+<h3 id="23-поля-колеблющегося-диполя">2.3. Поля колеблющегося
+диполя</h3>
+<p>На примере нерелятивистского диполя показано, как временные вариации
+источника превращаются в пространственные вариации (волны).</p>
+<ul>
+<li><strong>Ближняя зона:</strong> Поля практически совпадают со
+статическими (закон Био — Савара и закон Кулона). Запаздывание
+компенсируется поправочными членами.</li>
+<li><strong>Дальняя зона:</strong> Основной вклад вносит ускорение
+заряда
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi mathvariant="bold-italic">𝒑</mi><mo accent="true">̈</mo></mover><annotation encoding="application/x-tex">\ddot{\mathbf{p}}</annotation></semantics></math>).
+Поле излучения убывает медленно
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mi>r</mi></mrow><annotation encoding="application/x-tex">1/r</annotation></semantics></math>),
+что позволяет энергии распространяться на большие расстояния.</li>
+</ul>
+<h3 id="24-потенциалы-льенара--вихерта-для-движущегося-заряда">2.4.
+Потенциалы Льенара — Вихерта для движущегося заряда</h3>
+<p>Для заряда, движущегося с любой (включая релятивистскую) скоростью,
+простого интегрирования плотности заряда недостаточно. Возникает
+геометрический эффект: в то время как интеграл «проносится» над зарядом,
+сам заряд движется.</p>
+<p><strong>Правильное решение для точечного заряда:</strong>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ϕ</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><mi>q</mi><mrow><mn>4</mn><mi>π</mi><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>r</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">[</mo><mn>1</mn><mo>−</mo><msub><mi>v</mi><msup><mi>r</mi><mo>′</mo></msup></msub><mi>/</mi><mi>c</mi><mo stretchy="false" form="postfix">]</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">\phi(1,t) = \frac{q}{4\pi\epsilon_0 r&#39; [1 - v_{r&#39;}/c]}</annotation></semantics></math>
+где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>v</mi><msup><mi>r</mi><mo>′</mo></msup></msub><annotation encoding="application/x-tex">v_{r&#39;}</annotation></semantics></math>
+— компонента скорости заряда, направленная к точке наблюдения.
+Коэффициент
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><mn>1</mn><mo>−</mo><msub><mi>v</mi><msup><mi>r</mi><mo>′</mo></msup></msub><mi>/</mi><mi>c</mi><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">[1 - v_{r&#39;}/c]</annotation></semantics></math>
+является критической поправкой, возникающей из-за движения источника
+«вдогонку» или «от» испускаемого им сигнала (см. Фиг. 21.6).</p>
+<h3 id="25-электродинамика-и-преобразования-лоренца">2.5.
+Электродинамика и преобразования Лоренца</h3>
+<p>При расчете потенциалов заряда, движущегося с постоянной скоростью
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>v</mi><annotation encoding="application/x-tex">v</annotation></semantics></math>,
+уравнения Максвелла приводят к выражению:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ϕ</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo>,</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><mi>q</mi><mrow><mn>4</mn><mi>π</mi><msub><mi>ϵ</mi><mn>0</mn></msub><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mi>v</mi><mn>2</mn></msup><mi>/</mi><msup><mi>c</mi><mn>2</mn></msup></mrow></msqrt></mrow></mfrac><mfrac><mn>1</mn><msup><mrow><mo stretchy="true" form="prefix">[</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mi>x</mi><mo>−</mo><mi>v</mi><mi>t</mi></mrow><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mi>v</mi><mn>2</mn></msup><mi>/</mi><msup><mi>c</mi><mn>2</mn></msup></mrow></msqrt></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup><mo>+</mo><msup><mi>z</mi><mn>2</mn></msup><mo stretchy="true" form="postfix">]</mo></mrow><mrow><mn>1</mn><mi>/</mi><mn>2</mn></mrow></msup></mfrac></mrow><annotation encoding="application/x-tex">\phi(x,y,z,t) = \frac{q}{4\pi\epsilon_0 \sqrt{1-v^2/c^2}} \frac{1}{\left[ \left( \frac{x-vt}{\sqrt{1-v^2/c^2}} \right)^2 + y^2 + z^2 \right]^{1/2}}</annotation></semantics></math>
+Это выражение демонстрирует естественное появление множителей Лоренца.
+Таким образом, преобразования Лоренца — это не внешнее дополнение, а
+фундаментальное свойство уравнений Максвелла.</p>
+<hr />
+<h2 id="3-важные-цитаты-с-контекстом">3. Важные цитаты с контекстом</h2>
+<ul>
+<li><p><strong>О значимости теории:</strong></p>
+<blockquote>
+<p>«Перед нами сооружение, воздвигнутое Максвеллом, во всей его мощи и
+красоте. Это, пожалуй, одно из величайших свершений физики... Мы дошли
+до центра электромагнитной вселенной».</p>
+</blockquote>
+<ul>
+<li><em>Контекст:</em> Фейнман подводит итог после вывода общих решений
+(интегралов) для потенциалов, объединяя электричество, магнетизм и свет
+в одну систему.</li>
+</ul></li>
+<li><p><strong>О природе запаздывания:</strong></p>
+<blockquote>
+<p>«Законы электричества не утверждают, что все поля, оставаясь, как и
+были, статическими, начинают просто запаздывать... К "запаздывающему
+кулонову полю" надо добавить два других слагаемых».</p>
+</blockquote>
+<ul>
+<li><em>Контекст:</em> Объяснение того, почему формула (21.1) сложнее,
+чем простое смещение во времени закона Кулона.</li>
+</ul></li>
+<li><p><strong>О связи с относительностью:</strong></p>
+<blockquote>
+<p>«Теория относительности берет свое начало в теории электричества и
+магнетизма... Уравнения Максвелла действительно приводят к
+преобразованиям Лоренца».</p>
+</blockquote>
+<ul>
+<li><em>Контекст:</em> Обоснование того, что электродинамика не
+требовала пересмотра с приходом Эйнштейна, в отличие от механики
+Ньютона.</li>
+</ul></li>
+</ul>
+<hr />
+<h2 id="4-анализ-графического-материала">4. Анализ графического
+материала</h2>
+<p>Документ опирается на ряд ключевых визуализаций, поясняющих динамику
+полей:</p>
+<ul>
+<li><strong>Фиг. 21.1:</strong> Демонстрирует различие между
+«теперешним» положением заряда (2) и «запаздывающим» положением (2'),
+которое и определяет поле в точке наблюдения (1).</li>
+<li><strong>Фиг. 21.3:</strong> График сферической волны
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>A</mi><mi>z</mi></msub><annotation encoding="application/x-tex">A_z</annotation></semantics></math>
+от диполя. Показывает, как амплитуда ограничена огибающей
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mi>r</mi></mrow><annotation encoding="application/x-tex">1/r</annotation></semantics></math>,
+но крутизна наклонов (производные) определяет напряженность поля.</li>
+<li><strong>Фиг. 21.5 и 21.6:</strong> Визуализация процесса
+интегрирования по движущемуся «кубику» заряда. Объясняет, почему
+эффективный объем заряда при интегрировании увеличивается в
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mi>/</mi><mi>a</mi></mrow><annotation encoding="application/x-tex">b/a</annotation></semantics></math>
+раз из-за его движения в сторону точки наблюдения.</li>
+<li><strong>Фиг. 21.7:</strong> Геометрия для вывода потенциалов
+равномерно движущегося заряда, иллюстрирующая переход к релятивистским
+координатам.</li>
+</ul>
+<hr />
+<h2 id="5-практические-выводы-actionable-insights">5. Практические
+выводы (Actionable Insights)</h2>
+<ol type="1">
+<li><strong>Приоритет ускорения для связи:</strong> Для создания
+эффективных систем передачи энергии или информации (излучения)
+необходимо максимизировать вторую производную дипольного момента
+(ускорение заряда), так как именно она отвечает за член поля
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mi>r</mi></mrow><annotation encoding="application/x-tex">1/r</annotation></semantics></math>.</li>
+<li><strong>Учет релятивистских поправок в потенциалах:</strong> При
+анализе быстродвижущихся частиц (например, в ускорителях) необходимо
+использовать потенциалы Льенара — Вихерта, учитывая множитель
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><mn>1</mn><mo>−</mo><msub><mi>v</mi><mi>r</mi></msub><mi>/</mi><mi>c</mi><mo stretchy="false" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">[1 - v_r/c]</annotation></semantics></math>,
+который существенно меняет величину поля по сравнению с
+кулоновским.</li>
+<li><strong>Метод экстраполяции в ближней зоне:</strong> В инженерных
+задачах, где размеры системы много меньше длины волны, можно
+использовать упрощенные модели, так как эффекты запаздывания первого
+порядка в значительной степени компенсируются динамикой полей.</li>
+<li><strong>Единство поля:</strong> Разделение на скалярный и векторный
+потенциалы является удобным математическим приемом, но физически они
+представляют собой компоненты единого четырехвектора, преобразующегося
+согласно принципам относительности.</li>
+</ol>
+    </article>
+  </main>
+</body>
+</html>

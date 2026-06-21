@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Глава 19. ПРИНЦИП НАИМЕНЬШЕГО ДЕЙСТВИЯ - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch19.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1 id="глава-19-принцип-наименьшего-действия">Глава 19. ПРИНЦИП
+НАИМЕНЬШЕГО ДЕЙСТВИЯ</h1>
+<h2 id="исполнительное-резюме">Исполнительное резюме</h2>
+<p>Данный отчет представляет собой глубокий анализ Главы 19 из
+«Фейнмановских лекций по физике» (Том II), посвященной принципу
+наименьшего действия. Текст описывает фундаментальный способ
+формулировки законов природы, который является альтернативой
+дифференциальным законам Ньютона
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>=</mo><mi>m</mi><mi>a</mi></mrow><annotation encoding="application/x-tex">F=ma</annotation></semantics></math>).
+Вместо того чтобы рассматривать движение частицы как последовательность
+мгновенных реакций на силы, принцип наименьшего действия рассматривает
+всю траекторию целиком, утверждая, что природа «выбирает» путь,
+минимизирующий определенную физическую величину — действие.</p>
+<p>Документ охватывает математическое обоснование через вариационное
+исчисление, связь с квантовой механикой через фазовые амплитуды и
+практическое применение принципа в электростатике для расчета емкости
+конденсаторов.</p>
+<hr />
+<h2 id="1-концептуальный-анализ-что-такое-действие">1. Концептуальный
+анализ: Что такое действие?</h2>
+<h3 id="определение-и-физический-смысл">Определение и физический
+смысл</h3>
+<p>Принцип наименьшего действия гласит: для консервативной системы
+истинная траектория объекта между двумя точками в фиксированные моменты
+времени
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>t</mi><mn>1</mn></msub><annotation encoding="application/x-tex">t_1</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>t</mi><mn>2</mn></msub><annotation encoding="application/x-tex">t_2</annotation></semantics></math>)
+— это путь, для которого интеграл разности кинетической и потенциальной
+энергий является минимальным (точнее, экстремальным).</p>
+<p><strong>Действие
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>S</mi><annotation encoding="application/x-tex">S</annotation></semantics></math>)</strong>
+определяется формулой:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo>=</mo><msubsup><mo>∫</mo><msub><mi>t</mi><mn>1</mn></msub><msub><mi>t</mi><mn>2</mn></msub></msubsup><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">KE</mtext><mo>−</mo><mtext mathvariant="normal">PE</mtext><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mi>d</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">S = \int_{t_1}^{t_2} (\text{KE} - \text{PE}) \, dt</annotation></semantics></math>
+где:</p>
+<ul>
+<li><strong>KE (Кинетическая энергия):</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>m</mi><mo stretchy="false" form="prefix">(</mo><mfrac><mrow><mi>d</mi><mi>x</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\frac{1}{2}m(\frac{dx}{dt})^2</annotation></semantics></math></li>
+<li><strong>PE (Потенциальная энергия):</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">V(x)</annotation></semantics></math></li>
+</ul>
+<h3 id="математический-аппарат-вариационное-исчисление">Математический
+аппарат: Вариационное исчисление</h3>
+<p>В отличие от обычного исчисления, которое находит минимум функции
+переменной (например, точки на кривой температуры — [SOURCE_IMAGE_9]),
+вариационное исчисление ищет <strong>кривую</strong>, для которой
+числовое значение интеграла минимально.</p>
+<p><strong>Ключевое свойство минимума:</strong> Если мы отклоняемся от
+истинного пути
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><munder><mrow><mi>x</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><mo accent="true">_</mo></munder><annotation encoding="application/x-tex">\underline{x(t)}</annotation></semantics></math>
+на малую величину
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>η</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\eta(t)</annotation></semantics></math>,
+то изменение действия в первом порядке должно быть равно нулю
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>δ</mi><mi>S</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\delta S = 0</annotation></semantics></math>).
+Все изменения действия для близких путей пропорциональны только квадрату
+отклонения
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>η</mi><mn>2</mn></msup><annotation encoding="application/x-tex">\eta^2</annotation></semantics></math>).</p>
+<hr />
+<h2 id="2-математическое-доказательство-и-связь-с-законами-ньютона">2.
+Математическое доказательство и связь с законами Ньютона</h2>
+<p>Для доказательства того, что минимизация действия эквивалентна
+законам Ньютона, используется метод варьирования пути:</p>
+<ol type="1">
+<li><strong>Подстановка:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><munder><mrow><mi>x</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><mo accent="true">_</mo></munder><mo>+</mo><mi>η</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">x(t) = \underline{x(t)} + \eta(t)</annotation></semantics></math>,
+где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>η</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>t</mi><mn>1</mn></msub><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>η</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>t</mi><mn>2</mn></msub><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\eta(t_1) = \eta(t_2) = 0</annotation></semantics></math>
+(концы пути фиксированы — [SOURCE_IMAGE_10]).</li>
+<li><strong>Разложение в ряд Тейлора:</strong> Действие расписывается до
+членов первого порядка по
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>η</mi><annotation encoding="application/x-tex">\eta</annotation></semantics></math>.</li>
+<li><strong>Интегрирование по частям:</strong> Чтобы избавиться от
+производной
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>η</mi><mi>/</mi><mi>d</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">d\eta/dt</annotation></semantics></math>,
+применяется интегрирование по частям, что переносит дифференцирование на
+скорость частицы.</li>
+<li><strong>Результат:</strong> Вариация действия принимает вид:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>δ</mi><mi>S</mi><mo>=</mo><msubsup><mo>∫</mo><msub><mi>t</mi><mn>1</mn></msub><msub><mi>t</mi><mn>2</mn></msub></msubsup><mrow><mo stretchy="true" form="prefix">[</mo><mi>−</mi><mi>m</mi><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><munder><mi>x</mi><mo accent="true">_</mo></munder></mrow><mrow><mi>d</mi><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac><mo>−</mo><msup><mi>V</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">(</mo><munder><mi>x</mi><mo accent="true">_</mo></munder><mo stretchy="false" form="postfix">)</mo><mo stretchy="true" form="postfix">]</mo></mrow><mi>η</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mi>d</mi><mi>t</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\delta S = \int_{t_1}^{t_2} \left[ -m\frac{d^2\underline{x}}{dt^2} - V&#39;(\underline{x}) \right] \eta(t) \, dt = 0</annotation></semantics></math>
+Поскольку это должно быть верно для любого
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>η</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\eta(t)</annotation></semantics></math>,
+выражение в скобках должно быть равно нулю. Это и есть закон Ньютона:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mi>a</mi><mo>=</mo><mi>F</mi></mrow><annotation encoding="application/x-tex">ma = F</annotation></semantics></math>
+(где
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>=</mo><mi>−</mi><msup><mi>V</mi><mo>′</mo></msup></mrow><annotation encoding="application/x-tex">F = -V&#39;</annotation></semantics></math>).</li>
+</ol>
+<hr />
+<h2 id="3-обобщения-и-развитие-принципа">3. Обобщения и развитие
+принципа</h2>
+<p>Документ выделяет несколько уровней обобщения этого принципа:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Область применения</th>
+<th style="text-align: left;">Особенности</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Трехмерное
+пространство</strong></td>
+<td style="text-align: left;">Действие включает полную кинетическую
+энергию по всем осям
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi></mrow><annotation encoding="application/x-tex">x, y, z</annotation></semantics></math>);
+вариации проводятся по каждой координате отдельно.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Многие частицы</strong></td>
+<td style="text-align: left;">Суммируются кинетические энергии всех
+частиц и учитывается их взаимная потенциальная энергия.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Релятивизм</strong></td>
+<td style="text-align: left;">Формула действия меняется:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo>=</mo><mi>−</mi><msub><mi>m</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup><mo>∫</mo><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mi>v</mi><mn>2</mn></msup><mi>/</mi><msup><mi>c</mi><mn>2</mn></msup></mrow></msqrt><mspace width="0.167em"></mspace><mi>d</mi><mi>t</mi><mo>−</mo><mi>q</mi><mo>∫</mo><mo stretchy="false" form="prefix">(</mo><mi>ϕ</mi><mo>−</mo><mi mathvariant="bold-italic">𝒗</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝑨</mi><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mi>d</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">S = -m_0 c^2 \int \sqrt{1-v^2/c^2} \, dt - q \int (\phi - \mathbf{v} \cdot \mathbf{A}) \, dt</annotation></semantics></math>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Лагранжиан
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">ℒ</mi><annotation encoding="application/x-tex">\mathcal{L}</annotation></semantics></math>)</strong></td>
+<td style="text-align: left;">Функция под интегралом действия
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">KE</mtext><mo>−</mo><mtext mathvariant="normal">PE</mtext></mrow><annotation encoding="application/x-tex">\text{KE} - \text{PE}</annotation></semantics></math>),
+зависящая от координат и скоростей.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="4-квантовомеханическая-интерпретация">4. Квантовомеханическая
+интерпретация</h2>
+<p>Наиболее глубокое понимание принципа дает квантовая механика. Фейнман
+указывает, что частица на самом деле не «выбирает» один путь, а
+«ощупывает» все возможные траектории.</p>
+<ul>
+<li><strong>Амплитуда вероятности:</strong> Для каждого пути вычисляется
+амплитуда
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>i</mi><mi>S</mi><mi>/</mi><mi>ℏ</mi></mrow></msup><annotation encoding="application/x-tex">e^{iS/\hbar}</annotation></semantics></math>.</li>
+<li><strong>Роль постоянной Планка
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ℏ</mi><annotation encoding="application/x-tex">\hbar</annotation></semantics></math>):</strong>
+Если действие
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo>≫</mo><mi>ℏ</mi></mrow><annotation encoding="application/x-tex">S \gg \hbar</annotation></semantics></math>,
+то фазы соседних путей сильно различаются и при сложении взаимно
+уничтожаются.</li>
+<li><strong>Классический предел:</strong> Взаимного уничтожения не
+происходит только вблизи пути, где действие не меняется в первом
+приближении
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>δ</mi><mi>S</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\delta S = 0</annotation></semantics></math>).
+Именно поэтому в макромире мы видим только одну «истинную»
+траекторию.</li>
+</ul>
+<hr />
+<h2 id="5-практическое-применение-минимум-энергии-в-электростатике">5.
+Практическое применение: Минимум энергии в электростатике</h2>
+<p>Принцип минимума применим и к полям. В электростатике распределение
+потенциала
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>
+таково, что минимизируется величина:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>U</mi><mo>*</mo></msup><mo>=</mo><mfrac><msub><mi>ϵ</mi><mn>0</mn></msub><mn>2</mn></mfrac><mo>∫</mo><mo stretchy="false" form="prefix">(</mo><mi>∇</mi><mi>ϕ</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mspace width="0.167em"></mspace><mi>d</mi><mi>V</mi><mo>−</mo><mo>∫</mo><mi>ρ</mi><mi>ϕ</mi><mspace width="0.167em"></mspace><mi>d</mi><mi>V</mi></mrow><annotation encoding="application/x-tex">U^* = \frac{\epsilon_0}{2} \int (\nabla \phi)^2 \, dV - \int \rho \phi \, dV</annotation></semantics></math>
+В случае системы проводников это эквивалентно минимизации полной
+электростатической энергии поля.</p>
+<h3 id="пример-расчета-емкости-цилиндрический-конденсатор">Пример
+расчета емкости (цилиндрический конденсатор)</h3>
+<p>Метод позволяет находить приближенные значения емкости для сложных
+форм, используя «пробные функции».</p>
+<ul>
+<li><strong>Суть метода:</strong> Любая неверная функция потенциала даст
+значение емкости
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math>,
+которое <strong>выше</strong> истинного.</li>
+<li><strong>Итерация:</strong> Подбирая параметры в пробной функции
+(например, коэффициент
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>α</mi><annotation encoding="application/x-tex">\alpha</annotation></semantics></math>
+в квадратичной функции), можно максимально приблизиться к минимуму и
+получить высокоточный результат.</li>
+</ul>
+<p><strong>Сравнение точности (для отношения радиусов
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mi>/</mi><mi>a</mi></mrow><annotation encoding="application/x-tex">b/a</annotation></semantics></math>):</strong>
+|
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mi>/</mi><mi>a</mi></mrow><annotation encoding="application/x-tex">b/a</annotation></semantics></math>
+| Точное значение
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mi>/</mi><mn>2</mn><mi>π</mi><msub><mi>ϵ</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">C/2\pi\epsilon_0</annotation></semantics></math>
+| Приближение (линейное) | Приближение (квадратичное) | | :--- | :--- |
+:--- | :--- | | 1.1 | 10.492059 | 10.500000 | 10.492063 | | 2.0 | 1.4427
+| 1.500 | 1.444 | | 100.0 | 0.217 | 0.51 | 0.347 |</p>
+<hr />
+<h2 id="важные-цитаты">Важные цитаты</h2>
+<ul>
+<li><strong>О сути принципа:</strong> «Средняя кинетическая энергия
+минус средняя потенциальная энергия достигает своего самого наименьшего
+значения на той траектории, по которой предмет двигается в
+действительности».</li>
+<li><strong>О связи с законом Ньютона:</strong> «Путь, вдоль которого
+действие минимально, — это и есть путь, удовлетворяющий закону
+Ньютона».</li>
+<li><strong>О квантовом механизме:</strong> «Дело не в том, что частица
+выбирает путь наименьшего действия, а в том, что она "ощупывает" все
+пути в окрестности и выбирает тот, у которого действие наименьшее».</li>
+</ul>
+<hr />
+<h2 id="действенные-выводы-actionable-insights">Действенные выводы
+(Actionable Insights)</h2>
+<ol type="1">
+<li><strong>Альтернативное моделирование:</strong> При решении сложных
+задач механики или электродинамики переход от сил к принципу минимума
+действия может упростить вывод уравнений, особенно при использовании
+криволинейных координат.</li>
+<li><strong>Численные оценки:</strong> Для инженерных расчетов
+(например, емкости конденсаторов сложной формы) целесообразно
+использовать вариационный метод: минимизация энергии через варьирование
+параметров пробной функции дает результат с точностью второго
+порядка.</li>
+<li><strong>Единство физики:</strong> Понимание связи между классическим
+действием и квантовомеханическими фазами позволяет интуитивно
+интерпретировать переход от квантовых явлений к классическим как процесс
+конструктивной интерференции амплитуд вдоль стационарного пути.</li>
+</ol>
+    </article>
+  </main>
+</body>
+</html>

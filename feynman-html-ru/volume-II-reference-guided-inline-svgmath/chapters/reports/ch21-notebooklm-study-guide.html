@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Глава 21. Решения уравнений Максвелла с токами и зарядами: Учебное пособие - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="ru">
+  <script>
+    try {
+      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
+    } catch (_) {
+      document.body.dataset.theme = "light";
+    }
+  </script>
+  <main class="notebooklm-report-shell">
+    <nav class="notebooklm-report-nav">
+      <a class="nav-btn" href="../ch21.html#study-panel">Назад к главе</a>
+      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
+    </nav>
+    <article class="notebooklm-report">
+<h1
+id="глава-21-решения-уравнений-максвелла-с-токами-и-зарядами-учебное-пособие">Глава
+21. Решения уравнений Максвелла с токами и зарядами: Учебное
+пособие</h1>
+<p>Данное учебное пособие составлено на основе материалов лекций
+Фейнмана и посвящено математическому обоснованию связи между уравнениями
+Максвелла и свойствами света через анализ полей, создаваемых движущимися
+зарядами и токами.</p>
+<h2 id="i-ключевые-понятия">I. Ключевые понятия</h2>
+<h3 id="1-запаздывание-и-запаздывающее-расстояние">1. Запаздывание и
+«запаздывающее расстояние»</h3>
+<p>Электрическое поле в точке наблюдения в момент времени
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math>
+зависит не от текущего положения заряда, а от его положения и движения в
+более ранний момент времени
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>t</mi><mo>′</mo></msup><annotation encoding="application/x-tex">t&#39;</annotation></semantics></math>.
+Этот интервал необходим для того, чтобы свет, двигаясь со скоростью
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>c</mi><annotation encoding="application/x-tex">c</annotation></semantics></math>,
+преодолел расстояние
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>r</mi><mo>′</mo></msup><annotation encoding="application/x-tex">r&#39;</annotation></semantics></math>
+от заряда до точки поля.</p>
+<ul>
+<li><strong>Запаздывающий момент времени:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>t</mi><mo>′</mo></msup><mo>=</mo><mi>t</mi><mo>−</mo><msup><mi>r</mi><mo>′</mo></msup><mi>/</mi><mi>c</mi></mrow><annotation encoding="application/x-tex">t&#39; = t - r&#39;/c</annotation></semantics></math>.</li>
+<li><strong>Запаздывающее расстояние
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>r</mi><mo>′</mo></msup><annotation encoding="application/x-tex">r&#39;</annotation></semantics></math>):</strong>
+расстояние от точки, где находился заряд в момент
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>t</mi><mo>′</mo></msup><annotation encoding="application/x-tex">t&#39;</annotation></semantics></math>,
+до точки наблюдения.</li>
+</ul>
+<h3 id="2-три-слагаемых-электрического-поля">2. Три слагаемых
+электрического поля</h3>
+<p>Полное уравнение для электрического поля движущегося точечного заряда
+включает три компонента:</p>
+<ol type="1">
+<li><strong>Запаздывающее кулоново поле:</strong> убывает как
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><msup><mi>r</mi><mo>′</mo></msup><msup><mi></mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">1/r&#39;^2</annotation></semantics></math>,
+направлено от запаздывающего положения заряда.</li>
+<li><strong>Поправочное слагаемое:</strong> быстрота изменения
+запаздывающего кулонова поля, умноженная на время запаздывания. Оно
+стремится компенсировать эффект запаздывания, экстраполируя поле к
+моменту
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math>.</li>
+<li><strong>Радиационное слагаемое:</strong> вторая производная
+единичного вектора
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="bold-italic">𝒆</mi><msup><mi>r</mi><mo>′</mo></msup></msub><annotation encoding="application/x-tex">\mathbf{e}_{r&#39;}</annotation></semantics></math>.
+Это единственное слагаемое, которое убывает как
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mi>r</mi></mrow><annotation encoding="application/x-tex">1/r</annotation></semantics></math>
+и доминирует на больших расстояниях, отвечая за излучение света.</li>
+</ol>
+<h3 id="3-запаздывающие-потенциалы">3. Запаздывающие потенциалы</h3>
+<p>Общие решения уравнений Максвелла для скалярного
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>)
+и векторного
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>)
+потенциалов выражаются через интегралы по объему источников:</p>
+<ul>
+<li><strong>Скалярный потенциал:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ϕ</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo>∫</mo><mfrac><mrow><mi>ρ</mi><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo>,</mo><mi>t</mi><mo>−</mo><msub><mi>r</mi><mn>12</mn></msub><mi>/</mi><mi>c</mi><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mn>4</mn><mi>π</mi><msub><mi>ϵ</mi><mn>0</mn></msub><msub><mi>r</mi><mn>12</mn></msub></mrow></mfrac><mi>d</mi><msub><mi>V</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">\phi(1,t) = \int \frac{\rho(2, t - r_{12}/c)}{4\pi\epsilon_0 r_{12}} dV_2</annotation></semantics></math></li>
+<li><strong>Векторный потенциал:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑨</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo>∫</mo><mfrac><mrow><mi mathvariant="bold-italic">𝒋</mi><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo>,</mo><mi>t</mi><mo>−</mo><msub><mi>r</mi><mn>12</mn></msub><mi>/</mi><mi>c</mi><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mn>4</mn><mi>π</mi><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup><msub><mi>r</mi><mn>12</mn></msub></mrow></mfrac><mi>d</mi><msub><mi>V</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">\mathbf{A}(1,t) = \int \frac{\mathbf{j}(2, t - r_{12}/c)}{4\pi\epsilon_0 c^2 r_{12}} dV_2</annotation></semantics></math></li>
+</ul>
+<h3 id="4-потенциалы-льенара--вихерта">4. Потенциалы Льенара —
+Вихерта</h3>
+<p>Для точечного заряда, движущегося с произвольной (в том числе
+релятивистской) скоростью, потенциалы принимают специфическую форму
+из-за движения источника во время испускания сигнала:</p>
+<ul>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ϕ</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><mi>q</mi><mrow><mn>4</mn><mi>π</mi><msub><mi>ϵ</mi><mn>0</mn></msub><mo stretchy="false" form="prefix">[</mo><mi>r</mi><mo>−</mo><mo stretchy="false" form="prefix">(</mo><mi mathvariant="bold-italic">𝒗</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝒓</mi><mi>/</mi><mi>c</mi><mo stretchy="false" form="postfix">)</mo><msub><mo stretchy="false" form="postfix">]</mo><mtext mathvariant="normal">ret</mtext></msub></mrow></mfrac></mrow><annotation encoding="application/x-tex">\phi(1,t) = \frac{q}{4\pi\epsilon_0 [r - (\mathbf{v} \cdot \mathbf{r}/c)]_{\text{ret}}}</annotation></semantics></math></li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑨</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><mrow><mi>q</mi><msub><mi mathvariant="bold-italic">𝒗</mi><mtext mathvariant="normal">ret</mtext></msub></mrow><mrow><mn>4</mn><mi>π</mi><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup><mo stretchy="false" form="prefix">[</mo><mi>r</mi><mo>−</mo><mo stretchy="false" form="prefix">(</mo><mi mathvariant="bold-italic">𝒗</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝒓</mi><mi>/</mi><mi>c</mi><mo stretchy="false" form="postfix">)</mo><msub><mo stretchy="false" form="postfix">]</mo><mtext mathvariant="normal">ret</mtext></msub></mrow></mfrac></mrow><annotation encoding="application/x-tex">\mathbf{A}(1,t) = \frac{q\mathbf{v}_{\text{ret}}}{4\pi\epsilon_0 c^2 [r - (\mathbf{v} \cdot \mathbf{r}/c)]_{\text{ret}}}</annotation></semantics></math></li>
+</ul>
+<p>Здесь множитель в знаменателе учитывает «сжатие» или «растяжение»
+эффективного объема заряда при его движении относительно точки
+наблюдения.</p>
+<hr />
+<h2 id="ii-проверочные-вопросы-краткие-ответы">II. Проверочные вопросы
+(краткие ответы)</h2>
+<p><strong>1. Почему на больших расстояниях от заряда мы учитываем
+только третье слагаемое в формуле поля?</strong> Потому что первые два
+слагаемых убывают обратно пропорционально квадрату расстояния
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><msup><mi>r</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">1/r^2</annotation></semantics></math>),
+а третье — обратно пропорционально первой степени расстояния
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mi>r</mi></mrow><annotation encoding="application/x-tex">1/r</annotation></semantics></math>).
+На больших удалениях
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mi>r</mi></mrow><annotation encoding="application/x-tex">1/r</annotation></semantics></math>
+становится значительно мощнее
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><msup><mi>r</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">1/r^2</annotation></semantics></math>.</p>
+<p><strong>2. Что произойдет, если в формуле для потенциала точечного
+заряда пренебречь скоростью его движения?</strong> Получится неверный
+результат
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ϕ</mi><mo>=</mo><mi>q</mi><mi>/</mi><mo stretchy="false" form="prefix">(</mo><mn>4</mn><mi>π</mi><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>r</mi><mo>′</mo></msup><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\phi = q/(4\pi\epsilon_0 r&#39;)</annotation></semantics></math>.
+На самом деле необходимо учитывать поправочный множитель
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><msub><mi>v</mi><mi>r</mi></msub><mi>/</mi><mi>c</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">1/(1 - v_r/c)</annotation></semantics></math>,
+так как за время «пролета» сигнала через объем заряда сам заряд успевает
+переместиться.</p>
+<p><strong>3. Как связаны магнитное и электрическое поля в волне,
+создаваемой ускоренным зарядом на большом расстоянии?</strong> Поля
+перпендикулярны друг другу и направлению распространения волны, при этом
+соблюдается соотношение
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>=</mo><mi>c</mi><mi>B</mi></mrow><annotation encoding="application/x-tex">E = cB</annotation></semantics></math>.</p>
+<p><strong>4. Какое условие (калибровка) связывает векторный и скалярный
+потенциалы в уравнениях Максвелла?</strong> Условие Лоренца:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∇</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝑨</mi><mo>=</mo><mi>−</mi><mfrac><mn>1</mn><msup><mi>c</mi><mn>2</mn></msup></mfrac><mfrac><mrow><mi>∂</mi><mi>ϕ</mi></mrow><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\nabla \cdot \mathbf{A} = -\frac{1}{c^2} \frac{\partial \phi}{\partial t}</annotation></semantics></math>.</p>
+<p><strong>5. От какой характеристики движения заряда зависит
+интенсивность излучения в дальней зоне?</strong> От компоненты ускорения
+заряда, перпендикулярной линии зрения.</p>
+<hr />
+<h2 id="iii-типичные-ошибки-при-изучении-темы">III. Типичные ошибки при
+изучении темы</h2>
+<ol type="1">
+<li><strong>Использование мгновенного расстояния:</strong> Самая частая
+ошибка — использование текущего расстояния
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math>
+вместо запаздывающего
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>r</mi><mo>′</mo></msup><annotation encoding="application/x-tex">r&#39;</annotation></semantics></math>.
+Поле определяется состоянием заряда в прошлом.</li>
+<li><strong>Игнорирование множителя Льенара — Вихерта:</strong> При
+вычислении потенциала движущегося заряда часто забывают про множитель
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><msub><mi>v</mi><mi>r</mi></msub><mi>/</mi><mi>c</mi><msup><mo stretchy="false" form="postfix">)</mo><mrow><mi>−</mi><mn>1</mn></mrow></msup></mrow><annotation encoding="application/x-tex">(1 - v_r/c)^{-1}</annotation></semantics></math>.
+Это происходит из-за неверного допущения, что интеграл от плотности
+заряда
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ρ</mi><annotation encoding="application/x-tex">\rho</annotation></semantics></math>
+всегда равен полному заряду
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>q</mi><annotation encoding="application/x-tex">q</annotation></semantics></math>.</li>
+<li><strong>Путаница в слагаемых поля:</strong> Ошибочное мнение, что
+все поле просто запаздывает (статическое поле, сдвинутое по времени). В
+реальности к нему добавляются члены, зависящие от скорости и
+ускорения.</li>
+<li><strong>Приближение малых скоростей там, где это
+недопустимо:</strong> При расчете потенциала
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>
+для колеблющегося диполя нельзя пренебрегать высшими порядками задержки,
+так как это приведет к потере электростатического потенциала.</li>
+</ol>
+<hr />
+<h2 id="iv-темы-для-глубокого-анализа-эссе">IV. Темы для глубокого
+анализа (эссе)</h2>
+<ol type="1">
+<li><strong>Математическая красота системы Максвелла:</strong> Как из
+четырех дифференциальных уравнений и определений потенциалов выводится
+вся структура электромагнитной вселенной, включая свет.</li>
+<li><strong>Эффект «пролета над зарядом»:</strong> Подробный разбор
+того, почему движение источника меняет эффективный вклад плотности
+заряда в потенциал (геометрическая интерпретация коэффициента
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mi>/</mi><mi>a</mi></mrow><annotation encoding="application/x-tex">b/a</annotation></semantics></math>).</li>
+<li><strong>Электродинамика как колыбель теории
+относительности:</strong> Анализ того, как потенциалы равномерно
+движущегося заряда естественным образом приводят к преобразованиям
+Лоренца без дополнительных допущений.</li>
+</ol>
+<hr />
+<h2 id="v-глоссарий">V. Глоссарий</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Термин</th>
+<th style="text-align: left;">Определение согласно источнику</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Запаздывающий
+потенциал</strong></td>
+<td style="text-align: left;">Потенциал в данной точке, определяемый
+распределением зарядов и токов в более ранние моменты времени.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Потенциалы Льенара —
+Вихерта</strong></td>
+<td style="text-align: left;">Выражения для скалярного и векторного
+потенциалов, создаваемых одиночным точечным зарядом, движущимся
+произвольно.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Колеблющийся диполь</strong></td>
+<td style="text-align: left;">Система из двух близко расположенных
+зарядов противоположного знака, дипольный момент которой меняется во
+времени.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Радиационное
+слагаемое</strong></td>
+<td style="text-align: left;">Часть электрического поля,
+пропорциональная ускорению заряда и убывающая как
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mi>r</mi></mrow><annotation encoding="application/x-tex">1/r</annotation></semantics></math>,
+ответственная за перенос энергии на большие расстояния.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Условие Лоренца</strong></td>
+<td style="text-align: left;">Дифференциальное соотношение между
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>
+и
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>,
+позволяющее разделить волновые уравнения для потенциалов.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Единичный вектор
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>e</mi><msup><mi>r</mi><mo>′</mo></msup></msub><annotation encoding="application/x-tex">e_{r&#39;}</annotation></semantics></math></strong></td>
+<td style="text-align: left;">Вектор, направленный от «запаздывающего»
+положения заряда к точке наблюдения.</td>
+</tr>
+</tbody>
+</table>
+    </article>
+  </main>
+</body>
+</html>
