@@ -30,7 +30,13 @@
 
   const isRu = () => (document.documentElement.lang || "").toLowerCase().startsWith("ru");
   const typeOf = (link) => /слушать|listen/i.test(link.textContent || "") ? "audio" : "video";
-  const labelFor = (type) => {
+  const chapterTitleFor = (panel) => panel.dataset.chapterTitle || panel.querySelector(".chapter-media-copy strong")?.textContent?.trim() || "";
+  const labelFor = (panel, type) => {
+    const title = chapterTitleFor(panel);
+    const mode = isRu()
+      ? (type === "audio" ? "аудио" : "видео")
+      : (type === "audio" ? "audio" : "video");
+    if (title) return `${title} · ${mode}`;
     if (isRu()) return type === "audio" ? "Аудио главы" : "Видео главы";
     return type === "audio" ? "Chapter audio" : "Chapter video";
   };
@@ -63,8 +69,9 @@
     const label = player.querySelector(".chapter-media-player-label");
     const youtube = player.querySelector(".chapter-media-youtube");
     iframe.src = embedUrl;
-    iframe.title = labelFor(type);
-    label.textContent = labelFor(type);
+    const mediaLabel = labelFor(panel, type);
+    iframe.title = mediaLabel;
+    label.textContent = mediaLabel;
     youtube.href = link.href;
     player.hidden = false;
     panel.querySelectorAll(".chapter-media-link").forEach((item) => {
