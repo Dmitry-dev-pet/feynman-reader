@@ -105,8 +105,19 @@
     </div>
   </section>
         <section class="study-section" data-study-section="media" hidden>
-    <div class="study-grid">
-      <p class="study-empty">Для этой главы медиа пока нет.</p>
+    <div class="study-grid study-media-grid">
+      <article class="study-media-card study-youtube-card">
+        <strong>Аудиообзор</strong>
+        <span>NotebookLM audio · часть 1/2 · старт 11:10:31</span>
+        <div class="study-youtube-embed"><iframe title="Аудиообзор: глава 32" src="https://www.youtube-nocookie.com/embed/sh9mksd6d3o?start=40231&amp;rel=0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+        <a class="study-youtube-link" href="https://youtu.be/sh9mksd6d3o?t=40231" target="_blank" rel="noopener">Открыть на YouTube</a>
+      </article>
+      <article class="study-media-card study-youtube-card">
+        <strong>Видеообзор</strong>
+        <span>NotebookLM video · том II · старт 04:24:46</span>
+        <div class="study-youtube-embed"><iframe title="Видеообзор: глава 32" src="https://www.youtube-nocookie.com/embed/--1dcaFd_8w?start=15886&amp;rel=0" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe></div>
+        <a class="study-youtube-link" href="https://youtu.be/--1dcaFd_8w?t=15886" target="_blank" rel="noopener">Открыть на YouTube</a>
+      </article>
     </div>
   </section>
         <section class="study-section" data-study-section="files" hidden>
@@ -1006,7 +1017,8 @@ c/\omega_p</span>. Учитывая, что экспериментальная �
     event.preventDefault();
     setMode(button.dataset.studyMode || "lecture");
   });
-  if (location.hash === "#study-panel") setMode("notes");
+  if (location.hash === "#study-media") setMode("media");
+  else if (location.hash === "#study-panel") setMode("notes");
   else setMode("lecture");
 })();
 </script>

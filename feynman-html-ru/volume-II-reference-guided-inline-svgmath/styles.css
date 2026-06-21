@@ -1209,6 +1209,9 @@ figcaption {
   gap: 0.65rem;
   grid-template-columns: repeat(auto-fit, minmax(13.5rem, 1fr));
 }
+.study-media-grid {
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 26rem), 1fr));
+}
 .study-card,
 .study-media-card {
   background: var(--paper);
@@ -1253,6 +1256,31 @@ figcaption {
   margin-top: 0.65rem;
   max-width: 100%;
   width: 100%;
+}
+.study-youtube-embed {
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  margin-top: 0.65rem;
+  overflow: hidden;
+  width: 100%;
+}
+.study-youtube-embed iframe {
+  border: 0;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.study-youtube-link {
+  color: var(--accent);
+  display: inline-block;
+  font-size: 0.86rem;
+  margin-top: 0.55rem;
+  text-decoration: none;
+}
+.study-youtube-link:hover {
+  text-decoration: underline;
 }
 .study-file-row {
   display: flex;
