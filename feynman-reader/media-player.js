@@ -1,7 +1,8 @@
 (() => {
   const panel = document.querySelector(".chapter-media-panel");
   const cards = [...document.querySelectorAll(".study-youtube-card")];
-  if (!panel && !cards.length) return;
+  const reportCards = [...document.querySelectorAll(".study-card[href*='notebooklm-briefing.html'], .study-card[href*='notebooklm-study-guide.html']")];
+  if (!panel && !cards.length && !reportCards.length) return;
 
   const MEDIA_INTENT_KEY = "flp-reader-media-intent";
   const isRu = () => (document.documentElement.lang || "").toLowerCase().startsWith("ru");
@@ -243,6 +244,43 @@
     });
   };
 
+  const studyReportLinks = () => {
+    const overview = reportCards.find((link) => /notebooklm-briefing\.html/i.test(link.getAttribute("href") || ""));
+    const guide = reportCards.find((link) => /notebooklm-study-guide\.html/i.test(link.getAttribute("href") || ""));
+    return [
+      overview ? { type: "overview", href: overview.href } : null,
+      guide ? { type: "guide", href: guide.href } : null,
+    ].filter(Boolean);
+  };
+
+  const injectStudyReportLinks = () => {
+    const toolbar = document.querySelector(".reader-toolbar");
+    const title = toolbar?.querySelector(".toolbar-title");
+    if (!toolbar || !title || toolbar.querySelector(".study-toolbar-links")) return;
+    const links = studyReportLinks();
+    if (!links.length) return;
+
+    const controls = document.createElement("div");
+    controls.className = "toolbar-group study-toolbar-links";
+    controls.setAttribute("aria-label", isRu() ? "Учебные материалы" : "Study materials");
+
+    const labels = isRu()
+      ? { overview: "Обзор", guide: "Конспект" }
+      : { overview: "Overview", guide: "Guide" };
+
+    links.forEach(({ type, href }) => {
+      const link = document.createElement("a");
+      link.className = "toolbar-btn study-toolbar-link";
+      link.href = href;
+      link.textContent = labels[type];
+      controls.append(link);
+    });
+
+    const mediaControls = toolbar.querySelector(".media-toolbar-controls");
+    (mediaControls || title).insertAdjacentElement("afterend", controls);
+    toolbar.querySelector(".study-mode-switch")?.setAttribute("hidden", "");
+  };
+
   const injectToolbarControls = () => {
     const toolbar = document.querySelector(".reader-toolbar");
     const title = toolbar?.querySelector(".toolbar-title");
@@ -320,6 +358,7 @@
 
   prepareStudyCards();
   injectToolbarControls();
+  injectStudyReportLinks();
   window.addEventListener("hashchange", openPanelFromHash);
   window.addEventListener("load", openPanelFromHash);
   openPanelFromHash();

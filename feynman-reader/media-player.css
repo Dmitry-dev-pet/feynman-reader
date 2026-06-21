@@ -1,6 +1,15 @@
 .media-toolbar-controls {
   flex: 0 0 auto;
 }
+.study-toolbar-links {
+  flex: 0 0 auto;
+}
+.study-toolbar-link {
+  white-space: nowrap;
+}
+.study-mode-switch[hidden] {
+  display: none !important;
+}
 .media-toolbar-btn.is-active,
 .media-toolbar-btn[aria-pressed="true"] {
   border-color: var(--accent);
@@ -108,6 +117,9 @@ body[data-theme="dark"] .study-youtube-play {
 @media (max-width: 860px) {
   .media-toolbar-controls {
     order: 1;
+  }
+  .study-toolbar-links {
+    order: 2;
   }
 }
 @media (max-width: 760px) {
