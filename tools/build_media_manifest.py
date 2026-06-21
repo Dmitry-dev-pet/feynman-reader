@@ -64,12 +64,29 @@ def extract_reports(text: str) -> dict[str, str]:
     return reports
 
 
+def existing_chapters() -> dict[str, object]:
+    if not MEDIA_MANIFEST.exists():
+        return {}
+    try:
+        data = json.loads(MEDIA_MANIFEST.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return {}
+    chapters = data.get("chapters", {})
+    return chapters if isinstance(chapters, dict) else {}
+
+
 def build_manifest() -> dict[str, object]:
+    existing = existing_chapters()
     chapters: dict[str, object] = {}
     for page in chapter_pages():
         text = read_text(page.path)
         media = extract_media(text)
         reports = extract_reports(text)
+        previous = existing.get(page.key, {})
+        if not media:
+            media = previous.get("media", []) if isinstance(previous, dict) else []
+        if not reports:
+            reports = previous.get("reports", {}) if isinstance(previous, dict) else {}
         if not media and not reports:
             continue
         chapters[page.key] = {

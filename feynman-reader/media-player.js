@@ -333,7 +333,15 @@
       return decodeURIComponent(window.location.hash || "");
     },
     openStudyMedia() {
-      if (window.location.hash === "#study-media") StudyWorkspace.showMediaSection();
+      if (window.location.hash !== "#study-media") return;
+      const video = StudyCards.first("video");
+      const audio = StudyCards.first("audio");
+      if (video) StudyCards.open(video, "video");
+      else if (audio) StudyCards.open(audio, "audio");
+      else {
+        StudyWorkspace.showMediaSection();
+        StudyWorkspace.closeIfEmpty();
+      }
     },
     openMigratedChapterMedia() {
       const hash = this.current();

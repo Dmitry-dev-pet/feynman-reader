@@ -16,6 +16,7 @@ shared reader CSS/JS:
 
 ```bash
 python3 tools/build_media_manifest.py
+python3 tools/clean_manifest_backed_html.py
 python3 tools/apply_reader_shell.py --check
 python3 tools/validate_reader_site.py
 ```

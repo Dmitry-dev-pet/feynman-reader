@@ -27,6 +27,7 @@ def main() -> int:
     check_flag = ["--check"] if args.check else []
     run([python, str(tools / "bump_reader_assets.py"), args.asset_version, *check_flag])
     run([python, str(tools / "build_media_manifest.py"), *check_flag])
+    run([python, str(tools / "clean_manifest_backed_html.py"), *check_flag])
     return 0
 
 

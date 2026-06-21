@@ -67,6 +67,8 @@ def validate_assets(errors: list[str]) -> None:
 
 
 def validate_chapters(errors: list[str]) -> None:
+    manifest = build_manifest()
+    manifest_chapters = manifest.get("chapters", {})
     chapter_counts = {key: 0 for key in EXPECTED_CHAPTERS}
     media_counts = {key: 0 for key in EXPECTED_MEDIA_PAGES}
     report_counts = {key: 0 for key in EXPECTED_REPORT_PAGES}
@@ -76,17 +78,20 @@ def validate_chapters(errors: list[str]) -> None:
         chapter_counts[group] = chapter_counts.get(group, 0) + 1
         text = read_text(page.path)
         rel = page.path.relative_to(ROOT)
-        has_media = "study-youtube-card" in text
-        has_reports = "notebooklm-briefing.html" in text or "notebooklm-study-guide.html" in text
+        manifest_entry = manifest_chapters.get(page.key, {})
+        has_media = bool(manifest_entry.get("media")) if isinstance(manifest_entry, dict) else False
+        has_reports = bool(manifest_entry.get("reports")) if isinstance(manifest_entry, dict) else False
 
         if "chapter-media-panel" in text:
             fail(errors, f"legacy chapter-media-panel remains in {rel}")
+        if 'data-study-section="notes"' in text or "data-study-section='notes'" in text:
+            fail(errors, f"manifest-backed notes section remains in {rel}")
+        if 'data-study-section="media"' in text or "data-study-section='media'" in text:
+            fail(errors, f"manifest-backed media section remains in {rel}")
+        if "study-youtube-card" in text:
+            fail(errors, f"manifest-backed YouTube card remains in {rel}")
         if has_media:
             media_counts[group] = media_counts.get(group, 0) + 1
-            if 'data-study-section="media"' not in text:
-                fail(errors, f"missing media study section in {rel}")
-            if 'data-study-mode="media"' not in text:
-                fail(errors, f"missing media toolbar mode in {rel}")
             if f"media-player.js?v={CURRENT_ASSET_VERSION}" not in text:
                 fail(errors, f"missing current media-player.js on media page {rel}")
             if f"media-player.css?v={CURRENT_ASSET_VERSION}" not in text:
@@ -95,6 +100,8 @@ def validate_chapters(errors: list[str]) -> None:
             report_counts[group] = report_counts.get(group, 0) + 1
             if f"media-player.js?v={CURRENT_ASSET_VERSION}" not in text:
                 fail(errors, f"missing current media-player.js on report page {rel}")
+            if f"media-player.css?v={CURRENT_ASSET_VERSION}" not in text:
+                fail(errors, f"missing current media-player.css on report page {rel}")
 
     for group, expected in EXPECTED_CHAPTERS.items():
         if chapter_counts.get(group, 0) != expected:
