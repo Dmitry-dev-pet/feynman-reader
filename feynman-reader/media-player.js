@@ -97,11 +97,11 @@
       </div>
       <a class="floating-youtube-link" href="#" target="_blank" rel="noopener">${isRu() ? "Открыть на YouTube" : "Open on YouTube"}</a>`;
     document.body.append(player);
-    player.querySelector(".floating-youtube-close").addEventListener("click", closeFloatingAudio);
+    player.querySelector(".floating-youtube-close").addEventListener("click", closeFloatingPlayer);
     return player;
   };
 
-  const openFloatingAudio = ({ embedUrl, label, href }) => {
+  const openFloatingPlayer = ({ embedUrl, label, href, type }) => {
     const player = ensureFloatingPlayer();
     const iframe = player.querySelector("iframe");
     player.querySelector(".floating-youtube-label").textContent = label;
@@ -109,11 +109,13 @@
     iframe.title = label;
     iframe.src = embedUrl;
     player.hidden = false;
-    setMediaIntent("audio");
-    setToolbarActive("audio");
+    setMediaIntent(type);
+    setToolbarActive(type);
   };
 
-  function closeFloatingAudio() {
+  const openFloatingAudio = (options) => openFloatingPlayer({ ...options, type: "audio" });
+
+  function closeFloatingPlayer() {
     const player = document.querySelector(".floating-youtube-player");
     if (player) {
       player.querySelector("iframe").removeAttribute("src");
@@ -121,10 +123,8 @@
     }
     document.querySelectorAll(".study-youtube-card.is-playing").forEach((card) => card.classList.remove("is-playing"));
     document.querySelectorAll(".chapter-media-link.is-active").forEach((link) => {
-      if (isPanelAudioLink(link)) {
-        link.classList.remove("is-active");
-        link.setAttribute("aria-pressed", "false");
-      }
+      link.classList.remove("is-active");
+      link.setAttribute("aria-pressed", "false");
     });
     clearMediaIntent();
     setToolbarActive("");
@@ -142,24 +142,6 @@
     return type === "audio" ? "Chapter audio" : "Chapter video";
   };
 
-  const ensureInlinePanelPlayer = () => {
-    let player = panel.querySelector(".chapter-media-player");
-    if (player) return player;
-    player = document.createElement("div");
-    player.className = "chapter-media-player";
-    player.hidden = true;
-    player.innerHTML = `
-      <div class="chapter-media-frame-wrap">
-        <iframe loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-      </div>
-      <div class="chapter-media-player-footer">
-        <span class="chapter-media-player-label"></span>
-        <a class="chapter-media-youtube" href="#" target="_blank" rel="noopener">${isRu() ? "Открыть на YouTube" : "Open on YouTube"}</a>
-      </div>`;
-    panel.append(player);
-    return player;
-  };
-
   const activatePanelLink = (link, { scroll = false } = {}) => {
     if (!panel || !link) return false;
     const type = isPanelAudioLink(link) ? "audio" : "video";
@@ -167,24 +149,13 @@
     if (!embedUrl) return false;
     const label = panelLabel(type);
 
-    if (type === "audio") {
-      const inline = panel.querySelector(".chapter-media-player");
-      if (inline) {
-        inline.hidden = true;
-        inline.querySelector("iframe")?.removeAttribute("src");
-      }
-      openFloatingAudio({ embedUrl, label, href: link.href });
-    } else {
-      closeFloatingAudio();
-      const player = ensureInlinePanelPlayer();
-      const iframe = player.querySelector("iframe");
-      iframe.src = embedUrl;
-      iframe.title = label;
-      player.querySelector(".chapter-media-player-label").textContent = label;
-      player.querySelector(".chapter-media-youtube").href = link.href;
-      player.hidden = false;
-      setToolbarActive("video");
+    const inline = panel.querySelector(".chapter-media-player");
+    if (inline) {
+      inline.hidden = true;
+      inline.querySelector("iframe")?.removeAttribute("src");
     }
+    const floatingUrl = type === "audio" ? embedUrl : withAutoplay(embedUrl);
+    openFloatingPlayer({ embedUrl: floatingUrl, label, href: link.href, type });
 
     panel.querySelectorAll(".chapter-media-link").forEach((item) => {
       const active = item === link;
@@ -197,33 +168,40 @@
 
   const prepareStudyCards = () => {
     cards.forEach((card) => {
-      if (!isAudioCard(card)) return;
       const iframe = card.querySelector("iframe");
       if (!iframe) return;
+      const type = isAudioCard(card) ? "audio" : "video";
       iframe.dataset.src = iframe.src;
       iframe.removeAttribute("src");
-      card.classList.add("is-audio-card");
+      card.classList.add("is-floating-card", `is-${type}-card`);
       if (card.querySelector(".study-youtube-play")) return;
       const button = document.createElement("button");
       button.className = "study-youtube-play";
       button.type = "button";
-      button.textContent = isRu() ? "Слушать" : "Listen";
-      button.addEventListener("click", () => openStudyAudio(card));
+      button.textContent = isRu()
+        ? (type === "audio" ? "Слушать" : "Смотреть")
+        : (type === "audio" ? "Listen" : "Watch");
+      button.addEventListener("click", () => openStudyCard(card, type));
       card.querySelector(".study-youtube-embed")?.before(button);
     });
   };
 
-  const openStudyAudio = (card) => {
+  const openStudyCard = (card, type) => {
     const iframe = card.querySelector("iframe");
     const src = iframe?.dataset.src || iframe?.src || "";
     if (!src) return false;
     const link = card.querySelector(".study-youtube-link");
-    const title = iframe?.title || card.querySelector("strong")?.textContent?.trim() || (isRu() ? "Аудиообзор" : "Audio");
-    openFloatingAudio({ embedUrl: withAutoplay(src), label: title, href: link?.href || src });
+    const title = iframe?.title || card.querySelector("strong")?.textContent?.trim() || (isRu()
+      ? (type === "audio" ? "Аудиообзор" : "Видеообзор")
+      : (type === "audio" ? "Audio" : "Video"));
+    openFloatingPlayer({ embedUrl: withAutoplay(src), label: title, href: link?.href || src, type });
     document.querySelectorAll(".study-youtube-card.is-playing").forEach((item) => item.classList.remove("is-playing"));
     card.classList.add("is-playing");
     return true;
   };
+
+  const openStudyAudio = (card) => openStudyCard(card, "audio");
+  const openStudyVideo = (card) => openStudyCard(card, "video");
 
   const showMediaSection = () => {
     const mediaButton = document.querySelector('[data-study-mode="media"]');
@@ -235,14 +213,7 @@
     document.querySelector('[data-study-section="media"]')?.removeAttribute("hidden");
   };
 
-  const scrollToStudyVideo = (card) => {
-    closeFloatingAudio();
-    showMediaSection();
-    setToolbarActive("video");
-    window.requestAnimationFrame(() => {
-      card.scrollIntoView({ block: "start", inline: "nearest" });
-    });
-  };
+  const scrollToStudyVideo = (card) => openStudyVideo(card);
 
   const studyReportLinks = () => {
     const overview = reportCards.find((link) => /notebooklm-briefing\.html/i.test(link.getAttribute("href") || ""));
@@ -324,11 +295,11 @@
       return;
     }
     if ((hash.includes("watch") || hash.includes("video")) && video) {
-      scrollToStudyVideo(video);
+      openStudyVideo(video);
       return;
     }
     if (video) {
-      scrollToStudyVideo(video);
+      openStudyVideo(video);
     } else if (audio) {
       openStudyAudio(audio);
     }
@@ -353,7 +324,7 @@
     const videoHandler = panelVideo
       ? () => activatePanelLink(panelVideo, { scroll: true })
       : studyVideo
-        ? () => scrollToStudyVideo(studyVideo)
+        ? () => openStudyVideo(studyVideo)
         : null;
     if (!audioHandler && !videoHandler) return;
 
@@ -392,14 +363,15 @@
   const openFromMediaIntent = () => {
     const hash = decodeURIComponent(window.location.hash || "");
     if (hash.startsWith("#chapter-media")) return;
-    if (readMediaIntent() !== "audio") return;
+    const intent = readMediaIntent();
+    if (intent !== "audio" && intent !== "video") return;
     if (panel) {
-      const link = [...panel.querySelectorAll(".chapter-media-link")].find(isPanelAudioLink);
+      const link = [...panel.querySelectorAll(".chapter-media-link")].find((item) => (isPanelAudioLink(item) ? "audio" : "video") === intent);
       if (link) activatePanelLink(link);
       return;
     }
-    const audio = cards.find(isAudioCard);
-    if (audio) openStudyAudio(audio);
+    const card = intent === "audio" ? cards.find(isAudioCard) : cards.find((item) => !isAudioCard(item));
+    if (card) openStudyCard(card, intent);
   };
 
   document.addEventListener("click", (event) => {
