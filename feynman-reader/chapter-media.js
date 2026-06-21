@@ -68,6 +68,8 @@
     const iframe = player.querySelector("iframe");
     const label = player.querySelector(".chapter-media-player-label");
     const youtube = player.querySelector(".chapter-media-youtube");
+    player.classList.toggle("is-audio", type === "audio");
+    player.classList.toggle("is-video", type === "video");
     iframe.src = embedUrl;
     const mediaLabel = labelFor(panel, type);
     iframe.title = mediaLabel;

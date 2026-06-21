@@ -1301,6 +1301,11 @@ figcaption {
   overflow: hidden;
   width: 100%;
 }
+.study-media-grid .study-youtube-card:first-child .study-youtube-embed {
+  aspect-ratio: auto;
+  height: clamp(10rem, 24vw, 12rem);
+  min-height: 10rem;
+}
 .study-youtube-embed iframe {
   border: 0;
   display: block;
@@ -1316,6 +1321,12 @@ figcaption {
 }
 .study-youtube-link:hover {
   text-decoration: underline;
+}
+@media (max-width: 760px) {
+  .study-media-grid .study-youtube-card:first-child .study-youtube-embed {
+    height: clamp(9.5rem, 42vw, 11rem);
+    min-height: 9.5rem;
+  }
 }
 .study-file-row {
   display: flex;

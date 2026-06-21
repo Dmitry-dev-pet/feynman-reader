@@ -1373,6 +1373,11 @@ body[data-theme="dark"] .chapter-media-link.primary {
   overflow: hidden;
   width: 100%;
 }
+.chapter-media-player.is-audio .chapter-media-frame-wrap {
+  aspect-ratio: auto;
+  height: clamp(10rem, 24vw, 12rem);
+  min-height: 10rem;
+}
 .chapter-media-frame-wrap iframe {
   border: 0;
   display: block;
@@ -1410,6 +1415,10 @@ body[data-theme="dark"] .chapter-media-link.primary {
   .chapter-media-actions,
   .chapter-media-player-footer {
     justify-content: flex-start;
+  }
+  .chapter-media-player.is-audio .chapter-media-frame-wrap {
+    height: clamp(9.5rem, 42vw, 11rem);
+    min-height: 9.5rem;
   }
 }
 .notebooklm-index-panel {
