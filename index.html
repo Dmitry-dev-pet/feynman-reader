@@ -166,6 +166,7 @@
     };
     const normalizeHref = (href) => (href || "").replace(/^(\.\.\/)+/, "");
     const setTheme = (theme) => {
+      document.documentElement.dataset.theme = theme;
       document.body.dataset.theme = theme;
       storage.set(themeKey, theme);
       if (themeButton) {
@@ -212,7 +213,7 @@
     document.addEventListener("click", (event) => {
       const button = event.target.closest("[data-reader-action]");
       if (button?.dataset.readerAction === "theme") {
-        setTheme(document.body.dataset.theme === "dark" ? "light" : "dark");
+        setTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark");
         return;
       }
       const languageButton = event.target.closest("[data-reader-lang]");
