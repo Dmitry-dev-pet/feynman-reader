@@ -26,116 +26,125 @@
 <link rel="stylesheet" href="feynman-reader/reader-index.css">
 </head>
 <body data-language="ru">
-  <main class="shell">
-    <header class="topbar">
-      <a class="brand" href="index.html">FLP Reader</a>
-      <nav class="toolbar" aria-label="Reader navigation">
-        <a class="action primary" id="continue-link" href="feynman-html-ru/volume-I-reference-guided-inline-svgmath/chapters/ch01.html">Продолжить</a>
+  <main class="reader-app">
+    <header class="app-header">
+      <a class="brand" href="index.html" aria-label="Feynman Reader">
+        <img src="feynman-reader/favicon-192.png" alt="" width="40" height="40">
+        <span>
+          <strong>Feynman Reader</strong>
+          <small data-i18n data-ru="лекции, медиа, конспекты" data-en="lectures, media, notes">лекции, медиа, конспекты</small>
+        </span>
+      </a>
+      <nav class="top-actions" aria-label="Reader">
+        <a class="btn primary" id="continue-link" data-reader-link href="feynman-html-ru/volume-I-reference-guided-inline-svgmath/chapters/ch01.html">Продолжить</a>
         <div class="language-segment" role="group" aria-label="Language">
           <button class="segment-btn" type="button" data-reader-lang="ru">RU</button>
           <button class="segment-btn" type="button" data-reader-lang="en">EN</button>
         </div>
-        <button class="action theme-toggle" type="button" data-reader-action="theme" aria-label="Сменить тему" title="Сменить тему">◐</button>
+        <button class="icon-btn" type="button" data-reader-action="theme" aria-label="Сменить тему" title="Сменить тему">◐</button>
       </nav>
     </header>
 
-    <section class="reader-hero" aria-labelledby="reader-title">
-      <div class="hero-copy">
-        <span class="kicker">Reader</span>
+    <section class="overview" aria-labelledby="reader-title">
+      <div class="overview-copy">
+        <p class="eyebrow">The Feynman Lectures on Physics</p>
         <h1 id="reader-title" data-i18n data-ru="Фейнмановские лекции по физике" data-en="The Feynman Lectures on Physics">Фейнмановские лекции по физике</h1>
       </div>
-      <div class="hero-stats" aria-label="Статус сборки">
+      <div class="overview-status" aria-label="Статус">
         <span data-i18n data-ru="3 тома" data-en="3 volumes">3 тома</span>
         <span data-i18n data-ru="115 глав" data-en="115 chapters">115 глав</span>
-        <span data-i18n data-ru="читать · слушать · смотреть" data-en="read · listen · watch">читать · слушать · смотреть</span>
         <span data-i18n data-ru="RU / EN" data-en="RU / EN">RU / EN</span>
+        <span data-i18n data-ru="NotebookLM" data-en="NotebookLM">NotebookLM</span>
       </div>
     </section>
 
-    <section class="dashboard-strip" aria-label="Быстрый вход">
-      <a class="dashboard-link is-strong" data-reader-link data-i18n-link href="feynman-html-ru/volume-I-reference-guided-inline-svgmath/chapters/ch01.html" data-href-ru="feynman-html-ru/volume-I-reference-guided-inline-svgmath/chapters/ch01.html" data-href-en="feynman-html-en/volume-I-reference-guided-inline-svgmath/chapters/ch01.html" data-ru="Начать с тома I" data-en="Start Volume I">Начать с тома I</a>
-      <a class="dashboard-link" data-reader-link data-i18n-link href="feynman-html-ru/volume-II-reference-guided-inline-svgmath/chapters/ch01.html" data-href-ru="feynman-html-ru/volume-II-reference-guided-inline-svgmath/chapters/ch01.html" data-href-en="feynman-html-en/volume-II-reference-guided-inline-svgmath/chapters/ch01.html" data-ru="Том II" data-en="Volume II">Том II</a>
-      <a class="dashboard-link" data-reader-link data-i18n-link href="feynman-html-ru/volume-III-reference-guided-inline-svgmath/chapters/ch01.html" data-href-ru="feynman-html-ru/volume-III-reference-guided-inline-svgmath/chapters/ch01.html" data-href-en="feynman-html-en/volume-III-reference-guided-inline-svgmath/chapters/ch01.html" data-ru="Том III" data-en="Volume III">Том III</a>
+    <section class="quick-nav" aria-label="Быстрый вход">
+      <a class="quick-link is-active" data-reader-link data-i18n-link href="feynman-html-ru/volume-I-reference-guided-inline-svgmath/chapters/ch01.html" data-href-ru="feynman-html-ru/volume-I-reference-guided-inline-svgmath/chapters/ch01.html" data-href-en="feynman-html-en/volume-I-reference-guided-inline-svgmath/chapters/ch01.html" data-ru="Том I" data-en="Volume I">Том I</a>
+      <a class="quick-link" data-reader-link data-i18n-link href="feynman-html-ru/volume-II-reference-guided-inline-svgmath/chapters/ch01.html" data-href-ru="feynman-html-ru/volume-II-reference-guided-inline-svgmath/chapters/ch01.html" data-href-en="feynman-html-en/volume-II-reference-guided-inline-svgmath/chapters/ch01.html" data-ru="Том II" data-en="Volume II">Том II</a>
+      <a class="quick-link" data-reader-link data-i18n-link href="feynman-html-ru/volume-III-reference-guided-inline-svgmath/chapters/ch01.html" data-href-ru="feynman-html-ru/volume-III-reference-guided-inline-svgmath/chapters/ch01.html" data-href-en="feynman-html-en/volume-III-reference-guided-inline-svgmath/chapters/ch01.html" data-ru="Том III" data-en="Volume III">Том III</a>
+      <a class="quick-link" data-reader-link data-i18n-link href="feynman-exercises-index/index.html" data-href-ru="feynman-exercises-index/index.html" data-href-en="feynman-exercises-index/index.html" data-ru="Упражнения" data-en="Exercises">Упражнения</a>
     </section>
 
-    <h2 class="section-title" data-i18n data-ru="Тома" data-en="Volumes">Тома</h2>
-    <section class="volume-grid" aria-label="Тома">
-      <article class="volume-card">
-        <div class="volume-title">
-          <span class="kicker">Volume I</span>
-          <strong data-i18n data-ru="Механика, излучение и тепло" data-en="Mechanics, radiation, and heat">Механика, излучение и тепло</strong>
-          <span class="meta" data-i18n data-ru="52 главы · 343 рисунка · 4466 формул" data-en="52 chapters · 343 figures · 4466 formulas">52 главы · 343 рисунка · 4466 формул</span>
-        </div>
-        <div class="volume-status">
-          <span data-i18n data-ru="медиа" data-en="media">медиа</span>
-          <span data-i18n data-ru="конспекты" data-en="study">конспекты</span>
-          <span>RU / EN</span>
+    <section class="volume-list" aria-label="Тома">
+      <article class="volume-row">
+        <figure class="volume-figure">
+          <img src="feynman-html-ru/volume-I-reference-guided-inline-svgmath/images/Ch5-F1.svg" alt="">
+        </figure>
+        <div class="volume-main">
+          <p class="volume-number">Volume I</p>
+          <h2 data-i18n data-ru="Механика, излучение и тепло" data-en="Mechanics, radiation, and heat">Механика, излучение и тепло</h2>
+          <p class="meta" data-i18n data-ru="52 главы · 343 рисунка · 4466 формул" data-en="52 chapters · 343 figures · 4466 formulas">52 главы · 343 рисунка · 4466 формул</p>
+          <div class="status-line" aria-label="Status">
+            <span data-i18n data-ru="медиа RU/EN" data-en="RU/EN media">медиа RU/EN</span>
+            <span data-i18n data-ru="обзор" data-en="overview">обзор</span>
+            <span data-i18n data-ru="конспект" data-en="guide">конспект</span>
+          </div>
         </div>
         <div class="volume-actions">
-          <a class="action primary" data-reader-link data-i18n-link href="feynman-html-ru/volume-I-reference-guided-inline-svgmath/chapters/ch01.html" data-href-ru="feynman-html-ru/volume-I-reference-guided-inline-svgmath/chapters/ch01.html" data-href-en="feynman-html-en/volume-I-reference-guided-inline-svgmath/chapters/ch01.html" data-ru="Читать" data-en="Read">Читать</a>
-          <a class="action" data-reader-link data-i18n-link href="feynman-html-ru/volume-I-reference-guided-inline-svgmath/index.html" data-href-ru="feynman-html-ru/volume-I-reference-guided-inline-svgmath/index.html" data-href-en="feynman-html-en/volume-I-reference-guided-inline-svgmath/index.html" data-ru="Оглавление" data-en="Contents">Оглавление</a>
-          <a class="action" data-reader-link data-i18n-link href="feynman-html-ru/volume-I-reference-guided-inline-svgmath/chapters/ch01.html#chapter-media" data-href-ru="feynman-html-ru/volume-I-reference-guided-inline-svgmath/chapters/ch01.html#chapter-media" data-href-en="feynman-html-en/volume-I-reference-guided-inline-svgmath/chapters/ch01.html#chapter-media" data-ru="Медиа" data-en="Media">Медиа</a>
-          <a class="action" data-reader-link data-i18n-link href="feynman-html-ru/volume-I-reference-guided-inline-svgmath/chapters/ch01.html#study-panel" data-href-ru="feynman-html-ru/volume-I-reference-guided-inline-svgmath/chapters/ch01.html#study-panel" data-href-en="feynman-html-en/volume-I-reference-guided-inline-svgmath/chapters/ch01.html#study-panel" data-ru="Конспект" data-en="Study">Конспект</a>
+          <a class="btn primary" data-reader-link data-i18n-link href="feynman-html-ru/volume-I-reference-guided-inline-svgmath/chapters/ch01.html" data-href-ru="feynman-html-ru/volume-I-reference-guided-inline-svgmath/chapters/ch01.html" data-href-en="feynman-html-en/volume-I-reference-guided-inline-svgmath/chapters/ch01.html" data-ru="Читать" data-en="Read">Читать</a>
+          <a class="btn" data-reader-link data-i18n-link href="feynman-html-ru/volume-I-reference-guided-inline-svgmath/index.html" data-href-ru="feynman-html-ru/volume-I-reference-guided-inline-svgmath/index.html" data-href-en="feynman-html-en/volume-I-reference-guided-inline-svgmath/index.html" data-ru="Оглавление" data-en="Contents">Оглавление</a>
+          <a class="btn" data-reader-link data-i18n-link href="feynman-html-ru/volume-I-reference-guided-inline-svgmath/chapters/ch01.html#chapter-media-audio" data-href-ru="feynman-html-ru/volume-I-reference-guided-inline-svgmath/chapters/ch01.html#chapter-media-audio" data-href-en="feynman-html-en/volume-I-reference-guided-inline-svgmath/chapters/ch01.html#chapter-media-audio" data-ru="Слушать" data-en="Listen">Слушать</a>
+          <a class="btn" data-reader-link data-i18n-link href="feynman-html-ru/volume-I-reference-guided-inline-svgmath/chapters/ch01.html#chapter-media-video" data-href-ru="feynman-html-ru/volume-I-reference-guided-inline-svgmath/chapters/ch01.html#chapter-media-video" data-href-en="feynman-html-en/volume-I-reference-guided-inline-svgmath/chapters/ch01.html#chapter-media-video" data-ru="Смотреть" data-en="Watch">Смотреть</a>
+          <a class="btn" data-reader-link data-i18n-link href="feynman-html-ru/volume-I-reference-guided-inline-svgmath/chapters/reports/ch01-notebooklm-briefing.html" data-href-ru="feynman-html-ru/volume-I-reference-guided-inline-svgmath/chapters/reports/ch01-notebooklm-briefing.html" data-href-en="feynman-html-en/volume-I-reference-guided-inline-svgmath/chapters/reports/ch01-notebooklm-briefing.html" data-ru="Обзор" data-en="Overview">Обзор</a>
+          <a class="btn" data-reader-link data-i18n-link href="feynman-html-ru/volume-I-reference-guided-inline-svgmath/chapters/reports/ch01-notebooklm-study-guide.html" data-href-ru="feynman-html-ru/volume-I-reference-guided-inline-svgmath/chapters/reports/ch01-notebooklm-study-guide.html" data-href-en="feynman-html-en/volume-I-reference-guided-inline-svgmath/chapters/reports/ch01-notebooklm-study-guide.html" data-ru="Конспект" data-en="Guide">Конспект</a>
         </div>
       </article>
 
-      <article class="volume-card">
-        <div class="volume-title">
-          <span class="kicker">Volume II</span>
-          <strong data-i18n data-ru="Электромагнетизм и материя" data-en="Electromagnetism and matter">Электромагнетизм и материя</strong>
-          <span class="meta" data-i18n data-ru="42 главы · 517 рисунков · 4706 формул" data-en="42 chapters · 517 figures · 4706 formulas">42 главы · 517 рисунков · 4706 формул</span>
-        </div>
-        <div class="volume-status">
-          <span data-language-scope="ru">медиа</span>
-          <span data-language-scope="ru">конспекты</span>
-          <span>RU / EN</span>
+      <article class="volume-row">
+        <figure class="volume-figure">
+          <img src="feynman-html-ru/volume-II-reference-guided-inline-svgmath/images/Ch1-F1.svg" alt="">
+        </figure>
+        <div class="volume-main">
+          <p class="volume-number">Volume II</p>
+          <h2 data-i18n data-ru="Электромагнетизм и материя" data-en="Electromagnetism and matter">Электромагнетизм и материя</h2>
+          <p class="meta" data-i18n data-ru="42 главы · 517 рисунков · 4706 формул" data-en="42 chapters · 517 figures · 4706 formulas">42 главы · 517 рисунков · 4706 формул</p>
+          <div class="status-line" aria-label="Status">
+            <span data-language-scope="ru">медиа</span>
+            <span data-language-scope="ru">обзор</span>
+            <span data-language-scope="ru">конспект</span>
+            <span data-language-scope="en">text</span>
+          </div>
         </div>
         <div class="volume-actions">
-          <a class="action primary" data-reader-link data-i18n-link href="feynman-html-ru/volume-II-reference-guided-inline-svgmath/chapters/ch01.html" data-href-ru="feynman-html-ru/volume-II-reference-guided-inline-svgmath/chapters/ch01.html" data-href-en="feynman-html-en/volume-II-reference-guided-inline-svgmath/chapters/ch01.html" data-ru="Читать" data-en="Read">Читать</a>
-          <a class="action" data-reader-link data-i18n-link href="feynman-html-ru/volume-II-reference-guided-inline-svgmath/index.html" data-href-ru="feynman-html-ru/volume-II-reference-guided-inline-svgmath/index.html" data-href-en="feynman-html-en/volume-II-reference-guided-inline-svgmath/index.html" data-ru="Оглавление" data-en="Contents">Оглавление</a>
-          <a class="action" data-language-scope="ru" data-reader-link href="feynman-html-ru/volume-II-reference-guided-inline-svgmath/chapters/ch01.html#study-media">Медиа</a>
-          <a class="action" data-language-scope="ru" data-reader-link href="feynman-html-ru/volume-II-reference-guided-inline-svgmath/chapters/ch01.html#study-panel">Конспект</a>
+          <a class="btn primary" data-reader-link data-i18n-link href="feynman-html-ru/volume-II-reference-guided-inline-svgmath/chapters/ch01.html" data-href-ru="feynman-html-ru/volume-II-reference-guided-inline-svgmath/chapters/ch01.html" data-href-en="feynman-html-en/volume-II-reference-guided-inline-svgmath/chapters/ch01.html" data-ru="Читать" data-en="Read">Читать</a>
+          <a class="btn" data-reader-link data-i18n-link href="feynman-html-ru/volume-II-reference-guided-inline-svgmath/index.html" data-href-ru="feynman-html-ru/volume-II-reference-guided-inline-svgmath/index.html" data-href-en="feynman-html-en/volume-II-reference-guided-inline-svgmath/index.html" data-ru="Оглавление" data-en="Contents">Оглавление</a>
+          <a class="btn" data-language-scope="ru" data-reader-link href="feynman-html-ru/volume-II-reference-guided-inline-svgmath/chapters/ch01.html#chapter-media-audio">Слушать</a>
+          <a class="btn" data-language-scope="ru" data-reader-link href="feynman-html-ru/volume-II-reference-guided-inline-svgmath/chapters/ch01.html#chapter-media-video">Смотреть</a>
+          <a class="btn" data-language-scope="ru" data-reader-link href="feynman-html-ru/volume-II-reference-guided-inline-svgmath/chapters/reports/ch01-notebooklm-briefing.html">Обзор</a>
+          <a class="btn" data-language-scope="ru" data-reader-link href="feynman-html-ru/volume-II-reference-guided-inline-svgmath/chapters/reports/ch01-notebooklm-study-guide.html">Конспект</a>
         </div>
       </article>
 
-      <article class="volume-card">
-        <div class="volume-title">
-          <span class="kicker">Volume III</span>
-          <strong data-i18n data-ru="Квантовая механика" data-en="Quantum mechanics">Квантовая механика</strong>
-          <span class="meta" data-i18n data-ru="21 глава · 178 рисунков · 3472 формулы" data-en="21 chapters · 178 figures · 3472 formulas">21 глава · 178 рисунков · 3472 формулы</span>
-        </div>
-        <div class="volume-status">
-          <span data-language-scope="ru">медиа</span>
-          <span data-language-scope="ru">конспекты</span>
-          <span>RU / EN</span>
+      <article class="volume-row">
+        <figure class="volume-figure">
+          <img src="feynman-html-ru/volume-III-reference-guided-inline-svgmath/images/Ch1-F1.svg" alt="">
+        </figure>
+        <div class="volume-main">
+          <p class="volume-number">Volume III</p>
+          <h2 data-i18n data-ru="Квантовая механика" data-en="Quantum mechanics">Квантовая механика</h2>
+          <p class="meta" data-i18n data-ru="21 глава · 178 рисунков · 3472 формулы" data-en="21 chapters · 178 figures · 3472 formulas">21 глава · 178 рисунков · 3472 формулы</p>
+          <div class="status-line" aria-label="Status">
+            <span data-language-scope="ru">медиа</span>
+            <span data-language-scope="ru">обзор</span>
+            <span data-language-scope="ru">конспект</span>
+            <span data-language-scope="en">text</span>
+          </div>
         </div>
         <div class="volume-actions">
-          <a class="action primary" data-reader-link data-i18n-link href="feynman-html-ru/volume-III-reference-guided-inline-svgmath/chapters/ch01.html" data-href-ru="feynman-html-ru/volume-III-reference-guided-inline-svgmath/chapters/ch01.html" data-href-en="feynman-html-en/volume-III-reference-guided-inline-svgmath/chapters/ch01.html" data-ru="Читать" data-en="Read">Читать</a>
-          <a class="action" data-reader-link data-i18n-link href="feynman-html-ru/volume-III-reference-guided-inline-svgmath/index.html" data-href-ru="feynman-html-ru/volume-III-reference-guided-inline-svgmath/index.html" data-href-en="feynman-html-en/volume-III-reference-guided-inline-svgmath/index.html" data-ru="Оглавление" data-en="Contents">Оглавление</a>
-          <a class="action" data-language-scope="ru" data-reader-link href="feynman-html-ru/volume-III-reference-guided-inline-svgmath/chapters/ch01.html#study-media">Медиа</a>
-          <a class="action" data-language-scope="ru" data-reader-link href="feynman-html-ru/volume-III-reference-guided-inline-svgmath/chapters/ch01.html#study-panel">Конспект</a>
+          <a class="btn primary" data-reader-link data-i18n-link href="feynman-html-ru/volume-III-reference-guided-inline-svgmath/chapters/ch01.html" data-href-ru="feynman-html-ru/volume-III-reference-guided-inline-svgmath/chapters/ch01.html" data-href-en="feynman-html-en/volume-III-reference-guided-inline-svgmath/chapters/ch01.html" data-ru="Читать" data-en="Read">Читать</a>
+          <a class="btn" data-reader-link data-i18n-link href="feynman-html-ru/volume-III-reference-guided-inline-svgmath/index.html" data-href-ru="feynman-html-ru/volume-III-reference-guided-inline-svgmath/index.html" data-href-en="feynman-html-en/volume-III-reference-guided-inline-svgmath/index.html" data-ru="Оглавление" data-en="Contents">Оглавление</a>
+          <a class="btn" data-language-scope="ru" data-reader-link href="feynman-html-ru/volume-III-reference-guided-inline-svgmath/chapters/ch01.html#chapter-media-audio">Слушать</a>
+          <a class="btn" data-language-scope="ru" data-reader-link href="feynman-html-ru/volume-III-reference-guided-inline-svgmath/chapters/ch01.html#chapter-media-video">Смотреть</a>
+          <a class="btn" data-language-scope="ru" data-reader-link href="feynman-html-ru/volume-III-reference-guided-inline-svgmath/chapters/reports/ch01-notebooklm-briefing.html">Обзор</a>
+          <a class="btn" data-language-scope="ru" data-reader-link href="feynman-html-ru/volume-III-reference-guided-inline-svgmath/chapters/reports/ch01-notebooklm-study-guide.html">Конспект</a>
         </div>
       </article>
     </section>
 
-    <h2 class="section-title" data-i18n data-ru="Материалы" data-en="Materials">Материалы</h2>
-    <section class="material-grid" aria-label="Материалы">
-      <article class="material-card">
-        <span class="kicker">TIPS</span>
-        <strong data-i18n data-ru="Советы Фейнмана" data-en="Feynman's Tips on Physics">Советы Фейнмана</strong>
-        <span class="meta">PDF</span>
-        <div class="material-actions">
-          <a class="action" data-reader-link data-i18n-link href="feynman-tips-ru-en/release/tips-ru-en-2026-06-14-v5-dom-hybrid/ru/feynmans-tips-ru-full-dom-hybrid-linked.pdf" data-href-ru="feynman-tips-ru-en/release/tips-ru-en-2026-06-14-v5-dom-hybrid/ru/feynmans-tips-ru-full-dom-hybrid-linked.pdf" data-href-en="feynman-tips-ru-en/release/tips-ru-en-2026-06-14-v5-dom-hybrid/en/feynmans-tips-en-full-dom-hybrid-linked.pdf" data-ru="Открыть" data-en="Open">Открыть</a>
-        </div>
-      </article>
-      <article class="material-card">
-        <span class="kicker">Exercises</span>
-        <strong data-i18n data-ru="Задачник и упражнения" data-en="Exercises and Problems">Задачник и упражнения</strong>
-        <span class="meta">Index</span>
-        <div class="material-actions">
-          <a class="action" data-reader-link data-i18n-link href="feynman-exercises-index/index.html" data-href-ru="feynman-exercises-index/index.html" data-href-en="feynman-exercises-index/index.html" data-ru="Открыть" data-en="Open">Открыть</a>
-        </div>
-      </article>
+    <section class="materials" aria-label="Материалы">
+      <a class="material-link" data-reader-link data-i18n-link href="feynman-tips-ru-en/release/tips-ru-en-2026-06-14-v5-dom-hybrid/ru/feynmans-tips-ru-full-dom-hybrid-linked.pdf" data-href-ru="feynman-tips-ru-en/release/tips-ru-en-2026-06-14-v5-dom-hybrid/ru/feynmans-tips-ru-full-dom-hybrid-linked.pdf" data-href-en="feynman-tips-ru-en/release/tips-ru-en-2026-06-14-v5-dom-hybrid/en/feynmans-tips-en-full-dom-hybrid-linked.pdf" data-ru="Советы Фейнмана · PDF" data-en="Feynman's Tips · PDF">Советы Фейнмана · PDF</a>
+      <a class="material-link" data-reader-link data-i18n-link href="feynman-exercises-index/index.html" data-href-ru="feynman-exercises-index/index.html" data-href-en="feynman-exercises-index/index.html" data-ru="Задачник и упражнения" data-en="Exercises and Problems">Задачник и упражнения</a>
+      <span class="material-note" data-i18n data-ru="Учебные медиа и конспекты отмечены как AI-generated." data-en="Study media and notes are marked as AI-generated.">Учебные медиа и конспекты отмечены как AI-generated.</span>
     </section>
   </main>
 
@@ -155,6 +164,7 @@
         try { localStorage.setItem(key, value); } catch (_) {}
       }
     };
+    const normalizeHref = (href) => (href || "").replace(/^(\.\.\/)+/, "");
     const setTheme = (theme) => {
       document.body.dataset.theme = theme;
       storage.set(themeKey, theme);
@@ -168,7 +178,7 @@
     const setLanguage = (language) => {
       const next = language === "en" ? "en" : "ru";
       const defaultHref = next === "en" ? continueLink?.dataset.defaultEn : continueLink?.dataset.defaultRu;
-      const lastHref = storage.get(lastEntryKey, "");
+      const lastHref = normalizeHref(storage.get(lastEntryKey, ""));
       document.documentElement.lang = next;
       document.body.dataset.language = next;
       storage.set(languageKey, next);
@@ -212,7 +222,7 @@
       }
       const link = event.target.closest("[data-reader-link]");
       if (!link) return;
-      storage.set(lastEntryKey, link.getAttribute("href"));
+      storage.set(lastEntryKey, normalizeHref(link.getAttribute("href")));
     });
   })();
   </script>
