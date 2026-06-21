@@ -3,6 +3,24 @@
   if (!cards.length) return;
 
   const isRu = () => (document.documentElement.lang || "").toLowerCase().startsWith("ru");
+  const MEDIA_INTENT_KEY = "flp-reader-media-intent";
+  const readMediaIntent = () => {
+    try {
+      return sessionStorage.getItem(MEDIA_INTENT_KEY) || "";
+    } catch (_) {
+      return "";
+    }
+  };
+  const setMediaIntent = (type) => {
+    try {
+      sessionStorage.setItem(MEDIA_INTENT_KEY, type);
+    } catch (_) {}
+  };
+  const clearMediaIntent = () => {
+    try {
+      sessionStorage.removeItem(MEDIA_INTENT_KEY);
+    } catch (_) {}
+  };
   const isAudioCard = (card) => {
     const text = [
       card.querySelector("strong")?.textContent || "",
@@ -33,6 +51,7 @@
       player.querySelector("iframe").removeAttribute("src");
       player.hidden = true;
       document.querySelectorAll(".study-youtube-card.is-playing").forEach((card) => card.classList.remove("is-playing"));
+      clearMediaIntent();
       setToolbarActive("");
     });
     return player;
@@ -60,6 +79,7 @@
     player.hidden = false;
     document.querySelectorAll(".study-youtube-card.is-playing").forEach((item) => item.classList.remove("is-playing"));
     card.classList.add("is-playing");
+    setMediaIntent("audio");
     setToolbarActive("audio");
   };
 
@@ -77,6 +97,7 @@
     player.querySelector("iframe").removeAttribute("src");
     player.hidden = true;
     document.querySelectorAll(".study-youtube-card.is-playing").forEach((card) => card.classList.remove("is-playing"));
+    clearMediaIntent();
     setToolbarActive("");
   };
 
@@ -92,11 +113,18 @@
 
   const scrollToVideo = (card) => {
     closeFloatingAudio();
+    clearMediaIntent();
     showMediaSection();
     setToolbarActive("video");
     window.requestAnimationFrame(() => {
       card.scrollIntoView({ block: "start", inline: "nearest" });
     });
+  };
+
+  const openFromMediaIntent = () => {
+    if (readMediaIntent() !== "audio") return;
+    const audio = cards.find(isAudioCard);
+    if (audio) openAudio(audio);
   };
 
   const injectToolbarControls = () => {
@@ -146,4 +174,5 @@
   });
 
   injectToolbarControls();
+  openFromMediaIntent();
 })();

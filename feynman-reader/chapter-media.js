@@ -31,6 +31,24 @@
 
   const isRu = () => (document.documentElement.lang || "").toLowerCase().startsWith("ru");
   const typeOf = (link) => /слушать|listen/i.test(link.textContent || "") ? "audio" : "video";
+  const MEDIA_INTENT_KEY = "flp-reader-media-intent";
+  const readMediaIntent = () => {
+    try {
+      return sessionStorage.getItem(MEDIA_INTENT_KEY) || "";
+    } catch (_) {
+      return "";
+    }
+  };
+  const setMediaIntent = (type) => {
+    try {
+      sessionStorage.setItem(MEDIA_INTENT_KEY, type);
+    } catch (_) {}
+  };
+  const clearMediaIntent = () => {
+    try {
+      sessionStorage.removeItem(MEDIA_INTENT_KEY);
+    } catch (_) {}
+  };
   const chapterTitleFor = (panel) => panel.dataset.chapterTitle || panel.querySelector(".chapter-media-copy strong")?.textContent?.trim() || "";
   const labelFor = (panel, type) => {
     const title = chapterTitleFor(panel);
@@ -62,6 +80,7 @@
     player.querySelector(".floating-youtube-close").addEventListener("click", () => {
       player.querySelector("iframe").removeAttribute("src");
       player.hidden = true;
+      clearMediaIntent();
       setToolbarActive("");
       document.querySelectorAll(".chapter-media-link.is-active").forEach((item) => {
         if (typeOf(item) === "audio") {
@@ -88,6 +107,7 @@
     if (!player) return;
     player.querySelector("iframe").removeAttribute("src");
     player.hidden = true;
+    clearMediaIntent();
     setToolbarActive("");
   };
 
@@ -132,6 +152,7 @@
         if (iframe) iframe.removeAttribute("src");
       }
       openFloatingAudio({ embedUrl, label: mediaLabel, href: link.href });
+      setMediaIntent("audio");
       panel.querySelectorAll(".chapter-media-link").forEach((item) => {
         const active = item === link;
         item.classList.toggle("is-active", active);
@@ -142,6 +163,7 @@
       return true;
     }
     closeFloatingAudio();
+    clearMediaIntent();
     const player = ensurePlayer(panel);
     const iframe = player.querySelector("iframe");
     const label = player.querySelector(".chapter-media-player-label");
@@ -212,8 +234,17 @@
     if (link) activate(link, { scroll: true });
   };
 
+  const openFromMediaIntent = () => {
+    const hash = decodeURIComponent(window.location.hash || "");
+    if (hash.startsWith("#chapter-media")) return;
+    if (readMediaIntent() !== "audio") return;
+    const link = [...panels[0].querySelectorAll(".chapter-media-link")].find((item) => typeOf(item) === "audio");
+    if (link) activate(link);
+  };
+
   window.addEventListener("hashchange", openFromHash);
   window.addEventListener("load", openFromHash);
   injectToolbarControls();
   openFromHash();
+  openFromMediaIntent();
 })();
