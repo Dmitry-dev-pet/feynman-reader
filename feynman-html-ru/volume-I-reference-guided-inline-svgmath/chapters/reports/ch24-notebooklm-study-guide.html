@@ -24,17 +24,34 @@
 </head>
 <body class="notebooklm-report-page" data-language="ru">
   <script>
-    try {
-      document.body.dataset.theme = localStorage.getItem("flp-reader-theme") || "light";
-    } catch (_) {
-      document.body.dataset.theme = "light";
-    }
+    (() => {
+      const key = "flp-reader-theme";
+      const applyTheme = (theme) => {
+        const next = theme === "dark" ? "dark" : "light";
+        document.documentElement.dataset.theme = next;
+        document.body.dataset.theme = next;
+        try { localStorage.setItem(key, next); } catch (_) {}
+      };
+      try { applyTheme(localStorage.getItem(key) || "light"); } catch (_) { applyTheme("light"); }
+      document.addEventListener("click", (event) => {
+        const button = event.target.closest('[data-report-action="theme"]');
+        if (!button) return;
+        applyTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark");
+      });
+    })();
   </script>
-  <main class="notebooklm-report-shell">
-    <nav class="notebooklm-report-nav">
-      <a class="nav-btn" href="../ch24.html#study-panel">Назад к главе</a>
-      <a class="nav-btn" href="../../index.html">Оглавление тома</a>
-    </nav>
+<main class="notebooklm-report-shell">
+    <header aria-label="Быстрая навигация" class="reader-toolbar report-toolbar">
+      <div class="toolbar-group toolbar-navigation">
+        <a class="toolbar-btn" href="../ch24.html">Назад к главе</a>
+        <a class="toolbar-btn" href="../../../../feynman-reader/index.html">Учебник</a>
+        <a class="toolbar-btn" href="../../index.html">Оглавление</a>
+      </div>
+      <a class="toolbar-title" href="../ch24.html#ch24" title="NotebookLM · Конспект">NotebookLM · Конспект</a>
+      <div class="toolbar-group toolbar-settings">
+        <button aria-label="Сменить тему" class="toolbar-btn icon-btn" data-report-action="theme" title="Сменить тему" type="button">◐</button>
+      </div>
+    </header>
     <article class="notebooklm-report">
 <h1 id="глава-24-переходные-решения">Глава 24. Переходные решения</h1>
 <p>Данный учебный конспект составлен на основе лекций Фейнмана и

@@ -29,6 +29,8 @@ def main() -> int:
     run([python, str(tools / "build_media_manifest.py"), *check_flag])
     run([python, str(tools / "clean_manifest_backed_html.py"), *check_flag])
     run([python, str(tools / "clean_manifest_backed_css.py"), *check_flag])
+    run([python, str(tools / "update_notebooklm_report_shell.py"), *check_flag])
+    run([python, str(tools / "update_volume_index_material_links.py"), *check_flag])
     return 0
 
 
