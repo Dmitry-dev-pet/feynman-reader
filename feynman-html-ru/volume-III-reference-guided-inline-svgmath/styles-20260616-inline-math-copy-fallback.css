@@ -126,20 +126,55 @@ footer {
   text-decoration: none;
 }
 .chapter-list {
-  columns: 2 22rem;
-  padding-left: 1.5rem;
+  display: grid;
+  gap: 0.65rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
-.chapter-list li { break-inside: avoid; margin: 0 0 0.45rem; }
+.chapter-list > li {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  break-inside: avoid;
+  margin: 0;
+  padding: 0.75rem 0.85rem;
+}
 .chapter-list-title {
   color: var(--text);
+  display: inline-block;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  font-weight: 700;
+  font-weight: 750;
+  line-height: 1.25;
   text-decoration-thickness: 1px;
   text-underline-offset: 0.16em;
 }
+.chapter-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin: 0.55rem 0 0.2rem;
+}
+.chapter-actions a {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--text);
+  display: inline-flex;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.82rem;
+  font-weight: 700;
+  min-height: 1.85rem;
+  padding: 0.24rem 0.58rem;
+  text-decoration: none;
+}
+.chapter-actions a:hover {
+  background: var(--accent-weak);
+  border-color: var(--accent);
+  color: var(--accent);
+}
 .section-list {
   list-style: none;
-  margin: 0.35rem 0 0.95rem;
+  margin: 0.35rem 0 0.2rem;
   padding: 0 0 0 0.65rem;
 }
 .section-list li {
