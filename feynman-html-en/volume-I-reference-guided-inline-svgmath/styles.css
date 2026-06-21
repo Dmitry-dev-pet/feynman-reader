@@ -1146,9 +1146,14 @@ figcaption {
   justify-content: center;
 }
 .study-mode-btn.is-active,
-.study-mode-btn[aria-pressed="true"] {
+.study-mode-btn[aria-pressed="true"],
+.media-toolbar-btn.is-active,
+.media-toolbar-btn[aria-pressed="true"] {
   border-color: var(--accent);
   color: var(--accent);
+}
+.media-toolbar-controls {
+  flex: 0 0 auto;
 }
 .study-workspace {
   background: color-mix(in srgb, var(--paper), var(--bg) 16%);
@@ -1558,6 +1563,9 @@ body[data-theme="dark"] .chapter-media-link.primary {
   padding-left: 1rem;
 }
 @media (max-width: 860px) {
+  .media-toolbar-controls {
+    order: 1;
+  }
   .study-mode-switch {
     flex-basis: 100%;
     justify-content: flex-start;

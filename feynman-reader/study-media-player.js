@@ -33,6 +33,7 @@
       player.querySelector("iframe").removeAttribute("src");
       player.hidden = true;
       document.querySelectorAll(".study-youtube-card.is-playing").forEach((card) => card.classList.remove("is-playing"));
+      setToolbarActive("");
     });
     return player;
   };
@@ -59,6 +60,73 @@
     player.hidden = false;
     document.querySelectorAll(".study-youtube-card.is-playing").forEach((item) => item.classList.remove("is-playing"));
     card.classList.add("is-playing");
+    setToolbarActive("audio");
+  };
+
+  const setToolbarActive = (type) => {
+    document.querySelectorAll(".media-toolbar-btn").forEach((button) => {
+      const active = button.dataset.mediaType === type;
+      button.classList.toggle("is-active", active);
+      button.setAttribute("aria-pressed", active ? "true" : "false");
+    });
+  };
+
+  const closeFloatingAudio = () => {
+    const player = document.querySelector(".floating-youtube-player");
+    if (!player) return;
+    player.querySelector("iframe").removeAttribute("src");
+    player.hidden = true;
+    document.querySelectorAll(".study-youtube-card.is-playing").forEach((card) => card.classList.remove("is-playing"));
+    setToolbarActive("");
+  };
+
+  const showMediaSection = () => {
+    const mediaButton = document.querySelector('[data-study-mode="media"]');
+    if (mediaButton) {
+      mediaButton.click();
+      return;
+    }
+    document.querySelector("#study-panel")?.removeAttribute("hidden");
+    document.querySelector('[data-study-section="media"]')?.removeAttribute("hidden");
+  };
+
+  const scrollToVideo = (card) => {
+    closeFloatingAudio();
+    showMediaSection();
+    setToolbarActive("video");
+    window.requestAnimationFrame(() => {
+      card.scrollIntoView({ block: "start", inline: "nearest" });
+    });
+  };
+
+  const injectToolbarControls = () => {
+    const toolbar = document.querySelector(".reader-toolbar");
+    const title = toolbar?.querySelector(".toolbar-title");
+    if (!toolbar || !title || toolbar.querySelector(".media-toolbar-controls")) return;
+    const audio = cards.find(isAudioCard);
+    const video = cards.find((card) => !isAudioCard(card));
+    if (!audio && !video) return;
+
+    const controls = document.createElement("div");
+    controls.className = "toolbar-group media-toolbar-controls";
+    controls.setAttribute("aria-label", isRu() ? "Медиа главы" : "Chapter media");
+
+    const makeButton = (type, handler) => {
+      const button = document.createElement("button");
+      button.className = "toolbar-btn media-toolbar-btn";
+      button.type = "button";
+      button.dataset.mediaType = type;
+      button.setAttribute("aria-pressed", "false");
+      button.textContent = isRu()
+        ? (type === "audio" ? "Слушать" : "Смотреть")
+        : (type === "audio" ? "Listen" : "Watch");
+      button.addEventListener("click", handler);
+      return button;
+    };
+
+    if (audio) controls.append(makeButton("audio", () => openAudio(audio)));
+    if (video) controls.append(makeButton("video", () => scrollToVideo(video)));
+    title.insertAdjacentElement("afterend", controls);
   };
 
   cards.forEach((card) => {
@@ -76,4 +144,6 @@
     button.addEventListener("click", () => openAudio(card));
     card.querySelector(".study-youtube-embed")?.before(button);
   });
+
+  injectToolbarControls();
 })();

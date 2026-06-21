@@ -62,6 +62,7 @@
     player.querySelector(".floating-youtube-close").addEventListener("click", () => {
       player.querySelector("iframe").removeAttribute("src");
       player.hidden = true;
+      setToolbarActive("");
       document.querySelectorAll(".chapter-media-link.is-active").forEach((item) => {
         if (typeOf(item) === "audio") {
           item.classList.remove("is-active");
@@ -87,6 +88,15 @@
     if (!player) return;
     player.querySelector("iframe").removeAttribute("src");
     player.hidden = true;
+    setToolbarActive("");
+  };
+
+  const setToolbarActive = (type) => {
+    document.querySelectorAll(".media-toolbar-btn").forEach((button) => {
+      const active = button.dataset.mediaType === type;
+      button.classList.toggle("is-active", active);
+      button.setAttribute("aria-pressed", active ? "true" : "false");
+    });
   };
 
   const ensurePlayer = (panel) => {
@@ -127,6 +137,7 @@
         item.classList.toggle("is-active", active);
         item.setAttribute("aria-pressed", active ? "true" : "false");
       });
+      setToolbarActive("audio");
       if (scroll) panel.scrollIntoView({ block: "start", inline: "nearest" });
       return true;
     }
@@ -147,8 +158,40 @@
       item.classList.toggle("is-active", active);
       item.setAttribute("aria-pressed", active ? "true" : "false");
     });
+    setToolbarActive("video");
     if (scroll) panel.scrollIntoView({ block: "start", inline: "nearest" });
     return true;
+  };
+
+  const injectToolbarControls = () => {
+    const toolbar = document.querySelector(".reader-toolbar");
+    const title = toolbar?.querySelector(".toolbar-title");
+    if (!toolbar || !title || toolbar.querySelector(".media-toolbar-controls")) return;
+    const links = [...panels[0].querySelectorAll(".chapter-media-link")];
+    const audio = links.find((link) => typeOf(link) === "audio");
+    const video = links.find((link) => typeOf(link) === "video");
+    if (!audio && !video) return;
+
+    const controls = document.createElement("div");
+    controls.className = "toolbar-group media-toolbar-controls";
+    controls.setAttribute("aria-label", isRu() ? "Медиа главы" : "Chapter media");
+
+    const makeButton = (type, link) => {
+      const button = document.createElement("button");
+      button.className = "toolbar-btn media-toolbar-btn";
+      button.type = "button";
+      button.dataset.mediaType = type;
+      button.setAttribute("aria-pressed", "false");
+      button.textContent = isRu()
+        ? (type === "audio" ? "Слушать" : "Смотреть")
+        : (type === "audio" ? "Listen" : "Watch");
+      button.addEventListener("click", () => activate(link, { scroll: type === "video" }));
+      return button;
+    };
+
+    if (audio) controls.append(makeButton("audio", audio));
+    if (video) controls.append(makeButton("video", video));
+    title.insertAdjacentElement("afterend", controls);
   };
 
   document.addEventListener("click", (event) => {
@@ -171,5 +214,6 @@
 
   window.addEventListener("hashchange", openFromHash);
   window.addEventListener("load", openFromHash);
+  injectToolbarControls();
   openFromHash();
 })();
