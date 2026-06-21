@@ -99,9 +99,6 @@
       </div>
       <a class="toolbar-title" href="#ch04" title="Глава 4. Электростатика">Фейнмановские лекции по физике, том II · 4</a>
 
-<!-- BEGIN NotebookLM toolbar -->
-      <div class="study-mode-switch" aria-label="Материалы главы"><button class="toolbar-btn study-mode-btn is-active" type="button" data-study-mode="lecture" aria-pressed="true">Лекция</button><button class="toolbar-btn study-mode-btn" type="button" data-study-mode="files" aria-pressed="false">Файлы</button></div>
-<!-- END NotebookLM toolbar -->
       <div class="toolbar-group toolbar-settings" aria-label="Настройки чтения">
         <a class="toolbar-btn language-toggle is-ru" href="../../../feynman-html-en/volume-II-reference-guided-inline-svgmath/chapters/ch04.html" aria-label="English" title="English"><span class="lang-ru">RU</span><span aria-hidden="true">/</span><span class="lang-en">EN</span></a>
         <button class="toolbar-btn icon-btn" type="button" data-reader-action="theme" aria-label="Сменить тему" title="Сменить тему">◐</button>
@@ -113,27 +110,8 @@
         <button class="toolbar-btn icon-btn" type="button" data-reader-action="tex" aria-label="TeX формул" title="TeX формул">{}</button>
       </div>
     </header>
-<!-- BEGIN NotebookLM reports -->
-    <section class="study-workspace" id="study-panel" hidden>
-      <div class="study-workspace-inner">
-        <header class="study-workspace-header">
-          <div>
-            <strong>Материалы главы</strong>
-            <span>Сгенерированные учебные материалы NotebookLM для этой главы.</span>
-          </div>
-        </header>
 
-        <section class="study-section" data-study-section="files" hidden>
-    <div class="study-card">
-      <strong>Файлы</strong>
-      <span class="study-file-row"><a href="../../../feynman-notebooklm/ru/volume-II/ch04/ch04-full.md">Текст главы для NotebookLM</a><a href="../../../feynman-notebooklm/ru/volume-II/ch04/figure-context/ch04-figures-context.md">Рисунки и контекст</a><a href="../../../feynman-notebooklm/ru/volume-II/ch04/manifest.json">Манифест</a><a href="../../../feynman-notebooklm/ru/volume-II/ch04/sections/">Разделы главы</a><a href="reports/ch04-notebooklm-briefing.md">Обзор главы MD</a><a href="reports/ch04-notebooklm-study-guide.md">Конспект MD</a></span>
-    </div>
-  </section>
-      </div>
-    </section>
-<!-- END NotebookLM reports -->
-
-    <article class="chapter-flow study-section" data-study-section="lecture"><h1 id="ch04">Глава 4. Электростатика</h1><h2 id="sec-4-1">4–1 Статика<a class="permalink" href="#sec-4-1" aria-label="Ссылка на раздел">#</a></h2><p>Начнем теперь подробное изучение теории электромагнетизма. Она вся (весь электромагнетизм целиком) запрятана в уравнениях Максвелла. Уравнения Максвелла:</p><div class="display-math" id="eq-4-1"><svg class="math-svg display" aria-label="\begin{aligned}
+    <article class="chapter-flow"><h1 id="ch04">Глава 4. Электростатика</h1><h2 id="sec-4-1">4–1 Статика<a class="permalink" href="#sec-4-1" aria-label="Ссылка на раздел">#</a></h2><p>Начнем теперь подробное изучение теории электромагнетизма. Она вся (весь электромагнетизм целиком) запрятана в уравнениях Максвелла. Уравнения Максвелла:</p><div class="display-math" id="eq-4-1"><svg class="math-svg display" aria-label="\begin{aligned}
 
 \mathbf{d}iv{\mathbf{E}}&amp;=\frac{\rho}{\epsilon_0},\\[1ex]
 
@@ -720,39 +698,6 @@ E=\frac{1}{4\pi\epsilon_0}\,\frac{Q}{R^2},
 
 <footer>Фейнмановские лекции по физике, том II · Ричард Фейнман, Роберт Лейтон, Мэтью Сэндс</footer>
 
-<!-- BEGIN NotebookLM script -->
-<script>
-(() => {
-  const workspace = document.querySelector(".study-workspace");
-  const buttons = [...document.querySelectorAll("[data-study-mode]")];
-  const sections = [...document.querySelectorAll("[data-study-section]")];
-  if (!workspace || !buttons.length || !sections.length) return;
-  const setMode = (mode) => {
-    const activeMode = sections.some((section) => section.dataset.studySection === mode) ? mode : "lecture";
-    workspace.hidden = activeMode === "lecture";
-    buttons.forEach((button) => {
-      const active = button.dataset.studyMode === activeMode;
-      button.classList.toggle("is-active", active);
-      button.setAttribute("aria-pressed", active ? "true" : "false");
-    });
-    sections.forEach((section) => {
-      section.hidden = section.dataset.studySection !== activeMode;
-    });
-    const target = document.querySelector(`[data-study-section="${activeMode}"]`);
-    if (target) target.scrollIntoView({ block: "start" });
-  };
-  document.addEventListener("click", (event) => {
-    const button = event.target.closest("[data-study-mode]");
-    if (!button) return;
-    event.preventDefault();
-    setMode(button.dataset.studyMode || "lecture");
-  });
-  if (location.hash === "#study-media") setMode("media");
-  else if (location.hash === "#study-panel") setMode("notes");
-  else setMode("lecture");
-})();
-</script>
-<!-- END NotebookLM script -->
 <script src="../../../feynman-reader/media-player.js?v=20260621-clean-html" defer></script>
 </body>
 </html>

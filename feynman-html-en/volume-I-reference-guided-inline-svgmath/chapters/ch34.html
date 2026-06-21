@@ -109,9 +109,6 @@
 <a class="nav-btn next-chapter" href="ch35.html">Next</a>
 </div>
 <a class="toolbar-title" href="#ch34" title="34. Relativistic Effects in Radiation">The Feynman Lectures on Physics, Volume I · 34</a>
-<!-- BEGIN NotebookLM toolbar -->
-<div aria-label="Chapter materials" class="study-mode-switch"><button aria-pressed="true" class="toolbar-btn study-mode-btn is-active" data-study-mode="lecture" type="button">Lecture</button><button aria-pressed="false" class="toolbar-btn study-mode-btn" data-study-mode="files" type="button">Files</button></div>
-<!-- END NotebookLM toolbar -->
 <div aria-label="Reading settings" class="toolbar-group toolbar-settings">
 <a aria-label="Русский" class="toolbar-btn language-toggle is-en" href="../../../feynman-html-ru/volume-I-reference-guided-inline-svgmath/chapters/ch34.html" title="Русский"><span class="lang-ru">RU</span><span aria-hidden="true">/</span><span class="lang-en">EN</span></a>
 <button aria-label="Switch theme" class="toolbar-btn icon-btn" data-reader-action="theme" title="Switch theme" type="button">◐</button>
@@ -123,26 +120,7 @@
 <button aria-label="Formula TeX" class="toolbar-btn icon-btn" data-reader-action="tex" title="Formula TeX" type="button">{}</button>
 </div>
 </header>
-<!-- BEGIN NotebookLM reports -->
-<section class="study-workspace" hidden="" id="study-panel">
-<div class="study-workspace-inner">
-<header class="study-workspace-header">
-<div>
-<strong>Chapter materials</strong>
-<span>NotebookLM-generated study materials for this chapter.</span>
-</div>
-</header>
-
-<section class="study-section" data-study-section="files" hidden="">
-<div class="study-card">
-<strong>Files</strong>
-<span class="study-file-row"><a href="../../../feynman-notebooklm/en/volume-I/ch34/ch34-full.md">NotebookLM chapter text</a><a href="../../../feynman-notebooklm/en/volume-I/ch34/figure-context/ch34-figures-context.md">Figures and context</a><a href="../../../feynman-notebooklm/en/volume-I/ch34/manifest.json">Manifest</a><a href="../../../feynman-notebooklm/en/volume-I/ch34/sections/">Chapter sections</a><a href="reports/ch34-notebooklm-briefing.md">Chapter overview MD</a><a href="reports/ch34-notebooklm-study-guide.md">Study guide MD</a></span>
-</div>
-</section>
-</div>
-</section>
-<!-- END NotebookLM reports -->
-<article class="chapter-flow study-section" data-study-section="lecture"><h1 id="ch34">34. Relativistic Effects in Radiation</h1><h2 id="sec-34-1">34–1 Moving sources<a aria-label="Section link" class="permalink" href="#sec-34-1">#</a></h2><p>In the present chapter we shall describe a number of miscellaneous effects in connection with radiation, and then we shall be finished with the classical theory of light propagation. In our analysis of light, we have gone rather far and into considerable detail. The only phenomena of any consequence associated with electromagnetic radiation that we have not discussed is what happens if radiowaves are contained in a box with reflecting walls, the size of the box being comparable to a wavelength, or are transmitted down a long tube. The phenomena of so-called cavity resonators and waveguides we shall discuss later; we shall first use another physical example—sound—and then we shall return to this subject. Except for this, the present chapter is our last consideration of the classical theory of light.</p><p>We can summarize all the effects that we shall now discuss by remarking that they have to do with the effects of moving sources. We no longer assume that the source is localized, with all its motion being at a relatively low speed near a fixed point.</p><p>We recall that the fundamental laws of electrodynamics say that, at large distances from a moving charge, the electric field is given by the formula</p><div class="display-math" id="eq-34-1"><svg aria-label="
+<article class="chapter-flow"><h1 id="ch34">34. Relativistic Effects in Radiation</h1><h2 id="sec-34-1">34–1 Moving sources<a aria-label="Section link" class="permalink" href="#sec-34-1">#</a></h2><p>In the present chapter we shall describe a number of miscellaneous effects in connection with radiation, and then we shall be finished with the classical theory of light propagation. In our analysis of light, we have gone rather far and into considerable detail. The only phenomena of any consequence associated with electromagnetic radiation that we have not discussed is what happens if radiowaves are contained in a box with reflecting walls, the size of the box being comparable to a wavelength, or are transmitted down a long tube. The phenomena of so-called cavity resonators and waveguides we shall discuss later; we shall first use another physical example—sound—and then we shall return to this subject. Except for this, the present chapter is our last consideration of the classical theory of light.</p><p>We can summarize all the effects that we shall now discuss by remarking that they have to do with the effects of moving sources. We no longer assume that the source is localized, with all its motion being at a relatively low speed near a fixed point.</p><p>We recall that the fundamental laws of electrodynamics say that, at large distances from a moving charge, the electric field is given by the formula</p><div class="display-math" id="eq-34-1"><svg aria-label="
 
 \mathbf{E}=-\frac{q}{4\pi\epsilon_0 c^2}\,
 \frac{d^2\mathbf{e}_{R'}}{dt^2}.
@@ -577,38 +555,6 @@ W=\hbar\omega,\quad
 })();
 </script>
 <footer>The Feynman Lectures on Physics, Volume I · Richard Feynman, Robert Leighton, Matthew Sands</footer>
-<!-- BEGIN NotebookLM script -->
-<script>
-(() => {
-  const workspace = document.querySelector(".study-workspace");
-  const buttons = [...document.querySelectorAll("[data-study-mode]")];
-  const sections = [...document.querySelectorAll("[data-study-section]")];
-  if (!workspace || !buttons.length || !sections.length) return;
-  const setMode = (mode) => {
-    const activeMode = sections.some((section) => section.dataset.studySection === mode) ? mode : "lecture";
-    workspace.hidden = activeMode === "lecture";
-    buttons.forEach((button) => {
-      const active = button.dataset.studyMode === activeMode;
-      button.classList.toggle("is-active", active);
-      button.setAttribute("aria-pressed", active ? "true" : "false");
-    });
-    sections.forEach((section) => {
-      section.hidden = section.dataset.studySection !== activeMode;
-    });
-    const target = document.querySelector(`[data-study-section="${activeMode}"]`);
-    if (target) target.scrollIntoView({ block: "start" });
-  };
-  document.addEventListener("click", (event) => {
-    const button = event.target.closest("[data-study-mode]");
-    if (!button) return;
-    event.preventDefault();
-    setMode(button.dataset.studyMode || "lecture");
-  });
-  if (location.hash === "#study-panel") setMode("notes");
-  else setMode("lecture");
-})();
-</script>
-<!-- END NotebookLM script -->
 <script src="../../../feynman-reader/media-player.js?v=20260621-clean-html" defer></script>
 </body>
 </html>

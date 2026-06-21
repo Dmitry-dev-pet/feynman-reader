@@ -84,6 +84,16 @@ def validate_chapters(errors: list[str]) -> None:
 
         if "chapter-media-panel" in text:
             fail(errors, f"legacy chapter-media-panel remains in {rel}")
+        if "study-workspace" in text:
+            fail(errors, f"legacy study workspace remains in {rel}")
+        if "study-mode-switch" in text:
+            fail(errors, f"legacy study mode switch remains in {rel}")
+        if "data-study-mode=" in text:
+            fail(errors, f"legacy study mode button remains in {rel}")
+        if "data-study-section=" in text:
+            fail(errors, f"legacy study section remains in {rel}")
+        if "BEGIN NotebookLM script" in text:
+            fail(errors, f"legacy NotebookLM inline script remains in {rel}")
         if 'data-study-section="notes"' in text or "data-study-section='notes'" in text:
             fail(errors, f"manifest-backed notes section remains in {rel}")
         if 'data-study-section="media"' in text or "data-study-section='media'" in text:

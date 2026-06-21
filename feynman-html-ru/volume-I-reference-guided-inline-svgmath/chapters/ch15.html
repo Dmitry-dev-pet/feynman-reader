@@ -109,9 +109,6 @@
 <a class="nav-btn next-chapter" href="ch16.html">Дальше</a>
 </div>
 <a class="toolbar-title" href="#ch15" title="Глава 15. Специальная теория относительности">Фейнмановские лекции по физике, том I · 15</a>
-<!-- BEGIN NotebookLM toolbar -->
-<div aria-label="Материалы главы" class="study-mode-switch"><button aria-pressed="true" class="toolbar-btn study-mode-btn is-active" data-study-mode="lecture" type="button">Лекция</button><button aria-pressed="false" class="toolbar-btn study-mode-btn" data-study-mode="files" type="button">Файлы</button></div>
-<!-- END NotebookLM toolbar -->
 <div aria-label="Настройки чтения" class="toolbar-group toolbar-settings">
 <a aria-label="English" class="toolbar-btn language-toggle is-ru" href="../../../feynman-html-en/volume-I-reference-guided-inline-svgmath/chapters/ch15.html" title="English"><span class="lang-ru">RU</span><span aria-hidden="true">/</span><span class="lang-en">EN</span></a>
 <button aria-label="Сменить тему" class="toolbar-btn icon-btn" data-reader-action="theme" title="Сменить тему" type="button">◐</button>
@@ -123,26 +120,7 @@
 <button aria-label="TeX формул" class="toolbar-btn icon-btn" data-reader-action="tex" title="TeX формул" type="button">{}</button>
 </div>
 </header>
-<!-- BEGIN NotebookLM reports -->
-<section class="study-workspace" hidden="" id="study-panel">
-<div class="study-workspace-inner">
-<header class="study-workspace-header">
-<div>
-<strong>Материалы главы</strong>
-<span>Сгенерированные учебные материалы NotebookLM для этой главы.</span>
-</div>
-</header>
-
-<section class="study-section" data-study-section="files" hidden="">
-<div class="study-card">
-<strong>Файлы</strong>
-<span class="study-file-row"><a href="../../../feynman-notebooklm/ru/volume-I/ch15/ch15-full.md">Текст главы для NotebookLM</a><a href="../../../feynman-notebooklm/ru/volume-I/ch15/figure-context/ch15-figures-context.md">Рисунки и контекст</a><a href="../../../feynman-notebooklm/ru/volume-I/ch15/manifest.json">Манифест</a><a href="../../../feynman-notebooklm/ru/volume-I/ch15/sections/">Разделы главы</a><a href="reports/ch15-notebooklm-briefing.md">Обзор главы MD</a><a href="reports/ch15-notebooklm-study-guide.md">Конспект MD</a></span>
-</div>
-</section>
-</div>
-</section>
-<!-- END NotebookLM reports -->
-<article class="chapter-flow study-section" data-study-section="lecture"><h1 id="ch15">Глава 15. Специальная теория относительности</h1><h2 id="sec-15-1">15–1 Принцип относительности<a aria-label="Ссылка на раздел" class="permalink" href="#sec-15-1">#</a></h2><p>Свыше двухсот лет считалось, что уравнения движения, провозглашенные Ньютоном, правильно описывают природу, и когда в этих законах впервые была обнаружена ошибка, способ ее исправления был также найден. И ошибка, и ее исправление были открыты Эйнштейном в 1905 г.</p><p>Второй закон Ньютона, выраженный нами уравнением</p><div class="display-math"><svg aria-label="
+<article class="chapter-flow"><h1 id="ch15">Глава 15. Специальная теория относительности</h1><h2 id="sec-15-1">15–1 Принцип относительности<a aria-label="Ссылка на раздел" class="permalink" href="#sec-15-1">#</a></h2><p>Свыше двухсот лет считалось, что уравнения движения, провозглашенные Ньютоном, правильно описывают природу, и когда в этих законах впервые была обнаружена ошибка, способ ее исправления был также найден. И ошибка, и ее исправление были открыты Эйнштейном в 1905 г.</p><p>Второй закон Ньютона, выраженный нами уравнением</p><div class="display-math"><svg aria-label="
 F=d(mv)/dt,
 " class="math-svg display" data-tex="
 F=d(mv)/dt,
@@ -558,38 +536,6 @@ m=m_0/\sqrt{1-v^2/c^2}.
 })();
 </script>
 <footer>Фейнмановские лекции по физике, том I · Ричард Фейнман, Роберт Лейтон, Мэтью Сэндс</footer>
-<!-- BEGIN NotebookLM script -->
-<script>
-(() => {
-  const workspace = document.querySelector(".study-workspace");
-  const buttons = [...document.querySelectorAll("[data-study-mode]")];
-  const sections = [...document.querySelectorAll("[data-study-section]")];
-  if (!workspace || !buttons.length || !sections.length) return;
-  const setMode = (mode) => {
-    const activeMode = sections.some((section) => section.dataset.studySection === mode) ? mode : "lecture";
-    workspace.hidden = activeMode === "lecture";
-    buttons.forEach((button) => {
-      const active = button.dataset.studyMode === activeMode;
-      button.classList.toggle("is-active", active);
-      button.setAttribute("aria-pressed", active ? "true" : "false");
-    });
-    sections.forEach((section) => {
-      section.hidden = section.dataset.studySection !== activeMode;
-    });
-    const target = document.querySelector(`[data-study-section="${activeMode}"]`);
-    if (target) target.scrollIntoView({ block: "start" });
-  };
-  document.addEventListener("click", (event) => {
-    const button = event.target.closest("[data-study-mode]");
-    if (!button) return;
-    event.preventDefault();
-    setMode(button.dataset.studyMode || "lecture");
-  });
-  if (location.hash === "#study-panel") setMode("notes");
-  else setMode("lecture");
-})();
-</script>
-<!-- END NotebookLM script -->
 <script src="../../../feynman-reader/media-player.js?v=20260621-clean-html" defer></script>
 </body>
 </html>

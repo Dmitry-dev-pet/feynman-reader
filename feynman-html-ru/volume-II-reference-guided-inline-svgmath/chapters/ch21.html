@@ -96,9 +96,6 @@
         <a class="nav-btn next-chapter" href="ch22.html">Дальше</a>
       </div>
       <a class="toolbar-title" href="#ch21" title="Глава 21. Решения уравнений максвелла с токами и зарядами">Фейнмановские лекции по физике, том II · 21</a>
-<!-- BEGIN NotebookLM toolbar -->
-      <div class="study-mode-switch" aria-label="Материалы главы"><button class="toolbar-btn study-mode-btn is-active" type="button" data-study-mode="lecture" aria-pressed="true">Лекция</button><button class="toolbar-btn study-mode-btn" type="button" data-study-mode="files" aria-pressed="false">Файлы</button></div>
-<!-- END NotebookLM toolbar -->
       <div class="toolbar-group toolbar-settings" aria-label="Настройки чтения">
         <a class="toolbar-btn language-toggle is-ru" href="../../../feynman-html-en/volume-II-reference-guided-inline-svgmath/chapters/ch21.html" aria-label="English" title="English"><span class="lang-ru">RU</span><span aria-hidden="true">/</span><span class="lang-en">EN</span></a>
         <button class="toolbar-btn icon-btn" type="button" data-reader-action="theme" aria-label="Сменить тему" title="Сменить тему">◐</button>
@@ -110,26 +107,7 @@
         <button class="toolbar-btn icon-btn" type="button" data-reader-action="tex" aria-label="TeX формул" title="TeX формул">{}</button>
       </div>
     </header>
-<!-- BEGIN NotebookLM reports -->
-    <section class="study-workspace" id="study-panel" hidden>
-      <div class="study-workspace-inner">
-        <header class="study-workspace-header">
-          <div>
-            <strong>Материалы главы</strong>
-            <span>Сгенерированные учебные материалы NotebookLM для этой главы.</span>
-          </div>
-        </header>
-
-        <section class="study-section" data-study-section="files" hidden>
-    <div class="study-card">
-      <strong>Файлы</strong>
-      <span class="study-file-row"><a href="../../../feynman-notebooklm/ru/volume-II/ch21/ch21-full.md">Текст главы для NotebookLM</a><a href="../../../feynman-notebooklm/ru/volume-II/ch21/figure-context/ch21-figures-context.md">Рисунки и контекст</a><a href="../../../feynman-notebooklm/ru/volume-II/ch21/manifest.json">Манифест</a><a href="../../../feynman-notebooklm/ru/volume-II/ch21/sections/">Разделы главы</a><a href="reports/ch21-notebooklm-briefing.md">Обзор главы MD</a><a href="reports/ch21-notebooklm-study-guide.md">Конспект MD</a></span>
-    </div>
-  </section>
-      </div>
-    </section>
-<!-- END NotebookLM reports -->
-    <article class="chapter-flow study-section" data-study-section="lecture"><h1 id="ch21">Глава 21. Решения уравнений максвелла с токами и зарядами</h1><h2 id="sec-21-1">21–1 Свет и электромагнитные волны<a class="permalink" href="#sec-21-1" aria-label="Ссылка на раздел">#</a></h2><p>В предыдущей главе мы видели, что среди решений уравнений Максвелла есть электромагнитные волны. Свету, радио, рентгеновским лучам и т. д. отвечают электромагнитные волны, отличающиеся только длиной волны. Мы уже подробно изучали различные явления, связанные со светом. В этой главе мы хотим связать оба вопроса и показать, что уравнения Максвелла действительно могли служить основой для изучения свойств света.</p><p>Изучая свет, мы начали с того, что выписали уравнения для электрического и магнитного полей, создаваемых зарядом, движущимся произвольным образом. Уравнения имели вид</p><div class="display-math" id="eq-21-1"><svg class="math-svg display" aria-label="
+    <article class="chapter-flow"><h1 id="ch21">Глава 21. Решения уравнений максвелла с токами и зарядами</h1><h2 id="sec-21-1">21–1 Свет и электромагнитные волны<a class="permalink" href="#sec-21-1" aria-label="Ссылка на раздел">#</a></h2><p>В предыдущей главе мы видели, что среди решений уравнений Максвелла есть электромагнитные волны. Свету, радио, рентгеновским лучам и т. д. отвечают электромагнитные волны, отличающиеся только длиной волны. Мы уже подробно изучали различные явления, связанные со светом. В этой главе мы хотим связать оба вопроса и показать, что уравнения Максвелла действительно могли служить основой для изучения свойств света.</p><p>Изучая свет, мы начали с того, что выписали уравнения для электрического и магнитного полей, создаваемых зарядом, движущимся произвольным образом. Уравнения имели вид</p><div class="display-math" id="eq-21-1"><svg class="math-svg display" aria-label="
 
 \mathbf{E}=\frac{q}{4\pi\epsilon_0}\biggl[
 \frac{\mathbf{e}_{r&#x27;}}{r&#x27;^2}+\frac{r&#x27;}{c}\,\frac{d }{d t}\biggl(
@@ -846,39 +824,6 @@ t-\frac{vx}{c^2}-\biggl(
 </script>
 
 <footer>Фейнмановские лекции по физике, том II · Ричард Фейнман, Роберт Лейтон, Мэтью Сэндс</footer>
-<!-- BEGIN NotebookLM script -->
-<script>
-(() => {
-  const workspace = document.querySelector(".study-workspace");
-  const buttons = [...document.querySelectorAll("[data-study-mode]")];
-  const sections = [...document.querySelectorAll("[data-study-section]")];
-  if (!workspace || !buttons.length || !sections.length) return;
-  const setMode = (mode) => {
-    const activeMode = sections.some((section) => section.dataset.studySection === mode) ? mode : "lecture";
-    workspace.hidden = activeMode === "lecture";
-    buttons.forEach((button) => {
-      const active = button.dataset.studyMode === activeMode;
-      button.classList.toggle("is-active", active);
-      button.setAttribute("aria-pressed", active ? "true" : "false");
-    });
-    sections.forEach((section) => {
-      section.hidden = section.dataset.studySection !== activeMode;
-    });
-    const target = document.querySelector(`[data-study-section="${activeMode}"]`);
-    if (target) target.scrollIntoView({ block: "start" });
-  };
-  document.addEventListener("click", (event) => {
-    const button = event.target.closest("[data-study-mode]");
-    if (!button) return;
-    event.preventDefault();
-    setMode(button.dataset.studyMode || "lecture");
-  });
-  if (location.hash === "#study-media") setMode("media");
-  else if (location.hash === "#study-panel") setMode("notes");
-  else setMode("lecture");
-})();
-</script>
-<!-- END NotebookLM script -->
 <script src="../../../feynman-reader/media-player.js?v=20260621-clean-html" defer></script>
 </body>
 </html>

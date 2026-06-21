@@ -104,9 +104,6 @@
 <a class="nav-btn next-chapter" href="ch05.html">Next</a>
 </div>
 <a class="toolbar-title" href="#ch04" title="4. Conservation of Energy">The Feynman Lectures on Physics, Volume I · 4</a>
-<!-- BEGIN NotebookLM toolbar -->
-<div aria-label="Chapter materials" class="study-mode-switch"><button aria-pressed="true" class="toolbar-btn study-mode-btn is-active" data-study-mode="lecture" type="button">Lecture</button><button aria-pressed="false" class="toolbar-btn study-mode-btn" data-study-mode="files" type="button">Files</button></div>
-<!-- END NotebookLM toolbar -->
 <div aria-label="Reading settings" class="toolbar-group toolbar-settings">
 <a aria-label="Русский" class="toolbar-btn language-toggle is-en" href="../../../feynman-html-ru/volume-I-reference-guided-inline-svgmath/chapters/ch04.html" title="Русский"><span class="lang-ru">RU</span><span aria-hidden="true">/</span><span class="lang-en">EN</span></a>
 <button aria-label="Switch theme" class="toolbar-btn icon-btn" data-reader-action="theme" title="Switch theme" type="button">◐</button>
@@ -118,26 +115,7 @@
 <button aria-label="Formula TeX" class="toolbar-btn icon-btn" data-reader-action="tex" title="Formula TeX" type="button">{}</button>
 </div>
 </header>
-<!-- BEGIN NotebookLM reports -->
-<section class="study-workspace" hidden="" id="study-panel">
-<div class="study-workspace-inner">
-<header class="study-workspace-header">
-<div>
-<strong>Chapter materials</strong>
-<span>NotebookLM-generated study materials for this chapter.</span>
-</div>
-</header>
-
-<section class="study-section" data-study-section="files" hidden="">
-<div class="study-card">
-<strong>Files</strong>
-<span class="study-file-row"><a href="../../../feynman-notebooklm/en/volume-I/ch04/ch04-full.md">NotebookLM chapter text</a><a href="../../../feynman-notebooklm/en/volume-I/ch04/figure-context/ch04-figures-context.md">Figures and context</a><a href="../../../feynman-notebooklm/en/volume-I/ch04/manifest.json">Manifest</a><a href="../../../feynman-notebooklm/en/volume-I/ch04/sections/">Chapter sections</a><a href="reports/ch04-notebooklm-briefing.md">Chapter overview MD</a><a href="reports/ch04-notebooklm-study-guide.md">Study guide MD</a></span>
-</div>
-</section>
-</div>
-</section>
-<!-- END NotebookLM reports -->
-<article class="chapter-flow study-section" data-study-section="lecture"><h1 id="ch04">4. Conservation of Energy</h1><figure class="table-block source-table source-T0 table-compact table-math-heavy" data-source-class="table T0" id="Ch4-T0">
+<article class="chapter-flow"><h1 id="ch04">4. Conservation of Energy</h1><figure class="table-block source-table source-T0 table-compact table-math-heavy" data-source-class="table T0" id="Ch4-T0">
 <figcaption>Summary: Conservation of Energy<a aria-label="Ссылка на таблицу" class="permalink" href="#Ch4-T0">#</a></figcaption>
 <div class="table-scroll"><table class="flp-table">
 <tr>
@@ -443,38 +421,6 @@ W=\text{$55$ lb}.
 })();
 </script>
 <footer>The Feynman Lectures on Physics, Volume I · Richard Feynman, Robert Leighton, Matthew Sands</footer>
-<!-- BEGIN NotebookLM script -->
-<script>
-(() => {
-  const workspace = document.querySelector(".study-workspace");
-  const buttons = [...document.querySelectorAll("[data-study-mode]")];
-  const sections = [...document.querySelectorAll("[data-study-section]")];
-  if (!workspace || !buttons.length || !sections.length) return;
-  const setMode = (mode) => {
-    const activeMode = sections.some((section) => section.dataset.studySection === mode) ? mode : "lecture";
-    workspace.hidden = activeMode === "lecture";
-    buttons.forEach((button) => {
-      const active = button.dataset.studyMode === activeMode;
-      button.classList.toggle("is-active", active);
-      button.setAttribute("aria-pressed", active ? "true" : "false");
-    });
-    sections.forEach((section) => {
-      section.hidden = section.dataset.studySection !== activeMode;
-    });
-    const target = document.querySelector(`[data-study-section="${activeMode}"]`);
-    if (target) target.scrollIntoView({ block: "start" });
-  };
-  document.addEventListener("click", (event) => {
-    const button = event.target.closest("[data-study-mode]");
-    if (!button) return;
-    event.preventDefault();
-    setMode(button.dataset.studyMode || "lecture");
-  });
-  if (location.hash === "#study-panel") setMode("notes");
-  else setMode("lecture");
-})();
-</script>
-<!-- END NotebookLM script -->
 <script src="../../../feynman-reader/media-player.js?v=20260621-clean-html" defer></script>
 </body>
 </html>
