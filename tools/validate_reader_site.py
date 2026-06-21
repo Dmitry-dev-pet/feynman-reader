@@ -9,7 +9,7 @@ import re
 import subprocess
 
 from build_media_manifest import build_manifest
-from reader_site import CURRENT_ASSET_VERSION, MEDIA_MANIFEST, ROOT, chapter_pages, read_text, reader_html_pages
+from reader_site import CURRENT_ASSET_VERSION, MEDIA_MANIFEST, READER_DIR, ROOT, chapter_pages, read_text, reader_html_pages
 
 
 EXPECTED_CHAPTERS = {
@@ -64,6 +64,31 @@ def validate_assets(errors: list[str]) -> None:
         path = ROOT / rel
         if stale_re.search(read_text(path)):
             fail(errors, f"stale shim asset version in {rel}")
+
+
+def validate_css(errors: list[str]) -> None:
+    legacy_selectors = (
+        "study-mode-switch",
+        "study-workspace",
+        "study-section",
+        "study-grid",
+        "study-card",
+        "study-media-card",
+        "study-youtube",
+        "study-file-row",
+        "study-pill",
+        "study-muted",
+        "study-empty",
+    )
+    css_paths = sorted((ROOT / "feynman-html-ru").glob("volume-*-reference-guided-inline-svgmath/styles*.css"))
+    css_paths += sorted((ROOT / "feynman-html-en").glob("volume-*-reference-guided-inline-svgmath/styles*.css"))
+    css_paths.append(READER_DIR / "media-player.css")
+    for path in css_paths:
+        text = read_text(path)
+        for selector in legacy_selectors:
+            if selector in text:
+                fail(errors, f"legacy study CSS selector {selector} remains in {path.relative_to(ROOT)}")
+                break
 
 
 def validate_chapters(errors: list[str]) -> None:
@@ -143,6 +168,7 @@ def main() -> int:
 
     validate_manifest(errors)
     validate_assets(errors)
+    validate_css(errors)
     validate_chapters(errors)
     validate_git_boundary(errors)
 
