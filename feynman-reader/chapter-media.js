@@ -10,7 +10,7 @@
     return (Number(match[1] || 0) * 3600) + (Number(match[2] || 0) * 60) + Number(match[3] || 0);
   };
 
-  const toEmbedUrl = (href) => {
+  const toEmbedUrl = (href, { autoplay = false } = {}) => {
     const url = new URL(href, window.location.href);
     let id = "";
     if (url.hostname.includes("youtu.be")) {
@@ -24,6 +24,7 @@
     embed.searchParams.set("rel", "0");
     embed.searchParams.set("modestbranding", "1");
     embed.searchParams.set("playsinline", "1");
+    if (autoplay) embed.searchParams.set("autoplay", "1");
     if (start) embed.searchParams.set("start", String(start));
     return embed.toString();
   };
@@ -39,6 +40,53 @@
     if (title) return `${title} · ${mode}`;
     if (isRu()) return type === "audio" ? "Аудио главы" : "Видео главы";
     return type === "audio" ? "Chapter audio" : "Chapter video";
+  };
+
+  const ensureFloatingPlayer = () => {
+    let player = document.querySelector(".floating-youtube-player");
+    if (player) return player;
+    player = document.createElement("aside");
+    player.className = "floating-youtube-player";
+    player.hidden = true;
+    player.setAttribute("aria-live", "polite");
+    player.innerHTML = `
+      <div class="floating-youtube-header">
+        <span class="floating-youtube-label"></span>
+        <button class="floating-youtube-close" type="button" aria-label="${isRu() ? "Закрыть плеер" : "Close player"}" title="${isRu() ? "Закрыть" : "Close"}">×</button>
+      </div>
+      <div class="floating-youtube-frame">
+        <iframe loading="lazy" referrerpolicy="strict-origin-when-cross-origin" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      <a class="floating-youtube-link" href="#" target="_blank" rel="noopener">${isRu() ? "Открыть на YouTube" : "Open on YouTube"}</a>`;
+    document.body.append(player);
+    player.querySelector(".floating-youtube-close").addEventListener("click", () => {
+      player.querySelector("iframe").removeAttribute("src");
+      player.hidden = true;
+      document.querySelectorAll(".chapter-media-link.is-active").forEach((item) => {
+        if (typeOf(item) === "audio") {
+          item.classList.remove("is-active");
+          item.setAttribute("aria-pressed", "false");
+        }
+      });
+    });
+    return player;
+  };
+
+  const openFloatingAudio = ({ embedUrl, label, href }) => {
+    const player = ensureFloatingPlayer();
+    const iframe = player.querySelector("iframe");
+    player.querySelector(".floating-youtube-label").textContent = label;
+    player.querySelector(".floating-youtube-link").href = href;
+    iframe.title = label;
+    iframe.src = embedUrl;
+    player.hidden = false;
+  };
+
+  const closeFloatingAudio = () => {
+    const player = document.querySelector(".floating-youtube-player");
+    if (!player) return;
+    player.querySelector("iframe").removeAttribute("src");
+    player.hidden = true;
   };
 
   const ensurePlayer = (panel) => {
@@ -61,9 +109,28 @@
 
   const activate = (link, { scroll = false } = {}) => {
     const panel = link.closest(".chapter-media-panel");
-    const embedUrl = toEmbedUrl(link.href);
-    if (!panel || !embedUrl) return false;
+    if (!panel) return false;
     const type = typeOf(link);
+    const embedUrl = toEmbedUrl(link.href, { autoplay: type === "audio" });
+    if (!embedUrl) return false;
+    const mediaLabel = labelFor(panel, type);
+    if (type === "audio") {
+      const player = panel.querySelector(".chapter-media-player");
+      if (player) {
+        player.hidden = true;
+        const iframe = player.querySelector("iframe");
+        if (iframe) iframe.removeAttribute("src");
+      }
+      openFloatingAudio({ embedUrl, label: mediaLabel, href: link.href });
+      panel.querySelectorAll(".chapter-media-link").forEach((item) => {
+        const active = item === link;
+        item.classList.toggle("is-active", active);
+        item.setAttribute("aria-pressed", active ? "true" : "false");
+      });
+      if (scroll) panel.scrollIntoView({ block: "start", inline: "nearest" });
+      return true;
+    }
+    closeFloatingAudio();
     const player = ensurePlayer(panel);
     const iframe = player.querySelector("iframe");
     const label = player.querySelector(".chapter-media-player-label");
@@ -71,7 +138,6 @@
     player.classList.toggle("is-audio", type === "audio");
     player.classList.toggle("is-video", type === "video");
     iframe.src = embedUrl;
-    const mediaLabel = labelFor(panel, type);
     iframe.title = mediaLabel;
     label.textContent = mediaLabel;
     youtube.href = link.href;

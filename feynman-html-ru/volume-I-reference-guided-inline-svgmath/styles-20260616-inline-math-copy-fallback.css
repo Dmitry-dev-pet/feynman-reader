@@ -1408,6 +1408,80 @@ body[data-theme="dark"] .chapter-media-link.primary {
 .chapter-media-youtube:hover {
   text-decoration: underline;
 }
+.floating-youtube-player {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  bottom: max(1rem, env(safe-area-inset-bottom));
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.22);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  padding: 0.55rem;
+  position: fixed;
+  right: max(1rem, env(safe-area-inset-right));
+  width: min(22rem, calc(100vw - 2rem));
+  z-index: 60;
+}
+.floating-youtube-player[hidden] {
+  display: none !important;
+}
+.floating-youtube-header {
+  align-items: center;
+  display: flex;
+  gap: 0.5rem;
+  justify-content: space-between;
+  margin-bottom: 0.45rem;
+}
+.floating-youtube-label {
+  color: var(--text);
+  font-size: 0.84rem;
+  font-weight: 800;
+  line-height: 1.25;
+  min-width: 0;
+}
+.floating-youtube-close {
+  align-items: center;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--text);
+  cursor: pointer;
+  display: inline-flex;
+  flex: 0 0 auto;
+  font-size: 1.05rem;
+  font-weight: 800;
+  height: 1.85rem;
+  justify-content: center;
+  line-height: 1;
+  width: 1.85rem;
+}
+.floating-youtube-close:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.floating-youtube-frame {
+  aspect-ratio: 16 / 9;
+  background: #101010;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 100%;
+}
+.floating-youtube-frame iframe {
+  border: 0;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.floating-youtube-link {
+  color: var(--accent);
+  display: inline-block;
+  font-size: 0.82rem;
+  font-weight: 800;
+  margin-top: 0.45rem;
+  text-decoration: none;
+}
+.floating-youtube-link:hover {
+  text-decoration: underline;
+}
 @media (max-width: 760px) {
   .chapter-media-panel {
     grid-template-columns: 1fr;
@@ -1419,6 +1493,11 @@ body[data-theme="dark"] .chapter-media-link.primary {
   .chapter-media-player.is-audio .chapter-media-frame-wrap {
     height: clamp(9.5rem, 42vw, 11rem);
     min-height: 9.5rem;
+  }
+  .floating-youtube-player {
+    bottom: max(0.5rem, env(safe-area-inset-bottom));
+    right: 0.5rem;
+    width: calc(100vw - 1rem);
   }
 }
 .notebooklm-index-panel {
