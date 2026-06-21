@@ -281,6 +281,39 @@
     toolbar.querySelector(".study-mode-switch")?.setAttribute("hidden", "");
   };
 
+  const removeInlineStudyReports = () => {
+    if (!reportCards.length) return;
+    const notesSection = document.querySelector('[data-study-section="notes"]');
+    notesSection?.remove();
+    document.querySelectorAll('[data-study-mode="notes"]').forEach((button) => button.remove());
+    document.querySelector(".study-workspace-header")?.remove();
+
+    const workspace = document.querySelector(".study-workspace");
+    const hasVisibleSection = [...document.querySelectorAll("[data-study-section]")].some((section) => !section.hidden);
+    if (workspace && !hasVisibleSection) workspace.hidden = true;
+  };
+
+  const normalizeRetiredStudyHash = () => {
+    if (window.location.hash !== "#study-panel") return;
+    const workspace = document.querySelector(".study-workspace");
+    if (workspace) workspace.hidden = true;
+    if (window.history?.replaceState) {
+      window.history.replaceState(null, "", `${window.location.pathname}${window.location.search}`);
+    }
+  };
+
+  const closeEmptyStudyWorkspace = () => {
+    const workspace = document.querySelector(".study-workspace");
+    if (!workspace) return;
+    const visibleSection = [...document.querySelectorAll("[data-study-section]")].find((section) => !section.hidden);
+    if (!visibleSection) workspace.hidden = true;
+  };
+
+  const openStudyMediaHash = () => {
+    if (window.location.hash !== "#study-media") return;
+    showMediaSection();
+  };
+
   const injectToolbarControls = () => {
     const toolbar = document.querySelector(".reader-toolbar");
     const title = toolbar?.querySelector(".toolbar-title");
@@ -359,6 +392,14 @@
   prepareStudyCards();
   injectToolbarControls();
   injectStudyReportLinks();
+  removeInlineStudyReports();
+  normalizeRetiredStudyHash();
+  openStudyMediaHash();
+  window.addEventListener("hashchange", () => {
+    normalizeRetiredStudyHash();
+    openStudyMediaHash();
+    closeEmptyStudyWorkspace();
+  });
   window.addEventListener("hashchange", openPanelFromHash);
   window.addEventListener("load", openPanelFromHash);
   openPanelFromHash();

@@ -4,7 +4,7 @@
   const script = document.createElement("script");
   script.defer = true;
   script.src = new URL(
-    "media-player.js?v=20260621-study-links",
+    "media-player.js?v=20260621-study-header",
     document.currentScript?.src || window.location.href,
   ).toString();
   document.head.append(script);
