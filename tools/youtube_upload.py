@@ -134,6 +134,21 @@ def load_youtube_client(client_secrets: Path, token_file: Path) -> Any:
     return build("youtube", "v3", credentials=creds)
 
 
+def token_scopes(token_file: Path) -> list[str]:
+    if not token_file.exists():
+        return []
+    try:
+        payload = json.loads(token_file.read_text(encoding="utf-8"))
+    except json.JSONDecodeError:
+        return []
+    scopes = payload.get("scopes") or payload.get("scope") or []
+    if isinstance(scopes, str):
+        return [item for item in scopes.split() if item]
+    if isinstance(scopes, list):
+        return [str(item) for item in scopes]
+    return []
+
+
 def upload_video(
     youtube: Any,
     video_file: Path,
@@ -345,6 +360,41 @@ def command_set_privacy(args: argparse.Namespace) -> None:
         print(f"{video_id}: {privacy}, embeddable={embeddable}")
 
 
+def command_auth(args: argparse.Namespace) -> None:
+    if args.reset and args.token_file.exists():
+        args.token_file.unlink()
+        print(f"Removed token: {args.token_file}")
+
+    youtube = load_youtube_client(args.client_secrets, args.token_file)
+    response = youtube.channels().list(
+        part="id,snippet,brandingSettings,status",
+        mine=True,
+    ).execute()
+    channels = response.get("items", [])
+    if not channels:
+        raise SystemExit("No YouTube channel found for the authenticated account.")
+
+    for channel in channels:
+        snippet = channel.get("snippet", {})
+        branding = channel.get("brandingSettings", {}).get("channel", {})
+        status = channel.get("status", {})
+        print(
+            json.dumps(
+                {
+                    "id": channel.get("id"),
+                    "title": snippet.get("title"),
+                    "custom_url": snippet.get("customUrl"),
+                    "description": branding.get("description") or snippet.get("description"),
+                    "privacy_status": status.get("privacyStatus"),
+                    "scopes": token_scopes(args.token_file),
+                    "required_scopes": SCOPES,
+                },
+                ensure_ascii=False,
+                indent=2,
+            )
+        )
+
+
 def add_common_upload_args(parser: argparse.ArgumentParser) -> None:
     parser.add_argument("--client-secrets", type=Path, default=Path("youtube-client-secrets.json"))
     parser.add_argument("--token-file", type=Path, default=Path("youtube-token.json"))
@@ -375,6 +425,12 @@ def build_parser() -> argparse.ArgumentParser:
     upload.add_argument("--title", required=True)
     add_common_upload_args(upload)
     upload.set_defaults(func=command_upload)
+
+    auth = subparsers.add_parser("auth", help="Authorize and show the current YouTube channel.")
+    auth.add_argument("--client-secrets", type=Path, default=Path("youtube-client-secrets.json"))
+    auth.add_argument("--token-file", type=Path, default=Path("youtube-token.json"))
+    auth.add_argument("--reset", action="store_true", help="Delete the saved token and request consent again.")
+    auth.set_defaults(func=command_auth)
 
     set_privacy = subparsers.add_parser("set-privacy", help="Change video privacy.")
     set_privacy.add_argument("video_id", nargs="+")
