@@ -200,6 +200,18 @@ def upload_video(
     return response
 
 
+def set_thumbnail(youtube: Any, video_id: str, image: Path) -> Dict[str, Any]:
+    try:
+        from googleapiclient.http import MediaFileUpload
+    except ImportError:
+        missing_google_deps()
+
+    if not image.exists():
+        raise SystemExit(f"Thumbnail file not found: {image}")
+    media = MediaFileUpload(str(image), mimetype="image/jpeg", resumable=False)
+    return youtube.thumbnails().set(videoId=video_id, media_body=media).execute()
+
+
 def append_manifest(manifest: Path, record: Dict[str, Any]) -> None:
     ensure_parent(manifest)
     with manifest.open("a", encoding="utf-8") as handle:
@@ -360,6 +372,15 @@ def command_set_privacy(args: argparse.Namespace) -> None:
         print(f"{video_id}: {privacy}, embeddable={embeddable}")
 
 
+def command_set_thumbnail(args: argparse.Namespace) -> None:
+    if args.dry_run:
+        print(f"DRY RUN set thumbnail: {args.video_id} <- {args.image}")
+        return
+    youtube = load_youtube_client(args.client_secrets, args.token_file)
+    response = set_thumbnail(youtube, args.video_id, args.image)
+    print(json.dumps(response, ensure_ascii=False, indent=2))
+
+
 def command_auth(args: argparse.Namespace) -> None:
     if args.reset and args.token_file.exists():
         args.token_file.unlink()
@@ -439,6 +460,14 @@ def build_parser() -> argparse.ArgumentParser:
     set_privacy.add_argument("--privacy", choices=["private", "unlisted", "public"], required=True)
     set_privacy.add_argument("--dry-run", action="store_true")
     set_privacy.set_defaults(func=command_set_privacy)
+
+    set_thumbnail_parser = subparsers.add_parser("set-thumbnail", help="Set a YouTube video thumbnail.")
+    set_thumbnail_parser.add_argument("video_id")
+    set_thumbnail_parser.add_argument("image", type=Path)
+    set_thumbnail_parser.add_argument("--client-secrets", type=Path, default=Path("youtube-client-secrets.json"))
+    set_thumbnail_parser.add_argument("--token-file", type=Path, default=Path("youtube-token.json"))
+    set_thumbnail_parser.add_argument("--dry-run", action="store_true")
+    set_thumbnail_parser.set_defaults(func=command_set_thumbnail)
 
     batch = subparsers.add_parser("batch", help="Render a directory of MP3s, optionally upload.")
     batch.add_argument("input", type=Path, help="Directory of mp3 files, or one mp3 file.")
