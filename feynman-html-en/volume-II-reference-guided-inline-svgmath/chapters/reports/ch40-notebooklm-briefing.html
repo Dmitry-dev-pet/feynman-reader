@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Flow of Dry Water: Principles of Inviscid, Incompressible Hydrodynamics - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="en">
+  <script>
+    (() => {
+      const key = "flp-reader-theme";
+      const applyTheme = (theme) => {
+        const next = theme === "dark" ? "dark" : "light";
+        document.documentElement.dataset.theme = next;
+        document.body.dataset.theme = next;
+        try { localStorage.setItem(key, next); } catch (_) {}
+      };
+      try { applyTheme(localStorage.getItem(key) || "light"); } catch (_) { applyTheme("light"); }
+      document.addEventListener("click", (event) => {
+        const button = event.target.closest('[data-report-action="theme"]');
+        if (!button) return;
+        applyTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark");
+      });
+    })();
+  </script>
+<main class="notebooklm-report-shell">
+    <header aria-label="Quick navigation" class="reader-toolbar report-toolbar">
+      <div class="toolbar-group toolbar-navigation">
+        <a class="toolbar-btn" href="../ch40.html">Back to chapter</a>
+        <a class="toolbar-btn" href="../../../../feynman-reader/index.html">Reader</a>
+        <a class="toolbar-btn" href="../../index.html">Contents</a>
+      </div>
+      <a class="toolbar-title" href="../ch40.html#ch40" title="NotebookLM · Overview">NotebookLM · Overview</a>
+      <div class="toolbar-group toolbar-settings">
+        <button aria-label="Toggle theme" class="toolbar-btn icon-btn" data-report-action="theme" title="Toggle theme" type="button">◐</button>
+      </div>
+    </header>
+    <article class="notebooklm-report">
+<h1
+id="the-flow-of-dry-water-principles-of-inviscid-incompressible-hydrodynamics">The
+Flow of Dry Water: Principles of Inviscid, Incompressible
+Hydrodynamics</h1>
+<p>This briefing document analyzes the fundamental principles of fluid
+dynamics as applied to "dry water"—an idealized, non-viscous, and
+incompressible fluid. It examines the mathematical framework for fluid
+motion, the derivation and application of Bernoulli’s theorem, the
+nature of circulation and vorticity, and the inherent limitations of the
+inviscid model in representing real-world fluids.</p>
+<h2 id="executive-summary">Executive Summary</h2>
+<p>The study of "dry water" focuses on fluids where internal friction
+(viscosity) is negligible and density remains constant. By approximating
+fluids in this way, complex behaviors can be reduced to a set of elegant
+partial differential equations. The core of this analysis rests on the
+conservation of mass (continuity) and the application of Newton’s second
+law to fluid particles. Key findings include Bernoulli’s theorem, which
+relates pressure, velocity, and potential energy along streamlines, and
+Helmholtz’s theorems regarding the persistence and movement of vortex
+lines. However, while this "dry water" theory provides a powerful tool
+for understanding phenomena like lift and efflux, it fails to account
+for the generation of vorticity or the "no-slip" boundary condition
+observed in real-world "wet" water.</p>
+<hr />
+<h2 id="i-hydrostatics-fluids-at-rest">I. Hydrostatics: Fluids at
+Rest</h2>
+<p>In a static fluid, the distinguishing characteristic is the absence
+of shear stress. Because a fluid cannot maintain shear, all forces
+acting across any internal surface must be normal to that surface. This
+normal force per unit area is defined as <strong>pressure</strong>
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math>).</p>
+<h3 id="core-principles-of-hydrostatics">Core Principles of
+Hydrostatics</h3>
+<ul>
+<li><strong>Directional Uniformity:</strong> In a static fluid, pressure
+is the same in all directions at any given point.</li>
+<li><strong>Pressure Variation:</strong> Pressure varies in space to
+balance external forces, such as gravity. For a fluid with constant
+density
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ρ</mi><annotation encoding="application/x-tex">\rho</annotation></semantics></math>
+at height
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>h</mi><annotation encoding="application/x-tex">h</annotation></semantics></math>:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>=</mo><msub><mi>p</mi><mn>0</mn></msub><mo>−</mo><mi>ρ</mi><mi>g</mi><mi>h</mi></mrow><annotation encoding="application/x-tex">p = p_0 - \rho gh</annotation></semantics></math></li>
+<li><strong>The Hydrostatic Equation:</strong> For equilibrium, the
+pressure gradient must balance the external force density (force per
+unit volume). If
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>
+represents potential energy per unit mass:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mi>∇</mi><mi>p</mi><mo>−</mo><mi>ρ</mi><mi>∇</mi><mi>ϕ</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">-\nabla p - \rho \nabla \phi = 0</annotation></semantics></math></li>
+</ul>
+<p>If density varies arbitrarily, static equilibrium is impossible, and
+convection currents will occur. Equilibrium is only possible if
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ρ</mi><annotation encoding="application/x-tex">\rho</annotation></semantics></math>
+is constant or if
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ρ</mi><annotation encoding="application/x-tex">\rho</annotation></semantics></math>
+is a function solely of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math>.</p>
+<hr />
+<h2 id="ii-the-equations-of-motion-for-incompressible-flow">II. The
+Equations of Motion for Incompressible Flow</h2>
+<p>To describe a moving fluid, one must specify the velocity field
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝒗</mi><annotation encoding="application/x-tex">\mathbf{v}</annotation></semantics></math>,
+pressure field
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math>,
+and density
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ρ</mi><annotation encoding="application/x-tex">\rho</annotation></semantics></math>
+at every point in time.</p>
+<h3 id="1-the-incompressible-approximation">1. The Incompressible
+Approximation</h3>
+<p>A fluid is considered essentially incompressible if the flow
+velocities are significantly lower than the speed of sound in that
+fluid. In this state:</p>
+<ul>
+<li><strong>Density Equation:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ρ</mi><mo>=</mo><mtext mathvariant="normal">constant</mtext></mrow><annotation encoding="application/x-tex">\rho = \text{constant}</annotation></semantics></math></li>
+<li><strong>Equation of Continuity (Conservation of Mass):</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mtext mathvariant="normal">div </mtext><mspace width="0.333em"></mspace></mrow><mi mathvariant="bold-italic">𝒗</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\text{div } \mathbf{v} = 0</annotation></semantics></math></li>
+</ul>
+<h3 id="2-the-nature-of-acceleration">2. The Nature of Acceleration</h3>
+<p>The acceleration of a fluid particle is more complex than the partial
+derivative
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∂</mi><mi mathvariant="bold-italic">𝒗</mi><mi>/</mi><mi>∂</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">\partial \mathbf{v}/\partial t</annotation></semantics></math>.
+Because particles move to new locations with different velocities, the
+total acceleration includes a convective term:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Acceleration</mtext><mo>=</mo><mfrac><mrow><mi>∂</mi><mi mathvariant="bold-italic">𝒗</mi></mrow><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mi mathvariant="bold-italic">𝒗</mi><mo>⋅</mo><mi>∇</mi><mo stretchy="false" form="postfix">)</mo><mi mathvariant="bold-italic">𝒗</mi></mrow><annotation encoding="application/x-tex">\text{Acceleration} = \frac{\partial \mathbf{v}}{\partial t} + (\mathbf{v} \cdot \nabla)\mathbf{v}</annotation></semantics></math></p>
+<h3 id="3-the-equation-of-motion-eulers-equation">3. The Equation of
+Motion (Euler’s Equation)</h3>
+<p>By applying Newton's law
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Force</mtext><mo>=</mo><mtext mathvariant="normal">Mass</mtext><mo>×</mo><mtext mathvariant="normal">Acceleration</mtext></mrow><annotation encoding="application/x-tex">\text{Force} = \text{Mass} \times \text{Acceleration}</annotation></semantics></math>)
+to a unit volume and neglecting viscosity
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="bold-italic">𝒇</mi><mtext mathvariant="normal">visc</mtext></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\mathbf{f}_{\text{visc}} = 0</annotation></semantics></math>),
+the equation of motion is:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi>∂</mi><mi mathvariant="bold-italic">𝒗</mi></mrow><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mi mathvariant="bold-italic">𝒗</mi><mo>⋅</mo><mi>∇</mi><mo stretchy="false" form="postfix">)</mo><mi mathvariant="bold-italic">𝒗</mi><mo>=</mo><mi>−</mi><mfrac><mrow><mi>∇</mi><mi>p</mi></mrow><mi>ρ</mi></mfrac><mo>−</mo><mi>∇</mi><mi>ϕ</mi></mrow><annotation encoding="application/x-tex">\frac{\partial \mathbf{v}}{\partial t} + (\mathbf{v} \cdot \nabla)\mathbf{v} = -\frac{\nabla p}{\rho} - \nabla \phi</annotation></semantics></math></p>
+<p>Using the vector identity
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi mathvariant="bold-italic">𝒗</mi><mo>⋅</mo><mi>∇</mi><mo stretchy="false" form="postfix">)</mo><mi mathvariant="bold-italic">𝒗</mi><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mrow><mtext mathvariant="normal">curl </mtext><mspace width="0.333em"></mspace></mrow><mi mathvariant="bold-italic">𝒗</mi><mo stretchy="false" form="postfix">)</mo><mo>×</mo><mi mathvariant="bold-italic">𝒗</mi><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>∇</mi><msup><mi>v</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">(\mathbf{v} \cdot \nabla)\mathbf{v} = (\text{curl } \mathbf{v}) \times \mathbf{v} + \frac{1}{2}\nabla v^2</annotation></semantics></math>,
+and defining <strong>vorticity</strong>
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold">𝛀</mi><mo>=</mo><mrow><mtext mathvariant="normal">curl </mtext><mspace width="0.333em"></mspace></mrow><mi mathvariant="bold-italic">𝒗</mi></mrow><annotation encoding="application/x-tex">\boldsymbol{\Omega} = \text{curl } \mathbf{v}</annotation></semantics></math>),
+the equation becomes:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi>∂</mi><mi mathvariant="bold-italic">𝒗</mi></mrow><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac><mo>+</mo><mi mathvariant="bold">𝛀</mi><mo>×</mo><mi mathvariant="bold-italic">𝒗</mi><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>∇</mi><msup><mi>v</mi><mn>2</mn></msup><mo>=</mo><mi>−</mi><mfrac><mrow><mi>∇</mi><mi>p</mi></mrow><mi>ρ</mi></mfrac><mo>−</mo><mi>∇</mi><mi>ϕ</mi></mrow><annotation encoding="application/x-tex">\frac{\partial \mathbf{v}}{\partial t} + \boldsymbol{\Omega} \times \mathbf{v} + \frac{1}{2} \nabla v^2 = -\frac{\nabla p}{\rho} - \nabla \phi</annotation></semantics></math></p>
+<hr />
+<h2 id="iii-steady-flow-and-bernoullis-theorem">III. Steady Flow and
+Bernoulli’s Theorem</h2>
+<p>In <strong>steady flow</strong>, the velocity at any fixed point does
+not change over time
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∂</mi><mi mathvariant="bold-italic">𝒗</mi><mi>/</mi><mi>∂</mi><mi>t</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\partial \mathbf{v}/\partial t = 0</annotation></semantics></math>).
+Fluid particles move along fixed paths called
+<strong>streamlines</strong>.</p>
+<h3 id="bernoullis-theorem">Bernoulli’s Theorem</h3>
+<p>Along a single streamline in steady, incompressible, non-viscous
+flow, the following quantity is constant:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mi>p</mi><mi>ρ</mi></mfrac><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><msup><mi>v</mi><mn>2</mn></msup><mo>+</mo><mi>ϕ</mi><mo>=</mo><mtext mathvariant="normal">const</mtext></mrow><annotation encoding="application/x-tex">\frac{p}{\rho} + \frac{1}{2}v^2 + \phi = \text{const}</annotation></semantics></math></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Variable</th>
+<th style="text-align: left;">Physical Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mi>/</mi><mi>ρ</mi></mrow><annotation encoding="application/x-tex">p/\rho</annotation></semantics></math></td>
+<td style="text-align: left;">Work done by pressure per unit mass</td>
+</tr>
+<tr>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><msup><mi>v</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\frac{1}{2}v^2</annotation></semantics></math></td>
+<td style="text-align: left;">Kinetic energy per unit mass</td>
+</tr>
+<tr>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math></td>
+<td style="text-align: left;">Potential energy per unit mass (e.g.,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mi>z</mi></mrow><annotation encoding="application/x-tex">gz</annotation></semantics></math>)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="key-applications-of-bernoullis-principle">Key Applications of
+Bernoulli’s Principle</h3>
+<ul>
+<li><strong>Efflux from a Tank:</strong> Water exiting a hole at depth
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>h</mi><annotation encoding="application/x-tex">h</annotation></semantics></math>
+reaches a velocity
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mo>=</mo><msqrt><mrow><mn>2</mn><mi>g</mi><mi>h</mi></mrow></msqrt></mrow><annotation encoding="application/x-tex">v = \sqrt{2gh}</annotation></semantics></math>.</li>
+<li><strong>The Venturi Effect:</strong> In a horizontal pipe with a
+constriction, the velocity increases and the pressure decreases. This is
+used to explain why two sheets of paper come together when air is blown
+between them.</li>
+<li><strong>Contraction Coefficients:</strong> Due to converging
+streamlines, the actual area of a jet exiting a sharp-edged hole is only
+62% of the hole's area. In a <strong>re-entrant discharge tube</strong>,
+this is reduced to exactly 50%.</li>
+</ul>
+<hr />
+<h2 id="iv-circulation-and-irrotational-flow">IV. Circulation and
+Irrotational Flow</h2>
+<p>If a flow is <strong>irrotational</strong>, its vorticity
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold">𝛀</mi><annotation encoding="application/x-tex">\boldsymbol{\Omega}</annotation></semantics></math>
+is zero everywhere. This implies the flow is described by:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mtext mathvariant="normal">div </mtext><mspace width="0.333em"></mspace></mrow><mi mathvariant="bold-italic">𝒗</mi><mo>=</mo><mn>0</mn><mo>,</mo><mspace width="1.0em"></mspace><mrow><mtext mathvariant="normal">curl </mtext><mspace width="0.333em"></mspace></mrow><mi mathvariant="bold-italic">𝒗</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\text{div } \mathbf{v} = 0, \quad \text{curl } \mathbf{v} = 0</annotation></semantics></math></p>
+<p>These equations are mathematically identical to those of
+electrostatics or magnetostatics in a vacuum, allowing fluid problems to
+be solved using analogies to electric and magnetic fields.</p>
+<h3 id="circulation-around-objects">Circulation Around Objects</h3>
+<p>Circulation is the line integral of velocity around a closed loop:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∮</mo><mi mathvariant="bold-italic">𝒗</mi><mo>⋅</mo><mi>d</mi><mi mathvariant="bold-italic">𝒔</mi></mrow><annotation encoding="application/x-tex">\oint \mathbf{v} \cdot d\mathbf{s}</annotation></semantics></math>.</p>
+<ul>
+<li><strong>Flow Past a Cylinder:</strong> Combining a uniform flow with
+a circulating flow (where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mo>=</mo><mi>C</mi><mi>/</mi><mn>2</mn><mi>π</mi><mi>r</mi></mrow><annotation encoding="application/x-tex">v = C/2\pi r</annotation></semantics></math>)
+creates an asymmetry in velocity.</li>
+<li><strong>Lift:</strong> Higher velocity on the upper side of an
+object results in lower pressure (via Bernoulli), creating a net upward
+vertical force known as lift.</li>
+</ul>
+<hr />
+<h2 id="v-vortex-lines-and-helmholtzs-laws">V. Vortex Lines and
+Helmholtz’s Laws</h2>
+<p>Vorticity can be visualized through <strong>vortex
+lines</strong>—lines tangent to the vorticity vector
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold">𝛀</mi><annotation encoding="application/x-tex">\boldsymbol{\Omega}</annotation></semantics></math>
+with a density proportional to its magnitude.</p>
+<h3 id="helmholtzs-theorems">Helmholtz’s Theorems</h3>
+<ol type="1">
+<li><strong>Persistence of Lines:</strong> Vortex lines never start or
+stop within the fluid; they typically form closed loops.</li>
+<li><strong>Convection with Fluid:</strong> Vortex lines "move with the
+fluid." If particles on a vortex line are marked, they will remain on
+that vortex line as the fluid moves.</li>
+<li><strong>Conservation of Angular Momentum:</strong> The product of
+vorticity and the cross-sectional area of a fluid element remains
+constant
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="normal">Ω</mi><mn>1</mn></msub><msub><mi>A</mi><mn>1</mn></msub><mo>=</mo><msub><mi mathvariant="normal">Ω</mi><mn>2</mn></msub><msub><mi>A</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">\Omega_1 A_1 = \Omega_2 A_2</annotation></semantics></math>).</li>
+</ol>
+<h3 id="the-traveling-vortex-ring">The Traveling Vortex Ring</h3>
+<p>A smoke ring is a torus-shaped bundle of vortex lines. The
+circulation of the fluid around the ring's core creates a forward
+velocity that carries the ring through the air.</p>
+<hr />
+<h2 id="vi-critical-limitations-of-the-dry-water-model">VI. Critical
+Limitations of the "Dry Water" Model</h2>
+<p>The theory of dry water is a mathematical idealization that
+encounters significant failures when compared to real-world "wet"
+water.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Limitation</th>
+<th style="text-align: left;">Theory (Dry Water)</th>
+<th style="text-align: left;">Reality (Wet Water)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Generation of
+Vorticity</strong></td>
+<td style="text-align: left;">If
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold">𝛀</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\boldsymbol{\Omega}=0</annotation></semantics></math>
+initially, it remains zero forever.</td>
+<td style="text-align: left;">Vorticity can be generated from rest
+(e.g., a paddle in a lake or a smoke ring).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Boundary Conditions</strong></td>
+<td style="text-align: left;">Fluid can slide along the surface of a
+solid with any velocity.</td>
+<td style="text-align: left;">The velocity of a fluid always goes to
+zero at the surface of a solid.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Pressure Recovery</strong></td>
+<td style="text-align: left;">Pressure should fully recover after a
+constriction in a pipe.</td>
+<td style="text-align: left;">Viscous friction causes a noticeable
+pressure drop downstream.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Efflux Height</strong></td>
+<td style="text-align: left;">A jet thrown upward should reach the
+tank's water level.</td>
+<td style="text-align: left;">The jet falls short due to energy loss
+from viscous friction.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="vii-important-quotes-with-context">VII. Important Quotes with
+Context</h2>
+<blockquote>
+<p><strong>"John von Neumann... characterized the theorist who made such
+analyses as a man who studied 'dry water.' Such analyses leave out an
+essential property of the fluid."</strong></p>
+</blockquote>
+<ul>
+<li><strong>Context:</strong> Explaining why the chapter ignores
+viscosity. It highlights the gap between beautiful mathematical
+solutions and the actual physical behavior of water.</li>
+</ul>
+<blockquote>
+<p><strong>"The derivative
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∂</mi><mi mathvariant="bold-italic">𝒗</mi><mi>/</mi><mi>∂</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">\partial \mathbf{v}/\partial t</annotation></semantics></math>,
+is the rate at which the velocity changes at a fixed point in space.
+What we need is how fast the velocity changes for a particular piece of
+fluid."</strong></p>
+</blockquote>
+<ul>
+<li><strong>Context:</strong> Deriving the acceleration of a fluid
+particle. This distinction is vital for understanding the convective
+term in the equations of motion.</li>
+</ul>
+<blockquote>
+<p><strong>"The hydrodynamic equations are often closely analogous to
+the electrodynamic equations... But electrodynamics is really much
+easier than hydrodynamics."</strong></p>
+</blockquote>
+<ul>
+<li><strong>Context:</strong> Comparing the linear nature of Maxwell's
+equations in free space to the non-linear complexity found in the full
+equations of fluid flow (where vorticity and velocity interact).</li>
+</ul>
+<hr />
+<h2 id="viii-actionable-insights-for-analysis">VIII. Actionable Insights
+for Analysis</h2>
+<ul>
+<li><strong>Determine Approximation Validity:</strong> Use the "Dry
+Water" model only when velocities are significantly lower than the speed
+of sound and viscous effects are negligible (e.g., large-scale flows far
+from boundaries).</li>
+<li><strong>Apply Energy Conservation:</strong> Use Bernoulli’s theorem
+to solve for unknown pressures or velocities along a streamline, but
+include "efflux coefficients" or friction factors to adjust for
+real-world losses.</li>
+<li><strong>Utilize Linearity in Irrotational Flow:</strong> In cases
+where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mtext mathvariant="normal">curl </mtext><mspace width="0.333em"></mspace></mrow><mi mathvariant="bold-italic">𝒗</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\text{curl } \mathbf{v} = 0</annotation></semantics></math>,
+complex flow patterns (like lift) can be constructed by superposing
+simpler solutions, such as uniform flow and point dipoles.</li>
+<li><strong>Expect Boundary Failures:</strong> Always anticipate that
+dry water solutions will be incorrect at the interface between the fluid
+and a solid surface, as the model ignores the "no-slip" condition.</li>
+</ul>
+    </article>
+  </main>
+</body>
+</html>

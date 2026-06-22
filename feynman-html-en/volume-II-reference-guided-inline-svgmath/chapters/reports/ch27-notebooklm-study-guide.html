@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Field Energy and Field Momentum: Study Guide - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="en">
+  <script>
+    (() => {
+      const key = "flp-reader-theme";
+      const applyTheme = (theme) => {
+        const next = theme === "dark" ? "dark" : "light";
+        document.documentElement.dataset.theme = next;
+        document.body.dataset.theme = next;
+        try { localStorage.setItem(key, next); } catch (_) {}
+      };
+      try { applyTheme(localStorage.getItem(key) || "light"); } catch (_) { applyTheme("light"); }
+      document.addEventListener("click", (event) => {
+        const button = event.target.closest('[data-report-action="theme"]');
+        if (!button) return;
+        applyTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark");
+      });
+    })();
+  </script>
+<main class="notebooklm-report-shell">
+    <header aria-label="Quick navigation" class="reader-toolbar report-toolbar">
+      <div class="toolbar-group toolbar-navigation">
+        <a class="toolbar-btn" href="../ch27.html">Back to chapter</a>
+        <a class="toolbar-btn" href="../../../../feynman-reader/index.html">Reader</a>
+        <a class="toolbar-btn" href="../../index.html">Contents</a>
+      </div>
+      <a class="toolbar-title" href="../ch27.html#ch27" title="NotebookLM · Guide">NotebookLM · Guide</a>
+      <div class="toolbar-group toolbar-settings">
+        <button aria-label="Toggle theme" class="toolbar-btn icon-btn" data-report-action="theme" title="Toggle theme" type="button">◐</button>
+      </div>
+    </header>
+    <article class="notebooklm-report">
+<h1 id="field-energy-and-field-momentum-study-guide">Field Energy and
+Field Momentum: Study Guide</h1>
+<p>This study guide provides a comprehensive overview of the principles
+of local conservation, energy density, energy flow, and momentum within
+electromagnetic fields, based on the analysis of electromagnetic field
+theory.</p>
+<hr />
+<h2 id="key-concepts">Key Concepts</h2>
+<h3 id="1-local-vs-world-wide-conservation">1. Local vs. World-Wide
+Conservation</h3>
+<p>In classical mechanics, conservation often implies that the total
+quantity of something (like charge or energy) remains constant globally.
+However, the theory of relativity requires a stricter form known as
+<strong>local conservation</strong>.</p>
+<ul>
+<li><strong>World-Wide Conservation:</strong> A quantity is conserved if
+the total amount in the universe remains constant. Relativity makes this
+concept problematic because "simultaneity" is relative; a charge
+disappearing in one location and appearing in another simultaneously in
+one frame would not be simultaneous in another.</li>
+<li><strong>Local Conservation:</strong> A quantity is conserved locally
+if its decrease in a specific volume is accounted for exactly by its
+flow through the boundaries of that volume.</li>
+<li><strong>Mathematical Form (Charge):</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mtext mathvariant="normal">div </mtext><mspace width="0.333em"></mspace></mrow><mi mathvariant="bold-italic">𝒋</mi><mo>=</mo><mi>−</mi><mfrac><mrow><mi>∂</mi><mi>ρ</mi></mrow><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\text{div } \mathbf{j} = -\frac{\partial \rho}{\partial t}</annotation></semantics></math>.
+This states that the divergence of current density equals the rate of
+decrease of charge density.</li>
+</ul>
+<h3 id="2-the-law-of-energy-conservation-in-fields">2. The Law of Energy
+Conservation in Fields</h3>
+<p>Energy conservation in electromagnetism must account for both the
+energy stored in the field and the work done on matter.</p>
+<ul>
+<li><strong>Work on Matter:</strong> The field does work on matter at a
+rate of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑬</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝒋</mi></mrow><annotation encoding="application/x-tex">\mathbf{E} \cdot \mathbf{j}</annotation></semantics></math>
+per unit volume.</li>
+<li><strong>Energy Balance Equation:</strong> The rate of change of
+field energy density
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>u</mi><annotation encoding="application/x-tex">u</annotation></semantics></math>)
+is equal to the negative divergence of the energy flow
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑺</mi><annotation encoding="application/x-tex">\mathbf{S}</annotation></semantics></math>)
+minus the work done on matter:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mfrac><mrow><mi>∂</mi><mi>u</mi></mrow><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mrow><mtext mathvariant="normal">div </mtext><mspace width="0.333em"></mspace></mrow><mi mathvariant="bold-italic">𝑺</mi><mo>+</mo><mi mathvariant="bold-italic">𝑬</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝒋</mi></mrow><annotation encoding="application/x-tex">-\frac{\partial u}{\partial t} = \text{div } \mathbf{S} + \mathbf{E} \cdot \mathbf{j}</annotation></semantics></math></li>
+</ul>
+<h3 id="3-energy-density-u-and-the-poynting-vector-mathbfs">3. Energy
+Density
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>u</mi><annotation encoding="application/x-tex">u</annotation></semantics></math>)
+and the Poynting Vector
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑺</mi><annotation encoding="application/x-tex">\mathbf{S}</annotation></semantics></math>)</h3>
+<p>By manipulating Maxwell’s equations, specific formulas for energy
+density and energy flow are derived:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Quantity</th>
+<th style="text-align: left;">Formula</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Field Energy Density
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>u</mi><annotation encoding="application/x-tex">u</annotation></semantics></math>)</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi><mo>=</mo><mfrac><msub><mi>ϵ</mi><mn>0</mn></msub><mn>2</mn></mfrac><mi mathvariant="bold-italic">𝑬</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝑬</mi><mo>+</mo><mfrac><mrow><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup></mrow><mn>2</mn></mfrac><mi mathvariant="bold-italic">𝑩</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝑩</mi></mrow><annotation encoding="application/x-tex">u = \frac{\epsilon_0}{2}\mathbf{E} \cdot \mathbf{E} + \frac{\epsilon_0 c^2}{2}\mathbf{B} \cdot \mathbf{B}</annotation></semantics></math></td>
+<td style="text-align: left;">The energy per unit volume stored in the
+electric and magnetic fields.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Poynting Vector
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑺</mi><annotation encoding="application/x-tex">\mathbf{S}</annotation></semantics></math>)</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑺</mi><mo>=</mo><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup><mo stretchy="false" form="prefix">(</mo><mi mathvariant="bold-italic">𝑬</mi><mo>×</mo><mi mathvariant="bold-italic">𝑩</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mathbf{S} = \epsilon_0 c^2 (\mathbf{E} \times \mathbf{B})</annotation></semantics></math></td>
+<td style="text-align: left;">The vector representing the rate of energy
+flow per unit area per unit time.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="4-field-momentum-and-angular-momentum">4. Field Momentum and
+Angular Momentum</h3>
+<p>Electromagnetic fields possess momentum, not just energy. This is
+essential for maintaining the laws of physics in electrodynamic
+systems.</p>
+<ul>
+<li><strong>Momentum Density
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝒈</mi><annotation encoding="application/x-tex">\mathbf{g}</annotation></semantics></math>):</strong>
+Whenever there is energy flow, there is momentum. The momentum density
+is related to the Poynting vector by:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝒈</mi><mo>=</mo><mfrac><mn>1</mn><msup><mi>c</mi><mn>2</mn></msup></mfrac><mi mathvariant="bold-italic">𝑺</mi></mrow><annotation encoding="application/x-tex">\mathbf{g} = \frac{1}{c^2}\mathbf{S}</annotation></semantics></math></li>
+<li><strong>Conservation of Total Momentum:</strong> In systems where
+the forces between particles do not satisfy Newton's third law (action
+and reaction), the total momentum is still conserved when the momentum
+stored in the field is included.</li>
+<li><strong>Angular Momentum:</strong> Static configurations of charges
+and magnets can have circulating energy flow, implying the existence of
+angular momentum in the field. This explains why objects can begin to
+rotate when a static magnetic field is turned off.</li>
+</ul>
+<hr />
+<h2 id="examples-of-energy-flow">Examples of Energy Flow</h2>
+<p>The Poynting vector often points to energy flow paths that contradict
+intuition:</p>
+<ul>
+<li><strong>Light Waves:</strong> For a light wave, the intensity
+(average energy flow) is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⟨</mo><mi>S</mi><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><msub><mi>ϵ</mi><mn>0</mn></msub><mi>c</mi><mo stretchy="false" form="prefix">⟨</mo><msup><mi>E</mi><mn>2</mn></msup><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">\langle S \rangle = \epsilon_0 c \langle E^2 \rangle</annotation></semantics></math>.</li>
+<li><strong>Charging a Capacitor:</strong> Energy does not flow down the
+charging wires into the space between the plates. Instead, the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑬</mi><mo>×</mo><mi mathvariant="bold-italic">𝑩</mi></mrow><annotation encoding="application/x-tex">\mathbf{E} \times \mathbf{B}</annotation></semantics></math>
+vector shows energy flowing inward from the surrounding space through
+the edges of the capacitor gap.</li>
+<li><strong>Resistive Wires:</strong> In a wire carrying current, energy
+flows radially inward from the surrounding field to compensate for the
+energy lost as heat (Joule heating).</li>
+<li><strong>Static Charge and Magnet:</strong> If a point charge is
+placed near a bar magnet, the Poynting vector is non-zero and circulates
+in closed loops, indicating a constant circulation of energy even in a
+"static" system.</li>
+</ul>
+<hr />
+<h2 id="self-check-questions">Self-Check Questions</h2>
+<h3 id="short-answer">Short Answer</h3>
+<ol type="1">
+<li><strong>Why does the theory of relativity require "local" rather
+than "world-wide" conservation?</strong></li>
+<li><strong>What physical process does the term
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑬</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝒋</mi></mrow><annotation encoding="application/x-tex">\mathbf{E} \cdot \mathbf{j}</annotation></semantics></math>
+represent in the energy conservation equation?</strong></li>
+<li><strong>In the context of a light wave, how is the energy density
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>u</mi><annotation encoding="application/x-tex">u</annotation></semantics></math>
+related to the average energy flow
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>S</mi><annotation encoding="application/x-tex">S</annotation></semantics></math>?</strong></li>
+<li><strong>What is the relationship between the Poynting vector and the
+momentum density of the field?</strong></li>
+<li><strong>If the action and reaction forces between two moving charges
+are not equal, how is the law of conservation of momentum
+preserved?</strong></li>
+</ol>
+<h3 id="common-misconceptions">Common Misconceptions</h3>
+<ul>
+<li><strong>Misconception:</strong> Energy in an electrical circuit
+travels inside the wires.
+<ul>
+<li><strong>Reality:</strong> The Poynting theory shows that energy
+actually travels through the electromagnetic field in the space
+<em>outside</em> the wires and enters the wires or components (like
+capacitors) from the sides.</li>
+</ul></li>
+<li><strong>Misconception:</strong> "Static" fields have no motion or
+flow.
+<ul>
+<li><strong>Reality:</strong> A static configuration of an electric
+charge and a magnetic field can produce a non-zero Poynting vector,
+resulting in a constant circulation of field energy and hidden angular
+momentum.</li>
+</ul></li>
+<li><strong>Misconception:</strong> The formulas for
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>u</mi><annotation encoding="application/x-tex">u</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑺</mi><annotation encoding="application/x-tex">\mathbf{S}</annotation></semantics></math>
+are uniquely proven.
+<ul>
+<li><strong>Reality:</strong> There are an infinite number of possible
+formulas for
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>u</mi><annotation encoding="application/x-tex">u</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑺</mi><annotation encoding="application/x-tex">\mathbf{S}</annotation></semantics></math>
+that satisfy the conservation law. The standard formulas are chosen
+because they are the simplest and agree with experimental
+observations.</li>
+</ul></li>
+</ul>
+<hr />
+<h2 id="essay-prompts-for-deeper-exploration">Essay Prompts for Deeper
+Exploration</h2>
+<ol type="1">
+<li><strong>The Boxcar Thought Experiment:</strong> Describe Einstein’s
+argument regarding a railroad car and a flash of light. Explain how this
+thought experiment proves that energy
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>U</mi><annotation encoding="application/x-tex">U</annotation></semantics></math>
+must carry a momentum
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>=</mo><mi>U</mi><mi>/</mi><mi>c</mi></mrow><annotation encoding="application/x-tex">p = U/c</annotation></semantics></math>
+to preserve the law of the center of gravity.</li>
+<li><strong>The Ambiguity of Field Energy Location:</strong> Discuss the
+philosophical and physical implications of the fact that we cannot
+uniquely determine the exact location of electromagnetic energy. Why do
+physicists rely on the simplest form of the Poynting vector despite this
+ambiguity?</li>
+<li><strong>Relativistic Invariance and Conservation:</strong> Analyze
+how the requirement for Lorentz relativistic invariance restricts the
+possible laws of nature, specifically regarding the transition from
+non-local to local interactions.</li>
+</ol>
+<hr />
+<h2 id="glossary-of-important-terms">Glossary of Important Terms</h2>
+<ul>
+<li><strong>Divergence (div):</strong> A mathematical operator that
+measures the magnitude of a field's source or sink at a given point;
+used to describe the flow of charge or energy.</li>
+<li><strong>Energy Density
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>u</mi><annotation encoding="application/x-tex">u</annotation></semantics></math>):</strong>
+The amount of energy stored in the electromagnetic field per unit
+volume, measured in joules per cubic meter.</li>
+<li><strong>Energy Flux:</strong> The rate of energy transfer through a
+surface, represented by the Poynting vector.</li>
+<li><strong>Intensity:</strong> The average rate of energy flow per unit
+area, typically associated with the brightness of light.</li>
+<li><strong>Local Conservation:</strong> The principle that a quantity
+can only move from one place to another by passing through the
+intervening space.</li>
+<li><strong>Momentum Density
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝒈</mi><annotation encoding="application/x-tex">\mathbf{g}</annotation></semantics></math>):</strong>
+The momentum stored in the electromagnetic field per unit volume.</li>
+<li><strong>Poynting Vector
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑺</mi><annotation encoding="application/x-tex">\mathbf{S}</annotation></semantics></math>):</strong>
+A vector representing the direction and magnitude of the directional
+energy flux of an electromagnetic field.</li>
+<li><strong>Work
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑬</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝒋</mi></mrow><annotation encoding="application/x-tex">\mathbf{E} \cdot \mathbf{j}</annotation></semantics></math>):</strong>
+The rate at which the electromagnetic field transfers energy to matter
+per unit volume.</li>
+</ul>
+    </article>
+  </main>
+</body>
+</html>

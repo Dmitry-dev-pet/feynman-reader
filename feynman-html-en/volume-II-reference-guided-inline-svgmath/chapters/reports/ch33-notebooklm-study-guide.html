@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Study Guide: Reflection from Surfaces - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="en">
+  <script>
+    (() => {
+      const key = "flp-reader-theme";
+      const applyTheme = (theme) => {
+        const next = theme === "dark" ? "dark" : "light";
+        document.documentElement.dataset.theme = next;
+        document.body.dataset.theme = next;
+        try { localStorage.setItem(key, next); } catch (_) {}
+      };
+      try { applyTheme(localStorage.getItem(key) || "light"); } catch (_) { applyTheme("light"); }
+      document.addEventListener("click", (event) => {
+        const button = event.target.closest('[data-report-action="theme"]');
+        if (!button) return;
+        applyTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark");
+      });
+    })();
+  </script>
+<main class="notebooklm-report-shell">
+    <header aria-label="Quick navigation" class="reader-toolbar report-toolbar">
+      <div class="toolbar-group toolbar-navigation">
+        <a class="toolbar-btn" href="../ch33.html">Back to chapter</a>
+        <a class="toolbar-btn" href="../../../../feynman-reader/index.html">Reader</a>
+        <a class="toolbar-btn" href="../../index.html">Contents</a>
+      </div>
+      <a class="toolbar-title" href="../ch33.html#ch33" title="NotebookLM · Guide">NotebookLM · Guide</a>
+      <div class="toolbar-group toolbar-settings">
+        <button aria-label="Toggle theme" class="toolbar-btn icon-btn" data-report-action="theme" title="Toggle theme" type="button">◐</button>
+      </div>
+    </header>
+    <article class="notebooklm-report">
+<h1 id="study-guide-reflection-from-surfaces">Study Guide: Reflection
+from Surfaces</h1>
+<p>This study guide explores the physics of electromagnetic
+waves—specifically light—as they interact with boundaries between
+different media. It covers the derivation of reflection and refraction
+laws from Maxwell’s equations, the behavior of waves in metals, and the
+phenomenon of total internal reflection.</p>
+<hr />
+<h2 id="i-key-concepts">I. Key Concepts</h2>
+<h3 id="1-fundamental-laws-of-reflection-and-refraction">1. Fundamental
+Laws of Reflection and Refraction</h3>
+<p>The interaction of light with a surface is governed by specific
+geometric and intensity relationships:</p>
+<ul>
+<li><strong>Law of Reflection:</strong> The angle of incidence equals
+the angle of reflection
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>θ</mi><mi>i</mi></msub><mo>=</mo><msub><mi>θ</mi><mi>r</mi></msub></mrow><annotation encoding="application/x-tex">\theta_i = \theta_r</annotation></semantics></math>).</li>
+<li><strong>Snell’s Law:</strong> The product of the refractive index
+and the sine of the angle is constant across the boundary
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>n</mi><mn>1</mn></msub><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><msub><mi>θ</mi><mi>i</mi></msub><mo>=</mo><msub><mi>n</mi><mn>2</mn></msub><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><msub><mi>θ</mi><mi>t</mi></msub></mrow><annotation encoding="application/x-tex">n_1 \sin \theta_i = n_2 \sin \theta_t</annotation></semantics></math>).</li>
+<li><strong>Normal Incidence:</strong> For light hitting a surface
+head-on, the ratio of reflected to incident intensity is determined by
+the refractive indices:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mi>r</mi></msub><mi>/</mi><msub><mi>I</mi><mi>i</mi></msub><mo>=</mo><mo stretchy="false" form="prefix">[</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>n</mi><mn>2</mn></msub><mo>−</mo><msub><mi>n</mi><mn>1</mn></msub><mo stretchy="false" form="postfix">)</mo><mi>/</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>n</mi><mn>2</mn></msub><mo>+</mo><msub><mi>n</mi><mn>1</mn></msub><mo stretchy="false" form="postfix">)</mo><msup><mo stretchy="false" form="postfix">]</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">I_r/I_i = [(n_2 - n_1)/(n_2 + n_1)]^2</annotation></semantics></math>.</li>
+</ul>
+<h3 id="2-the-wave-representation-and-vector-k">2. The Wave
+Representation and Vector k</h3>
+<p>Mathematical descriptions of plane waves utilize complex
+exponentials:</p>
+<ul>
+<li><strong>Wave Equation:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>=</mo><msub><mi>E</mi><mn>0</mn></msub><msup><mi>e</mi><mrow><mi>i</mi><mo stretchy="false" form="prefix">(</mo><mi>ω</mi><mi>t</mi><mo>−</mo><mi mathvariant="bold-italic">𝒌</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝒓</mi><mo stretchy="false" form="postfix">)</mo></mrow></msup></mrow><annotation encoding="application/x-tex">E = E_0 e^{i(\omega t - \mathbf{k} \cdot \mathbf{r})}</annotation></semantics></math>.</li>
+<li><strong>Wave Vector (k):</strong> Points in the direction of travel
+with a magnitude
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mo>=</mo><mi>ω</mi><mi>n</mi><mi>/</mi><mi>c</mi></mrow><annotation encoding="application/x-tex">k = \omega n / c</annotation></semantics></math>.</li>
+<li><strong>Operator Simplification:</strong> Using this notation, the
+gradient operator
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>∇</mi><annotation encoding="application/x-tex">\nabla</annotation></semantics></math>
+is equivalent to multiplication by
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mi>i</mi><mi mathvariant="bold-italic">𝒌</mi></mrow><annotation encoding="application/x-tex">-i\mathbf{k}</annotation></semantics></math>,
+simplifying the solution of differential equations.</li>
+</ul>
+<h3 id="3-boundary-conditions">3. Boundary Conditions</h3>
+<p>Maxwell’s equations must be satisfied at the interface between two
+materials. By analyzing these equations across a thin transition region
+(Region 3), several continuity requirements are established:</p>
+<ul>
+<li><strong>Tangential E-Field:</strong> The components of the electric
+field parallel to the surface
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>E</mi><mi>y</mi></msub><annotation encoding="application/x-tex">E_y</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>E</mi><mi>z</mi></msub><annotation encoding="application/x-tex">E_z</annotation></semantics></math>)
+must be continuous
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mrow><mi>y</mi><mn>1</mn></mrow></msub><mo>=</mo><msub><mi>E</mi><mrow><mi>y</mi><mn>2</mn></mrow></msub></mrow><annotation encoding="application/x-tex">E_{y1} = E_{y2}</annotation></semantics></math>).</li>
+<li><strong>Magnetic Field:</strong> For nonmagnetic materials, the
+magnetic vector
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+is continuous across the boundary
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="bold-italic">𝑩</mi><mn>1</mn></msub><mo>=</mo><msub><mi mathvariant="bold-italic">𝑩</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">\mathbf{B}_1 = \mathbf{B}_2</annotation></semantics></math>).</li>
+<li><strong>Normal Component:</strong> The quantity
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><msub><mi>ϵ</mi><mn>0</mn></msub><msub><mi>E</mi><mi>x</mi></msub><mo>+</mo><msub><mi>P</mi><mi>x</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(\epsilon_0 E_x + P_x)</annotation></semantics></math>
+is continuous across the boundary.</li>
+</ul>
+<h3 id="4-reflection-from-metals-and-strong-absorbers">4. Reflection
+from Metals and Strong Absorbers</h3>
+<p>Metals and certain dense dyes possess an index of refraction with a
+large imaginary part, indicating high absorption.</p>
+<ul>
+<li><strong>Pure Imaginary Index:</strong> If a material has a purely
+imaginary index
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mi>−</mi><mi>i</mi><msub><mi>n</mi><mi>I</mi></msub></mrow><annotation encoding="application/x-tex">n = -in_I</annotation></semantics></math>),
+it results in 100% reflection.</li>
+<li><strong>Selective Reflection:</strong> Materials that absorb
+strongly at a specific frequency (like red ink absorbing green) will
+exhibit strong "metallic" reflections at those same frequencies.</li>
+</ul>
+<h3 id="5-total-internal-reflection-tir">5. Total Internal Reflection
+(TIR)</h3>
+<p>When light travels from a dense medium to a less dense one
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>n</mi><mn>1</mn></msub><mo>&gt;</mo><msub><mi>n</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">n_1 &gt; n_2</annotation></semantics></math>)
+at an angle exceeding the <strong>critical angle</strong>
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>θ</mi><mi>c</mi></msub><annotation encoding="application/x-tex">\theta_c</annotation></semantics></math>),
+no light is transmitted as a standard wave.</p>
+<ul>
+<li><strong>Evanescent Waves:</strong> Beyond the boundary, the field
+does not vanish instantly but drops off exponentially. This field
+extends only a distance of approximately one wavelength.</li>
+<li><strong>Frustrated TIR:</strong> If a second piece of dense material
+is brought within a few wavelengths of the surface, the exponential
+"tail" of the wave can trigger oscillations in the second material,
+allowing light to be transmitted across the gap.</li>
+</ul>
+<hr />
+<h2 id="ii-short-answer-practice-questions">II. Short-Answer Practice
+Questions</h2>
+<ol type="1">
+<li><strong>How does the thickness of a surface transition affect
+reflection?</strong> If the index of refraction changes gradually over a
+distance of several wavelengths, there is very little reflection.
+Formulas for reflection assume a "sharp" surface where the change occurs
+within a few angstroms.</li>
+<li><strong>Why must the frequencies of incident, reflected, and
+transmitted waves be identical?</strong> The boundary condition
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mi>i</mi></msub><mo>+</mo><msub><mi>E</mi><mi>r</mi></msub><mo>=</mo><msub><mi>E</mi><mi>t</mi></msub></mrow><annotation encoding="application/x-tex">E_i + E_r = E_t</annotation></semantics></math>
+must hold for all times
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math>.
+This is only mathematically possible if the oscillations on both sides
+of the equation have the same frequency
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ω</mi><annotation encoding="application/x-tex">\omega</annotation></semantics></math>.</li>
+<li><strong>What is the physical meaning of a complex wave number
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msubsup><mi>k</mi><mi>x</mi><mo>″</mo></msubsup><annotation encoding="application/x-tex">k_x&#39;&#39;</annotation></semantics></math>)
+in the context of TIR?</strong> A complex (specifically imaginary)
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msubsup><mi>k</mi><mi>x</mi><mo>″</mo></msubsup><annotation encoding="application/x-tex">k_x&#39;&#39;</annotation></semantics></math>
+indicates that the wave does not propagate in the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>-direction
+but instead decays or grows exponentially.</li>
+<li><strong>How does the polarization of light affect its reflection
+coefficient?</strong> The reflection coefficients
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>R</mi><mo>⟂</mo></msub><annotation encoding="application/x-tex">R_\perp</annotation></semantics></math>
+(perpendicular to the plane of incidence) and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>R</mi><mo>∥</mo></msub><annotation encoding="application/x-tex">R_\parallel</annotation></semantics></math>
+(parallel to the plane of incidence) follow different trigonometric
+formulas, meaning the intensity of reflected light varies based on the
+direction of the E-vector.</li>
+<li><strong>In a nonmagnetic material, what is the relationship between
+the magnetic field B, the electric field E, and the wave vector
+k?</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑩</mi><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mi mathvariant="bold-italic">𝒌</mi><mo>×</mo><mi mathvariant="bold-italic">𝑬</mi><mo stretchy="false" form="postfix">)</mo><mi>/</mi><mi>ω</mi></mrow><annotation encoding="application/x-tex">\mathbf{B} = (\mathbf{k} \times \mathbf{E}) / \omega</annotation></semantics></math>.
+This indicates that
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+is at right angles to both the electric field and the direction of wave
+propagation.</li>
+</ol>
+<hr />
+<h2 id="iii-common-misconceptions">III. Common Misconceptions</h2>
+<ul>
+<li><strong>Reflection as a Pure Material Property:</strong> Students
+often mistake the reflection amplitude as a fixed property of a
+substance. In reality, it is a <strong>surface property</strong>
+dependent on surface preparation and the presence of thin layers of
+"extraneous junk" (like oil films).</li>
+<li><strong>Total Internal Reflection Means Zero Field Outside:</strong>
+While no <em>power</em> is transmitted in TIR, there are still
+electromagnetic fields present in the second medium. These fields exist
+as an exponential tail (evanescent wave) that can be detected if another
+material is brought sufficiently close.</li>
+<li><strong>The Sharpness of Boundaries:</strong> We often treat
+boundaries as mathematical planes. Physically, however, a boundary is
+"sharp" only if the transition occurs over a distance much smaller than
+the wavelength of the light (e.g., 5000 Å).</li>
+</ul>
+<hr />
+<h2 id="iv-essay-prompts-for-deeper-exploration">IV. Essay Prompts for
+Deeper Exploration</h2>
+<ol type="1">
+<li><strong>The Derivation of Boundary Conditions:</strong> Discuss the
+method of using Maxwell’s equations to determine what happens at a
+boundary. Contrast the "line integral" (circulations/flux) approach with
+the "differential equation transition" (Region 3) approach. Why is the
+latter considered more universally applicable?</li>
+<li><strong>The Physics of Shiny Materials:</strong> Explain why metals
+are highly reflective using the concept of complex refractive indices.
+Extend this explanation to the phenomenon where highly concentrated dyes
+(like red ink) exhibit metallic reflections of a different color.</li>
+<li><strong>Frustrated Total Internal Reflection:</strong> Describe the
+experiment using paraffin prisms and 3-centimeter microwaves to
+demonstrate the penetration of internally reflected waves. How does this
+experiment validate the existence of fields beyond a surface during
+"total" reflection?</li>
+</ol>
+<hr />
+<h2 id="v-glossary-of-important-terms">V. Glossary of Important
+Terms</h2>
+<ul>
+<li><strong>Boundary Conditions:</strong> Requirements that Maxwell’s
+equations be satisfied at the interface between two media, dictating how
+fields on one side relate to fields on the other.</li>
+<li><strong>Critical Angle
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>θ</mi><mi>c</mi></msub><annotation encoding="application/x-tex">\theta_c</annotation></semantics></math>):</strong>
+The minimum angle of incidence at which total internal reflection
+occurs, defined by
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><msub><mi>θ</mi><mi>c</mi></msub><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n \sin \theta_c = 1</annotation></semantics></math>
+(when light travels into a vacuum/air).</li>
+<li><strong>Evanescent Wave:</strong> The exponentially decaying
+electromagnetic field that exists in the region of lower refractive
+index during total internal reflection.</li>
+<li><strong>Isotropic Substance:</strong> A material in which the
+physical properties (like polarizability) are the same in all
+directions.</li>
+<li><strong>Phase Velocity
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>v</mi><mrow><mi>p</mi><mi>h</mi></mrow></msub><annotation encoding="application/x-tex">v_{ph}</annotation></semantics></math>):</strong>
+The rate at which the phase of the wave propagates through space,
+calculated as
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ω</mi><mi>/</mi><mi>k</mi></mrow><annotation encoding="application/x-tex">\omega/k</annotation></semantics></math>
+or
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mi>/</mi><mi>n</mi></mrow><annotation encoding="application/x-tex">c/n</annotation></semantics></math>.</li>
+<li><strong>Plane of Incidence:</strong> The plane containing the
+incident propagation vector
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝒌</mi><annotation encoding="application/x-tex">\mathbf{k}</annotation></semantics></math>
+and the normal to the surface (in this text, the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mi>y</mi></mrow><annotation encoding="application/x-tex">xy</annotation></semantics></math>-plane).</li>
+<li><strong>Wave Number (k):</strong> The magnitude of the wave vector,
+representing the number of radians per unit distance
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>π</mi><mi>/</mi><mi>λ</mi></mrow><annotation encoding="application/x-tex">2\pi/\lambda</annotation></semantics></math>).</li>
+</ul>
+    </article>
+  </main>
+</body>
+</html>

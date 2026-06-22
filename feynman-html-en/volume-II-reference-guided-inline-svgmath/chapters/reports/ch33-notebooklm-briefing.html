@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reflection from Surfaces: Electrodynamic Analysis - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="en">
+  <script>
+    (() => {
+      const key = "flp-reader-theme";
+      const applyTheme = (theme) => {
+        const next = theme === "dark" ? "dark" : "light";
+        document.documentElement.dataset.theme = next;
+        document.body.dataset.theme = next;
+        try { localStorage.setItem(key, next); } catch (_) {}
+      };
+      try { applyTheme(localStorage.getItem(key) || "light"); } catch (_) { applyTheme("light"); }
+      document.addEventListener("click", (event) => {
+        const button = event.target.closest('[data-report-action="theme"]');
+        if (!button) return;
+        applyTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark");
+      });
+    })();
+  </script>
+<main class="notebooklm-report-shell">
+    <header aria-label="Quick navigation" class="reader-toolbar report-toolbar">
+      <div class="toolbar-group toolbar-navigation">
+        <a class="toolbar-btn" href="../ch33.html">Back to chapter</a>
+        <a class="toolbar-btn" href="../../../../feynman-reader/index.html">Reader</a>
+        <a class="toolbar-btn" href="../../index.html">Contents</a>
+      </div>
+      <a class="toolbar-title" href="../ch33.html#ch33" title="NotebookLM · Overview">NotebookLM · Overview</a>
+      <div class="toolbar-group toolbar-settings">
+        <button aria-label="Toggle theme" class="toolbar-btn icon-btn" data-report-action="theme" title="Toggle theme" type="button">◐</button>
+      </div>
+    </header>
+    <article class="notebooklm-report">
+<h1 id="reflection-from-surfaces-electrodynamic-analysis">Reflection
+from Surfaces: Electrodynamic Analysis</h1>
+<p>This briefing document provides a comprehensive analysis of the
+reflection and refraction of electromagnetic waves at surfaces, as
+derived from Maxwell’s equations. It transitions from the geometric
+optics discussed in earlier studies to a rigorous physical treatment of
+boundary conditions, wave amplitudes, and specialized phenomena such as
+metallic reflection and total internal reflection.</p>
+<h2 id="executive-summary">Executive Summary</h2>
+<p>The analysis of light reflection and refraction is traditionally
+approached through the laws of reflection
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>θ</mi><mi>r</mi></msub><mo>=</mo><msub><mi>θ</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">\theta_r = \theta_i</annotation></semantics></math>)
+and Snell’s law
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>n</mi><mn>1</mn></msub><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><msub><mi>θ</mi><mi>i</mi></msub><mo>=</mo><msub><mi>n</mi><mn>2</mn></msub><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><msub><mi>θ</mi><mi>t</mi></msub></mrow><annotation encoding="application/x-tex">n_1 \sin \theta_i = n_2 \sin \theta_t</annotation></semantics></math>).
+However, a deeper understanding requires the application of Maxwell’s
+equations to waves at the interface of two media. This approach reveals
+that reflection is a "surface property" dependent on the sharpness of
+the transition between refractive indices relative to the wavelength of
+light. By applying boundary conditions derived from the differential
+forms of Maxwell’s equations, one can solve for the specific amplitudes
+of reflected and transmitted waves (Fresnel's equations) for different
+polarizations. Key findings include the 100% reflection from materials
+with purely imaginary indices (perfect absorbers/metals) and the
+existence of evanescent fields during total internal reflection.</p>
+<hr />
+<h2 id="1-mathematical-foundation-of-wave-propagation">1. Mathematical
+Foundation of Wave Propagation</h2>
+<p>To analyze waves at surfaces, the field components are represented in
+complex exponential form. This notation simplifies the differential
+calculus required by Maxwell’s equations.</p>
+<h3 id="wave-representation">Wave Representation</h3>
+<p>Any field component
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math>
+(such as the electric field) is expressed as:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>=</mo><msub><mi>E</mi><mn>0</mn></msub><msup><mi>e</mi><mrow><mi>i</mi><mo stretchy="false" form="prefix">(</mo><mi>ω</mi><mi>t</mi><mo>−</mo><mi mathvariant="bold-italic">𝒌</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝒓</mi><mo stretchy="false" form="postfix">)</mo></mrow></msup></mrow><annotation encoding="application/x-tex">E = E_0 e^{i(\omega t - \mathbf{k} \cdot \mathbf{r})}</annotation></semantics></math>
+Where:</p>
+<ul>
+<li><strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝒌</mi><annotation encoding="application/x-tex">\mathbf{k}</annotation></semantics></math></strong>:
+The propagation vector pointing in the direction of travel.</li>
+<li><strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math>
+(Wave Number)</strong>:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>π</mi><mi>/</mi><mi>λ</mi><mo>=</mo><mi>ω</mi><mi>n</mi><mi>/</mi><mi>c</mi></mrow><annotation encoding="application/x-tex">2\pi/\lambda = \omega n/c</annotation></semantics></math>.</li>
+<li><strong>Phase Velocity</strong>:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>v</mi><mtext mathvariant="normal">ph</mtext></msub><mo>=</mo><mi>ω</mi><mi>/</mi><mi>k</mi><mo>=</mo><mi>c</mi><mi>/</mi><mi>n</mi></mrow><annotation encoding="application/x-tex">v_{\text{ph}} = \omega/k = c/n</annotation></semantics></math>.</li>
+</ul>
+<h3 id="the-operator-substitution">The Operator Substitution</h3>
+<p>A critical simplification in this analysis is the replacement of
+differential operators with algebraic multiplications:</p>
+<ul>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mi>∂</mi><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac><mo>→</mo><mi>i</mi><mi>ω</mi></mrow><annotation encoding="application/x-tex">\frac{\partial}{\partial t} \to i\omega</annotation></semantics></math></li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∇</mi><mo>→</mo><mi>−</mi><mi>i</mi><mi mathvariant="bold-italic">𝒌</mi></mrow><annotation encoding="application/x-tex">\nabla \to -i\mathbf{k}</annotation></semantics></math></li>
+</ul>
+<p>This substitution allows for the rapid derivation of field
+relationships. For example, Faraday’s law
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∇</mi><mo>×</mo><mi mathvariant="bold-italic">𝑬</mi><mo>=</mo><mi>−</mi><mi>∂</mi><mi mathvariant="bold-italic">𝑩</mi><mi>/</mi><mi>∂</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">\nabla \times \mathbf{E} = -\partial \mathbf{B}/\partial t</annotation></semantics></math>)
+becomes:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mi>i</mi><mi mathvariant="bold-italic">𝒌</mi><mo>×</mo><mi mathvariant="bold-italic">𝑬</mi><mo>=</mo><mi>−</mi><mi>i</mi><mi>ω</mi><mi mathvariant="bold-italic">𝑩</mi><mo>⟹</mo><mi mathvariant="bold-italic">𝑩</mi><mo>=</mo><mfrac><mrow><mi mathvariant="bold-italic">𝒌</mi><mo>×</mo><mi mathvariant="bold-italic">𝑬</mi></mrow><mi>ω</mi></mfrac></mrow><annotation encoding="application/x-tex">-i\mathbf{k} \times \mathbf{E} = -i\omega \mathbf{B} \implies \mathbf{B} = \frac{\mathbf{k} \times \mathbf{E}}{\omega}</annotation></semantics></math>
+This confirms that in a wave,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+is at right angles to both
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>
+and the direction of propagation
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝒌</mi><annotation encoding="application/x-tex">\mathbf{k}</annotation></semantics></math>).</p>
+<hr />
+<h2 id="2-derivation-of-boundary-conditions">2. Derivation of Boundary
+Conditions</h2>
+<p>The behavior of light at a surface is dictated by how Maxwell’s
+equations are satisfied at the interface (the "boundary") between two
+materials.</p>
+<h3 id="the-transition-region-concept">The Transition Region
+Concept</h3>
+<p>While surfaces appear discontinuous, the analysis assumes a very thin
+transition layer (Region 3) where properties change rapidly but
+continuously. When the transition occurs over a distance much smaller
+than the wavelength
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi><mo>≈</mo><mn>5000</mn></mrow><annotation encoding="application/x-tex">\lambda \approx 5000</annotation></semantics></math>
+Å), the derivatives of fields with respect to the direction normal to
+the surface
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>)
+become dominant "spikes."</p>
+<h3 id="boundary-condition-summary">Boundary Condition Summary</h3>
+<p>By integrating the differential equations across this thin transition
+region, the following conditions for non-magnetic materials are
+established (where the surface lies in the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>y</mi><mi>z</mi></mrow><annotation encoding="application/x-tex">yz</annotation></semantics></math>-plane):</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Field Component</th>
+<th style="text-align: left;">Relationship at Boundary</th>
+<th style="text-align: left;">Physical Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Normal
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math></strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><msub><mi>ϵ</mi><mn>0</mn></msub><msub><mi mathvariant="bold-italic">𝑬</mi><mn>1</mn></msub><mo>+</mo><msub><mi mathvariant="bold-italic">𝑷</mi><mn>1</mn></msub><msub><mo stretchy="false" form="postfix">)</mo><mi>x</mi></msub><mo>=</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>ϵ</mi><mn>0</mn></msub><msub><mi mathvariant="bold-italic">𝑬</mi><mn>2</mn></msub><mo>+</mo><msub><mi mathvariant="bold-italic">𝑷</mi><mn>2</mn></msub><msub><mo stretchy="false" form="postfix">)</mo><mi>x</mi></msub></mrow><annotation encoding="application/x-tex">(\epsilon_0 \mathbf{E}_1 + \mathbf{P}_1)_x = (\epsilon_0 \mathbf{E}_2 + \mathbf{P}_2)_x</annotation></semantics></math></td>
+<td style="text-align: left;">The quantity
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><msub><mi>ϵ</mi><mn>0</mn></msub><msub><mi>E</mi><mi>x</mi></msub><mo>+</mo><msub><mi>P</mi><mi>x</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(\epsilon_0 E_x + P_x)</annotation></semantics></math>
+is continuous.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Tangential
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math></strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><msub><mi mathvariant="bold-italic">𝑬</mi><mn>1</mn></msub><msub><mo stretchy="false" form="postfix">)</mo><mi>y</mi></msub><mo>=</mo><mo stretchy="false" form="prefix">(</mo><msub><mi mathvariant="bold-italic">𝑬</mi><mn>2</mn></msub><msub><mo stretchy="false" form="postfix">)</mo><mi>y</mi></msub></mrow><annotation encoding="application/x-tex">(\mathbf{E}_1)_y = (\mathbf{E}_2)_y</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><msub><mi mathvariant="bold-italic">𝑬</mi><mn>1</mn></msub><msub><mo stretchy="false" form="postfix">)</mo><mi>z</mi></msub><mo>=</mo><mo stretchy="false" form="prefix">(</mo><msub><mi mathvariant="bold-italic">𝑬</mi><mn>2</mn></msub><msub><mo stretchy="false" form="postfix">)</mo><mi>z</mi></msub></mrow><annotation encoding="application/x-tex">(\mathbf{E}_1)_z = (\mathbf{E}_2)_z</annotation></semantics></math></td>
+<td style="text-align: left;">Tangential electric fields must match on
+both sides.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Magnetic Field
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math></strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="bold-italic">𝑩</mi><mn>1</mn></msub><mo>=</mo><msub><mi mathvariant="bold-italic">𝑩</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">\mathbf{B}_1 = \mathbf{B}_2</annotation></semantics></math></td>
+<td style="text-align: left;">All components of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+are continuous for non-magnetic media.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="3-amplitudes-of-reflected-and-transmitted-waves">3. Amplitudes
+of Reflected and Transmitted Waves</h2>
+<p>The reflection and transmission coefficients depend on the
+polarization of the incident wave relative to the "plane of incidence"
+(the plane containing the propagation vector and the surface
+normal).</p>
+<h3 id="case-1-e-perpendicular-to-the-plane-of-incidence">Case 1: E
+Perpendicular to the Plane of Incidence</h3>
+<p>When the electric field has only a
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>z</mi><annotation encoding="application/x-tex">z</annotation></semantics></math>-component
+(perpendicular to the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mi>y</mi></mrow><annotation encoding="application/x-tex">xy</annotation></semantics></math>
+plane of incidence), the amplitudes are:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>E</mi><mn>0</mn><mo>′</mo></msubsup><mo>=</mo><mfrac><mrow><msub><mi>k</mi><mi>x</mi></msub><mo>−</mo><msubsup><mi>k</mi><mi>x</mi><mo>″</mo></msubsup></mrow><mrow><msub><mi>k</mi><mi>x</mi></msub><mo>+</mo><msubsup><mi>k</mi><mi>x</mi><mo>″</mo></msubsup></mrow></mfrac><msub><mi>E</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">E_0&#39; = \frac{k_x - k_x&#39;&#39;}{k_x + k_x&#39;&#39;} E_0</annotation></semantics></math>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>E</mi><mn>0</mn><mo>″</mo></msubsup><mo>=</mo><mfrac><mrow><mn>2</mn><msub><mi>k</mi><mi>x</mi></msub></mrow><mrow><msub><mi>k</mi><mi>x</mi></msub><mo>+</mo><msubsup><mi>k</mi><mi>x</mi><mo>″</mo></msubsup></mrow></mfrac><msub><mi>E</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">E_0&#39;&#39; = \frac{2k_x}{k_x + k_x&#39;&#39;} E_0</annotation></semantics></math>
+Where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>k</mi><mi>x</mi></msub><annotation encoding="application/x-tex">k_x</annotation></semantics></math>
+is the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>-component
+of the incident wave and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msubsup><mi>k</mi><mi>x</mi><mo>″</mo></msubsup><annotation encoding="application/x-tex">k_x&#39;&#39;</annotation></semantics></math>
+is the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>-component
+of the transmitted wave.</p>
+<h3 id="case-2-e-parallel-to-the-plane-of-incidence">Case 2: E Parallel
+to the Plane of Incidence</h3>
+<p>When the electric field lies within the plane of incidence, the
+algebra is more complex, resulting in:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><msubsup><mi>E</mi><mn>0</mn><mo>′</mo></msubsup><mo stretchy="false" form="prefix">|</mo><mo>=</mo><mfrac><mrow><msubsup><mi>n</mi><mn>2</mn><mn>2</mn></msubsup><msub><mi>k</mi><mi>x</mi></msub><mo>−</mo><msubsup><mi>n</mi><mn>1</mn><mn>2</mn></msubsup><msubsup><mi>k</mi><mi>x</mi><mo>″</mo></msubsup></mrow><mrow><msubsup><mi>n</mi><mn>2</mn><mn>2</mn></msubsup><msub><mi>k</mi><mi>x</mi></msub><mo>+</mo><msubsup><mi>n</mi><mn>1</mn><mn>2</mn></msubsup><msubsup><mi>k</mi><mi>x</mi><mo>″</mo></msubsup></mrow></mfrac><mo stretchy="false" form="prefix">|</mo><msub><mi>E</mi><mn>0</mn></msub><mo stretchy="false" form="prefix">|</mo></mrow><annotation encoding="application/x-tex">|E_0&#39;| = \frac{n_2^2 k_x - n_1^2 k_x&#39;&#39;}{n_2^2 k_x + n_1^2 k_x&#39;&#39;} |E_0|</annotation></semantics></math>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><msubsup><mi>E</mi><mn>0</mn><mo>″</mo></msubsup><mo stretchy="false" form="prefix">|</mo><mo>=</mo><mfrac><mrow><mn>2</mn><msub><mi>n</mi><mn>1</mn></msub><msub><mi>n</mi><mn>2</mn></msub><msub><mi>k</mi><mi>x</mi></msub></mrow><mrow><msubsup><mi>n</mi><mn>2</mn><mn>2</mn></msubsup><msub><mi>k</mi><mi>x</mi></msub><mo>+</mo><msubsup><mi>n</mi><mn>1</mn><mn>2</mn></msubsup><msubsup><mi>k</mi><mi>x</mi><mo>″</mo></msubsup></mrow></mfrac><mo stretchy="false" form="prefix">|</mo><msub><mi>E</mi><mn>0</mn></msub><mo stretchy="false" form="prefix">|</mo></mrow><annotation encoding="application/x-tex">|E_0&#39;&#39;| = \frac{2n_1 n_2 k_x}{n_2^2 k_x + n_1^2 k_x&#39;&#39;} |E_0|</annotation></semantics></math></p>
+<h3 id="normal-incidence">Normal Incidence</h3>
+<p>At
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>θ</mi><mi>i</mi></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\theta_i = 0</annotation></semantics></math>,
+the distinction between polarizations disappears, and the intensity
+ratio simplifies to:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><msub><mi>I</mi><mi>r</mi></msub><msub><mi>I</mi><mi>i</mi></msub></mfrac><mo>=</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><msub><mi>n</mi><mn>2</mn></msub><mo>−</mo><msub><mi>n</mi><mn>1</mn></msub></mrow><mrow><msub><mi>n</mi><mn>2</mn></msub><mo>+</mo><msub><mi>n</mi><mn>1</mn></msub></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\frac{I_r}{I_i} = \left( \frac{n_2 - n_1}{n_2 + n_1} \right)^2</annotation></semantics></math></p>
+<hr />
+<h2 id="4-physical-phenomena-and-applications">4. Physical Phenomena and
+Applications</h2>
+<h3 id="reflection-from-metals">Reflection from Metals</h3>
+<p>Metals possess a refractive index with a large imaginary part due to
+high absorption. If a material's index is purely imaginary
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mi>−</mi><mi>i</mi><msub><mi>n</mi><mi>I</mi></msub></mrow><annotation encoding="application/x-tex">n = -in_I</annotation></semantics></math>),
+the reflection intensity ratio is:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><msub><mi>I</mi><mi>r</mi></msub><msub><mi>I</mi><mi>i</mi></msub></mfrac><mo>=</mo><mfrac><mrow><mo stretchy="false" form="prefix">|</mo><mn>1</mn><mo>+</mo><mi>i</mi><msub><mi>n</mi><mi>I</mi></msub><msup><mo stretchy="false" form="prefix">|</mo><mn>2</mn></msup></mrow><mrow><mo stretchy="false" form="prefix">|</mo><mn>1</mn><mo>−</mo><mi>i</mi><msub><mi>n</mi><mi>I</mi></msub><msup><mo stretchy="false" form="prefix">|</mo><mn>2</mn></msup></mrow></mfrac><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\frac{I_r}{I_i} = \frac{|1 + in_I|^2}{|1 - in_I|^2} = 1</annotation></semantics></math>
+<strong>Key Insight:</strong> Strong absorbers are also strong
+reflectors. This explains the "metallic" shine of concentrated dyes
+(e.g., dried red ink reflecting green light).</p>
+<h3 id="total-internal-reflection-and-evanescent-waves">Total Internal
+Reflection and Evanescent Waves</h3>
+<p>When light travels from a dense medium
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>n</mi><mn>1</mn></msub><annotation encoding="application/x-tex">n_1</annotation></semantics></math>)
+to a less dense medium
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>n</mi><mn>2</mn></msub><annotation encoding="application/x-tex">n_2</annotation></semantics></math>)
+at an angle exceeding the critical angle
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><msub><mi>θ</mi><mi>c</mi></msub><mo>=</mo><msub><mi>n</mi><mn>2</mn></msub><mi>/</mi><msub><mi>n</mi><mn>1</mn></msub></mrow><annotation encoding="application/x-tex">\sin \theta_c = n_2/n_1</annotation></semantics></math>),
+the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>-component
+of the transmitted wave number
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msubsup><mi>k</mi><mi>x</mi><mo>″</mo></msubsup><annotation encoding="application/x-tex">k_x&#39;&#39;</annotation></semantics></math>
+becomes purely imaginary.</p>
+<ul>
+<li><strong>Result:</strong> The "transmitted" wave does not propagate
+but drops off exponentially with distance from the surface.</li>
+<li><strong>Penetration Depth:</strong> The field extends beyond the
+surface at a distance of approximately one wavelength.</li>
+</ul>
+<h3 id="frustrated-total-internal-reflection">Frustrated Total Internal
+Reflection</h3>
+<p>If a second piece of dense material is brought within the range of
+the exponentially decaying field (the "evanescent tail"), the field
+"shakes" the electrons in the second material, generating a transmitted
+wave. This "frustrates" the total reflection, allowing light to pass
+through a small gap. This is demonstratable with 3-centimeter
+microwaves, where the gap can be several centimeters wide.</p>
+<hr />
+<h2 id="5-important-quotes-with-context">5. Important Quotes with
+Context</h2>
+<blockquote>
+<p><strong>"The amplitude of a surface reflection is not a property of
+the material... It is a 'surface property,' one that depends precisely
+on how the surface is made."</strong></p>
+</blockquote>
+<ul>
+<li><em>Context:</em> Explaining that reflection formulas only work if
+the index change is sudden (within a few angstroms). If the index
+changes gradually over several wavelengths, reflection is minimal.</li>
+</ul>
+<blockquote>
+<p><strong>"Whenever you have to take the gradient of a vector that
+varies as a wave... you can always take the derivations quickly and
+almost without thinking by remembering that the operator
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>∇</mi><annotation encoding="application/x-tex">\nabla</annotation></semantics></math>
+is equivalent to multiplication by
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mi>i</mi><mi mathvariant="bold-italic">𝒌</mi></mrow><annotation encoding="application/x-tex">-i\mathbf{k}</annotation></semantics></math>."</strong></p>
+</blockquote>
+<ul>
+<li><em>Context:</em> Highlighting the computational efficiency of the
+complex exponential notation in electrodynamics.</li>
+</ul>
+<blockquote>
+<p><strong>"If any material gets to be a very good absorber at any
+frequency, the waves are strongly reflected at the surface and very
+little gets inside to be absorbed."</strong></p>
+</blockquote>
+<ul>
+<li><em>Context:</em> Explaining why metals and highly concentrated dyes
+appear shiny or reflect unexpected colors.</li>
+</ul>
+<hr />
+<h2 id="6-actionable-insights-summary-of-physical-meaning">6. Actionable
+Insights: Summary of Physical Meaning</h2>
+<ol type="1">
+<li><strong>Fidelity to Maxwell:</strong> The geometric laws of optics
+(Snell's Law) are not independent rules but are necessary consequences
+of matching electromagnetic field oscillations at a boundary.</li>
+<li><strong>Surface Condition Matters:</strong> Highly polished surfaces
+are required for these equations to hold. A layer of "extraneous junk"
+or a gradual index transition can negate the predicted reflection.</li>
+<li><strong>Frequency Conservation:</strong> Boundary conditions require
+that
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ω</mi><mo>=</mo><msup><mi>ω</mi><mo>′</mo></msup><mo>=</mo><msup><mi>ω</mi><mo>″</mo></msup></mrow><annotation encoding="application/x-tex">\omega = \omega&#39; = \omega&#39;&#39;</annotation></semantics></math>;
+the frequency of light cannot change upon reflection or refraction in
+linear isotropic media.</li>
+<li><strong>Beyond the Boundary:</strong> Total internal reflection is
+not an absolute barrier; electromagnetic energy exists on the "other
+side" as a non-propagating field, which can be tapped if another medium
+is placed sufficiently close.</li>
+</ol>
+    </article>
+  </main>
+</body>
+</html>

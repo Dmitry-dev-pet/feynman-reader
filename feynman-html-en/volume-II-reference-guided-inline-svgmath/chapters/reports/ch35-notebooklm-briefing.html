@@ -1,0 +1,345 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chapter 35: Paramagnetism and Magnetic Resonance - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="en">
+  <script>
+    (() => {
+      const key = "flp-reader-theme";
+      const applyTheme = (theme) => {
+        const next = theme === "dark" ? "dark" : "light";
+        document.documentElement.dataset.theme = next;
+        document.body.dataset.theme = next;
+        try { localStorage.setItem(key, next); } catch (_) {}
+      };
+      try { applyTheme(localStorage.getItem(key) || "light"); } catch (_) { applyTheme("light"); }
+      document.addEventListener("click", (event) => {
+        const button = event.target.closest('[data-report-action="theme"]');
+        if (!button) return;
+        applyTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark");
+      });
+    })();
+  </script>
+<main class="notebooklm-report-shell">
+    <header aria-label="Quick navigation" class="reader-toolbar report-toolbar">
+      <div class="toolbar-group toolbar-navigation">
+        <a class="toolbar-btn" href="../ch35.html">Back to chapter</a>
+        <a class="toolbar-btn" href="../../../../feynman-reader/index.html">Reader</a>
+        <a class="toolbar-btn" href="../../index.html">Contents</a>
+      </div>
+      <a class="toolbar-title" href="../ch35.html#ch35" title="NotebookLM · Overview">NotebookLM · Overview</a>
+      <div class="toolbar-group toolbar-settings">
+        <button aria-label="Toggle theme" class="toolbar-btn icon-btn" data-report-action="theme" title="Toggle theme" type="button">◐</button>
+      </div>
+    </header>
+    <article class="notebooklm-report">
+<h1 id="chapter-35-paramagnetism-and-magnetic-resonance">Chapter 35:
+Paramagnetism and Magnetic Resonance</h1>
+<p>This briefing document provides a comprehensive analytical synthesis
+of the principles of paramagnetism and magnetic resonance as outlined in
+the source text. It covers the transition from classical to quantum
+descriptions of magnetic moments, experimental verifications, and the
+practical application of resonance phenomena in bulk materials.</p>
+<h2 id="executive-summary">Executive Summary</h2>
+<p>The study of paramagnetism and magnetic resonance reveals the
+fundamental departure of atomic behavior from classical physics. While
+classical theory predicts continuous orientations for magnetic moments,
+quantum mechanics dictates that angular momentum and its associated
+magnetic moments are quantized. This quantization is experimentally
+verified by the Stern-Gerlach and Rabi molecular-beam experiments. These
+principles are further applied to understand the magnetization of bulk
+materials and are utilized in sophisticated technological applications
+such as adiabatic demagnetization for reaching temperatures near
+absolute zero and Nuclear Magnetic Resonance (NMR) for chemical and
+physical analysis.</p>
+<hr />
+<h2 id="1-the-physics-of-quantized-magnetic-states">1. The Physics of
+Quantized Magnetic States</h2>
+<p>In quantum mechanics, the angular momentum component along any given
+axis is restricted to discrete, equally spaced values. For any atomic
+system, there is a spin
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math>
+(an integer or half-integer), and the component of angular momentum
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>J</mi><mi>z</mi></msub><annotation encoding="application/x-tex">J_z</annotation></semantics></math>)
+along an axis is defined by:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>J</mi><mi>z</mi></msub><mo>=</mo><mo stretchy="false" form="prefix">{</mo><mi>j</mi><mo>,</mo><mi>j</mi><mo>−</mo><mn>1</mn><mo>,</mo><mi>j</mi><mo>−</mo><mn>2</mn><mo>,</mo><mi>…</mi><mo>,</mo><mi>−</mi><mi>j</mi><mo stretchy="false" form="postfix">}</mo><mo>⋅</mo><mi>ℏ</mi></mrow><annotation encoding="application/x-tex">J_z = \{j, j-1, j-2, \dots, -j\} \cdot \hbar \tag{35.1}</annotation></semantics></math></p>
+<h3 id="11-magnetic-moments-and-energy-splitting">1.1 Magnetic Moments
+and Energy Splitting</h3>
+<p>Every atomic system with angular momentum possesses a magnetic moment
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>μ</mi><annotation encoding="application/x-tex">\mu</annotation></semantics></math>
+in the same direction. In a weak magnetic field
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>),
+the energy of the system changes by:</p>
+<p><span class="math display">$$\Delta U = -\mu_z B
+\tag{35.2}$$</span></p>
+<p>The
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>z</mi><annotation encoding="application/x-tex">z</annotation></semantics></math>-component
+of the magnetic moment is related to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>J</mi><mi>z</mi></msub><annotation encoding="application/x-tex">J_z</annotation></semantics></math>
+by the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>g</mi><annotation encoding="application/x-tex">g</annotation></semantics></math>-factor
+and the charge-to-mass ratio:</p>
+<p><span class="math display">$$\mu_z = g\left(\frac{q}{2m}\right)J_z
+\tag{35.3}$$</span></p>
+<p>When a magnetic field is applied, the previously degenerate energy
+states split into
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mi>j</mi><mo>+</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(2j+1)</annotation></semantics></math>
+distinct levels. The spacing between these levels is constant and
+defined as
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ℏ</mi><msub><mi>ω</mi><mi>p</mi></msub></mrow><annotation encoding="application/x-tex">\hbar\omega_p</annotation></semantics></math>.</p>
+<h3 id="12-the-larmor-precession-frequency">1.2 The Larmor Precession
+Frequency</h3>
+<p>The angular velocity of precession,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ω</mi><mi>p</mi></msub><annotation encoding="application/x-tex">\omega_p</annotation></semantics></math>,
+is consistent between classical and quantum descriptions:</p>
+<p><span class="math display">$$\omega_p = g\left(\frac{q}{2m}\right)B
+\tag{35.4}$$</span></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Entity</th>
+<th style="text-align: left;">Symbol</th>
+<th style="text-align: left;">Physical Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Spin</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math></td>
+<td style="text-align: left;">An integer or half-integer characteristic
+of the system.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Bohr Magneton</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>μ</mi><mi>B</mi></msub><annotation encoding="application/x-tex">\mu_B</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>q</mi><mi>e</mi></msub><mi>ℏ</mi><mi>/</mi><mn>2</mn><mi>m</mi></mrow><annotation encoding="application/x-tex">q_e\hbar/2m</annotation></semantics></math>;
+the scale of electronic magnetic moments.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>g-factor</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>g</mi><annotation encoding="application/x-tex">g</annotation></semantics></math></td>
+<td style="text-align: left;">A dimensionless proportionality constant
+for the magnetic moment.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Precession Frequency</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ω</mi><mi>p</mi></msub><annotation encoding="application/x-tex">\omega_p</annotation></semantics></math></td>
+<td style="text-align: left;">The frequency at which the moment
+precesses in field
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="2-experimental-verification-stern-gerlach-and-rabi">2.
+Experimental Verification: Stern-Gerlach and Rabi</h2>
+<h3 id="21-the-stern-gerlach-experiment-1922">2.1 The Stern-Gerlach
+Experiment (1922)</h3>
+<p>This experiment provided direct evidence of quantized angular
+momentum. Silver atoms were passed through a strong magnetic field
+gradient
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∂</mi><mi>B</mi><mi>/</mi><mi>∂</mi><mi>z</mi></mrow><annotation encoding="application/x-tex">\partial B/\partial z</annotation></semantics></math>).</p>
+<ul>
+<li><strong>Classical Expectation:</strong> A continuous smear of atoms
+on the detector plate, as magnetic moments should be randomly
+oriented.</li>
+<li><strong>Quantum Result:</strong> The beam split into two distinct
+spots (for
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi><mo>=</mo><mn>1</mn><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">j=1/2</annotation></semantics></math>).
+This confirmed that the atoms could only exist in specific magnetic
+states relative to the field axis.</li>
+<li><strong>Force Equation:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>F</mi><mi>z</mi></msub><mo>=</mo><mi>μ</mi><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>θ</mi><mfrac><mrow><mi>∂</mi><mi>B</mi></mrow><mrow><mi>∂</mi><mi>z</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">F_z = \mu \cos\theta \frac{\partial B}{\partial z}</annotation></semantics></math>
+(where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>θ</mi></mrow><annotation encoding="application/x-tex">\cos\theta</annotation></semantics></math>
+takes only discrete values).</li>
+</ul>
+<h3 id="22-the-rabi-molecular-beam-method">2.2 The Rabi Molecular-Beam
+Method</h3>
+<p>I. I. Rabi improved upon the precision of Stern-Gerlach by using
+resonance to measure
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>g</mi><annotation encoding="application/x-tex">g</annotation></semantics></math>-factors.
+The apparatus uses three magnets:</p>
+<ol type="1">
+<li><strong>Magnet 1:</strong> Creates a field gradient to deflect atoms
+based on their spin state.</li>
+<li><strong>Magnet 2:</strong> Provides a uniform field
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>B</mi><mn>0</mn></msub><annotation encoding="application/x-tex">B_0</annotation></semantics></math>)
+and a weak oscillating horizontal field
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>B</mi><mo>′</mo></msup><annotation encoding="application/x-tex">B&#39;</annotation></semantics></math>).
+If the frequency
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ω</mi><annotation encoding="application/x-tex">\omega</annotation></semantics></math>
+of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>B</mi><mo>′</mo></msup><annotation encoding="application/x-tex">B&#39;</annotation></semantics></math>
+matches
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ω</mi><mi>p</mi></msub><annotation encoding="application/x-tex">\omega_p</annotation></semantics></math>,
+transitions (spin flips) are induced.</li>
+<li><strong>Magnet 3:</strong> An inverted gradient that refocuses the
+atoms toward the detector unless their spin was flipped in Magnet
+2.</li>
+</ol>
+<p><strong>Key Insight:</strong> A decrease in detected current
+signifies resonance
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ω</mi><mo>=</mo><msub><mi>ω</mi><mi>p</mi></msub></mrow><annotation encoding="application/x-tex">\omega = \omega_p</annotation></semantics></math>),
+allowing for the precise determination of the magnetic moment.</p>
+<hr />
+<h2 id="3-paramagnetism-in-bulk-materials">3. Paramagnetism in Bulk
+Materials</h2>
+<p>Paramagnetism occurs in materials containing atoms with permanent
+magnetic moments, typically those with unfilled inner electron shells
+(e.g., transition elements, rare earths).</p>
+<h3 id="31-classical-vs-quantum-theory">3.1 Classical vs. Quantum
+Theory</h3>
+<p>Classical theory (Langevin) assumes all orientations are possible,
+while quantum theory accounts for discrete states.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Model</th>
+<th style="text-align: left;">Magnetization Formula
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>M</mi><annotation encoding="application/x-tex">M</annotation></semantics></math>)</th>
+<th style="text-align: left;">Conditions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Classical</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mo>=</mo><mfrac><mrow><mi>N</mi><msup><mi>μ</mi><mn>2</mn></msup><mi>B</mi></mrow><mrow><mn>3</mn><mi>k</mi><mi>T</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">M = \frac{N\mu^2B}{3kT}</annotation></semantics></math></td>
+<td style="text-align: left;">Small fields
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mi>B</mi><mo>≪</mo><mi>k</mi><mi>T</mi></mrow><annotation encoding="application/x-tex">\mu B \ll kT</annotation></semantics></math>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Quantum
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi><mo>=</mo><mn>1</mn><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">j=1/2</annotation></semantics></math>)</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mo>=</mo><mi>N</mi><msub><mi>μ</mi><mn>0</mn></msub><mrow><mi mathvariant="normal">tanh</mi><mo>&#8289;</mo></mrow><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><msub><mi>μ</mi><mn>0</mn></msub><mi>B</mi></mrow><mrow><mi>k</mi><mi>T</mi></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">M = N\mu_0 \tanh\left(\frac{\mu_0B}{kT}\right)</annotation></semantics></math></td>
+<td style="text-align: left;">General Case</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Quantum (General
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math>)</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><mo>=</mo><mi>N</mi><msup><mi>g</mi><mn>2</mn></msup><mfrac><mrow><mi>j</mi><mo stretchy="false" form="prefix">(</mo><mi>j</mi><mo>+</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><mn>3</mn></mfrac><mfrac><mrow><msubsup><mi>μ</mi><mi>B</mi><mn>2</mn></msubsup><mi>B</mi></mrow><mrow><mi>k</mi><mi>T</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">M = Ng^2 \frac{j(j+1)}{3} \frac{\mu_B^2 B}{kT}</annotation></semantics></math></td>
+<td style="text-align: left;">Low fields</td>
+</tr>
+</tbody>
+</table>
+<h3 id="32-saturation">3.2 Saturation</h3>
+<p>At very high magnetic fields or very low temperatures, magnetization
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>M</mi><annotation encoding="application/x-tex">M</annotation></semantics></math>
+approaches a limiting value
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><msub><mi>μ</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">N\mu_0</annotation></semantics></math>.
+This "saturation" occurs because all available moments become aligned
+with the external field.</p>
+<hr />
+<h2 id="4-advanced-applications-of-magnetic-resonance">4. Advanced
+Applications of Magnetic Resonance</h2>
+<h3 id="41-adiabatic-demagnetization">4.1 Adiabatic Demagnetization</h3>
+<p>This technique is used to reach temperatures within a millionth of a
+degree of absolute zero.</p>
+<ol type="1">
+<li><strong>Alignment:</strong> A paramagnetic salt is cooled (via
+liquid helium) in a strong magnetic field, aligning the spins and
+lowering the system's entropy.</li>
+<li><strong>Isolation:</strong> The salt is thermally isolated.</li>
+<li><strong>Demagnetization:</strong> The external field is slowly
+reduced. As spins randomize due to thermal fluctuations, they must do
+work against the remaining field, absorbing energy from the lattice
+vibrations and cooling the material.</li>
+<li><strong>Nuclear Cooling:</strong> Because nuclear moments are
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≈</mo><mn>1000</mn></mrow><annotation encoding="application/x-tex">\approx 1000</annotation></semantics></math>
+times smaller than atomic moments, they can be used in a second stage to
+reach even lower temperatures.</li>
+</ol>
+<h3 id="42-nuclear-magnetic-resonance-nmr">4.2 Nuclear Magnetic
+Resonance (NMR)</h3>
+<p>NMR detects the extremely weak magnetism of atomic nuclei. Even in
+substances where electron spins balance out (like water), nuclear
+moments persist.</p>
+<ul>
+<li><strong>Mechanism:</strong> An oscillating field induces transitions
+between nuclear spin states. Absorption of energy is detected by a
+sensitive amplifier.</li>
+<li><strong>Thermal Contact:</strong> To observe the signal, "thermal
+contact" between the nuclei and the lattice is often required (e.g.,
+adding iron oxide to water) to allow excited nuclei to return to the
+lower energy state.</li>
+<li><strong>Applications:</strong>
+<ul>
+<li><strong>Magnetometry:</strong> Precise measurement of magnetic field
+strengths.</li>
+<li><strong>Chemistry:</strong> Determining molecular structures based
+on the "shift" in resonance caused by local chemical environments.</li>
+<li><strong>Free Radicals:</strong> Detection of short-lived chemical
+intermediates.</li>
+</ul></li>
+</ul>
+<hr />
+<h2 id="5-important-quotes-and-contextual-analysis">5. Important Quotes
+and Contextual Analysis</h2>
+<blockquote>
+<p>"The behavior of matter on a small scale... is different from
+anything that you are used to and is very strange indeed."</p>
+</blockquote>
+<p><strong>Context:</strong> Feynman introduces the "shocking" nature of
+quantized angular momentum, emphasizing that it cannot be made
+intelligible through classical analogies.</p>
+<blockquote>
+<p>"Understanding of these matters comes very slowly, if at all... one
+never gets a comfortable feeling that these quantum-mechanical rules are
+'natural.'"</p>
+</blockquote>
+<p><strong>Context:</strong> A reflection on the pedagogical challenge
+of quantum mechanics, where "understanding" is defined more by the
+ability to predict results than by intuitive comfort.</p>
+<blockquote>
+<p>"The abject failure of classical ideas was completely revealed when
+Stern and Gerlach saw what actually happened."</p>
+</blockquote>
+<p><strong>Context:</strong> Highlighting the pivotal moment in 1922
+when experimental results directly contradicted the classical prediction
+of a continuous distribution of magnetic moments.</p>
+<hr />
+<h2 id="6-actionable-physical-insights">6. Actionable Physical
+Insights</h2>
+<ul>
+<li><strong>Precession Frequency Consistency:</strong> It is a notable
+coincidence of physics that the classical precession frequency of a
+gyroscope in a magnetic field is identical to the quantum mechanical
+frequency required to induce transitions between energy levels
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ω</mi><mi>p</mi></msub><mo>=</mo><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>q</mi><mi>/</mi><mn>2</mn><mi>m</mi><mo stretchy="false" form="postfix">)</mo><mi>B</mi></mrow><annotation encoding="application/x-tex">\omega_p = g(q/2m)B</annotation></semantics></math>).</li>
+<li><strong>Temperature Dependence:</strong> Paramagnetism is inversely
+proportional to temperature
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mi>T</mi></mrow><annotation encoding="application/x-tex">1/T</annotation></semantics></math>).
+At high temperatures, thermal agitation overcomes the aligning force of
+the magnetic field.</li>
+<li><strong>Scale of Magnetism:</strong> Nuclear magnetism is
+significantly weaker than atomic magnetism (by a factor of roughly
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>10</mn><mrow><mi>−</mi><mn>6</mn></mrow></msup><annotation encoding="application/x-tex">10^{-6}</annotation></semantics></math>
+in susceptibility). This necessitates the use of resonance techniques or
+extremely low temperatures to observe nuclear effects.</li>
+<li><strong>Transition Probability:</strong> In a system with an
+oscillating horizontal field, transitions occur only at
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ω</mi><mi>p</mi></msub><annotation encoding="application/x-tex">\omega_p</annotation></semantics></math>.
+Transitions of "two steps" (e.g., jumping from
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>3</mn><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">-3/2</annotation></semantics></math>
+to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>+</mi><mn>1</mn><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">+1/2</annotation></semantics></math>
+at
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><msub><mi>ω</mi><mi>p</mi></msub></mrow><annotation encoding="application/x-tex">2\omega_p</annotation></semantics></math>)
+have zero probability in the described resonance methods.</li>
+</ul>
+    </article>
+  </main>
+</body>
+</html>

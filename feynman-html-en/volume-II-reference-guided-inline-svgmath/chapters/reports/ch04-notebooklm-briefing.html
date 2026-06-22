@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chapter 4: Electrostatics - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="en">
+  <script>
+    (() => {
+      const key = "flp-reader-theme";
+      const applyTheme = (theme) => {
+        const next = theme === "dark" ? "dark" : "light";
+        document.documentElement.dataset.theme = next;
+        document.body.dataset.theme = next;
+        try { localStorage.setItem(key, next); } catch (_) {}
+      };
+      try { applyTheme(localStorage.getItem(key) || "light"); } catch (_) { applyTheme("light"); }
+      document.addEventListener("click", (event) => {
+        const button = event.target.closest('[data-report-action="theme"]');
+        if (!button) return;
+        applyTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark");
+      });
+    })();
+  </script>
+<main class="notebooklm-report-shell">
+    <header aria-label="Quick navigation" class="reader-toolbar report-toolbar">
+      <div class="toolbar-group toolbar-navigation">
+        <a class="toolbar-btn" href="../ch04.html">Back to chapter</a>
+        <a class="toolbar-btn" href="../../../../feynman-reader/index.html">Reader</a>
+        <a class="toolbar-btn" href="../../index.html">Contents</a>
+      </div>
+      <a class="toolbar-title" href="../ch04.html#ch04" title="NotebookLM · Overview">NotebookLM · Overview</a>
+      <div class="toolbar-group toolbar-settings">
+        <button aria-label="Toggle theme" class="toolbar-btn icon-btn" data-report-action="theme" title="Toggle theme" type="button">◐</button>
+      </div>
+    </header>
+    <article class="notebooklm-report">
+<h1 id="chapter-4-electrostatics">Chapter 4: Electrostatics</h1>
+<p>This briefing document provides an analytical overview of the
+principles of electrostatics as presented in the source context. It
+covers the transition from general Maxwell equations to static
+conditions, the mathematical formulation of electric fields and
+potentials, and the application of Gauss’ law.</p>
+<hr />
+<h2 id="executive-summary">Executive Summary</h2>
+<p>Electrostatics is the study of electromagnetic phenomena in the
+"static case," where charges are permanently fixed or move as a steady
+flow, resulting in time-independent fields. In this regime, electric and
+magnetic fields are decoupled and can be studied as distinct phenomena.
+The entire subject of electrostatics is built upon two pillars:
+<strong>Coulomb’s law</strong> and the <strong>principle of
+superposition</strong>. Mathematically, electrostatics is characterized
+by a vector field with a specific divergence (related to charge density)
+and zero curl. The introduction of the electrostatic potential
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>)
+simplifies calculations by replacing vector integrations with scalar
+ones. Gauss’ law provides a powerful tool for determining fields in
+symmetrical distributions, serving as a differential and integral
+expression of the inverse-square law.</p>
+<hr />
+<h2 id="key-analytical-themes">Key Analytical Themes</h2>
+<h3 id="1-the-nature-of-statics-and-field-decoupling">1. The Nature of
+Statics and Field Decoupling</h3>
+<p>In the static case, all time derivatives in Maxwell’s equations
+become zero. This results in the separation of the four Maxwell
+equations into two independent pairs:</p>
+<ul>
+<li><strong>Electrostatics:</strong> Involves only the electric field
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>)
+and charge density
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ρ</mi><annotation encoding="application/x-tex">\rho</annotation></semantics></math>).</li>
+<li><strong>Magnetostatics:</strong> Involves only the magnetic field
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>)
+and current density
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝒋</mi><annotation encoding="application/x-tex">\mathbf{j}</annotation></semantics></math>).</li>
+</ul>
+<p>The interdependence of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+only emerges when charges or currents change rapidly over time.
+Consequently, electrostatics serves as a primary example of a vector
+field with zero curl and a given divergence.</p>
+<h3 id="2-foundations-coulombs-law-and-superposition">2. Foundations:
+Coulomb’s Law and Superposition</h3>
+<p>The source establishes that all of electrostatics is derived from two
+facts:</p>
+<ol type="1">
+<li><strong>Coulomb’s Law:</strong> The force between two stationary
+charges is proportional to the product of the charges and inversely
+proportional to the square of the distance between them.</li>
+<li><strong>Principle of Superposition:</strong> The total force on any
+charge is the vector sum of the forces exerted by all other individual
+charges.</li>
+</ol>
+<p>While these principles allow for the calculation of any field via
+integration, the source notes that real-world problems (involving
+conductors or insulators) are complicated by the fact that charge
+distributions often move in response to the fields they create.</p>
+<h3 id="3-the-electrostatic-potential-phi">3. The Electrostatic
+Potential
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>)</h3>
+<p>The electrostatic potential is a scalar field representing the work
+done against electrical forces to bring a unit charge from a reference
+point (usually infinity) to a specific point
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math>.</p>
+<ul>
+<li><strong>Path Independence:</strong> Because the work done in an
+electrostatic field depends only on the endpoints and not the path
+taken, the field is "conservative."</li>
+<li><strong>Mathematical Advantage:</strong> It is computationally more
+efficient to calculate the scalar potential
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>
+and then find the electric field via the gradient
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑬</mi><mo>=</mo><mi>−</mi><mi mathvariant="bold-italic">𝜵</mi><mi>ϕ</mi></mrow><annotation encoding="application/x-tex">\mathbf{E} = -\boldsymbol{\nabla}\phi</annotation></semantics></math>)
+than to calculate the three components of the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>
+vector directly.</li>
+<li><strong>Physical Meaning:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>
+represents the potential energy of a unit charge.</li>
+</ul>
+<h3 id="4-flux-and-gauss-law">4. Flux and Gauss’ Law</h3>
+<p>Gauss’ law is an alternative formulation of the inverse-square law.
+It states that the total flux of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>
+out of any closed surface is equal to the total charge enclosed within
+that surface divided by
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ϵ</mi><mn>0</mn></msub><annotation encoding="application/x-tex">\epsilon_0</annotation></semantics></math>.</p>
+<ul>
+<li><strong>The Inverse-Square Connection:</strong> Gauss’ law holds
+only because the force law is exactly
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><msup><mi>r</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">1/r^2</annotation></semantics></math>.
+A
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><msup><mi>r</mi><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">1/r^3</annotation></semantics></math>
+or
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><msup><mi>r</mi><mi>n</mi></msup></mrow><annotation encoding="application/x-tex">1/r^n</annotation></semantics></math>
+field (where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>≠</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">n \neq 2</annotation></semantics></math>)
+would not satisfy this law.</li>
+<li><strong>The "Bullet" Analogy:</strong> The flux can be visualized as
+a flow of conserved particles. If a "gun" (charge) is inside a surface,
+the number of "bullets" (flux) passing through the surface depends only
+on the gun's strength, not the surface's shape.</li>
+</ul>
+<hr />
+<h2 id="key-formulas-and-physical-constants">Key Formulas and Physical
+Constants</h2>
+<h3 id="fundamental-equations-of-electrostatics">Fundamental Equations
+of Electrostatics</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Description</th>
+<th style="text-align: left;">Differential Form</th>
+<th style="text-align: left;">Integral Form</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Gauss’ Law</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝒅</mi><mi>i</mi><mi>v</mi><mi mathvariant="bold-italic">𝑬</mi><mo>=</mo><mfrac><mi>ρ</mi><msub><mi>ϵ</mi><mn>0</mn></msub></mfrac></mrow><annotation encoding="application/x-tex">\mathbf{d}iv{\mathbf{E}} = \frac{\rho}{\epsilon_0}</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mo>∫</mo><mi>S</mi></msub><msub><mi>E</mi><mi>n</mi></msub><mspace width="0.167em"></mspace><mi>d</mi><mi>a</mi><mo>=</mo><mfrac><msub><mi>Q</mi><mtext mathvariant="normal">int</mtext></msub><msub><mi>ϵ</mi><mn>0</mn></msub></mfrac></mrow><annotation encoding="application/x-tex">\int_S E_n \, da = \frac{Q_{\text{int}}}{\epsilon_0}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Conservative Field</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝒄</mi><mi>u</mi><mi>r</mi><mi>l</mi><mi mathvariant="bold-italic">𝑬</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\mathbf{c}url{\mathbf{E}} = 0</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∮</mo><mi mathvariant="bold-italic">𝑬</mi><mo>⋅</mo><mi>d</mi><mi mathvariant="bold-italic">𝒔</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\oint \mathbf{E} \cdot d\mathbf{s} = 0</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Field-Potential
+Relation</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑬</mi><mo>=</mo><mi>−</mi><mi mathvariant="bold-italic">𝜵</mi><mi>ϕ</mi></mrow><annotation encoding="application/x-tex">\mathbf{E} = -\boldsymbol{\nabla}\phi</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ϕ</mi><mo stretchy="false" form="prefix">(</mo><mi>P</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>−</mi><msubsup><mo>∫</mo><msub><mi>P</mi><mn>0</mn></msub><mi>P</mi></msubsup><mi mathvariant="bold-italic">𝑬</mi><mo>⋅</mo><mi>d</mi><mi mathvariant="bold-italic">𝒔</mi></mrow><annotation encoding="application/x-tex">\phi(P) = -\int_{P_0}^P \mathbf{E} \cdot d\mathbf{s}</annotation></semantics></math></td>
+</tr>
+</tbody>
+</table>
+<h3 id="constants-and-units">Constants and Units</h3>
+<ul>
+<li><strong>The Coulomb Constant:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>1</mn><mrow><mn>4</mn><mi>π</mi><msub><mi>ϵ</mi><mn>0</mn></msub></mrow></mfrac><mo>=</mo><msup><mn>10</mn><mrow><mi>−</mi><mn>7</mn></mrow></msup><msup><mi>c</mi><mn>2</mn></msup><mo>≈</mo><mn>9.0</mn><mo>×</mo><msup><mn>10</mn><mn>9</mn></msup><mspace width="0.167em"></mspace><mtext mathvariant="normal">N</mtext><mo>⋅</mo><msup><mtext mathvariant="normal">m</mtext><mn>2</mn></msup><mi>/</mi><msup><mtext mathvariant="normal">C</mtext><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\frac{1}{4\pi\epsilon_0} = 10^{-7}c^2 \approx 9.0 \times 10^9 \, \text{N} \cdot \text{m}^2/\text{C}^2</annotation></semantics></math>.</li>
+<li><strong>Potential
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>):</strong>
+Measured in Volts (Joules per Coulomb).</li>
+<li><strong>Electric Field
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>):</strong>
+Measured in Volts per Meter or Newtons per Coulomb.</li>
+</ul>
+<hr />
+<h2 id="important-quotes-with-context">Important Quotes with
+Context</h2>
+<blockquote>
+<p><strong>"All of electromagnetism is contained in the Maxwell
+equations."</strong></p>
+</blockquote>
+<ul>
+<li><strong>Context:</strong> Used to introduce the study of
+electromagnetism by showing that even the complex subset of
+electrostatics is derived from these four fundamental equations.</li>
+</ul>
+<blockquote>
+<p><strong>"Electricity and magnetism are distinct phenomena so long as
+charges and currents are static."</strong></p>
+</blockquote>
+<ul>
+<li><strong>Context:</strong> Explaining why the electric and magnetic
+fields can be treated separately in Chapters 4 and 5, as they only
+interconnect when time derivatives are non-zero.</li>
+</ul>
+<blockquote>
+<p><strong>"The guesswork requires learning all kinds of strange things.
+In practice, it might be easier to forget trying to be clever and always
+to do the integral directly... We are, however, going to try to be smart
+about it."</strong></p>
+</blockquote>
+<ul>
+<li><strong>Context:</strong> Discussing the calculation of fields from
+charge distributions. While direct integration always works, the
+document emphasizes learning sophisticated methods (like Gauss' law) for
+efficiency.</li>
+</ul>
+<blockquote>
+<p><strong>"The existence of a potential, and the fact that the curl of
+E is zero, comes really only from the symmetry and direction of the
+electrostatic forces."</strong></p>
+</blockquote>
+<ul>
+<li><strong>Context:</strong> Noting that any radial, spherically
+symmetric force (regardless of whether it follows
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><msup><mi>r</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">1/r^2</annotation></semantics></math>)
+would allow for a potential; Gauss' law, however, is unique to the
+inverse-square dependency.</li>
+</ul>
+<hr />
+<h2 id="geometrical-representations">Geometrical Representations</h2>
+<p>The document outlines two primary ways to visualize electrostatic
+fields (Figures 4-12 and 4-13):</p>
+<ol type="1">
+<li><p><strong>Field Lines:</strong></p>
+<ul>
+<li>Drawn tangent to the electric vector.</li>
+<li>The <strong>density</strong> of lines (number of lines per unit
+area) represents the magnitude of the field.</li>
+<li>Lines must be continuous; they start at positive charges and end at
+negative charges.</li>
+</ul></li>
+<li><p><strong>Equipotential Surfaces:</strong></p>
+<ul>
+<li>Surfaces where the potential
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>
+is constant.</li>
+<li>These surfaces are always <strong>perpendicular</strong> to field
+lines.</li>
+<li>For a single point charge, equipotential surfaces are spheres.</li>
+</ul></li>
+</ol>
+<hr />
+<h2 id="actionable-insights">Actionable Insights</h2>
+<ul>
+<li><strong>Simplifying Complex Integrals:</strong> When the
+distribution of charges is known, calculate the scalar potential
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>
+using
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>1</mn><mrow><mn>4</mn><mi>π</mi><msub><mi>ϵ</mi><mn>0</mn></msub></mrow></mfrac><mo>∫</mo><mfrac><mi>ρ</mi><mi>r</mi></mfrac><mspace width="0.167em"></mspace><mi>d</mi><mi>V</mi></mrow><annotation encoding="application/x-tex">\frac{1}{4\pi\epsilon_0} \int \frac{\rho}{r} \, dV</annotation></semantics></math>
+first. Taking the gradient of this scalar is generally simpler than
+performing three separate vector component integrations for
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>.</li>
+<li><strong>Utilizing Symmetry via Gauss’ Law:</strong> For problems
+involving spherical, cylindrical, or planar symmetry, use Gauss’ law
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∫</mo><msub><mi>E</mi><mi>n</mi></msub><mspace width="0.167em"></mspace><mi>d</mi><mi>a</mi><mo>=</mo><msub><mi>Q</mi><mtext mathvariant="normal">enclosed</mtext></msub><mi>/</mi><msub><mi>ϵ</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">\int E_n \, da = Q_{\text{enclosed}}/\epsilon_0</annotation></semantics></math>)
+to find the field magnitude directly without integration.</li>
+<li><strong>Applying the Theorem of Spherical Charges:</strong> The
+field outside a uniform sphere of charge is identical to that of a point
+charge of the same total magnitude located at the center. This allows
+for the simplification of planetary-scale or macroscopic spherical
+problems into point-charge calculations.</li>
+<li><strong>Visualizing Superposition:</strong> While potentials can be
+easily summed ($ \phi_{\text{total}} = \sum \phi_i $), field lines
+cannot be simply superimposed because
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>
+cannot have two directions at once. To find the resulting field lines of
+multiple charges, one must calculate the net vector field first.</li>
+</ul>
+    </article>
+  </main>
+</body>
+</html>

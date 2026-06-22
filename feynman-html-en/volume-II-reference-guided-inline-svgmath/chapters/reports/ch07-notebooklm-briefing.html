@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Analysis of Electric Fields in Specialized Physical Circumstances - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="en">
+  <script>
+    (() => {
+      const key = "flp-reader-theme";
+      const applyTheme = (theme) => {
+        const next = theme === "dark" ? "dark" : "light";
+        document.documentElement.dataset.theme = next;
+        document.body.dataset.theme = next;
+        try { localStorage.setItem(key, next); } catch (_) {}
+      };
+      try { applyTheme(localStorage.getItem(key) || "light"); } catch (_) { applyTheme("light"); }
+      document.addEventListener("click", (event) => {
+        const button = event.target.closest('[data-report-action="theme"]');
+        if (!button) return;
+        applyTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark");
+      });
+    })();
+  </script>
+<main class="notebooklm-report-shell">
+    <header aria-label="Quick navigation" class="reader-toolbar report-toolbar">
+      <div class="toolbar-group toolbar-navigation">
+        <a class="toolbar-btn" href="../ch07.html">Back to chapter</a>
+        <a class="toolbar-btn" href="../../../../feynman-reader/index.html">Reader</a>
+        <a class="toolbar-btn" href="../../index.html">Contents</a>
+      </div>
+      <a class="toolbar-title" href="../ch07.html#ch07" title="NotebookLM · Overview">NotebookLM · Overview</a>
+      <div class="toolbar-group toolbar-settings">
+        <button aria-label="Toggle theme" class="toolbar-btn icon-btn" data-report-action="theme" title="Toggle theme" type="button">◐</button>
+      </div>
+    </header>
+    <article class="notebooklm-report">
+<h1
+id="analysis-of-electric-fields-in-specialized-physical-circumstances">Analysis
+of Electric Fields in Specialized Physical Circumstances</h1>
+<p>This briefing document provides a comprehensive analysis of advanced
+methods for determining electrostatic fields and examines specific
+physical systems where charge distributions are governed by dynamic or
+statistical laws. It covers complex variable techniques for
+two-dimensional problems, the mechanics of plasma oscillations, the
+behavior of colloidal particles in electrolytes, and the field
+properties of wire grids.</p>
+<h2 id="executive-summary">Executive Summary</h2>
+<p>The study of electrostatics extends beyond simple fixed-charge
+distributions to complex "boundary-value problems" where the presence of
+conductors or dynamic physical laws determines charge placement. While
+Laplace’s equation
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>∇</mi><mn>2</mn></msup><mi>ϕ</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\nabla^2\phi=0</annotation></semantics></math>)
+serves as the fundamental governing differential equation, its solution
+often requires specialized techniques.</p>
+<p>In two-dimensional scenarios, the mathematics of complex variables
+provides a powerful tool for generating potential functions and field
+lines through the use of orthogonal curves. Beyond static conductors,
+the document explores systems where fields and charges are mutually
+dependent:</p>
+<ul>
+<li><strong>Plasmas:</strong> Where electron oscillations create a
+characteristic resonance frequency
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ω</mi><mi>p</mi></msub><annotation encoding="application/x-tex">\omega_p</annotation></semantics></math>)
+that influences electromagnetic wave propagation.</li>
+<li><strong>Colloids:</strong> Where an ion sheath (the Debye length)
+determines the stability of particles in a solution.</li>
+<li><strong>Grids:</strong> Where periodic wire structures create fields
+that decay exponentially, enabling effective electrostatic
+shielding.</li>
+</ul>
+<hr />
+<h2 id="1-methodologies-for-solving-electrostatic-fields">1.
+Methodologies for Solving Electrostatic Fields</h2>
+<p>The fundamental challenge in electrostatics involving conductors is
+that the surface charge distribution is not known <em>a priori</em>;
+charges arrange themselves to ensure the conductor remains an
+equipotential surface.</p>
+<h3 id="boundary-value-problems">Boundary-Value Problems</h3>
+<p>Solving for the potential
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>
+subject to specific constants on boundaries is known as a boundary-value
+problem.</p>
+<ul>
+<li><strong>Analytical Solutions:</strong> Only a few shapes allow for
+exact analytical solutions, such as ellipsoids of revolution, thin
+discs, and needles.</li>
+<li><strong>Numerical Methods:</strong> For most practical shapes (e.g.,
+a closed cylindrical "beer can"), numerical techniques are the only
+general method of solution.</li>
+<li><strong>Physical Analogs:</strong> Because Laplace’s equation
+appears in various fields, analogs such as steady-state heat flow,
+irrotational fluid flow, and electrolytic tanks can be used to model and
+measure electrical problems.</li>
+</ul>
+<h3 id="two-dimensional-fields-and-complex-variables">Two-Dimensional
+Fields and Complex Variables</h3>
+<p>When a field has no variation in one direction (e.g., along a long
+wire), it is treated as two-dimensional. In such cases, the complex
+variable <span class="math inline">$\frakz = x + iy$</span> can be used.
+Any "ordinary function" <span class="math inline">$F(\frakz)$</span> can
+be decomposed into real and imaginary parts: <span
+class="math display">$$F(\frakz) = U(x,y) + iV(x,y)$$</span></p>
+<p><strong>The Miraculous Theorem:</strong> Both
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>U</mi><annotation encoding="application/x-tex">U</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math>
+automatically satisfy Laplace’s equation and are orthogonal to each
+other. This means
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>U</mi><annotation encoding="application/x-tex">U</annotation></semantics></math>
+can represent equipotential surfaces while
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math>
+represents field lines (or vice versa).</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Function <span
+class="math inline">$F(\frakz)$</span></th>
+<th style="text-align: left;">Physical Application</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><span
+class="math inline">$\frakz^2$</span></td>
+<td style="text-align: left;">Field inside a right-angle corner;
+quadrupole lenses for focusing particle beams.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span
+class="math inline">$\sqrt{\frakz}$</span></td>
+<td style="text-align: left;">Electric field near the edge of a thin
+grounded plate.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span
+class="math inline">$\frakz^{2/3}$</span></td>
+<td style="text-align: left;">Field outside a rectangular corner.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span class="math inline">$\ln
+\frakz$</span></td>
+<td style="text-align: left;">Field for a line charge.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span
+class="math inline">$1/\frakz$</span></td>
+<td style="text-align: left;">Two-dimensional electric dipole (two
+parallel line charges).</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="2-dynamic-systems-plasma-oscillations">2. Dynamic Systems:
+Plasma Oscillations</h2>
+<p>A plasma is an ionized gas of ions and free electrons. Because ions
+are significantly heavier than electrons, their motion is often
+neglected when analyzing high-frequency oscillations.</p>
+<h3 id="mechanics-of-oscillation">Mechanics of Oscillation</h3>
+<p>When electrons in a plasma are displaced from their equilibrium
+position
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math>),
+a restoring force is created by the resulting charge imbalance. This
+leads to simple harmonic motion.</p>
+<ul>
+<li><strong>Charge Density
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ρ</mi><annotation encoding="application/x-tex">\rho</annotation></semantics></math>):</strong>
+Relates to the displacement gradient,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ρ</mi><mo>=</mo><msub><mi>n</mi><mn>0</mn></msub><msub><mi>q</mi><mi>e</mi></msub><mfrac><mrow><mi>d</mi><mi>s</mi></mrow><mrow><mi>d</mi><mi>x</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\rho = n_0 q_e \frac{ds}{dx}</annotation></semantics></math>.</li>
+<li><strong>Restoring Force:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>F</mi><mi>x</mi></msub><mo>=</mo><mi>−</mi><mfrac><mrow><msub><mi>n</mi><mn>0</mn></msub><msubsup><mi>q</mi><mi>e</mi><mn>2</mn></msubsup></mrow><msub><mi>ϵ</mi><mn>0</mn></msub></mfrac><mi>s</mi></mrow><annotation encoding="application/x-tex">F_x = -\frac{n_0 q_e^2}{\epsilon_0}s</annotation></semantics></math>.</li>
+<li><strong>Plasma Frequency
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ω</mi><mi>p</mi></msub><annotation encoding="application/x-tex">\omega_p</annotation></semantics></math>):</strong>
+The natural frequency at which electrons oscillate:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>ω</mi><mi>p</mi><mn>2</mn></msubsup><mo>=</mo><mfrac><mrow><msub><mi>n</mi><mn>0</mn></msub><msubsup><mi>q</mi><mi>e</mi><mn>2</mn></msubsup></mrow><mrow><msub><mi>ϵ</mi><mn>0</mn></msub><msub><mi>m</mi><mi>e</mi></msub></mrow></mfrac></mrow><annotation encoding="application/x-tex">\omega_p^2 = \frac{n_0 q_e^2}{\epsilon_0 m_e}</annotation></semantics></math></li>
+</ul>
+<h3 id="physical-implications">Physical Implications</h3>
+<ol type="1">
+<li><strong>Ionospheric Propagation:</strong> Radio waves can only
+penetrate the ionosphere if their frequency is higher than the plasma
+frequency. Frequencies lower than
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ω</mi><mi>p</mi></msub><annotation encoding="application/x-tex">\omega_p</annotation></semantics></math>
+are reflected back to Earth.</li>
+<li><strong>Metallic Plasmas:</strong> Electrons in metals also exhibit
+plasma oscillations. High-energy electrons passing through metal foils
+lose energy in discrete "jumps"
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ℏ</mi><msub><mi>ω</mi><mi>p</mi></msub></mrow><annotation encoding="application/x-tex">\hbar\omega_p</annotation></semantics></math>)
+due to the quantum excitation of these oscillations.</li>
+</ol>
+<hr />
+<h2 id="3-statistical-systems-colloids-and-electrolytes">3. Statistical
+Systems: Colloids and Electrolytes</h2>
+<p>Colloids consist of charged particles suspended in a liquid. Their
+stability is maintained by electrical repulsion, which prevents
+coagulation.</p>
+<h3 id="the-debye-length">The Debye Length</h3>
+<p>In an electrolyte (a solution with ions), a "sheath" of ions forms
+around a charged colloidal particle. The potential
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>
+near the surface of the particle decays exponentially:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ϕ</mi><mo>=</mo><mi>A</mi><msup><mi>e</mi><mrow><mi>−</mi><mi>x</mi><mi>/</mi><mi>D</mi></mrow></msup></mrow><annotation encoding="application/x-tex">\phi = A e^{-x/D}</annotation></semantics></math>
+Where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>D</mi><annotation encoding="application/x-tex">D</annotation></semantics></math>
+is the <strong>Debye length</strong>:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>D</mi><mn>2</mn></msup><mo>=</mo><mfrac><mrow><msub><mi>ϵ</mi><mn>0</mn></msub><mi>k</mi><mi>T</mi></mrow><mrow><mn>2</mn><msub><mi>n</mi><mn>0</mn></msub><msubsup><mi>q</mi><mi>e</mi><mn>2</mn></msubsup></mrow></mfrac></mrow><annotation encoding="application/x-tex">D^2 = \frac{\epsilon_0 kT}{2n_0 q_e^2}</annotation></semantics></math></p>
+<h3 id="key-findings-in-colloidal-behavior">Key Findings in Colloidal
+Behavior</h3>
+<ul>
+<li><strong>Sheath Thickness:</strong> The ion sheath gets thinner as
+the concentration of ions
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>n</mi><mn>0</mn></msub><annotation encoding="application/x-tex">n_0</annotation></semantics></math>)
+increases or the temperature
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>T</mi><annotation encoding="application/x-tex">T</annotation></semantics></math>)
+decreases.</li>
+<li><strong>Salting Out:</strong> Adding salt to a colloid increases the
+ion concentration, shrinking the Debye length. This allows particles to
+approach closely enough to stick together and precipitate.</li>
+<li><strong>Protein Coiling:</strong> Net charges on protein chains keep
+them stretched out. Adding salt reduces the repulsive range, allowing
+the chains to coil and precipitate.</li>
+</ul>
+<hr />
+<h2 id="4-periodic-structures-the-electrostatic-grid">4. Periodic
+Structures: The Electrostatic Grid</h2>
+<p>A grid consists of parallel wires with uniform spacing
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>.
+Analyzing the grid requires expressing the periodic potential as a
+Fourier series.</p>
+<h3 id="field-decay-characteristics">Field Decay Characteristics</h3>
+<p>The potential for the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>-th
+harmonic of a grid is given by:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ϕ</mi><mi>n</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>z</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msub><mi>A</mi><mi>n</mi></msub><msup><mi>e</mi><mrow><mi>−</mi><mi>z</mi><mi>/</mi><msub><mi>z</mi><mn>0</mn></msub></mrow></msup><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mfrac><mrow><mn>2</mn><mi>π</mi><mi>n</mi><mi>x</mi></mrow><mi>a</mi></mfrac></mrow><annotation encoding="application/x-tex">\phi_n(x,z) = A_n e^{-z/z_0} \cos\frac{2\pi nx}{a}</annotation></semantics></math>
+Where the characteristic decay distance
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>z</mi><mn>0</mn></msub><annotation encoding="application/x-tex">z_0</annotation></semantics></math>
+is:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>z</mi><mn>0</mn></msub><mo>=</mo><mfrac><mi>a</mi><mrow><mn>2</mn><mi>π</mi><mi>n</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">z_0 = \frac{a}{2\pi n}</annotation></semantics></math></p>
+<p><strong>Crucial Insight:</strong> The oscillating components of the
+field decrease exponentially with distance from the grid. For the first
+harmonic
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n=1</annotation></semantics></math>),
+the field amplitude drops by a factor of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>−</mi><mn>2</mn><mi>π</mi></mrow></msup><annotation encoding="application/x-tex">e^{-2\pi}</annotation></semantics></math>
+for every distance
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+(one grid spacing) moved away from the wires.</p>
+<h3 id="practical-application-shielding">Practical Application:
+Shielding</h3>
+<p>Because the variations in the field vanish so rapidly, a copper
+screen can be used instead of a solid metal sheet for electrostatic
+shielding. Except for a very small distance near the wires, the field
+inside a closed screen is zero, making screens a light and
+cost-effective method for protecting sensitive equipment.</p>
+<hr />
+<h2 id="5-important-quotes-and-context">5. Important Quotes and
+Context</h2>
+<blockquote>
+<p><strong>"The problem of the electrostatic field is fundamentally
+simple when the distribution of charges is specified... When there are
+conductors present, however, complications arise because the charge
+distribution on the conductors is not initially known."</strong>
+<em>Context: Explaining the necessity of boundary-value problem
+techniques and Laplace's equation.</em></p>
+</blockquote>
+<blockquote>
+<p><strong>"We have a bonus! The curves for
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>=</mo><mtext mathvariant="normal">constant</mtext></mrow><annotation encoding="application/x-tex">V=\text{constant}</annotation></semantics></math>
+are orthogonal to the ones for
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>=</mo><mtext mathvariant="normal">constant</mtext></mrow><annotation encoding="application/x-tex">U=\text{constant}</annotation></semantics></math>...
+Whenever we choose a function <span
+class="math inline">$F(\frakz)$</span>, we get from
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>U</mi><annotation encoding="application/x-tex">U</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math>
+both the equipotentials and field lines."</strong> <em>Context:
+Describing the efficiency of the complex variable method in
+two-dimensional electrostatics.</em></p>
+</blockquote>
+<blockquote>
+<p><strong>"The plasma electrons behave like a resonant system... If one
+tries to propagate a radiowave through the ionosphere, one finds that it
+can penetrate only if its frequency is higher than the plasma
+frequency."</strong> <em>Context: Relating the mathematical derivation
+of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ω</mi><mi>p</mi></msub><annotation encoding="application/x-tex">\omega_p</annotation></semantics></math>
+to real-world radio communication and satellite technology.</em></p>
+</blockquote>
+<hr />
+<h2 id="6-summary-of-key-formulas">6. Summary of Key Formulas</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Concept</th>
+<th style="text-align: left;">Formula</th>
+<th style="text-align: left;">Components</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Laplace’s Equation</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>∇</mi><mn>2</mn></msup><mi>ϕ</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\nabla^2\phi=0</annotation></semantics></math></td>
+<td style="text-align: left;">Fundamental field equation for charge-free
+regions.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Complex Variable</strong></td>
+<td style="text-align: left;"><span class="math inline">$\frakz = x +
+iy$</span></td>
+<td style="text-align: left;">Used for 2D field solutions.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Plasma Frequency</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ω</mi><mi>p</mi></msub><mo>=</mo><msqrt><mfrac><mrow><msub><mi>n</mi><mn>0</mn></msub><msubsup><mi>q</mi><mi>e</mi><mn>2</mn></msubsup></mrow><mrow><msub><mi>ϵ</mi><mn>0</mn></msub><msub><mi>m</mi><mi>e</mi></msub></mrow></mfrac></msqrt></mrow><annotation encoding="application/x-tex">\omega_p = \sqrt{\frac{n_0 q_e^2}{\epsilon_0 m_e}}</annotation></semantics></math></td>
+<td style="text-align: left;">Natural resonance of electron
+oscillations.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Debye Length</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>D</mi><mo>=</mo><msqrt><mfrac><mrow><msub><mi>ϵ</mi><mn>0</mn></msub><mi>k</mi><mi>T</mi></mrow><mrow><mn>2</mn><msub><mi>n</mi><mn>0</mn></msub><msubsup><mi>q</mi><mi>e</mi><mn>2</mn></msubsup></mrow></mfrac></msqrt></mrow><annotation encoding="application/x-tex">D = \sqrt{\frac{\epsilon_0 kT}{2n_0 q_e^2}}</annotation></semantics></math></td>
+<td style="text-align: left;">Thickness of ion sheath in
+electrolytes.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Grid Field Decay</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>z</mi><mn>0</mn></msub><mo>=</mo><mfrac><mi>a</mi><mrow><mn>2</mn><mi>π</mi><mi>n</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">z_0 = \frac{a}{2\pi n}</annotation></semantics></math></td>
+<td style="text-align: left;">Exponential decay distance for periodic
+grid fields.</td>
+</tr>
+</tbody>
+</table>
+    </article>
+  </main>
+</body>
+</html>

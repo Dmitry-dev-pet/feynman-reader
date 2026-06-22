@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Analytical Briefing: AC Circuits (Chapter 22) - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="en">
+  <script>
+    (() => {
+      const key = "flp-reader-theme";
+      const applyTheme = (theme) => {
+        const next = theme === "dark" ? "dark" : "light";
+        document.documentElement.dataset.theme = next;
+        document.body.dataset.theme = next;
+        try { localStorage.setItem(key, next); } catch (_) {}
+      };
+      try { applyTheme(localStorage.getItem(key) || "light"); } catch (_) { applyTheme("light"); }
+      document.addEventListener("click", (event) => {
+        const button = event.target.closest('[data-report-action="theme"]');
+        if (!button) return;
+        applyTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark");
+      });
+    })();
+  </script>
+<main class="notebooklm-report-shell">
+    <header aria-label="Quick navigation" class="reader-toolbar report-toolbar">
+      <div class="toolbar-group toolbar-navigation">
+        <a class="toolbar-btn" href="../ch22.html">Back to chapter</a>
+        <a class="toolbar-btn" href="../../../../feynman-reader/index.html">Reader</a>
+        <a class="toolbar-btn" href="../../index.html">Contents</a>
+      </div>
+      <a class="toolbar-title" href="../ch22.html#ch22" title="NotebookLM · Overview">NotebookLM · Overview</a>
+      <div class="toolbar-group toolbar-settings">
+        <button aria-label="Toggle theme" class="toolbar-btn icon-btn" data-report-action="theme" title="Toggle theme" type="button">◐</button>
+      </div>
+    </header>
+    <article class="notebooklm-report">
+<h1 id="analytical-briefing-ac-circuits-chapter-22">Analytical Briefing:
+AC Circuits (Chapter 22)</h1>
+<h2 id="executive-summary">Executive Summary</h2>
+<p>This document provides a comprehensive analysis of the properties and
+behaviors of electrical circuits at low frequencies, as derived from the
+Maxwell equations. By transitioning from complex electromagnetic field
+theory to the study of "lumped" circuit elements, this analysis
+establishes the physical foundations for resistors, capacitors, and
+inductors. The briefing covers the transition from time-varying
+sinusoidal currents to complex impedance notation, the application of
+Kirchhoff’s rules for network analysis, the concept of equivalent
+circuits, and the specialized behavior of infinite ladder networks and
+filters. Key findings include the distinction between dissipative and
+nondissipative energy states and the practical application of these
+principles in transmission lines and active electronic devices like
+transistors.</p>
+<h2 id="1-fundamentals-of-ideal-circuit-elements">1. Fundamentals of
+Ideal Circuit Elements</h2>
+<p>The analysis of AC circuits relies on the "lumped" element
+approximation, where the complexities of internal electric and magnetic
+fields are ignored in favor of terminal behavior (current and voltage).
+In these linear systems, voltages
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math>)
+and currents
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>I</mi><annotation encoding="application/x-tex">I</annotation></semantics></math>)
+vary sinusoidally and are represented as complex numbers using
+exponential notation:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mover><mi>V</mi><mo accent="true">̂</mo></mover><msup><mi>e</mi><mrow><mi>i</mi><mi>ω</mi><mi>t</mi></mrow></msup></mrow><annotation encoding="application/x-tex">V(t) = \hat{V}e^{i\omega t}</annotation></semantics></math>.</p>
+<h3 id="11-the-passive-elements">1.1 The Passive Elements</h3>
+<p>The proportionality constant between voltage and current is defined
+as <strong>impedance
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>z</mi><annotation encoding="application/x-tex">z</annotation></semantics></math>)</strong>,
+a complex number that is generally a function of frequency
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ω</mi><annotation encoding="application/x-tex">\omega</annotation></semantics></math>).</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Element</th>
+<th style="text-align: left;">Symbol</th>
+<th style="text-align: left;">Physical Basis</th>
+<th style="text-align: left;">Impedance
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>z</mi><annotation encoding="application/x-tex">z</annotation></semantics></math>)</th>
+<th style="text-align: left;">Physical Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Inductance</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>L</mi><annotation encoding="application/x-tex">L</annotation></semantics></math></td>
+<td style="text-align: left;">Magnetic flux linkage in a coil</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>z</mi><mi>L</mi></msub><mo>=</mo><mi>i</mi><mi>ω</mi><mi>L</mi></mrow><annotation encoding="application/x-tex">z_L = i\omega L</annotation></semantics></math></td>
+<td style="text-align: left;">Voltage leads current; no energy
+dissipation.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Capacitance</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math></td>
+<td style="text-align: left;">Charge accumulation on plates</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>z</mi><mi>C</mi></msub><mo>=</mo><mfrac><mn>1</mn><mrow><mi>i</mi><mi>ω</mi><mi>C</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">z_C = \frac{1}{i\omega C}</annotation></semantics></math></td>
+<td style="text-align: left;">Voltage lags current; no energy
+dissipation.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Resistance</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>R</mi><annotation encoding="application/x-tex">R</annotation></semantics></math></td>
+<td style="text-align: left;">Linear flow of charge in materials</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>z</mi><mi>R</mi></msub><mo>=</mo><mi>R</mi></mrow><annotation encoding="application/x-tex">z_R = R</annotation></semantics></math></td>
+<td style="text-align: left;">Voltage in phase with current; energy
+dissipated as heat.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="12-active-elements-generators">1.2 Active Elements
+(Generators)</h3>
+<p>Generators serve as the sources of oscillating currents.</p>
+<ul>
+<li><strong>Ideal Generator:</strong> A source where the potential
+difference is determined by an assigned electromotive force
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mtext mathvariant="normal">emf</mtext><annotation encoding="application/x-tex">\text{emf}</annotation></semantics></math>),
+independent of the current.</li>
+<li><strong>Physical Mechanisms:</strong> An emf can be produced by a
+changing magnetic field near a fixed coil or a coil rotating in a fixed
+magnetic field. In moving conductors, the total force on a unit charge
+must be zero:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑬</mi><mo>+</mo><mi mathvariant="bold-italic">𝒗</mi><mo>×</mo><mi mathvariant="bold-italic">𝑩</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\mathbf{E} + \mathbf{v} \times \mathbf{B} = 0</annotation></semantics></math>.</li>
+<li><strong>Chemical Cells:</strong> Though typically DC, these function
+via ion diffusion, creating a potential difference characteristic of
+their internal construction.</li>
+</ul>
+<h2 id="2-network-analysis-and-kirchhoffs-rules">2. Network Analysis and
+Kirchhoff's Rules</h2>
+<p>When ideal elements are interconnected, their behavior is governed by
+two fundamental rules derived from Maxwell’s equations:</p>
+<ol type="1">
+<li><strong>The Loop Rule (Voltage):</strong> The sum of the potential
+differences around any closed loop is zero
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∑</mo><msub><mi>V</mi><mi>n</mi></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\sum V_n = 0</annotation></semantics></math>).
+This holds because the line integral of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>
+is zero in regions without changing magnetic fields.</li>
+<li><strong>The Node Rule (Current):</strong> The algebraic sum of
+currents entering any junction (node) must be zero
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∑</mo><msub><mi>I</mi><mi>n</mi></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\sum I_n = 0</annotation></semantics></math>),
+based on the conservation of charge.</li>
+</ol>
+<h3 id="21-circuit-simplification">2.1 Circuit Simplification</h3>
+<ul>
+<li><strong>Series Combination:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>z</mi><mi>s</mi></msub><mo>=</mo><msub><mi>z</mi><mn>1</mn></msub><mo>+</mo><msub><mi>z</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">z_s = z_1 + z_2</annotation></semantics></math></li>
+<li><strong>Parallel Combination:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>z</mi><mi>p</mi></msub><mo>=</mo><mfrac><mrow><msub><mi>z</mi><mn>1</mn></msub><msub><mi>z</mi><mn>2</mn></msub></mrow><mrow><msub><mi>z</mi><mn>1</mn></msub><mo>+</mo><msub><mi>z</mi><mn>2</mn></msub></mrow></mfrac></mrow><annotation encoding="application/x-tex">z_p = \frac{z_1 z_2}{z_1 + z_2}</annotation></semantics></math></li>
+<li><strong>Equivalent Circuits:</strong> Any two-terminal network of
+passive elements is equivalent to a single effective impedance.
+Furthermore, any network containing generators can be replaced by a
+single ideal generator in series with an effective impedance (Thevenin
+equivalent).</li>
+</ul>
+<h2 id="3-energy-and-dissipation">3. Energy and Dissipation</h2>
+<p>The physical distinction between real and imaginary impedance is
+rooted in energy conversion.</p>
+<ul>
+<li><strong>Nondissipative Elements:</strong> Ideal inductors and
+capacitors store energy in magnetic or electric fields and return it to
+the circuit. The average power loss over a cycle is zero.</li>
+<li><strong>Dissipative Elements:</strong> Resistors convert electrical
+energy into thermal energy.</li>
+<li><strong>Complex Impedance
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>z</mi><mo>=</mo><mi>R</mi><mo>+</mo><mi>i</mi><mi>X</mi></mrow><annotation encoding="application/x-tex">z = R + iX</annotation></semantics></math>):</strong>
+<ul>
+<li>The <strong>Real part
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>R</mi><annotation encoding="application/x-tex">R</annotation></semantics></math>)</strong>
+represents the resistance (energy loss).</li>
+<li>The <strong>Imaginary part
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>X</mi><annotation encoding="application/x-tex">X</annotation></semantics></math>)</strong>
+is the reactance (no energy loss).</li>
+<li><strong>Average Power:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⟨</mo><mi>P</mi><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><msubsup><mi>I</mi><mn>0</mn><mn>2</mn></msubsup><mi>R</mi></mrow><annotation encoding="application/x-tex">\langle P \rangle = \frac{1}{2} I_0^2 R</annotation></semantics></math>.
+The power loss depends solely on the real part of the impedance.</li>
+</ul></li>
+</ul>
+<h2 id="4-ladder-networks-and-filter-theory">4. Ladder Networks and
+Filter Theory</h2>
+<p>An infinite ladder network consists of repeated sections of series
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>z</mi><mn>1</mn></msub><annotation encoding="application/x-tex">z_1</annotation></semantics></math>)
+and shunt
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>z</mi><mn>2</mn></msub><annotation encoding="application/x-tex">z_2</annotation></semantics></math>)
+impedances.</p>
+<h3 id="41-characteristic-impedance-z_0">4.1 Characteristic Impedance
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>z</mi><mn>0</mn></msub><annotation encoding="application/x-tex">z_0</annotation></semantics></math>)</h3>
+<p>The impedance of an infinite network remains unchanged if another
+section is added. For an
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo>−</mo><mi>C</mi></mrow><annotation encoding="application/x-tex">L-C</annotation></semantics></math>
+ladder, the characteristic impedance is:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>z</mi><mn>0</mn></msub><mo>=</mo><msqrt><mrow><mfrac><mi>L</mi><mi>C</mi></mfrac><mo>−</mo><mfrac><mrow><msup><mi>ω</mi><mn>2</mn></msup><msup><mi>L</mi><mn>2</mn></msup></mrow><mn>4</mn></mfrac></mrow></msqrt></mrow><annotation encoding="application/x-tex">z_0 = \sqrt{\frac{L}{C} - \frac{\omega^2 L^2}{4}}</annotation></semantics></math></p>
+<h3 id="42-cutoff-frequency-and-propagation">4.2 Cutoff Frequency and
+Propagation</h3>
+<p>The behavior of the ladder changes at the <strong>cutoff frequency
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ω</mi><mn>0</mn></msub><mo>=</mo><msqrt><mrow><mn>4</mn><mi>/</mi><mi>L</mi><mi>C</mi></mrow></msqrt></mrow><annotation encoding="application/x-tex">\omega_0 = \sqrt{4/LC}</annotation></semantics></math>)</strong>:</p>
+<ul>
+<li><strong>Below
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ω</mi><mn>0</mn></msub><annotation encoding="application/x-tex">\omega_0</annotation></semantics></math>:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>z</mi><mn>0</mn></msub><annotation encoding="application/x-tex">z_0</annotation></semantics></math>
+is real. The network absorbs energy from the generator and propagates it
+down the line indefinitely. The voltage magnitude remains constant
+across sections, but the phase shifts.</li>
+<li><strong>Above
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ω</mi><mn>0</mn></msub><annotation encoding="application/x-tex">\omega_0</annotation></semantics></math>:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>z</mi><mn>0</mn></msub><annotation encoding="application/x-tex">z_0</annotation></semantics></math>
+is imaginary. No energy is absorbed; the voltage magnitude attenuates
+rapidly (dies away) as it moves through the sections.</li>
+</ul>
+<h3 id="43-applications-of-filters">4.3 Applications of Filters</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Filter Type</th>
+<th style="text-align: left;">Configuration</th>
+<th style="text-align: left;">Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Low-Pass</strong></td>
+<td style="text-align: left;">Series
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>L</mi><annotation encoding="application/x-tex">L</annotation></semantics></math>,
+Shunt
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math></td>
+<td style="text-align: left;">Passes DC and low frequencies; used for
+smoothing rectifier outputs.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>High-Pass</strong></td>
+<td style="text-align: left;">Series
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math>,
+Shunt
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>L</mi><annotation encoding="application/x-tex">L</annotation></semantics></math></td>
+<td style="text-align: left;">Rejects low frequencies; used to remove
+motor rumble in audio.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Band-Pass</strong></td>
+<td style="text-align: left;">Complex
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>z</mi><mn>1</mn></msub><mo>,</mo><msub><mi>z</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">z_1, z_2</annotation></semantics></math></td>
+<td style="text-align: left;">Passes a specific frequency interval; used
+in radio and telephone cables.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="5-advanced-components-and-active-devices">5. Advanced Components
+and Active Devices</h2>
+<p>The principles of AC circuits extend to more complex
+interactions:</p>
+<ul>
+<li><strong>Mutual Inductance
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>M</mi><annotation encoding="application/x-tex">M</annotation></semantics></math>):</strong>
+Occurs when flux from one coil links another. This is modeled in
+equivalent circuits by adding auxiliary voltage generators proportional
+to the current in the interacting coil
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">emf</mtext><mo>=</mo><mi>±</mi><mi>i</mi><mi>ω</mi><mi>M</mi><mi>I</mi></mrow><annotation encoding="application/x-tex">\text{emf} = \pm i\omega MI</annotation></semantics></math>).</li>
+<li><strong>Mutual Capacitance:</strong> Modeled as a network of
+capacitors between multiple electrodes (e.g., in vacuum tubes).</li>
+<li><strong>Active Devices (Transistors/Tubes):</strong> When operated
+in their linear range, these are modeled using resistors and dependent
+voltage generators.</li>
+<li><strong>Negative Resistance:</strong> Active devices can exhibit a
+negative real impedance part. By balancing negative resistance with
+positive resistance (total
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>R</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">R=0</annotation></semantics></math>),
+a circuit can sustain oscillations without energy dissipation, forming
+the basis of signal generators.</li>
+</ul>
+<h2 id="important-quotes-with-context">Important Quotes with
+Context</h2>
+<blockquote>
+<p><strong>"A separation is made between what happens inside and what
+happens outside."</strong></p>
+</blockquote>
+<ul>
+<li><em>Context:</em> Explaining the "lumped" element approximation,
+where the internal field complexities of an inductor or capacitor are
+ignored to focus on terminal voltage and current.</li>
+</ul>
+<blockquote>
+<p><strong>"Even such a mundane subject [electrical circuits], when
+looked at in sufficient detail, can contain great
+complications."</strong></p>
+</blockquote>
+<ul>
+<li><em>Context:</em> Introducing the transition from the "esoteric
+heights" of Maxwell's equations to the practical but mathematically rich
+study of AC circuits.</li>
+</ul>
+<blockquote>
+<p><strong>"How can the circuit continuously absorb energy... if it is
+made only of inductances and capacitances? Answer: Because there is an
+infinite number of inductances and capacitances."</strong></p>
+</blockquote>
+<ul>
+<li><em>Context:</em> Describing the physical behavior of an infinite
+ladder network below the cutoff frequency, where energy is not
+dissipated as heat but is constantly used to fill the infinite
+line.</li>
+</ul>
+<h2 id="actionable-insights-for-circuit-analysis">Actionable Insights
+for Circuit Analysis</h2>
+<ol type="1">
+<li><strong>Impedance Phase Awareness:</strong> Always distinguish
+between real resistance (dissipative) and imaginary reactance
+(nondissipative) to determine energy efficiency.</li>
+<li><strong>Linearity Requirement:</strong> Remember that complex
+impedance and superposition principles (like Fourier analysis for
+smoothing) only hold if the circuit elements
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo>,</mo><mi>C</mi><mo>,</mo><mi>R</mi></mrow><annotation encoding="application/x-tex">L, C, R</annotation></semantics></math>)
+remain linear and do not vary with voltage or current.</li>
+<li><strong>Terminal Equivalence:</strong> Use the equivalent circuit
+principle to simplify complex networks before attempting to solve for
+specific currents or voltages; any passive network can be treated as a
+single
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>z</mi><annotation encoding="application/x-tex">z</annotation></semantics></math>.</li>
+<li><strong>Filter Design:</strong> To achieve a "flat" frequency
+response in signal transmission (e.g., radio), utilize band-pass filters
+with a width at least twice the highest signal frequency to prevent the
+attenuation of side-bands.</li>
+<li><strong>Transmission Line Modeling:</strong> For high-frequency
+signals, treat long parallel conductors as
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo>−</mo><mi>C</mi></mrow><annotation encoding="application/x-tex">L-C</annotation></semantics></math>
+ladders where the characteristic impedance
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>z</mi><mn>0</mn></msub><mo>=</mo><msqrt><mrow><msub><mi>L</mi><mn>0</mn></msub><mi>/</mi><msub><mi>C</mi><mn>0</mn></msub></mrow></msqrt></mrow><annotation encoding="application/x-tex">z_0 = \sqrt{L_0/C_0}</annotation></semantics></math>,
+noting that an ideal line has no cutoff frequency.</li>
+</ol>
+    </article>
+  </main>
+</body>
+</html>

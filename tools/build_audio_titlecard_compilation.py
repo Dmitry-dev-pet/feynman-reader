@@ -131,7 +131,7 @@ def centered_text(
     return y
 
 
-def write_card(chapter: Chapter, path: Path, volume_label: str) -> None:
+def write_card(chapter: Chapter, path: Path, volume_label: str, series_title: str, chapter_label: str) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     image = Image.new("RGB", (WIDTH, HEIGHT), BG)
     draw = ImageDraw.Draw(image)
@@ -144,9 +144,9 @@ def write_card(chapter: Chapter, path: Path, volume_label: str) -> None:
     draw.rounded_rectangle((180, 150, WIDTH - 180, HEIGHT - 150), radius=42, outline=LINE, width=3)
     draw.rectangle((180, 150, WIDTH - 180, 164), fill=ACCENT)
 
-    centered_text(draw, 250, ["Фейнмановские лекции по физике"], chapter_font, MUTED, 18)
+    centered_text(draw, 250, [series_title], chapter_font, MUTED, 18)
     centered_text(draw, 350, [volume_label], meta_font, ACCENT, 10)
-    centered_text(draw, 430, [f"Глава {chapter.number}"], chapter_font, TEXT, 16)
+    centered_text(draw, 430, [f"{chapter_label} {chapter.number}"], chapter_font, TEXT, 16)
 
     title_lines = wrap_to_width(draw, chapter.title, title_font, 1350)
     if len(title_lines) > 3:
@@ -227,7 +227,14 @@ def concat_segments(list_path: Path, output: Path, overwrite: bool) -> None:
     run(cmd)
 
 
-def write_outputs(out_dir: Path, slug: str, part_label: str, chapters: list[Chapter]) -> tuple[Path, Path, Path, Path]:
+def write_outputs(
+    out_dir: Path,
+    slug: str,
+    title: str,
+    part_label: str,
+    chapter_label: str,
+    chapters: list[Chapter],
+) -> tuple[Path, Path, Path, Path]:
     out_dir.mkdir(parents=True, exist_ok=True)
     concat_path = out_dir / f"{slug}.concat.txt"
     desc_path = out_dir / f"{slug}.description.txt"
@@ -237,7 +244,7 @@ def write_outputs(out_dir: Path, slug: str, part_label: str, chapters: list[Chap
     cursor = 0.0
     starts = []
     desc_lines = [
-        f"Feynman Reader RU Volume I — NotebookLM Audio, {part_label}",
+        f"{title}, {part_label}",
         "",
         "Chapters:",
     ]
@@ -254,7 +261,7 @@ def write_outputs(out_dir: Path, slug: str, part_label: str, chapters: list[Chap
                 "segment": str(segment),
             }
         )
-        desc_lines.append(f"{fmt_time(cursor)} Глава {chapter.number}. {chapter.title}")
+        desc_lines.append(f"{fmt_time(cursor)} {chapter_label} {chapter.number}. {chapter.title}")
         segment_path = str(segment.resolve()).replace("'", "'\\''")
         concat_lines.append(f"file '{segment_path}'")
         cursor += chapter.duration
@@ -276,9 +283,12 @@ def main() -> int:
     parser.add_argument("--out-dir", type=Path, default=Path("local-media/volume-I/youtube-audio-titlecards"))
     parser.add_argument("--slug", required=True)
     parser.add_argument("--part-label", required=True)
+    parser.add_argument("--title", default="Feynman Reader RU Volume I - NotebookLM Audio")
     parser.add_argument("--start", type=int, required=True)
     parser.add_argument("--end", type=int, required=True)
     parser.add_argument("--volume-label", default="Том I")
+    parser.add_argument("--series-title", default="Фейнмановские лекции по физике")
+    parser.add_argument("--chapter-label", default="Глава")
     parser.add_argument("--render", action="store_true")
     parser.add_argument("--overwrite", action="store_true")
     args = parser.parse_args()
@@ -288,12 +298,19 @@ def main() -> int:
     segment_dir = args.out_dir / "segments"
     for chapter in chapters:
         card = card_dir / f"ch{chapter.number:02d}.png"
-        write_card(chapter, card, args.volume_label)
+        write_card(chapter, card, args.volume_label, args.series_title, args.chapter_label)
         if args.render:
             segment = segment_dir / f"ch{chapter.number:02d}.mp4"
             render_segment(card, chapter.audio, segment, chapter.duration, args.overwrite)
 
-    concat_path, desc_path, starts_path, video_path = write_outputs(args.out_dir, args.slug, args.part_label, chapters)
+    concat_path, desc_path, starts_path, video_path = write_outputs(
+        args.out_dir,
+        args.slug,
+        args.title,
+        args.part_label,
+        args.chapter_label,
+        chapters,
+    )
     total = sum(chapter.duration for chapter in chapters)
     print(f"chapters={len(chapters)} duration={fmt_time(total)}")
     print(f"concat={concat_path}")

@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chapter 15: The Vector Potential Study Guide - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="en">
+  <script>
+    (() => {
+      const key = "flp-reader-theme";
+      const applyTheme = (theme) => {
+        const next = theme === "dark" ? "dark" : "light";
+        document.documentElement.dataset.theme = next;
+        document.body.dataset.theme = next;
+        try { localStorage.setItem(key, next); } catch (_) {}
+      };
+      try { applyTheme(localStorage.getItem(key) || "light"); } catch (_) { applyTheme("light"); }
+      document.addEventListener("click", (event) => {
+        const button = event.target.closest('[data-report-action="theme"]');
+        if (!button) return;
+        applyTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark");
+      });
+    })();
+  </script>
+<main class="notebooklm-report-shell">
+    <header aria-label="Quick navigation" class="reader-toolbar report-toolbar">
+      <div class="toolbar-group toolbar-navigation">
+        <a class="toolbar-btn" href="../ch15.html">Back to chapter</a>
+        <a class="toolbar-btn" href="../../../../feynman-reader/index.html">Reader</a>
+        <a class="toolbar-btn" href="../../index.html">Contents</a>
+      </div>
+      <a class="toolbar-title" href="../ch15.html#ch15" title="NotebookLM · Guide">NotebookLM · Guide</a>
+      <div class="toolbar-group toolbar-settings">
+        <button aria-label="Toggle theme" class="toolbar-btn icon-btn" data-report-action="theme" title="Toggle theme" type="button">◐</button>
+      </div>
+    </header>
+    <article class="notebooklm-report">
+<h1 id="chapter-15-the-vector-potential-study-guide">Chapter 15: The
+Vector Potential Study Guide</h1>
+<p>This study guide provides a comprehensive overview of the physics and
+mathematical applications of the vector potential, as well as its
+significance in both classical and quantum mechanics. It explores the
+relationship between magnetic fields, forces on current loops, and the
+energy of steady currents.</p>
+<hr />
+<h2 id="key-concepts">Key Concepts</h2>
+<h3 id="1-forces-and-torque-on-current-loops">1. Forces and Torque on
+Current Loops</h3>
+<p>A current loop placed in a magnetic field
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+experiences forces. For a rectangular loop in a uniform field:</p>
+<ul>
+<li><strong>Magnetic Moment
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>μ</mi><annotation encoding="application/x-tex">\mu</annotation></semantics></math>):</strong>
+Defined as
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>=</mo><mi>I</mi><mi>A</mi></mrow><annotation encoding="application/x-tex">\mu = IA</annotation></semantics></math>,
+where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>I</mi><annotation encoding="application/x-tex">I</annotation></semantics></math>
+is the current and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+is the area. As a vector,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝝁</mi><mo>=</mo><mi>I</mi><mi>A</mi><mi mathvariant="bold-italic">𝒏</mi></mrow><annotation encoding="application/x-tex">\boldsymbol{\mu} = IA\mathbf{n}</annotation></semantics></math>,
+where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝒏</mi><annotation encoding="application/x-tex">\mathbf{n}</annotation></semantics></math>
+is the unit normal to the loop's plane.</li>
+<li><strong>Torque
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>τ</mi><annotation encoding="application/x-tex">\tau</annotation></semantics></math>):</strong>
+The loop experiences a torque given by
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝝉</mi><mo>=</mo><mi mathvariant="bold-italic">𝝁</mi><mo>×</mo><mi mathvariant="bold-italic">𝑩</mi></mrow><annotation encoding="application/x-tex">\boldsymbol{\tau} = \boldsymbol{\mu} \times \mathbf{B}</annotation></semantics></math>.
+This torque tends to align the magnetic moment with the magnetic
+field.</li>
+<li><strong>Net Force:</strong> In a <em>uniform</em> field, there is no
+net force on the loop because forces on opposite sides cancel out. In a
+<em>nonuniform</em> field, a net force exists, proportional to the
+derivative of the magnetic field:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>F</mi><mi>x</mi></msub><mo>=</mo><mi>μ</mi><mfrac><mrow><mi>∂</mi><mi>B</mi></mrow><mrow><mi>∂</mi><mi>x</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">F_x = \mu \frac{\partial B}{\partial x}</annotation></semantics></math>.</li>
+</ul>
+<h3 id="2-mechanical-vs-total-energy">2. Mechanical vs. Total
+Energy</h3>
+<p>The study of magnetic energy distinguishes between "mechanical"
+energy and "total" energy:</p>
+<ul>
+<li><strong>Mechanical Energy
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>U</mi><mtext mathvariant="normal">mech</mtext></msub><annotation encoding="application/x-tex">U_{\text{mech}}</annotation></semantics></math>):</strong>
+Calculated as
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>U</mi><mtext mathvariant="normal">mech</mtext></msub><mo>=</mo><mi>−</mi><mi mathvariant="bold-italic">𝝁</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝑩</mi></mrow><annotation encoding="application/x-tex">U_{\text{mech}} = -\boldsymbol{\mu} \cdot \mathbf{B}</annotation></semantics></math>.
+This is considered a "fake" energy because it only accounts for
+mechanical work and ignores the electrical work required to keep
+currents steady. However, it is valid for calculating forces using the
+principle of virtual work.</li>
+<li><strong>Total Energy
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>U</mi><mtext mathvariant="normal">total</mtext></msub><annotation encoding="application/x-tex">U_{\text{total}}</annotation></semantics></math>):</strong>
+The true energy of a magnetic dipole in a field is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>U</mi><mtext mathvariant="normal">total</mtext></msub><mo>=</mo><mi>+</mi><mi mathvariant="bold-italic">𝝁</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝑩</mi></mrow><annotation encoding="application/x-tex">U_{\text{total}} = +\boldsymbol{\mu} \cdot \mathbf{B}</annotation></semantics></math>.
+This takes into account the energy provided by current sources (like
+batteries) to maintain constant current as the loop moves through a
+field.</li>
+</ul>
+<h3 id="3-energy-of-steady-currents">3. Energy of Steady Currents</h3>
+<p>The energy required to maintain a distribution of steady currents can
+be expressed using the vector potential
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>:</p>
+<ul>
+<li><strong>Single Circuit:</strong> The energy of a circuit
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="normal">Γ</mi><annotation encoding="application/x-tex">\Gamma</annotation></semantics></math>
+of any shape is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>=</mo><mi>I</mi><msub><mo>∮</mo><mi mathvariant="normal">Γ</mi></msub><mi mathvariant="bold-italic">𝑨</mi><mo>⋅</mo><mi>d</mi><mi mathvariant="bold-italic">𝒔</mi></mrow><annotation encoding="application/x-tex">U = I \oint_{\Gamma} \mathbf{A} \cdot d\mathbf{s}</annotation></semantics></math>.</li>
+<li><strong>General Distribution:</strong> For a volume of current
+density
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝒋</mi><annotation encoding="application/x-tex">\mathbf{j}</annotation></semantics></math>,
+the total energy is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>∫</mo><mi mathvariant="bold-italic">𝒋</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝑨</mi><mspace width="0.167em"></mspace><mi>d</mi><mi>V</mi></mrow><annotation encoding="application/x-tex">U = \frac{1}{2} \int \mathbf{j} \cdot \mathbf{A} \, dV</annotation></semantics></math>.
+This is analogous to the electrostatic energy formula
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>∫</mo><mi>ρ</mi><mi>ϕ</mi><mspace width="0.167em"></mspace><mi>d</mi><mi>V</mi></mrow><annotation encoding="application/x-tex">U = \frac{1}{2} \int \rho \phi \, dV</annotation></semantics></math>.</li>
+</ul>
+<h3 id="4-the-reality-of-the-vector-potential">4. The Reality of the
+Vector Potential</h3>
+<p>Historically, the vector potential
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>
+was often viewed as a mere mathematical convenience because classical
+forces depend only on the magnetic field
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑩</mi><mo>=</mo><mi mathvariant="bold-italic">𝜵</mi><mo>×</mo><mi mathvariant="bold-italic">𝑨</mi></mrow><annotation encoding="application/x-tex">\mathbf{B} = \boldsymbol{\nabla} \times \mathbf{A}</annotation></semantics></math>.
+However:</p>
+<ul>
+<li><strong>A "Real" Field:</strong> In physics, a field is "real" if
+its local value determines the behavior of a particle, avoiding the
+concept of action-at-a-distance.</li>
+<li><strong>Quantum Significance:</strong> In quantum mechanics, the
+vector potential is fundamental. The phase of an electron’s probability
+amplitude is shifted by a magnetic field according to the integral of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>
+along its path:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Phase Change</mtext><mo>=</mo><mfrac><mi>q</mi><mi>ℏ</mi></mfrac><mo>∫</mo><mi mathvariant="bold-italic">𝑨</mi><mo>⋅</mo><mi>d</mi><mi mathvariant="bold-italic">𝒔</mi></mrow><annotation encoding="application/x-tex">\text{Phase Change} = \frac{q}{\hbar} \int \mathbf{A} \cdot d\mathbf{s}</annotation></semantics></math>.</li>
+</ul>
+<h3 id="5-the-bohm-aharonov-effect">5. The Bohm-Aharonov Effect</h3>
+<p>This phenomenon demonstrates that electrons are affected by the
+vector potential even in regions where the magnetic field
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+is zero.</p>
+<ul>
+<li><strong>Experiment:</strong> Electrons pass around a long solenoid
+(or a magnetized iron "whisker"). Inside the solenoid,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+is strong, but outside it is zero.</li>
+<li><strong>Result:</strong> Even though the electrons never enter the
+region of the magnetic field, their interference pattern is shifted
+because the vector potential
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>
+exists outside the solenoid. This proves that
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>
+is a "real" physical field.</li>
+</ul>
+<hr />
+<h2 id="common-misconceptions">Common Misconceptions</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Misconception</th>
+<th style="text-align: left;">Fact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td
+style="text-align: left;"><strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>=</mo><mi>−</mi><mi mathvariant="bold-italic">𝝁</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝑩</mi></mrow><annotation encoding="application/x-tex">U = -\boldsymbol{\mu} \cdot \mathbf{B}</annotation></semantics></math>
+is the total energy.</strong></td>
+<td style="text-align: left;">This is only the mechanical part of the
+energy. The total energy is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>+</mi><mi mathvariant="bold-italic">𝝁</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝑩</mi></mrow><annotation encoding="application/x-tex">+\boldsymbol{\mu} \cdot \mathbf{B}</annotation></semantics></math>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>The vector potential is just a
+mathematical trick.</strong></td>
+<td style="text-align: left;">While useful for calculations, the vector
+potential is a "real" field that has direct physical consequences in
+quantum mechanics.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>A magnetic field only acts on
+particles it touches.</strong></td>
+<td style="text-align: left;">Quantum mechanics shows that the vector
+potential influences particles in regions where the magnetic field is
+zero (e.g., outside a solenoid).</td>
+</tr>
+<tr>
+<td
+style="text-align: left;"><strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>
+is always easier to use than
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>.</strong></td>
+<td style="text-align: left;">For simple symmetric problems, like
+finding the field on the axis of a current ring, calculating
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+directly is often easier than using
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="statics-vs-dynamics-a-summary-of-truths">Statics vs. Dynamics: A
+Summary of Truths</h2>
+<p>The following table distinguishes between formulas that are only
+valid in static conditions and those that are universally true in
+electrodynamics.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">FALSE IN GENERAL (True for Statics
+Only)</th>
+<th style="text-align: left;">TRUE ALWAYS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑬</mi><mo>=</mo><mi>−</mi><mi mathvariant="bold-italic">𝜵</mi><mi>ϕ</mi></mrow><annotation encoding="application/x-tex">\mathbf{E} = -\boldsymbol{\nabla}\phi</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑬</mi><mo>=</mo><mi>−</mi><mi mathvariant="bold-italic">𝜵</mi><mi>ϕ</mi><mo>−</mo><mfrac><mrow><mi>∂</mi><mi mathvariant="bold-italic">𝑨</mi></mrow><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\mathbf{E} = -\boldsymbol{\nabla}\phi - \frac{\partial \mathbf{A}}{\partial t}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝜵</mi><mo>×</mo><mi mathvariant="bold-italic">𝑬</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\boldsymbol{\nabla} \times \mathbf{E} = 0</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝜵</mi><mo>×</mo><mi mathvariant="bold-italic">𝑬</mi><mo>=</mo><mi>−</mi><mfrac><mrow><mi>∂</mi><mi mathvariant="bold-italic">𝑩</mi></mrow><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\boldsymbol{\nabla} \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>c</mi><mn>2</mn></msup><mi mathvariant="bold-italic">𝜵</mi><mo>×</mo><mi mathvariant="bold-italic">𝑩</mi><mo>=</mo><mfrac><mi mathvariant="bold-italic">𝒋</mi><msub><mi>ϵ</mi><mn>0</mn></msub></mfrac></mrow><annotation encoding="application/x-tex">c^2 \boldsymbol{\nabla} \times \mathbf{B} = \frac{\mathbf{j}}{\epsilon_0}</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>c</mi><mn>2</mn></msup><mi mathvariant="bold-italic">𝜵</mi><mo>×</mo><mi mathvariant="bold-italic">𝑩</mi><mo>=</mo><mfrac><mi mathvariant="bold-italic">𝒋</mi><msub><mi>ϵ</mi><mn>0</mn></msub></mfrac><mo>+</mo><mfrac><mrow><mi>∂</mi><mi mathvariant="bold-italic">𝑬</mi></mrow><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">c^2 \boldsymbol{\nabla} \times \mathbf{B} = \frac{\mathbf{j}}{\epsilon_0} + \frac{\partial \mathbf{E}}{\partial t}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>∇</mi><mn>2</mn></msup><mi>ϕ</mi><mo>=</mo><mi>−</mi><mfrac><mi>ρ</mi><msub><mi>ϵ</mi><mn>0</mn></msub></mfrac></mrow><annotation encoding="application/x-tex">\nabla^2 \phi = -\frac{\rho}{\epsilon_0}</annotation></semantics></math>
+(Poisson’s Eq.)</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>∇</mi><mn>2</mn></msup><mi>ϕ</mi><mo>−</mo><mfrac><mn>1</mn><msup><mi>c</mi><mn>2</mn></msup></mfrac><mfrac><mrow><msup><mi>∂</mi><mn>2</mn></msup><mi>ϕ</mi></mrow><mrow><mi>∂</mi><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac><mo>=</mo><mi>−</mi><mfrac><mi>ρ</mi><msub><mi>ϵ</mi><mn>0</mn></msub></mfrac></mrow><annotation encoding="application/x-tex">\nabla^2 \phi - \frac{1}{c^2} \frac{\partial^2 \phi}{\partial t^2} = -\frac{\rho}{\epsilon_0}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>∇</mi><mn>2</mn></msup><mi mathvariant="bold-italic">𝑨</mi><mo>=</mo><mi>−</mi><mfrac><mi mathvariant="bold-italic">𝒋</mi><mrow><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup></mrow></mfrac></mrow><annotation encoding="application/x-tex">\nabla^2 \mathbf{A} = -\frac{\mathbf{j}}{\epsilon_0 c^2}</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>∇</mi><mn>2</mn></msup><mi mathvariant="bold-italic">𝑨</mi><mo>−</mo><mfrac><mn>1</mn><msup><mi>c</mi><mn>2</mn></msup></mfrac><mfrac><mrow><msup><mi>∂</mi><mn>2</mn></msup><mi mathvariant="bold-italic">𝑨</mi></mrow><mrow><mi>∂</mi><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac><mo>=</mo><mi>−</mi><mfrac><mi mathvariant="bold-italic">𝒋</mi><mrow><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup></mrow></mfrac></mrow><annotation encoding="application/x-tex">\nabla^2 \mathbf{A} - \frac{1}{c^2} \frac{\partial^2 \mathbf{A}}{\partial t^2} = -\frac{\mathbf{j}}{\epsilon_0 c^2}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>∫</mo><mi>ρ</mi><mi>ϕ</mi><mspace width="0.167em"></mspace><mi>d</mi><mi>V</mi><mo>+</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>∫</mo><mi mathvariant="bold-italic">𝒋</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝑨</mi><mspace width="0.167em"></mspace><mi>d</mi><mi>V</mi></mrow><annotation encoding="application/x-tex">U = \frac{1}{2} \int \rho \phi \, dV + \frac{1}{2} \int \mathbf{j} \cdot \mathbf{A} \, dV</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>=</mo><mo>∫</mo><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><msub><mi>ϵ</mi><mn>0</mn></msub><mn>2</mn></mfrac><msup><mi>E</mi><mn>2</mn></msup><mo>+</mo><mfrac><mrow><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup></mrow><mn>2</mn></mfrac><msup><mi>B</mi><mn>2</mn></msup><mo stretchy="true" form="postfix">)</mo></mrow><mi>d</mi><mi>V</mi></mrow><annotation encoding="application/x-tex">U = \int \left( \frac{\epsilon_0}{2} E^2 + \frac{\epsilon_0 c^2}{2} B^2 \right) dV</annotation></semantics></math></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="self-check-questions">Self-Check Questions</h2>
+<h3 id="short-answer-practice">Short-Answer Practice</h3>
+<ol type="1">
+<li><strong>Define the magnetic moment of a current loop.</strong></li>
+<li><strong>Why is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>=</mo><mi>−</mi><mi mathvariant="bold-italic">𝝁</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝑩</mi></mrow><annotation encoding="application/x-tex">U = -\boldsymbol{\mu} \cdot \mathbf{B}</annotation></semantics></math>
+referred to as "mechanical" energy?</strong></li>
+<li><strong>State the relationship between the vector potential
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>
+and the magnetic field
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>.</strong></li>
+<li><strong>In the two-slit electron interference experiment, what
+physical quantity determines the shift of the interference pattern when
+a magnetic field is introduced?</strong></li>
+<li><strong>What happens to the "action-at-a-distance" concept in the
+presence of a vector potential?</strong></li>
+<li><strong>What is the "retarded time"
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>t</mi><mo>′</mo></msup><annotation encoding="application/x-tex">t&#39;</annotation></semantics></math>
+used in calculating potentials for dynamic fields?</strong></li>
+</ol>
+<h3 id="essay-prompts-for-deeper-exploration">Essay Prompts for Deeper
+Exploration</h3>
+<ol type="1">
+<li><strong>The Shift from Force to Energy:</strong> Discuss how the
+description of electromagnetic interactions changes as one moves from
+classical mechanics (using
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑭</mi><mo>=</mo><mi>q</mi><mo stretchy="false" form="prefix">(</mo><mi mathvariant="bold-italic">𝑬</mi><mo>+</mo><mi mathvariant="bold-italic">𝒗</mi><mo>×</mo><mi mathvariant="bold-italic">𝑩</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mathbf{F} = q(\mathbf{E} + \mathbf{v} \times \mathbf{B})</annotation></semantics></math>)
+to quantum mechanics (using
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>).
+Why do energy and momentum become more fundamental than force?</li>
+<li><strong>The Bohm-Aharonov Experiment:</strong> Explain the setup and
+significance of the experiment involving iron whiskers. Why did this
+experiment "shock" many physicists, and what does it reveal about the
+nature of fields?</li>
+<li><strong>The Arbitrariness of Potentials:</strong> Both the scalar
+potential
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>
+and vector potential
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>
+have a degree of arbitrariness (e.g., adding a gradient to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>).
+Explain why this does not affect the physical outcomes in either
+classical or quantum mechanics.</li>
+</ol>
+<hr />
+<h2 id="glossary-of-important-terms">Glossary of Important Terms</h2>
+<ul>
+<li><strong>Bohm-Aharonov Effect:</strong> The quantum mechanical
+phenomenon where a charged particle is affected by electromagnetic
+potentials, despite being in a region where both magnetic and electric
+fields are zero.</li>
+<li><strong>Magnetic Moment
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>μ</mi><annotation encoding="application/x-tex">\mu</annotation></semantics></math>):</strong>
+A vector quantity
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mi>A</mi><mi mathvariant="bold-italic">𝒏</mi></mrow><annotation encoding="application/x-tex">IA\mathbf{n}</annotation></semantics></math>)
+representing the strength and orientation of a magnetic source, such as
+a current loop.</li>
+<li><strong>Principle of Virtual Work:</strong> A method used to find
+forces by calculating the change in energy that would result from an
+infinitesimal displacement.</li>
+<li><strong>Retarded Potentials:</strong> The values of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>
+at a point, calculated using the charges and currents that existed at a
+previous time
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>−</mo><mi>r</mi><mi>/</mi><mi>c</mi></mrow><annotation encoding="application/x-tex">t - r/c</annotation></semantics></math>),
+accounting for the speed of light.</li>
+<li><strong>Stokes’ Theorem:</strong> A mathematical theorem used to
+relate the surface integral of the curl of a vector field (like
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑩</mi><mo>=</mo><mi mathvariant="bold-italic">𝜵</mi><mo>×</mo><mi mathvariant="bold-italic">𝑨</mi></mrow><annotation encoding="application/x-tex">\mathbf{B} = \boldsymbol{\nabla} \times \mathbf{A}</annotation></semantics></math>)
+to the line integral of the vector field
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>)
+around the boundary.</li>
+<li><strong>Vector Potential
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>):</strong>
+A vector field whose curl is equal to the magnetic field
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑩</mi><mo>=</mo><mi mathvariant="bold-italic">𝜵</mi><mo>×</mo><mi mathvariant="bold-italic">𝑨</mi></mrow><annotation encoding="application/x-tex">\mathbf{B} = \boldsymbol{\nabla} \times \mathbf{A}</annotation></semantics></math>).
+It is central to the description of electrodynamics and quantum
+mechanics.</li>
+</ul>
+    </article>
+  </main>
+</body>
+</html>

@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Study Guide: Solutions of Maxwell’s Equations in Free Space - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="en">
+  <script>
+    (() => {
+      const key = "flp-reader-theme";
+      const applyTheme = (theme) => {
+        const next = theme === "dark" ? "dark" : "light";
+        document.documentElement.dataset.theme = next;
+        document.body.dataset.theme = next;
+        try { localStorage.setItem(key, next); } catch (_) {}
+      };
+      try { applyTheme(localStorage.getItem(key) || "light"); } catch (_) { applyTheme("light"); }
+      document.addEventListener("click", (event) => {
+        const button = event.target.closest('[data-report-action="theme"]');
+        if (!button) return;
+        applyTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark");
+      });
+    })();
+  </script>
+<main class="notebooklm-report-shell">
+    <header aria-label="Quick navigation" class="reader-toolbar report-toolbar">
+      <div class="toolbar-group toolbar-navigation">
+        <a class="toolbar-btn" href="../ch20.html">Back to chapter</a>
+        <a class="toolbar-btn" href="../../../../feynman-reader/index.html">Reader</a>
+        <a class="toolbar-btn" href="../../index.html">Contents</a>
+      </div>
+      <a class="toolbar-title" href="../ch20.html#ch20" title="NotebookLM · Guide">NotebookLM · Guide</a>
+      <div class="toolbar-group toolbar-settings">
+        <button aria-label="Toggle theme" class="toolbar-btn icon-btn" data-report-action="theme" title="Toggle theme" type="button">◐</button>
+      </div>
+    </header>
+    <article class="notebooklm-report">
+<h1 id="study-guide-solutions-of-maxwells-equations-in-free-space">Study
+Guide: Solutions of Maxwell’s Equations in Free Space</h1>
+<p>This study guide explores the mathematical and physical implications
+of Maxwell’s equations in regions of space devoid of charges and
+currents. It focuses on the propagation of electromagnetic waves, the
+derivation of the wave equation, and the nature of scientific
+imagination in visualizing these phenomena.</p>
+<hr />
+<h2 id="i-key-concepts">I. Key Concepts</h2>
+<h3 id="1-maxwells-equations-in-free-space">1. Maxwell’s Equations in
+Free Space</h3>
+<p>In free space, where the charge density
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ρ</mi><annotation encoding="application/x-tex">\rho</annotation></semantics></math>)
+and current density
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝒋</mi><annotation encoding="application/x-tex">\mathbf{j}</annotation></semantics></math>)
+are zero, Maxwell's equations simplify to:</p>
+<ul>
+<li><strong>I. Divergence of E:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∇</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝑬</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\nabla \cdot \mathbf{E} = 0</annotation></semantics></math></li>
+<li><strong>II. Curl of E:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∇</mi><mo>×</mo><mi mathvariant="bold-italic">𝑬</mi><mo>=</mo><mi>−</mi><mfrac><mrow><mi>∂</mi><mi mathvariant="bold-italic">𝑩</mi></mrow><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\nabla \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t}</annotation></semantics></math></li>
+<li><strong>III. Divergence of B:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∇</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝑩</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\nabla \cdot \mathbf{B} = 0</annotation></semantics></math></li>
+<li><strong>IV. Curl of B:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>c</mi><mn>2</mn></msup><mo stretchy="false" form="prefix">(</mo><mi>∇</mi><mo>×</mo><mi mathvariant="bold-italic">𝑩</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><mrow><mi>∂</mi><mi mathvariant="bold-italic">𝑬</mi></mrow><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">c^2 (\nabla \times \mathbf{B}) = \frac{\partial \mathbf{E}}{\partial t}</annotation></semantics></math></li>
+</ul>
+<p>These equations demonstrate that changing electric fields generate
+magnetic fields and vice versa, allowing fields to exist and travel
+independently of their original sources.</p>
+<h3 id="2-the-one-dimensional-wave-equation">2. The One-Dimensional Wave
+Equation</h3>
+<p>For waves where fields vary only in one dimension (e.g., the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>-direction),
+the components of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+satisfy the one-dimensional wave equation:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><msup><mi>∂</mi><mn>2</mn></msup><mi>ψ</mi></mrow><mrow><mi>∂</mi><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac><mo>−</mo><mfrac><mn>1</mn><msup><mi>c</mi><mn>2</mn></msup></mfrac><mfrac><mrow><msup><mi>∂</mi><mn>2</mn></msup><mi>ψ</mi></mrow><mrow><mi>∂</mi><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\frac{\partial^2 \psi}{\partial x^2} - \frac{1}{c^2} \frac{\partial^2 \psi}{\partial t^2} = 0</annotation></semantics></math>
+The general solution is the superposition of two arbitrary functions:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ψ</mi><mo>=</mo><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><mi>c</mi><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>g</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>+</mo><mi>c</mi><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\psi = f(x - ct) + g(x + ct)</annotation></semantics></math>,
+representing waves traveling in the positive and negative
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>-directions,
+respectively, at the speed of light
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>c</mi><annotation encoding="application/x-tex">c</annotation></semantics></math>).</p>
+<h3 id="3-properties-of-plane-waves">3. Properties of Plane Waves</h3>
+<ul>
+<li><strong>Transversality:</strong> Electromagnetic waves are
+transverse; the electric and magnetic field vectors must be
+perpendicular to the direction of propagation.</li>
+<li><strong>Orthogonality:</strong> In a plane wave,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+are perpendicular to each other.</li>
+<li><strong>Magnitude Relationship:</strong> The magnitudes are related
+by
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>=</mo><mi>c</mi><mi>B</mi></mrow><annotation encoding="application/x-tex">E = cB</annotation></semantics></math>.</li>
+<li><strong>Propagation Direction:</strong> The vector cross product
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑬</mi><mo>×</mo><mi mathvariant="bold-italic">𝑩</mi></mrow><annotation encoding="application/x-tex">\mathbf{E} \times \mathbf{B}</annotation></semantics></math>
+points in the direction of the wave's travel.</li>
+</ul>
+<h3 id="4-spherical-waves">4. Spherical Waves</h3>
+<p>Spherical waves spread out from a central origin. The mathematical
+form of a spherically symmetric wave is:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ψ</mi><mo>=</mo><mfrac><mrow><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo>−</mo><mi>r</mi><mi>/</mi><mi>c</mi><mo stretchy="false" form="postfix">)</mo></mrow><mi>r</mi></mfrac></mrow><annotation encoding="application/x-tex">\psi = \frac{f(t - r/c)}{r}</annotation></semantics></math></p>
+<ul>
+<li><strong>Amplitude Decay:</strong> Unlike plane waves, the amplitude
+of a spherical wave decreases in proportion to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mi>r</mi></mrow><annotation encoding="application/x-tex">1/r</annotation></semantics></math>.</li>
+<li><strong>Energy Conservation:</strong> Because the energy density
+depends on the square of the amplitude, the intensity falls as
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><msup><mi>r</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">1/r^2</annotation></semantics></math>,
+spreading the total energy over a surface area
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><mi>π</mi><msup><mi>r</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">4\pi r^2</annotation></semantics></math>)
+that grows with the square of the distance.</li>
+</ul>
+<h3 id="5-scientific-imagination-and-abstraction">5. Scientific
+Imagination and Abstraction</h3>
+<p>Visualizing electromagnetic fields is a significant challenge because
+they do not require a medium (like "jello" or "ether"). Scientific
+imagination is constrained by the "straitjacket" of known physical laws.
+While one cannot "see" a field, its reality is confirmed by the ability
+of instruments to detect signals from vast distances, such as those from
+spacecraft or distant galaxies.</p>
+<hr />
+<h2 id="ii-common-misconceptions">II. Common Misconceptions</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Misconception</th>
+<th style="text-align: left;">Physical Reality</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Medium Requirement</strong></td>
+<td style="text-align: left;">Fields do not require a physical medium
+(like the "ether") to propagate; they exist as independent entities in a
+vacuum.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Instantaneous
+Effects</strong></td>
+<td style="text-align: left;">Changes in a source do not affect distant
+points immediately; information travels at the constant speed
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>c</mi><annotation encoding="application/x-tex">c</annotation></semantics></math>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Scalar Nature</strong></td>
+<td style="text-align: left;">Electromagnetic fields are not simple
+numbers (scalars) like temperature; they are vectors requiring multiple
+components at every point in space.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Time Symmetry</strong></td>
+<td style="text-align: left;">While Maxwell’s equations allow for
+"incoming" spherical waves, physical experience dictates that only
+"outgoing" waves from a source are observed.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="iii-self-check-questions">III. Self-Check Questions</h2>
+<h3 id="short-answer">Short Answer</h3>
+<ol type="1">
+<li>What is the value of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∇</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝑬</mi></mrow><annotation encoding="application/x-tex">\nabla \cdot \mathbf{E}</annotation></semantics></math>
+in a region of space with no charges?</li>
+<li>In a plane wave traveling in the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>+</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">+x</annotation></semantics></math>
+direction with
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>
+in the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>+</mi><mi>y</mi></mrow><annotation encoding="application/x-tex">+y</annotation></semantics></math>
+direction, what is the direction of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>?</li>
+<li>Why does the amplitude of a spherical wave decrease as
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mi>r</mi></mrow><annotation encoding="application/x-tex">1/r</annotation></semantics></math>?</li>
+<li>Write the mathematical form of a wave traveling in the negative
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>-direction.</li>
+<li>What physical phenomenon is represented by the vector
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑬</mi><mo>×</mo><mi mathvariant="bold-italic">𝑩</mi></mrow><annotation encoding="application/x-tex">\mathbf{E} \times \mathbf{B}</annotation></semantics></math>?</li>
+</ol>
+<h3 id="essay-and-deep-exploration">Essay and Deep Exploration</h3>
+<ol type="1">
+<li><strong>The Principle of Superposition:</strong> Explain how a
+complex current history in a source (like an infinite sheet) is recorded
+and transmitted through space. How does the principle of superposition
+allow us to construct the resulting electric field?</li>
+<li><strong>Symmetry in Equations:</strong> Discuss the "intellectual
+beauty" found in the wave equation. How does the symmetrical appearance
+of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo>,</mo></mrow><annotation encoding="application/x-tex">x, y, z,</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math>
+suggest deeper physical truths, such as four-dimensional symmetry?</li>
+<li><strong>The Limits of Visualization:</strong> Feynman argues that
+imagining a field is more difficult than imagining "invisible angels."
+Contrast the requirements of "ordinary" imagination with "scientific"
+imagination, specifically regarding the constraints of physical
+consistency.</li>
+<li><strong>The Case of the Blind Men's Rainbow:</strong> Use the
+analogy of the blind men measuring radiation intensity to explain how
+scientific data can represent beauty that is not directly "seen" by
+human senses.</li>
+</ol>
+<hr />
+<h2 id="iv-glossary-of-key-terms">IV. Glossary of Key Terms</h2>
+<ul>
+<li><strong>c (Speed of Light):</strong> The constant velocity
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><msqrt><mrow><msub><mi>ϵ</mi><mn>0</mn></msub><msub><mi>μ</mi><mn>0</mn></msub></mrow></msqrt></mrow><annotation encoding="application/x-tex">1/\sqrt{\epsilon_0 \mu_0}</annotation></semantics></math>)
+at which electromagnetic waves propagate in free space.</li>
+<li><strong>Curl
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∇</mi><mo>×</mo></mrow><annotation encoding="application/x-tex">\nabla \times</annotation></semantics></math>):</strong>
+A vector operator that describes the infinitesimal rotation of a vector
+field.</li>
+<li><strong>Divergence
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∇</mi><mo>⋅</mo></mrow><annotation encoding="application/x-tex">\nabla \cdot</annotation></semantics></math>):</strong>
+A scalar operator that measures the magnitude of a vector field's source
+or sink at a given point.</li>
+<li><strong>Laplacian
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>∇</mi><mn>2</mn></msup><annotation encoding="application/x-tex">\nabla^2</annotation></semantics></math>):</strong>
+A differential operator given by the sum of the second partial
+derivatives with respect to each spatial coordinate.</li>
+<li><strong>Plane Wave:</strong> A wave whose wavefronts (surfaces of
+constant phase) are infinite parallel planes.</li>
+<li><strong>Polarization:</strong> The orientation of the oscillations
+of the electric field vector in a transverse wave.</li>
+<li><strong>Retarded Time
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>−</mo><mi>x</mi><mi>/</mi><mi>c</mi></mrow><annotation encoding="application/x-tex">t - x/c</annotation></semantics></math>):</strong>
+The time at which a signal was emitted from a source to reach a distance
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>
+at the current time
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math>.</li>
+<li><strong>Spherical Wave:</strong> A wave whose wavefronts are spheres
+expanding from a central source.</li>
+<li><strong>Superposition:</strong> The principle that the total field
+at a point is the vector sum of the fields produced by individual
+sources.</li>
+<li><strong>Wave Equation:</strong> A second-order partial differential
+equation describing the propagation of waves through a medium or
+vacuum.</li>
+</ul>
+    </article>
+  </main>
+</body>
+</html>

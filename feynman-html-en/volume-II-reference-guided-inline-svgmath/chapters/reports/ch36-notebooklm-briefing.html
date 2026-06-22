@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chapter 36: Ferromagnetism – Analytical Briefing - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="en">
+  <script>
+    (() => {
+      const key = "flp-reader-theme";
+      const applyTheme = (theme) => {
+        const next = theme === "dark" ? "dark" : "light";
+        document.documentElement.dataset.theme = next;
+        document.body.dataset.theme = next;
+        try { localStorage.setItem(key, next); } catch (_) {}
+      };
+      try { applyTheme(localStorage.getItem(key) || "light"); } catch (_) { applyTheme("light"); }
+      document.addEventListener("click", (event) => {
+        const button = event.target.closest('[data-report-action="theme"]');
+        if (!button) return;
+        applyTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark");
+      });
+    })();
+  </script>
+<main class="notebooklm-report-shell">
+    <header aria-label="Quick navigation" class="reader-toolbar report-toolbar">
+      <div class="toolbar-group toolbar-navigation">
+        <a class="toolbar-btn" href="../ch36.html">Back to chapter</a>
+        <a class="toolbar-btn" href="../../../../feynman-reader/index.html">Reader</a>
+        <a class="toolbar-btn" href="../../index.html">Contents</a>
+      </div>
+      <a class="toolbar-title" href="../ch36.html#ch36" title="NotebookLM · Overview">NotebookLM · Overview</a>
+      <div class="toolbar-group toolbar-settings">
+        <button aria-label="Toggle theme" class="toolbar-btn icon-btn" data-report-action="theme" title="Toggle theme" type="button">◐</button>
+      </div>
+    </header>
+    <article class="notebooklm-report">
+<h1 id="chapter-36-ferromagnetism--analytical-briefing">Chapter 36:
+Ferromagnetism – Analytical Briefing</h1>
+<p>This briefing document provides a comprehensive analysis of the
+physical principles, mathematical formulations, and macroscopic
+behaviors of ferromagnetic materials, based on the physics of large
+induced magnetic moments and their internal dynamics.</p>
+<h2 id="executive-summary">Executive Summary</h2>
+<p>Ferromagnetism represents a state in matter where induced magnetic
+moments are so strong they become the dominant factor in producing
+observed magnetic fields. Unlike paramagnetic or diamagnetic materials,
+ferromagnetic substances like iron and nickel exhibit massive induced
+moments that require a specialized mathematical framework. This chapter
+establishes the relationship between magnetization (<span
+class="math inline">$\FLPM$</span>) and current density
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="bold-italic">𝒋</mi><mtext mathvariant="normal">mag</mtext></msub><annotation encoding="application/x-tex">\mathbf{j}_{\text{mag}}</annotation></semantics></math>),
+defines the auxiliary field <span class="math inline">$\FLPH$</span>,
+and explores the nonlinear phenomena of hysteresis and saturation. While
+a classical "magnetic" approach to spontaneous magnetization fails to
+account for experimental observations by a factor of 2600, it provides
+the groundwork for understanding the Curie temperature and the necessity
+of quantum mechanical explanations for the strong alignment of atomic
+spins.</p>
+<hr />
+<h2 id="i-mathematical-foundations-magnetization-currents">I.
+Mathematical Foundations: Magnetization Currents</h2>
+<p>The internal properties of magnetic matter are described by the
+magnetization vector <span class="math inline">$\FLPM$</span>, the
+average dipole moment per unit volume. The magnetic effects of matter
+arise from circulating "Ampèrian" atomic currents—spinning electrons or
+orbital motions—rather than mythical "magnetic poles."</p>
+<h3 id="1-equivalent-current-density">1. Equivalent Current Density</h3>
+<p>The total current density
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝒋</mi><annotation encoding="application/x-tex">\mathbf{j}</annotation></semantics></math>
+in a material is categorized into three components:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝒋</mi><mo>=</mo><msub><mi mathvariant="bold-italic">𝒋</mi><mtext mathvariant="normal">pol</mtext></msub><mo>+</mo><msub><mi mathvariant="bold-italic">𝒋</mi><mtext mathvariant="normal">mag</mtext></msub><mo>+</mo><msub><mi mathvariant="bold-italic">𝒋</mi><mtext mathvariant="normal">cond</mtext></msub></mrow><annotation encoding="application/x-tex">\mathbf{j}=\mathbf{j}_{\text{pol}}+\mathbf{j}_{\text{mag}}+\mathbf{j}_{\text{cond}}</annotation></semantics></math>
+Where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="bold-italic">𝒋</mi><mtext mathvariant="normal">pol</mtext></msub><annotation encoding="application/x-tex">\mathbf{j}_{\text{pol}}</annotation></semantics></math>
+is the polarization current and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="bold-italic">𝒋</mi><mtext mathvariant="normal">cond</mtext></msub><annotation encoding="application/x-tex">\mathbf{j}_{\text{cond}}</annotation></semantics></math>
+is the conduction current. The specific contribution from magnetized
+material is given by the curl of the magnetization: <span
+class="math display">$$\mathbf{j}_{\text{mag}}=\mathbf{c}url{\FLPM}$$</span></p>
+<h3 id="2-physical-meaning-of-the-curl-of-m">2. Physical Meaning of the
+Curl of M</h3>
+<ul>
+<li><strong>Uniform Magnetization:</strong> Inside a uniformly
+magnetized rod, neighboring atomic current loops cancel each other out,
+resulting in zero net internal current. However, at the surface, these
+currents do not cancel, creating a net surface current equivalent to a
+solenoid.</li>
+<li><strong>Non-uniform Magnetization:</strong> If <span
+class="math inline">$\FLPM$</span> varies between neighboring regions,
+the cancellation of circulating currents is imperfect. This gradient
+produces a net volume current density. For example, a variation of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>M</mi><mi>z</mi></msub><annotation encoding="application/x-tex">M_z</annotation></semantics></math>
+in the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>-direction
+contributes to a current density in the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>y</mi><annotation encoding="application/x-tex">y</annotation></semantics></math>-direction:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>j</mi><mi>y</mi></msub><mo>=</mo><mi>−</mi><mi>∂</mi><msub><mi>M</mi><mi>z</mi></msub><mi>/</mi><mi>∂</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">j_y = -\partial M_z / \partial x</annotation></semantics></math>.</li>
+</ul>
+<hr />
+<h2 id="ii-the-auxiliary-field-h">II. The Auxiliary Field H</h2>
+<p>To manage the complexity of internal currents, a new vector field
+<span class="math inline">$\FLPH$</span> is defined to relate the
+magnetic field
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+to the magnetization <span class="math inline">$\FLPM$</span>.</p>
+<h3 id="1-definition-and-maxwells-equation">1. Definition and Maxwell’s
+Equation</h3>
+<p>The field <span class="math inline">$\FLPH$</span> is defined as:
+<span class="math display">$$\FLPH = \mathbf{B} -
+\frac{\FLPM}{\epsilon_0 c^2}$$</span> In this framework, the Maxwell
+equation for the curl of <span class="math inline">$\FLPH$</span> (for
+static or slowly varying fields) simplifies to: <span
+class="math display">$$\epsilon_0 c^2 \mathbf{c}url{\FLPH} =
+\mathbf{j}_{\text{cond}}$$</span> This implies that <span
+class="math inline">$\FLPH$</span> is directly driven by conduction
+currents, earning it the name "magnetizing field."</p>
+<h3 id="2-units-and-conventions">2. Units and Conventions</h3>
+<p>There is significant naming and unit confusion across different
+systems (mks vs. others). The following table summarizes the
+relationships:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Property</th>
+<th style="text-align: left;">Unit / Relationship</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>B (Magnetic Field)</strong></td>
+<td
+style="text-align: left;">Weber/meter<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi></mi><mn>2</mn></msup><annotation encoding="application/x-tex">^2</annotation></semantics></math>
+(10<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi></mi><mn>4</mn></msup><annotation encoding="application/x-tex">^4</annotation></semantics></math>
+gauss)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>H (Our Definition)</strong></td>
+<td
+style="text-align: left;">Weber/meter<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi></mi><mn>2</mn></msup><annotation encoding="application/x-tex">^2</annotation></semantics></math>
+(10<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi></mi><mn>4</mn></msup><annotation encoding="application/x-tex">^4</annotation></semantics></math>
+oersted)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>H' (Engineer's H)</strong></td>
+<td style="text-align: left;">Ampere/meter</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Conversion</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> (gauss)</mtext></mrow><mo>=</mo><mn>0.0126</mn><msup><mi>H</mi><mo>′</mo></msup><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> (amp/meter)</mtext></mrow></mrow><annotation encoding="application/x-tex">H \text{ (gauss)} = 0.0126 H&#39; \text{ (amp/meter)}</annotation></semantics></math></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="iii-macroscopic-behavior-hysteresis-and-inductance">III.
+Macroscopic Behavior: Hysteresis and Inductance</h2>
+<p>The relationship between
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+and <span class="math inline">$\FLPH$</span> in ferromagnetic materials
+is famously complex, being both nonlinear and history-dependent.</p>
+<h3 id="1-the-magnetization-curve-and-hysteresis">1. The Magnetization
+Curve and Hysteresis</h3>
+<ul>
+<li><strong>Saturation:</strong> As <span
+class="math inline">$\FLPH$</span> increases, <span
+class="math inline">$\FLPM$</span> eventually levels off. The iron
+"saturates," and further increases in <span
+class="math inline">$\FLPH$</span> only yield a proportional increase in
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+with unit slope.</li>
+<li><strong>Hysteresis Loop:</strong> The value of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+depends on the "past history" of the material. If <span
+class="math inline">$\FLPH$</span> is reduced to zero after saturation,
+a residual field (remanence) remains. Repeatedly oscillating the current
+creates a loop.</li>
+<li><strong>Hysteresis Loss:</strong> The energy density required to
+drive a material through one cycle is the area enclosed by the
+hysteresis loop:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi><mo>=</mo><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup><mo>∫</mo><mi>H</mi><mspace width="0.167em"></mspace><mi>d</mi><mi>B</mi></mrow><annotation encoding="application/x-tex">u = \epsilon_0 c^2 \int H \, dB</annotation></semantics></math>.
+This energy is lost as heat.</li>
+</ul>
+<h3 id="2-iron-core-inductances">2. Iron-Core Inductances</h3>
+<p>Iron cores allow for much larger fields and higher inductances for a
+given current. The iron atoms act as "slave magnets" that line up to
+produce a tremendously greater magnetic current than the winding current
+alone.</p>
+<ul>
+<li><strong>Permeability
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>μ</mi><annotation encoding="application/x-tex">\mu</annotation></semantics></math>):</strong>
+For small loops,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>≈</mo><mi>μ</mi><mi>H</mi></mrow><annotation encoding="application/x-tex">B \approx \mu H</annotation></semantics></math>,
+where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>μ</mi><annotation encoding="application/x-tex">\mu</annotation></semantics></math>
+is the permeability (often several thousand).</li>
+<li><strong>Inductance Formula:</strong> <span
+class="math inline">$\selfInd = \frac{\mu N^2 A}{\epsilon_0 c^2
+l}$</span></li>
+</ul>
+<hr />
+<h2 id="iv-microscopic-theory-spontaneous-magnetization">IV. Microscopic
+Theory: Spontaneous Magnetization</h2>
+<p>The central mystery of ferromagnetism is why moments align so
+strongly even without an external field.</p>
+<h3 id="1-the-local-field-paradox">1. The Local Field Paradox</h3>
+<p>Using the "spherical hole" approximation (analytically derived from
+dielectrics), the local field
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="bold-italic">𝑩</mi><mi>a</mi></msub><annotation encoding="application/x-tex">\mathbf{B}_a</annotation></semantics></math>
+acting on an atom should be: <span class="math display">$$\mathbf{B}_a =
+\FLPH + \lambda \frac{\FLPM}{\epsilon_0 c^2}$$</span> In the spherical
+model,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi><mo>=</mo><mn>1</mn><mi>/</mi><mn>3</mn></mrow><annotation encoding="application/x-tex">\lambda = 1/3</annotation></semantics></math>.</p>
+<h3 id="2-the-curie-temperature-t_c">2. The Curie Temperature
+(T<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi></mi><mi>c</mi></msub><annotation encoding="application/x-tex">_c</annotation></semantics></math>)</h3>
+<p>The theory predicts a critical temperature above which thermal
+motions destroy alignment. This Curie temperature is defined by:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mi>c</mi></msub><mo>=</mo><mi>λ</mi><mfrac><mrow><mi>N</mi><msup><mi>μ</mi><mn>2</mn></msup></mrow><mrow><mi>k</mi><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup></mrow></mfrac></mrow><annotation encoding="application/x-tex">T_c = \lambda \frac{N \mu^2}{k \epsilon_0 c^2}</annotation></semantics></math></p>
+<ul>
+<li><strong>Theoretical Failure:</strong> For Nickel, using
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi><mo>=</mo><mn>1</mn><mi>/</mi><mn>3</mn></mrow><annotation encoding="application/x-tex">\lambda = 1/3</annotation></semantics></math>
+predicts
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>T</mi><mi>c</mi></msub><mo>=</mo><msup><mn>0.24</mn><mo>∘</mo></msup><mtext mathvariant="normal">K</mtext></mrow><annotation encoding="application/x-tex">T_c = 0.24^\circ\text{K}</annotation></semantics></math>.
+The actual observed
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>T</mi><mi>c</mi></msub><annotation encoding="application/x-tex">T_c</annotation></semantics></math>
+is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>631</mn><mo>∘</mo></msup><mtext mathvariant="normal">K</mtext></mrow><annotation encoding="application/x-tex">631^\circ\text{K}</annotation></semantics></math>.</li>
+<li><strong>Conclusion:</strong> The purely "magnetic" interaction is
+too weak by a factor of <strong>2600</strong>. Ferromagnetism must be
+driven by a non-magnetic interaction—quantum mechanical exchange forces
+related to the Pauli exclusion principle—that forces spins to
+align.</li>
+</ul>
+<hr />
+<h2 id="v-important-quotes-with-context">V. Important Quotes with
+Context</h2>
+<blockquote>
+<p><strong>"The induced moments are so strong that they are often the
+dominant effect in producing the observed fields."</strong></p>
+</blockquote>
+<ul>
+<li><em>Context:</em> Introducing the scale of ferromagnetism compared
+to the weak effects seen in paramagnetism and diamagnetism.</li>
+</ul>
+<blockquote>
+<p><strong>"Physically, the field in the hole is reduced because of the
+surface currents—which are given by <span
+class="math inline">$\mathbf{c}url{\FLPM}$</span>."</strong></p>
+</blockquote>
+<ul>
+<li><em>Context:</em> Explaining the microscopic field inside a material
+and why the geometry of a cavity (needle, disc, or sphere) changes the
+observed field.</li>
+</ul>
+<blockquote>
+<p><strong>"It is as if we had a lot more current going through the coil
+than we really have. When we reverse the current, all the little magnets
+flip over... and we get a much higher induced emf."</strong></p>
+</blockquote>
+<ul>
+<li><em>Context:</em> Describing the efficiency of iron-core inductors
+and the "slave magnet" behavior of internal atomic moments.</li>
+</ul>
+<blockquote>
+<p><strong>"Clearly, our 'magnetic' theory of ferromagnetism is a dismal
+failure."</strong></p>
+</blockquote>
+<ul>
+<li><em>Context:</em> Acknowledging that classical electrostatics
+analogies cannot explain the massive internal fields required for
+spontaneous magnetization at room temperature.</li>
+</ul>
+<hr />
+<h2 id="vi-actionable-insights">VI. Actionable Insights</h2>
+<ol type="1">
+<li><strong>Field Design for Electromagnets:</strong> To calculate the
+field in a gap, one must solve the intersection of the magnetizing line
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>1</mn></msub><msub><mi>l</mi><mn>1</mn></msub><mo>+</mo><msub><mi>H</mi><mn>2</mn></msub><msub><mi>l</mi><mn>2</mn></msub><mo>=</mo><mi>N</mi><mi>I</mi><mi>/</mi><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">H_1 l_1 + H_2 l_2 = NI / \epsilon_0 c^2</annotation></semantics></math>
+with the specific material's hysteresis curve. The field is not just a
+function of current, but of the sequence in which the current was
+applied.</li>
+<li><strong>Material Selection for Transformers:</strong> To minimize
+"hysteresis loss," engineers must select "transformer irons" (e.g.,
+iron-silicon alloys) designed with narrow hysteresis loops.</li>
+<li><strong>Permanent Magnet Criteria:</strong> A good permanent magnet
+requires a material with a "wide hysteresis loop" (high coercive force)
+to maintain a high residual
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+field when the external magnetizing current is zero.</li>
+<li><strong>The Domain Constraint:</strong> Although microscopic theory
+predicts spontaneous magnetization below
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>T</mi><mi>c</mi></msub><annotation encoding="application/x-tex">T_c</annotation></semantics></math>,
+bulk materials may show zero net magnetization due to the formation of
+"domains"—small regions magnetized in different directions that cancel
+each other out on a macroscopic scale.</li>
+</ol>
+    </article>
+  </main>
+</body>
+</html>

@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Study Guide: Lorentz Transformations of the Fields - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="en">
+  <script>
+    (() => {
+      const key = "flp-reader-theme";
+      const applyTheme = (theme) => {
+        const next = theme === "dark" ? "dark" : "light";
+        document.documentElement.dataset.theme = next;
+        document.body.dataset.theme = next;
+        try { localStorage.setItem(key, next); } catch (_) {}
+      };
+      try { applyTheme(localStorage.getItem(key) || "light"); } catch (_) { applyTheme("light"); }
+      document.addEventListener("click", (event) => {
+        const button = event.target.closest('[data-report-action="theme"]');
+        if (!button) return;
+        applyTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark");
+      });
+    })();
+  </script>
+<main class="notebooklm-report-shell">
+    <header aria-label="Quick navigation" class="reader-toolbar report-toolbar">
+      <div class="toolbar-group toolbar-navigation">
+        <a class="toolbar-btn" href="../ch26.html">Back to chapter</a>
+        <a class="toolbar-btn" href="../../../../feynman-reader/index.html">Reader</a>
+        <a class="toolbar-btn" href="../../index.html">Contents</a>
+      </div>
+      <a class="toolbar-title" href="../ch26.html#ch26" title="NotebookLM · Guide">NotebookLM · Guide</a>
+      <div class="toolbar-group toolbar-settings">
+        <button aria-label="Toggle theme" class="toolbar-btn icon-btn" data-report-action="theme" title="Toggle theme" type="button">◐</button>
+      </div>
+    </header>
+    <article class="notebooklm-report">
+<h1 id="study-guide-lorentz-transformations-of-the-fields">Study Guide:
+Lorentz Transformations of the Fields</h1>
+<p>This study guide explores the relativistic nature of electromagnetic
+fields, detailing how electric and magnetic fields transform between
+inertial frames and how they are unified within the framework of
+four-dimensional space-time.</p>
+<hr />
+<h2 id="i-key-concepts">I. Key Concepts</h2>
+<h3 id="1-the-four-potential-of-a-moving-charge">1. The Four-Potential
+of a Moving Charge</h3>
+<p>The electromagnetic potential is a four-vector
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mi>μ</mi></msub><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mi>ϕ</mi><mo>,</mo><mi mathvariant="bold-italic">𝑨</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">A_\mu = (\phi, \mathbf{A})</annotation></semantics></math>,
+where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>
+is the scalar potential and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>
+is the vector potential. For a point charge moving at a constant
+velocity
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>v</mi><annotation encoding="application/x-tex">v</annotation></semantics></math>,
+the potentials at any point
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(x, y, z)</annotation></semantics></math>
+at time
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math>
+can be expressed in terms of its "present" position. However, the
+physical influence originates from the "retarded" position
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>P</mi><mo>′</mo></msup><annotation encoding="application/x-tex">P&#39;</annotation></semantics></math>
+(where the charge was at time
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>t</mi><mo>′</mo></msup><mo>=</mo><mi>t</mi><mo>−</mo><msup><mi>r</mi><mo>′</mo></msup><mi>/</mi><mi>c</mi></mrow><annotation encoding="application/x-tex">t&#39; = t - r&#39;/c</annotation></semantics></math>).</p>
+<p>For a charge moving in an arbitrary trajectory, the potentials are
+determined by:</p>
+<ul>
+<li>The position and velocity at the <strong>retarded
+time</strong>.</li>
+<li>The "projected position"
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>P</mi><mtext mathvariant="normal">proj</mtext></msub><annotation encoding="application/x-tex">P_{\text{proj}}</annotation></semantics></math>):
+an imaginary location where the charge would be if it had continued at
+its retarded velocity
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>v</mi><mo>′</mo></msup><annotation encoding="application/x-tex">v&#39;</annotation></semantics></math>
+during the delay time
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo>−</mo><msup><mi>t</mi><mo>′</mo></msup><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(t - t&#39;)</annotation></semantics></math>.</li>
+</ul>
+<h3 id="2-fields-of-a-charge-with-constant-velocity">2. Fields of a
+Charge with Constant Velocity</h3>
+<p>While potentials depend on velocity and position, the actual electric
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>)
+and magnetic
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>)
+fields depend on acceleration as well. For a charge moving at a
+<strong>constant velocity</strong>:</p>
+<ul>
+<li><strong>Electric Field
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>):</strong>
+Remarkably, the electric field lines point radially from the "present"
+position of the charge, not the retarded one.</li>
+<li><strong>Field Deformation:</strong> The field is not isotropic. It
+is compressed in the direction of motion (Lorentz contraction). The
+field strength is reduced ahead and behind the charge by a factor of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><msup><mi>v</mi><mn>2</mn></msup><mi>/</mi><msup><mi>c</mi><mn>2</mn></msup><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(1 - v^2/c^2)</annotation></semantics></math>
+and increased in the transverse (sidewise) direction by
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mi>v</mi><mn>2</mn></msup><mi>/</mi><msup><mi>c</mi><mn>2</mn></msup></mrow></msqrt></mrow><annotation encoding="application/x-tex">1/\sqrt{1 - v^2/c^2}</annotation></semantics></math>.</li>
+<li><strong>Magnetic Field
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>):</strong>
+The magnetic field is given by
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑩</mi><mo>=</mo><mo stretchy="false" form="prefix">(</mo><mi mathvariant="bold-italic">𝒗</mi><mo>×</mo><mi mathvariant="bold-italic">𝑬</mi><mo stretchy="false" form="postfix">)</mo><mi>/</mi><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\mathbf{B} = (\mathbf{v} \times \mathbf{E})/c^2</annotation></semantics></math>.
+It circles around the line of motion.</li>
+</ul>
+<h3 id="3-the-electromagnetic-field-tensor-f_munu">3. The
+Electromagnetic Field Tensor
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>F</mi><mrow><mi>μ</mi><mi>ν</mi></mrow></msub><annotation encoding="application/x-tex">F_{\mu\nu}</annotation></semantics></math>)</h3>
+<p>Electric and magnetic fields do not transform as four-vectors.
+Instead, they are components of a second-rank antisymmetric tensor in
+four dimensions, denoted as
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>F</mi><mrow><mi>μ</mi><mi>ν</mi></mrow></msub><annotation encoding="application/x-tex">F_{\mu\nu}</annotation></semantics></math>.</p>
+<ul>
+<li>This "six-component object" unifies
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>.</li>
+<li>The tensor is defined by the four-gradient of the four-potential:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>F</mi><mrow><mi>μ</mi><mi>ν</mi></mrow></msub><mo>=</mo><msub><mi>∇</mi><mi>μ</mi></msub><msub><mi>A</mi><mi>ν</mi></msub><mo>−</mo><msub><mi>∇</mi><mi>ν</mi></msub><msub><mi>A</mi><mi>μ</mi></msub></mrow><annotation encoding="application/x-tex">F_{\mu\nu} = \nabla_\mu A_\nu - \nabla_\nu A_\mu</annotation></semantics></math>.</li>
+<li>There are six independent terms: three for
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>
+and three for
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>.</li>
+</ul>
+<h3 id="4-relativistic-transformations">4. Relativistic
+Transformations</h3>
+<p>When moving from a rest frame
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>S</mi><annotation encoding="application/x-tex">S</annotation></semantics></math>)
+to a moving frame
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>S</mi><mo>′</mo></msup><annotation encoding="application/x-tex">S&#39;</annotation></semantics></math>),
+the fields transform according to the relative velocity
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>v</mi><annotation encoding="application/x-tex">v</annotation></semantics></math>.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Component</th>
+<th style="text-align: left;">Transformation Equation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Parallel Electric</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>E</mi><mo>∥</mo><mo>′</mo></msubsup><mo>=</mo><msub><mi>E</mi><mo>∥</mo></msub></mrow><annotation encoding="application/x-tex">E_\parallel&#39; = E_\parallel</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Perpendicular
+Electric</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>E</mi><mo>⟂</mo><mo>′</mo></msubsup><mo>=</mo><mfrac><mrow><mo stretchy="false" form="prefix">(</mo><mi mathvariant="bold-italic">𝑬</mi><mo>+</mo><mi mathvariant="bold-italic">𝒗</mi><mo>×</mo><mi mathvariant="bold-italic">𝑩</mi><msub><mo stretchy="false" form="postfix">)</mo><mo>⟂</mo></msub></mrow><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mi>v</mi><mn>2</mn></msup><mi>/</mi><msup><mi>c</mi><mn>2</mn></msup></mrow></msqrt></mfrac></mrow><annotation encoding="application/x-tex">E_\perp&#39; = \frac{(\mathbf{E} + \mathbf{v} \times \mathbf{B})_\perp}{\sqrt{1 - v^2/c^2}}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Parallel Magnetic</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>B</mi><mo>∥</mo><mo>′</mo></msubsup><mo>=</mo><msub><mi>B</mi><mo>∥</mo></msub></mrow><annotation encoding="application/x-tex">B_\parallel&#39; = B_\parallel</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Perpendicular
+Magnetic</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>B</mi><mo>⟂</mo><mo>′</mo></msubsup><mo>=</mo><mfrac><mrow><mo stretchy="false" form="prefix">(</mo><mi mathvariant="bold-italic">𝑩</mi><mo>−</mo><mfrac><mrow><mi mathvariant="bold-italic">𝒗</mi><mo>×</mo><mi mathvariant="bold-italic">𝑬</mi></mrow><msup><mi>c</mi><mn>2</mn></msup></mfrac><msub><mo stretchy="false" form="postfix">)</mo><mo>⟂</mo></msub></mrow><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mi>v</mi><mn>2</mn></msup><mi>/</mi><msup><mi>c</mi><mn>2</mn></msup></mrow></msqrt></mfrac></mrow><annotation encoding="application/x-tex">B_\perp&#39; = \frac{(\mathbf{B} - \frac{\mathbf{v} \times \mathbf{E}}{c^2})_\perp}{\sqrt{1 - v^2/c^2}}</annotation></semantics></math></td>
+</tr>
+</tbody>
+</table>
+<h3 id="5-relativistic-equation-of-motion">5. Relativistic Equation of
+Motion</h3>
+<p>The correct law of motion for a charge
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>q</mi><annotation encoding="application/x-tex">q</annotation></semantics></math>
+in any velocity is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi>d</mi><mi mathvariant="bold-italic">𝒑</mi></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mi mathvariant="bold-italic">𝑭</mi></mrow><annotation encoding="application/x-tex">\frac{d\mathbf{p}}{dt} = \mathbf{F}</annotation></semantics></math>,
+where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝒑</mi><mo>=</mo><mfrac><mrow><msub><mi>m</mi><mn>0</mn></msub><mi mathvariant="bold-italic">𝒗</mi></mrow><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mi>v</mi><mn>2</mn></msup><mi>/</mi><msup><mi>c</mi><mn>2</mn></msup></mrow></msqrt></mfrac></mrow><annotation encoding="application/x-tex">\mathbf{p} = \frac{m_0\mathbf{v}}{\sqrt{1 - v^2/c^2}}</annotation></semantics></math>.
+In four-vector notation, this is expressed using the
+<strong>four-force</strong>
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mi>μ</mi></msub><annotation encoding="application/x-tex">f_\mu</annotation></semantics></math>)
+and <strong>proper time</strong>
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math>):
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>m</mi><mn>0</mn></msub><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><msub><mi>x</mi><mi>μ</mi></msub></mrow><mrow><mi>d</mi><msup><mi>s</mi><mn>2</mn></msup></mrow></mfrac><mo>=</mo><msub><mi>f</mi><mi>μ</mi></msub><mo>=</mo><mi>q</mi><msub><mi>u</mi><mi>ν</mi></msub><msub><mi>F</mi><mrow><mi>μ</mi><mi>ν</mi></mrow></msub></mrow><annotation encoding="application/x-tex">m_0 \frac{d^2x_\mu}{ds^2} = f_\mu = q u_\nu F_{\mu\nu}</annotation></semantics></math>
+Where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>u</mi><mi>ν</mi></msub><annotation encoding="application/x-tex">u_\nu</annotation></semantics></math>
+is the four-velocity.</p>
+<hr />
+<h2 id="ii-common-misconceptions">II. Common Misconceptions</h2>
+<ul>
+<li><strong>"Electrodynamics can be deduced solely from Coulomb’s Law
+and Lorentz Transformations":</strong> This is false. To reconstruct
+electrodynamics, one must also assume that potentials form a
+four-vector, that they depend only on the retarded position/velocity,
+and that they do not depend on acceleration (though fields do).</li>
+<li><strong>"Field lines are real physical entities":</strong> Field
+lines are a visualization tool. While they appear to undergo Lorentz
+contraction like physical objects, this model fails in complex
+scenarios, such as when a moving magnet generates new electric fields
+that disrupt the "moving picture" of the lines.</li>
+<li><strong>"Action equals reaction in all cases":</strong> In
+relativistic electrodynamics, the forces between two moving charges are
+not always equal and opposite. For instance, if two charges move at
+right angles, one may experience a magnetic force while the other does
+not, appearing to violate Newton’s third law.</li>
+</ul>
+<hr />
+<h2 id="iii-self-check-questions">III. Self-Check Questions</h2>
+<ol type="1">
+<li><strong>Why do we use the "projected position" when calculating
+potentials for a charge in arbitrary motion?</strong></li>
+<li><strong>How does the strength of the electric field at the sides of
+a moving charge compare to a charge at rest?</strong></li>
+<li><strong>What happens to the components of the electric and magnetic
+fields that are parallel to the direction of motion during a Lorentz
+transformation?</strong></li>
+<li><strong>If you are moving through a pure static magnetic field, what
+kind of field do you perceive in your moving frame?</strong></li>
+<li><strong>Why is the factor
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mi>v</mi><mn>2</mn></msup><mi>/</mi><msup><mi>c</mi><mn>2</mn></msup></mrow></msqrt></mrow><annotation encoding="application/x-tex">1/\sqrt{1 - v^2/c^2}</annotation></semantics></math>
+required when taking the time derivative of a four-vector to ensure the
+result is also a four-vector?</strong></li>
+<li><strong>What is the physical significance of "proper time"
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math>)?</strong></li>
+</ol>
+<hr />
+<h2 id="iv-essay-prompts-for-deeper-exploration">IV. Essay Prompts for
+Deeper Exploration</h2>
+<ol type="1">
+<li><strong>The Unity of Fields:</strong> Discuss how the transition
+from three-dimensional vectors
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>)
+to the four-dimensional antisymmetric tensor
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>F</mi><mrow><mi>μ</mi><mi>ν</mi></mrow></msub><annotation encoding="application/x-tex">F_{\mu\nu}</annotation></semantics></math>)
+simplifies the laws of electrodynamics. How does this unification
+reflect the principles of relativity?</li>
+<li><strong>The Violation of Action-Reaction:</strong> Analyze the
+scenario of two charges moving at right angles. Explain why the magnetic
+forces are not equal and opposite and discuss the implications for the
+conservation of momentum in the field.</li>
+<li><strong>The Limits of Deduction:</strong> Critically examine the
+"desert island" claim that electrodynamics can be reconstructed from
+three basic facts. What are the specific "implied assumptions" Feynman
+warns about, and why are they necessary?</li>
+</ol>
+<hr />
+<h2 id="v-glossary-of-important-terms">V. Glossary of Important
+Terms</h2>
+<ul>
+<li><strong>Antisymmetric Tensor:</strong> A multi-dimensional object
+where swapping two indices changes the sign (e.g.,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>F</mi><mrow><mi>μ</mi><mi>ν</mi></mrow></msub><mo>=</mo><mi>−</mi><msub><mi>F</mi><mrow><mi>ν</mi><mi>μ</mi></mrow></msub></mrow><annotation encoding="application/x-tex">F_{\mu\nu} = -F_{\nu\mu}</annotation></semantics></math>).
+In this context, it represents the unified electromagnetic field.</li>
+<li><strong>Four-Force
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mi>μ</mi></msub><annotation encoding="application/x-tex">f_\mu</annotation></semantics></math>):</strong>
+The extension of force into four-dimensional space, defined as
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>1</mn><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mi>v</mi><mn>2</mn></msup><mi>/</mi><msup><mi>c</mi><mn>2</mn></msup></mrow></msqrt></mfrac><mfrac><mrow><mi>d</mi><msub><mi>p</mi><mi>μ</mi></msub></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{1}{\sqrt{1-v^2/c^2}} \frac{dp_\mu}{dt}</annotation></semantics></math>.</li>
+<li><strong>Four-Potential
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>A</mi><mi>μ</mi></msub><annotation encoding="application/x-tex">A_\mu</annotation></semantics></math>):</strong>
+A four-vector combining the scalar potential
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>)
+and the vector potential
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>).</li>
+<li><strong>Four-Velocity
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>u</mi><mi>μ</mi></msub><annotation encoding="application/x-tex">u_\mu</annotation></semantics></math>):</strong>
+A four-vector representing the rate of change of position with respect
+to proper time.</li>
+<li><strong>Proper Time
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math>):</strong>
+The time interval measured by a clock moving along the same trajectory
+as the particle; it is a Lorentz invariant.</li>
+<li><strong>Retarded Position
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>P</mi><mo>′</mo></msup><annotation encoding="application/x-tex">P&#39;</annotation></semantics></math>):</strong>
+The location of a charge at the specific time in the past when the
+electromagnetic influence currently felt at a distance was first
+emitted.</li>
+<li><strong>Second Rank Tensor:</strong> An object described by two
+indices (like
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>T</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><annotation encoding="application/x-tex">T_{ij}</annotation></semantics></math>
+or
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>F</mi><mrow><mi>μ</mi><mi>ν</mi></mrow></msub><annotation encoding="application/x-tex">F_{\mu\nu}</annotation></semantics></math>)
+that transforms according to specific rules under rotation or Lorentz
+transformation.</li>
+</ul>
+    </article>
+  </main>
+</body>
+</html>

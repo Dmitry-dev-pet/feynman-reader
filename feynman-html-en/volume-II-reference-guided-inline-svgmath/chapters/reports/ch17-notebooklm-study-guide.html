@@ -1,0 +1,286 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Study Guide: The Laws of Induction - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="en">
+  <script>
+    (() => {
+      const key = "flp-reader-theme";
+      const applyTheme = (theme) => {
+        const next = theme === "dark" ? "dark" : "light";
+        document.documentElement.dataset.theme = next;
+        document.body.dataset.theme = next;
+        try { localStorage.setItem(key, next); } catch (_) {}
+      };
+      try { applyTheme(localStorage.getItem(key) || "light"); } catch (_) { applyTheme("light"); }
+      document.addEventListener("click", (event) => {
+        const button = event.target.closest('[data-report-action="theme"]');
+        if (!button) return;
+        applyTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark");
+      });
+    })();
+  </script>
+<main class="notebooklm-report-shell">
+    <header aria-label="Quick navigation" class="reader-toolbar report-toolbar">
+      <div class="toolbar-group toolbar-navigation">
+        <a class="toolbar-btn" href="../ch17.html">Back to chapter</a>
+        <a class="toolbar-btn" href="../../../../feynman-reader/index.html">Reader</a>
+        <a class="toolbar-btn" href="../../index.html">Contents</a>
+      </div>
+      <a class="toolbar-title" href="../ch17.html#ch17" title="NotebookLM · Guide">NotebookLM · Guide</a>
+      <div class="toolbar-group toolbar-settings">
+        <button aria-label="Toggle theme" class="toolbar-btn icon-btn" data-report-action="theme" title="Toggle theme" type="button">◐</button>
+      </div>
+    </header>
+    <article class="notebooklm-report">
+<h1 id="study-guide-the-laws-of-induction">Study Guide: The Laws of
+Induction</h1>
+<p>This study guide covers the fundamental principles of electromagnetic
+induction, the dual nature of the "flux rule," the mechanics of particle
+acceleration via induced fields, and the concepts of mutual and
+self-inductance.</p>
+<hr />
+<h2 id="i-key-concepts">I. Key Concepts</h2>
+<h3 id="1-the-definition-of-electromotive-force-emf">1. The Definition
+of Electromotive Force (emf)</h3>
+<p>In a conducting circuit, the <strong>emf</strong> is defined as the
+total accumulated force on the charges throughout the length of the
+loop. Specifically, it is the tangential component of the force per unit
+charge, integrated once around the circuit. This is equivalent to the
+total work done on a single charge traveling once around the loop.</p>
+<h3 id="2-the-two-origins-of-the-flux-rule">2. The Two Origins of the
+Flux Rule</h3>
+<p>The "flux rule" states that the emf in a circuit is equal to the rate
+of change of the magnetic flux through that circuit
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">emf</mtext><mo>=</mo><mi>−</mi><mi>d</mi><mi mathvariant="normal">Φ</mi><mi>/</mi><mi>d</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">\text{emf} = -d\Phi/dt</annotation></semantics></math>).
+However, this single rule is actually the result of two distinct
+physical phenomena:</p>
+<ul>
+<li><strong>Motional emf
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝒗</mi><mo>×</mo><mi mathvariant="bold-italic">𝑩</mi></mrow><annotation encoding="application/x-tex">\mathbf{v} \times \mathbf{B}</annotation></semantics></math>):</strong>
+When a circuit moves in a steady magnetic field, charges within the
+moving conductor experience a magnetic force.</li>
+<li><strong>Faraday’s Law
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∇</mi><mo>×</mo><mi mathvariant="bold-italic">𝑬</mi><mo>=</mo><mi>−</mi><mi>∂</mi><mi mathvariant="bold-italic">𝑩</mi><mi>/</mi><mi>∂</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">\nabla \times \mathbf{E} = -\partial \mathbf{B}/\partial t</annotation></semantics></math>):</strong>
+When a magnetic field changes with time, it generates an electric field.
+This electric field drives the charges in a stationary conductor.</li>
+</ul>
+<h3 id="3-exceptions-to-the-flux-rule">3. Exceptions to the Flux
+Rule</h3>
+<p>The flux rule is a "beautiful generalization" but is not a
+fundamental law. It fails in certain circumstances:</p>
+<ul>
+<li><strong>The Faraday Disc:</strong> A rotating conducting disc in a
+uniform magnetic field generates an emf even though the total flux
+through the circuit does not change.</li>
+<li><strong>Rocking Plates:</strong> In specific geometries where the
+material of the circuit changes (e.g., sliding contact points), the flux
+can change significantly without generating a corresponding emf.</li>
+<li><strong>Core Principle:</strong> When the flux rule fails or the
+material of the circuit is changing, one must return to the basic laws:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑭</mi><mo>=</mo><mi>q</mi><mo stretchy="false" form="prefix">(</mo><mi mathvariant="bold-italic">𝑬</mi><mo>+</mo><mi mathvariant="bold-italic">𝒗</mi><mo>×</mo><mi mathvariant="bold-italic">𝑩</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mathbf{F} = q(\mathbf{E} + \mathbf{v} \times \mathbf{B})</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∇</mi><mo>×</mo><mi mathvariant="bold-italic">𝑬</mi><mo>=</mo><mi>−</mi><mi>∂</mi><mi mathvariant="bold-italic">𝑩</mi><mi>/</mi><mi>∂</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">\nabla \times \mathbf{E} = -\partial \mathbf{B}/\partial t</annotation></semantics></math>.</li>
+</ul>
+<h3 id="4-the-betatron-principle">4. The Betatron Principle</h3>
+<p>A betatron is a machine that accelerates electrons using an induced
+electric field.</p>
+<ul>
+<li><strong>Acceleration:</strong> A changing magnetic field produces a
+tangential electric field that accelerates electrons in a circular
+path.</li>
+<li><strong>The 2-to-1 Rule:</strong> To maintain a circular orbit of
+constant radius, the average magnetic field inside the orbit
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><msub><mi>B</mi><mtext mathvariant="normal">av</mtext></msub></mrow><annotation encoding="application/x-tex">\Delta B_{\text{av}}</annotation></semantics></math>)
+must increase at exactly twice the rate of the magnetic field at the
+orbit itself
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><msub><mi>B</mi><mtext mathvariant="normal">orbit</mtext></msub></mrow><annotation encoding="application/x-tex">\Delta B_{\text{orbit}}</annotation></semantics></math>).</li>
+</ul>
+<h3 id="5-inductance-and-energy">5. Inductance and Energy</h3>
+<ul>
+<li><strong>Mutual Inductance
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>M</mi><annotation encoding="application/x-tex">M</annotation></semantics></math>):</strong>
+A geometric constant describing how a change in current in one coil
+induces an emf in another.
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>M</mi><mn>12</mn></msub><annotation encoding="application/x-tex">M_{12}</annotation></semantics></math>
+always equals
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>M</mi><mn>21</mn></msub><annotation encoding="application/x-tex">M_{21}</annotation></semantics></math>.</li>
+<li><strong>Self-Inductance
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>L</mi><annotation encoding="application/x-tex">L</annotation></semantics></math>):</strong>
+A property of a single coil where its own changing magnetic field
+induces a "back emf" that opposes the change in current.</li>
+<li><strong>Magnetic Energy:</strong> The energy stored in an inductor
+is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>L</mi><msup><mi>I</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">U = \frac{1}{2}LI^2</annotation></semantics></math>.
+This is analogous to kinetic energy
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>m</mi><msup><mi>v</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\frac{1}{2}mv^2</annotation></semantics></math>)
+in mechanical systems, where inductance corresponds to mass.</li>
+</ul>
+<hr />
+<h2 id="ii-common-misconceptions">II. Common Misconceptions</h2>
+<ul>
+<li><strong>Misconception: The flux rule is a single, fundamental
+law.</strong>
+<ul>
+<li><strong>Reality:</strong> The flux rule is a combination of two
+different physical effects
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝒗</mi><mo>×</mo><mi mathvariant="bold-italic">𝑩</mi></mrow><annotation encoding="application/x-tex">\mathbf{v} \times \mathbf{B}</annotation></semantics></math>
+forces and induced
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>
+fields). Physics offers no deeper underlying principle that unites these
+two cases into one, despite the simplicity of the flux rule.</li>
+</ul></li>
+<li><strong>Misconception: Induction requires a physical wire.</strong>
+<ul>
+<li><strong>Reality:</strong> Induced electric fields exist in free
+space regardless of whether a conductor is present. The line integral of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>
+around any imaginary closed curve is equal to the rate of change of the
+magnetic flux through that curve.</li>
+</ul></li>
+<li><strong>Misconception: Magnetic energy is different from the energy
+in the fields.</strong>
+<ul>
+<li><strong>Reality:</strong> The energy stored in an inductor
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>L</mi><msup><mi>I</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\frac{1}{2}LI^2</annotation></semantics></math>)
+is identical to the energy stored in the magnetic field itself,
+calculated as
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>=</mo><mfrac><mrow><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup></mrow><mn>2</mn></mfrac><mo>∫</mo><mi mathvariant="bold-italic">𝑩</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝑩</mi><mspace width="0.167em"></mspace><mi>d</mi><mi>V</mi></mrow><annotation encoding="application/x-tex">U = \frac{\epsilon_0 c^2}{2} \int \mathbf{B} \cdot \mathbf{B} \, dV</annotation></semantics></math>.</li>
+</ul></li>
+</ul>
+<hr />
+<h2 id="iii-short-answer-self-check-questions">III. Short-Answer
+Self-Check Questions</h2>
+<ol type="1">
+<li>What is the mathematical definition of emf in terms of work?</li>
+<li>State the differential form of Faraday’s Law.</li>
+<li>Why can the flux rule be applied to a stationary circuit in a
+changing magnetic field?</li>
+<li>In the betatron, why must the magnetic field at the orbit increase
+as the electron gains momentum?</li>
+<li>What is the relationship between the coefficient of coupling
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math>),
+mutual inductance
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>M</mi><annotation encoding="application/x-tex">M</annotation></semantics></math>),
+and self-inductances
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>L</mi><mn>1</mn></msub><mo>,</mo><msub><mi>L</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">L_1, L_2</annotation></semantics></math>)?</li>
+<li>How does the force produced by eddy currents relate to the velocity
+of the conductor and its resistance?</li>
+<li>Write the formula for the total energy of a system of two coils with
+currents
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>I</mi><mn>1</mn></msub><annotation encoding="application/x-tex">I_1</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>I</mi><mn>2</mn></msub><annotation encoding="application/x-tex">I_2</annotation></semantics></math>.</li>
+<li>Why is the formula for mutual inductance based on double line
+integrals
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>M</mi><mn>12</mn></msub><mo>∝</mo><mo>∮</mo><mo>∮</mo><mfrac><mrow><mi>d</mi><msub><mi mathvariant="bold-italic">𝒔</mi><mn>1</mn></msub><mo>⋅</mo><mi>d</mi><msub><mi mathvariant="bold-italic">𝒔</mi><mn>2</mn></msub></mrow><msub><mi>r</mi><mn>12</mn></msub></mfrac></mrow><annotation encoding="application/x-tex">M_{12} \propto \oint \oint \frac{d\mathbf{s}_1 \cdot d\mathbf{s}_2}{r_{12}}</annotation></semantics></math>)
+insufficient for calculating self-inductance?</li>
+</ol>
+<hr />
+<h2 id="iv-essay-questions-for-deeper-exploration">IV. Essay Questions
+for Deeper Exploration</h2>
+<ol type="1">
+<li><strong>The Dual Nature of Induction:</strong> Analyze why Feynman
+describes the flux rule as a "paradoxical" generalization. Explain the
+two separate physical laws that contribute to the rule and describe a
+scenario where one must be used instead of the rule itself.</li>
+<li><strong>Mechanical Analogies in Electromagnetism:</strong> Using the
+table of correspondences provided in the text, discuss how an inductive
+circuit behaves like a mechanical system with mass and velocity. How
+does the concept of "back emf" relate to inertia?</li>
+<li><strong>The Betatron Condition:</strong> Derive the requirement that
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><msub><mi>B</mi><mtext mathvariant="normal">av</mtext></msub><mo>=</mo><mn>2</mn><mi mathvariant="normal">Δ</mi><msub><mi>B</mi><mtext mathvariant="normal">orbit</mtext></msub></mrow><annotation encoding="application/x-tex">\Delta B_{\text{av}} = 2 \Delta B_{\text{orbit}}</annotation></semantics></math>
+for a betatron. Explain the physical consequences if the average field
+inside the orbit increased at the same rate as the field at the
+orbit.</li>
+<li><strong>Energy in Fields vs. Circuits:</strong> Compare the two
+methods for calculating magnetic energy—one using current and inductance
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mi>L</mi><msup><mi>I</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\frac{1}{2}LI^2</annotation></semantics></math>)
+and the other using the magnetic field
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>).
+Discuss why the field-based formula is considered more generally valid
+for dynamic fields.</li>
+</ol>
+<hr />
+<h2 id="v-glossary-of-important-terms">V. Glossary of Important
+Terms</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Term</th>
+<th style="text-align: left;">Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Alternating Voltage</strong></td>
+<td style="text-align: left;">A potential difference that varies
+sinusoidally with time, typically produced by a coil rotating in a
+uniform magnetic field.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Back emf</strong></td>
+<td style="text-align: left;">The self-induced emf in a coil that
+opposes the change in the current flowing through it.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Betatron</strong></td>
+<td style="text-align: left;">A device that uses a changing magnetic
+field to create an induced electric field for accelerating electrons to
+high energies in a circular orbit.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Coefficient of Coupling
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math>)</strong></td>
+<td style="text-align: left;">A measure of the proportion of flux
+linkage between two coils; its value ranges from 0 to 1.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Eddy Currents</strong></td>
+<td style="text-align: left;">Induced currents produced in the interior
+of a conductor moving through a magnetic field, often resulting in a
+damping force proportional to velocity.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Faraday’s Law</strong></td>
+<td style="text-align: left;">The law stating that a changing magnetic
+field generates an electric field, represented as
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∇</mi><mo>×</mo><mi mathvariant="bold-italic">𝑬</mi><mo>=</mo><mi>−</mi><mi>∂</mi><mi mathvariant="bold-italic">𝑩</mi><mi>/</mi><mi>∂</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">\nabla \times \mathbf{E} = -\partial \mathbf{B}/\partial t</annotation></semantics></math>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Flux Rule</strong></td>
+<td style="text-align: left;">The general principle that the emf induced
+in a circuit is equal to the negative rate of change of the magnetic
+flux linked by the circuit.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Mutual Inductance
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>M</mi><annotation encoding="application/x-tex">M</annotation></semantics></math>)</strong></td>
+<td style="text-align: left;">The constant of proportionality relating
+the emf induced in one coil to the rate of change of current in a nearby
+coil.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Self-Inductance
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>L</mi><annotation encoding="application/x-tex">L</annotation></semantics></math>)</strong></td>
+<td style="text-align: left;">The property of a conductor by which a
+change in current induces an electromotive force in the conductor
+itself.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Synchrotron
+Radiation</strong></td>
+<td style="text-align: left;">The electromagnetic energy radiated by
+charged particles (like electrons) when they are accelerated in
+high-energy machines.</td>
+</tr>
+</tbody>
+</table>
+    </article>
+  </main>
+</body>
+</html>

@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Study Guide: Chapter 10 – Dielectrics - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="en">
+  <script>
+    (() => {
+      const key = "flp-reader-theme";
+      const applyTheme = (theme) => {
+        const next = theme === "dark" ? "dark" : "light";
+        document.documentElement.dataset.theme = next;
+        document.body.dataset.theme = next;
+        try { localStorage.setItem(key, next); } catch (_) {}
+      };
+      try { applyTheme(localStorage.getItem(key) || "light"); } catch (_) { applyTheme("light"); }
+      document.addEventListener("click", (event) => {
+        const button = event.target.closest('[data-report-action="theme"]');
+        if (!button) return;
+        applyTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark");
+      });
+    })();
+  </script>
+<main class="notebooklm-report-shell">
+    <header aria-label="Quick navigation" class="reader-toolbar report-toolbar">
+      <div class="toolbar-group toolbar-navigation">
+        <a class="toolbar-btn" href="../ch10.html">Back to chapter</a>
+        <a class="toolbar-btn" href="../../../../feynman-reader/index.html">Reader</a>
+        <a class="toolbar-btn" href="../../index.html">Contents</a>
+      </div>
+      <a class="toolbar-title" href="../ch10.html#ch10" title="NotebookLM · Guide">NotebookLM · Guide</a>
+      <div class="toolbar-group toolbar-settings">
+        <button aria-label="Toggle theme" class="toolbar-btn icon-btn" data-report-action="theme" title="Toggle theme" type="button">◐</button>
+      </div>
+    </header>
+    <article class="notebooklm-report">
+<h1 id="study-guide-chapter-10--dielectrics">Study Guide: Chapter 10 –
+Dielectrics</h1>
+<p>This study guide covers the fundamental principles of dielectrics,
+exploring how insulating materials respond to electric fields, the
+mechanisms of atomic polarization, and the resulting effects on
+capacitance and electrostatic forces.</p>
+<hr />
+<h2 id="key-concepts">Key Concepts</h2>
+<h3 id="1-the-dielectric-constant-kappa">1. The Dielectric Constant
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>κ</mi><annotation encoding="application/x-tex">\kappa</annotation></semantics></math>)</h3>
+<p>Faraday discovered that placing an insulator (a dielectric) between
+the plates of a capacitor increases its capacitance. If the material
+fills the space completely, the capacitance increases by a factor of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>κ</mi><annotation encoding="application/x-tex">\kappa</annotation></semantics></math>,
+known as the <strong>dielectric constant</strong>.</p>
+<ul>
+<li><strong>Relationship:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo>=</mo><mfrac><mrow><mi>κ</mi><msub><mi>ϵ</mi><mn>0</mn></msub><mi>A</mi></mrow><mi>d</mi></mfrac></mrow><annotation encoding="application/x-tex">C = \frac{\kappa \epsilon_0 A}{d}</annotation></semantics></math>.</li>
+<li><strong>Physical Effect:</strong> For a fixed charge
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Q</mi><annotation encoding="application/x-tex">Q</annotation></semantics></math>,
+the presence of a dielectric reduces the electric field
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math>
+and the voltage
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math>
+between the plates.</li>
+</ul>
+<h3 id="2-the-mechanism-of-polarization">2. The Mechanism of
+Polarization</h3>
+<p>Dielectrics are insulators, meaning charges do not move freely.
+However, an external electric field induces <strong>dipole
+moments</strong> within the atoms or molecules.</p>
+<ul>
+<li><strong>Atomic Model:</strong> An electric field displaces the
+positive nucleus in one direction and the negative electron cloud in the
+other. This displacement
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>δ</mi><annotation encoding="application/x-tex">\delta</annotation></semantics></math>)
+creates a tiny dipole.</li>
+<li><strong>Polarization Vector
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑷</mi><annotation encoding="application/x-tex">\mathbf{P}</annotation></semantics></math>):</strong>
+Defined as the dipole moment per unit volume.
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑷</mi><mo>=</mo><mi>N</mi><mi>q</mi><mi mathvariant="bold-italic">𝜹</mi></mrow><annotation encoding="application/x-tex">\mathbf{P} = Nq\mathbf{\delta}</annotation></semantics></math>,
+where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>N</mi><annotation encoding="application/x-tex">N</annotation></semantics></math>
+is the number of atoms per unit volume.</li>
+<li><strong>Proportionality:</strong> In most materials (linear
+dielectrics), the polarization is proportional to the electric field:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑷</mi><mo>=</mo><mi>χ</mi><msub><mi>ϵ</mi><mn>0</mn></msub><mi mathvariant="bold-italic">𝑬</mi></mrow><annotation encoding="application/x-tex">\mathbf{P} = \chi \epsilon_0 \mathbf{E}</annotation></semantics></math>.</li>
+</ul>
+<h3 id="3-polarization-charges">3. Polarization Charges</h3>
+<p>The displacement of charges results in "polarization charges" (or
+bound charges) that appear on the surface or within the volume of the
+material.</p>
+<ul>
+<li><strong>Surface Polarization Charge
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>σ</mi><mrow><mi>p</mi><mi>o</mi><mi>l</mi></mrow></msub><annotation encoding="application/x-tex">\sigma_{pol}</annotation></semantics></math>):</strong>
+On the surface of a uniform dielectric slab,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>σ</mi><mrow><mi>p</mi><mi>o</mi><mi>l</mi></mrow></msub><mo>=</mo><mi>P</mi></mrow><annotation encoding="application/x-tex">\sigma_{pol} = P</annotation></semantics></math>.
+These charges oppose the free charges on the capacitor plates, reducing
+the net internal field.</li>
+<li><strong>Volume Polarization Charge
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ρ</mi><mrow><mi>p</mi><mi>o</mi><mi>l</mi></mrow></msub><annotation encoding="application/x-tex">\rho_{pol}</annotation></semantics></math>):</strong>
+If the polarization is non-uniform, a net charge density can accumulate
+within the body of the material, defined by
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ρ</mi><mrow><mi>p</mi><mi>o</mi><mi>l</mi></mrow></msub><mo>=</mo><mi>−</mi><mrow><mtext mathvariant="normal">div </mtext><mspace width="0.333em"></mspace></mrow><mi mathvariant="bold-italic">𝑷</mi></mrow><annotation encoding="application/x-tex">\rho_{pol} = -\text{div } \mathbf{P}</annotation></semantics></math>.</li>
+</ul>
+<h3 id="4-the-displacement-vector-mathbfd">4. The Displacement Vector
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑫</mi><annotation encoding="application/x-tex">\mathbf{D}</annotation></semantics></math>)</h3>
+<p>To simplify calculations where only the "free" charges
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ρ</mi><mrow><mi>f</mi><mi>r</mi><mi>e</mi><mi>e</mi></mrow></msub><annotation encoding="application/x-tex">\rho_{free}</annotation></semantics></math>)
+are known, a new vector
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑫</mi><annotation encoding="application/x-tex">\mathbf{D}</annotation></semantics></math>
+is used:</p>
+<ul>
+<li><strong>Definition:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑫</mi><mo>=</mo><msub><mi>ϵ</mi><mn>0</mn></msub><mi mathvariant="bold-italic">𝑬</mi><mo>+</mo><mi mathvariant="bold-italic">𝑷</mi></mrow><annotation encoding="application/x-tex">\mathbf{D} = \epsilon_0 \mathbf{E} + \mathbf{P}</annotation></semantics></math>.</li>
+<li><strong>Gauss' Law in Dielectrics:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mtext mathvariant="normal">div </mtext><mspace width="0.333em"></mspace></mrow><mi mathvariant="bold-italic">𝑫</mi><mo>=</mo><msub><mi>ρ</mi><mrow><mi>f</mi><mi>r</mi><mi>e</mi><mi>e</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\text{div } \mathbf{D} = \rho_{free}</annotation></semantics></math>.</li>
+<li><strong>Permittivity:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑫</mi><mo>=</mo><mi>ϵ</mi><mi mathvariant="bold-italic">𝑬</mi></mrow><annotation encoding="application/x-tex">\mathbf{D} = \epsilon \mathbf{E}</annotation></semantics></math>,
+where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ϵ</mi><mo>=</mo><mi>κ</mi><msub><mi>ϵ</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">\epsilon = \kappa \epsilon_0</annotation></semantics></math>
+is the permittivity of the material.</li>
+</ul>
+<h3 id="5-forces-on-dielectrics">5. Forces on Dielectrics</h3>
+<ul>
+<li><strong>Uniform Fields:</strong> A neutral dielectric in a perfectly
+uniform field (like inside an infinite parallel-plate capacitor)
+experiences no net force.</li>
+<li><strong>Non-uniform Fields:</strong> Dielectrics are drawn toward
+regions of <strong>higher field strength</strong>. This explains why a
+charged comb attracts neutral pieces of paper.</li>
+<li><strong>Energy Conservation:</strong> Forces on dielectrics can be
+calculated by analyzing the change in stored electrostatic energy
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>U</mi><annotation encoding="application/x-tex">U</annotation></semantics></math>)
+as the dielectric moves.</li>
+</ul>
+<hr />
+<h2 id="common-misconceptions">Common Misconceptions</h2>
+<ul>
+<li><strong>"Polarization charges can be bled off like free
+charges."</strong>
+<ul>
+<li><strong>Reality:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>σ</mi><mrow><mi>p</mi><mi>o</mi><mi>l</mi></mrow></msub><annotation encoding="application/x-tex">\sigma_{pol}</annotation></semantics></math>
+is bound to the material. If you discharge a capacitor, the polarization
+charge does not flow down the wire; it disappears because the internal
+dipoles relax once the external field is removed.</li>
+</ul></li>
+<li><strong>"The force law
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>=</mo><mfrac><mrow><msub><mi>q</mi><mn>1</mn></msub><msub><mi>q</mi><mn>2</mn></msub></mrow><mrow><mn>4</mn><mi>π</mi><msub><mi>ϵ</mi><mn>0</mn></msub><mi>κ</mi><msup><mi>r</mi><mn>2</mn></msup></mrow></mfrac></mrow><annotation encoding="application/x-tex">F = \frac{q_1q_2}{4\pi\epsilon_0\kappa r^2}</annotation></semantics></math>
+is a fundamental law of nature."</strong>
+<ul>
+<li><strong>Reality:</strong> This is only an approximation that holds
+true for charges embedded in a broad, homogeneous liquid dielectric. It
+is not a fundamental law and does not apply accurately to solids.</li>
+</ul></li>
+<li><strong>"A dielectric is attracted to a capacitor because it is
+oppositely charged."</strong>
+<ul>
+<li><strong>Reality:</strong> The dielectric is initially neutral. It is
+attracted because the non-uniform "fringe" fields at the edges of the
+capacitor plates act on the induced dipoles, pulling the material into
+the region of higher field density.</li>
+</ul></li>
+</ul>
+<hr />
+<h2 id="self-check-short-answer-questions">Self-Check: Short-Answer
+Questions</h2>
+<ol type="1">
+<li><strong>How does the dielectric constant
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>κ</mi><annotation encoding="application/x-tex">\kappa</annotation></semantics></math>
+relate to electric susceptibility
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>χ</mi><annotation encoding="application/x-tex">\chi</annotation></semantics></math>?</strong>
+<ul>
+<li><em>Answer:</em>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>κ</mi><mo>=</mo><mn>1</mn><mo>+</mo><mi>χ</mi></mrow><annotation encoding="application/x-tex">\kappa = 1 + \chi</annotation></semantics></math>.</li>
+</ul></li>
+<li><strong>What happens to the electric field inside a capacitor if a
+dielectric is inserted while the charge on the plates remains
+constant?</strong>
+<ul>
+<li><em>Answer:</em> The electric field is reduced by a factor of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mi>κ</mi></mrow><annotation encoding="application/x-tex">1/\kappa</annotation></semantics></math>.</li>
+</ul></li>
+<li><strong>Why is the volume charge density
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ρ</mi><mrow><mi>p</mi><mi>o</mi><mi>l</mi></mrow></msub><annotation encoding="application/x-tex">\rho_{pol}</annotation></semantics></math>
+equal to zero in a material with uniform polarization?</strong>
+<ul>
+<li><em>Answer:</em> If
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑷</mi><annotation encoding="application/x-tex">\mathbf{P}</annotation></semantics></math>
+is uniform, its divergence
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mtext mathvariant="normal">div </mtext><mspace width="0.333em"></mspace></mrow><mi mathvariant="bold-italic">𝑷</mi></mrow><annotation encoding="application/x-tex">\text{div } \mathbf{P}</annotation></semantics></math>)
+is zero; as much charge enters any small volume element as leaves
+it.</li>
+</ul></li>
+<li><strong>In the context of dielectrics, what does
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ρ</mi><mrow><mi>f</mi><mi>r</mi><mi>e</mi><mi>e</mi></mrow></msub><annotation encoding="application/x-tex">\rho_{free}</annotation></semantics></math>
+represent?</strong>
+<ul>
+<li><em>Answer:</em> It represents the charges we can control and place,
+such as the charges on conduction plates or wires, as opposed to the
+bound polarization charges.</li>
+</ul></li>
+<li><strong>What physical property determined by the "ease with which
+electrons are displaced" defines the constant of proportionality between
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑷</mi><annotation encoding="application/x-tex">\mathbf{P}</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>?</strong>
+<ul>
+<li><em>Answer:</em> The electric susceptibility
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>χ</mi><annotation encoding="application/x-tex">\chi</annotation></semantics></math>).</li>
+</ul></li>
+</ol>
+<hr />
+<h2 id="essay-prompts-for-deeper-exploration">Essay Prompts for Deeper
+Exploration</h2>
+<ol type="1">
+<li><strong>The Evolution of Dielectric Models:</strong> Compare the
+early model of "conducting spheres in an insulator" with the modern
+atomic model of dipoles. Why was the sphere model eventually superseded,
+and what does the modern model tell us about the proportionality of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑷</mi><annotation encoding="application/x-tex">\mathbf{P}</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>?</li>
+<li><strong>Energy and Forces:</strong> Explain how the principle of
+virtual work and the conservation of energy can be used to calculate the
+force on a dielectric slab partially inserted into a capacitor. Why is
+this method often preferable to calculating the force directly from the
+electric fields?</li>
+<li><strong>The Limitations of Phenomenological Constants:</strong>
+Discuss why equations like
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑫</mi><mo>=</mo><mi>ϵ</mi><mi mathvariant="bold-italic">𝑬</mi></mrow><annotation encoding="application/x-tex">\mathbf{D} = \epsilon \mathbf{E}</annotation></semantics></math>
+are considered approximations rather than fundamental laws. In what
+circumstances might these approximations fail?</li>
+<li><strong>Non-Uniform Fields and Neutral Matter:</strong> Analyze the
+mechanics behind a charged object picking up neutral scraps of paper.
+Detail the role of the field gradient and the induced dipole moment in
+this interaction.</li>
+</ol>
+<hr />
+<h2 id="concise-glossary">Concise Glossary</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Term</th>
+<th style="text-align: left;">Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Capacitance
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math>)</strong></td>
+<td style="text-align: left;">The ratio of the free charge on a
+conductor to the potential difference between it and another conductor
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Q</mi><mi>/</mi><mi>V</mi></mrow><annotation encoding="application/x-tex">Q/V</annotation></semantics></math>).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Dielectric</strong></td>
+<td style="text-align: left;">An insulating material that can be
+polarized by an electric field.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Dielectric Constant
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>κ</mi><annotation encoding="application/x-tex">\kappa</annotation></semantics></math>)</strong></td>
+<td style="text-align: left;">The factor by which the capacitance of a
+capacitor is increased when the space between the plates is filled with
+a specific dielectric.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Dipole Moment</strong></td>
+<td style="text-align: left;">A measure of the separation of positive
+and negative charges; in an atom, it is the product of the charge and
+the displacement
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi><mi>δ</mi></mrow><annotation encoding="application/x-tex">q\delta</annotation></semantics></math>).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Electric Susceptibility
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>χ</mi><annotation encoding="application/x-tex">\chi</annotation></semantics></math>)</strong></td>
+<td style="text-align: left;">A dimensionless constant that indicates
+the degree of polarization of a dielectric material in response to an
+electric field.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Permittivity
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϵ</mi><annotation encoding="application/x-tex">\epsilon</annotation></semantics></math>)</strong></td>
+<td style="text-align: left;">A measure of a material's ability to
+resist an electric field; defined as
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ϵ</mi><mo>=</mo><mi>κ</mi><msub><mi>ϵ</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">\epsilon = \kappa\epsilon_0</annotation></semantics></math>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Polarization Vector
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑷</mi><annotation encoding="application/x-tex">\mathbf{P}</annotation></semantics></math>)</strong></td>
+<td style="text-align: left;">The net dipole moment per unit volume of a
+dielectric material.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Vector
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑫</mi><annotation encoding="application/x-tex">\mathbf{D}</annotation></semantics></math></strong></td>
+<td style="text-align: left;">The electric displacement field, defined
+to account for free charges independently of the specific polarization
+of the medium.</td>
+</tr>
+</tbody>
+</table>
+    </article>
+  </main>
+</body>
+</html>

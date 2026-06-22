@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Analysis of the Vector Potential in Magnetostatics and Quantum Mechanics - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="en">
+  <script>
+    (() => {
+      const key = "flp-reader-theme";
+      const applyTheme = (theme) => {
+        const next = theme === "dark" ? "dark" : "light";
+        document.documentElement.dataset.theme = next;
+        document.body.dataset.theme = next;
+        try { localStorage.setItem(key, next); } catch (_) {}
+      };
+      try { applyTheme(localStorage.getItem(key) || "light"); } catch (_) { applyTheme("light"); }
+      document.addEventListener("click", (event) => {
+        const button = event.target.closest('[data-report-action="theme"]');
+        if (!button) return;
+        applyTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark");
+      });
+    })();
+  </script>
+<main class="notebooklm-report-shell">
+    <header aria-label="Quick navigation" class="reader-toolbar report-toolbar">
+      <div class="toolbar-group toolbar-navigation">
+        <a class="toolbar-btn" href="../ch15.html">Back to chapter</a>
+        <a class="toolbar-btn" href="../../../../feynman-reader/index.html">Reader</a>
+        <a class="toolbar-btn" href="../../index.html">Contents</a>
+      </div>
+      <a class="toolbar-title" href="../ch15.html#ch15" title="NotebookLM · Overview">NotebookLM · Overview</a>
+      <div class="toolbar-group toolbar-settings">
+        <button aria-label="Toggle theme" class="toolbar-btn icon-btn" data-report-action="theme" title="Toggle theme" type="button">◐</button>
+      </div>
+    </header>
+    <article class="notebooklm-report">
+<h1
+id="analysis-of-the-vector-potential-in-magnetostatics-and-quantum-mechanics">Analysis
+of the Vector Potential in Magnetostatics and Quantum Mechanics</h1>
+<p>This briefing document provides a comprehensive analysis of the
+physical significance, mathematical application, and quantum-mechanical
+reality of the vector potential
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>),
+as outlined in the provided source material. It examines the transition
+from classical forces on current loops to the fundamental role of
+potentials in modern physics.</p>
+<h2 id="executive-summary">Executive Summary</h2>
+<p>The analysis of the vector potential begins with the study of forces
+and energy associated with magnetic dipoles and steady currents. While
+classical mechanics often treats the magnetic field
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>)
+as the primary physical reality due to its role in the Lorentz force,
+the source context demonstrates that the vector potential
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>)
+is more than a mathematical convenience. In magnetostatics,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>
+is deeply related to the energy of current distributions. In quantum
+mechanics, the vector potential becomes the "real" field, directly
+influencing the phase of electron probability amplitudes even in regions
+where the magnetic field is zero. The document concludes by
+differentiating between static approximations and the universal laws of
+electrodynamics.</p>
+<hr />
+<h2 id="analysis-of-key-themes">Analysis of Key Themes</h2>
+<h3 id="1-forces-and-energy-of-magnetic-dipoles">1. Forces and Energy of
+Magnetic Dipoles</h3>
+<p>A current loop placed in a magnetic field experiences a torque but no
+net force in a uniform field. The magnetic moment
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝝁</mi><annotation encoding="application/x-tex">\boldsymbol{\mu}</annotation></semantics></math>)
+of a loop with current
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>I</mi><annotation encoding="application/x-tex">I</annotation></semantics></math>
+and area
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+is defined as
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝝁</mi><mo>=</mo><mi>I</mi><mi>A</mi><mi mathvariant="bold-italic">𝒏</mi></mrow><annotation encoding="application/x-tex">\boldsymbol{\mu} = IA\mathbf{n}</annotation></semantics></math>.</p>
+<ul>
+<li><strong>Torque:</strong> The torque on a loop is given by
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝝉</mi><mo>=</mo><mi mathvariant="bold-italic">𝝁</mi><mo>×</mo><mi mathvariant="bold-italic">𝑩</mi></mrow><annotation encoding="application/x-tex">\boldsymbol{\tau} = \boldsymbol{\mu} \times \mathbf{B}</annotation></semantics></math>.
+This is analogous to the torque on an electric dipole in an electric
+field
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝝉</mi><mo>=</mo><mi mathvariant="bold-italic">𝒑</mi><mo>×</mo><mi mathvariant="bold-italic">𝑬</mi></mrow><annotation encoding="application/x-tex">\boldsymbol{\tau} = \mathbf{p} \times \mathbf{E}</annotation></semantics></math>).</li>
+<li><strong>Mechanical Energy
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>U</mi><mtext mathvariant="normal">mech</mtext></msub><annotation encoding="application/x-tex">U_{\text{mech}}</annotation></semantics></math>):</strong>
+By the principle of virtual work, the mechanical energy of a dipole is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>U</mi><mtext mathvariant="normal">mech</mtext></msub><mo>=</mo><mi>−</mi><mi mathvariant="bold-italic">𝝁</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝑩</mi></mrow><annotation encoding="application/x-tex">U_{\text{mech}} = -\boldsymbol{\mu} \cdot \mathbf{B}</annotation></semantics></math>.</li>
+<li><strong>The Energy Paradox:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>U</mi><mtext mathvariant="normal">mech</mtext></msub><annotation encoding="application/x-tex">U_{\text{mech}}</annotation></semantics></math>
+is considered a "fake" energy because it only accounts for mechanical
+work done on the wire. It does not account for the electrical energy
+required from a source (like a battery) to keep the current
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>I</mi><annotation encoding="application/x-tex">I</annotation></semantics></math>
+constant as the loop moves through a non-uniform field.</li>
+<li><strong>Total Energy
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>U</mi><mtext mathvariant="normal">total</mtext></msub><annotation encoding="application/x-tex">U_{\text{total}}</annotation></semantics></math>):</strong>
+For a complete system where currents are held constant, the total energy
+is actually the negative of the mechanical energy:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>U</mi><mtext mathvariant="normal">total</mtext></msub><mo>=</mo><mi>+</mi><mi mathvariant="bold-italic">𝝁</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝑩</mi></mrow><annotation encoding="application/x-tex">U_{\text{total}} = +\boldsymbol{\mu} \cdot \mathbf{B}</annotation></semantics></math>.</li>
+</ul>
+<h3 id="2-the-vector-potential-and-system-energy">2. The Vector
+Potential and System Energy</h3>
+<p>The vector potential provides a streamlined method for calculating
+the energy of steady current distributions.</p>
+<ul>
+<li><strong>Single Circuit Energy:</strong> The energy for a circuit of
+any shape is the line integral of the vector potential around the
+circuit:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>=</mo><mi>I</mi><msub><mo>∮</mo><mi mathvariant="normal">Γ</mi></msub><mi mathvariant="bold-italic">𝑨</mi><mo>⋅</mo><mi>d</mi><mi mathvariant="bold-italic">𝒔</mi></mrow><annotation encoding="application/x-tex">U = I \oint_{\Gamma} \mathbf{A} \cdot d\mathbf{s}</annotation></semantics></math></li>
+<li><strong>General Current Distributions:</strong> For a continuous
+distribution of steady currents, the total energy is:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>∫</mo><mi mathvariant="bold-italic">𝒋</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝑨</mi><mspace width="0.167em"></mspace><mi>d</mi><mi>V</mi></mrow><annotation encoding="application/x-tex">U = \frac{1}{2} \int \mathbf{j} \cdot \mathbf{A} \, dV</annotation></semantics></math>
+This is the magnetostatic analog to the electrostatic energy formula
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>∫</mo><mi>ρ</mi><mi>ϕ</mi><mspace width="0.167em"></mspace><mi>d</mi><mi>V</mi></mrow><annotation encoding="application/x-tex">U = \frac{1}{2} \int \rho \phi \, dV</annotation></semantics></math>.</li>
+</ul>
+<h3 id="3-the-reality-of-the-vector-potential">3. The "Reality" of the
+Vector Potential</h3>
+<p>The document explores whether
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>
+is a "real" field or a mere calculation tool. A "real" field is defined
+as a mathematical function that describes conditions at a point such
+that the behavior of a particle depends only on those local numbers,
+avoiding the concept of "action at a distance."</p>
+<ul>
+<li><strong>Classical View:</strong> In classical mechanics,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+appears to be the real field because the force
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑭</mi><mo>=</mo><mi>q</mi><mo stretchy="false" form="prefix">(</mo><mi mathvariant="bold-italic">𝒗</mi><mo>×</mo><mi mathvariant="bold-italic">𝑩</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mathbf{F} = q(\mathbf{v} \times \mathbf{B})</annotation></semantics></math>
+depends only on
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>.
+If
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑩</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\mathbf{B} = 0</annotation></semantics></math>
+in a region, there is no classical effect, even if
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑨</mi><mo>≠</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\mathbf{A} \neq 0</annotation></semantics></math>.</li>
+<li><strong>Quantum View:</strong> In quantum mechanics, the vector
+potential is fundamental. The interaction of a particle with an
+electromagnetic field is described by changes in the phase of its
+probability amplitude. The magnetic change in phase is given by:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">Phase Change</mtext><mo>=</mo><mfrac><mi>q</mi><mi>ℏ</mi></mfrac><msub><mo>∫</mo><mtext mathvariant="normal">trajectory</mtext></msub><mi mathvariant="bold-italic">𝑨</mi><mo>⋅</mo><mi>d</mi><mi mathvariant="bold-italic">𝒔</mi></mrow><annotation encoding="application/x-tex">\text{Phase Change} = \frac{q}{\hbar} \int_{\text{trajectory}} \mathbf{A} \cdot d\mathbf{s}</annotation></semantics></math></li>
+</ul>
+<h3 id="4-the-aharonov-bohm-effect">4. The Aharonov-Bohm Effect</h3>
+<p>A critical piece of evidence for the "reality" of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>
+is the interference experiment involving a long solenoid (Fig.
+15-7).</p>
+<ul>
+<li><strong>The Setup:</strong> Electrons pass through two slits around
+a solenoid. Inside the solenoid,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+is strong, but outside,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+is zero while
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>
+is non-zero.</li>
+<li><strong>The Result:</strong> Despite the electrons traveling only
+through regions where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑩</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\mathbf{B}=0</annotation></semantics></math>,
+the interference pattern on the backstop shifts when the solenoid
+current is turned on. This shift is proportional to the flux of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+inside the solenoid, communicated to the electrons via the circulation
+of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>
+outside.</li>
+<li><strong>Experimental Confirmation:</strong> This was verified using
+magnetized "iron whiskers," confirming that
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>
+acts locally on the electrons' phase, whereas
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+would have to act "at a distance."</li>
+</ul>
+<hr />
+<h2 id="technical-summary-statics-vs-dynamics">Technical Summary:
+Statics vs. Dynamics</h2>
+<p>The following table summarizes which formulas are limited to static
+conditions and which are universally applicable in electrodynamics.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Static Only (False in General)</th>
+<th style="text-align: left;">Always True (Electrodynamics)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Coulomb's Law:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>=</mo><mfrac><mn>1</mn><mrow><mn>4</mn><mi>π</mi><msub><mi>ϵ</mi><mn>0</mn></msub></mrow></mfrac><mfrac><mrow><msub><mi>q</mi><mn>1</mn></msub><msub><mi>q</mi><mn>2</mn></msub></mrow><msup><mi>r</mi><mn>2</mn></msup></mfrac></mrow><annotation encoding="application/x-tex">F = \frac{1}{4\pi\epsilon_0} \frac{q_1q_2}{r^2}</annotation></semantics></math></td>
+<td style="text-align: left;">Lorentz Force:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑭</mi><mo>=</mo><mi>q</mi><mo stretchy="false" form="prefix">(</mo><mi mathvariant="bold-italic">𝑬</mi><mo>+</mo><mi mathvariant="bold-italic">𝒗</mi><mo>×</mo><mi mathvariant="bold-italic">𝑩</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mathbf{F} = q(\mathbf{E} + \mathbf{v} \times \mathbf{B})</annotation></semantics></math></td>
+</tr>
+<tr>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝜵</mi><mo>×</mo><mi mathvariant="bold-italic">𝑬</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\boldsymbol{\nabla} \times \mathbf{E} = 0</annotation></semantics></math></td>
+<td style="text-align: left;">Faraday's Law:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝜵</mi><mo>×</mo><mi mathvariant="bold-italic">𝑬</mi><mo>=</mo><mi>−</mi><mfrac><mrow><mi>∂</mi><mi mathvariant="bold-italic">𝑩</mi></mrow><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\boldsymbol{\nabla} \times \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑬</mi><mo>=</mo><mi>−</mi><mi mathvariant="bold-italic">𝜵</mi><mi>ϕ</mi></mrow><annotation encoding="application/x-tex">\mathbf{E} = -\boldsymbol{\nabla}\phi</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑬</mi><mo>=</mo><mi>−</mi><mi mathvariant="bold-italic">𝜵</mi><mi>ϕ</mi><mo>−</mo><mfrac><mrow><mi>∂</mi><mi mathvariant="bold-italic">𝑨</mi></mrow><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\mathbf{E} = -\boldsymbol{\nabla}\phi - \frac{\partial \mathbf{A}}{\partial t}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;">Ampère's Law:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>c</mi><mn>2</mn></msup><mi mathvariant="bold-italic">𝜵</mi><mo>×</mo><mi mathvariant="bold-italic">𝑩</mi><mo>=</mo><mfrac><mi mathvariant="bold-italic">𝒋</mi><msub><mi>ϵ</mi><mn>0</mn></msub></mfrac></mrow><annotation encoding="application/x-tex">c^2 \boldsymbol{\nabla} \times \mathbf{B} = \frac{\mathbf{j}}{\epsilon_0}</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>c</mi><mn>2</mn></msup><mi mathvariant="bold-italic">𝜵</mi><mo>×</mo><mi mathvariant="bold-italic">𝑩</mi><mo>=</mo><mfrac><mi mathvariant="bold-italic">𝒋</mi><msub><mi>ϵ</mi><mn>0</mn></msub></mfrac><mo>+</mo><mfrac><mrow><mi>∂</mi><mi mathvariant="bold-italic">𝑬</mi></mrow><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">c^2 \boldsymbol{\nabla} \times \mathbf{B} = \frac{\mathbf{j}}{\epsilon_0} + \frac{\partial \mathbf{E}}{\partial t}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;">Poisson's Eq:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>∇</mi><mn>2</mn></msup><mi>ϕ</mi><mo>=</mo><mi>−</mi><mfrac><mi>ρ</mi><msub><mi>ϵ</mi><mn>0</mn></msub></mfrac></mrow><annotation encoding="application/x-tex">\nabla^2\phi = -\frac{\rho}{\epsilon_0}</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>∇</mi><mn>2</mn></msup><mi>ϕ</mi><mo>−</mo><mfrac><mn>1</mn><msup><mi>c</mi><mn>2</mn></msup></mfrac><mfrac><mrow><msup><mi>∂</mi><mn>2</mn></msup><mi>ϕ</mi></mrow><mrow><mi>∂</mi><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac><mo>=</mo><mi>−</mi><mfrac><mi>ρ</mi><msub><mi>ϵ</mi><mn>0</mn></msub></mfrac></mrow><annotation encoding="application/x-tex">\nabla^2\phi - \frac{1}{c^2}\frac{\partial^2\phi}{\partial t^2} = -\frac{\rho}{\epsilon_0}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>∫</mo><mo stretchy="false" form="prefix">(</mo><mi>ρ</mi><mi>ϕ</mi><mo>+</mo><mi mathvariant="bold-italic">𝒋</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝑨</mi><mo stretchy="false" form="postfix">)</mo><mi>d</mi><mi>V</mi></mrow><annotation encoding="application/x-tex">U = \frac{1}{2} \int (\rho\phi + \mathbf{j} \cdot \mathbf{A}) dV</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>=</mo><mo>∫</mo><mo stretchy="false" form="prefix">(</mo><mfrac><msub><mi>ϵ</mi><mn>0</mn></msub><mn>2</mn></mfrac><msup><mi>E</mi><mn>2</mn></msup><mo>+</mo><mfrac><mrow><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup></mrow><mn>2</mn></mfrac><msup><mi>B</mi><mn>2</mn></msup><mo stretchy="false" form="postfix">)</mo><mi>d</mi><mi>V</mi></mrow><annotation encoding="application/x-tex">U = \int (\frac{\epsilon_0}{2} E^2 + \frac{\epsilon_0 c^2}{2} B^2) dV</annotation></semantics></math></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="important-quotes-with-context">Important Quotes with
+Context</h2>
+<blockquote>
+<p><strong>"The total energy of the world is really the negative of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>U</mi><mtext mathvariant="normal">mech</mtext></msub><annotation encoding="application/x-tex">U_{\text{mech}}</annotation></semantics></math>."</strong></p>
+</blockquote>
+<ul>
+<li><strong>Context:</strong> Discussing the energy of a magnetic
+dipole. Feynman explains that calculating only the mechanical work
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mi mathvariant="bold-italic">𝝁</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝑩</mi></mrow><annotation encoding="application/x-tex">-\boldsymbol{\mu} \cdot \mathbf{B}</annotation></semantics></math>)
+is insufficient because it ignores the electrical work done by the
+battery to maintain a constant current against induced electromotive
+forces.</li>
+</ul>
+<blockquote>
+<p><strong>"The force concept gradually fades away, while the concepts
+of energy and momentum become of paramount importance."</strong></p>
+</blockquote>
+<ul>
+<li><strong>Context:</strong> Describing the transition from classical
+to quantum mechanics. In the quantum realm, interactions are viewed as
+phase shifts in wave functions rather than direct accelerations by
+forces.</li>
+</ul>
+<blockquote>
+<p><strong>"<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+are slowly disappearing from the modern expression of physical laws;
+they are being replaced by
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>."</strong></p>
+</blockquote>
+<ul>
+<li><strong>Context:</strong> A forward-looking statement on quantum
+electrodynamics. Because potentials
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>
+appear directly in the Schrödinger equation and manage phase
+interference, they are considered more fundamental than the fields
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>.</li>
+</ul>
+<blockquote>
+<p><strong>"A 'real' field is then a set of numbers we specify in such a
+way that what happens at a point depends only on the numbers at that
+point."</strong></p>
+</blockquote>
+<ul>
+<li><strong>Context:</strong> Establishing a criteria for "reality" in
+physics to argue that the vector potential is a real physical entity,
+not just a mathematical shortcut.</li>
+</ul>
+<hr />
+<h2 id="actionable-insights-for-physical-modeling">Actionable Insights
+for Physical Modeling</h2>
+<ol type="1">
+<li><strong>Use of Virtual Work:</strong> When calculating forces on
+steady current loops,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>U</mi><mtext mathvariant="normal">mech</mtext></msub><mo>=</mo><mi>−</mi><mi mathvariant="bold-italic">𝝁</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝑩</mi></mrow><annotation encoding="application/x-tex">U_{\text{mech}} = -\boldsymbol{\mu} \cdot \mathbf{B}</annotation></semantics></math>
+is a valid "artificial" energy to use with the principle of virtual
+work, provided the current is held constant.</li>
+<li><strong>Symmetry and Calculation Path:</strong> While
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>
+is fundamental, it is often more difficult to calculate for simple,
+highly symmetric problems (like the field on the axis of a ring) because
+it requires knowing the potential at all neighboring points to compute
+the curl.
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+remains the more efficient tool for such specific classical
+calculations.</li>
+<li><strong>Quantum Interaction Modeling:</strong> In quantum systems,
+electromagnetic interactions must be modeled via phase shifts. The phase
+shift is determined by the line integral of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>.
+Any vector potential
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi mathvariant="bold-italic">𝑨</mi><mo>′</mo></msup><mo>=</mo><mi mathvariant="bold-italic">𝑨</mi><mo>+</mo><mi mathvariant="bold-italic">𝜵</mi><mi>ψ</mi></mrow><annotation encoding="application/x-tex">\mathbf{A}&#39; = \mathbf{A} + \boldsymbol{\nabla}\psi</annotation></semantics></math>
+will yield the same physical results because the line integral of a
+gradient around a closed path is zero.</li>
+<li><strong>Dynamic Corrections:</strong> For time-varying fields, one
+must account for the propagation delay
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>t</mi><mo>′</mo></msup><mo>=</mo><mi>t</mi><mo>−</mo><msub><mi>r</mi><mn>12</mn></msub><mi>/</mi><mi>c</mi></mrow><annotation encoding="application/x-tex">t&#39; = t - r_{12}/c</annotation></semantics></math>).
+The static integrals for
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>
+are only accurate if the source charges and currents do not change
+during the time it takes for a signal to travel to the observation
+point.</li>
+</ol>
+    </article>
+  </main>
+</body>
+</html>

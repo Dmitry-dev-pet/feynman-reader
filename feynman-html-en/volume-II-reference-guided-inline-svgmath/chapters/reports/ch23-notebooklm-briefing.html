@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cavity Resonators: High-Frequency Electromagnetic Behavior and Resonant Systems - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="en">
+  <script>
+    (() => {
+      const key = "flp-reader-theme";
+      const applyTheme = (theme) => {
+        const next = theme === "dark" ? "dark" : "light";
+        document.documentElement.dataset.theme = next;
+        document.body.dataset.theme = next;
+        try { localStorage.setItem(key, next); } catch (_) {}
+      };
+      try { applyTheme(localStorage.getItem(key) || "light"); } catch (_) { applyTheme("light"); }
+      document.addEventListener("click", (event) => {
+        const button = event.target.closest('[data-report-action="theme"]');
+        if (!button) return;
+        applyTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark");
+      });
+    })();
+  </script>
+<main class="notebooklm-report-shell">
+    <header aria-label="Quick navigation" class="reader-toolbar report-toolbar">
+      <div class="toolbar-group toolbar-navigation">
+        <a class="toolbar-btn" href="../ch23.html">Back to chapter</a>
+        <a class="toolbar-btn" href="../../../../feynman-reader/index.html">Reader</a>
+        <a class="toolbar-btn" href="../../index.html">Contents</a>
+      </div>
+      <a class="toolbar-title" href="../ch23.html#ch23" title="NotebookLM · Overview">NotebookLM · Overview</a>
+      <div class="toolbar-group toolbar-settings">
+        <button aria-label="Toggle theme" class="toolbar-btn icon-btn" data-report-action="theme" title="Toggle theme" type="button">◐</button>
+      </div>
+    </header>
+    <article class="notebooklm-report">
+<h1
+id="cavity-resonators-high-frequency-electromagnetic-behavior-and-resonant-systems">Cavity
+Resonators: High-Frequency Electromagnetic Behavior and Resonant
+Systems</h1>
+<p>This briefing document analyzes the transition from lumped-element
+circuit theory to field-based electromagnetic analysis, focusing on the
+physics, mathematical modeling, and practical applications of cavity
+resonators as described in the provided source context.</p>
+<h2 id="executive-summary">Executive Summary</h2>
+<p>At low frequencies, electromagnetic devices are effectively modeled
+using "ideal" circuit elements (resistors, inductors, and capacitors).
+However, as frequencies increase, these models fail because the physical
+dimensions of the components become comparable to the wavelength of the
+electromagnetic fields. This transition necessitates a shift from
+circuit equations to Maxwell’s equations.</p>
+<p>The study of a parallel-plate capacitor at high frequencies reveals
+that the electric field is no longer uniform but follows a distribution
+described by the Bessel function
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>J</mi><mn>0</mn></msub><annotation encoding="application/x-tex">J_0</annotation></semantics></math>.
+When the frequency and geometry allow the electric field to reach zero
+at a specific radius, a conducting boundary can be placed there to
+create a <strong>resonant cavity</strong>. These cavities act as
+high-efficiency resonant circuits where electric and magnetic fields are
+intermixed. Such systems are characterized by high quality factors
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Q</mi><annotation encoding="application/x-tex">Q</annotation></semantics></math>)
+and multiple resonant modes, representing the ultimate evolution of the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo>−</mo><mi>C</mi></mrow><annotation encoding="application/x-tex">L-C</annotation></semantics></math>
+circuit.</p>
+<hr />
+<h2 id="i-the-limitations-of-idealized-circuit-elements">I. The
+Limitations of Idealized Circuit Elements</h2>
+<p>Every real-world circuit element possesses "parasitic" properties
+that manifest at high frequencies. A linear relation between current
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>I</mi><annotation encoding="application/x-tex">I</annotation></semantics></math>)
+and voltage
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math>)
+generally holds
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mo>=</mo><mfrac><mn>1</mn><mi>z</mi></mfrac><mo stretchy="false" form="prefix">(</mo><mi>V</mi><mo>−</mo><mi mathvariant="script">ℰ</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">I = \frac{1}{z}(V - \mathcal{E})</annotation></semantics></math>),
+but the impedance
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>z</mi><annotation encoding="application/x-tex">z</annotation></semantics></math>
+becomes a complex function of frequency.</p>
+<h3 id="equivalent-circuits-of-real-components">Equivalent Circuits of
+Real Components</h3>
+<p>As frequencies rise, "ideal" components begin to behave like resonant
+circuits themselves:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Component</th>
+<th style="text-align: left;">Low-Frequency Behavior</th>
+<th style="text-align: left;">High-Frequency "Parasitic" Effects</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Resistor</strong></td>
+<td style="text-align: left;">Ideal Resistance
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>R</mi><annotation encoding="application/x-tex">R</annotation></semantics></math>)</td>
+<td style="text-align: left;">Magnetic fields create inductance
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>L</mi><annotation encoding="application/x-tex">L</annotation></semantics></math>);
+charge accumulation creates capacitance
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math>).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Inductor</strong></td>
+<td style="text-align: left;">Ideal Inductance
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>L</mi><annotation encoding="application/x-tex">L</annotation></semantics></math>)</td>
+<td style="text-align: left;">Wire resistance
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>R</mi><annotation encoding="application/x-tex">R</annotation></semantics></math>)
+adds in series; capacitance between turns
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math>)
+adds in parallel.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="the-high-frequency-barrier">The "High-Frequency Barrier"</h3>
+<p>In a real coil, the impedance of the inductance increases with
+frequency
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ω</mi><mi>L</mi></mrow><annotation encoding="application/x-tex">\omega L</annotation></semantics></math>),
+while the impedance of the capacitance between turns decreases
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mi>ω</mi><mi>C</mi></mrow><annotation encoding="application/x-tex">1/\omega C</annotation></semantics></math>).
+At sufficiently high frequencies, the current takes the "path of least
+impedance," jumping between turns via the capacitance rather than
+following the wire. This effect signifies that the component no longer
+functions as designed and requires a new physical approach.</p>
+<hr />
+<h2 id="ii-analysis-of-the-high-frequency-capacitor">II. Analysis of the
+High-Frequency Capacitor</h2>
+<p>To understand the transition to cavity resonators, the source
+analyzes a circular parallel-plate capacitor. As the frequency
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ω</mi><annotation encoding="application/x-tex">\omega</annotation></semantics></math>
+increases, a series of electromagnetic corrections must be applied.</p>
+<h3 id="1-induced-magnetic-fields">1. Induced Magnetic Fields</h3>
+<p>A varying electric field
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>=</mo><msub><mi>E</mi><mn>0</mn></msub><msup><mi>e</mi><mrow><mi>i</mi><mi>ω</mi><mi>t</mi></mrow></msup></mrow><annotation encoding="application/x-tex">E = E_0 e^{i\omega t}</annotation></semantics></math>)
+creates a magnetic field
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>).
+According to Maxwell's equations:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>c</mi><mn>2</mn></msup><msub><mo>∮</mo><mi mathvariant="normal">Γ</mi></msub><mi mathvariant="bold-italic">𝑩</mi><mo>⋅</mo><mi>d</mi><mi mathvariant="bold-italic">𝒔</mi><mo>=</mo><mfrac><mi>d</mi><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>∫</mo><mi mathvariant="bold-italic">𝑬</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝒏</mi><mspace width="0.167em"></mspace><mi>d</mi><mi>a</mi></mrow><annotation encoding="application/x-tex">c^2 \oint_{\Gamma} \mathbf{B} \cdot d\mathbf{s} = \frac{d}{dt} \int \mathbf{E} \cdot \mathbf{n} \, da</annotation></semantics></math>
+For a radius
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math>,
+this yields a first-order magnetic field:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>B</mi><mn>1</mn></msub><mo>=</mo><mfrac><mrow><mi>i</mi><mi>ω</mi><mi>r</mi></mrow><mrow><mn>2</mn><msup><mi>c</mi><mn>2</mn></msup></mrow></mfrac><msub><mi>E</mi><mn>0</mn></msub><msup><mi>e</mi><mrow><mi>i</mi><mi>ω</mi><mi>t</mi></mrow></msup></mrow><annotation encoding="application/x-tex">B_1 = \frac{i\omega r}{2c^2} E_0 e^{i\omega t}</annotation></semantics></math></p>
+<h3 id="2-the-electric-field-correction">2. The Electric Field
+Correction</h3>
+<p>The varying magnetic field, in turn, induces a secondary electric
+field (Faraday’s Law), causing the total electric field to become
+non-uniform. The field is stronger at the center and decreases toward
+the edges.</p>
+<h3 id="3-the-bessel-function-solution">3. The Bessel Function
+Solution</h3>
+<p>By iteratively correcting for the interactions between the changing
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+fields, the total electric field is expressed as an infinite series:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>=</mo><msub><mi>E</mi><mn>0</mn></msub><msup><mi>e</mi><mrow><mi>i</mi><mi>ω</mi><mi>t</mi></mrow></msup><mrow><mo stretchy="true" form="prefix">[</mo><mn>1</mn><mo>−</mo><mfrac><mn>1</mn><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mi>!</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup></mrow></mfrac><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mi>ω</mi><mi>r</mi></mrow><mrow><mn>2</mn><mi>c</mi></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>2</mn></msup><mo>+</mo><mfrac><mn>1</mn><mrow><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mi>!</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup></mrow></mfrac><msup><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mi>ω</mi><mi>r</mi></mrow><mrow><mn>2</mn><mi>c</mi></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mn>4</mn></msup><mo>−</mo><mi>…</mi><mo stretchy="true" form="postfix">]</mo></mrow></mrow><annotation encoding="application/x-tex">E = E_0 e^{i\omega t} \left[ 1 - \frac{1}{(1!)^2} \left(\frac{\omega r}{2c}\right)^2 + \frac{1}{(2!)^2} \left(\frac{\omega r}{2c}\right)^4 - \dots \right]</annotation></semantics></math>
+This series defines the <strong>Bessel function of order zero</strong>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>J</mi><mn>0</mn></msub><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">J_0(x)</annotation></semantics></math>.
+The final field is:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>=</mo><msub><mi>E</mi><mn>0</mn></msub><msup><mi>e</mi><mrow><mi>i</mi><mi>ω</mi><mi>t</mi></mrow></msup><msub><mi>J</mi><mn>0</mn></msub><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mi>ω</mi><mi>r</mi></mrow><mi>c</mi></mfrac><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">E = E_0 e^{i\omega t} J_0\left(\frac{\omega r}{c}\right)</annotation></semantics></math></p>
+<p><strong>Physical Meaning:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>J</mi><mn>0</mn></msub><annotation encoding="application/x-tex">J_0</annotation></semantics></math>
+is to cylindrical waves what the cosine function is to waves on a
+straight line. It describes how the field strength oscillates and
+eventually reverses direction as one moves radially outward from the
+center of the capacitor.</p>
+<hr />
+<h2 id="iii-the-physics-of-resonant-cavities">III. The Physics of
+Resonant Cavities</h2>
+<p>A resonant cavity is formed when a cylindrical "can" is designed such
+that its radius
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math>
+corresponds to a zero of the electric field distribution.</p>
+<h3 id="1-resonance-conditions">1. Resonance Conditions</h3>
+<p>The first zero of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>J</mi><mn>0</mn></msub><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">J_0(x)</annotation></semantics></math>
+occurs at
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>≈</mo><mn>2.405</mn></mrow><annotation encoding="application/x-tex">x \approx 2.405</annotation></semantics></math>.
+For a can of radius
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math>,
+the fundamental resonant frequency
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ω</mi><mn>0</mn></msub><annotation encoding="application/x-tex">\omega_0</annotation></semantics></math>
+is:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ω</mi><mn>0</mn></msub><mo>=</mo><mn>2.405</mn><mfrac><mi>c</mi><mi>r</mi></mfrac></mrow><annotation encoding="application/x-tex">\omega_0 = 2.405 \frac{c}{r}</annotation></semantics></math>
+At this frequency, the electric and magnetic fields maintain themselves
+without external connections (assuming perfect conductivity). The
+changing
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math>
+field creates the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+field, and the changing
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+field creates the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math>
+field.</p>
+<h3 id="2-energy-loss-and-quality-factor-q">2. Energy Loss and Quality
+Factor
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Q</mi><annotation encoding="application/x-tex">Q</annotation></semantics></math>)</h3>
+<p>In real-world cavities, energy is lost due to the resistance of the
+walls.</p>
+<ul>
+<li><strong>Currents:</strong> The sudden drop of the magnetic field to
+zero at the walls implies the existence of currents in the sides of the
+can.</li>
+<li><strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Q</mi><annotation encoding="application/x-tex">Q</annotation></semantics></math>
+Factor:</strong> Cavities have exceptionally high
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Q</mi><annotation encoding="application/x-tex">Q</annotation></semantics></math>
+values, often reaching <strong>100,000</strong> or more, especially when
+lined with high-conductivity materials like silver.</li>
+<li><strong>Coupling:</strong> Energy can be sustained or measured by
+poking small wire loops into the cavity to couple with the magnetic
+fields (Fig. 23–8).</li>
+</ul>
+<hr />
+<h2 id="iv-cavity-modes-and-observations">IV. Cavity Modes and
+Observations</h2>
+<p>A single physical cavity can support multiple "modes" of oscillation,
+each with a distinct frequency and field arrangement.</p>
+<h3 id="key-resonant-modes">Key Resonant Modes</h3>
+<p>Experimental observations of a 3.0-inch diameter cylinder revealed
+multiple resonances beyond the fundamental predicted at 3010
+megacycles:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Resonance Frequency</th>
+<th style="text-align: left;">Description of Mode</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>~3050 Mc</strong></td>
+<td style="text-align: left;">Fundamental mode: Vertical
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math>
+field, circular horizontal
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+field.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>~3300 Mc</strong></td>
+<td style="text-align: left;">Transverse mode:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math>
+fields directed across the diameter (Fig. 23–13).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>~3820 Mc</strong></td>
+<td style="text-align: left;">Complex mode:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math>
+fields going from sides to ends (Fig. 23–14).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>&gt;6000 Mc</strong></td>
+<td style="text-align: left;">Higher-order Bessel mode: Corresponds to
+the second zero of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>J</mi><mn>0</mn></msub><annotation encoding="application/x-tex">J_0</annotation></semantics></math>
+(Fig. 23–12).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="identifying-modes">Identifying Modes</h3>
+<p>One can identify which mode is active by inserting a small wire
+probe. The resonance is suppressed if the wire is parallel to the
+electric field (sapping energy via currents) and unaffected if the wire
+is perpendicular to the field.</p>
+<hr />
+<h2 id="v-evolution-from-l-c-circuits">V. Evolution from L-C
+Circuits</h2>
+<p>The resonant cavity is not a fundamentally different species from the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo>−</mo><mi>C</mi></mrow><annotation encoding="application/x-tex">L-C</annotation></semantics></math>
+circuit; rather, they are extremes of the same family.</p>
+<ol type="1">
+<li><strong>Inductance Reduction:</strong> Starting with a standard
+capacitor and coil (Fig. 23–16a), the resonant frequency is raised by
+reducing the coil to a single turn.</li>
+<li><strong>Parallel Inductors:</strong> Adding multiple single-turn
+loops in parallel further reduces inductance and raises frequency.</li>
+<li><strong>The "Loaded" Cavity:</strong> Eventually, these loops merge
+into a continuous cylindrical wall.</li>
+<li><strong>Field Intermixing:</strong> In a standard
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo>−</mo><mi>C</mi></mrow><annotation encoding="application/x-tex">L-C</annotation></semantics></math>
+circuit,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+fields are separate. In a cavity resonator, the fields are completely
+intermixed, with the "capacitor" section being the region of high
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math>
+field and the "inductance" section being the region of high
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+field.</li>
+</ol>
+<hr />
+<h2 id="vi-important-quotes-with-context">VI. Important Quotes with
+Context</h2>
+<blockquote>
+<p><strong>"If the subject had been one of popular interest, this effect
+would have been called 'the high-frequency barrier'... It doesn’t mean
+that there is a great 'barrier' there; it just means that the object
+should be redesigned."</strong></p>
+</blockquote>
+<ul>
+<li><strong>Context:</strong> Feynman explains that the failure of a
+coil to act as an inductor at high frequencies is not a limit of nature,
+but a limit of a specific design. This motivates the move toward cavity
+resonators.</li>
+</ul>
+<blockquote>
+<p><strong>"The function
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>J</mi><mn>0</mn></msub><annotation encoding="application/x-tex">J_0</annotation></semantics></math>
+is to cylindrical waves what the cosine function is to waves on a
+straight line."</strong></p>
+</blockquote>
+<ul>
+<li><strong>Context:</strong> This provides the physical intuition for
+the Bessel function, explaining its recurring presence in any problem
+involving cylindrical symmetry and wave oscillation.</li>
+</ul>
+<blockquote>
+<p><strong>"How is the can supposed to know which is its top and bottom,
+and which are its sides?"</strong></p>
+</blockquote>
+<ul>
+<li><strong>Context:</strong> Feynman uses this rhetorical question to
+explain why multiple modes (like transverse modes) exist. Because the
+geometry is symmetric, the fields can oscillate in various orientations,
+not just the one initially analyzed.</li>
+</ul>
+<hr />
+<h2 id="vii-actionable-insights">VII. Actionable Insights</h2>
+<ul>
+<li><strong>Design for Frequency:</strong> When working with frequencies
+in the megacycle/gigacycle range, stop treating components as "lumped"
+and begin treating them as "fields."</li>
+<li><strong>Cavity Advantage:</strong> Use resonant cavities instead of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>L</mi><mo>−</mo><mi>C</mi></mrow><annotation encoding="application/x-tex">L-C</annotation></semantics></math>
+circuits for high-frequency applications where high
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Q</mi><annotation encoding="application/x-tex">Q</annotation></semantics></math>
+(low energy loss/narrow bandwidth) is required.</li>
+<li><strong>Mode Awareness:</strong> In any enclosed conducting space,
+be prepared for "extra" resonances. These are not errors but valid modes
+of the electromagnetic field that can be controlled or exploited by
+changing the geometry or the orientation of coupling loops.</li>
+<li><strong>Material Selection:</strong> To maximize the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Q</mi><annotation encoding="application/x-tex">Q</annotation></semantics></math>
+of a resonator, use materials with the highest possible conductivity
+(e.g., silver) to minimize wall losses from the currents required to
+support the magnetic fields.</li>
+</ul>
+    </article>
+  </main>
+</body>
+</html>

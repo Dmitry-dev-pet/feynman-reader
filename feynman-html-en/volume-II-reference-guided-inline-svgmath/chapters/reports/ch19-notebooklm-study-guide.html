@@ -1,0 +1,302 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Study Guide: The Principle of Least Action - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="en">
+  <script>
+    (() => {
+      const key = "flp-reader-theme";
+      const applyTheme = (theme) => {
+        const next = theme === "dark" ? "dark" : "light";
+        document.documentElement.dataset.theme = next;
+        document.body.dataset.theme = next;
+        try { localStorage.setItem(key, next); } catch (_) {}
+      };
+      try { applyTheme(localStorage.getItem(key) || "light"); } catch (_) { applyTheme("light"); }
+      document.addEventListener("click", (event) => {
+        const button = event.target.closest('[data-report-action="theme"]');
+        if (!button) return;
+        applyTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark");
+      });
+    })();
+  </script>
+<main class="notebooklm-report-shell">
+    <header aria-label="Quick navigation" class="reader-toolbar report-toolbar">
+      <div class="toolbar-group toolbar-navigation">
+        <a class="toolbar-btn" href="../ch19.html">Back to chapter</a>
+        <a class="toolbar-btn" href="../../../../feynman-reader/index.html">Reader</a>
+        <a class="toolbar-btn" href="../../index.html">Contents</a>
+      </div>
+      <a class="toolbar-title" href="../ch19.html#ch19" title="NotebookLM · Guide">NotebookLM · Guide</a>
+      <div class="toolbar-group toolbar-settings">
+        <button aria-label="Toggle theme" class="toolbar-btn icon-btn" data-report-action="theme" title="Toggle theme" type="button">◐</button>
+      </div>
+    </header>
+    <article class="notebooklm-report">
+<h1 id="study-guide-the-principle-of-least-action">Study Guide: The
+Principle of Least Action</h1>
+<p>This study guide explores the fundamental physical principle that the
+laws of Newton can be expressed as a minimization problem of a quantity
+called "action." It covers the mathematical foundations in the calculus
+of variations, generalizations to relativity and electrostatics, and the
+connection to quantum mechanics.</p>
+<hr />
+<h2 id="i-key-concepts">I. Key Concepts</h2>
+<h3 id="1-the-definition-of-action">1. The Definition of Action</h3>
+<p>The <strong>Action
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>S</mi><annotation encoding="application/x-tex">S</annotation></semantics></math>)</strong>
+is a numerical value calculated for any given path a particle might take
+between two points in space over a specific duration of time. In
+non-relativistic mechanics, it is defined as the integral of the
+difference between kinetic energy
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi><mi>E</mi></mrow><annotation encoding="application/x-tex">KE</annotation></semantics></math>)
+and potential energy
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>E</mi></mrow><annotation encoding="application/x-tex">PE</annotation></semantics></math>)
+over time:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo>=</mo><msubsup><mo>∫</mo><msub><mi>t</mi><mn>1</mn></msub><msub><mi>t</mi><mn>2</mn></msub></msubsup><mo stretchy="false" form="prefix">(</mo><mi>K</mi><mi>E</mi><mo>−</mo><mi>P</mi><mi>E</mi><mo stretchy="false" form="postfix">)</mo><mi>d</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">S = \int_{t_1}^{t_2} (KE - PE) dt</annotation></semantics></math></p>
+<h3 id="2-the-principle-of-least-action">2. The Principle of Least
+Action</h3>
+<p>The true path taken by a particle in a conservative field is the one
+for which the action integral is a minimum (or more precisely,
+stationary).</p>
+<ul>
+<li><strong>Free Particles:</strong> In the absence of potential energy,
+the principle dictates a path of uniform speed. This is because the mean
+square of a fluctuating velocity is always greater than the square of
+the mean velocity.</li>
+<li><strong>Conservative Systems:</strong> The principle balances
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi><mi>E</mi></mrow><annotation encoding="application/x-tex">KE</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mi>E</mi></mrow><annotation encoding="application/x-tex">PE</annotation></semantics></math>.
+For example, a particle in a gravitational field rises to a higher
+potential to reduce the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>K</mi><mi>E</mi><mo>−</mo><mi>P</mi><mi>E</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(KE - PE)</annotation></semantics></math>
+value, but not so high that the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi><mi>E</mi></mrow><annotation encoding="application/x-tex">KE</annotation></semantics></math>
+required to reach that height outweighs the potential energy gain.</li>
+</ul>
+<h3 id="3-the-calculus-of-variations">3. The Calculus of Variations</h3>
+<p>Unlike ordinary calculus, which finds the minimum value of a function
+by varying a single variable, the calculus of variations finds the
+<strong>path</strong> (a function) that minimizes a numerical
+integral.</p>
+<ul>
+<li><strong>The Trial Path:</strong> We compare the true path
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><munder><mrow><mi>x</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><mo accent="true">_</mo></munder><annotation encoding="application/x-tex">\underline{x(t)}</annotation></semantics></math>
+to a trial path
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><munder><mrow><mi>x</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><mo accent="true">_</mo></munder><mo>+</mo><mi>η</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">x(t) = \underline{x(t)} + \eta(t)</annotation></semantics></math>.</li>
+<li><strong>Fixed Endpoints:</strong> For the comparison to be valid,
+all trial paths must begin and end at the same points at the same times.
+Therefore, the deviation
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>η</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\eta(t)</annotation></semantics></math>
+must be zero at both
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>t</mi><mn>1</mn></msub><annotation encoding="application/x-tex">t_1</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>t</mi><mn>2</mn></msub><annotation encoding="application/x-tex">t_2</annotation></semantics></math>.</li>
+<li><strong>First-Order Variation
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>δ</mi><mi>S</mi></mrow><annotation encoding="application/x-tex">\delta S</annotation></semantics></math>):</strong>
+At the minimum, a tiny "first-order" deviation from the true path
+results in zero change to the action. Any actual change in the action
+only appears in the "second-order" (proportional to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>η</mi><mn>2</mn></msup><annotation encoding="application/x-tex">\eta^2</annotation></semantics></math>).</li>
+</ul>
+<h3 id="4-the-lagrangian-mathcall">4. The Lagrangian
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">ℒ</mi><annotation encoding="application/x-tex">\mathcal{L}</annotation></semantics></math>)</h3>
+<p>The function being integrated over time to find the action is called
+the <strong>Lagrangian</strong>.</p>
+<ul>
+<li>In non-relativistic mechanics:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">ℒ</mi><mo>=</mo><mi>K</mi><mi>E</mi><mo>−</mo><mi>P</mi><mi>E</mi></mrow><annotation encoding="application/x-tex">\mathcal{L} = KE - PE</annotation></semantics></math>.</li>
+<li>In relativistic motion with electromagnetic fields:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">ℒ</mi><mo>=</mo><mi>−</mi><msub><mi>m</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mi>v</mi><mn>2</mn></msup><mi>/</mi><msup><mi>c</mi><mn>2</mn></msup></mrow></msqrt><mo>−</mo><mi>q</mi><mo stretchy="false" form="prefix">(</mo><mi>ϕ</mi><mo>−</mo><mi mathvariant="bold-italic">𝒗</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝑨</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mathcal{L} = -m_0c^2\sqrt{1-v^2/c^2} - q(\phi - \mathbf{v} \cdot \mathbf{A})</annotation></semantics></math></li>
+</ul>
+<hr />
+<h2 id="ii-generalizations-and-applications">II. Generalizations and
+Applications</h2>
+<h3 id="1-relativity-and-particle-motion">1. Relativity and Particle
+Motion</h3>
+<p>The principle of least action holds for relativistic motion, though
+the Lagrangian is no longer simply
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi><mi>E</mi><mo>−</mo><mi>P</mi><mi>E</mi></mrow><annotation encoding="application/x-tex">KE - PE</annotation></semantics></math>.
+For a particle of charge
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>q</mi><annotation encoding="application/x-tex">q</annotation></semantics></math>
+in an electromagnetic field (defined by scalar potential
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>
+and vector potential
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>),
+the action is:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mo>=</mo><msubsup><mo>∫</mo><msub><mi>t</mi><mn>1</mn></msub><msub><mi>t</mi><mn>2</mn></msub></msubsup><mrow><mo stretchy="true" form="prefix">[</mo><mi>−</mi><msub><mi>m</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mi>v</mi><mn>2</mn></msup><mi>/</mi><msup><mi>c</mi><mn>2</mn></msup></mrow></msqrt><mo>−</mo><mi>q</mi><mi>ϕ</mi><mo>+</mo><mi>q</mi><mo stretchy="false" form="prefix">(</mo><mi mathvariant="bold-italic">𝒗</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝑨</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="true" form="postfix">]</mo></mrow><mi>d</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">S = \int_{t_1}^{t_2} \left[ -m_0c^2\sqrt{1-v^2/c^2} - q\phi + q(\mathbf{v} \cdot \mathbf{A}) \right] dt</annotation></semantics></math></p>
+<h3 id="2-electrostatics">2. Electrostatics</h3>
+<p>Electrostatics can be described by a minimum principle rather than
+differential equations. The correct potential distribution
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>
+is the one that minimizes the integral
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>U</mi><mo>*</mo></msup><annotation encoding="application/x-tex">U^*</annotation></semantics></math>:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>U</mi><mo>*</mo></msup><mo>=</mo><mfrac><msub><mi>ϵ</mi><mn>0</mn></msub><mn>2</mn></mfrac><mo>∫</mo><mo stretchy="false" form="prefix">(</mo><mi>∇</mi><mi>ϕ</mi><msup><mo stretchy="false" form="postfix">)</mo><mn>2</mn></msup><mi>d</mi><mi>V</mi><mo>−</mo><mo>∫</mo><mi>ρ</mi><mi>ϕ</mi><mi>d</mi><mi>V</mi></mrow><annotation encoding="application/x-tex">U^* = \frac{\epsilon_0}{2}\int(\nabla\phi)^2 dV - \int\rho\phi dV</annotation></semantics></math>
+When charges are only on conductors, this minimizes the total
+electrostatic energy.</p>
+<h3 id="3-practical-utility-capacity-of-a-condenser">3. Practical
+Utility: Capacity of a Condenser</h3>
+<p>Minimum principles allow for the calculation of physical constants
+even when the exact field is unknown. By guessing a trial potential
+(e.g., linear or quadratic) and adjusting parameters to find the minimum
+calculated capacity, one can arrive at a value very close to the true
+capacity.</p>
+<p><strong>Comparison of Capacity Approximations for Cylindrical
+Condenser
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mi>/</mi><mn>2</mn><mi>π</mi><msub><mi>ϵ</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">C/2\pi\epsilon_0</annotation></semantics></math>):</strong></p>
+<table>
+<thead>
+<tr>
+<th
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>b</mi><mi>/</mi><mi>a</mi></mrow><annotation encoding="application/x-tex">b/a</annotation></semantics></math>
+(Radii Ratio)</th>
+<th style="text-align: left;">True Value</th>
+<th style="text-align: left;">First Approx (Linear)</th>
+<th style="text-align: left;">Quadratic Approx</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1.1</td>
+<td style="text-align: left;">10.492059</td>
+<td style="text-align: left;">10.500000</td>
+<td style="text-align: left;">10.492063</td>
+</tr>
+<tr>
+<td style="text-align: left;">1.5</td>
+<td style="text-align: left;">2.4663</td>
+<td style="text-align: left;">2.50</td>
+<td style="text-align: left;">2.4667</td>
+</tr>
+<tr>
+<td style="text-align: left;">2.0</td>
+<td style="text-align: left;">1.4427</td>
+<td style="text-align: left;">1.500</td>
+<td style="text-align: left;">1.444</td>
+</tr>
+<tr>
+<td style="text-align: left;">10.0</td>
+<td style="text-align: left;">0.434</td>
+<td style="text-align: left;">0.611</td>
+<td style="text-align: left;">0.475</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="iii-quantum-mechanical-perspective">III. Quantum Mechanical
+Perspective</h2>
+<p>The principle of least action is a limiting case of quantum
+mechanics.</p>
+<ul>
+<li><strong>Path Integrals:</strong> A particle does not simply "choose"
+one path; it "smells" all possible paths. Each path has a probability
+amplitude with a phase proportional to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>S</mi><mi>/</mi><mi>ℏ</mi></mrow><annotation encoding="application/x-tex">S/\hbar</annotation></semantics></math>.</li>
+<li><strong>Constructive Interference:</strong> When
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>S</mi><annotation encoding="application/x-tex">S</annotation></semantics></math>
+is much larger than Planck’s constant
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ℏ</mi><annotation encoding="application/x-tex">\hbar</annotation></semantics></math>,
+the phases of neighboring paths vary wildly and cancel each other
+out—except near the path where the action is stationary.</li>
+<li><strong>The Classical Limit:</strong> As
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ℏ</mi><mo>→</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\hbar \to 0</annotation></semantics></math>,
+the only path that contributes to the final amplitude is the one for
+which the first-order change in action is zero. This is the "true" path
+of classical mechanics.</li>
+</ul>
+<hr />
+<h2 id="iv-common-misconceptions">IV. Common Misconceptions</h2>
+<ul>
+<li><strong>Is it always a "minimum"?</strong> Not necessarily. It is a
+stationary point where the first-order variation is zero. It could be a
+maximum or a point of inflection, similar to the "Principle of Least
+Time" in optics.</li>
+<li><strong>Does it apply to friction?</strong> The principle only
+applies to <strong>conservative systems</strong> where forces are
+derived from a potential. On a microscopic level, however, all
+fundamental laws are conservative and can be expressed via the principle
+of least action.</li>
+<li><strong>The "Decision-Making" Particle:</strong> The particle does
+not "decide" or "look ahead" to find the best path. Quantum
+mechanically, it explores all trajectories; the path of least action
+simply represents the region where the probability amplitudes reinforce
+each other.</li>
+</ul>
+<hr />
+<h2 id="v-self-check-questions">V. Self-Check Questions</h2>
+<h3 id="short-answer-quiz">Short-Answer Quiz</h3>
+<ol type="1">
+<li>What is the mathematical definition of "Action" in classical
+mechanics?</li>
+<li>How does the calculus of variations differ from ordinary
+calculus?</li>
+<li>Why must the variation
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>η</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\eta(t)</annotation></semantics></math>
+be zero at
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>t</mi><mn>1</mn></msub><annotation encoding="application/x-tex">t_1</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>t</mi><mn>2</mn></msub><annotation encoding="application/x-tex">t_2</annotation></semantics></math>?</li>
+<li>In the context of electrostatics, what does the minimization of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>U</mi><mo>*</mo></msup><annotation encoding="application/x-tex">U^*</annotation></semantics></math>
+represent when only conductors are present?</li>
+<li>What is the role of Planck’s constant
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ℏ</mi><annotation encoding="application/x-tex">\hbar</annotation></semantics></math>)
+in the relationship between the principle of least action and quantum
+mechanics?</li>
+<li>Identify another name for the Action
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>S</mi><annotation encoding="application/x-tex">S</annotation></semantics></math>
+used by "precise and pedantic" people.</li>
+</ol>
+<h3 id="essay-prompts">Essay Prompts</h3>
+<ol type="1">
+<li><strong>The "Grand Statement" vs. The "Differential Law":</strong>
+Compare the description of motion provided by
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>=</mo><mi>m</mi><mi>a</mi></mrow><annotation encoding="application/x-tex">F=ma</annotation></semantics></math>
+(an "inching" differential law) with the Principle of Least Action (a
+"grand" path statement). Explain how a path-based minimum principle can
+result in a local differential equation.</li>
+<li><strong>Approximation Methods:</strong> Discuss the practical
+advantages of using minimum principles to solve complex problems in
+physics, such as finding the capacity of an irregularly shaped
+conductor. Use the example of the cylindrical condenser to explain how
+varying parameters (like
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>α</mi><annotation encoding="application/x-tex">\alpha</annotation></semantics></math>)
+improves accuracy.</li>
+<li><strong>From Quantum to Classical:</strong> Explain how the concept
+of probability amplitudes and phases leads to the classical observation
+that a particle follows a single path of least action.</li>
+</ol>
+<hr />
+<h2 id="vi-glossary-of-terms">VI. Glossary of Terms</h2>
+<ul>
+<li><strong>Action
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>S</mi><annotation encoding="application/x-tex">S</annotation></semantics></math>):</strong>
+The time integral of the Lagrangian along a path.</li>
+<li><strong>Calculus of Variations:</strong> A branch of mathematics
+concerned with finding the function (path) that minimizes or maximizes a
+specific integral.</li>
+<li><strong>Conservative System:</strong> A system in which all forces
+can be derived from a potential function, and energy is conserved (no
+friction).</li>
+<li><strong>Hamilton's First Principal Function:</strong> The technical,
+formal name for the Action.</li>
+<li><strong>Lagrangian
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">ℒ</mi><annotation encoding="application/x-tex">\mathcal{L}</annotation></semantics></math>):</strong>
+The function (typically
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>K</mi><mi>E</mi><mo>−</mo><mi>P</mi><mi>E</mi></mrow><annotation encoding="application/x-tex">KE - PE</annotation></semantics></math>)
+that is integrated over time to determine the action.</li>
+<li><strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>η</mi><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\eta(t)</annotation></semantics></math>
+(Eta of t):</strong> The symbol representing a small, arbitrary
+deviation from the true path used to test for a minimum.</li>
+<li><strong>Stationary Point:</strong> A point (or path) where the first
+derivative (or first-order variation) is zero.</li>
+</ul>
+    </article>
+  </main>
+</body>
+</html>

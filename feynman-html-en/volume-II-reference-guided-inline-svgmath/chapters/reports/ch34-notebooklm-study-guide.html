@@ -1,0 +1,317 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Study Guide: The Magnetism of Matter - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="en">
+  <script>
+    (() => {
+      const key = "flp-reader-theme";
+      const applyTheme = (theme) => {
+        const next = theme === "dark" ? "dark" : "light";
+        document.documentElement.dataset.theme = next;
+        document.body.dataset.theme = next;
+        try { localStorage.setItem(key, next); } catch (_) {}
+      };
+      try { applyTheme(localStorage.getItem(key) || "light"); } catch (_) { applyTheme("light"); }
+      document.addEventListener("click", (event) => {
+        const button = event.target.closest('[data-report-action="theme"]');
+        if (!button) return;
+        applyTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark");
+      });
+    })();
+  </script>
+<main class="notebooklm-report-shell">
+    <header aria-label="Quick navigation" class="reader-toolbar report-toolbar">
+      <div class="toolbar-group toolbar-navigation">
+        <a class="toolbar-btn" href="../ch34.html">Back to chapter</a>
+        <a class="toolbar-btn" href="../../../../feynman-reader/index.html">Reader</a>
+        <a class="toolbar-btn" href="../../index.html">Contents</a>
+      </div>
+      <a class="toolbar-title" href="../ch34.html#ch34" title="NotebookLM · Guide">NotebookLM · Guide</a>
+      <div class="toolbar-group toolbar-settings">
+        <button aria-label="Toggle theme" class="toolbar-btn icon-btn" data-report-action="theme" title="Toggle theme" type="button">◐</button>
+      </div>
+    </header>
+    <article class="notebooklm-report">
+<h1 id="study-guide-the-magnetism-of-matter">Study Guide: The Magnetism
+of Matter</h1>
+<p>This study guide explores the magnetic properties of ordinary matter,
+moving from classical interpretations of diamagnetism and paramagnetism
+to the essential quantum-mechanical foundations of magnetic
+phenomena.</p>
+<hr />
+<h2 id="key-concepts">Key Concepts</h2>
+<h3 id="1-classification-of-magnetic-materials">1. Classification of
+Magnetic Materials</h3>
+<p>Magnetism in matter is categorized by how substances respond to an
+external magnetic field:</p>
+<ul>
+<li><strong>Ferromagnetism:</strong> Exhibited by iron, nickel, cobalt,
+and gadolinium (below 16°C). These materials show strong magnetic
+effects, approximately a thousand to a million times stronger than
+ordinary magnetism.</li>
+<li><strong>Diamagnetism:</strong> A weak effect where materials are
+repelled from high-field regions. It occurs due to induced currents
+(Lenz’s Law) in atoms where internal moments initially balance out. It
+is generally independent of temperature.</li>
+<li><strong>Paramagnetism:</strong> A weak effect where materials are
+attracted to high-field regions. It occurs in atoms with permanent
+magnetic moments that attempt to line up with the field. It is sensitive
+to temperature, becoming stronger as temperature decreases.</li>
+</ul>
+<h3 id="2-the-classical-relationship-mu-and-j">2. The Classical
+Relationship:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>μ</mi><annotation encoding="application/x-tex">\mu</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>J</mi><annotation encoding="application/x-tex">J</annotation></semantics></math></h3>
+<p>In classical mechanics, there is a fixed ratio between the magnetic
+moment
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>μ</mi><annotation encoding="application/x-tex">\mu</annotation></semantics></math>)
+and the angular momentum
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>J</mi><annotation encoding="application/x-tex">J</annotation></semantics></math>)
+of a charged particle in a circular orbit:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>=</mo><mfrac><mi>q</mi><mrow><mn>2</mn><mi>m</mi></mrow></mfrac><mi>J</mi></mrow><annotation encoding="application/x-tex">\mu = \frac{q}{2m}J</annotation></semantics></math>
+For an electron with charge
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><msub><mi>q</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">-q_e</annotation></semantics></math>,
+the orbital magnetic moment is:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>=</mo><mi>−</mi><mfrac><msub><mi>q</mi><mi>e</mi></msub><mrow><mn>2</mn><mi>m</mi></mrow></mfrac><mi>J</mi></mrow><annotation encoding="application/x-tex">\mu = -\frac{q_e}{2m}J</annotation></semantics></math></p>
+<h3 id="3-precession-and-larmors-theorem">3. Precession and Larmor's
+Theorem</h3>
+<ul>
+<li><strong>Precession:</strong> An atomic magnet with angular momentum
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>J</mi><annotation encoding="application/x-tex">J</annotation></semantics></math>
+placed in a magnetic field
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>
+does not simply align; it precesses around the field axis with an
+angular velocity
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ω</mi><mi>p</mi></msub><annotation encoding="application/x-tex">\omega_p</annotation></semantics></math>:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ω</mi><mi>p</mi></msub><mo>=</mo><mfrac><mi>μ</mi><mi>J</mi></mfrac><mi>B</mi></mrow><annotation encoding="application/x-tex">\omega_p = \frac{\mu}{J}B</annotation></semantics></math></li>
+<li><strong>Larmor’s Theorem:</strong> In classical mechanics, the
+motion of a system of electrons in a weak magnetic field is equivalent
+to the original motion (with no field) plus a uniform rotation about the
+field axis at the Larmor frequency:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ω</mi><mi>L</mi></msub><mo>=</mo><mfrac><mrow><msub><mi>q</mi><mi>e</mi></msub><mi>B</mi></mrow><mrow><mn>2</mn><mi>m</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\omega_L = \frac{q_eB}{2m}</annotation></semantics></math></li>
+</ul>
+<h3 id="4-the-failure-of-classical-physics">4. The Failure of Classical
+Physics</h3>
+<p>A critical theorem in classical statistical mechanics states that in
+thermal equilibrium, the magnetic field has no effect on the average
+motion of particles. Because the energy of a system depends only on
+position and velocity, and the magnetic force
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi><mi mathvariant="bold-italic">𝒗</mi><mo>×</mo><mi mathvariant="bold-italic">𝑩</mi></mrow><annotation encoding="application/x-tex">q\mathbf{v} \times \mathbf{B}</annotation></semantics></math>)
+does no work, the probability distribution of states remains unchanged
+by a magnetic field. Consequently, <strong>classical mechanics predicts
+that matter can exhibit neither diamagnetism nor
+paramagnetism.</strong></p>
+<h3 id="5-quantum-mechanical-principles">5. Quantum Mechanical
+Principles</h3>
+<p>Quantum mechanics is required to understand magnetism. Key principles
+include:</p>
+<ul>
+<li><strong>Quantization of Angular Momentum:</strong> The
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>z</mi><annotation encoding="application/x-tex">z</annotation></semantics></math>-component
+of angular momentum
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>J</mi><mi>z</mi></msub><annotation encoding="application/x-tex">J_z</annotation></semantics></math>)
+can only take discrete values:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi><mi>ℏ</mi><mo>,</mo><mo stretchy="false" form="prefix">(</mo><mi>j</mi><mo>−</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mi>ℏ</mi><mo>,</mo><mi>…</mi><mo>,</mo><mi>−</mi><mi>j</mi><mi>ℏ</mi></mrow><annotation encoding="application/x-tex">j\hbar, (j-1)\hbar, \dots, -j\hbar</annotation></semantics></math>.</li>
+<li><strong>Spin
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math>):</strong>
+A characteristic number for a system. If
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math>
+is the spin, there are
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mi>j</mi><mo>+</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(2j+1)</annotation></semantics></math>
+possible states.</li>
+<li><strong>Landé g-factor:</strong> A dimensionless constant
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>g</mi><annotation encoding="application/x-tex">g</annotation></semantics></math>)
+that determines the ratio of magnetic moment to angular momentum:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>=</mo><mi>−</mi><mi>g</mi><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><msub><mi>q</mi><mi>e</mi></msub><mrow><mn>2</mn><mi>m</mi></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mi>J</mi></mrow><annotation encoding="application/x-tex">\mu = -g\left(\frac{q_e}{2m}\right)J</annotation></semantics></math>
+<ul>
+<li>For pure orbital motion,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">g=1</annotation></semantics></math>.</li>
+<li>For pure electron spin,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo>=</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">g=2</annotation></semantics></math>.</li>
+</ul></li>
+<li><strong>Energy Level Splitting:</strong> In a magnetic field, the
+energy of an atom splits into
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mi>j</mi><mo>+</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(2j+1)</annotation></semantics></math>
+distinct levels based on the value of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>J</mi><mi>z</mi></msub><annotation encoding="application/x-tex">J_z</annotation></semantics></math>:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>U</mi><mtext mathvariant="normal">mag</mtext></msub><mo>=</mo><mi>g</mi><msub><mi>μ</mi><mi>B</mi></msub><mi>B</mi><mfrac><msub><mi>J</mi><mi>z</mi></msub><mi>ℏ</mi></mfrac></mrow><annotation encoding="application/x-tex">U_{\text{mag}} = g \mu_B B \frac{J_z}{\hbar}</annotation></semantics></math>
+(where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>μ</mi><mi>B</mi></msub><mo>=</mo><mfrac><mrow><msub><mi>q</mi><mi>e</mi></msub><mi>ℏ</mi></mrow><mrow><mn>2</mn><mi>m</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\mu_B = \frac{q_e\hbar}{2m}</annotation></semantics></math>
+is the Bohr magneton).</li>
+</ul>
+<hr />
+<h2 id="short-answer-practice-questions">Short-Answer Practice
+Questions</h2>
+<ol type="1">
+<li><strong>Why is bismuth repelled by a magnetic field while aluminum
+is attracted?</strong>
+<ul>
+<li><em>Answer:</em> Bismuth is diamagnetic; the induced currents in its
+atoms create moments that oppose the field. Aluminum is paramagnetic;
+its atoms have permanent moments that align with the field.</li>
+</ul></li>
+<li><strong>Why does paramagnetism increase as temperature
+decreases?</strong>
+<ul>
+<li><em>Answer:</em> Thermal motion acts to derange the alignment of
+atomic moments. At lower temperatures, these collisions are less
+energetic, allowing the lining-up forces of the magnetic field to be
+more effective.</li>
+</ul></li>
+<li><strong>What is the value of the Landé g-factor for an electron's
+spin compared to its orbital motion?</strong>
+<ul>
+<li><em>Answer:</em> The
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>g</mi><annotation encoding="application/x-tex">g</annotation></semantics></math>-factor
+for electron spin is 2, which is twice the value for orbital motion
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>g</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">g=1</annotation></semantics></math>).</li>
+</ul></li>
+<li><strong>According to classical mechanics, what is the net magnetic
+moment of a system in thermal equilibrium?</strong>
+<ul>
+<li><em>Answer:</em> Zero. Classical physics concludes that there can be
+no induced magnetic moment in a system held in a box in thermal
+equilibrium.</li>
+</ul></li>
+<li><strong>How many energy states are available to a nucleus with a
+spin of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi><mo>=</mo><mn>3</mn><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">j = 3/2</annotation></semantics></math>
+in a magnetic field?</strong>
+<ul>
+<li><em>Answer:</em> Four states
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>j</mi><mo>+</mo><mn>1</mn><mo>=</mo><mn>2</mn><mo stretchy="false" form="prefix">(</mo><mn>1.5</mn><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mn>1</mn><mo>=</mo><mn>4</mn></mrow><annotation encoding="application/x-tex">2j + 1 = 2(1.5) + 1 = 4</annotation></semantics></math>).</li>
+</ul></li>
+<li><strong>What is the "Bohr magneton"?</strong>
+<ul>
+<li><em>Answer:</em> It is a physical constant defined as
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>μ</mi><mi>B</mi></msub><mo>=</mo><mfrac><mrow><msub><mi>q</mi><mi>e</mi></msub><mi>ℏ</mi></mrow><mrow><mn>2</mn><mi>m</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\mu_B = \frac{q_e\hbar}{2m}</annotation></semantics></math>,
+representing a standard unit for the magnetic moment of an
+electron.</li>
+</ul></li>
+</ol>
+<hr />
+<h2 id="common-misconceptions">Common Misconceptions</h2>
+<ul>
+<li><strong>Misconception:</strong> Magnetic effects can be fully
+explained using classical orbits of electrons.
+<ul>
+<li><strong>Reality:</strong> While classical models provide useful
+"guesses," a "legal" and correct proof of magnetism is only possible
+through quantum mechanics. Classical physics actually predicts zero
+magnetic effect in equilibrium.</li>
+</ul></li>
+<li><strong>Misconception:</strong> The magnetic moment of a neutron is
+zero because it has no net charge.
+<ul>
+<li><strong>Reality:</strong> The neutron has a spin magnetic moment
+relative to its angular momentum of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mo>⋅</mo><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mn>1.91</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">2 \cdot (-1.91)</annotation></semantics></math>.
+It behaves like a rotating negative charge despite being electrically
+neutral.</li>
+</ul></li>
+<li><strong>Misconception:</strong> In a magnetic field, an atomic
+magnet aligns itself perfectly parallel to the field.
+<ul>
+<li><strong>Reality:</strong> Because the atom has angular momentum, it
+acts as a gyroscope and precesses around the field axis. Furthermore,
+quantum mechanics dictates that the angular momentum is never
+"completely" along the field direction
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>j</mi><mi>ℏ</mi><mo>&lt;</mo><msqrt><mrow><mi>j</mi><mo stretchy="false" form="prefix">(</mo><mi>j</mi><mo>+</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow></msqrt><mi>ℏ</mi></mrow><annotation encoding="application/x-tex">j\hbar &lt; \sqrt{j(j+1)}\hbar</annotation></semantics></math>).</li>
+</ul></li>
+</ul>
+<hr />
+<h2 id="essay-prompts-for-deeper-exploration">Essay Prompts for Deeper
+Exploration</h2>
+<ol type="1">
+<li><strong>The Paradox of Classical Magnetism:</strong> Explain why the
+classical argument for the existence of diamagnetism and paramagnetism
+is ultimately contradicted by the laws of classical statistical
+mechanics. How does quantum mechanics resolve this "failure"?</li>
+<li><strong>Angular Momentum in the Quantum Realm:</strong> Discuss the
+transition from the classical view of angular momentum (as a vector that
+can point in any direction) to the quantum mechanical view (quantization
+and finite states). How does this affect our understanding of how matter
+interacts with magnetic fields?</li>
+<li><strong>Comparing Atomic and Nuclear Magnetism:</strong> Based on
+the source text, compare the magnetic moments and precession frequencies
+of atoms versus nuclei. Explain the significance of the mass difference
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>m</mi><mi>e</mi></msub><annotation encoding="application/x-tex">m_e</annotation></semantics></math>
+vs.
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>m</mi><mi>p</mi></msub><annotation encoding="application/x-tex">m_p</annotation></semantics></math>)
+and the different
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>g</mi><annotation encoding="application/x-tex">g</annotation></semantics></math>-factors
+involved.</li>
+</ol>
+<hr />
+<h2 id="glossary-of-important-terms">Glossary of Important Terms</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Term</th>
+<th style="text-align: left;">Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Bohr Magneton
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>μ</mi><mi>B</mi></msub><annotation encoding="application/x-tex">\mu_B</annotation></semantics></math>)</strong></td>
+<td style="text-align: left;">The magnitude of the magnetic moment of an
+electron:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mrow><msub><mi>q</mi><mi>e</mi></msub><mi>ℏ</mi></mrow><mrow><mn>2</mn><mi>m</mi></mrow></mfrac><annotation encoding="application/x-tex">\frac{q_e\hbar}{2m}</annotation></semantics></math>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Diamagnetism</strong></td>
+<td style="text-align: left;">A weak magnetic property where materials
+are repelled by a magnetic field; caused by induced electronic
+currents.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Ferromagnetism</strong></td>
+<td style="text-align: left;">A strong magnetic property (found in iron)
+where atomic moments line up and lock together due to quantum-mechanical
+exchange forces.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Landé g-factor</strong></td>
+<td style="text-align: left;">A dimensionless constant characterizing
+the ratio of the magnetic moment to the angular momentum for a specific
+atomic state.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Larmor Frequency
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ω</mi><mi>L</mi></msub><annotation encoding="application/x-tex">\omega_L</annotation></semantics></math>)</strong></td>
+<td style="text-align: left;">The frequency at which an electron system
+precesses in a weak magnetic field, classically given by
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mrow><msub><mi>q</mi><mi>e</mi></msub><mi>B</mi></mrow><mrow><mn>2</mn><mi>m</mi></mrow></mfrac><annotation encoding="application/x-tex">\frac{q_eB}{2m}</annotation></semantics></math>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Paramagnetism</strong></td>
+<td style="text-align: left;">A magnetic property where materials are
+attracted to a magnetic field; caused by the alignment of permanent
+atomic magnetic moments.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Precession</strong></td>
+<td style="text-align: left;">The motion of the axis of a spinning
+object (like an atom with angular momentum) around a second axis (the
+magnetic field) when a torque is applied.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Spin
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math>)</strong></td>
+<td style="text-align: left;">The total angular momentum quantum number
+of a system; determines the number of possible states
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mi>j</mi><mo>+</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(2j+1)</annotation></semantics></math>.</td>
+</tr>
+</tbody>
+</table>
+    </article>
+  </main>
+</body>
+</html>

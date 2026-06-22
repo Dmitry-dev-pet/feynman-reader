@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Study Guide: The Maxwell Equations - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="en">
+  <script>
+    (() => {
+      const key = "flp-reader-theme";
+      const applyTheme = (theme) => {
+        const next = theme === "dark" ? "dark" : "light";
+        document.documentElement.dataset.theme = next;
+        document.body.dataset.theme = next;
+        try { localStorage.setItem(key, next); } catch (_) {}
+      };
+      try { applyTheme(localStorage.getItem(key) || "light"); } catch (_) { applyTheme("light"); }
+      document.addEventListener("click", (event) => {
+        const button = event.target.closest('[data-report-action="theme"]');
+        if (!button) return;
+        applyTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark");
+      });
+    })();
+  </script>
+<main class="notebooklm-report-shell">
+    <header aria-label="Quick navigation" class="reader-toolbar report-toolbar">
+      <div class="toolbar-group toolbar-navigation">
+        <a class="toolbar-btn" href="../ch18.html">Back to chapter</a>
+        <a class="toolbar-btn" href="../../../../feynman-reader/index.html">Reader</a>
+        <a class="toolbar-btn" href="../../index.html">Contents</a>
+      </div>
+      <a class="toolbar-title" href="../ch18.html#ch18" title="NotebookLM · Guide">NotebookLM · Guide</a>
+      <div class="toolbar-group toolbar-settings">
+        <button aria-label="Toggle theme" class="toolbar-btn icon-btn" data-report-action="theme" title="Toggle theme" type="button">◐</button>
+      </div>
+    </header>
+    <article class="notebooklm-report">
+<h1 id="study-guide-the-maxwell-equations">Study Guide: The Maxwell
+Equations</h1>
+<p>This study guide explores the unification of electromagnetism as
+presented in the fundamental laws of classical physics. It focuses on
+the completeness of Maxwell’s equations, the introduction of the
+displacement current, and the subsequent prediction of electromagnetic
+waves traveling at the speed of light.</p>
+<hr />
+<h2 id="i-key-concepts">I. Key Concepts</h2>
+<h3 id="1-the-completeness-of-maxwells-equations">1. The Completeness of
+Maxwell’s Equations</h3>
+<p>The four Maxwell equations provide a complete and correct description
+of electromagnetic fields that change with time in any manner. While
+earlier chapters focused on special cases (steady currents or fixed
+charges), Chapter 18 presents the "whole truth" without
+qualifications.</p>
+<h3 id="2-maxwells-displacement-current">2. Maxwell’s Displacement
+Current</h3>
+<p>The primary addition Maxwell made to the existing laws of electricity
+and magnetism was the term
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mrow><mi>∂</mi><mi mathvariant="bold-italic">𝑬</mi></mrow><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac><annotation encoding="application/x-tex">\frac{\partial \mathbf{E}}{\partial t}</annotation></semantics></math>
+in the equation for the curl of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>.
+Before this, the law for the magnetic field of steady currents was
+simply
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mtext mathvariant="normal">curl </mtext><mspace width="0.333em"></mspace></mrow><mi mathvariant="bold-italic">𝑩</mi><mo>=</mo><mi mathvariant="bold-italic">𝒋</mi><mi>/</mi><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\text{curl } \mathbf{B} = \mathbf{j}/\epsilon_0 c^2</annotation></semantics></math>.
+Maxwell noticed a mathematical inconsistency:</p>
+<ul>
+<li>The divergence of a curl is always zero.</li>
+<li>Therefore, the divergence of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝒋</mi><annotation encoding="application/x-tex">\mathbf{j}</annotation></semantics></math>
+would have to be zero.</li>
+<li>However, the conservation of charge requires
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mtext mathvariant="normal">div </mtext><mspace width="0.333em"></mspace></mrow><mi mathvariant="bold-italic">𝒋</mi><mo>=</mo><mi>−</mi><mfrac><mrow><mi>∂</mi><mi>ρ</mi></mrow><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\text{div } \mathbf{j} = -\frac{\partial \rho}{\partial t}</annotation></semantics></math>.
+By adding the time derivative of the electric field, Maxwell ensured
+that the equations were consistent with the fundamental law that
+electric charge is conserved.</li>
+</ul>
+<h3 id="3-the-spherically-symmetric-current-paradox">3. The Spherically
+Symmetric Current Paradox</h3>
+<p>A spherically symmetric distribution of current (e.g., charge leaking
+out of a sphere) produces no magnetic field. Although a loop drawn on a
+sphere might seem to enclose a current, the rate of change of the
+electric flux through that same loop exactly cancels the effect of the
+current. This demonstrates how the new term in Maxwell’s equations
+functions in practice.</p>
+<h3 id="4-electromagnetic-waves-the-butterfly-effect">4. Electromagnetic
+Waves (The "Butterfly" Effect)</h3>
+<p>When a sheet of charge is suddenly set into motion, it generates
+electric and magnetic fields that propagate outward at a constant speed
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>c</mi><annotation encoding="application/x-tex">c</annotation></semantics></math>.</p>
+<ul>
+<li><strong>The Pulse:</strong> If the current is turned on and then
+off, a "block" of field travels through space independently of the
+source.</li>
+<li><strong>Self-Maintenance:</strong> The fields maintain themselves
+through a "perpetual interplay." A changing magnetic field produces an
+electric field (Faraday’s Law), and a changing electric field produces a
+magnetic field (Maxwell’s addition).</li>
+<li><strong>Characteristics:</strong> In these traveling waves,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+are perpendicular to each other, both are transverse (perpendicular) to
+the direction of propagation, and their magnitudes are related by
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>=</mo><mi>c</mi><mi>B</mi></mrow><annotation encoding="application/x-tex">E = cB</annotation></semantics></math>.</li>
+</ul>
+<h3 id="5-the-unification-of-light">5. The Unification of Light</h3>
+<p>By comparing the constants
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ϵ</mi><mn>0</mn></msub><annotation encoding="application/x-tex">\epsilon_0</annotation></semantics></math>
+(from electrostatics) and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\epsilon_0 c^2</annotation></semantics></math>
+(from magnetostatics), Maxwell found that
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>c</mi><annotation encoding="application/x-tex">c</annotation></semantics></math>
+equals
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3.00</mn><mo>×</mo><msup><mn>10</mn><mn>8</mn></msup></mrow><annotation encoding="application/x-tex">3.00 \times 10^8</annotation></semantics></math>
+m/s—the speed of light. This led to the conclusion that light is an
+electromagnetic phenomenon consisting of transverse undulations in the
+same medium that causes electric and magnetic effects.</p>
+<h3 id="6-potentials-and-the-wave-equation">6. Potentials and the Wave
+Equation</h3>
+<p>Electromagnetic laws can be rewritten in terms of a scalar potential
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>)
+and a vector potential
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>).
+By choosing a specific divergence for
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mtext mathvariant="normal">div </mtext><mspace width="0.333em"></mspace></mrow><mi mathvariant="bold-italic">𝑨</mi><mo>=</mo><mi>−</mi><mfrac><mn>1</mn><msup><mi>c</mi><mn>2</mn></msup></mfrac><mfrac><mrow><mi>∂</mi><mi>ϕ</mi></mrow><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\text{div } \mathbf{A} = -\frac{1}{c^2} \frac{\partial \phi}{\partial t}</annotation></semantics></math>),
+the equations for the potentials separate into a symmetric "wave
+equation" form:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>∇</mi><mn>2</mn></msup><mi>ϕ</mi><mo>−</mo><mfrac><mn>1</mn><msup><mi>c</mi><mn>2</mn></msup></mfrac><mfrac><mrow><msup><mi>∂</mi><mn>2</mn></msup><mi>ϕ</mi></mrow><mrow><mi>∂</mi><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac><mo>=</mo><mi>−</mi><mfrac><mi>ρ</mi><msub><mi>ϵ</mi><mn>0</mn></msub></mfrac></mrow><annotation encoding="application/x-tex">\nabla^2\phi - \frac{1}{c^2} \frac{\partial^2\phi}{\partial t^2} = -\frac{\rho}{\epsilon_0}</annotation></semantics></math>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>∇</mi><mn>2</mn></msup><mi mathvariant="bold-italic">𝑨</mi><mo>−</mo><mfrac><mn>1</mn><msup><mi>c</mi><mn>2</mn></msup></mfrac><mfrac><mrow><msup><mi>∂</mi><mn>2</mn></msup><mi mathvariant="bold-italic">𝑨</mi></mrow><mrow><mi>∂</mi><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac><mo>=</mo><mi>−</mi><mfrac><mi mathvariant="bold-italic">𝒋</mi><mrow><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup></mrow></mfrac></mrow><annotation encoding="application/x-tex">\nabla^2\mathbf{A} - \frac{1}{c^2} \frac{\partial^2\mathbf{A}}{\partial t^2} = -\frac{\mathbf{j}}{\epsilon_0 c^2}</annotation></semantics></math></p>
+<hr />
+<h2 id="ii-summary-table-the-laws-of-classical-physics">II. Summary
+Table: The Laws of Classical Physics</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Law</th>
+<th style="text-align: left;">Mathematical Form</th>
+<th style="text-align: left;">Verbal Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Maxwell I</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mtext mathvariant="normal">div </mtext><mspace width="0.333em"></mspace></mrow><mi mathvariant="bold-italic">𝑬</mi><mo>=</mo><mfrac><mi>ρ</mi><msub><mi>ϵ</mi><mn>0</mn></msub></mfrac></mrow><annotation encoding="application/x-tex">\text{div } \mathbf{E} = \frac{\rho}{\epsilon_0}</annotation></semantics></math></td>
+<td style="text-align: left;">Flux of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>
+through a closed surface = Charge inside /
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ϵ</mi><mn>0</mn></msub><annotation encoding="application/x-tex">\epsilon_0</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Maxwell II</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mtext mathvariant="normal">curl </mtext><mspace width="0.333em"></mspace></mrow><mi mathvariant="bold-italic">𝑬</mi><mo>=</mo><mi>−</mi><mfrac><mrow><mi>∂</mi><mi mathvariant="bold-italic">𝑩</mi></mrow><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\text{curl } \mathbf{E} = -\frac{\partial \mathbf{B}}{\partial t}</annotation></semantics></math></td>
+<td style="text-align: left;">Line integral of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>
+round a loop =
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mfrac><mi>d</mi><mrow><mi>d</mi><mi>t</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">- \frac{d}{dt}</annotation></semantics></math>
+(Flux of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+through loop)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Maxwell III</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mtext mathvariant="normal">div </mtext><mspace width="0.333em"></mspace></mrow><mi mathvariant="bold-italic">𝑩</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\text{div } \mathbf{B} = 0</annotation></semantics></math></td>
+<td style="text-align: left;">Flux of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+through a closed surface = 0</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Maxwell IV</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>c</mi><mn>2</mn></msup><mrow><mtext mathvariant="normal">curl </mtext><mspace width="0.333em"></mspace></mrow><mi mathvariant="bold-italic">𝑩</mi><mo>=</mo><mfrac><mi mathvariant="bold-italic">𝒋</mi><msub><mi>ϵ</mi><mn>0</mn></msub></mfrac><mo>+</mo><mfrac><mrow><mi>∂</mi><mi mathvariant="bold-italic">𝑬</mi></mrow><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">c^2 \text{curl } \mathbf{B} = \frac{\mathbf{j}}{\epsilon_0} + \frac{\partial \mathbf{E}}{\partial t}</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>c</mi><mn>2</mn></msup><annotation encoding="application/x-tex">c^2</annotation></semantics></math>
+(Integral of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+around loop) = (Current through
+loop)/<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ϵ</mi><mn>0</mn></msub><mo>+</mo><mfrac><mi>d</mi><mrow><mi>d</mi><mi>t</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\epsilon_0 + \frac{d}{dt}</annotation></semantics></math>
+(Flux of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>
+through loop)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Charge Conservation</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mtext mathvariant="normal">div </mtext><mspace width="0.333em"></mspace></mrow><mi mathvariant="bold-italic">𝒋</mi><mo>=</mo><mi>−</mi><mfrac><mrow><mi>∂</mi><mi>ρ</mi></mrow><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\text{div } \mathbf{j} = -\frac{\partial \rho}{\partial t}</annotation></semantics></math></td>
+<td style="text-align: left;">Flux of current through a closed surface =
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mfrac><mi>d</mi><mrow><mi>d</mi><mi>t</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">-\frac{d}{dt}</annotation></semantics></math>
+(Charge inside)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Force Law</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑭</mi><mo>=</mo><mi>q</mi><mo stretchy="false" form="prefix">(</mo><mi mathvariant="bold-italic">𝑬</mi><mo>+</mo><mi mathvariant="bold-italic">𝒗</mi><mo>×</mo><mi mathvariant="bold-italic">𝑩</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mathbf{F} = q(\mathbf{E} + \mathbf{v} \times \mathbf{B})</annotation></semantics></math></td>
+<td style="text-align: left;">Force on a charge
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>q</mi><annotation encoding="application/x-tex">q</annotation></semantics></math>
+moving with velocity
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝒗</mi><annotation encoding="application/x-tex">\mathbf{v}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Law of Motion</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mi>d</mi><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo stretchy="false" form="prefix">(</mo><mi mathvariant="bold-italic">𝒑</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi mathvariant="bold-italic">𝑭</mi></mrow><annotation encoding="application/x-tex">\frac{d}{dt}(\mathbf{p}) = \mathbf{F}</annotation></semantics></math></td>
+<td style="text-align: left;">Newton’s law with Einstein’s relativistic
+momentum</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="iii-common-misconceptions">III. Common Misconceptions</h2>
+<ul>
+<li><strong>"Steady-state equations are always true":</strong> Equations
+like
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mtext mathvariant="normal">curl </mtext><mspace width="0.333em"></mspace></mrow><mi mathvariant="bold-italic">𝑩</mi><mo>=</mo><mi mathvariant="bold-italic">𝒋</mi><mi>/</mi><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\text{curl } \mathbf{B} = \mathbf{j}/\epsilon_0 c^2</annotation></semantics></math>
+are only true for steady currents. Maxwell's addition is required for
+all dynamic situations.</li>
+<li><strong>"The magnetic field of a current is instantaneous":</strong>
+Changes in a magnetic field do not appear everywhere at once. They
+propagate outward at the finite speed
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>c</mi><annotation encoding="application/x-tex">c</annotation></semantics></math>.</li>
+<li><strong>"Light is a separate branch of physics":</strong> Light is
+not "something else"; it is specifically a set of electric and magnetic
+fields propagating through space.</li>
+<li><strong>"A model is necessary to validate the equations":</strong>
+Maxwell originally used a mechanical model of an elastic solid to derive
+his equations, but the equations stand on their own. Their validity is
+determined by experiment, not the "scaffolding" used to build them.</li>
+</ul>
+<hr />
+<h2 id="iv-short-answer-self-check-questions">IV. Short-Answer
+Self-Check Questions</h2>
+<ol type="1">
+<li><strong>Why is the divergence of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mtext mathvariant="normal">curl </mtext><mspace width="0.333em"></mspace></mrow><mi mathvariant="bold-italic">𝑩</mi></mrow><annotation encoding="application/x-tex">\text{curl } \mathbf{B}</annotation></semantics></math>
+always zero?</strong> It is a mathematical identity; the divergence of
+any curl is zero.</li>
+<li><strong>What physical law is expressed by the equation
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mtext mathvariant="normal">div </mtext><mspace width="0.333em"></mspace></mrow><mi mathvariant="bold-italic">𝒋</mi><mo>=</mo><mi>−</mi><mfrac><mrow><mi>∂</mi><mi>ρ</mi></mrow><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\text{div } \mathbf{j} = -\frac{\partial \rho}{\partial t}</annotation></semantics></math>?</strong>
+The conservation of electric charge.</li>
+<li><strong>How did Maxwell fix the inconsistency in the steady-current
+equation for
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mtext mathvariant="normal">curl </mtext><mspace width="0.333em"></mspace></mrow><mi mathvariant="bold-italic">𝑩</mi></mrow><annotation encoding="application/x-tex">\text{curl } \mathbf{B}</annotation></semantics></math>?</strong>
+He added the term
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mrow><mi>∂</mi><mi mathvariant="bold-italic">𝑬</mi></mrow><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac><annotation encoding="application/x-tex">\frac{\partial \mathbf{E}}{\partial t}</annotation></semantics></math>
+to the right-hand side.</li>
+<li><strong>In the example of the charging capacitor, how is the
+magnetic field maintained between the plates where there is no
+wire?</strong> It is produced by the changing electric flux between the
+plates.</li>
+<li><strong>What happens to the magnetic field of a spherically
+symmetric current?</strong> It is zero everywhere because the current
+and the changing electric field cancel each other out as sources for
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mtext mathvariant="normal">curl </mtext><mspace width="0.333em"></mspace></mrow><mi mathvariant="bold-italic">𝑩</mi></mrow><annotation encoding="application/x-tex">\text{curl } \mathbf{B}</annotation></semantics></math>.</li>
+<li><strong>At what velocity does an electromagnetic wavefront
+travel?</strong> It travels at the speed
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>c</mi><annotation encoding="application/x-tex">c</annotation></semantics></math>.</li>
+<li><strong>What are the three general characteristics of any
+electromagnetic wave in free space?</strong> 1)
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+are transverse to the direction of motion; 2)
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+is perpendicular to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>;
+3)
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>=</mo><mi>c</mi><mi>B</mi></mrow><annotation encoding="application/x-tex">E = cB</annotation></semantics></math>.</li>
+<li><strong>How can electromagnetic fields exist in free space without a
+source?</strong> They maintain themselves through a "dance" where the
+changing
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+creates an
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>,
+and the changing
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>
+creates a
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>.</li>
+</ol>
+<hr />
+<h2 id="v-essay-prompts-for-deeper-exploration">V. Essay Prompts for
+Deeper Exploration</h2>
+<ol type="1">
+<li><strong>The Interdependence of Maxwell’s Equations and Charge
+Conservation:</strong> Explain the mathematical necessity of Maxwell's
+addition to Ampère's Law. How does this addition reconcile the behavior
+of electric currents with the principle that charge cannot be created or
+destroyed?</li>
+<li><strong>The Philosophical Shift from Models to Equations:</strong>
+Feynman notes that Maxwell used a mechanical "scaffolding" to build his
+theory which is now discarded. Discuss the importance of the equations
+themselves versus the physical models used to visualize them. Why are
+experiments the ultimate arbiter of truth in this context?</li>
+<li><strong>The Unification of Light and Electromagnetism:</strong>
+Describe the experimental process of determining the constant
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>c</mi><annotation encoding="application/x-tex">c</annotation></semantics></math>
+using only static measurements of charges and currents. How did this
+lead to the discovery that light is an electromagnetic wave?</li>
+<li><strong>The Transition to Potential Functions:</strong> Analyze the
+benefits of describing electromagnetism using the scalar potential
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>
+and vector potential
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>
+instead of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>.
+How does the choice of gauge (the divergence of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>)
+simplify the resulting wave equations?</li>
+</ol>
+<hr />
+<h2 id="vi-glossary-of-important-terms">VI. Glossary of Important
+Terms</h2>
+<ul>
+<li><strong>Curl:</strong> A mathematical operation representing the
+rotation or circulation of a vector field.</li>
+<li><strong>Divergence:</strong> A mathematical operation representing
+the flux of a vector field out of a point.</li>
+<li><strong>Electromagnetic Wave:</strong> A self-propagating bundle of
+electric and magnetic fields that travels through space at the speed of
+light.</li>
+<li><strong>Faraday’s Law:</strong> The law stating that a changing
+magnetic field produces an electric field
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mtext mathvariant="normal">curl </mtext><mspace width="0.333em"></mspace></mrow><mi mathvariant="bold-italic">𝑬</mi><mo>=</mo><mi>−</mi><mi>∂</mi><mi mathvariant="bold-italic">𝑩</mi><mi>/</mi><mi>∂</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">\text{curl } \mathbf{E} = -\partial \mathbf{B}/\partial t</annotation></semantics></math>).</li>
+<li><strong>Gauss’ Law:</strong> The law stating that the flux of the
+electric field through a closed surface is proportional to the charge
+inside.</li>
+<li><strong>Lorentz Force Law:</strong> The law defining the force on a
+charge moving through electric and magnetic fields
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑭</mi><mo>=</mo><mi>q</mi><mo stretchy="false" form="prefix">(</mo><mi mathvariant="bold-italic">𝑬</mi><mo>+</mo><mi mathvariant="bold-italic">𝒗</mi><mo>×</mo><mi mathvariant="bold-italic">𝑩</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mathbf{F} = q(\mathbf{E} + \mathbf{v} \times \mathbf{B})</annotation></semantics></math>).</li>
+<li><strong>Scalar Potential
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>):</strong>
+A scalar field used to help determine the electric field.</li>
+<li><strong>Vector Potential
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>):</strong>
+A vector field whose curl is the magnetic field
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑩</mi><mo>=</mo><mrow><mtext mathvariant="normal">curl </mtext><mspace width="0.333em"></mspace></mrow><mi mathvariant="bold-italic">𝑨</mi></mrow><annotation encoding="application/x-tex">\mathbf{B} = \text{curl } \mathbf{A}</annotation></semantics></math>).</li>
+<li><strong>Wave Equation:</strong> A second-order partial differential
+equation that describes how waves (including electromagnetic waves)
+propagate through a medium or vacuum.</li>
+</ul>
+    </article>
+  </main>
+</body>
+</html>

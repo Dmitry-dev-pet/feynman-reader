@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Refractive Index of Dense Materials: Study Guide - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="en">
+  <script>
+    (() => {
+      const key = "flp-reader-theme";
+      const applyTheme = (theme) => {
+        const next = theme === "dark" ? "dark" : "light";
+        document.documentElement.dataset.theme = next;
+        document.body.dataset.theme = next;
+        try { localStorage.setItem(key, next); } catch (_) {}
+      };
+      try { applyTheme(localStorage.getItem(key) || "light"); } catch (_) { applyTheme("light"); }
+      document.addEventListener("click", (event) => {
+        const button = event.target.closest('[data-report-action="theme"]');
+        if (!button) return;
+        applyTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark");
+      });
+    })();
+  </script>
+<main class="notebooklm-report-shell">
+    <header aria-label="Quick navigation" class="reader-toolbar report-toolbar">
+      <div class="toolbar-group toolbar-navigation">
+        <a class="toolbar-btn" href="../ch32.html">Back to chapter</a>
+        <a class="toolbar-btn" href="../../../../feynman-reader/index.html">Reader</a>
+        <a class="toolbar-btn" href="../../index.html">Contents</a>
+      </div>
+      <a class="toolbar-title" href="../ch32.html#ch32" title="NotebookLM · Guide">NotebookLM · Guide</a>
+      <div class="toolbar-group toolbar-settings">
+        <button aria-label="Toggle theme" class="toolbar-btn icon-btn" data-report-action="theme" title="Toggle theme" type="button">◐</button>
+      </div>
+    </header>
+    <article class="notebooklm-report">
+<h1 id="refractive-index-of-dense-materials-study-guide">Refractive
+Index of Dense Materials: Study Guide</h1>
+<p>This study guide explores the physics of the refraction and
+absorption of light in dense materials, as well as the behavior of
+electromagnetic waves in metals. It synthesizes principles of
+polarization, Maxwell’s equations in dielectrics, and the
+frequency-dependent behavior of conduction electrons.</p>
+<hr />
+<h2 id="i-key-concepts-and-theory">I. Key Concepts and Theory</h2>
+<h3 id="1-the-mechanism-of-polarization">1. The Mechanism of
+Polarization</h3>
+<p>In dense materials, light propagation is governed by the interaction
+between the electric field of the light wave and the charges within the
+material.</p>
+<ul>
+<li><strong>Oscillating Dipoles:</strong> The electric field of a light
+wave polarizes molecules, creating oscillating dipole moments. These
+accelerated charges radiate new waves.</li>
+<li><strong>Phase Shift:</strong> The interference between the original
+field and the re-radiated field results in a phase shift. This shift,
+being proportional to the material thickness, manifests as a change in
+phase velocity, defining the index of refraction
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>).</li>
+<li><strong>Atomic Polarizability
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>α</mi><annotation encoding="application/x-tex">\alpha</annotation></semantics></math>):</strong>
+This represents the proportionality between the induced dipole moment
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math>)
+and the electric field
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math>).
+In a harmonic oscillator model:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi><mo stretchy="false" form="prefix">(</mo><mi>ω</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><mrow><msubsup><mi>q</mi><mi>e</mi><mn>2</mn></msubsup><mi>/</mi><msub><mi>ϵ</mi><mn>0</mn></msub><mi>m</mi></mrow><mrow><mi>−</mi><msup><mi>ω</mi><mn>2</mn></msup><mo>+</mo><mi>i</mi><mi>γ</mi><mi>ω</mi><mo>+</mo><msubsup><mi>ω</mi><mn>0</mn><mn>2</mn></msubsup></mrow></mfrac></mrow><annotation encoding="application/x-tex">\alpha(\omega)=\frac{q_e^2/\epsilon_0 m}{-\omega^2+i\gamma\omega+\omega_0^2}</annotation></semantics></math>
+Quantum mechanical models modify this to include multiple natural
+frequencies
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ω</mi><mrow><mn>0</mn><mi>k</mi></mrow></msub><annotation encoding="application/x-tex">\omega_{0k}</annotation></semantics></math>),
+dissipation constants
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>γ</mi><mi>k</mi></msub><annotation encoding="application/x-tex">\gamma_k</annotation></semantics></math>),
+and strength factors
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mi>k</mi></msub><annotation encoding="application/x-tex">f_k</annotation></semantics></math>).</li>
+</ul>
+<h3 id="2-maxwells-equations-in-dielectrics">2. Maxwell’s Equations in
+Dielectrics</h3>
+<p>When treating waves in matter, Maxwell’s equations must account for
+polarization charges
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ρ</mi><mrow><mi>p</mi><mi>o</mi><mi>l</mi></mrow></msub><annotation encoding="application/x-tex">\rho_{pol}</annotation></semantics></math>)
+and currents
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="bold-italic">𝒋</mi><mrow><mi>p</mi><mi>o</mi><mi>l</mi></mrow></msub><annotation encoding="application/x-tex">\mathbf{j}_{pol}</annotation></semantics></math>).</p>
+<ul>
+<li><strong>Polarization Charge:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ρ</mi><mtext mathvariant="normal">pol</mtext></msub><mo>=</mo><mi>−</mi><mtext mathvariant="normal">div</mtext><mi mathvariant="bold-italic">𝑷</mi></mrow><annotation encoding="application/x-tex">\rho_{\text{pol}}=-\text{div}\mathbf{P}</annotation></semantics></math></li>
+<li><strong>Polarization Current:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="bold-italic">𝒋</mi><mtext mathvariant="normal">pol</mtext></msub><mo>=</mo><mi>∂</mi><mi mathvariant="bold-italic">𝑷</mi><mi>/</mi><mi>∂</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">\mathbf{j}_{\text{pol}}=\partial \mathbf{P}/\partial t</annotation></semantics></math></li>
+<li><strong>The Auxiliary Vectors
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑫</mi><annotation encoding="application/x-tex">\mathbf{D}</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑯</mi><annotation encoding="application/x-tex">\mathbf{H}</annotation></semantics></math>):</strong>
+Historically, Maxwell used
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑫</mi><mo>=</mo><msub><mi>ϵ</mi><mn>0</mn></msub><mi mathvariant="bold-italic">𝑬</mi><mo>+</mo><mi mathvariant="bold-italic">𝑷</mi></mrow><annotation encoding="application/x-tex">\mathbf{D} = \epsilon_0\mathbf{E} + \mathbf{P}</annotation></semantics></math>
+to simplify equations by separating "bound" charges from "other" (free)
+charges. While modern physics prefers fundamental fields, these vectors
+remain common in literature.</li>
+</ul>
+<h3 id="3-dense-materials-and-the-local-field">3. Dense Materials and
+the Local Field</h3>
+<p>In rarefied gases, the field acting on an atom is simply the incoming
+wave. In dense materials, the field produced by neighboring atoms is
+significant.</p>
+<ul>
+<li><strong>Local Field
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>E</mi><mrow><mi>l</mi><mi>o</mi><mi>c</mi><mi>a</mi><mi>l</mi></mrow></msub><annotation encoding="application/x-tex">E_{local}</annotation></semantics></math>):</strong>
+For isotropic materials, the field at a single atom is increased by the
+surrounding polarization:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mtext mathvariant="normal">local</mtext></msub><mo>=</mo><mi>E</mi><mo>+</mo><mfrac><mi>P</mi><mrow><mn>3</mn><msub><mi>ϵ</mi><mn>0</mn></msub></mrow></mfrac></mrow><annotation encoding="application/x-tex">E_{\text{local}}=E+\frac{P}{3\epsilon_0}</annotation></semantics></math></li>
+<li><strong>Clausius-Mossotti Equation:</strong> This relates the
+macroscopic index of refraction to atomic polarizability in dense
+materials:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><msup><mi>n</mi><mn>2</mn></msup><mo>−</mo><mn>1</mn></mrow><mrow><msup><mi>n</mi><mn>2</mn></msup><mo>+</mo><mn>2</mn></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo>=</mo><munder><mo>∑</mo><mi>j</mi></munder><msub><mi>N</mi><mi>j</mi></msub><msub><mi>α</mi><mi>j</mi></msub></mrow><annotation encoding="application/x-tex">3\left(\frac{n^2-1}{n^2+2}\right)=\sum_j N_j\alpha_j</annotation></semantics></math></li>
+</ul>
+<h3 id="4-the-complex-index-of-refraction">4. The Complex Index of
+Refraction</h3>
+<p>The refractive index is generally a complex number:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><msub><mi>n</mi><mi>R</mi></msub><mo>−</mo><mi>i</mi><msub><mi>n</mi><mi>I</mi></msub></mrow><annotation encoding="application/x-tex">n = n_R - in_I</annotation></semantics></math>.</p>
+<ul>
+<li><strong>Real Part
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>n</mi><mi>R</mi></msub><annotation encoding="application/x-tex">n_R</annotation></semantics></math>):</strong>
+Represents the phase velocity
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>v</mi><mrow><mi>p</mi><mi>h</mi></mrow></msub><mo>=</mo><mi>c</mi><mi>/</mi><msub><mi>n</mi><mi>R</mi></msub></mrow><annotation encoding="application/x-tex">v_{ph} = c/n_R</annotation></semantics></math>).</li>
+<li><strong>Imaginary Part
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>n</mi><mi>I</mi></msub><annotation encoding="application/x-tex">n_I</annotation></semantics></math>):</strong>
+Represents the attenuation or absorption of the wave as it travels.</li>
+<li><strong>Absorption Coefficient
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>β</mi><annotation encoding="application/x-tex">\beta</annotation></semantics></math>):</strong>
+The intensity of the wave decreases as
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>−</mi><mi>β</mi><mi>z</mi></mrow></msup><annotation encoding="application/x-tex">e^{-\beta z}</annotation></semantics></math>,
+where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>β</mi><mo>=</mo><mn>2</mn><mi>ω</mi><msub><mi>n</mi><mi>I</mi></msub><mi>/</mi><mi>c</mi></mrow><annotation encoding="application/x-tex">\beta = 2\omega n_I/c</annotation></semantics></math>.</li>
+</ul>
+<h3 id="5-waves-in-metals">5. Waves in Metals</h3>
+<p>Metals are characterized by "free" conduction electrons with no
+restoring force
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ω</mi><mn>0</mn></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\omega_0 = 0</annotation></semantics></math>).</p>
+<ul>
+<li><strong>Conductivity
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>σ</mi><annotation encoding="application/x-tex">\sigma</annotation></semantics></math>):</strong>
+Relates the current density to the electric field
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝒋</mi><mo>=</mo><mi>σ</mi><mi mathvariant="bold-italic">𝑬</mi></mrow><annotation encoding="application/x-tex">\mathbf{j} = \sigma\mathbf{E}</annotation></semantics></math>).
+It is defined by the number of electrons
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>N</mi><annotation encoding="application/x-tex">N</annotation></semantics></math>),
+their charge
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>q</mi><mi>e</mi></msub><annotation encoding="application/x-tex">q_e</annotation></semantics></math>),
+mass
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math>),
+and the mean time between collisions
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>τ</mi><annotation encoding="application/x-tex">\tau</annotation></semantics></math>):
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>σ</mi><mo>=</mo><mfrac><mrow><mi>N</mi><msubsup><mi>q</mi><mi>e</mi><mn>2</mn></msubsup><mi>τ</mi></mrow><mi>m</mi></mfrac></mrow><annotation encoding="application/x-tex">\sigma=\frac{Nq_e^2\tau}{m}</annotation></semantics></math></li>
+<li><strong>Skin Depth
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>δ</mi><annotation encoding="application/x-tex">\delta</annotation></semantics></math>):</strong>
+At low frequencies, electromagnetic waves penetrate only a very short
+distance into a metal:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>δ</mi><mo>=</mo><msqrt><mrow><mn>2</mn><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup><mi>/</mi><mi>σ</mi><mi>ω</mi></mrow></msqrt></mrow><annotation encoding="application/x-tex">\delta=\sqrt{2\epsilon_0 c^2/\sigma\omega}</annotation></semantics></math></li>
+<li><strong>Plasma Frequency
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ω</mi><mi>p</mi></msub><annotation encoding="application/x-tex">\omega_p</annotation></semantics></math>):</strong>
+A critical frequency defined as
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>ω</mi><mi>p</mi><mn>2</mn></msubsup><mo>=</mo><mi>N</mi><msubsup><mi>q</mi><mi>e</mi><mn>2</mn></msubsup><mi>/</mi><msub><mi>ϵ</mi><mn>0</mn></msub><mi>m</mi></mrow><annotation encoding="application/x-tex">\omega_p^2 = Nq_e^2/\epsilon_0 m</annotation></semantics></math>.
+<ul>
+<li><strong>If
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ω</mi><mo>&lt;</mo><msub><mi>ω</mi><mi>p</mi></msub></mrow><annotation encoding="application/x-tex">\omega &lt; \omega_p</annotation></semantics></math>:</strong>
+The index has a large imaginary part; the metal reflects or absorbs the
+wave.</li>
+<li><strong>If
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ω</mi><mo>&gt;</mo><msub><mi>ω</mi><mi>p</mi></msub></mrow><annotation encoding="application/x-tex">\omega &gt; \omega_p</annotation></semantics></math>:</strong>
+The index becomes real; the metal becomes transparent (e.g., to X-rays
+or ultraviolet light).</li>
+</ul></li>
+</ul>
+<hr />
+<h2 id="ii-short-answer-practice-questions">II. Short-Answer Practice
+Questions</h2>
+<ol type="1">
+<li><strong>Why is the refractive index for dense materials different
+from that of gases?</strong> <em>Answer:</em> In dense materials, the
+"local field" at an atom includes the field from neighboring polarized
+atoms, not just the external field. Additionally, strong interactions
+between close atoms modify natural oscillation frequencies and
+damping.</li>
+<li><strong>What does a complex index of refraction
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><msub><mi>n</mi><mi>R</mi></msub><mo>−</mo><mi>i</mi><msub><mi>n</mi><mi>I</mi></msub></mrow><annotation encoding="application/x-tex">n = n_R - in_I</annotation></semantics></math>
+physically imply about a material?</strong> <em>Answer:</em>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>n</mi><mi>R</mi></msub><annotation encoding="application/x-tex">n_R</annotation></semantics></math>
+determines the speed of the wave in the medium, while
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>n</mi><mi>I</mi></msub><annotation encoding="application/x-tex">n_I</annotation></semantics></math>
+determines the rate at which the wave's amplitude is attenuated
+(absorbed) as it propagates.</li>
+<li><strong>How is the "skin depth" in a metal affected by
+frequency?</strong> <em>Answer:</em> The skin depth
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>δ</mi><annotation encoding="application/x-tex">\delta</annotation></semantics></math>
+is inversely proportional to the square root of the frequency
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ω</mi><annotation encoding="application/x-tex">\omega</annotation></semantics></math>).
+Higher frequencies result in a shallower skin depth, meaning the wave
+penetrates less into the metal.</li>
+<li><strong>Under what condition does a metal become transparent to
+electromagnetic radiation?</strong> <em>Answer:</em> A metal becomes
+transparent when the frequency of the radiation
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ω</mi><annotation encoding="application/x-tex">\omega</annotation></semantics></math>)
+is significantly higher than the metal's plasma frequency
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ω</mi><mi>p</mi></msub><annotation encoding="application/x-tex">\omega_p</annotation></semantics></math>).</li>
+<li><strong>What is the significance of the Clausius-Mossotti
+equation?</strong> <em>Answer:</em> It provides a mathematical bridge
+between the microscopic property of atomic polarizability
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>α</mi><annotation encoding="application/x-tex">\alpha</annotation></semantics></math>)
+and the macroscopic measurable property of the refractive index
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>)
+in dense isotropic materials.</li>
+</ol>
+<hr />
+<h2 id="iii-deep-exploration-essay-prompts">III. Deep Exploration: Essay
+Prompts</h2>
+<ol type="1">
+<li><strong>The Evolution of Maxwell’s Equations:</strong> Discuss the
+historical development of the vectors
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑫</mi><annotation encoding="application/x-tex">\mathbf{D}</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑯</mi><annotation encoding="application/x-tex">\mathbf{H}</annotation></semantics></math>.
+Why did Maxwell introduce them, and why does modern physics often prefer
+to work with fundamental fields
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>)
+and explicit polarization
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑷</mi><annotation encoding="application/x-tex">\mathbf{P}</annotation></semantics></math>)?</li>
+<li><strong>The Physical Nature of Absorption:</strong> Explain how the
+harmonic oscillator model accounts for both the bending of light
+(refraction) and its disappearance (absorption). How does the
+dissipation constant
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>γ</mi><annotation encoding="application/x-tex">\gamma</annotation></semantics></math>)
+bridge these two phenomena?</li>
+<li><strong>Universality of Plasma Frequency:</strong> The concept of
+plasma frequency applies to metals, the ionosphere, and stellar
+atmospheres. Compare and contrast how this frequency determines radio
+wave propagation in the earth’s atmosphere versus X-ray transmission
+through a copper sheet.</li>
+</ol>
+<hr />
+<h2 id="iv-common-misconceptions">IV. Common Misconceptions</h2>
+<ul>
+<li><strong>Misconception: The index of refraction is a constant value
+for a given material.</strong>
+<ul>
+<li><em>Correction:</em> The index of refraction is highly dependent on
+frequency
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ω</mi><annotation encoding="application/x-tex">\omega</annotation></semantics></math>).
+A material that is transparent at visible frequencies (like glass) may
+be opaque at others, and metals that reflect visible light can be
+transparent to X-rays.</li>
+</ul></li>
+<li><strong>Misconception: The electric field acting on an atom in a
+solid is the same as the macroscopic electric field measured in the
+material.</strong>
+<ul>
+<li><em>Correction:</em> In dense materials, the "local field" is
+usually stronger than the average field because of the contribution from
+the polarization of nearby atoms.</li>
+</ul></li>
+<li><strong>Misconception: Metals completely block all electromagnetic
+waves.</strong>
+<ul>
+<li><em>Correction:</em> Metals only block waves effectively when the
+frequency is below the plasma frequency. Even then, waves penetrate to a
+finite "skin depth." If a metal film is thinner than the skin depth, it
+can be partially transparent (e.g., gold-coated goggles).</li>
+</ul></li>
+</ul>
+<hr />
+<h2 id="v-data-table-transparency-of-metals">V. Data Table: Transparency
+of Metals</h2>
+<p>The following table compares the experimentally observed wavelengths
+at which certain metals become transparent against the calculated
+critical plasma wavelength
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>λ</mi><mi>p</mi></msub><annotation encoding="application/x-tex">\lambda_p</annotation></semantics></math>).</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Metal</th>
+<th style="text-align: left;">Experimental
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>λ</mi><annotation encoding="application/x-tex">\lambda</annotation></semantics></math>
+(Å)</th>
+<th style="text-align: left;">Calculated
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>λ</mi><mi>p</mi></msub><annotation encoding="application/x-tex">\lambda_p</annotation></semantics></math>
+(Å)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">Lithium (Li)</td>
+<td style="text-align: left;">1550</td>
+<td style="text-align: left;">1550</td>
+</tr>
+<tr>
+<td style="text-align: left;">Sodium (Na)</td>
+<td style="text-align: left;">2100</td>
+<td style="text-align: left;">2090</td>
+</tr>
+<tr>
+<td style="text-align: left;">Potassium (K)</td>
+<td style="text-align: left;">3150</td>
+<td style="text-align: left;">2870</td>
+</tr>
+<tr>
+<td style="text-align: left;">Rubidium (Rb)</td>
+<td style="text-align: left;">3400</td>
+<td style="text-align: left;">3220</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="vi-glossary-of-important-terms">VI. Glossary of Important
+Terms</h2>
+<ul>
+<li><strong>Absorption Coefficient
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>β</mi><annotation encoding="application/x-tex">\beta</annotation></semantics></math>):</strong>
+A measure of the rate of decrease in the intensity of a wave as it
+passes through a substance.</li>
+<li><strong>Atomic Polarizability
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>α</mi><annotation encoding="application/x-tex">\alpha</annotation></semantics></math>):</strong>
+The measure of how easily an electron cloud around an atom can be
+displaced by an electric field.</li>
+<li><strong>Clausius-Mossotti Equation:</strong> A formula relating the
+refractive index of a substance to the polarizability of its constituent
+atoms/molecules.</li>
+<li><strong>Conductivity
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>σ</mi><annotation encoding="application/x-tex">\sigma</annotation></semantics></math>):</strong>
+The ratio of the current density to the electric field in a
+material.</li>
+<li><strong>D’Alembertian:</strong> A differential operator used in the
+wave equation, representing the variation of a field in space and
+time.</li>
+<li><strong>Isotropic:</strong> A material having physical properties
+(like refractive index) that are the same in all directions.</li>
+<li><strong>Local Field:</strong> The actual electric field acting on an
+individual atom inside a dielectric, consisting of the external field
+plus the fields from surrounding dipoles.</li>
+<li><strong>Plasma Frequency
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ω</mi><mi>p</mi></msub><annotation encoding="application/x-tex">\omega_p</annotation></semantics></math>):</strong>
+The natural frequency of density oscillations of free electrons in a
+conductor or plasma.</li>
+<li><strong>Skin Depth
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>δ</mi><annotation encoding="application/x-tex">\delta</annotation></semantics></math>):</strong>
+The distance into a conductor at which the amplitude of an
+electromagnetic wave decreases by a factor of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mi>e</mi></mrow><annotation encoding="application/x-tex">1/e</annotation></semantics></math>.</li>
+<li><strong>Tau
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>τ</mi><annotation encoding="application/x-tex">\tau</annotation></semantics></math>):</strong>
+The average time between collisions for a conduction electron in a
+metal.</li>
+</ul>
+    </article>
+  </main>
+</body>
+</html>

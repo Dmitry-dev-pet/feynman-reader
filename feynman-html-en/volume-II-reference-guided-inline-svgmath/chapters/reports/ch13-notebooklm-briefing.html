@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Magnetostatics: Principles, Fields, and Relativistic Foundations - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="en">
+  <script>
+    (() => {
+      const key = "flp-reader-theme";
+      const applyTheme = (theme) => {
+        const next = theme === "dark" ? "dark" : "light";
+        document.documentElement.dataset.theme = next;
+        document.body.dataset.theme = next;
+        try { localStorage.setItem(key, next); } catch (_) {}
+      };
+      try { applyTheme(localStorage.getItem(key) || "light"); } catch (_) { applyTheme("light"); }
+      document.addEventListener("click", (event) => {
+        const button = event.target.closest('[data-report-action="theme"]');
+        if (!button) return;
+        applyTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark");
+      });
+    })();
+  </script>
+<main class="notebooklm-report-shell">
+    <header aria-label="Quick navigation" class="reader-toolbar report-toolbar">
+      <div class="toolbar-group toolbar-navigation">
+        <a class="toolbar-btn" href="../ch13.html">Back to chapter</a>
+        <a class="toolbar-btn" href="../../../../feynman-reader/index.html">Reader</a>
+        <a class="toolbar-btn" href="../../index.html">Contents</a>
+      </div>
+      <a class="toolbar-title" href="../ch13.html#ch13" title="NotebookLM · Overview">NotebookLM · Overview</a>
+      <div class="toolbar-group toolbar-settings">
+        <button aria-label="Toggle theme" class="toolbar-btn icon-btn" data-report-action="theme" title="Toggle theme" type="button">◐</button>
+      </div>
+    </header>
+    <article class="notebooklm-report">
+<h1
+id="magnetostatics-principles-fields-and-relativistic-foundations">Magnetostatics:
+Principles, Fields, and Relativistic Foundations</h1>
+<p>This briefing document provides an analytical overview of the
+principles of magnetostatics, the behavior of steady electric currents,
+and the fundamental relativistic relationship between electric and
+magnetic fields. It synthesizes the core themes of electromagnetic
+force, current conservation, and the mathematical laws governing
+magnetic fields.</p>
+<hr />
+<h2 id="executive-summary">Executive Summary</h2>
+<p>Magnetostatics is the study of magnetic fields produced by steady
+electric currents. While electrostatics deals with forces independent of
+motion, magnetostatics addresses the velocity-dependent component of the
+electromagnetic force. This document outlines the Lorentz force, the
+definition of current density, and the application of Ampère's Law in
+symmetrical systems. Furthermore, it explores the profound insight that
+magnetism is not a separate phenomenon from electricity but a
+relativistic effect arising from the motion of charges. Through the lens
+of Einstein’s relativity, magnetic forces in one reference frame can be
+understood as electric forces in another, demonstrating the unified
+nature of the electromagnetic field.</p>
+<hr />
+<h2 id="1-the-nature-of-the-magnetic-field-and-force">1. The Nature of
+the Magnetic Field and Force</h2>
+<p>The force on an electric charge is determined by its position and its
+velocity. Every point in space is characterized by an electric field
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>)
+and a magnetic field
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>).</p>
+<h3 id="the-lorentz-force">The Lorentz Force</h3>
+<p>The total electromagnetic force on a charge
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>q</mi><annotation encoding="application/x-tex">q</annotation></semantics></math>
+is described by the Lorentz force equation:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑭</mi><mo>=</mo><mi>q</mi><mo stretchy="false" form="prefix">(</mo><mi mathvariant="bold-italic">𝑬</mi><mo>+</mo><mi mathvariant="bold-italic">𝒗</mi><mo>×</mo><mi mathvariant="bold-italic">𝑩</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mathbf{F}=q(\mathbf{E}+\mathbf{v}\times\mathbf{B})</annotation></semantics></math></p>
+<p>The magnetic component,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi><mo stretchy="false" form="prefix">(</mo><mi mathvariant="bold-italic">𝒗</mi><mo>×</mo><mi mathvariant="bold-italic">𝑩</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">q(\mathbf{v}\times\mathbf{B})</annotation></semantics></math>,
+possesses unique characteristics:</p>
+<ul>
+<li><strong>Directionality:</strong> The force is always at right angles
+to both the velocity vector
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝒗</mi><annotation encoding="application/x-tex">\mathbf{v}</annotation></semantics></math>)
+and the magnetic field vector
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>).</li>
+<li><strong>Magnitude:</strong> The force is proportional to the
+component of the velocity at right angles to the magnetic field
+(proportional to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mi>θ</mi></mrow><annotation encoding="application/x-tex">v \sin\theta</annotation></semantics></math>).</li>
+<li><strong>Units:</strong> The unit of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+is the Newton-second per Coulomb-meter, also referred to as the Weber
+per square meter or Volt-second per square meter.</li>
+</ul>
+<p><strong>Physical Meaning:</strong> As illustrated in Fig. 13–1, the
+magnetic force does not act in the direction of motion but transverse to
+it. This is demonstrated by the deflection of electron beams in a
+cathode-ray tube when a magnet is nearby.</p>
+<hr />
+<h2 id="2-electric-current-and-charge-conservation">2. Electric Current
+and Charge Conservation</h2>
+<p>Magnetic forces on wires are understood through the concept of
+current density
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝒋</mi><annotation encoding="application/x-tex">\mathbf{j}</annotation></semantics></math>),
+which represents the flow of charge.</p>
+<h3 id="key-definitions-and-formulas">Key Definitions and Formulas</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Concept</th>
+<th style="text-align: left;">Formula</th>
+<th style="text-align: left;">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Current Density</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝒋</mi><mo>=</mo><mi>ρ</mi><mi mathvariant="bold-italic">𝒗</mi></mrow><annotation encoding="application/x-tex">\mathbf{j} = \rho\mathbf{v}</annotation></semantics></math></td>
+<td style="text-align: left;">The amount of charge passing per unit area
+and per unit time.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Discrete Charges</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝒋</mi><mo>=</mo><mi>N</mi><mi>q</mi><mi mathvariant="bold-italic">𝒗</mi></mrow><annotation encoding="application/x-tex">\mathbf{j} = Nq\mathbf{v}</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>N</mi><annotation encoding="application/x-tex">N</annotation></semantics></math>
+is the number of charges per unit volume,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>q</mi><annotation encoding="application/x-tex">q</annotation></semantics></math>
+is the individual charge.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Electric Current</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>I</mi><mo>=</mo><msub><mo>∫</mo><mi>S</mi></msub><mi mathvariant="bold-italic">𝒋</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝒏</mi><mspace width="0.167em"></mspace><mi>d</mi><mi>S</mi></mrow><annotation encoding="application/x-tex">I = \int_S \mathbf{j} \cdot \mathbf{n} \, dS</annotation></semantics></math></td>
+<td style="text-align: left;">The total charge passing through a surface
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>S</mi><annotation encoding="application/x-tex">S</annotation></semantics></math>
+per unit time (Fig. 13-3).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Conservation of
+Charge</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mtext mathvariant="normal">div </mtext><mspace width="0.333em"></mspace></mrow><mi mathvariant="bold-italic">𝒋</mi><mo>=</mo><mi>−</mi><mfrac><mrow><mi>∂</mi><mi>ρ</mi></mrow><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\text{div } \mathbf{j} = -\frac{\partial \rho}{\partial t}</annotation></semantics></math></td>
+<td style="text-align: left;">The rate of charge leaving a volume equals
+the rate of decrease of charge inside (Fig. 13-4).</td>
+</tr>
+</tbody>
+</table>
+<p>In magnetostatics, we assume <strong>steady currents</strong>,
+meaning
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><mi>∂</mi><mi>ρ</mi></mrow><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\frac{\partial \rho}{\partial t} = 0</annotation></semantics></math>.
+Consequently,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mtext mathvariant="normal">div </mtext><mspace width="0.333em"></mspace></mrow><mi mathvariant="bold-italic">𝒋</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\text{div } \mathbf{j} = 0</annotation></semantics></math>,
+implying that charges must flow in closed loops or circuits.</p>
+<hr />
+<h2 id="3-the-laws-of-magnetostatics">3. The Laws of Magnetostatics</h2>
+<p>Magnetostatics is an approximation of dynamic situations involving
+steady flows of charge. The fields are governed by two primary equations
+(Maxwell's static equations):</p>
+<ol type="1">
+<li><strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mtext mathvariant="normal">div </mtext><mspace width="0.333em"></mspace></mrow><mi mathvariant="bold-italic">𝑩</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\text{div } \mathbf{B} = 0</annotation></semantics></math>:</strong>
+There are no magnetic analogs to electric charges (no magnetic
+monopoles). Lines of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+never start or stop; they generally form closed loops around
+currents.</li>
+<li><strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>c</mi><mn>2</mn></msup><mrow><mtext mathvariant="normal">curl </mtext><mspace width="0.333em"></mspace></mrow><mi mathvariant="bold-italic">𝑩</mi><mo>=</mo><mfrac><mi mathvariant="bold-italic">𝒋</mi><msub><mi>ϵ</mi><mn>0</mn></msub></mfrac></mrow><annotation encoding="application/x-tex">c^2 \text{curl } \mathbf{B} = \frac{\mathbf{j}}{\epsilon_0}</annotation></semantics></math>:</strong>
+This describes how currents produce a magnetic field with a specific
+"curl" or circulation.</li>
+</ol>
+<h3 id="ampères-law">Ampère’s Law</h3>
+<p>By applying Stokes' theorem (Fig. 13-6), the circulation of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+around any closed curve
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="normal">Γ</mi><annotation encoding="application/x-tex">\Gamma</annotation></semantics></math>
+is proportional to the current
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>I</mi><annotation encoding="application/x-tex">I</annotation></semantics></math>
+passing through the loop:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mo>∮</mo><mi mathvariant="normal">Γ</mi></msub><mi mathvariant="bold-italic">𝑩</mi><mo>⋅</mo><mi>d</mi><mi mathvariant="bold-italic">𝒔</mi><mo>=</mo><mfrac><msub><mi>I</mi><mrow><mrow><mtext mathvariant="normal">through </mtext><mspace width="0.333em"></mspace></mrow><mi mathvariant="normal">Γ</mi></mrow></msub><mrow><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup></mrow></mfrac></mrow><annotation encoding="application/x-tex">\oint_\Gamma \mathbf{B} \cdot d\mathbf{s} = \frac{I_{\text{through } \Gamma}}{\epsilon_0 c^2}</annotation></semantics></math>
+This law is the magnetostatic equivalent of Gauss’ Law in electrostatics
+and is used to solve for
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+in symmetrical systems.</p>
+<hr />
+<h2 id="4-case-studies-wires-solenoids-and-atomic-spin">4. Case Studies:
+Wires, Solenoids, and Atomic Spin</h2>
+<h3 id="the-straight-wire">The Straight Wire</h3>
+<p>For a long straight wire carrying current
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>I</mi><annotation encoding="application/x-tex">I</annotation></semantics></math>,
+the magnetic field lines form concentric circles (Fig. 13-7). The
+magnitude at distance
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math>
+is:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>=</mo><mfrac><mn>1</mn><mrow><mn>4</mn><mi>π</mi><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup></mrow></mfrac><mo>⋅</mo><mfrac><mrow><mn>2</mn><mi>I</mi></mrow><mi>r</mi></mfrac></mrow><annotation encoding="application/x-tex">B = \frac{1}{4\pi\epsilon_0 c^2} \cdot \frac{2I}{r}</annotation></semantics></math>
+<em>Note: The factor
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mn>4</mn><mi>π</mi><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">1/4\pi\epsilon_0 c^2</annotation></semantics></math>
+is exactly
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>10</mn><mrow><mi>−</mi><mn>7</mn></mrow></msup><annotation encoding="application/x-tex">10^{-7}</annotation></semantics></math>
+in the MKS system.</em></p>
+<h3 id="the-solenoid">The Solenoid</h3>
+<p>A solenoid is a coil wound in a tight spiral (Fig. 13-8). For a long
+solenoid, the field is concentrated inside and is nearly zero outside
+(Fig. 13-9). The internal field
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>B</mi><mn>0</mn></msub><annotation encoding="application/x-tex">B_0</annotation></semantics></math>
+is:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>B</mi><mn>0</mn></msub><mo>=</mo><mfrac><mrow><mi>n</mi><mi>I</mi></mrow><mrow><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup></mrow></mfrac></mrow><annotation encoding="application/x-tex">B_0 = \frac{nI}{\epsilon_0 c^2}</annotation></semantics></math>
+Where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+is the number of turns per unit length.</p>
+<h3 id="the-origin-of-magnetism-in-matter">The Origin of Magnetism in
+Matter</h3>
+<p>Permanent magnets, such as iron bars, do not require batteries to
+produce fields. Their magnetism arises from internal "atomic
+currents."</p>
+<ul>
+<li><strong>Electron Spin:</strong> Each electron spins on its axis,
+acting as a tiny circulating current.</li>
+<li><strong>Alignment:</strong> In materials like iron, these spins
+align in the same direction, creating a net effect equivalent to a
+current circulating on the surface of the material. This makes a bar
+magnet physically equivalent to a solenoid.</li>
+</ul>
+<hr />
+<h2 id="5-the-relativity-of-magnetic-and-electric-fields">5. The
+Relativity of Magnetic and Electric Fields</h2>
+<p>A central insight of magnetostatics is that the distinction between
+electric and magnetic fields depends on the observer's frame of
+reference.</p>
+<h3 id="the-moving-charge-paradox">The Moving Charge Paradox</h3>
+<p>Consider a negative charge moving parallel to a neutral,
+current-carrying wire (Fig. 13-10).</p>
+<ul>
+<li><strong>In Frame S (Wire at rest):</strong> The wire is neutral. The
+particle feels a magnetic force
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>=</mo><mi>q</mi><mo stretchy="false" form="prefix">(</mo><mi mathvariant="bold-italic">𝒗</mi><mo>×</mo><mi mathvariant="bold-italic">𝑩</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">F = q(\mathbf{v} \times \mathbf{B})</annotation></semantics></math>
+because it is moving through a magnetic field.</li>
+<li><strong>In Frame S' (Particle at rest):</strong> The particle's
+velocity is zero, so the magnetic force is zero. However, the particle
+still moves toward the wire. In this frame, the force must be
+<strong>electric</strong>.</li>
+</ul>
+<h3 id="relativistic-length-contraction">Relativistic Length
+Contraction</h3>
+<p>This shift occurs because charge density changes with motion. While
+the charge
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>q</mi><annotation encoding="application/x-tex">q</annotation></semantics></math>
+of a particle is an invariant scalar (it does not change with speed),
+the <strong>volume</strong> it occupies does change due to relativistic
+contraction (Fig. 13-11).</p>
+<ul>
+<li>The density of moving charges is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ρ</mi><mo>=</mo><mfrac><msub><mi>ρ</mi><mn>0</mn></msub><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mi>v</mi><mn>2</mn></msup><mi>/</mi><msup><mi>c</mi><mn>2</mn></msup></mrow></msqrt></mfrac></mrow><annotation encoding="application/x-tex">\rho = \frac{\rho_0}{\sqrt{1-v^2/c^2}}</annotation></semantics></math>.</li>
+<li>In frame S', the stationary positive ions and the moving electrons
+in the wire contract differently. This results in a net charge density
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>ρ</mi><mo>′</mo></msup><annotation encoding="application/x-tex">\rho&#39;</annotation></semantics></math>
+in the previously neutral wire:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>ρ</mi><mo>′</mo></msup><mo>=</mo><msub><mi>ρ</mi><mo>+</mo></msub><mfrac><mrow><msup><mi>v</mi><mn>2</mn></msup><mi>/</mi><msup><mi>c</mi><mn>2</mn></msup></mrow><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mi>v</mi><mn>2</mn></msup><mi>/</mi><msup><mi>c</mi><mn>2</mn></msup></mrow></msqrt></mfrac></mrow><annotation encoding="application/x-tex">\rho&#39; = \rho_+ \frac{v^2/c^2}{\sqrt{1-v^2/c^2}}</annotation></semantics></math></li>
+<li>The wire appears charged in the moving frame, creating an electric
+field
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>E</mi><mo>′</mo></msup><annotation encoding="application/x-tex">E&#39;</annotation></semantics></math>
+that exerts an electric force on the stationary particle.</li>
+</ul>
+<p><strong>Conclusion:</strong> Magnetism and electricity are two ways
+of looking at the same physical phenomenon—electromagnetic interactions.
+The separation into "electric" and "magnetic" parts is entirely
+dependent on the choice of the reference frame.</p>
+<hr />
+<h2 id="6-transformation-of-currents-and-charges">6. Transformation of
+Currents and Charges</h2>
+<p>Current density
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝒋</mi><annotation encoding="application/x-tex">\mathbf{j}</annotation></semantics></math>)
+and charge density
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ρ</mi><annotation encoding="application/x-tex">\rho</annotation></semantics></math>)
+are linked as components of a relativistic four-vector
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>c</mi><mi>ρ</mi><mo>,</mo><mi mathvariant="bold-italic">𝒋</mi></mrow><annotation encoding="application/x-tex">c\rho, \mathbf{j}</annotation></semantics></math>).
+They transform between frames (moving at velocity
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>u</mi><annotation encoding="application/x-tex">u</annotation></semantics></math>
+in the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>-direction)
+according to the following equations:</p>
+<p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>j</mi><mi>x</mi><mo>′</mo></msubsup><mo>=</mo><mfrac><mrow><msub><mi>j</mi><mi>x</mi></msub><mo>−</mo><mi>u</mi><mi>ρ</mi></mrow><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mi>u</mi><mn>2</mn></msup><mi>/</mi><msup><mi>c</mi><mn>2</mn></msup></mrow></msqrt></mfrac></mrow><annotation encoding="application/x-tex">j_x&#39; = \frac{j_x - u\rho}{\sqrt{1 - u^2/c^2}}</annotation></semantics></math>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>ρ</mi><mo>′</mo></msup><mo>=</mo><mfrac><mrow><mi>ρ</mi><mo>−</mo><mi>u</mi><msub><mi>j</mi><mi>x</mi></msub><mi>/</mi><msup><mi>c</mi><mn>2</mn></msup></mrow><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mi>u</mi><mn>2</mn></msup><mi>/</mi><msup><mi>c</mi><mn>2</mn></msup></mrow></msqrt></mfrac></mrow><annotation encoding="application/x-tex">\rho&#39; = \frac{\rho - uj_x/c^2}{\sqrt{1 - u^2/c^2}}</annotation></semantics></math></p>
+<p>These transformations ensure that the physical result of an
+interaction remains consistent regardless of the inertial frame used for
+the analysis.</p>
+<hr />
+<h2 id="7-key-insights-and-quotes">7. Key Insights and Quotes</h2>
+<ul>
+<li><strong>On the Nature of Magnetostatics:</strong> "Magnetostatics
+is... an approximation. It refers to a special kind of dynamic situation
+with large numbers of charges in motion, which we can approximate by a
+steady flow of charge."</li>
+<li><strong>On Magnetic Lines:</strong> "If we think in terms of 'lines'
+of the vector field
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>,
+they can never start and they never stop... they never diverge from
+points."</li>
+<li><strong>On Relativistic Invariance:</strong> "The electric charge of
+a single particle is independent of its state of motion."</li>
+<li><strong>On the "Reality" of Field Lines:</strong> "The lines may
+disappear if we try to observe them from a different coordinate
+system... It makes no sense to say something like: 'When I move a
+magnet, it takes its field with it.'"</li>
+<li><strong>The Right-Hand Rule:</strong> The magnetic field
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+is an axial vector. While the rule itself is a convention, the physical
+results (e.g., parallel currents attracting) are invariant and would
+remain the same even if a "left-hand rule" were used consistently.</li>
+</ul>
+    </article>
+  </main>
+</body>
+</html>

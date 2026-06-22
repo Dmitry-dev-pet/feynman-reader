@@ -24,7 +24,7 @@ EXPECTED_MEDIA_PAGES = {
     "ru-I": 52,
     "en-I": 28,
     "ru-II": 42,
-    "en-II": 0,
+    "en-II": 42,
     "ru-III": 21,
     "en-III": 0,
 }
@@ -32,7 +32,7 @@ EXPECTED_REPORT_PAGES = {
     "ru-I": 52,
     "en-I": 52,
     "ru-II": 42,
-    "en-II": 0,
+    "en-II": 42,
     "ru-III": 21,
     "en-III": 0,
 }

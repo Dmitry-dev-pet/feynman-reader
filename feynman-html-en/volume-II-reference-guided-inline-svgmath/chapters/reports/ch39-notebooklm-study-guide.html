@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Study Guide: Elastic Materials - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="en">
+  <script>
+    (() => {
+      const key = "flp-reader-theme";
+      const applyTheme = (theme) => {
+        const next = theme === "dark" ? "dark" : "light";
+        document.documentElement.dataset.theme = next;
+        document.body.dataset.theme = next;
+        try { localStorage.setItem(key, next); } catch (_) {}
+      };
+      try { applyTheme(localStorage.getItem(key) || "light"); } catch (_) { applyTheme("light"); }
+      document.addEventListener("click", (event) => {
+        const button = event.target.closest('[data-report-action="theme"]');
+        if (!button) return;
+        applyTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark");
+      });
+    })();
+  </script>
+<main class="notebooklm-report-shell">
+    <header aria-label="Quick navigation" class="reader-toolbar report-toolbar">
+      <div class="toolbar-group toolbar-navigation">
+        <a class="toolbar-btn" href="../ch39.html">Back to chapter</a>
+        <a class="toolbar-btn" href="../../../../feynman-reader/index.html">Reader</a>
+        <a class="toolbar-btn" href="../../index.html">Contents</a>
+      </div>
+      <a class="toolbar-title" href="../ch39.html#ch39" title="NotebookLM · Guide">NotebookLM · Guide</a>
+      <div class="toolbar-group toolbar-settings">
+        <button aria-label="Toggle theme" class="toolbar-btn icon-btn" data-report-action="theme" title="Toggle theme" type="button">◐</button>
+      </div>
+    </header>
+    <article class="notebooklm-report">
+<h1 id="study-guide-elastic-materials">Study Guide: Elastic
+Materials</h1>
+<p>This study guide provides a comprehensive overview of the internal
+mechanics of elastic materials, focusing on the mathematical description
+of strain, the relationship between stress and strain via the tensor of
+elasticity, the dynamics of waves within solids, and the atomic basis
+for elastic constants.</p>
+<hr />
+<h2 id="key-concepts">Key Concepts</h2>
+<h3 id="1-the-tensor-of-strain">1. The Tensor of Strain</h3>
+<p>The state of distortion inside an elastic material is described by
+the <strong>strain tensor</strong>. When a material is strained, a point
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math>
+at position
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝒓</mi><annotation encoding="application/x-tex">\mathbf{r}</annotation></semantics></math>
+moves to a new position
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>P</mi><mo>′</mo></msup><annotation encoding="application/x-tex">P&#39;</annotation></semantics></math>
+at
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi mathvariant="bold-italic">𝒓</mi><mo>′</mo></msup><annotation encoding="application/x-tex">\mathbf{r}&#39;</annotation></semantics></math>.
+The displacement is defined as the vector <span
+class="math inline">$\FLPu = \mathbf{r}' - \mathbf{r}$</span>.</p>
+<ul>
+<li><strong>Homogeneous Strain:</strong> A condition where the strain is
+constant throughout the material. For a simple stretch in the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>-direction,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>u</mi><mi>x</mi></msub><mo>=</mo><msub><mi>e</mi><mrow><mi>x</mi><mi>x</mi></mrow></msub><mi>x</mi></mrow><annotation encoding="application/x-tex">u_x = e_{xx}x</annotation></semantics></math>.</li>
+<li><strong>General Strain Definition:</strong> To account for
+non-uniform distortions and to exclude pure rotations (which do not
+change the relative positions of atoms), the components of the symmetric
+strain tensor
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>e</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><annotation encoding="application/x-tex">e_{ij}</annotation></semantics></math>
+are defined as:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>e</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><mi>∂</mi><msub><mi>u</mi><mi>j</mi></msub></mrow><mrow><mi>∂</mi><msub><mi>x</mi><mi>i</mi></msub></mrow></mfrac><mo>+</mo><mfrac><mrow><mi>∂</mi><msub><mi>u</mi><mi>i</mi></msub></mrow><mrow><mi>∂</mi><msub><mi>x</mi><mi>j</mi></msub></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">e_{ij} = \frac{1}{2}\left(\frac{\partial u_j}{\partial x_i} + \frac{\partial u_i}{\partial x_j}\right)</annotation></semantics></math></li>
+<li><strong>Symmetry:</strong> There are six independent components in
+this symmetric tensor
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>e</mi><mrow><mi>x</mi><mi>x</mi></mrow></msub><mo>,</mo><msub><mi>e</mi><mrow><mi>y</mi><mi>y</mi></mrow></msub><mo>,</mo><msub><mi>e</mi><mrow><mi>z</mi><mi>z</mi></mrow></msub><mo>,</mo><msub><mi>e</mi><mrow><mi>x</mi><mi>y</mi></mrow></msub><mo>,</mo><msub><mi>e</mi><mrow><mi>y</mi><mi>z</mi></mrow></msub><mo>,</mo><msub><mi>e</mi><mrow><mi>z</mi><mi>x</mi></mrow></msub></mrow><annotation encoding="application/x-tex">e_{xx}, e_{yy}, e_{zz}, e_{xy}, e_{yz}, e_{zx}</annotation></semantics></math>).</li>
+<li><strong>Rotation vs. Strain:</strong> Pure rotation is described by
+an antisymmetric tensor
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ω</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><annotation encoding="application/x-tex">\omega_{ij}</annotation></semantics></math>.
+If
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mrow><mi>∂</mi><msub><mi>u</mi><mi>y</mi></msub></mrow><mrow><mi>∂</mi><mi>x</mi></mrow></mfrac><annotation encoding="application/x-tex">\frac{\partial u_y}{\partial x}</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mrow><mi>∂</mi><msub><mi>u</mi><mi>x</mi></msub></mrow><mrow><mi>∂</mi><mi>y</mi></mrow></mfrac><annotation encoding="application/x-tex">\frac{\partial u_x}{\partial y}</annotation></semantics></math>
+are equal and opposite, there is no strain, only a shift in
+orientation.</li>
+</ul>
+<h3 id="2-the-tensor-of-elasticity">2. The Tensor of Elasticity</h3>
+<p>Hooke’s law states that stress
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><annotation encoding="application/x-tex">S_{ij}</annotation></semantics></math>)
+is proportional to strain
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>e</mi><mrow><mi>k</mi><mi>l</mi></mrow></msub><annotation encoding="application/x-tex">e_{kl}</annotation></semantics></math>).
+This relationship is mediated by the <strong>tensor of
+elasticity</strong>
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>C</mi><mrow><mi>i</mi><mi>j</mi><mi>k</mi><mi>l</mi></mrow></msub><annotation encoding="application/x-tex">C_{ijkl}</annotation></semantics></math>),
+a fourth-rank tensor.</p>
+<ul>
+<li><strong>General Form:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>=</mo><msub><mo>∑</mo><mrow><mi>k</mi><mo>,</mo><mi>l</mi></mrow></msub><msub><mi>C</mi><mrow><mi>i</mi><mi>j</mi><mi>k</mi><mi>l</mi></mrow></msub><msub><mi>e</mi><mrow><mi>k</mi><mi>l</mi></mrow></msub></mrow><annotation encoding="application/x-tex">S_{ij} = \sum_{k,l} C_{ijkl} e_{kl}</annotation></semantics></math>.</li>
+<li><strong>Energy Density
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>w</mi><annotation encoding="application/x-tex">w</annotation></semantics></math>):</strong>
+The potential energy stored per unit volume is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>w</mi><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><msub><mo>∑</mo><mrow><mi>i</mi><mi>j</mi><mi>k</mi><mi>l</mi></mrow></msub><msub><mi>C</mi><mrow><mi>i</mi><mi>j</mi><mi>k</mi><mi>l</mi></mrow></msub><msub><mi>e</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><msub><mi>e</mi><mrow><mi>k</mi><mi>l</mi></mrow></msub></mrow><annotation encoding="application/x-tex">w = \frac{1}{2} \sum_{ijkl} C_{ijkl} e_{ij} e_{kl}</annotation></semantics></math>.
+In equilibrium, internal stresses adjust to minimize the total internal
+energy
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>W</mi><mo>=</mo><mo>∫</mo><mi>w</mi><mspace width="0.167em"></mspace><mi>d</mi><mi>V</mi></mrow><annotation encoding="application/x-tex">W = \int w \, dV</annotation></semantics></math>).</li>
+<li><strong>Symmetry Reductions:</strong> While there are 81 possible
+coefficients in
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>C</mi><mrow><mi>i</mi><mi>j</mi><mi>k</mi><mi>l</mi></mrow></msub><annotation encoding="application/x-tex">C_{ijkl}</annotation></semantics></math>,
+symmetry reduces this significantly:
+<ul>
+<li><strong>Cubic Crystals:</strong> Possess three independent
+constants:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>C</mi><mrow><mi>x</mi><mi>x</mi><mi>x</mi><mi>x</mi></mrow></msub><annotation encoding="application/x-tex">C_{xxxx}</annotation></semantics></math>,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>C</mi><mrow><mi>x</mi><mi>x</mi><mi>y</mi><mi>y</mi></mrow></msub><annotation encoding="application/x-tex">C_{xxyy}</annotation></semantics></math>,
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>C</mi><mrow><mi>x</mi><mi>y</mi><mi>x</mi><mi>y</mi></mrow></msub><annotation encoding="application/x-tex">C_{xyxy}</annotation></semantics></math>.</li>
+<li><strong>Isotropic Materials:</strong> Possess only two independent
+constants, the <strong>Lamé constants</strong>
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>λ</mi><annotation encoding="application/x-tex">\lambda</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>μ</mi><annotation encoding="application/x-tex">\mu</annotation></semantics></math>).
+Their relationship is defined as
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>C</mi><mrow><mi>x</mi><mi>x</mi><mi>x</mi><mi>x</mi></mrow></msub><mo>=</mo><mn>2</mn><mi>μ</mi><mo>+</mo><mi>λ</mi></mrow><annotation encoding="application/x-tex">C_{xxxx} = 2\mu + \lambda</annotation></semantics></math>.</li>
+</ul></li>
+</ul>
+<h3 id="3-dynamics-and-wave-motion">3. Dynamics and Wave Motion</h3>
+<p>The internal forces in a non-equilibrium state lead to motion. The
+force density <span class="math inline">$\FLPf$</span> is related to the
+gradient of the stress tensor:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mi>i</mi></msub><mo>=</mo><msub><mo>∑</mo><mi>j</mi></msub><mfrac><mrow><mi>∂</mi><msub><mi>S</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub></mrow><mrow><mi>∂</mi><msub><mi>x</mi><mi>j</mi></msub></mrow></mfrac></mrow><annotation encoding="application/x-tex">f_i = \sum_j \frac{\partial S_{ij}}{\partial x_j}</annotation></semantics></math>.</p>
+<ul>
+<li><strong>Equation of Motion:</strong> For an isotropic material, the
+vector equation is: <span class="math display">$$\rho \frac{\partial^2
+\FLPu}{\partial t^2} = (\lambda + \mu) \boldsymbol{\nabla}(\text{div}
+\FLPu) + \mu \nabla^2 \FLPu$$</span></li>
+<li><strong>Elastic Waves:</strong> This equation yields two distinct
+types of waves:
+<ol type="1">
+<li><strong>Longitudinal (Compressional) Waves:</strong> Speed
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>C</mi><mn>2</mn></msub><mo>=</mo><msqrt><mrow><mo stretchy="false" form="prefix">(</mo><mi>λ</mi><mo>+</mo><mn>2</mn><mi>μ</mi><mo stretchy="false" form="postfix">)</mo><mi>/</mi><mi>ρ</mi></mrow></msqrt></mrow><annotation encoding="application/x-tex">C_2 = \sqrt{(\lambda + 2\mu)/\rho}</annotation></semantics></math>.
+These involve density changes (curl-free).</li>
+<li><strong>Transverse (Shear) Waves:</strong> Speed
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>C</mi><mn>1</mn></msub><mo>=</mo><msqrt><mrow><mi>μ</mi><mi>/</mi><mi>ρ</mi></mrow></msqrt></mrow><annotation encoding="application/x-tex">C_1 = \sqrt{\mu/\rho}</annotation></semantics></math>.
+These involve no density changes (divergence-free).</li>
+</ol></li>
+</ul>
+<h3 id="4-non-linear-and-non-elastic-behavior">4. Non-linear and
+Non-elastic Behavior</h3>
+<p>Hooke's law is an approximation valid only for small strains.</p>
+<ul>
+<li><strong>Ductile vs. Brittle:</strong> Ductile materials deviate from
+linearity before failing; brittle materials break shortly after the
+linear limit is exceeded.</li>
+<li><strong>Failure Modes:</strong> Materials like chalk fail under
+maximum tensile stress. When twisted, chalk breaks at a 45° angle
+because shear is equivalent to a combination of tension and compression
+at that angle.</li>
+<li><strong>Hysteresis:</strong> When stress is removed, the material
+may return along a different curve, losing energy.</li>
+<li><strong>Viscoelasticity:</strong> Some materials (like Saran-Wrap)
+exhibit time-dependent recovery due to internal structures, such as
+"cells" of viscous liquid resisting the return of elastic fibers.</li>
+</ul>
+<h3 id="5-atomic-origin-of-elasticity">5. Atomic Origin of
+Elasticity</h3>
+<p>For an ionic cubic crystal (e.g., NaCl), elastic constants can be
+calculated by modeling interatomic forces as springs with constants
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>k</mi><mn>1</mn></msub><annotation encoding="application/x-tex">k_1</annotation></semantics></math>
+(nearest neighbors) and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>k</mi><mn>2</mn></msub><annotation encoding="application/x-tex">k_2</annotation></semantics></math>
+(next-nearest neighbors).</p>
+<ul>
+<li><strong>Cauchy Relation:</strong> If forces are strictly central
+(acting only along the line between atoms), a cubic crystal should
+satisfy
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>C</mi><mrow><mi>x</mi><mi>x</mi><mi>y</mi><mi>y</mi></mrow></msub><mo>=</mo><msub><mi>C</mi><mrow><mi>x</mi><mi>y</mi><mi>x</mi><mi>y</mi></mrow></msub></mrow><annotation encoding="application/x-tex">C_{xxyy} = C_{xyxy}</annotation></semantics></math>.</li>
+<li><strong>Experimental Reality:</strong> This relation holds for many
+ionic crystals (KCl, NaCl) but fails for metals (iron) and covalent
+crystals (diamond), where forces are non-central.</li>
+</ul>
+<hr />
+<h2 id="common-misconceptions">Common Misconceptions</h2>
+<ol type="1">
+<li><strong>Misconception: All distortions of a material constitute
+strain.</strong>
+<ul>
+<li><strong>Correction:</strong> Pure rotations involve displacement but
+are not "strain" because the relative distances between atoms remain
+unchanged. The strain tensor is specifically defined to exclude
+rotation.</li>
+</ul></li>
+<li><strong>Misconception: An isotropic material requires many constants
+to describe its elasticity.</strong>
+<ul>
+<li><strong>Correction:</strong> Due to high symmetry (properties are
+the same in all directions), only two constants (such as
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>λ</mi><annotation encoding="application/x-tex">\lambda</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>μ</mi><annotation encoding="application/x-tex">\mu</annotation></semantics></math>,
+or Young's modulus and Poisson's ratio) are required.</li>
+</ul></li>
+<li><strong>Misconception: Hooke's law is a fundamental law of
+nature.</strong>
+<ul>
+<li><strong>Correction:</strong> Hooke's law is simply the first-order
+term of a Taylor expansion of the energy function. It is a convenient
+approximation for small displacements that eventually fails as strains
+become large or higher-order terms become significant.</li>
+</ul></li>
+</ol>
+<hr />
+<h2 id="short-answer-practice-questions">Short-Answer Practice
+Questions</h2>
+<ol type="1">
+<li>What is the mathematical definition of the components of the strain
+tensor
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>e</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><annotation encoding="application/x-tex">e_{ij}</annotation></semantics></math>?</li>
+<li>Why are only six numbers needed to describe the strain at a point,
+rather than nine?</li>
+<li>Define "homogeneous strain."</li>
+<li>What are the two Lamé constants, and how many are needed to describe
+an isotropic material?</li>
+<li>How is the internal potential energy
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>W</mi><annotation encoding="application/x-tex">W</annotation></semantics></math>
+used to find the equilibrium state of a distorted body?</li>
+<li>Write the formula for the speed of a transverse (shear) wave in an
+isotropic solid.</li>
+<li>What experimental method allows for the visualization of internal
+stresses using transparent plastic models?</li>
+<li>Explain why twisted chalk breaks at a 45° angle to its axis.</li>
+<li>In the atomic model of a cubic crystal, what does the constant
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+represent?</li>
+<li>Under what condition does
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>C</mi><mrow><mi>x</mi><mi>x</mi><mi>y</mi><mi>y</mi></mrow></msub><mo>=</mo><msub><mi>C</mi><mrow><mi>x</mi><mi>y</mi><mi>x</mi><mi>y</mi></mrow></msub></mrow><annotation encoding="application/x-tex">C_{xxyy} = C_{xyxy}</annotation></semantics></math>
+in a cubic crystal?</li>
+<li>How does temperature affect the return-to-shape speed of
+"Saran-Wrap" type materials?</li>
+<li>What is the relationship between the force per unit volume
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>f</mi><mi>i</mi></msub><annotation encoding="application/x-tex">f_i</annotation></semantics></math>
+and the stress tensor
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><annotation encoding="application/x-tex">S_{ij}</annotation></semantics></math>?</li>
+</ol>
+<hr />
+<h2 id="essay-prompts-for-deeper-exploration">Essay Prompts for Deeper
+Exploration</h2>
+<ol type="1">
+<li><strong>Symmetry and the Elasticity Tensor:</strong> Discuss how the
+physical symmetry of a cubic crystal reduces the number of independent
+terms in the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>C</mi><mrow><mi>i</mi><mi>j</mi><mi>k</mi><mi>l</mi></mrow></msub><annotation encoding="application/x-tex">C_{ijkl}</annotation></semantics></math>
+tensor from 81 to 3. Why does an isotropic material reduce this number
+even further?</li>
+<li><strong>The Nature of Waves in Solids:</strong> Compare and contrast
+longitudinal and transverse waves in elastic materials. Explain why the
+longitudinal wave always travels faster than the transverse wave based
+on the Lamé constants.</li>
+<li><strong>From Atoms to Bulk Properties:</strong> Describe the process
+of calculating bulk elastic constants using a spring-model of a crystal
+lattice. What are the limitations of assuming "central forces" when
+compared to experimental data for materials like diamond or iron?</li>
+<li><strong>Beyond the Linear Limit:</strong> Analyze the factors that
+lead to the breakdown of Hooke's law. Include a discussion on
+hysteresis, the difference between ductile and brittle failure, and the
+role of molecular "memory" and viscosity in complex plastics.</li>
+</ol>
+<hr />
+<h2 id="glossary-of-important-terms">Glossary of Important Terms</h2>
+<ul>
+<li><strong>Birefringence:</strong> The property of a material (often
+induced by stress) to rotate the plane of polarized light, used to
+measure internal stresses experimentally.</li>
+<li><strong>Cauchy Relation:</strong> The theoretical equality
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>C</mi><mrow><mi>x</mi><mi>x</mi><mi>y</mi><mi>y</mi></mrow></msub><mo>=</mo><msub><mi>C</mi><mrow><mi>x</mi><mi>y</mi><mi>x</mi><mi>y</mi></mrow></msub></mrow><annotation encoding="application/x-tex">C_{xxyy} = C_{xyxy}</annotation></semantics></math>
+that occurs in cubic crystals if interatomic forces are purely
+central.</li>
+<li><strong>Elasticity Tensor
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>C</mi><mrow><mi>i</mi><mi>j</mi><mi>k</mi><mi>l</mi></mrow></msub><annotation encoding="application/x-tex">C_{ijkl}</annotation></semantics></math>):</strong>
+A fourth-rank tensor containing the coefficients that relate stress to
+strain.</li>
+<li><strong>Homogeneous Strain:</strong> A state where the ratio of
+displacement to coordinate is constant throughout the material.</li>
+<li><strong>Hysteresis:</strong> The phenomenon where the stress-strain
+relationship follows different paths during loading and unloading,
+leading to energy dissipation.</li>
+<li><strong>Isotropic:</strong> A material whose physical properties are
+identical in all directions.</li>
+<li><strong>Lamé Constants
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi><mo>,</mo><mi>μ</mi></mrow><annotation encoding="application/x-tex">\lambda, \mu</annotation></semantics></math>):</strong>
+The two coefficients required to fully describe the elastic properties
+of an isotropic material.</li>
+<li><strong>Strain Tensor
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>e</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><annotation encoding="application/x-tex">e_{ij}</annotation></semantics></math>):</strong>
+A symmetric second-rank tensor describing the local deformation of a
+material.</li>
+<li><strong>Stress Tensor
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><annotation encoding="application/x-tex">S_{ij}</annotation></semantics></math>):</strong>
+A tensor representing the internal forces per unit area acting within a
+material.</li>
+<li><strong>Viscoelasticity:</strong> A property of materials that
+exhibit both viscous and elastic characteristics, often resulting in
+time-delayed responses to strain.</li>
+</ul>
+    </article>
+  </main>
+</body>
+</html>

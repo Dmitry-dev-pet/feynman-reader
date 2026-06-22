@@ -1,0 +1,369 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Study Guide: Inside Dielectrics - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="en">
+  <script>
+    (() => {
+      const key = "flp-reader-theme";
+      const applyTheme = (theme) => {
+        const next = theme === "dark" ? "dark" : "light";
+        document.documentElement.dataset.theme = next;
+        document.body.dataset.theme = next;
+        try { localStorage.setItem(key, next); } catch (_) {}
+      };
+      try { applyTheme(localStorage.getItem(key) || "light"); } catch (_) { applyTheme("light"); }
+      document.addEventListener("click", (event) => {
+        const button = event.target.closest('[data-report-action="theme"]');
+        if (!button) return;
+        applyTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark");
+      });
+    })();
+  </script>
+<main class="notebooklm-report-shell">
+    <header aria-label="Quick navigation" class="reader-toolbar report-toolbar">
+      <div class="toolbar-group toolbar-navigation">
+        <a class="toolbar-btn" href="../ch11.html">Back to chapter</a>
+        <a class="toolbar-btn" href="../../../../feynman-reader/index.html">Reader</a>
+        <a class="toolbar-btn" href="../../index.html">Contents</a>
+      </div>
+      <a class="toolbar-title" href="../ch11.html#ch11" title="NotebookLM · Guide">NotebookLM · Guide</a>
+      <div class="toolbar-group toolbar-settings">
+        <button aria-label="Toggle theme" class="toolbar-btn icon-btn" data-report-action="theme" title="Toggle theme" type="button">◐</button>
+      </div>
+    </header>
+    <article class="notebooklm-report">
+<h1 id="study-guide-inside-dielectrics">Study Guide: Inside
+Dielectrics</h1>
+<p>This study guide explores the underlying physical mechanisms of
+dielectric materials, moving from the behavior of individual molecules
+to the complex interactions within dense liquids and crystalline solids.
+It focuses on the concepts of electronic and orientation polarization,
+the mathematical models used to predict dielectric constants, and the
+unique properties of ferroelectric materials.</p>
+<hr />
+<h2 id="key-concepts">Key Concepts</h2>
+<h3 id="1-molecular-dipoles-and-polarization">1. Molecular Dipoles and
+Polarization</h3>
+<p>The dielectric constant
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>κ</mi><annotation encoding="application/x-tex">\kappa</annotation></semantics></math>
+of a material is determined by its polarization
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math>
+(the average dipole moment per unit volume) in response to an electric
+field
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math>.
+The fundamental relationship is defined as:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>κ</mi><mo>−</mo><mn>1</mn><mo>=</mo><mfrac><mi>P</mi><mrow><msub><mi>ϵ</mi><mn>0</mn></msub><mi>E</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\kappa - 1 = \frac{P}{\epsilon_0 E}</annotation></semantics></math></p>
+<p>Molecules are categorized into two types:</p>
+<ul>
+<li><strong>Nonpolar Molecules:</strong> These possess a symmetric
+arrangement where the centers of gravity for positive and negative
+charges coincide (e.g., oxygen,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>O</mi><mn>2</mn></msub><annotation encoding="application/x-tex">O_2</annotation></semantics></math>).
+They only develop a dipole moment when an external electric field is
+applied.</li>
+<li><strong>Polar Molecules:</strong> These have a permanent, intrinsic
+dipole moment
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>p</mi><mn>0</mn></msub><annotation encoding="application/x-tex">p_0</annotation></semantics></math>
+due to a non-symmetric arrangement of atoms (e.g., water vapor,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>2</mn></msub><mi>O</mi></mrow><annotation encoding="application/x-tex">H_2O</annotation></semantics></math>).</li>
+</ul>
+<h3 id="2-electronic-polarization">2. Electronic Polarization</h3>
+<p>Electronic polarization occurs when an external field causes a net
+displacement between an atom's electrons and its nucleus.</p>
+<ul>
+<li><strong>Atomic Polarizability
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>α</mi><annotation encoding="application/x-tex">\alpha</annotation></semantics></math>):</strong>
+A measure of how easily a dipole moment is induced in an atom. For small
+fields, the dipole moment
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math>
+is proportional to the field:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>=</mo><mi>α</mi><msub><mi>ϵ</mi><mn>0</mn></msub><mi>E</mi></mrow><annotation encoding="application/x-tex">p = \alpha \epsilon_0 E</annotation></semantics></math>.</li>
+<li><strong>Frequency Dependence:</strong> Classical theory treats the
+atom as an oscillator with a natural frequency
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>ω</mi><mn>0</mn></msub><annotation encoding="application/x-tex">\omega_0</annotation></semantics></math>.
+At constant fields
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ω</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\omega = 0</annotation></semantics></math>),
+the polarizability is related to this frequency and the electron
+mass.</li>
+<li><strong>Density Relationship:</strong> In gases, where molecules are
+far apart, the dielectric constant is approximately
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>κ</mi><mo>−</mo><mn>1</mn><mo>=</mo><mi>N</mi><mi>α</mi></mrow><annotation encoding="application/x-tex">\kappa - 1 = N\alpha</annotation></semantics></math>,
+where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>N</mi><annotation encoding="application/x-tex">N</annotation></semantics></math>
+is the number of atoms per unit volume.</li>
+</ul>
+<h3 id="3-orientation-polarization-and-curies-law">3. Orientation
+Polarization and Curie’s Law</h3>
+<p>In gases composed of polar molecules, the thermal motion of molecules
+opposes the alignment of their permanent dipoles with an external
+electric field.</p>
+<ul>
+<li><strong>Potential Energy:</strong> The energy of a dipole in a field
+is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo>=</mo><mi>−</mi><msub><mi>p</mi><mn>0</mn></msub><mo>⋅</mo><mi>E</mi><mo>=</mo><mi>−</mi><msub><mi>p</mi><mn>0</mn></msub><mi>E</mi><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>θ</mi></mrow><annotation encoding="application/x-tex">U = -p_0 \cdot E = -p_0 E \cos\theta</annotation></semantics></math>.</li>
+<li><strong>Statistical Alignment:</strong> According to statistical
+mechanics, more molecules align with the field than against it,
+resulting in a net polarization:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mfrac><mrow><mi>N</mi><msubsup><mi>p</mi><mn>0</mn><mn>2</mn></msubsup><mi>E</mi></mrow><mrow><mn>3</mn><mi>k</mi><mi>T</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">P = \frac{Np_0^2E}{3kT}</annotation></semantics></math></li>
+<li><strong>Curie’s Law:</strong> The polarization (and thus
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>κ</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\kappa - 1</annotation></semantics></math>)
+is inversely proportional to the absolute temperature
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>T</mi><annotation encoding="application/x-tex">T</annotation></semantics></math>.</li>
+<li><strong>Inertial Effects:</strong> At high frequencies (microwave
+and above), the heavy molecules cannot rotate fast enough to follow the
+field, causing the polar contribution to the dielectric constant to
+diminish.</li>
+</ul>
+<h3 id="4-local-fields-and-the-clausius-mossotti-equation">4. Local
+Fields and the Clausius-Mossotti Equation</h3>
+<p>In dense materials (liquids and solids), the field acting on an
+individual atom is influenced by the polarization of surrounding
+atoms.</p>
+<ul>
+<li><strong>Cavity Fields:</strong> The field inside a dielectric
+depends on the shape of the "hole" imagined around an atom.
+<ul>
+<li><strong>Slot parallel to the field:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mrow><mi>l</mi><mi>o</mi><mi>c</mi><mi>a</mi><mi>l</mi></mrow></msub><mo>=</mo><mi>E</mi></mrow><annotation encoding="application/x-tex">E_{local} = E</annotation></semantics></math>
+(the average field).</li>
+<li><strong>Slot perpendicular to the field:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mrow><mi>l</mi><mi>o</mi><mi>c</mi><mi>a</mi><mi>l</mi></mrow></msub><mo>=</mo><mi>E</mi><mo>+</mo><mi>P</mi><mi>/</mi><msub><mi>ϵ</mi><mn>0</mn></msub><mo>=</mo><mi>D</mi><mi>/</mi><msub><mi>ϵ</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">E_{local} = E + P/\epsilon_0 = D/\epsilon_0</annotation></semantics></math>.</li>
+<li><strong>Spherical hole:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mrow><mi>h</mi><mi>o</mi><mi>l</mi><mi>e</mi></mrow></msub><mo>=</mo><mi>E</mi><mo>+</mo><mi>P</mi><mi>/</mi><mn>3</mn><msub><mi>ϵ</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">E_{hole} = E + P/3\epsilon_0</annotation></semantics></math>.</li>
+</ul></li>
+<li><strong>The Clausius-Mossotti Equation:</strong> By assuming an atom
+exists in a spherical environment, the dielectric constant of a liquid
+is related to its atomic polarizability:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>κ</mi><mo>−</mo><mn>1</mn><mo>=</mo><mfrac><mrow><mi>N</mi><mi>α</mi></mrow><mrow><mn>1</mn><mo>−</mo><mo stretchy="false" form="prefix">(</mo><mi>N</mi><mi>α</mi><mi>/</mi><mn>3</mn><mo stretchy="false" form="postfix">)</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">\kappa - 1 = \frac{N\alpha}{1 - (N\alpha/3)}</annotation></semantics></math></li>
+</ul>
+<h3 id="5-ferroelectricity">5. Ferroelectricity</h3>
+<p>Ferroelectric materials, such as barium titanate
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mi>a</mi><mi>T</mi><mi>i</mi><msub><mi>O</mi><mn>3</mn></msub></mrow><annotation encoding="application/x-tex">BaTiO_3</annotation></semantics></math>),
+exhibit a permanent internal polarization that can be shifted by an
+external field.</p>
+<ul>
+<li><strong>The "Runaway" Condition:</strong> When
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mi>α</mi><mo>=</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">N\alpha = 3</annotation></semantics></math>,
+the feedback loop between polarization and the local field causes the
+lattice to "lock in" with a permanent polarization.</li>
+<li><strong>Critical Temperature
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>T</mi><mi>c</mi></msub><annotation encoding="application/x-tex">T_c</annotation></semantics></math>):</strong>
+Above
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>T</mi><mi>c</mi></msub><annotation encoding="application/x-tex">T_c</annotation></semantics></math>,
+the material is a normal dielectric. As temperature drops toward
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>T</mi><mi>c</mi></msub><annotation encoding="application/x-tex">T_c</annotation></semantics></math>,
+the dielectric constant becomes enormous (magnification effect).</li>
+<li><strong>Curie-Weiss Law:</strong> Above
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>T</mi><mi>c</mi></msub><annotation encoding="application/x-tex">T_c</annotation></semantics></math>,
+the dielectric constant varies inversely with the difference between the
+temperature and the critical temperature:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>κ</mi><mo>−</mo><mn>1</mn><mo>≈</mo><mfrac><mn>9</mn><mrow><mi>β</mi><mo stretchy="false" form="prefix">(</mo><mi>T</mi><mo>−</mo><msub><mi>T</mi><mi>c</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">\kappa - 1 \approx \frac{9}{\beta(T - T_c)}</annotation></semantics></math>.</li>
+</ul>
+<hr />
+<h2 id="common-misconceptions">Common Misconceptions</h2>
+<ul>
+<li><strong>The "Average" Field:</strong> It is a mistake to assume that
+every atom in a dielectric experiences the macroscopic average field
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math>.
+Because of the local polarization of neighbors, the actual field at the
+site of an atom (especially in liquids and solids) is usually
+higher.</li>
+<li><strong>Infinite Polarization:</strong> While the Clausius-Mossotti
+equation suggests that polarization might become infinite when
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><mi>α</mi><mo>=</mo><mn>3</mn></mrow><annotation encoding="application/x-tex">N\alpha = 3</annotation></semantics></math>,
+in reality, the proportionality between the dipole moment and the field
+breaks down at high fields, causing the lattice to "lock" into a finite
+permanent polarization.</li>
+<li><strong>Polar vs. Nonpolar High-Frequency Behavior:</strong> One
+might assume all polarization effects disappear at high frequencies.
+However, while <em>orientation</em> polarization (molecular rotation)
+fails at microwave frequencies, <em>electronic</em> polarization
+(electron displacement) remains effective up to optical
+frequencies.</li>
+</ul>
+<hr />
+<h2 id="short-answer-practice-questions">Short-Answer Practice
+Questions</h2>
+<ol type="1">
+<li><strong>Why does an oxygen molecule have zero permanent dipole
+moment?</strong>
+<ul>
+<li><em>Answer:</em> Due to its symmetry; the centers of gravity of the
+positive and negative charges coincide.</li>
+</ul></li>
+<li><strong>What is "electronic polarizability"?</strong>
+<ul>
+<li><em>Answer:</em> The measure of the displacement of the electron
+distribution relative to the nucleus in an atom when subjected to an
+electric field.</li>
+</ul></li>
+<li><strong>How does temperature affect the dielectric constant of a
+polar gas?</strong>
+<ul>
+<li><em>Answer:</em> It is inversely proportional to the absolute
+temperature (Curie's Law) because higher temperatures increase thermal
+collisions, which disalign the dipoles.</li>
+</ul></li>
+<li><strong>What is an electret?</strong>
+<ul>
+<li><em>Answer:</em> A solid material (like certain waxes) with a
+permanent built-in polarization, acting as the electrical analog of a
+magnet.</li>
+</ul></li>
+<li><strong>What happens to the dielectric constant of barium titanate
+just above its critical temperature?</strong>
+<ul>
+<li><em>Answer:</em> It becomes extremely large (as high as 50,000 to
+100,000) and is very sensitive to temperature changes.</li>
+</ul></li>
+<li><strong>Distinguish between piezoelectricity and
+pyroelectricity.</strong>
+<ul>
+<li><em>Answer:</em> Pyroelectricity is the appearance of external
+fields due to temperature changes changing internal polarization;
+piezoelectricity is the same effect caused by mechanical stress or
+bending.</li>
+</ul></li>
+</ol>
+<hr />
+<h2 id="essay-questions-for-deeper-exploration">Essay Questions for
+Deeper Exploration</h2>
+<ol type="1">
+<li><strong>The Role of Molecular Geometry in Dielectric
+Behavior:</strong> Compare and contrast the mechanisms of polarization
+in
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>2</mn></msub><mi>O</mi></mrow><annotation encoding="application/x-tex">H_2O</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>O</mi><mn>2</mn></msub><annotation encoding="application/x-tex">O_2</annotation></semantics></math>.
+Explain why their response to temperature and high-frequency electric
+fields differs.</li>
+<li><strong>From Gases to Liquids:</strong> Derive the transition from
+the simple gas law
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>κ</mi><mo>−</mo><mn>1</mn><mo>=</mo><mi>N</mi><mi>α</mi></mrow><annotation encoding="application/x-tex">\kappa - 1 = N\alpha</annotation></semantics></math>)
+to the Clausius-Mossotti equation. Why is the "spherical hole" model
+necessary for dense materials, and why does it fail for water?</li>
+<li><strong>The Physics of Ferroelectric "Runaway":</strong> Describe
+the feedback mechanism that leads to permanent polarization in
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mi>a</mi><mi>T</mi><mi>i</mi><msub><mi>O</mi><mn>3</mn></msub></mrow><annotation encoding="application/x-tex">BaTiO_3</annotation></semantics></math>.
+Discuss the roles of both electronic and ionic polarizability
+(specifically the titanium ion) in this process.</li>
+<li><strong>Field Definitions in Dielectrics:</strong> Explain how the
+fields
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>D</mi><annotation encoding="application/x-tex">D</annotation></semantics></math>
+can be defined physically using slots of different orientations within a
+dielectric. Why is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>E</mi><mrow><mi>l</mi><mi>o</mi><mi>c</mi><mi>a</mi><mi>l</mi></mrow></msub><annotation encoding="application/x-tex">E_{local}</annotation></semantics></math>
+different from
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math>
+in most circumstances?</li>
+</ol>
+<hr />
+<h2 id="glossary-of-important-terms">Glossary of Important Terms</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Term</th>
+<th style="text-align: left;">Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Antiferroelectric</strong></td>
+<td style="text-align: left;">A system where individual chains of atoms
+are permanently polarized, but neighboring chains point in opposite
+directions, resulting in no net external moment.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Atomic Polarizability
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>α</mi><annotation encoding="application/x-tex">\alpha</annotation></semantics></math>)</strong></td>
+<td style="text-align: left;">A constant of proportionality describing
+how easily an electric field induces a dipole moment in an atom; has
+dimensions of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>L</mi><mn>3</mn></msup><annotation encoding="application/x-tex">L^3</annotation></semantics></math>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Clausius-Mossotti
+Equation</strong></td>
+<td style="text-align: left;">A formula relating the dielectric constant
+of a dense material to the polarizability of its constituent atoms:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>κ</mi><mo>−</mo><mn>1</mn><mo>=</mo><mfrac><mrow><mi>N</mi><mi>α</mi></mrow><mrow><mn>1</mn><mo>−</mo><mo stretchy="false" form="prefix">(</mo><mi>N</mi><mi>α</mi><mi>/</mi><mn>3</mn><mo stretchy="false" form="postfix">)</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">\kappa - 1 = \frac{N\alpha}{1-(N\alpha/3)}</annotation></semantics></math>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Curie's Law</strong></td>
+<td style="text-align: left;">The observation that the orientation
+polarization of a polar gas is inversely proportional to the absolute
+temperature
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mi>T</mi></mrow><annotation encoding="application/x-tex">1/T</annotation></semantics></math>).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Curie-Weiss Law</strong></td>
+<td style="text-align: left;">A relation for ferroelectrics where the
+dielectric constant varies inversely as the difference between the
+absolute temperature and the critical temperature
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mo stretchy="false" form="prefix">(</mo><mi>T</mi><mo>−</mo><msub><mi>T</mi><mi>c</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">1/(T-T_c)</annotation></semantics></math>).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Dielectric Constant
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>κ</mi><annotation encoding="application/x-tex">\kappa</annotation></semantics></math>)</strong></td>
+<td style="text-align: left;">The factor by which the electrical
+response of a material is modified compared to a vacuum; defined as
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>+</mo><mi>P</mi><mi>/</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>ϵ</mi><mn>0</mn></msub><mi>E</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">1 + P/(\epsilon_0 E)</annotation></semantics></math>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Electronic
+Polarization</strong></td>
+<td style="text-align: left;">Polarization resulting from the
+displacement of electrons relative to the nucleus within an atom or
+molecule.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Electret</strong></td>
+<td style="text-align: left;">A solid dielectric with a permanent,
+"frozen-in" polarization.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Ferroelectric</strong></td>
+<td style="text-align: left;">A material that possesses a permanent
+internal dipole moment that can be toggled by an external field.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Ionic Polarizability</strong></td>
+<td style="text-align: left;">Polarization resulting from the relative
+motion of positive and negative ions in a crystal lattice (e.g.,
+NaCl).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Orientation
+Polarization</strong></td>
+<td style="text-align: left;">Polarization resulting from the alignment
+of permanent molecular dipoles with an external electric field.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Polar Molecule</strong></td>
+<td style="text-align: left;">A molecule with a permanent electric
+dipole moment due to an asymmetric charge distribution.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Polarization (P)</strong></td>
+<td style="text-align: left;">The net dipole moment per unit volume of a
+material.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Pyroelectricity</strong></td>
+<td style="text-align: left;">The phenomenon where a change in
+temperature induces an external electric field in a permanently
+polarized crystal.</td>
+</tr>
+</tbody>
+</table>
+    </article>
+  </main>
+</body>
+</html>

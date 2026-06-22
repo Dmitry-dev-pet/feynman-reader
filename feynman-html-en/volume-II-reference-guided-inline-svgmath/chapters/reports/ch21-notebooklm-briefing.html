@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Solutions of Maxwell’s Equations with Currents and Charges - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="en">
+  <script>
+    (() => {
+      const key = "flp-reader-theme";
+      const applyTheme = (theme) => {
+        const next = theme === "dark" ? "dark" : "light";
+        document.documentElement.dataset.theme = next;
+        document.body.dataset.theme = next;
+        try { localStorage.setItem(key, next); } catch (_) {}
+      };
+      try { applyTheme(localStorage.getItem(key) || "light"); } catch (_) { applyTheme("light"); }
+      document.addEventListener("click", (event) => {
+        const button = event.target.closest('[data-report-action="theme"]');
+        if (!button) return;
+        applyTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark");
+      });
+    })();
+  </script>
+<main class="notebooklm-report-shell">
+    <header aria-label="Quick navigation" class="reader-toolbar report-toolbar">
+      <div class="toolbar-group toolbar-navigation">
+        <a class="toolbar-btn" href="../ch21.html">Back to chapter</a>
+        <a class="toolbar-btn" href="../../../../feynman-reader/index.html">Reader</a>
+        <a class="toolbar-btn" href="../../index.html">Contents</a>
+      </div>
+      <a class="toolbar-title" href="../ch21.html#ch21" title="NotebookLM · Overview">NotebookLM · Overview</a>
+      <div class="toolbar-group toolbar-settings">
+        <button aria-label="Toggle theme" class="toolbar-btn icon-btn" data-report-action="theme" title="Toggle theme" type="button">◐</button>
+      </div>
+    </header>
+    <article class="notebooklm-report">
+<h1
+id="solutions-of-maxwells-equations-with-currents-and-charges">Solutions
+of Maxwell’s Equations with Currents and Charges</h1>
+<h2 id="executive-summary">Executive Summary</h2>
+<p>This briefing explores the synthesis of Maxwell’s equations with the
+phenomena of light and electromagnetic radiation. The primary objective
+is to demonstrate that Maxwell’s equations serve as the foundational
+bedrock for the behavior of light by solving them in the presence of
+arbitrary currents and charges.</p>
+<p>The analysis moves from the general solutions of wave equations to
+specific applications, including oscillating dipoles and moving point
+charges. Key findings include the derivation of <strong>Retarded
+Potentials</strong>, which account for the finite speed of light
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>c</mi><annotation encoding="application/x-tex">c</annotation></semantics></math>),
+and the <strong>Liénard-Wiechert potentials</strong>, which describe the
+fields of relativistic moving charges. Ultimately, this framework
+reveals that the laws of electromagnetism naturally lead to the Lorentz
+transformation, providing the historical and theoretical origins of
+Einstein’s relativity.</p>
+<hr />
+<h2 id="key-themes-and-physical-analysis">Key Themes and Physical
+Analysis</h2>
+<h3 id="1-the-synthesis-of-light-and-electromagnetism">1. The Synthesis
+of Light and Electromagnetism</h3>
+<p>The study of light is fundamentally the study of solutions to
+Maxwell’s equations involving waves of electricity and magnetism. While
+earlier treatments of light focused on the fields produced by moving
+charges (radio, light, x-rays), this analysis provides the mathematical
+bridge to show that these fields are direct consequences of Maxwell’s
+equations.</p>
+<p>The complete electric field
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>
+of a charge moving in an arbitrary way is expressed as:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑬</mi><mo>=</mo><mfrac><mi>q</mi><mrow><mn>4</mn><mi>π</mi><msub><mi>ϵ</mi><mn>0</mn></msub></mrow></mfrac><mo minsize="240%" maxsize="240%" stretchy="true" form="prefix">[</mo><mfrac><msub><mi mathvariant="bold-italic">𝒆</mi><msup><mi>r</mi><mo>′</mo></msup></msub><mrow><msup><mi>r</mi><mo>′</mo></msup><msup><mi></mi><mn>2</mn></msup></mrow></mfrac><mo>+</mo><mfrac><msup><mi>r</mi><mo>′</mo></msup><mi>c</mi></mfrac><mfrac><mi>d</mi><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo minsize="240%" maxsize="240%" stretchy="true" form="prefix">(</mo><mfrac><msub><mi mathvariant="bold-italic">𝒆</mi><msup><mi>r</mi><mo>′</mo></msup></msub><mrow><msup><mi>r</mi><mo>′</mo></msup><msup><mi></mi><mn>2</mn></msup></mrow></mfrac><mo minsize="240%" maxsize="240%" stretchy="true" form="postfix">)</mo><mo>+</mo><mfrac><mn>1</mn><msup><mi>c</mi><mn>2</mn></msup></mfrac><mfrac><msup><mi>d</mi><mn>2</mn></msup><mrow><mi>d</mi><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac><msub><mi mathvariant="bold-italic">𝒆</mi><msup><mi>r</mi><mo>′</mo></msup></msub><mo minsize="240%" maxsize="240%" stretchy="true" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\mathbf{E}=\frac{q}{4\pi\epsilon_0}\biggl[ \frac{\mathbf{e} _{r&#39;}}{r&#39;^2}+\frac{r&#39;}{c}\frac{d }{d t}\biggl( \frac{\mathbf{e}_{r&#39;}}{r&#39;^2}\biggr)+\frac{1}{c^2}\frac{d^2}{dt^2}\mathbf{e}_{r&#39;} \biggr]</annotation></semantics></math></p>
+<p><strong>Physical Components of the Electric Field:</strong></p>
+<ul>
+<li><strong>Retarded Coulomb Field (Term 1):</strong> The standard
+inverse-square field, but directed from the "retarded" position—where
+the charge was at time
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>t</mi><mo>−</mo><msup><mi>r</mi><mo>′</mo></msup><mi>/</mi><mi>c</mi></mrow><annotation encoding="application/x-tex">t - r&#39;/c</annotation></semantics></math>.</li>
+<li><strong>Correction Term (Term 2):</strong> Compensates for
+retardation by extrapolating the field linearly toward the future. For
+slowly changing fields, Terms 1 and 2 together approximate the
+instantaneous Coulomb field.</li>
+<li><strong>Radiation Term (Term 3):</strong> Dominates at large
+distances as it decreases only as
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mi>r</mi></mrow><annotation encoding="application/x-tex">1/r</annotation></semantics></math>.
+It is proportional to the acceleration of the charge projected at right
+angles to the line of sight.</li>
+</ul>
+<h3 id="2-general-solutions-for-potentials-phi-and-mathbfa">2. General
+Solutions for Potentials
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>)</h3>
+<p>To solve Maxwell’s equations with sources (charge density
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ρ</mi><annotation encoding="application/x-tex">\rho</annotation></semantics></math>
+and current density
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝒋</mi><annotation encoding="application/x-tex">\mathbf{j}</annotation></semantics></math>),
+the problem is reduced to solving the inhomogeneous wave equation:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>∇</mi><mn>2</mn></msup><mi>ψ</mi><mo>−</mo><mfrac><mn>1</mn><msup><mi>c</mi><mn>2</mn></msup></mfrac><mfrac><mrow><msup><mi>∂</mi><mn>2</mn></msup><mi>ψ</mi></mrow><mrow><mi>∂</mi><msup><mi>t</mi><mn>2</mn></msup></mrow></mfrac><mo>=</mo><mi>−</mi><mi>s</mi></mrow><annotation encoding="application/x-tex">\nabla^2\psi-\frac{1}{c^2}\frac{\partial^2\psi}{\partial t^2}= -s</annotation></semantics></math></p>
+<p>The solution for a point source involves "retardation": the effect at
+a distance
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math>
+at time
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math>
+depends on the source at time
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo>−</mo><mi>r</mi><mi>/</mi><mi>c</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(t - r/c)</annotation></semantics></math>.
+For spread-out sources, the general solutions (integrals) for the scalar
+potential
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>
+and vector potential
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>
+are:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Potential</th>
+<th style="text-align: left;">Integral Formula</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Scalar Potential
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>)</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ϕ</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo>∫</mo><mfrac><mrow><mi>ρ</mi><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo>,</mo><mi>t</mi><mo>−</mo><msub><mi>r</mi><mn>12</mn></msub><mi>/</mi><mi>c</mi><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mn>4</mn><mi>π</mi><msub><mi>ϵ</mi><mn>0</mn></msub><msub><mi>r</mi><mn>12</mn></msub></mrow></mfrac><mi>d</mi><msub><mi>V</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">\phi(1,t)=\int\frac{\rho(2,t-r_{12}/c)}{4\pi\epsilon_0 r_{12}}dV_2</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Vector Potential
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>)</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑨</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo>∫</mo><mfrac><mrow><mi mathvariant="bold-italic">𝒋</mi><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo>,</mo><mi>t</mi><mo>−</mo><msub><mi>r</mi><mn>12</mn></msub><mi>/</mi><mi>c</mi><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mn>4</mn><mi>π</mi><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup><msub><mi>r</mi><mn>12</mn></msub></mrow></mfrac><mi>d</mi><msub><mi>V</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">\mathbf{A}(1,t)=\int\frac{\mathbf{j}(2,t-r_{12}/c)}{4\pi\epsilon_0 c^2r_{12}}dV_2</annotation></semantics></math></td>
+</tr>
+</tbody>
+</table>
+<p>These integrals represent the "center of the universe of
+electromagnetism," providing a complete description of fields produced
+by any moving charges.</p>
+<h3 id="3-radiation-from-an-oscillating-dipole">3. Radiation from an
+Oscillating Dipole</h3>
+<p>In a system where a charge
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>q</mi><annotation encoding="application/x-tex">q</annotation></semantics></math>
+oscillates (creating a dipole moment
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝒑</mi><mo>=</mo><mi>q</mi><mi mathvariant="bold-italic">𝒅</mi></mrow><annotation encoding="application/x-tex">\mathbf{p} = q\mathbf{d}</annotation></semantics></math>),
+the vector potential
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>
+produces spherical waves.</p>
+<p><strong>Radiation Field Characteristics:</strong></p>
+<ul>
+<li><strong>Magnetic Field
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>):</strong>
+Far from the source,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+depends on the acceleration of the charge
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi mathvariant="bold-italic">𝒑</mi><mo accent="true">̈</mo></mover><annotation encoding="application/x-tex">\ddot{\mathbf{p}}</annotation></semantics></math>).
+Near the source, the formula reduces to the Law of Biot and Savart, as
+the retardation effects are partially canceled by second-order
+terms.</li>
+<li><strong>Spatial Oscillation:</strong> The radiation term arises
+because time variations at the source are translated into steep spatial
+variations (slopes) as waves propagate.</li>
+<li><strong>The Radiation Formula:</strong>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑩</mi><mo>=</mo><mfrac><mn>1</mn><mrow><mn>4</mn><mi>π</mi><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup></mrow></mfrac><mfrac><mrow><mo stretchy="false" form="prefix">[</mo><mover><mi mathvariant="bold-italic">𝒑</mi><mo accent="true">̇</mo></mover><mo>+</mo><mo stretchy="false" form="prefix">(</mo><mi>r</mi><mi>/</mi><mi>c</mi><mo stretchy="false" form="postfix">)</mo><mover><mi mathvariant="bold-italic">𝒑</mi><mo accent="true">̈</mo></mover><msub><mo stretchy="false" form="postfix">]</mo><mrow><mi>t</mi><mo>−</mo><mi>r</mi><mi>/</mi><mi>c</mi></mrow></msub><mo>×</mo><mi mathvariant="bold-italic">𝒓</mi></mrow><msup><mi>r</mi><mn>3</mn></msup></mfrac></mrow><annotation encoding="application/x-tex">\mathbf{B}=\frac{1}{4\pi\epsilon_0 c^2} \frac{[\dot{\mathbf{p}}+(r/c)\ddot{\mathbf{p}}]_{t-r/c}\times\mathbf{r}}{r^3}</annotation></semantics></math></li>
+</ul>
+<h3 id="4-the-liénard-wiechert-potentials">4. The Liénard-Wiechert
+Potentials</h3>
+<p>For a point charge moving at high or relativistic velocities, a
+subtle "sweeping" effect occurs during the integration of the charge
+density. As the integral "sweeps over the charge," the movement of the
+charge toward or away from the observer changes the effective amount of
+charge contributing to the potential at any given instant.</p>
+<p><strong>The Correction Factor:</strong> The potential is not simply
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi><mi>/</mi><msup><mi>r</mi><mo>′</mo></msup></mrow><annotation encoding="application/x-tex">q/r&#39;</annotation></semantics></math>,
+but must be corrected by the factor
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mn>1</mn><mrow><mn>1</mn><mo>−</mo><msub><mi>v</mi><msup><mi>r</mi><mo>′</mo></msup></msub><mi>/</mi><mi>c</mi></mrow></mfrac><annotation encoding="application/x-tex">\frac{1}{1-v_{r&#39;}/c}</annotation></semantics></math>,
+where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>v</mi><msup><mi>r</mi><mo>′</mo></msup></msub><annotation encoding="application/x-tex">v_{r&#39;}</annotation></semantics></math>
+is the component of the velocity toward the observation point.
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ϕ</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>,</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><mi>q</mi><mrow><mn>4</mn><mi>π</mi><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>r</mi><mo>′</mo></msup><mo stretchy="false" form="prefix">[</mo><mn>1</mn><mo>−</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>v</mi><mi>r</mi></msub><mi>/</mi><mi>c</mi><mo stretchy="false" form="postfix">)</mo><msub><mo stretchy="false" form="postfix">]</mo><mtext mathvariant="normal">ret</mtext></msub></mrow></mfrac></mrow><annotation encoding="application/x-tex">\phi(1,t)=\frac{q}{4\pi\epsilon_0 r&#39;[1-(v_r/c)]_{\text{ret}}}</annotation></semantics></math>
+This demonstrates that the perceived charge density is increased when
+the source moves toward the observer.</p>
+<h3 id="5-electrodynamics-and-the-origin-of-relativity">5.
+Electrodynamics and the Origin of Relativity</h3>
+<p>Calculations for a charge moving with uniform velocity
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>v</mi><annotation encoding="application/x-tex">v</annotation></semantics></math>
+reveal that Maxwell’s equations are inherently relativistic. By solving
+for the potential of a charge in steady motion, the Lorentz
+transformation emerges naturally:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ϕ</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo>,</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><mi>q</mi><mrow><mn>4</mn><mi>π</mi><msub><mi>ϵ</mi><mn>0</mn></msub></mrow></mfrac><mfrac><mn>1</mn><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mi>v</mi><mn>2</mn></msup><mi>/</mi><msup><mi>c</mi><mn>2</mn></msup></mrow></msqrt></mfrac><mfrac><mn>1</mn><mrow><mo minsize="240%" maxsize="240%" stretchy="true" form="prefix">[</mo><mo minsize="240%" maxsize="240%" stretchy="true" form="prefix">(</mo><mfrac><mrow><mi>x</mi><mo>−</mo><mi>v</mi><mi>t</mi></mrow><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mi>v</mi><mn>2</mn></msup><mi>/</mi><msup><mi>c</mi><mn>2</mn></msup></mrow></msqrt></mfrac><msup><mo minsize="240%" maxsize="240%" stretchy="true" form="postfix">)</mo><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup><mo>+</mo><msup><mi>z</mi><mn>2</mn></msup><msup><mo minsize="240%" maxsize="240%" stretchy="true" form="postfix">]</mo><mrow><mn>1</mn><mi>/</mi><mn>2</mn></mrow></msup></mrow></mfrac></mrow><annotation encoding="application/x-tex">\phi(x,y,z,t)= \frac{q}{4\pi\epsilon_0} \frac{1}{\sqrt{1-v^2/c^2}} \frac{1} {\biggl[ \biggl( \frac{x-vt}{\sqrt{1-v^2/c^2}} \biggr)^2+y^2+z^2 \biggr]^{1/2}}</annotation></semantics></math></p>
+<p>This result shows that
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ϕ</mi><mi>/</mi><mi>c</mi></mrow><annotation encoding="application/x-tex">\phi/c</annotation></semantics></math>
+constitute a <strong>four-vector</strong>. Unlike Newtonian mechanics,
+the laws of Maxwell do not require "fixing up" for relativity; they were
+already correct.</p>
+<hr />
+<h2 id="important-quotes-with-context">Important Quotes with
+Context</h2>
+<blockquote>
+<p><strong>"If we can deduce Eq. (21.1) from Maxwell’s equations, we
+will really understand the connection between light and
+electromagnetism. To make this connection is the main purpose of this
+chapter."</strong> <em>Context:</em> Feynman establishes the
+instructional goal of uniting the disparate treatments of light (from
+Volume I) and Maxwell's equations (Volume II).</p>
+</blockquote>
+<blockquote>
+<p><strong>"So here is the center of the universe of
+electromagnetism—the complete theory of electricity and magnetism, and
+of light... It is all here. Here is the structure built by Maxwell,
+complete in all its power and beauty."</strong> <em>Context:</em>
+Following the presentation of the general integral solutions for
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>,
+emphasizing that these equations describe all classical electromagnetic
+phenomena.</p>
+</blockquote>
+<blockquote>
+<p><strong>"The static formulas are very accurate, much more accurate
+than you might think. Of course, the compensation only works for points
+close in."</strong> <em>Context:</em> Explaining how the retarded
+potential formulas for dipoles remarkably resemble the instantaneous
+Biot-Savart law at short distances because different retardation terms
+cancel each other out.</p>
+</blockquote>
+<blockquote>
+<p><strong>"The formulas of the Lorentz transformation... were
+discoveries made by Lorentz when he was studying the equations of
+electricity and magnetism."</strong> <em>Context:</em> Highlighting that
+special relativity was historically derived from the needs of
+electrodynamics, rather than vice-versa.</p>
+</blockquote>
+<hr />
+<h2 id="actionable-insights-for-physical-analysis">Actionable Insights
+for Physical Analysis</h2>
+<ol type="1">
+<li><strong>Prioritize Retardation in Dynamic Systems:</strong> When
+calculating fields for non-static charges, one must always use the
+"retarded" position
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>t</mi><mo>′</mo></msup><mo>=</mo><mi>t</mi><mo>−</mo><msup><mi>r</mi><mo>′</mo></msup><mi>/</mi><mi>c</mi></mrow><annotation encoding="application/x-tex">t&#39; = t - r&#39;/c</annotation></semantics></math>.
+The physical effect observed now is due to the charge's position and
+velocity in the past.</li>
+<li><strong>Use
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mi>r</mi></mrow><annotation encoding="application/x-tex">1/r</annotation></semantics></math>
+for Long-Range Effects:</strong> In communication and optics
+(far-field), ignore the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><msup><mi>r</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">1/r^2</annotation></semantics></math>
+Coulomb terms. Focus exclusively on the acceleration of the charge, as
+this defines the radiation field.</li>
+<li><strong>Account for the Relativistic "Sweeping" Effect:</strong>
+When dealing with high-speed particles, the scalar potential must
+include the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><msub><mi>v</mi><mi>r</mi></msub><mi>/</mi><mi>c</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">1/(1 - v_r/c)</annotation></semantics></math>
+factor. Failure to do so ignores the fact that the charge moves while
+its own signal is being "emitted" from different parts of its
+volume.</li>
+<li><strong>Vector Potential as a Four-Vector:</strong> Treat
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ϕ</mi><mi>/</mi><mi>c</mi></mrow><annotation encoding="application/x-tex">\phi/c</annotation></semantics></math>
+as a single entity under coordinate transformations. This simplifies
+calculations for systems moving at constant velocities, as they can be
+solved in the rest frame and then transformed using the Lorentz factor
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><msqrt><mrow><mn>1</mn><mo>−</mo><msup><mi>v</mi><mn>2</mn></msup><mi>/</mi><msup><mi>c</mi><mn>2</mn></msup></mrow></msqrt></mrow><annotation encoding="application/x-tex">1/\sqrt{1-v^2/c^2}</annotation></semantics></math>.</li>
+</ol>
+    </article>
+  </main>
+</body>
+</html>

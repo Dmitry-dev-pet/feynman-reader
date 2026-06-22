@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Study Guide: Ferromagnetism - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="en">
+  <script>
+    (() => {
+      const key = "flp-reader-theme";
+      const applyTheme = (theme) => {
+        const next = theme === "dark" ? "dark" : "light";
+        document.documentElement.dataset.theme = next;
+        document.body.dataset.theme = next;
+        try { localStorage.setItem(key, next); } catch (_) {}
+      };
+      try { applyTheme(localStorage.getItem(key) || "light"); } catch (_) { applyTheme("light"); }
+      document.addEventListener("click", (event) => {
+        const button = event.target.closest('[data-report-action="theme"]');
+        if (!button) return;
+        applyTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark");
+      });
+    })();
+  </script>
+<main class="notebooklm-report-shell">
+    <header aria-label="Quick navigation" class="reader-toolbar report-toolbar">
+      <div class="toolbar-group toolbar-navigation">
+        <a class="toolbar-btn" href="../ch36.html">Back to chapter</a>
+        <a class="toolbar-btn" href="../../../../feynman-reader/index.html">Reader</a>
+        <a class="toolbar-btn" href="../../index.html">Contents</a>
+      </div>
+      <a class="toolbar-title" href="../ch36.html#ch36" title="NotebookLM · Guide">NotebookLM · Guide</a>
+      <div class="toolbar-group toolbar-settings">
+        <button aria-label="Toggle theme" class="toolbar-btn icon-btn" data-report-action="theme" title="Toggle theme" type="button">◐</button>
+      </div>
+    </header>
+    <article class="notebooklm-report">
+<h1 id="study-guide-ferromagnetism">Study Guide: Ferromagnetism</h1>
+<p>This study guide explores the principles of ferromagnetism as
+outlined in the Feynman Lectures on Physics, Volume II, Chapter 36. It
+covers the mathematical description of magnetization currents, the
+definition of the magnetizing field <span
+class="math inline">$\FLPH$</span>, the behavior of magnetic materials
+in circuits, and the microscopic origins of spontaneous
+magnetization.</p>
+<hr />
+<h2 id="key-concepts">Key Concepts</h2>
+<h3 id="1-magnetization-currents-mathbfj_textmag">1. Magnetization
+Currents
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="bold-italic">𝒋</mi><mtext mathvariant="normal">mag</mtext></msub><annotation encoding="application/x-tex">\mathbf{j}_{\text{mag}}</annotation></semantics></math>)</h3>
+<p>Ferromagnetism involves induced magnetic moments far stronger than
+those in paramagnetism or diamagnetism. The magnetic state of matter is
+described macroscopically by <span class="math inline">$\FLPM$</span>,
+the average magnetic dipole moment per unit volume.</p>
+<ul>
+<li><strong>Physical Basis:</strong> Magnetism arises from "Ampèrian"
+currents—circulating atomic currents from electron spin or orbital
+motion.</li>
+<li><strong>Mathematical Relation:</strong> The circulating atomic
+currents are equivalent to a macroscopic current density: <span
+class="math display">$$\mathbf{j}_{\text{mag}} = \mathbf{curl}
+\FLPM$$</span></li>
+<li><strong>Surface vs. Volume:</strong> In a uniformly magnetized
+material, internal currents cancel out, leaving only a net surface
+current (similar to a solenoid). If magnetization varies (<span
+class="math inline">$\mathbf{curl} \FLPM \neq 0$</span>), a net volume
+current density exists.</li>
+</ul>
+<h3 id="2-the-field-flph">2. The Field <span
+class="math inline">$\FLPH$</span></h3>
+<p>The vector field <span class="math inline">$\FLPH$</span> is a
+derived quantity used to simplify Maxwell’s equations in the presence of
+magnetic materials.</p>
+<ul>
+<li><strong>Definition:</strong> <span class="math inline">$\FLPH =
+\mathbf{B} - \frac{\FLPM}{\epsilon_0 c^2}$</span></li>
+<li><strong>Maxwell Equation:</strong> <span
+class="math inline">$\epsilon_0 c^2 \mathbf{curl} \FLPH =
+\mathbf{j}_{\text{cond}} + \frac{\partial \FLPD}{\partial
+t}$</span></li>
+<li><strong>Units and Confusion:</strong> In the MKS system,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+is measured in webers/meter² (tesla). Feynman defines <span
+class="math inline">$\FLPH$</span> to have the same units as
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>.
+However, engineers often use a different definition (<span
+class="math inline">$\FLPH' = \epsilon_0 c^2 \mathbf{B} - \FLPM$</span>)
+where <span class="math inline">$\FLPH$</span> has units of
+amperes/meter.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Field</th>
+<th style="text-align: left;">Feynman Unit</th>
+<th style="text-align: left;">MKS/Engineering Unit</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math></td>
+<td style="text-align: left;">Weber/m² (Gauss)</td>
+<td style="text-align: left;">Weber/m²</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span
+class="math inline">$\FLPH$</span></td>
+<td style="text-align: left;">Weber/m² (Oersted)</td>
+<td style="text-align: left;">Ampere/meter (<span
+class="math inline">$\FLPH'$</span>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><span
+class="math inline">$\FLPM$</span></td>
+<td style="text-align: left;">Ampere/meter</td>
+<td style="text-align: left;">Ampere/meter</td>
+</tr>
+</tbody>
+</table>
+<h3 id="3-hysteresis-and-magnetization-curves">3. Hysteresis and
+Magnetization Curves</h3>
+<p>The relationship between
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+and <span class="math inline">$\FLPH$</span> in ferromagnetic materials
+is non-linear and depends on the material's history.</p>
+<ul>
+<li><strong>Magnetization Curve:</strong> The initial path
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+takes as <span class="math inline">$\FLPH$</span> increases from
+zero.</li>
+<li><strong>Saturation:</strong> The point where all atomic magnets are
+aligned; further increases in <span class="math inline">$\FLPH$</span>
+result in only marginal increases in
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>.</li>
+<li><strong>Hysteresis Loop:</strong> When <span
+class="math inline">$\FLPH$</span> is cycled, the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+field follows a loop. The area inside this loop represents energy lost
+as heat (<strong>hysteresis loss</strong>).</li>
+<li><strong>Remanence:</strong> The residual
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+field remaining when the magnetizing field <span
+class="math inline">$\FLPH$</span> returns to zero, allowing for
+permanent magnets.</li>
+</ul>
+<h3 id="4-spontaneous-magnetization-and-the-curie-temperature">4.
+Spontaneous Magnetization and the Curie Temperature</h3>
+<p>Ferromagnetic materials can exhibit magnetization even in the absence
+of an external field (<span class="math inline">$\FLPH = 0$</span>).</p>
+<ul>
+<li><strong>Curie Temperature
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>T</mi><mi>c</mi></msub><annotation encoding="application/x-tex">T_c</annotation></semantics></math>):</strong>
+The critical temperature above which ferromagnetic behavior disappears
+and the material becomes paramagnetic.</li>
+<li><strong>Weiss Theory vs. Reality:</strong> The classical "magnetic"
+explanation for ferromagnetism fails by a factor of 2600. The actual
+alignment is caused by non-magnetic quantum mechanical interactions
+(Pauli exclusion principle).</li>
+<li><strong>Domains:</strong> Large pieces of iron may have zero net
+magnetization because they are composed of many small "domains," each
+spontaneously magnetized in a different direction.</li>
+</ul>
+<hr />
+<h2 id="short-answer-self-check-questions">Short-Answer Self-Check
+Questions</h2>
+<ol type="1">
+<li><strong>Why is a uniformly magnetized rod equivalent to a long
+solenoid?</strong> The internal circulating atomic currents cancel each
+other out, leaving only the uncancelled currents at the surface to flow
+around the rod, mimicking a solenoid's windings.</li>
+<li><strong>What is the physical meaning of the area enclosed by a
+hysteresis loop?</strong> The area represents the energy per unit volume
+lost as heat in the material during one full cycle of
+magnetization.</li>
+<li><strong>How is the "magnetizing field" <span
+class="math inline">$\FLPH$</span> related to the conduction current in
+a torus?</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>H</mi><annotation encoding="application/x-tex">H</annotation></semantics></math>
+is directly proportional to the magnetizing current:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>H</mi><mo>=</mo><mfrac><mn>1</mn><mrow><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup></mrow></mfrac><mfrac><mrow><mi>N</mi><mi>I</mi></mrow><mi>l</mi></mfrac></mrow><annotation encoding="application/x-tex">H = \frac{1}{\epsilon_0 c^2} \frac{NI}{l}</annotation></semantics></math>.</li>
+<li><strong>Why does the purely "magnetic" theory of the local field
+fail to explain ferromagnetism in nickel?</strong> The predicted Curie
+temperature is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>0.24</mn><mo>∘</mo></msup><mtext mathvariant="normal">K</mtext></mrow><annotation encoding="application/x-tex">0.24^\circ \text{K}</annotation></semantics></math>,
+whereas the experimental value is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mn>631</mn><mo>∘</mo></msup><mtext mathvariant="normal">K</mtext></mrow><annotation encoding="application/x-tex">631^\circ \text{K}</annotation></semantics></math>.
+The magnetic interaction is too weak to cause alignment against thermal
+motion.</li>
+<li><strong>In an electromagnet with a small air gap, how does the
+magnetic field
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+in the gap compare to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+in the iron?</strong> Because
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="bold-italic">𝒅</mi><mi mathvariant="bold-italic">𝒊</mi><mi mathvariant="bold-italic">𝒗</mi></mrow><mi mathvariant="bold-italic">𝑩</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\mathbf{div} \mathbf{B} = 0</annotation></semantics></math>,
+the magnetic field
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+is approximately the same in both the iron and the gap, assuming the
+flux is contained.</li>
+</ol>
+<hr />
+<h2 id="essay-prompts-for-deeper-exploration">Essay Prompts for Deeper
+Exploration</h2>
+<ol type="1">
+<li><strong>The Role of Mathematical Analogy in Field Theory:</strong>
+Explain how the equations of static ferromagnetism can be mapped onto
+the equations of electrostatics. Discuss the utility of the <span
+class="math inline">$\FLPH$</span> field and why Feynman warns that
+despite the mathematical similarity, the physics of <span
+class="math inline">$\FLPH$</span> and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>
+is fundamentally different.</li>
+<li><strong>Energy Dynamics in Iron-Core Inductors:</strong> Analyze the
+process of energy storage and loss in a ferromagnetic inductor. Compare
+an "ideal" air-core inductor to an iron-core inductor, focusing on why
+the latter provides higher inductance and how hysteresis affects
+efficiency.</li>
+<li><strong>From Microscopic Spins to Macroscopic Domains:</strong>
+Discuss the discrepancy between the spontaneous magnetization of
+individual atoms and the observed zero magnetization of bulk iron. How
+does the concept of magnetic domains bridge this gap?</li>
+</ol>
+<hr />
+<h2 id="common-misconceptions">Common Misconceptions</h2>
+<ul>
+<li><strong>"<span class="math inline">$\FLPH$</span> is the 'Real'
+Magnetic Field":</strong> Historically, <span
+class="math inline">$\FLPH$</span> was treated as the primary field (the
+"magnetic poles" model). In reality,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>
+are the fundamental physical fields; <span
+class="math inline">$\FLPH$</span> is a convenient mathematical
+construct for macroscopic averages.</li>
+<li><strong>"Magnetic Forces Cause Alignment":</strong> It is a common
+mistake to assume that the magnetic dipoles of atoms line up because of
+their magnetic attraction to one another. As shown by the failure of the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>T</mi><mi>c</mi></msub><annotation encoding="application/x-tex">T_c</annotation></semantics></math>
+calculation, these magnetic forces are far too weak to overcome thermal
+agitation.</li>
+<li><strong>"Gauss and Oersteds are Different Units":</strong> While
+given different names to distinguish
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+and <span class="math inline">$\FLPH$</span>, in the system used by
+Feynman, they have the same dimensions and are physically the same
+size.</li>
+</ul>
+<hr />
+<h2 id="glossary-of-important-terms">Glossary of Important Terms</h2>
+<ul>
+<li><strong>Ampèrian Currents:</strong> The microscopic, circulating
+currents within atoms that give rise to materials' magnetic
+properties.</li>
+<li><strong>Curie Temperature
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>T</mi><mi>c</mi></msub><annotation encoding="application/x-tex">T_c</annotation></semantics></math>):</strong>
+The temperature at which a material transitions from ferromagnetic to
+paramagnetic behavior.</li>
+<li><strong>Hysteresis:</strong> The phenomenon where the state of a
+system (magnetization) depends on its previous history.</li>
+<li><strong>Magnetization (<span
+class="math inline">$\FLPM$</span>):</strong> The magnetic dipole moment
+per unit volume of a material.</li>
+<li><strong>Permeability
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>μ</mi><annotation encoding="application/x-tex">\mu</annotation></semantics></math>):</strong>
+The ratio of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+to <span class="math inline">$\FLPH$</span> in the linear approximation
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>=</mo><mi>μ</mi><mi>H</mi></mrow><annotation encoding="application/x-tex">B = \mu H</annotation></semantics></math>);
+it indicates how easily a material can be magnetized.</li>
+<li><strong>Remanence (Residual Field):</strong> The magnetization
+remaining in a ferromagnetic material after the external magnetizing
+field is removed.</li>
+<li><strong>Saturation:</strong> The state reached when an increase in
+the external magnetizing field produces no further significant increase
+in the material's magnetization.</li>
+</ul>
+    </article>
+  </main>
+</body>
+</html>

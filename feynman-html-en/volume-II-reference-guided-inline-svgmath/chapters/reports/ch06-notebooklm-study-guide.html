@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chapter 6. The Electric Field in Various Circumstances: Study Guide - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="en">
+  <script>
+    (() => {
+      const key = "flp-reader-theme";
+      const applyTheme = (theme) => {
+        const next = theme === "dark" ? "dark" : "light";
+        document.documentElement.dataset.theme = next;
+        document.body.dataset.theme = next;
+        try { localStorage.setItem(key, next); } catch (_) {}
+      };
+      try { applyTheme(localStorage.getItem(key) || "light"); } catch (_) { applyTheme("light"); }
+      document.addEventListener("click", (event) => {
+        const button = event.target.closest('[data-report-action="theme"]');
+        if (!button) return;
+        applyTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark");
+      });
+    })();
+  </script>
+<main class="notebooklm-report-shell">
+    <header aria-label="Quick navigation" class="reader-toolbar report-toolbar">
+      <div class="toolbar-group toolbar-navigation">
+        <a class="toolbar-btn" href="../ch06.html">Back to chapter</a>
+        <a class="toolbar-btn" href="../../../../feynman-reader/index.html">Reader</a>
+        <a class="toolbar-btn" href="../../index.html">Contents</a>
+      </div>
+      <a class="toolbar-title" href="../ch06.html#ch06" title="NotebookLM · Guide">NotebookLM · Guide</a>
+      <div class="toolbar-group toolbar-settings">
+        <button aria-label="Toggle theme" class="toolbar-btn icon-btn" data-report-action="theme" title="Toggle theme" type="button">◐</button>
+      </div>
+    </header>
+    <article class="notebooklm-report">
+<h1
+id="chapter-6-the-electric-field-in-various-circumstances-study-guide">Chapter
+6. The Electric Field in Various Circumstances: Study Guide</h1>
+<p>This study guide examines the behavior of electric fields in diverse
+physical environments, the mathematical frameworks used to describe
+them, and the practical methods for solving electrostatic problems
+involving charge distributions and conductors.</p>
+<hr />
+<h2 id="i-key-concepts">I. Key Concepts</h2>
+<h3 id="1-fundamental-equations-of-electrostatics">1. Fundamental
+Equations of Electrostatics</h3>
+<p>The mathematical study of electrostatics is governed by two Maxwell
+equations:</p>
+<ul>
+<li><strong>Divergence of E:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝒅</mi><mi>i</mi><mi>v</mi><mi mathvariant="bold-italic">𝑬</mi><mo>=</mo><mfrac><mi>ρ</mi><msub><mi>ϵ</mi><mn>0</mn></msub></mfrac></mrow><annotation encoding="application/x-tex">\mathbf{d}iv{\mathbf{E}}=\frac{\rho}{\epsilon_0}</annotation></semantics></math></li>
+<li><strong>Curl of E:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝒄</mi><mi>u</mi><mi>r</mi><mi>l</mi><mi mathvariant="bold-italic">𝑬</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\mathbf{c}url{\mathbf{E}}=0</annotation></semantics></math></li>
+</ul>
+<p>These are consolidated into a single differential equation by
+representing the electric field as the gradient of a scalar potential
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑬</mi><mo>=</mo><mi>−</mi><mi mathvariant="bold-italic">𝜵</mi><mi>ϕ</mi></mrow><annotation encoding="application/x-tex">\mathbf{E}=-\boldsymbol{\nabla}{\phi}</annotation></semantics></math>).
+This results in the <strong>Poisson Equation</strong>:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>∇</mi><mn>2</mn></msup><mi>ϕ</mi><mo>=</mo><mi>−</mi><mfrac><mi>ρ</mi><msub><mi>ϵ</mi><mn>0</mn></msub></mfrac></mrow><annotation encoding="application/x-tex">\nabla^2\phi=-\frac{\rho}{\epsilon_0}</annotation></semantics></math>
+The operator
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>∇</mi><mn>2</mn></msup><annotation encoding="application/x-tex">\nabla^2</annotation></semantics></math>
+is the <strong>Laplacian</strong>. If the charge density
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ρ</mi><annotation encoding="application/x-tex">\rho</annotation></semantics></math>
+is known at every point, the potential
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>
+is found through an integration over space:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ϕ</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo>∫</mo><mfrac><mrow><mi>ρ</mi><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo stretchy="false" form="postfix">)</mo><mi>d</mi><msub><mi>V</mi><mn>2</mn></msub></mrow><mrow><mn>4</mn><mi>π</mi><msub><mi>ϵ</mi><mn>0</mn></msub><msub><mi>r</mi><mn>12</mn></msub></mrow></mfrac></mrow><annotation encoding="application/x-tex">\phi(1)=\int\frac{\rho(2)dV_2}{4\pi\epsilon_0 r_{12}}</annotation></semantics></math></p>
+<h3 id="2-the-electric-dipole">2. The Electric Dipole</h3>
+<p>A dipole consists of two equal and opposite charges
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>+</mi><mi>q</mi></mrow><annotation encoding="application/x-tex">+q</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mi>q</mi></mrow><annotation encoding="application/x-tex">-q</annotation></semantics></math>)
+separated by a small distance
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>d</mi><annotation encoding="application/x-tex">d</annotation></semantics></math>.</p>
+<ul>
+<li><strong>Dipole Moment
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝒑</mi><annotation encoding="application/x-tex">\mathbf{p}</annotation></semantics></math>):</strong>
+Defined as
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>=</mo><mi>q</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">p = qd</annotation></semantics></math>.
+The vector
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝒑</mi><annotation encoding="application/x-tex">\mathbf{p}</annotation></semantics></math>
+points from the negative charge to the positive charge.</li>
+<li><strong>Potential
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>):</strong>
+For a dipole at the origin, the potential at a distant point is:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ϕ</mi><mo stretchy="false" form="prefix">(</mo><mi mathvariant="bold-italic">𝒓</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><mn>1</mn><mrow><mn>4</mn><mi>π</mi><msub><mi>ϵ</mi><mn>0</mn></msub></mrow></mfrac><mfrac><mrow><mi mathvariant="bold-italic">𝒑</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝒓</mi></mrow><msup><mi>r</mi><mn>3</mn></msup></mfrac></mrow><annotation encoding="application/x-tex">\phi(\mathbf{r})=\frac{1}{4\pi\epsilon_0}\frac{\mathbf{p}\cdot\mathbf{r}}{r^3}</annotation></semantics></math></li>
+<li><strong>Field Decay:</strong> Unlike a point charge (where potential
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ϕ</mi><mo>∝</mo><mn>1</mn><mi>/</mi><mi>r</mi></mrow><annotation encoding="application/x-tex">\phi \propto 1/r</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>∝</mo><mn>1</mn><mi>/</mi><msup><mi>r</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">E \propto 1/r^2</annotation></semantics></math>),
+a dipole's potential decreases as
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><msup><mi>r</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">1/r^2</annotation></semantics></math>
+and its electric field decreases as
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><msup><mi>r</mi><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">1/r^3</annotation></semantics></math>.</li>
+<li><strong>Physical Examples:</strong>
+<ul>
+<li><strong>Atomic/Molecular Dipoles:</strong> Atoms in an external
+field shift slightly to become dipoles. Some molecules, like
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>2</mn></msub><mi>O</mi></mrow><annotation encoding="application/x-tex">H_2O</annotation></semantics></math>,
+are permanent dipoles due to asymmetric charge distribution.</li>
+<li><strong>Antennas:</strong> "Dipole" antennas can be approximated by
+two separated charges.</li>
+</ul></li>
+</ul>
+<h3 id="3-arbitrary-charge-distributions">3. Arbitrary Charge
+Distributions</h3>
+<p>Far away from any neutral object with a complex charge distribution,
+the potential is dominated by the dipole term.</p>
+<ul>
+<li><strong>Monopole Term:</strong> Proportional to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mi>R</mi></mrow><annotation encoding="application/x-tex">1/R</annotation></semantics></math>
+(vanishes if the object is neutral).</li>
+<li><strong>Dipole Term:</strong> Proportional to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><msup><mi>R</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">1/R^2</annotation></semantics></math>
+(depends on the dipole moment
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝒑</mi><mo>=</mo><mo>∑</mo><msub><mi>q</mi><mi>i</mi></msub><msub><mi mathvariant="bold-italic">𝒅</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">\mathbf{p} = \sum q_i \mathbf{d}_i</annotation></semantics></math>).</li>
+<li><strong>Quadrupole Term:</strong> Proportional to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><msup><mi>R</mi><mn>3</mn></msup></mrow><annotation encoding="application/x-tex">1/R^3</annotation></semantics></math>
+(relevant if both the total charge and the dipole moment are zero, such
+as in
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><msub><mi>O</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">CO_2</annotation></semantics></math>).</li>
+</ul>
+<h3 id="4-the-method-of-images">4. The Method of Images</h3>
+<p>This is a mathematical "trick" used to solve for fields near
+conductors without knowing the surface charge distribution
+beforehand.</p>
+<ul>
+<li><strong>Logic:</strong> If a specific arrangement of point charges
+creates an equipotential surface that matches the shape of a conductor,
+the field outside that conductor is identical to the field produced by
+the point charges.</li>
+<li><strong>Image Charge:</strong> An imaginary charge placed "behind"
+the conducting surface to satisfy boundary conditions.</li>
+<li><strong>Key Examples:</strong>
+<ul>
+<li><strong>Point Charge near a Grounded Plane:</strong> The image is an
+equal and opposite charge placed symmetrically on the other side of the
+plane.</li>
+<li><strong>Point Charge near a Grounded Sphere:</strong> For a sphere
+of radius
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+and a charge
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>q</mi><annotation encoding="application/x-tex">q</annotation></semantics></math>
+at distance
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>
+from the center, the image charge
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>q</mi><mo>′</mo></msup><mo>=</mo><mi>−</mi><mi>q</mi><mo stretchy="false" form="prefix">(</mo><mi>a</mi><mi>/</mi><mi>b</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">q&#39; = -q(a/b)</annotation></semantics></math>
+is placed at distance
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>a</mi><mn>2</mn></msup><mi>/</mi><mi>b</mi></mrow><annotation encoding="application/x-tex">a^2/b</annotation></semantics></math>
+from the center.</li>
+</ul></li>
+</ul>
+<h3 id="5-condensers-capacitors">5. Condensers (Capacitors)</h3>
+<p>A condenser is a system of two conductors carrying equal and opposite
+charges.</p>
+<ul>
+<li><strong>Capacity
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math>):</strong>
+The constant of proportionality between charge
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Q</mi><annotation encoding="application/x-tex">Q</annotation></semantics></math>
+and potential difference
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math>:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Q</mi><mo>=</mo><mi>C</mi><mi>V</mi></mrow><annotation encoding="application/x-tex">Q = CV</annotation></semantics></math>.</li>
+<li><strong>Parallel-Plate Condenser:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>C</mi><mo>=</mo><mfrac><mrow><msub><mi>ϵ</mi><mn>0</mn></msub><mi>A</mi></mrow><mi>d</mi></mfrac></mrow><annotation encoding="application/x-tex">C = \frac{\epsilon_0 A}{d}</annotation></semantics></math>.</li>
+<li><strong>Unit:</strong> The Farad (1 Coulomb/Volt).</li>
+</ul>
+<h3 id="6-high-voltage-breakdown-and-sharp-points">6. High-Voltage
+Breakdown and Sharp Points</h3>
+<p>The electric field is strongest on parts of a conductor with the
+smallest radius of curvature (sharp points).</p>
+<ul>
+<li><strong>Reasoning:</strong> Charges spread out to stay as far apart
+as possible; a sharp tip allows a high surface density
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>σ</mi><annotation encoding="application/x-tex">\sigma</annotation></semantics></math>)
+to accumulate relative to the rest of the object.</li>
+<li><strong>Breakdown:</strong> High fields accelerate loose
+ions/electrons in the air. If they gain enough energy to knock electrons
+off air molecules, a spark (discharge) occurs.</li>
+</ul>
+<hr />
+<h2 id="ii-short-answer-practice-questions">II. Short-Answer Practice
+Questions</h2>
+<ol type="1">
+<li><strong>What is the Poisson equation, and why is it central to
+electrostatics?</strong> The Poisson equation is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>∇</mi><mn>2</mn></msup><mi>ϕ</mi><mo>=</mo><mi>−</mi><mi>ρ</mi><mi>/</mi><msub><mi>ϵ</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">\nabla^2\phi=-\rho/\epsilon_0</annotation></semantics></math>.
+It is central because it reduces the study of electrostatics to finding
+the solutions of a single differential equation for the scalar potential
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>.</li>
+<li><strong>How does the potential of a dipole vary with distance
+compared to a point charge?</strong> A dipole potential decreases as
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><msup><mi>r</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">1/r^2</annotation></semantics></math>,
+whereas a point charge potential decreases as
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mi>r</mi></mrow><annotation encoding="application/x-tex">1/r</annotation></semantics></math>.</li>
+<li><strong>Why does a neutral water molecule produce an electric
+field?</strong> Because the charges are not symmetrically placed; the
+oxygen atom has more than its share of the electron cloud, and the
+hydrogen atoms have less, creating a permanent dipole moment.</li>
+<li><strong>What is the purpose of an "image charge"?</strong> An image
+charge is used to simplify the calculation of fields near conductors by
+replacing the conductor's surface charges with an imaginary point charge
+that maintains the required equipotential surface.</li>
+<li><strong>How is the capacity of a parallel-plate condenser affected
+by its area and separation?</strong> The capacity is directly
+proportional to the area of the plates
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>)
+and inversely proportional to the distance
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>d</mi><annotation encoding="application/x-tex">d</annotation></semantics></math>)
+between them.</li>
+<li><strong>Why must high-voltage equipment be kept smooth and
+rounded?</strong> Sharp points create very high local electric fields,
+which can lead to air breakdown and unwanted sparking/discharge.</li>
+</ol>
+<hr />
+<h2 id="iii-essay-prompts-for-deeper-exploration">III. Essay Prompts for
+Deeper Exploration</h2>
+<ol type="1">
+<li><strong>The Geometry of Field Emission:</strong> Explain the
+operational physics of the field-emission microscope. How do the intense
+fields at a needle tip allow for the visualization of individual atoms,
+and why does using helium ions provide better resolution than using
+electrons?</li>
+<li><strong>The Logic of Superposition:</strong> Using the example of
+two slightly displaced, oppositely charged spheres, explain how the
+principle of superposition can solve complex surface-charge distribution
+problems. Show how this relates to the dipole moment.</li>
+<li><strong>From Components to Vectors:</strong> Discuss the pedagogical
+and practical reasons for alternating between writing equations in
+coordinate-independent vector form and writing out their individual x,
+y, and z components.</li>
+</ol>
+<hr />
+<h2 id="iv-common-misconceptions">IV. Common Misconceptions</h2>
+<ul>
+<li><strong>The Inelegance of Components:</strong> Students often feel
+that writing out the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi></mrow><annotation encoding="application/x-tex">x, y, z</annotation></semantics></math>
+components of a field is "defeatist" or inelegant compared to using
+vector operators like
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝜵</mi><annotation encoding="application/x-tex">\boldsymbol{\nabla}</annotation></semantics></math>.
+In practice, writing out components is often the most direct way to
+solve a specific problem or verify an intuition.</li>
+<li><strong>Uniformity in Condensers:</strong> It is often assumed that
+the field between parallel plates is perfectly uniform and the field
+outside is exactly zero. In reality, the field "fringes" at the edges,
+and the charge density actually increases near the plate
+boundaries.</li>
+<li><strong>Neutrality Equals No Field:</strong> A common error is
+assuming that if an object's total charge
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>Q</mi><annotation encoding="application/x-tex">Q</annotation></semantics></math>
+is zero, it produces no electric field. As seen with the water molecule
+and the dipole approximation, a neutral object can produce significant
+fields if its internal charges are separated.</li>
+</ul>
+<hr />
+<h2 id="v-glossary-of-important-terms">V. Glossary of Important
+Terms</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Term</th>
+<th style="text-align: left;">Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Capacitance
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>C</mi><annotation encoding="application/x-tex">C</annotation></semantics></math>)</strong></td>
+<td style="text-align: left;">The ratio of the charge on one conductor
+of a condenser to the potential difference between the conductors.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Condenser</strong></td>
+<td style="text-align: left;">A system of two conductors used to store
+charge; also called a capacitor.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Dipole Moment
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math>)</strong></td>
+<td style="text-align: left;">The product of the magnitude of one of the
+charges in a dipole and the distance between them
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>=</mo><mi>q</mi><mi>d</mi></mrow><annotation encoding="application/x-tex">p=qd</annotation></semantics></math>).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Equipotential
+Surface</strong></td>
+<td style="text-align: left;">A surface on which the electrostatic
+potential
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>
+is constant at every point.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Farad</strong></td>
+<td style="text-align: left;">The unit of capacitance; one coulomb per
+volt.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Field-Emission</strong></td>
+<td style="text-align: left;">The process by which electrons are pulled
+out of a metal surface by a very high external electric field.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Laplacian
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>∇</mi><mn>2</mn></msup><annotation encoding="application/x-tex">\nabla^2</annotation></semantics></math>)</strong></td>
+<td style="text-align: left;">A differential operator defined as the
+divergence of the gradient
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mtext mathvariant="normal">div </mtext><mspace width="0.333em"></mspace></mrow><mtext mathvariant="normal">grad</mtext></mrow><annotation encoding="application/x-tex">\text{div } \text{grad}</annotation></semantics></math>).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Method of Images</strong></td>
+<td style="text-align: left;">A technique for finding the field of
+charges in the presence of conductors by substituting imaginary charges
+for the induced surface charges.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Poisson Equation</strong></td>
+<td style="text-align: left;">The partial differential equation
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>∇</mi><mn>2</mn></msup><mi>ϕ</mi><mo>=</mo><mi>−</mi><mi>ρ</mi><mi>/</mi><msub><mi>ϵ</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">\nabla^2\phi=-\rho/\epsilon_0</annotation></semantics></math>
+that relates potential to charge density.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Quadrupole</strong></td>
+<td style="text-align: left;">A charge distribution where the total
+charge and dipole moment are zero, but a field is produced that falls
+off as
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><msup><mi>r</mi><mn>4</mn></msup></mrow><annotation encoding="application/x-tex">1/r^4</annotation></semantics></math>.</td>
+</tr>
+</tbody>
+</table>
+    </article>
+  </main>
+</body>
+</html>

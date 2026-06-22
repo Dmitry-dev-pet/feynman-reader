@@ -1,0 +1,244 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Analytical Briefing: Field Energy and Field Momentum - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="en">
+  <script>
+    (() => {
+      const key = "flp-reader-theme";
+      const applyTheme = (theme) => {
+        const next = theme === "dark" ? "dark" : "light";
+        document.documentElement.dataset.theme = next;
+        document.body.dataset.theme = next;
+        try { localStorage.setItem(key, next); } catch (_) {}
+      };
+      try { applyTheme(localStorage.getItem(key) || "light"); } catch (_) { applyTheme("light"); }
+      document.addEventListener("click", (event) => {
+        const button = event.target.closest('[data-report-action="theme"]');
+        if (!button) return;
+        applyTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark");
+      });
+    })();
+  </script>
+<main class="notebooklm-report-shell">
+    <header aria-label="Quick navigation" class="reader-toolbar report-toolbar">
+      <div class="toolbar-group toolbar-navigation">
+        <a class="toolbar-btn" href="../ch27.html">Back to chapter</a>
+        <a class="toolbar-btn" href="../../../../feynman-reader/index.html">Reader</a>
+        <a class="toolbar-btn" href="../../index.html">Contents</a>
+      </div>
+      <a class="toolbar-title" href="../ch27.html#ch27" title="NotebookLM · Overview">NotebookLM · Overview</a>
+      <div class="toolbar-group toolbar-settings">
+        <button aria-label="Toggle theme" class="toolbar-btn icon-btn" data-report-action="theme" title="Toggle theme" type="button">◐</button>
+      </div>
+    </header>
+    <article class="notebooklm-report">
+<h1 id="analytical-briefing-field-energy-and-field-momentum">Analytical
+Briefing: Field Energy and Field Momentum</h1>
+<p>This briefing document provides a comprehensive analysis of the
+principles of electromagnetic field energy and momentum, as detailed in
+Chapter 27 of the Feynman Lectures on Physics, Volume II. It outlines
+the transition from global to local conservation laws, the derivation of
+the Poynting vector, and the physical implications of field
+momentum.</p>
+<h2 id="executive-summary">Executive Summary</h2>
+<p>The transition from classical mechanics to electromagnetism
+necessitates a refined understanding of conservation laws. Energy and
+momentum are not merely "world-wide" constants but are subject to
+<strong>local conservation</strong>, meaning any change within a volume
+must be accounted for by a flow across its boundaries. This chapter
+establishes the mathematical framework for this flow using the
+<strong>Poynting vector (<span
+class="math inline">$\FLPS$</span>)</strong> and defines the
+<strong>energy density
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>u</mi><annotation encoding="application/x-tex">u</annotation></semantics></math>)</strong>
+of the electromagnetic field. These concepts resolve apparent paradoxes
+in electrostatics and electrodynamics, such as the failure of action and
+reaction between moving charges, by attributing physical reality—and
+momentum—to the fields themselves.</p>
+<hr />
+<h2 id="key-themes-and-physical-principles">Key Themes and Physical
+Principles</h2>
+<h3 id="1-the-necessity-of-local-conservation">1. The Necessity of Local
+Conservation</h3>
+<p>In the theory of relativity, "world-wide" conservation (where a
+quantity lost at point A simultaneously appears at point B) is untenable
+because simultaneity is relative to the observer's frame of reference.
+For a law to be relativistically invariant, it must be
+<strong>local</strong>.</p>
+<ul>
+<li><strong>Definition:</strong> Local conservation states that if the
+amount of a quantity (like charge or energy) decreases in a region, it
+is because it flowed out through the boundaries of that region.</li>
+<li><strong>Mathematical Form (Charge):</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝒅</mi><mi>i</mi><mi>v</mi><mi mathvariant="bold-italic">𝒋</mi><mo>=</mo><mi>−</mi><mfrac><mrow><mi>∂</mi><mi>ρ</mi></mrow><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\mathbf{d}iv{\mathbf{j}} = -\frac{\partial \rho}{\partial t}</annotation></semantics></math>.</li>
+<li><strong>Application to Energy:</strong> The field energy in a volume
+changes only if energy flows across the surface or if the field does
+work on matter.</li>
+</ul>
+<h3 id="2-the-poynting-vector-and-energy-density">2. The Poynting Vector
+and Energy Density</h3>
+<p>By manipulating Maxwell’s equations and the expression for work done
+on matter
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑬</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝒋</mi></mrow><annotation encoding="application/x-tex">\mathbf{E} \cdot \mathbf{j}</annotation></semantics></math>),
+formulas for the density and flow of electromagnetic energy are
+derived.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Quantity</th>
+<th style="text-align: left;">Formula</th>
+<th style="text-align: left;">Physical Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Energy Density
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>u</mi><annotation encoding="application/x-tex">u</annotation></semantics></math>)</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>u</mi><mo>=</mo><mfrac><msub><mi>ϵ</mi><mn>0</mn></msub><mn>2</mn></mfrac><mi mathvariant="bold-italic">𝑬</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝑬</mi><mo>+</mo><mfrac><mrow><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup></mrow><mn>2</mn></mfrac><mi mathvariant="bold-italic">𝑩</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝑩</mi></mrow><annotation encoding="application/x-tex">u = \frac{\epsilon_0}{2}\mathbf{E}\cdot\mathbf{E} + \frac{\epsilon_0 c^2}{2}\mathbf{B}\cdot\mathbf{B}</annotation></semantics></math></td>
+<td style="text-align: left;">The amount of electromagnetic energy per
+unit volume in space.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Poynting Vector (<span
+class="math inline">$\FLPS$</span>)</strong></td>
+<td style="text-align: left;"><span class="math inline">$\FLPS =
+\epsilon_0 c^2(\mathbf{E} \times \mathbf{B})$</span></td>
+<td style="text-align: left;">The energy flux; the rate of energy flow
+per unit time across a unit area.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>The Ambiguity of Field Location:</strong> While these
+formulas are the simplest and most widely accepted, the source context
+notes they are not uniquely "proven." There are infinite possible forms
+for
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>u</mi><annotation encoding="application/x-tex">u</annotation></semantics></math>
+and <span class="math inline">$\FLPS$</span> that satisfy the
+conservation law, but the Poynting versions are used because they are
+consistent with experiment and provide the most straightforward physical
+descriptions.</p>
+<h3 id="3-field-momentum-and-the-general-theorem">3. Field Momentum and
+the General Theorem</h3>
+<p>Fields carry momentum as well as energy. A general theorem in
+mechanics states that any flow of energy (<span
+class="math inline">$\FLPS$</span>) implies a corresponding momentum
+density (<span class="math inline">$\FLPg$</span>).</p>
+<ul>
+<li><strong>Momentum Density Formula:</strong> <span
+class="math inline">$\FLPg = \frac{\FLPS}{c^2}$</span></li>
+<li><strong>Einstein’s Argument:</strong> Using the thought experiment
+of a railroad car, Einstein demonstrated that to maintain the
+center-of-gravity theorem and the conservation of angular momentum,
+energy
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>U</mi><annotation encoding="application/x-tex">U</annotation></semantics></math>
+in motion must carry momentum
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>=</mo><mi>U</mi><mi>/</mi><mi>c</mi></mrow><annotation encoding="application/x-tex">p = U/c</annotation></semantics></math>.</li>
+</ul>
+<hr />
+<h2 id="detailed-analysis-of-key-examples">Detailed Analysis of Key
+Examples</h2>
+<p>The application of the Poynting vector often yields results that
+contradict intuitive classical expectations.</p>
+<h3 id="energy-flow-in-components">Energy Flow in Components</h3>
+<ul>
+<li><strong>The Charging Capacitor:</strong> Paradoxically, energy does
+not enter a capacitor through the charging wires. Instead, the
+combination of the electric field
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>)
+between the plates and the magnetic field
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>)
+induced by the charging current creates a Poynting vector directed
+<strong>inward from the surrounding space</strong> through the edges of
+the plates.</li>
+<li><strong>The Resistor Wire:</strong> In a wire carrying a current, an
+electric field exists along the wire and a magnetic field circles it.
+This creates a Poynting vector directed <strong>radially
+inward</strong>. The energy that appears as heat in the wire does not
+flow "down" the wire but flows into the wire from the electromagnetic
+fields in the surrounding space.</li>
+</ul>
+<h3 id="static-field-paradoxes">Static Field Paradoxes</h3>
+<ul>
+<li><strong>The Charge and the Magnet:</strong> When a point charge is
+placed near a bar magnet, both are at rest. However, because
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑬</mi><mo>×</mo><mi mathvariant="bold-italic">𝑩</mi><mo>≠</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\mathbf{E} \times \mathbf{B} \neq 0</annotation></semantics></math>,
+the Poynting vector indicates a <strong>constant circulation of
+energy</strong> in closed loops.</li>
+<li><strong>Resolution:</strong> This circulating energy flow is a
+physical reality required to conserve angular momentum. If the fields
+are turned off, this "hidden" angular momentum is transferred to the
+physical objects (e.g., causing a disc to rotate).</li>
+</ul>
+<hr />
+<h2 id="important-quotes-with-context">Important Quotes with
+Context</h2>
+<blockquote>
+<p><strong>"The new law will say that if energy goes away from a region,
+it is because it flows away through the boundaries of that region. It is
+a somewhat stronger law than the conservation of energy without such a
+restriction."</strong></p>
+</blockquote>
+<ul>
+<li><strong>Context:</strong> Feynman introducing the concept of local
+conservation as a more detailed and relativistically necessary version
+of the general conservation of energy.</li>
+</ul>
+<blockquote>
+<p><strong>"Our 'crazy' theory says that the electrons are getting their
+energy to generate heat because of the energy flowing into the wire from
+the field outside."</strong></p>
+</blockquote>
+<ul>
+<li><strong>Context:</strong> Discussing the Poynting vector near a
+resistive wire, highlighting how electromagnetic theory shifts the
+location of energy transfer from the internal current to the external
+field.</li>
+</ul>
+<blockquote>
+<p><strong>"There is no unique way to resolve the indefiniteness in the
+location of the field energy... however, nobody has ever found anything
+wrong with [these formulas]—that is, no disagreement with
+experiment."</strong></p>
+</blockquote>
+<ul>
+<li><strong>Context:</strong> Admitting the theoretical possibility of
+other formulas for
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>u</mi><annotation encoding="application/x-tex">u</annotation></semantics></math>
+and <span class="math inline">$\FLPS$</span>, while defending the
+standard Poynting definitions based on their practical success and
+simplicity.</li>
+</ul>
+<hr />
+<h2 id="actionable-insights-and-physical-meanings">Actionable Insights
+and Physical Meanings</h2>
+<ol type="1">
+<li><strong>Field Reality:</strong> The fields
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+are not just mathematical abstractions used to calculate forces; they
+possess energy and momentum densities, occupying space and behaving like
+physical entities.</li>
+<li><strong>Conservation of Total Momentum:</strong> The "failure" of
+Newton’s third law (action and reaction) in electrodynamics is resolved
+by accounting for the momentum stored in the fields. The sum of particle
+momentum and field momentum is always conserved.</li>
+<li><strong>Unified Four-Vector:</strong> In relativity, energy and
+momentum are different aspects of the same four-vector. Consequently,
+the local conservation of energy and the local conservation of momentum
+are inextricably linked.</li>
+<li><strong>Energy Transport Mechanism:</strong> Energy transport in
+electrical systems is mediated by the fields in the space surrounding
+conductors, rather than being confined strictly within the molecular
+structure of the wires themselves.</li>
+</ol>
+    </article>
+  </main>
+</body>
+</html>

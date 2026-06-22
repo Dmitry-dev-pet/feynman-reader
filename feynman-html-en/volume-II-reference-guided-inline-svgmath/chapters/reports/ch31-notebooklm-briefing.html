@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Analysis of Tensors in Physical Systems - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="en">
+  <script>
+    (() => {
+      const key = "flp-reader-theme";
+      const applyTheme = (theme) => {
+        const next = theme === "dark" ? "dark" : "light";
+        document.documentElement.dataset.theme = next;
+        document.body.dataset.theme = next;
+        try { localStorage.setItem(key, next); } catch (_) {}
+      };
+      try { applyTheme(localStorage.getItem(key) || "light"); } catch (_) { applyTheme("light"); }
+      document.addEventListener("click", (event) => {
+        const button = event.target.closest('[data-report-action="theme"]');
+        if (!button) return;
+        applyTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark");
+      });
+    })();
+  </script>
+<main class="notebooklm-report-shell">
+    <header aria-label="Quick navigation" class="reader-toolbar report-toolbar">
+      <div class="toolbar-group toolbar-navigation">
+        <a class="toolbar-btn" href="../ch31.html">Back to chapter</a>
+        <a class="toolbar-btn" href="../../../../feynman-reader/index.html">Reader</a>
+        <a class="toolbar-btn" href="../../index.html">Contents</a>
+      </div>
+      <a class="toolbar-title" href="../ch31.html#ch31" title="NotebookLM · Overview">NotebookLM · Overview</a>
+      <div class="toolbar-group toolbar-settings">
+        <button aria-label="Toggle theme" class="toolbar-btn icon-btn" data-report-action="theme" title="Toggle theme" type="button">◐</button>
+      </div>
+    </header>
+    <article class="notebooklm-report">
+<h1 id="analysis-of-tensors-in-physical-systems">Analysis of Tensors in
+Physical Systems</h1>
+<p>This briefing document provides a comprehensive synthesis of the
+physical properties and mathematical structures of tensors, as outlined
+in the provided source material. It examines the application of tensors
+in describing anisotropic substances, mechanical inertia, internal
+stresses, and relativistic energy-momentum flow.</p>
+<h2 id="executive-summary">Executive Summary</h2>
+<p>Tensors are mathematical objects used to describe physical properties
+that vary with direction, a phenomenon known as anisotropy. While basic
+physics often assumes isotropy—where properties like polarizability are
+uniform in all directions—the "real world" of engineering,
+crystallography, and solid-state physics requires tensors to relate two
+vectors that are not necessarily parallel.</p>
+<p>A second-rank tensor in three dimensions is defined by nine
+components that transform in a specific way when coordinate axes are
+rotated. Key physical examples include the tensor of polarizability, the
+tensor of inertia, and the stress tensor. The symmetry of these tensors
+often allows for the identification of "principal axes," which simplify
+the mathematical description by diagonalizing the tensor. Advanced
+applications extend to higher-rank tensors, such as those describing
+elasticity (fourth-rank) and the relativistic stress-energy tensor
+(four-dimensional).</p>
+<hr />
+<h2 id="detailed-analysis-of-key-themes">Detailed Analysis of Key
+Themes</h2>
+<h3 id="1-the-nature-of-anisotropy-and-the-polarization-tensor">1. The
+Nature of Anisotropy and the Polarization Tensor</h3>
+<p>In many substances, such as calcite crystals, the induced dipole
+moment
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑷</mi><annotation encoding="application/x-tex">\mathbf{P}</annotation></semantics></math>)
+is not parallel to the applied electric field
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>).
+This occurs because internal elastic forces are asymmetric; charges may
+move more easily in one direction than another.</p>
+<ul>
+<li><strong>Mathematical Representation:</strong> The relationship is
+linear, expressed as:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>P</mi><mi>i</mi></msub><mo>=</mo><munder><mo>∑</mo><mi>j</mi></munder><msub><mi>α</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><msub><mi>E</mi><mi>j</mi></msub></mrow><annotation encoding="application/x-tex">P_i = \sum_j \alpha_{ij} E_j</annotation></semantics></math>
+where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math>
+represent the coordinates
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi></mrow><annotation encoding="application/x-tex">x, y, z</annotation></semantics></math>.
+The nine coefficients
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>α</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><annotation encoding="application/x-tex">\alpha_{ij}</annotation></semantics></math>
+form the <strong>polarization tensor</strong>.</li>
+<li><strong>Coordinate Transformation:</strong> While the physical
+property remains constant, the components of the tensor change depending
+on the orientation of the coordinate axes. If the crystal is rotated,
+the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>α</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><annotation encoding="application/x-tex">\alpha_{ij}</annotation></semantics></math>
+values must be recalculated to maintain the physical relationship
+between
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑷</mi><annotation encoding="application/x-tex">\mathbf{P}</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>.</li>
+</ul>
+<h3 id="2-visualization-via-the-energy-ellipsoid">2. Visualization via
+the Energy Ellipsoid</h3>
+<p>The energy density
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>u</mi><mi>P</mi></msub><annotation encoding="application/x-tex">u_P</annotation></semantics></math>)
+required to polarize a crystal is a scalar (tensor of rank zero) and is
+independent of the choice of axes. It is calculated as:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>u</mi><mi>P</mi></msub><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><munder><mo>∑</mo><mrow><mi>i</mi><mo>,</mo><mi>j</mi></mrow></munder><msub><mi>α</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><msub><mi>E</mi><mi>i</mi></msub><msub><mi>E</mi><mi>j</mi></msub></mrow><annotation encoding="application/x-tex">u_P = \frac{1}{2} \sum_{i,j} \alpha_{ij} E_i E_j</annotation></semantics></math></p>
+<p>This quadratic form allows for a geometric interpretation: the locus
+of the electric field vector
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>
+required to produce a constant energy density forms an <strong>energy
+ellipsoid</strong> (as seen in Fig. 31–2 and Fig. 31–3).</p>
+<p><strong>Principal Axes and Diagonalization:</strong> Every symmetric
+second-rank tensor possesses three "principal axes" (mutually
+perpendicular). When the coordinate system is aligned with these axes,
+the tensor becomes "diagonal," meaning all off-diagonal components
+(e.g.,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>α</mi><mrow><mi>x</mi><mi>y</mi></mrow></msub><mo>,</mo><msub><mi>α</mi><mrow><mi>x</mi><mi>z</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\alpha_{xy}, \alpha_{xz}</annotation></semantics></math>)
+are zero:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="true" form="prefix">[</mo><mtable><mtr><mtd columnalign="center" style="text-align: center"><msub><mi>α</mi><mrow><mi>a</mi><mi>a</mi></mrow></msub></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>α</mi><mrow><mi>b</mi><mi>b</mi></mrow></msub></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><mn>0</mn></mtd><mtd columnalign="center" style="text-align: center"><msub><mi>α</mi><mrow><mi>c</mi><mi>c</mi></mrow></msub></mtd></mtr></mtable><mo stretchy="true" form="postfix">]</mo></mrow><annotation encoding="application/x-tex">\begin{bmatrix} \alpha_{aa} &amp; 0 &amp; 0 \\ 0 &amp; \alpha_{bb} &amp; 0 \\ 0 &amp; 0 &amp; \alpha_{cc} \end{bmatrix}</annotation></semantics></math>
+In this state, an electric field applied along a principal axis produces
+a polarization strictly in that same direction.</p>
+<h3 id="3-mechanical-applications-the-tensor-of-inertia">3. Mechanical
+Applications: The Tensor of Inertia</h3>
+<p>Tensors are essential in describing the rotation of solid objects.
+For an arbitrarily shaped object, the angular momentum
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑳</mi><annotation encoding="application/x-tex">\mathbf{L}</annotation></semantics></math>)
+is generally not parallel to the angular velocity
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝝎</mi><annotation encoding="application/x-tex">\boldsymbol{\omega}</annotation></semantics></math>).
+This relationship is governed by the <strong>tensor of inertia</strong>
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>I</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><annotation encoding="application/x-tex">I_{ij}</annotation></semantics></math>):
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>L</mi><mi>i</mi></msub><mo>=</mo><munder><mo>∑</mo><mi>j</mi></munder><msub><mi>I</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><msub><mi>ω</mi><mi>j</mi></msub></mrow><annotation encoding="application/x-tex">L_i = \sum_j I_{ij} \omega_j</annotation></semantics></math></p>
+<p>The components of the tensor are derived from the distribution of
+mass
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math>)
+and the position vectors
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math>)
+of the particles:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>I</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>=</mo><mo>∑</mo><mi>m</mi><mo stretchy="false" form="prefix">(</mo><msup><mi>r</mi><mn>2</mn></msup><msub><mi>δ</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>−</mo><msub><mi>r</mi><mi>i</mi></msub><msub><mi>r</mi><mi>j</mi></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">I_{ij} = \sum m(r^2 \delta_{ij} - r_i r_j)</annotation></semantics></math>
+where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>δ</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><annotation encoding="application/x-tex">\delta_{ij}</annotation></semantics></math>
+is the Kronecker delta (the unit tensor). Similar to polarizability,
+there are always three principal axes of inertia where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑳</mi><annotation encoding="application/x-tex">\mathbf{L}</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝝎</mi><annotation encoding="application/x-tex">\boldsymbol{\omega}</annotation></semantics></math>
+are parallel.</p>
+<h3 id="4-internal-mechanics-the-stress-tensor">4. Internal Mechanics:
+The Stress Tensor</h3>
+<p>The stress tensor
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><annotation encoding="application/x-tex">S_{ij}</annotation></semantics></math>)
+describes internal forces within a solid or a viscous liquid. Unlike
+pressure in a static liquid (which is always normal to the surface),
+stress in solids includes "shear" forces (tangential components).</p>
+<ul>
+<li><strong>Definition:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><annotation encoding="application/x-tex">S_{ij}</annotation></semantics></math>
+is the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math>-component
+of the force exerted across a unit area perpendicular to the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math>-axis.</li>
+<li><strong>Symmetry:</strong> For a cube in equilibrium, there must be
+no net torque. This physical requirement necessitates that the stress
+tensor be symmetric
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>=</mo><msub><mi>S</mi><mrow><mi>j</mi><mi>i</mi></mrow></msub></mrow><annotation encoding="application/x-tex">S_{ij} = S_{ji}</annotation></semantics></math>).</li>
+<li><strong>Tensor Field:</strong> Because stress can vary from point to
+point,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><annotation encoding="application/x-tex">S_{ij}</annotation></semantics></math>
+is a <strong>tensor field</strong>, requiring six independent functions
+of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(x, y, z)</annotation></semantics></math>
+to describe the internal state of a distorted solid completely.</li>
+</ul>
+<h3 id="5-high-rank-and-relativistic-tensors">5. High-Rank and
+Relativistic Tensors</h3>
+<p>The complexity of a physical property determines the "rank" of the
+tensor required:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Rank</th>
+<th style="text-align: left;">Components
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>3</mn><mi>n</mi></msup><annotation encoding="application/x-tex">3^n</annotation></semantics></math>)</th>
+<th style="text-align: left;">Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">Scalar (Energy density, Temperature)</td>
+</tr>
+<tr>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">Vector (Electric field, Velocity)</td>
+</tr>
+<tr>
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">Tensor (Polarizability, Stress,
+Inertia)</td>
+</tr>
+<tr>
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">27</td>
+<td style="text-align: left;">Piezoelectric Tensor</td>
+</tr>
+<tr>
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">81</td>
+<td style="text-align: left;">Elasticity Tensor
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>γ</mi><mrow><mi>i</mi><mi>j</mi><mi>k</mi><mi>l</mi></mrow></msub><annotation encoding="application/x-tex">\gamma_{ijkl}</annotation></semantics></math>)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Relativistic Stress-Energy Tensor
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mrow><mi>μ</mi><mi>ν</mi></mrow></msub><annotation encoding="application/x-tex">S_{\mu\nu}</annotation></semantics></math>):</strong>
+In four-dimensional space-time, the stress tensor is expanded to include
+time
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math>).
+This tensor relates the flow and density of energy and momentum:</p>
+<ul>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mrow><mi>t</mi><mi>t</mi></mrow></msub><annotation encoding="application/x-tex">S_{tt}</annotation></semantics></math>:
+Energy density.</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mrow><mi>t</mi><mi>x</mi></mrow></msub><mo>,</mo><msub><mi>S</mi><mrow><mi>t</mi><mi>y</mi></mrow></msub><mo>,</mo><msub><mi>S</mi><mrow><mi>t</mi><mi>z</mi></mrow></msub></mrow><annotation encoding="application/x-tex">S_{tx}, S_{ty}, S_{tz}</annotation></semantics></math>:
+Energy flow (proportional to the Poynting vector).</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>S</mi><mrow><mi>x</mi><mi>t</mi></mrow></msub><mo>,</mo><msub><mi>S</mi><mrow><mi>y</mi><mi>t</mi></mrow></msub><mo>,</mo><msub><mi>S</mi><mrow><mi>z</mi><mi>t</mi></mrow></msub></mrow><annotation encoding="application/x-tex">S_{xt}, S_{yt}, S_{zt}</annotation></semantics></math>:
+Momentum density.</li>
+<li><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><annotation encoding="application/x-tex">S_{ij}</annotation></semantics></math>:
+Momentum flow (standard 3D stress).</li>
+</ul>
+<hr />
+<h2 id="important-quotes-with-context">Important Quotes with
+Context</h2>
+<blockquote>
+<p><strong>"Physicists always have a habit of taking the simplest
+example of any phenomenon and calling it 'physics,' leaving the more
+complicated examples to become the concern of other fields—say of
+applied mathematics, electrical engineering, chemistry, or
+crystallography."</strong></p>
+</blockquote>
+<ul>
+<li><strong>Context:</strong> This highlights why tensors are often
+skipped in introductory physics but are vital for anyone entering the
+"real world" where directionality matters (anisotropy).</li>
+</ul>
+<blockquote>
+<p><strong>"The dielectric behavior of the crystal is then completely
+described by the nine quantities... The set of nine coefficients
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>α</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><annotation encoding="application/x-tex">\alpha_{ij}</annotation></semantics></math>
+is called a tensor."</strong></p>
+</blockquote>
+<ul>
+<li><strong>Context:</strong> This provides the fundamental definition
+of a second-rank tensor as the complete set of coefficients necessary to
+link two vectors in an anisotropic medium.</li>
+</ul>
+<blockquote>
+<p><strong>"There is a big game of figuring out the possible kinds of
+tensors for all the possible symmetries of a crystal. It is called a
+'group-theoretical' analysis."</strong></p>
+</blockquote>
+<ul>
+<li><strong>Context:</strong> This refers to the relationship between
+the physical symmetry of a crystal lattice (e.g., cubic, monoclinic) and
+the mathematical constraints placed on the tensor components.</li>
+</ul>
+<blockquote>
+<p><strong>"In four dimensions there is also a t-component of momentum,
+which is, we know, energy."</strong></p>
+</blockquote>
+<ul>
+<li><strong>Context:</strong> This explains the conceptual leap required
+to move from the three-dimensional stress tensor to the four-dimensional
+relativistic stress-energy tensor.</li>
+</ul>
+<hr />
+<h2 id="actionable-insights">Actionable Insights</h2>
+<h3 id="symmetry-and-simplification">Symmetry and Simplification</h3>
+<ul>
+<li><strong>Diagonalization:</strong> When analyzing any symmetric
+second-rank tensor, identify the principal axes. This reduces the
+problem from nine components to three, drastically simplifying
+calculations.</li>
+<li><strong>Symmetry Mapping:</strong> Use the physical symmetry of a
+crystal to predict tensor properties. For example, in a cubic crystal,
+the polarizability tensor must be a sphere (isotropic), reducing the
+tensor to a single scalar constant times the unit tensor
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi><msub><mi>δ</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\alpha \delta_{ij}</annotation></semantics></math>).</li>
+</ul>
+<h3 id="determining-material-constants">Determining Material
+Constants</h3>
+<ul>
+<li><strong>Elasticity:</strong> To describe the elastic properties of
+the least symmetric crystal, 21 independent constants are required. For
+isotropic materials, this is reduced to only two constants
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>).</li>
+<li><strong>Piezoelectricity:</strong> If a crystal possesses a "center
+of inversion" symmetry, all piezoelectric coefficients are zero. This
+allows for rapid exclusion of certain materials for piezoelectric
+applications.</li>
+</ul>
+<h3 id="momentum-and-energy-density">Momentum and Energy Density</h3>
+<ul>
+<li><strong>Field Stresses:</strong> In electromagnetic fields, the
+Poynting vector is not just energy flow; it is also the momentum density
+of the field.</li>
+<li><strong>Stress as Momentum Flow:</strong> View stress components
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>S</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><annotation encoding="application/x-tex">S_{ij}</annotation></semantics></math>)
+not merely as forces, but as the "rate of flow of the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math>-component
+of momentum through a unit area perpendicular to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>j</mi><annotation encoding="application/x-tex">j</annotation></semantics></math>."
+This perspective is crucial for relativistic and fluid dynamic
+calculations.</li>
+</ul>
+    </article>
+  </main>
+</body>
+</html>

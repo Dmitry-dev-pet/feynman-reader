@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chapter 14: The Magnetic Field in Various Situations - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="en">
+  <script>
+    (() => {
+      const key = "flp-reader-theme";
+      const applyTheme = (theme) => {
+        const next = theme === "dark" ? "dark" : "light";
+        document.documentElement.dataset.theme = next;
+        document.body.dataset.theme = next;
+        try { localStorage.setItem(key, next); } catch (_) {}
+      };
+      try { applyTheme(localStorage.getItem(key) || "light"); } catch (_) { applyTheme("light"); }
+      document.addEventListener("click", (event) => {
+        const button = event.target.closest('[data-report-action="theme"]');
+        if (!button) return;
+        applyTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark");
+      });
+    })();
+  </script>
+<main class="notebooklm-report-shell">
+    <header aria-label="Quick navigation" class="reader-toolbar report-toolbar">
+      <div class="toolbar-group toolbar-navigation">
+        <a class="toolbar-btn" href="../ch14.html">Back to chapter</a>
+        <a class="toolbar-btn" href="../../../../feynman-reader/index.html">Reader</a>
+        <a class="toolbar-btn" href="../../index.html">Contents</a>
+      </div>
+      <a class="toolbar-title" href="../ch14.html#ch14" title="NotebookLM · Overview">NotebookLM · Overview</a>
+      <div class="toolbar-group toolbar-settings">
+        <button aria-label="Toggle theme" class="toolbar-btn icon-btn" data-report-action="theme" title="Toggle theme" type="button">◐</button>
+      </div>
+    </header>
+    <article class="notebooklm-report">
+<h1 id="chapter-14-the-magnetic-field-in-various-situations">Chapter 14:
+The Magnetic Field in Various Situations</h1>
+<p>This briefing document analyzes the mathematical and physical
+properties of the magnetic field in steady-current situations
+(magnetostatics). It focuses on the introduction of the vector potential
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>
+as a primary tool for solving magnetic problems and explores its
+application across various configurations, from simple wires to complex
+solenoids and dipoles.</p>
+<h2 id="executive-summary">Executive Summary</h2>
+<p>The study of magnetostatics is governed by two basic equations:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mtext mathvariant="normal">div </mtext><mspace width="0.333em"></mspace></mrow><mi mathvariant="bold-italic">𝑩</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\text{div } \mathbf{B} = 0</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>c</mi><mn>2</mn></msup><mrow><mtext mathvariant="normal">curl </mtext><mspace width="0.333em"></mspace></mrow><mi mathvariant="bold-italic">𝑩</mi><mo>=</mo><mi mathvariant="bold-italic">𝒋</mi><mi>/</mi><msub><mi>ϵ</mi><mn>0</mn></msub></mrow><annotation encoding="application/x-tex">c^2 \text{curl } \mathbf{B} = \mathbf{j}/\epsilon_0</annotation></semantics></math>.
+Because the divergence of the magnetic field is always zero, it can be
+represented as the curl of another vector field, the <strong>vector
+potential
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math></strong>.
+This potential is not unique, allowing for the selection of a "gauge"
+(specifically
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mtext mathvariant="normal">div </mtext><mspace width="0.333em"></mspace></mrow><mi mathvariant="bold-italic">𝑨</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\text{div } \mathbf{A} = 0</annotation></semantics></math>
+in magnetostatics) that simplifies calculations.</p>
+<p>The core takeaway is that calculating the magnetic field can be
+broken down into three independent electrostatic-like problems. Each
+component of the vector potential
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mi>x</mi></msub><mo>,</mo><msub><mi>A</mi><mi>y</mi></msub><mo>,</mo><msub><mi>A</mi><mi>z</mi></msub></mrow><annotation encoding="application/x-tex">A_x, A_y, A_z</annotation></semantics></math>)
+corresponds to the electrostatic potential produced by a charge density
+proportional to the respective current density component
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>j</mi><mi>x</mi></msub><mo>,</mo><msub><mi>j</mi><mi>y</mi></msub><mo>,</mo><msub><mi>j</mi><mi>z</mi></msub></mrow><annotation encoding="application/x-tex">j_x, j_y, j_z</annotation></semantics></math>).
+This methodology allows for the determination of magnetic fields for
+wires, solenoids, and small loops (magnetic dipoles) by leveraging
+existing knowledge of electrostatic potentials.</p>
+<hr />
+<h2 id="i-mathematical-foundations-of-the-vector-potential">I.
+Mathematical Foundations of the Vector Potential</h2>
+<h3 id="1-definition-and-gauge-latitude">1. Definition and Gauge
+Latitude</h3>
+<p>The vector potential
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>
+is defined such that:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑩</mi><mo>=</mo><mrow><mtext mathvariant="normal">curl </mtext><mspace width="0.333em"></mspace></mrow><mi mathvariant="bold-italic">𝑨</mi></mrow><annotation encoding="application/x-tex">\mathbf{B} = \text{curl } \mathbf{A}</annotation></semantics></math>
+This relationship automatically satisfies
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mtext mathvariant="normal">div </mtext><mspace width="0.333em"></mspace></mrow><mi mathvariant="bold-italic">𝑩</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\text{div } \mathbf{B} = 0</annotation></semantics></math>.
+However,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>
+is not unique. One can add the gradient of any scalar field
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ψ</mi><annotation encoding="application/x-tex">\psi</annotation></semantics></math>
+to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>
+without changing the resulting
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+field:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi mathvariant="bold-italic">𝑨</mi><mo>′</mo></msup><mo>=</mo><mi mathvariant="bold-italic">𝑨</mi><mo>+</mo><mi>∇</mi><mi>ψ</mi></mrow><annotation encoding="application/x-tex">\mathbf{A}&#39; = \mathbf{A} + \nabla\psi</annotation></semantics></math></p>
+<p>To standardize
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>
+for magnetostatics, the convention is to set:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mtext mathvariant="normal">div </mtext><mspace width="0.333em"></mspace></mrow><mi mathvariant="bold-italic">𝑨</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\text{div } \mathbf{A} = 0</annotation></semantics></math></p>
+<h3 id="2-the-governing-equations">2. The Governing Equations</h3>
+<p>Using the vector identity
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mtext mathvariant="normal">curl</mtext><mo stretchy="false" form="prefix">(</mo><mrow><mtext mathvariant="normal">curl </mtext><mspace width="0.333em"></mspace></mrow><mi mathvariant="bold-italic">𝑨</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>∇</mi><mo stretchy="false" form="prefix">(</mo><mrow><mtext mathvariant="normal">div </mtext><mspace width="0.333em"></mspace></mrow><mi mathvariant="bold-italic">𝑨</mi><mo stretchy="false" form="postfix">)</mo><mo>−</mo><msup><mi>∇</mi><mn>2</mn></msup><mi mathvariant="bold-italic">𝑨</mi></mrow><annotation encoding="application/x-tex">\text{curl}(\text{curl } \mathbf{A}) = \nabla(\text{div } \mathbf{A}) - \nabla^2 \mathbf{A}</annotation></semantics></math>
+and the gauge choice
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mtext mathvariant="normal">div </mtext><mspace width="0.333em"></mspace></mrow><mi mathvariant="bold-italic">𝑨</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\text{div } \mathbf{A} = 0</annotation></semantics></math>,
+the basic magnetostatic equation transforms into:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>∇</mi><mn>2</mn></msup><mi mathvariant="bold-italic">𝑨</mi><mo>=</mo><mi>−</mi><mfrac><mi mathvariant="bold-italic">𝒋</mi><mrow><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup></mrow></mfrac></mrow><annotation encoding="application/x-tex">\nabla^2 \mathbf{A} = -\frac{\mathbf{j}}{\epsilon_0 c^2}</annotation></semantics></math></p>
+<p>This results in three independent Poisson equations, one for each
+Cartesian component: | Component | Equation | | :--- | :--- | |
+<strong>x-component</strong> |
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>∇</mi><mn>2</mn></msup><msub><mi>A</mi><mi>x</mi></msub><mo>=</mo><mi>−</mi><msub><mi>j</mi><mi>x</mi></msub><mi>/</mi><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\nabla^2 A_x = -j_x / \epsilon_0 c^2</annotation></semantics></math>
+| | <strong>y-component</strong> |
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>∇</mi><mn>2</mn></msup><msub><mi>A</mi><mi>y</mi></msub><mo>=</mo><mi>−</mi><msub><mi>j</mi><mi>y</mi></msub><mi>/</mi><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\nabla^2 A_y = -j_y / \epsilon_0 c^2</annotation></semantics></math>
+| | <strong>z-component</strong> |
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>∇</mi><mn>2</mn></msup><msub><mi>A</mi><mi>z</mi></msub><mo>=</mo><mi>−</mi><msub><mi>j</mi><mi>z</mi></msub><mi>/</mi><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\nabla^2 A_z = -j_z / \epsilon_0 c^2</annotation></semantics></math>
+|</p>
+<h3 id="3-general-integral-solution">3. General Integral Solution</h3>
+<p>The general solution for the vector potential at point (1) due to
+currents at point (2) is:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑨</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><mn>1</mn><mrow><mn>4</mn><mi>π</mi><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup></mrow></mfrac><mo>∫</mo><mfrac><mrow><mi mathvariant="bold-italic">𝒋</mi><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo stretchy="false" form="postfix">)</mo><mspace width="0.167em"></mspace><mi>d</mi><msub><mi>V</mi><mn>2</mn></msub></mrow><msub><mi>r</mi><mn>12</mn></msub></mfrac></mrow><annotation encoding="application/x-tex">\mathbf{A}(1) = \frac{1}{4\pi\epsilon_0 c^2} \int \frac{\mathbf{j}(2) \, dV_2}{r_{12}}</annotation></semantics></math></p>
+<hr />
+<h2 id="ii-analysis-of-key-physical-situations">II. Analysis of Key
+Physical Situations</h2>
+<p>The source context provides detailed analysis of four primary
+configurations.</p>
+<h3 id="1-uniform-magnetic-field">1. Uniform Magnetic Field</h3>
+<p>In a uniform field
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="bold-italic">𝑩</mi><mn>0</mn></msub><annotation encoding="application/x-tex">\mathbf{B}_0</annotation></semantics></math>
+directed along the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>z</mi><annotation encoding="application/x-tex">z</annotation></semantics></math>-axis,
+the vector potential can be represented as:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑨</mi><mo>=</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><msub><mi mathvariant="bold-italic">𝑩</mi><mn>0</mn></msub><mo>×</mo><msup><mi mathvariant="bold-italic">𝒓</mi><mo>′</mo></msup></mrow><annotation encoding="application/x-tex">\mathbf{A} = \frac{1}{2} \mathbf{B}_0 \times \mathbf{r}&#39;</annotation></semantics></math>
+Where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi mathvariant="bold-italic">𝒓</mi><mo>′</mo></msup><annotation encoding="application/x-tex">\mathbf{r}&#39;</annotation></semantics></math>
+is the displacement from the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>z</mi><annotation encoding="application/x-tex">z</annotation></semantics></math>-axis.</p>
+<ul>
+<li><strong>Physical Meaning:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>
+rotates about the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>z</mi><annotation encoding="application/x-tex">z</annotation></semantics></math>-axis.
+Its circulation around any closed loop is equal to the magnetic flux
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+through that loop.</li>
+<li><strong>Formula:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mi>B</mi><msup><mi>r</mi><mo>′</mo></msup><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">A = Br&#39;/2</annotation></semantics></math></li>
+</ul>
+<h3 id="2-the-straight-wire">2. The Straight Wire</h3>
+<p>For an infinite wire of radius
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+carrying current
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>I</mi><annotation encoding="application/x-tex">I</annotation></semantics></math>
+along the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>z</mi><annotation encoding="application/x-tex">z</annotation></semantics></math>-axis:</p>
+<ul>
+<li><strong>Vector Potential:</strong> Outside the wire,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mi>x</mi></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">A_x = 0</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mi>y</mi></msub><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">A_y = 0</annotation></semantics></math>.
+The
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>z</mi><annotation encoding="application/x-tex">z</annotation></semantics></math>-component
+is:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mi>z</mi></msub><mo>=</mo><mi>−</mi><mfrac><mi>I</mi><mrow><mn>2</mn><mi>π</mi><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup></mrow></mfrac><mrow><mi mathvariant="normal">ln</mi><mo>&#8289;</mo></mrow><msup><mi>r</mi><mo>′</mo></msup></mrow><annotation encoding="application/x-tex">A_z = -\frac{I}{2\pi\epsilon_0 c^2} \ln r&#39;</annotation></semantics></math></li>
+<li><strong>Magnetic Field:</strong> Calculated by taking the curl of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>,
+resulting in the standard circular field:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>B</mi><mo>=</mo><mfrac><mn>1</mn><mrow><mn>4</mn><mi>π</mi><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup></mrow></mfrac><mfrac><mrow><mn>2</mn><mi>I</mi></mrow><msup><mi>r</mi><mo>′</mo></msup></mfrac></mrow><annotation encoding="application/x-tex">B = \frac{1}{4\pi\epsilon_0 c^2} \frac{2I}{r&#39;}</annotation></semantics></math></li>
+</ul>
+<h3 id="3-the-long-solenoid">3. The Long Solenoid</h3>
+<p>A long solenoid with surface current density
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>J</mi><annotation encoding="application/x-tex">J</annotation></semantics></math>
+(where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>J</mi><mo>=</mo><mi>n</mi><mi>I</mi></mrow><annotation encoding="application/x-tex">J = nI</annotation></semantics></math>)
+exhibits unique properties outside its volume:</p>
+<ul>
+<li><strong>Field Discrepancy:</strong> Inside the solenoid, there is a
+uniform magnetic field. Outside, the magnetic field
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+is zero. However, the vector potential
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>
+is <strong>not</strong> zero outside.</li>
+<li><strong>A-Field Magnitude:</strong> Outside,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+circulates around the solenoid with magnitude:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo>=</mo><mfrac><mrow><mi>n</mi><mi>I</mi><msup><mi>a</mi><mn>2</mn></msup></mrow><mrow><mn>2</mn><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup></mrow></mfrac><mfrac><mn>1</mn><msup><mi>r</mi><mo>′</mo></msup></mfrac></mrow><annotation encoding="application/x-tex">A = \frac{nIa^2}{2\epsilon_0 c^2} \frac{1}{r&#39;}</annotation></semantics></math></li>
+<li><strong>Rotating Cylinders:</strong> A rotating charged cylinder
+produces the same magnetic field as a solenoid. However, the text notes
+that while rotation induces effects (like charges on a radial wire),
+these cannot be analyzed from the frame of the rotating cylinder, as it
+is not an inertial frame.</li>
+</ul>
+<h3 id="4-the-magnetic-dipole-small-loops">4. The Magnetic Dipole (Small
+Loops)</h3>
+<p>At large distances, any small current loop of any shape produces a
+"dipole field."</p>
+<ul>
+<li><strong>Magnetic Moment
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>μ</mi><annotation encoding="application/x-tex">\mu</annotation></semantics></math>):</strong>
+Defined as the current times the area of the loop
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>μ</mi><mo>=</mo><mi>I</mi><mo>×</mo><mtext mathvariant="normal">Area</mtext></mrow><annotation encoding="application/x-tex">\mu = I \times \text{Area}</annotation></semantics></math>).</li>
+<li><strong>Vector Potential of a Dipole:</strong>
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑨</mi><mo>=</mo><mfrac><mn>1</mn><mrow><mn>4</mn><mi>π</mi><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup></mrow></mfrac><mfrac><mrow><mi mathvariant="bold-italic">𝝁</mi><mo>×</mo><msub><mi mathvariant="bold-italic">𝒆</mi><mi>R</mi></msub></mrow><msup><mi>R</mi><mn>2</mn></msup></mfrac></mrow><annotation encoding="application/x-tex">\mathbf{A} = \frac{1}{4\pi\epsilon_0 c^2} \frac{\boldsymbol{\mu} \times \mathbf{e}_R}{R^2}</annotation></semantics></math></li>
+<li><strong>B-Field Behavior:</strong> The components of the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>-field
+for a magnetic dipole are mathematically identical to the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑬</mi><annotation encoding="application/x-tex">\mathbf{E}</annotation></semantics></math>-field
+components of an electric dipole.</li>
+</ul>
+<hr />
+<h2 id="iii-direct-integration-the-law-of-biot-and-savart">III. Direct
+Integration: The Law of Biot and Savart</h2>
+<p>While the vector potential is often easier for complex problems, the
+magnetic field can be calculated directly using the Biot-Savart Law.</p>
+<h3 id="formulas-for-b-field-calculation">Formulas for B-Field
+Calculation</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Source Type</th>
+<th style="text-align: left;">Formula</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Volume Current</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑩</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mfrac><mn>1</mn><mrow><mn>4</mn><mi>π</mi><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup></mrow></mfrac><mo>∫</mo><mfrac><mrow><mi mathvariant="bold-italic">𝒋</mi><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mo stretchy="false" form="postfix">)</mo><mo>×</mo><msub><mi mathvariant="bold-italic">𝒆</mi><mn>12</mn></msub></mrow><msubsup><mi>r</mi><mn>12</mn><mn>2</mn></msubsup></mfrac><mi>d</mi><msub><mi>V</mi><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">\mathbf{B}(1) = \frac{1}{4\pi\epsilon_0 c^2} \int \frac{\mathbf{j}(2) \times \mathbf{e}_{12}}{r_{12}^2} dV_2</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Thin Wire (Circuit)</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑩</mi><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mi>−</mi><mfrac><mn>1</mn><mrow><mn>4</mn><mi>π</mi><msub><mi>ϵ</mi><mn>0</mn></msub><msup><mi>c</mi><mn>2</mn></msup></mrow></mfrac><mo>∫</mo><mfrac><mrow><mi>I</mi><msub><mi mathvariant="bold-italic">𝒆</mi><mn>12</mn></msub><mo>×</mo><mi>d</mi><msub><mi mathvariant="bold-italic">𝒔</mi><mn>2</mn></msub></mrow><msubsup><mi>r</mi><mn>12</mn><mn>2</mn></msubsup></mfrac></mrow><annotation encoding="application/x-tex">\mathbf{B}(1) = -\frac{1}{4\pi\epsilon_0 c^2} \int \frac{I \mathbf{e}_{12} \times d\mathbf{s}_2}{r_{12}^2}</annotation></semantics></math></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Observation on Complexity:</strong> The integrals for
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+are typically more complicated than those for
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>
+due to the cross product in the integrand.</p>
+<hr />
+<h2 id="iv-important-quotes-with-context">IV. Important Quotes with
+Context</h2>
+<ul>
+<li><p><strong>On the utility of the Vector Potential:</strong></p>
+<blockquote>
+<p>"The x-component of vector potential arising from a current density
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝒋</mi><annotation encoding="application/x-tex">\mathbf{j}</annotation></semantics></math>
+is the same as the electric potential
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>
+that would be produced by a charge density
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ρ</mi><annotation encoding="application/x-tex">\rho</annotation></semantics></math>
+equal to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>j</mi><mi>x</mi></msub><mi>/</mi><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">j_x/c^2</annotation></semantics></math>—and
+similarly for the y- and z-components." <em>Context:</em> Explaining the
+"imaginary electrostatic problems" used to solve for
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>.</p>
+</blockquote></li>
+<li><p><strong>On the nature of Magnetic Dipoles:</strong></p>
+<blockquote>
+<p>"The word 'dipole' is slightly misleading when applied to a magnetic
+field because there are no magnetic 'poles' that correspond to electric
+charges. The magnetic 'dipole field' is not produced by two 'charges,'
+but by an elementary current loop." <em>Context:</em> Clarifying the
+physical difference between electric dipoles (separated charges) and
+magnetic dipoles (circulating currents) despite their identical field
+patterns at a distance.</p>
+</blockquote></li>
+<li><p><strong>On the frame of reference in rotation:</strong></p>
+<blockquote>
+<p>"A rotating system is not an inertial frame, and the laws of physics
+are different. We must be sure to use equations of electromagnetism only
+with respect to inertial coordinate systems." <em>Context:</em>
+Explaining why the magnetic effects of a rotating charged cylinder do
+not disappear just because an observer rotates with the cylinder.</p>
+</blockquote></li>
+</ul>
+<hr />
+<h2 id="v-actionable-physical-insights">V. Actionable Physical
+Insights</h2>
+<ol type="1">
+<li><strong>Analogy as a Computational Shortcut:</strong> To find the
+magnetic field of a current distribution, one can treat each component
+of the current density as a static charge distribution and solve for the
+"electrostatic" potential. The result is the vector potential
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>,
+from which
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+is easily derived.</li>
+<li><strong>The "A" Field vs. The "B" Field:</strong> The solenoid
+example demonstrates that the vector potential
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>
+can exist in regions where the magnetic field
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+is zero. This highlights that
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>
+is a distinct physical entity, not just a mathematical convenience.</li>
+<li><strong>Dipole Equivalence:</strong> At large distances, the
+specific shape of a current loop (circle, square, triangle) is
+irrelevant. Only the product of the current and the enclosed area (the
+magnetic moment) determines the field.</li>
+<li><strong>Inertial Frames Requirement:</strong> Maxwell’s equations
+and the derived magnetostatic formulas are strictly valid in inertial
+frames. When dealing with rotating systems (like the "angular-velocity
+meter" example), one must account for the non-inertial nature of the
+frame or stick to the laboratory (inertial) frame for calculations.</li>
+<li><strong>Theoretical Importance:</strong> Beyond calculation, the
+vector potential
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>
+is foundational for advanced physics, including relativity, quantum
+mechanics, and the principle of least action.</li>
+</ol>
+    </article>
+  </main>
+</body>
+</html>
