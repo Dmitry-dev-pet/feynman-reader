@@ -92,7 +92,7 @@ def write_part_files(
     desc_path = base.with_suffix(".description.txt")
     video_path = base.with_suffix(".mp4")
 
-    list_path.write_text("".join(f"file '{quote_concat_path(item.path)}'\n" for item in items), encoding="utf-8")
+    list_path.write_text("".join(f"file '{quote_concat_path(item.path.resolve())}'\n" for item in items), encoding="utf-8")
 
     cursor = 0.0
     lines = [f"{title} - Part {part_index}/{total_parts}", "", "Chapters:"]
