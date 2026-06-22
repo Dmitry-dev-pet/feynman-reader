@@ -64,6 +64,18 @@ def extract_reports(text: str) -> dict[str, str]:
     return reports
 
 
+def report_files(page) -> dict[str, str]:
+    reports_dir = page.path.parent / "reports"
+    overview = reports_dir / f"ch{page.chapter:02d}-notebooklm-briefing.html"
+    guide = reports_dir / f"ch{page.chapter:02d}-notebooklm-study-guide.html"
+    reports: dict[str, str] = {}
+    if overview.exists():
+        reports["overview"] = f"reports/{overview.name}"
+    if guide.exists():
+        reports["guide"] = f"reports/{guide.name}"
+    return reports
+
+
 def existing_chapters() -> dict[str, object]:
     if not MEDIA_MANIFEST.exists():
         return {}
@@ -86,7 +98,7 @@ def build_manifest() -> dict[str, object]:
         if not media:
             media = previous.get("media", []) if isinstance(previous, dict) else []
         if not reports:
-            reports = previous.get("reports", {}) if isinstance(previous, dict) else {}
+            reports = report_files(page) or (previous.get("reports", {}) if isinstance(previous, dict) else {})
         if not media and not reports:
             continue
         chapters[page.key] = {

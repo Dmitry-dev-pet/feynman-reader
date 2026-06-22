@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Analysis of Probability Amplitudes: Quantum Mechanical Principles and Applications - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="en">
+  <script>
+    (() => {
+      const key = "flp-reader-theme";
+      const applyTheme = (theme) => {
+        const next = theme === "dark" ? "dark" : "light";
+        document.documentElement.dataset.theme = next;
+        document.body.dataset.theme = next;
+        try { localStorage.setItem(key, next); } catch (_) {}
+      };
+      try { applyTheme(localStorage.getItem(key) || "light"); } catch (_) { applyTheme("light"); }
+      document.addEventListener("click", (event) => {
+        const button = event.target.closest('[data-report-action="theme"]');
+        if (!button) return;
+        applyTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark");
+      });
+    })();
+  </script>
+<main class="notebooklm-report-shell">
+    <header aria-label="Quick navigation" class="reader-toolbar report-toolbar">
+      <div class="toolbar-group toolbar-navigation">
+        <a class="toolbar-btn" href="../ch03.html">Back to chapter</a>
+        <a class="toolbar-btn" href="../../../../feynman-reader/index.html">Reader</a>
+        <a class="toolbar-btn" href="../../index.html">Contents</a>
+      </div>
+      <a class="toolbar-title" href="../ch03.html#ch03" title="NotebookLM · Overview">NotebookLM · Overview</a>
+      <div class="toolbar-group toolbar-settings">
+        <button aria-label="Toggle theme" class="toolbar-btn icon-btn" data-report-action="theme" title="Toggle theme" type="button">◐</button>
+      </div>
+    </header>
+    <article class="notebooklm-report">
+<h1
+id="analysis-of-probability-amplitudes-quantum-mechanical-principles-and-applications">Analysis
+of Probability Amplitudes: Quantum Mechanical Principles and
+Applications</h1>
+<p>This briefing document provides a comprehensive analysis of the
+fundamental principles of quantum mechanics as they relate to
+probability amplitudes, based on the pedagogical approach outlined in
+Chapter 3 of the <em>Feynman Lectures on Physics, Volume III</em>.</p>
+<h2 id="executive-summary">Executive Summary</h2>
+<p>The transition from classical to quantum mechanics necessitates a
+departure from describing the detailed behavior of particles in space to
+a framework based on probability amplitudes. This chapter establishes
+the core mathematical rules for combining these amplitudes: summing
+amplitudes for indistinguishable alternative paths and multiplying them
+for successive events. The presence of any mechanism—even in
+principle—that allows for the determination of a particle’s specific
+path destroys interference, shifting the calculation from the sum of
+amplitudes to the sum of individual probabilities. These principles are
+demonstrated through electron interference, neutron scattering in
+crystals, and the behavior of identical particles such as
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>α</mi><annotation encoding="application/x-tex">\alpha</annotation></semantics></math>-particles
+and electrons.</p>
+<h2 id="i.-fundamental-laws-for-combining-amplitudes">I. Fundamental
+Laws for Combining Amplitudes</h2>
+<p>Quantum mechanics relies on three general principles for calculating
+the probability of physical events. These are expressed using Dirac’s
+“bra-ket” shorthand notation: <span
+class="math inline">$\braket{\text{Final State}}{\text{Initial
+State}}$</span>.</p>
+<h3 id="the-probability-principle">1. The Probability Principle</h3>
+<p>The probability
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>P</mi><annotation encoding="application/x-tex">P</annotation></semantics></math>)
+of an event is the absolute square of a complex number called the
+probability amplitude
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>):
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mo stretchy="false" form="prefix">|</mo><mi>ϕ</mi><msup><mo stretchy="false" form="prefix">|</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">P = |\phi|^2</annotation></semantics></math></p>
+<h3 id="the-superposition-principle-indistinguishable-alternatives">2.
+The Superposition Principle (Indistinguishable Alternatives)</h3>
+<p>When a particle can reach a final state through two or more
+indistinguishable routes, the total amplitude for the process is the sum
+of the amplitudes for each route considered separately. <span
+class="math display">$$\braket{x}{s}_{\text{total}} =
+\braket{x}{s}_{\text{route 1}} + \braket{x}{s}_{\text{route 2}}$$</span>
+The resulting probability is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>P</mi><mn>12</mn></msub><mo>=</mo><mo stretchy="false" form="prefix">|</mo><msub><mi>ϕ</mi><mn>1</mn></msub><mo>+</mo><msub><mi>ϕ</mi><mn>2</mn></msub><msup><mo stretchy="false" form="prefix">|</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">P_{12} = |\phi_1 + \phi_2|^2</annotation></semantics></math>.</p>
+<h3 id="the-succession-principle-sequential-events">3. The Succession
+Principle (Sequential Events)</h3>
+<p>If a particle goes through a particular route by a succession of
+events, the amplitude for that route is the product of the amplitudes
+for each individual step. <span
+class="math display">$$\braket{x}{s}_{\text{via 1}} =
+\braket{x}{1}\braket{1}{s}$$</span> This is read from right to left: the
+amplitude to go from source
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math>
+to hole 1, then from hole 1 to detector
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>.</p>
+<h3 id="mathematical-representation-of-a-free-particle">Mathematical
+Representation of a Free Particle</h3>
+<p>For a free particle with momentum
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math>
+moving from
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="bold-italic">𝒓</mi><mn>1</mn></msub><annotation encoding="application/x-tex">\mathbf{r}_1</annotation></semantics></math>
+to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi mathvariant="bold-italic">𝒓</mi><mn>2</mn></msub><annotation encoding="application/x-tex">\mathbf{r}_2</annotation></semantics></math>,
+the amplitude is approximately: <span
+class="math display">$$\braket{\mathbf{r}_2}{\mathbf{r}_1} \approx
+\frac{e^{i(p \cdot r_{12}/\hbar)}}{r_{12}}$$</span> where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>r</mi><mn>12</mn></msub><mo>=</mo><mo stretchy="false" form="prefix">|</mo><msub><mi mathvariant="bold-italic">𝒓</mi><mn>2</mn></msub><mo>−</mo><msub><mi mathvariant="bold-italic">𝒓</mi><mn>1</mn></msub><mo stretchy="false" form="prefix">|</mo></mrow><annotation encoding="application/x-tex">r_{12} = |\mathbf{r}_2 - \mathbf{r}_1|</annotation></semantics></math>.
+This illustrates the wavelike properties of particles, where the
+amplitude propagates with a wave number equal to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mi>/</mi><mi>ℏ</mi></mrow><annotation encoding="application/x-tex">p/\hbar</annotation></semantics></math>.</p>
+<hr />
+<h2 id="ii.-distinguishability-and-the-role-of-observation">II.
+Distinguishability and the Role of Observation</h2>
+<p>A critical distinction in quantum mechanics is whether different
+paths can be distinguished. The act of “observing” or the mere existence
+of a “record” of the path taken changes the outcome.</p>
+<h3 id="the-two-slit-experiment-with-light">The Two-Slit Experiment with
+Light</h3>
+<p>In an experiment where light is used to detect which hole an electron
+passes through (Fig. 3-3): * <strong>Without Path Information:</strong>
+If the wavelength of light is long (ineffective detection), the
+amplitudes interfere:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><msub><mi>ϕ</mi><mn>1</mn></msub><mo>+</mo><msub><mi>ϕ</mi><mn>2</mn></msub><msup><mo stretchy="false" form="prefix">|</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">|\phi_1 + \phi_2|^2</annotation></semantics></math>.
+* <strong>With Path Information:</strong> If the light identifies the
+hole (short wavelength), the interference is destroyed. The observer
+must square the amplitudes first and then sum them:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><msub><mi>ϕ</mi><mn>1</mn></msub><msup><mo stretchy="false" form="prefix">|</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">|</mo><msub><mi>ϕ</mi><mn>2</mn></msub><msup><mo stretchy="false" form="prefix">|</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">|\phi_1|^2 + |\phi_2|^2</annotation></semantics></math>.</p>
+<p><strong>Rule of Final States:</strong> Amplitudes must never be added
+for different and distinct final states. If a photon is scattered into a
+specific detector, that constitutes a distinct final state. Nature
+behaves according to the potential to distinguish the path, regardless
+of whether a human actually records the data.</p>
+<hr />
+<h2 id="iii.-case-study-neutron-scattering-from-crystals">III. Case
+Study: Neutron Scattering from Crystals</h2>
+<p>The scattering of neutrons from a periodic array of nuclei (Fig. 3-5)
+serves as a proof of the distinguishability rule involving internal
+particle states (spin).</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Nuclei Type</th>
+<th style="text-align: left;">Physical Process</th>
+<th style="text-align: left;">Result</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Spin Zero</strong></td>
+<td style="text-align: left;">All routes are indistinguishable; no
+record of which nucleus scattered the neutron.</td>
+<td style="text-align: left;">Sharp interference peaks (Fig. 3-6a).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Spin One-Half (No Spin
+Flip)</strong></td>
+<td style="text-align: left;">If the neutron scatters without changing
+spin, the atoms remain in their original state.</td>
+<td style="text-align: left;">Interference pattern persists.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Spin One-Half (With Spin
+Flip)</strong></td>
+<td style="text-align: left;">If a neutron flips its spin, it must flip
+the spin of a specific nucleus. This “leaves a record” of which atom did
+the scattering.</td>
+<td style="text-align: left;">No interference; smooth distribution (Fig.
+3-6b).</td>
+</tr>
+</tbody>
+</table>
+<p>In a crystal with spin, both processes occur. The total counting rate
+is the sum of the interference probability and the non-interference
+(spin-flip) probability (Fig. 3-6c).</p>
+<hr />
+<h2 id="iv.-the-physics-of-identical-particles">IV. The Physics of
+Identical Particles</h2>
+<p>The behavior of particles during collisions depends on whether they
+are “identical” (indistinguishable) or “distinguishable.”</p>
+<h3 id="distinguishable-particles-e.g.-alpha-particles-on-oxygen">1.
+Distinguishable Particles (e.g.,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>α</mi><annotation encoding="application/x-tex">\alpha</annotation></semantics></math>-particles
+on Oxygen)</h3>
+<p>When an
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>α</mi><annotation encoding="application/x-tex">\alpha</annotation></semantics></math>-particle
+hits an oxygen nucleus, there are two ways to get a particle in a
+detector at angle
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>θ</mi><annotation encoding="application/x-tex">\theta</annotation></semantics></math>:
+1. The
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>α</mi><annotation encoding="application/x-tex">\alpha</annotation></semantics></math>-particle
+scatters at angle
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>θ</mi><annotation encoding="application/x-tex">\theta</annotation></semantics></math>.
+2. The Oxygen nucleus scatters at angle
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>θ</mi><annotation encoding="application/x-tex">\theta</annotation></semantics></math>
+(meaning the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>α</mi><annotation encoding="application/x-tex">\alpha</annotation></semantics></math>-particle
+went to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>π</mi><mo>−</mo><mi>θ</mi></mrow><annotation encoding="application/x-tex">\pi-\theta</annotation></semantics></math>).
+Since we can tell an
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>α</mi><annotation encoding="application/x-tex">\alpha</annotation></semantics></math>-particle
+from an oxygen nucleus, we sum the probabilities:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mo stretchy="false" form="prefix">|</mo><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>θ</mi><mo stretchy="false" form="postfix">)</mo><msup><mo stretchy="false" form="prefix">|</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">|</mo><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>π</mi><mo>−</mo><mi>θ</mi><mo stretchy="false" form="postfix">)</mo><msup><mo stretchy="false" form="prefix">|</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">P = |f(\theta)|^2 + |f(\pi-\theta)|^2</annotation></semantics></math></p>
+<h3
+id="identical-particles-with-positive-interference-e.g.-alpha-on-alpha">2.
+Identical Particles with Positive Interference (e.g.,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>α</mi><annotation encoding="application/x-tex">\alpha</annotation></semantics></math>-on-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>α</mi><annotation encoding="application/x-tex">\alpha</annotation></semantics></math>)</h3>
+<p>If both particles are
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>α</mi><annotation encoding="application/x-tex">\alpha</annotation></semantics></math>-particles,
+they are identical. We cannot know if the detected particle was the
+projectile or the target. We sum the amplitudes:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mo stretchy="false" form="prefix">|</mo><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>θ</mi><mo stretchy="false" form="postfix">)</mo><mo>+</mo><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>π</mi><mo>−</mo><mi>θ</mi><mo stretchy="false" form="postfix">)</mo><msup><mo stretchy="false" form="prefix">|</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">P = |f(\theta) + f(\pi-\theta)|^2</annotation></semantics></math>
+At
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>90</mn><mo>∘</mo></msup><annotation encoding="application/x-tex">90^\circ</annotation></semantics></math>,
+this results in <strong>four times</strong> the individual scattering
+amplitude, or twice what classical physics predicts.</p>
+<h3
+id="identical-particles-with-negative-interference-e.g.-electrons">3.
+Identical Particles with Negative Interference (e.g., Electrons)</h3>
+<p>Electrons (and protons) follow a “most peculiar rule”: when their
+roles are exchanged, the new amplitude interferes with the old one with
+an <strong>opposite phase</strong> (a minus sign).</p>
+<ul>
+<li><strong>Parallel Spins:</strong> If both electrons have the same
+spin, they are indistinguishable, but the amplitudes subtract:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>P</mi><mo>=</mo><mo stretchy="false" form="prefix">|</mo><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>θ</mi><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>π</mi><mo>−</mo><mi>θ</mi><mo stretchy="false" form="postfix">)</mo><msup><mo stretchy="false" form="prefix">|</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">P = |f(\theta) - f(\pi-\theta)|^2</annotation></semantics></math></li>
+<li><strong>Antiparallel Spins:</strong> If one is “up” and one is
+“down,” they are distinguishable by their spin. No interference occurs;
+we add probabilities.</li>
+</ul>
+<h4 id="unpolarized-electron-scattering">Unpolarized Electron
+Scattering</h4>
+<p>In a random (unpolarized) beam, the total probability is calculated
+by summing the cases of different spin alignments:</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Case</th>
+<th style="text-align: left;">Alignment</th>
+<th style="text-align: left;">Probability Formula</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">1/4</td>
+<td style="text-align: left;">Both Up</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>θ</mi><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>π</mi><mo>−</mo><mi>θ</mi><mo stretchy="false" form="postfix">)</mo><msup><mo stretchy="false" form="prefix">|</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">|f(\theta) - f(\pi-\theta)|^2</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;">1/4</td>
+<td style="text-align: left;">Both Down</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>θ</mi><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>π</mi><mo>−</mo><mi>θ</mi><mo stretchy="false" form="postfix">)</mo><msup><mo stretchy="false" form="prefix">|</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">|f(\theta) - f(\pi-\theta)|^2</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;">1/4</td>
+<td style="text-align: left;">Up/Down</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>θ</mi><mo stretchy="false" form="postfix">)</mo><msup><mo stretchy="false" form="prefix">|</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">|</mo><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>π</mi><mo>−</mo><mi>θ</mi><mo stretchy="false" form="postfix">)</mo><msup><mo stretchy="false" form="prefix">|</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">|f(\theta)|^2 + |f(\pi-\theta)|^2</annotation></semantics></math>
+(No interference)</td>
+</tr>
+<tr>
+<td style="text-align: left;">1/4</td>
+<td style="text-align: left;">Down/Up</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>π</mi><mo>−</mo><mi>θ</mi><mo stretchy="false" form="postfix">)</mo><msup><mo stretchy="false" form="prefix">|</mo><mn>2</mn></msup><mo>+</mo><mo stretchy="false" form="prefix">|</mo><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>θ</mi><mo stretchy="false" form="postfix">)</mo><msup><mo stretchy="false" form="prefix">|</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">|f(\pi-\theta)|^2 + |f(\theta)|^2</annotation></semantics></math>
+(No interference)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="v.-key-quotes-and-contextual-analysis">V. Key Quotes and
+Contextual Analysis</h2>
+<blockquote>
+<p><strong>“What are usually called the advanced parts of quantum
+mechanics are, in fact, quite simple. The mathematics that is involved
+is particularly simple, involving simple algebraic operations…”</strong>
+* <strong>Context:</strong> Feynman explains his pedagogical choice to
+teach amplitudes and spin early, rather than focusing on the complex
+differential equations of the Schrödinger equation.</p>
+</blockquote>
+<blockquote>
+<p><strong>“Nature does not know what you are looking at, and she
+behaves the way she is going to behave whether you bother to take down
+the data or not.”</strong> * <strong>Context:</strong> Discussing the
+two-slit experiment with light. This emphasizes that interference is
+destroyed by the <em>possibility</em> of path determination (the
+scattering of a photon), not the conscious act of human observation.</p>
+</blockquote>
+<blockquote>
+<p><strong>“If you could, in principle, distinguish the alternative
+final states… the total, final probability is obtained by calculating
+the probability for each state… and then adding them together.”</strong>
+* <strong>Context:</strong> This is the fundamental rule for when to
+stop adding amplitudes and start adding probabilities. It applies to
+both the “which-path” electron experiments and the neutron spin-flip
+scenarios.</p>
+</blockquote>
+<hr />
+<h2 id="vi.-actionable-insights-for-analysis">VI. Actionable Insights
+for Analysis</h2>
+<ol type="1">
+<li><strong>Identify Distinguishability First:</strong> Before
+calculating probabilities, determine if the paths taken are
+indistinguishable. If any change in the environment or internal state
+(like a spin-flip or a scattered photon) identifies the path, do not add
+amplitudes.</li>
+<li><strong>Sequential vs. Alternative Logic:</strong>
+<ul>
+<li>Use <strong>multiplication</strong> for events happening in a
+“chain” (succession).</li>
+<li>Use <strong>addition</strong> for events happening as “options”
+(alternatives).</li>
+</ul></li>
+<li><strong>Account for Particle Identity:</strong> When dealing with
+collisions of identical particles, verify if the exchange of particles
+introduces a positive
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>α</mi><annotation encoding="application/x-tex">\alpha</annotation></semantics></math>-particles)
+or negative (electrons) interference term.</li>
+<li><strong>State Completeness:</strong> To predict the future of a
+quantum system, one only needs the amplitudes for the possible
+intermediate states (e.g., <span
+class="math inline">$\braket{1}{s}$</span> and <span
+class="math inline">$\braket{2}{s}$</span>). These numbers contain all
+necessary information about the previous history of the particle.</li>
+</ol>
+  </article>
+</main>
+</body>
+</html>

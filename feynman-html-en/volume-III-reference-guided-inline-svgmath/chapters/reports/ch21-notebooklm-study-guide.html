@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Study Guide: The Schrödinger Equation in a Classical Context and Superconductivity - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="en">
+  <script>
+    (() => {
+      const key = "flp-reader-theme";
+      const applyTheme = (theme) => {
+        const next = theme === "dark" ? "dark" : "light";
+        document.documentElement.dataset.theme = next;
+        document.body.dataset.theme = next;
+        try { localStorage.setItem(key, next); } catch (_) {}
+      };
+      try { applyTheme(localStorage.getItem(key) || "light"); } catch (_) { applyTheme("light"); }
+      document.addEventListener("click", (event) => {
+        const button = event.target.closest('[data-report-action="theme"]');
+        if (!button) return;
+        applyTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark");
+      });
+    })();
+  </script>
+<main class="notebooklm-report-shell">
+    <header aria-label="Quick navigation" class="reader-toolbar report-toolbar">
+      <div class="toolbar-group toolbar-navigation">
+        <a class="toolbar-btn" href="../ch21.html">Back to chapter</a>
+        <a class="toolbar-btn" href="../../../../feynman-reader/index.html">Reader</a>
+        <a class="toolbar-btn" href="../../index.html">Contents</a>
+      </div>
+      <a class="toolbar-title" href="../ch21.html#ch21" title="NotebookLM · Guide">NotebookLM · Guide</a>
+      <div class="toolbar-group toolbar-settings">
+        <button aria-label="Toggle theme" class="toolbar-btn icon-btn" data-report-action="theme" title="Toggle theme" type="button">◐</button>
+      </div>
+    </header>
+    <article class="notebooklm-report">
+<h1
+id="study-guide-the-schrödinger-equation-in-a-classical-context-and-superconductivity">Study
+Guide: The Schrödinger Equation in a Classical Context and
+Superconductivity</h1>
+<p>This study guide explores the macroscopic application of quantum
+mechanics through the lens of superconductivity, based on the principles
+of the Schrödinger equation in magnetic fields, the behavior of Bose
+particles, and the dynamics of Josephson junctions.</p>
+<hr />
+<h2 id="i.-key-concepts">I. Key Concepts</h2>
+<h3 id="the-schrödinger-equation-in-a-magnetic-field">1. The Schrödinger
+Equation in a Magnetic Field</h3>
+<p>In the presence of a magnetic field, described by a vector potential
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>
+and an electric potential
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>,
+the Schrödinger equation for a particle with charge
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>q</mi><annotation encoding="application/x-tex">q</annotation></semantics></math>
+and mass
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math>
+is modified. The probability amplitude for a particle to move between
+two points follows the rule: <span
+class="math display">$$\braket{b}{a}_{\text{in } \mathbf{A}} =
+\braket{b}{a}_{A=0} \cdot \exp\left[\frac{iq}{\hbar}\int_a^b \mathbf{A}
+\cdot d\mathbf{s}\right]$$</span></p>
+<p>This implies that the momentum operator
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mi>ℏ</mi><mi>i</mi></mfrac><mi>∇</mi></mrow><annotation encoding="application/x-tex">\frac{\hbar}{i}\nabla</annotation></semantics></math>
+is replaced by
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mi>ℏ</mi><mi>i</mi></mfrac><mi>∇</mi><mo>−</mo><mi>q</mi><mi mathvariant="bold-italic">𝑨</mi></mrow><annotation encoding="application/x-tex">\frac{\hbar}{i}\nabla - q\mathbf{A}</annotation></semantics></math>
+in the Hamiltonian.</p>
+<h3 id="dual-definitions-of-momentum">2. Dual Definitions of
+Momentum</h3>
+<p>There are two distinct types of momentum relevant to charged
+particles in electromagnetic fields:</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Momentum Type</th>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Definition</th>
+<th style="text-align: left;">Quantum Operator Association</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Kinematic</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mi>v</mi></mrow><annotation encoding="application/x-tex">mv</annotation></semantics></math>-momentum</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mi mathvariant="bold-italic">𝒗</mi></mrow><annotation encoding="application/x-tex">m\mathbf{v}</annotation></semantics></math></td>
+<td style="text-align: left;">Associated with the velocity of flow.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Dynamical</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math>-momentum</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mi mathvariant="bold-italic">𝒗</mi><mo>+</mo><mi>q</mi><mi mathvariant="bold-italic">𝑨</mi></mrow><annotation encoding="application/x-tex">m\mathbf{v} + q\mathbf{A}</annotation></semantics></math></td>
+<td style="text-align: left;">Associated with the gradient operator
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mi>ℏ</mi><mi>i</mi></mfrac><mi>∇</mi></mrow><annotation encoding="application/x-tex">\frac{\hbar}{i}\nabla</annotation></semantics></math>.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Physical Insight:</strong> When a vector potential
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>
+is suddenly turned on, the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mi>v</mi></mrow><annotation encoding="application/x-tex">mv</annotation></semantics></math>-momentum
+changes immediately due to the induced electric field, but the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math>-momentum
+remains unchanged.</p>
+<h3 id="macroscopic-wave-functions">3. Macroscopic Wave Functions</h3>
+<p>While
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ψ</mi><annotation encoding="application/x-tex">\psi</annotation></semantics></math>
+usually describes a single particle’s probability amplitude (Born’s
+interpretation), a unique situation arises when a large number of Bose
+particles (or pairs) occupy the same state: * <strong>Density:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ψ</mi><msup><mi>ψ</mi><mo>*</mo></msup></mrow><annotation encoding="application/x-tex">\psi\psi^*</annotation></semantics></math>
+can be interpreted as the physical density of particles
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ρ</mi><annotation encoding="application/x-tex">\rho</annotation></semantics></math>).
+* <strong>Current:</strong> The probability current
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑱</mi><annotation encoding="application/x-tex">\mathbf{J}</annotation></semantics></math>
+becomes the actual electric current density. * <strong>Phase:</strong>
+The phase
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>θ</mi><annotation encoding="application/x-tex">\theta</annotation></semantics></math>
+of the wave function becomes a macroscopically observable quantity
+related to the current.</p>
+<h3 id="superconductivity-and-bose-einstein-condensation">4.
+Superconductivity and Bose-Einstein Condensation</h3>
+<p>Superconductivity occurs when electrons form “bound pairs” (Cooper
+pairs). * <strong>Bosonic Behavior:</strong> Electrons are Fermions, but
+a pair acts as a Boson. * <strong>Ground State Locking:</strong> At
+sufficiently low temperatures, these pairs collect into the lowest
+possible energy state. Because they are Bosons, they “lock” into the
+same state, making it difficult for individual pairs to be scattered
+(resulting in zero electrical resistance). * <strong>Charge:</strong>
+The charge
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>q</mi><annotation encoding="application/x-tex">q</annotation></semantics></math>
+of the superconducting carrier is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><msub><mi>q</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">2q_e</annotation></semantics></math>
+(twice the charge of an electron).</p>
+<h3 id="the-meissner-effect-and-london-equation">5. The Meissner Effect
+and London Equation</h3>
+<p>Superconductors expel magnetic fields from their interior. *
+<strong>The London Equation:</strong> Inside a superconductor, the
+current density is proportional to the vector potential:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑱</mi><mo>=</mo><mi>−</mi><mo stretchy="false" form="prefix">(</mo><mtext mathvariant="normal">constant</mtext><mo stretchy="false" form="postfix">)</mo><mi mathvariant="bold-italic">𝑨</mi></mrow><annotation encoding="application/x-tex">\mathbf{J} = -(\text{constant})\mathbf{A}</annotation></semantics></math>.
+* <strong>Field Penetration:</strong> Magnetic fields only penetrate a
+thin surface layer of thickness
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mi>λ</mi></mrow><annotation encoding="application/x-tex">1/\lambda</annotation></semantics></math>.
+For lead, this depth is approximately
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mo>×</mo><msup><mn>10</mn><mrow><mi>−</mi><mn>6</mn></mrow></msup></mrow><annotation encoding="application/x-tex">2 \times 10^{-6}</annotation></semantics></math>
+cm.</p>
+<h3 id="flux-quantization">6. Flux Quantization</h3>
+<p>In a superconducting ring, the magnetic flux
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="normal">Φ</mi><annotation encoding="application/x-tex">\Phi</annotation></semantics></math>
+trapped inside the hole is not arbitrary; it must be quantized. *
+<strong>Condition:</strong> The phase
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>θ</mi><annotation encoding="application/x-tex">\theta</annotation></semantics></math>
+must change by
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>π</mi><mi>n</mi></mrow><annotation encoding="application/x-tex">2\pi n</annotation></semantics></math>
+when going around the ring to keep the wave function single-valued. *
+<strong>Formula:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Φ</mi><mo>=</mo><mi>n</mi><mfrac><mrow><mn>2</mn><mi>π</mi><mi>ℏ</mi></mrow><mi>q</mi></mfrac></mrow><annotation encoding="application/x-tex">\Phi = n \frac{2\pi\hbar}{q}</annotation></semantics></math>.
+* <strong>Unit of Flux:</strong> Using
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi><mo>=</mo><mn>2</mn><msub><mi>q</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">q = 2q_e</annotation></semantics></math>,
+the basic flux unit is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="normal">Φ</mi><mn>0</mn></msub><mo>=</mo><mfrac><mrow><mi>π</mi><mi>ℏ</mi></mrow><msub><mi>q</mi><mi>e</mi></msub></mfrac><mo>≈</mo><mn>2</mn><mo>×</mo><msup><mn>10</mn><mrow><mi>−</mi><mn>7</mn></mrow></msup><mrow><mspace width="0.333em"></mspace><mtext mathvariant="normal"> gauss</mtext></mrow><mo>⋅</mo><msup><mtext mathvariant="normal">cm</mtext><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\Phi_0 = \frac{\pi\hbar}{q_e} \approx 2 \times 10^{-7} \text{ gauss} \cdot \text{cm}^2</annotation></semantics></math>.</p>
+<h3 id="josephson-junctions">7. Josephson Junctions</h3>
+<p>A Josephson junction consists of two superconductors separated by a
+thin insulator. * <strong>Tunneling:</strong> Electrons can “jump”
+(tunnel) across the insulator. * <strong>Current Equation:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>J</mi><mo>=</mo><msub><mi>J</mi><mn>0</mn></msub><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mi>δ</mi></mrow><annotation encoding="application/x-tex">J = J_0 \sin \delta</annotation></semantics></math>,
+where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>δ</mi><annotation encoding="application/x-tex">\delta</annotation></semantics></math>
+is the phase difference across the junction. * <strong>Voltage
+Relation:</strong> The rate of change of the phase difference is
+proportional to the voltage
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math>:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>δ</mi><mo accent="true">̇</mo></mover><mo>=</mo><mfrac><mrow><mi>q</mi><mi>V</mi></mrow><mi>ℏ</mi></mfrac></mrow><annotation encoding="application/x-tex">\dot{\delta} = \frac{qV}{\hbar}</annotation></semantics></math>.
+* <strong>DC Effect:</strong> A constant voltage produces an oscillating
+current that averages to zero. * <strong>Zero Voltage Current:</strong>
+A current can flow even when the voltage
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math>
+is zero.</p>
+<hr />
+<h2 id="ii.-self-check-questions">II. Self-Check Questions</h2>
+<ol type="1">
+<li><strong>How does the presence of a vector potential
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>
+affect the phase of a particle’s amplitude?</strong></li>
+<li><strong>What is the “p-momentum” and how does it differ from
+“mv-momentum”?</strong></li>
+<li><strong>Why can the wave function
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ψ</mi><annotation encoding="application/x-tex">\psi</annotation></semantics></math>
+be treated as a macroscopic field in a superconductor?</strong></li>
+<li><strong>What is the value of the charge
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>q</mi><annotation encoding="application/x-tex">q</annotation></semantics></math>
+used in the superconducting equations, and why?</strong></li>
+<li><strong>Describe the Meissner effect. Why does the magnetic field
+fail to penetrate a solid superconductor?</strong></li>
+<li><strong>What is the fundamental unit of quantized magnetic flux
+found in experiments?</strong></li>
+<li><strong>What happens to the current in a Josephson junction if a
+steady DC voltage is applied?</strong></li>
+<li><strong>How can two Josephson junctions in parallel be used to
+measure magnetic fields?</strong></li>
+</ol>
+<hr />
+<h2 id="iii.-common-misconceptions">III. Common Misconceptions</h2>
+<ul>
+<li><strong>Schrödinger’s Original View vs. Born’s
+Interpretation:</strong> Schrödinger initially thought
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ψ</mi><msup><mi>ψ</mi><mo>*</mo></msup></mrow><annotation encoding="application/x-tex">\psi\psi^*</annotation></semantics></math>
+was the actual charge density of the electron. Max Born corrected this,
+showing it is a probability density. However, in superconductors where
+many particles are in the same state, Schrödinger’s original “charge
+density” interpretation becomes effectively true on a macroscopic
+scale.</li>
+<li><strong>Resistance and Scattering:</strong> One might think
+superconductors have low resistance. In fact, they have <em>zero</em>
+resistance because the Bose-like electron pairs are “locked” into a
+single state, and scattering a single pair requires breaking the
+collective state of billions of particles.</li>
+<li><strong>Flux in a Ring:</strong> It is a common mistake to assume
+any amount of flux can be trapped in a superconducting ring. Due to the
+requirement that the wave function be single-valued, only discrete
+“packets” of flux (quantized units) can be trapped.</li>
+</ul>
+<hr />
+<h2 id="iv.-essay-prompts-for-deeper-exploration">IV. Essay Prompts for
+Deeper Exploration</h2>
+<ol type="1">
+<li><strong>The Bridge Between Quantum and Classical:</strong> Discuss
+how the phenomenon of superconductivity allows quantum mechanical wave
+functions to manifest as macroscopic, classical-like fields.</li>
+<li><strong>The Reality of the Vector Potential:</strong> Based on the
+interference experiments involving Josephson junctions and solenoids,
+argue for the physical reality of the vector potential
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>
+even in regions where the magnetic field
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+is zero.</li>
+<li><strong>Hydrodynamics of Superconductivity:</strong> Explain how
+Schrödinger’s equation leads to the equations of motion for an “ideal
+charged fluid” and how this fluid model explains the Meissner
+effect.</li>
+</ol>
+<hr />
+<h2 id="v.-glossary-of-important-terms">V. Glossary of Important
+Terms</h2>
+<ul>
+<li><strong>Bose Particle (Boson):</strong> A particle that does not
+follow the Pauli exclusion principle; multiple Bosons can occupy the
+same quantum state.</li>
+<li><strong>Cooper Pair:</strong> A bound pair of electrons in a
+superconductor that behaves as a Bose particle with charge
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>q</mi><mo>=</mo><mn>2</mn><msub><mi>q</mi><mi>e</mi></msub></mrow><annotation encoding="application/x-tex">q = 2q_e</annotation></semantics></math>.</li>
+<li><strong>Josephson Junction:</strong> A device formed by two
+superconductors separated by a very thin insulator, allowing for quantum
+tunneling of electron pairs.</li>
+<li><strong>London Equation:</strong> The relation
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑱</mi><mo>∝</mo><mi mathvariant="bold-italic">𝑨</mi></mrow><annotation encoding="application/x-tex">\mathbf{J} \propto \mathbf{A}</annotation></semantics></math>
+that describes how currents in a superconductor respond to a magnetic
+field.</li>
+<li><strong>Meissner Effect:</strong> The expulsion of a magnetic field
+from a superconductor as it is cooled below its critical
+temperature.</li>
+<li><strong>P-momentum (Dynamical Momentum):</strong> The momentum
+defined as
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝒑</mi><mo>=</mo><mi>m</mi><mi mathvariant="bold-italic">𝒗</mi><mo>+</mo><mi>q</mi><mi mathvariant="bold-italic">𝑨</mi></mrow><annotation encoding="application/x-tex">\mathbf{p} = m\mathbf{v} + q\mathbf{A}</annotation></semantics></math>,
+which is directly related to the gradient of the phase of the wave
+function.</li>
+<li><strong>Vector Potential
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>):</strong>
+A field used in electromagnetism where the curl of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑨</mi><annotation encoding="application/x-tex">\mathbf{A}</annotation></semantics></math>
+equals the magnetic field
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="bold-italic">𝑩</mi><annotation encoding="application/x-tex">\mathbf{B}</annotation></semantics></math>
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>∇</mi><mo>×</mo><mi mathvariant="bold-italic">𝑨</mi><mo>=</mo><mi mathvariant="bold-italic">𝑩</mi></mrow><annotation encoding="application/x-tex">\nabla \times \mathbf{A} = \mathbf{B}</annotation></semantics></math>).
+It plays a fundamental role in the phase of quantum mechanical
+amplitudes.</li>
+</ul>
+  </article>
+</main>
+</body>
+</html>

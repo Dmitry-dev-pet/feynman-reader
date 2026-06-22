@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Study Guide: The Hamiltonian Matrix - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="en">
+  <script>
+    (() => {
+      const key = "flp-reader-theme";
+      const applyTheme = (theme) => {
+        const next = theme === "dark" ? "dark" : "light";
+        document.documentElement.dataset.theme = next;
+        document.body.dataset.theme = next;
+        try { localStorage.setItem(key, next); } catch (_) {}
+      };
+      try { applyTheme(localStorage.getItem(key) || "light"); } catch (_) { applyTheme("light"); }
+      document.addEventListener("click", (event) => {
+        const button = event.target.closest('[data-report-action="theme"]');
+        if (!button) return;
+        applyTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark");
+      });
+    })();
+  </script>
+<main class="notebooklm-report-shell">
+    <header aria-label="Quick navigation" class="reader-toolbar report-toolbar">
+      <div class="toolbar-group toolbar-navigation">
+        <a class="toolbar-btn" href="../ch08.html">Back to chapter</a>
+        <a class="toolbar-btn" href="../../../../feynman-reader/index.html">Reader</a>
+        <a class="toolbar-btn" href="../../index.html">Contents</a>
+      </div>
+      <a class="toolbar-title" href="../ch08.html#ch08" title="NotebookLM · Guide">NotebookLM · Guide</a>
+      <div class="toolbar-group toolbar-settings">
+        <button aria-label="Toggle theme" class="toolbar-btn icon-btn" data-report-action="theme" title="Toggle theme" type="button">◐</button>
+      </div>
+    </header>
+    <article class="notebooklm-report">
+<h1 id="study-guide-the-hamiltonian-matrix">Study Guide: The Hamiltonian
+Matrix</h1>
+<p>This study guide covers the mathematical foundations and physical
+applications of the Hamiltonian matrix in quantum mechanics, based on
+the principles of state vectors, time evolution, and the specific
+example of the ammonia molecule.</p>
+<hr />
+<h2 id="i.-key-concepts">I. Key Concepts</h2>
+<h3 id="the-vector-analogy">1. The Vector Analogy</h3>
+<p>Quantum mechanical states exhibit a mathematical resemblance to
+geometric vectors. * <strong>State Vectors:</strong> A state (e.g.,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>
+or
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>χ</mi><annotation encoding="application/x-tex">\chi</annotation></semantics></math>)
+corresponds to a vector. Just as a 3D vector can be represented as a
+linear combination of base unit vectors
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="bold-italic">𝒆</mi><mi>x</mi></msub><mo>,</mo><msub><mi mathvariant="bold-italic">𝒆</mi><mi>y</mi></msub><mo>,</mo><msub><mi mathvariant="bold-italic">𝒆</mi><mi>z</mi></msub></mrow><annotation encoding="application/x-tex">\mathbf{e}_x, \mathbf{e}_y, \mathbf{e}_z</annotation></semantics></math>),
+a quantum state can be described as a linear combination of a complete
+set of base states
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>i</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|i\rangle</annotation></semantics></math>.
+* <strong>Amplitudes as Dot Products:</strong> The amplitude to go from
+state
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>
+to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>χ</mi><annotation encoding="application/x-tex">\chi</annotation></semantics></math>,
+written as
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⟨</mo><mi>χ</mi><mo stretchy="false" form="prefix">|</mo><mi>ϕ</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">\langle\chi|\phi\rangle</annotation></semantics></math>,
+is analogous to the dot product of two vectors
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑩</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝑨</mi></mrow><annotation encoding="application/x-tex">\mathbf{B} \cdot \mathbf{A}</annotation></semantics></math>).
+* <strong>Orthogonality:</strong> Base states are orthogonal, meaning
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⟨</mo><mi>i</mi><mo stretchy="false" form="prefix">|</mo><mi>j</mi><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><msub><mi>δ</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\langle i|j\rangle = \delta_{ij}</annotation></semantics></math>
+(equal to 1 if
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mo>=</mo><mi>j</mi></mrow><annotation encoding="application/x-tex">i=j</annotation></semantics></math>
+and 0 otherwise), similar to the relationship between unit vectors in a
+coordinate system.</p>
+<h3 id="dirac-notation-bra-ket">2. Dirac Notation (Bra-Ket)</h3>
+<p>The notation proposed by Paul Dirac abstracts the components of
+quantum equations: * <strong>Ket
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>ϕ</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|\phi\rangle</annotation></semantics></math>):</strong>
+Represents the state vector itself. * <strong>Bra
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⟨</mo><mi>χ</mi><mo stretchy="false" form="prefix">|</mo></mrow><annotation encoding="application/x-tex">\langle\chi|</annotation></semantics></math>):</strong>
+Represents the “left side” of the amplitude calculation. * <strong>The
+“Great Law”:</strong> The identity
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mo>=</mo><msub><mo>∑</mo><mi>i</mi></msub><mo stretchy="false" form="prefix">|</mo><mi>i</mi><mo stretchy="false" form="postfix">⟩</mo><mo stretchy="false" form="prefix">⟨</mo><mi>i</mi><mo stretchy="false" form="prefix">|</mo></mrow><annotation encoding="application/x-tex">| = \sum_i |i\rangle\langle i|</annotation></semantics></math>
+signifies that any state can be resolved by summing the projections onto
+a complete set of base states.</p>
+<h3 id="operators-and-matrices">3. Operators and Matrices</h3>
+<ul>
+<li><strong>Operators:</strong> A symbol (like
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>)
+that operates on a state vector to produce a new state vector
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>ψ</mi><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><mi>A</mi><mo stretchy="false" form="prefix">|</mo><mi>ϕ</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|\psi\rangle = A|\phi\rangle</annotation></semantics></math>).</li>
+<li><strong>Matrix Elements:</strong> An operator is completely
+described by its matrix of amplitudes
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>=</mo><mo stretchy="false" form="prefix">⟨</mo><mi>i</mi><mo stretchy="false" form="prefix">|</mo><mi>A</mi><mo stretchy="false" form="prefix">|</mo><mi>j</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">A_{ij} = \langle i|A|j\rangle</annotation></semantics></math>.</li>
+<li><strong>The Hamiltonian
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><annotation encoding="application/x-tex">H_{ij}</annotation></semantics></math>):</strong>
+Also called the “energy matrix,” the Hamiltonian describes the physics
+of a system, including external influences like electric or magnetic
+fields. It is a Hermitian matrix, meaning
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>H</mi><mrow><mi>i</mi><mi>j</mi></mrow><mo>*</mo></msubsup><mo>=</mo><msub><mi>H</mi><mrow><mi>j</mi><mi>i</mi></mrow></msub></mrow><annotation encoding="application/x-tex">H_{ij}^* = H_{ji}</annotation></semantics></math>.</li>
+</ul>
+<h3 id="time-evolution">4. Time Evolution</h3>
+<p>The dynamics of quantum mechanics are determined by how states change
+over time. * <strong>The
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>U</mi><annotation encoding="application/x-tex">U</annotation></semantics></math>-Matrix:</strong>
+The operator
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>U</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>t</mi><mn>2</mn></msub><mo>,</mo><msub><mi>t</mi><mn>1</mn></msub><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">U(t_2, t_1)</annotation></semantics></math>
+describes the “waiting” period between two times. The amplitude to find
+a system in state
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>χ</mi><annotation encoding="application/x-tex">\chi</annotation></semantics></math>
+at
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>t</mi><mn>2</mn></msub><annotation encoding="application/x-tex">t_2</annotation></semantics></math>
+after starting in
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>
+at
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>t</mi><mn>1</mn></msub><annotation encoding="application/x-tex">t_1</annotation></semantics></math>
+is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⟨</mo><mi>χ</mi><mo stretchy="false" form="prefix">|</mo><mi>U</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>t</mi><mn>2</mn></msub><mo>,</mo><msub><mi>t</mi><mn>1</mn></msub><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">|</mo><mi>ϕ</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">\langle\chi|U(t_2, t_1)|\phi\rangle</annotation></semantics></math>.
+* <strong>The S-Matrix:</strong> In high-energy physics, the limit of
+the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>U</mi><annotation encoding="application/x-tex">U</annotation></semantics></math>-matrix
+as
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>t</mi><mn>1</mn></msub><mo>→</mo><mi>−</mi><mi>∞</mi></mrow><annotation encoding="application/x-tex">t_1 \to -\infty</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>t</mi><mn>2</mn></msub><mo>→</mo><mi>+</mi><mi>∞</mi></mrow><annotation encoding="application/x-tex">t_2 \to +\infty</annotation></semantics></math>
+is called the S-matrix. * <strong>The Schrödinger Equation for
+Amplitudes:</strong> For a small time interval
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">\Delta t</annotation></semantics></math>,
+the variation of amplitudes
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>C</mi><mi>i</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">C_i(t)</annotation></semantics></math>
+is governed by the Hamiltonian:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mi>ℏ</mi><mfrac><mrow><mi>d</mi><msub><mi>C</mi><mi>i</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>=</mo><munder><mo>∑</mo><mi>j</mi></munder><msub><mi>H</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><msub><mi>C</mi><mi>j</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">i\hbar \frac{d C_i(t)}{dt} = \sum_j H_{ij}(t)C_j(t)</annotation></semantics></math></p>
+<h3 id="the-two-state-system-ammonia">5. The Two-State System:
+Ammonia</h3>
+<p>The ammonia molecule
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><msub><mi>H</mi><mn>3</mn></msub></mrow><annotation encoding="application/x-tex">NH_3</annotation></semantics></math>)
+serves as a model for a two-state system. * <strong>Base
+States:</strong> State
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mn>1</mn><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|1\rangle</annotation></semantics></math>
+(nitrogen atom “up”) and State
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mn>2</mn><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|2\rangle</annotation></semantics></math>
+(nitrogen atom “down”). * <strong>Energy Splitting:</strong> Due to the
+“flip-flop” (the nitrogen atom penetrating the energy barrier of the
+hydrogen plane), the energy level
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>E</mi><mn>0</mn></msub><annotation encoding="application/x-tex">E_0</annotation></semantics></math>
+splits into two levels:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mn>0</mn></msub><mo>+</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">E_0 + A</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mn>0</mn></msub><mo>−</mo><mi>A</mi></mrow><annotation encoding="application/x-tex">E_0 - A</annotation></semantics></math>.
+* <strong>Probability Oscillation:</strong> If a molecule starts in
+state
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mn>1</mn><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|1\rangle</annotation></semantics></math>,
+the probability of finding it in state
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mn>2</mn><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|2\rangle</annotation></semantics></math>
+oscillates harmonically over time as the amplitude “sloshes” back and
+forth between the two base states.</p>
+<hr />
+<h2 id="ii.-short-answer-practice-questions">II. Short-Answer Practice
+Questions</h2>
+<ol type="1">
+<li><p><strong>How does the order of terms differ between a vector dot
+product and a quantum mechanical amplitude?</strong> In vector algebra,
+order does not matter
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="bold-italic">𝑨</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝑩</mi><mo>=</mo><mi mathvariant="bold-italic">𝑩</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝑨</mi></mrow><annotation encoding="application/x-tex">\mathbf{A} \cdot \mathbf{B} = \mathbf{B} \cdot \mathbf{A}</annotation></semantics></math>).
+In quantum mechanics, the order is critical because the amplitude
+involves complex numbers where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⟨</mo><mi>ϕ</mi><mo stretchy="false" form="prefix">|</mo><mi>χ</mi><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><mo stretchy="false" form="prefix">⟨</mo><mi>χ</mi><mo stretchy="false" form="prefix">|</mo><mi>ϕ</mi><msup><mo stretchy="false" form="postfix">⟩</mo><mo>*</mo></msup></mrow><annotation encoding="application/x-tex">\langle\phi|\chi\rangle = \langle\chi|\phi\rangle^*</annotation></semantics></math>.</p></li>
+<li><p><strong>What is the physical meaning of the “Great Law”
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mo>=</mo><msub><mo>∑</mo><mi>i</mi></msub><mo stretchy="false" form="prefix">|</mo><mi>i</mi><mo stretchy="false" form="postfix">⟩</mo><mo stretchy="false" form="prefix">⟨</mo><mi>i</mi><mo stretchy="false" form="prefix">|</mo></mrow><annotation encoding="application/x-tex">| = \sum_i |i\rangle\langle i|</annotation></semantics></math>)?</strong>
+It indicates that any amplitude between two states can be found by
+summing the amplitudes to go through a complete set of intermediate base
+states.</p></li>
+<li><p><strong>What determines the number of base states required for a
+representation?</strong> The complexity of the system and the level of
+approximation. A single electron requires momentum and spin; a hydrogen
+atom requires describing its internal parts (proton and electron) unless
+it is in a low-energy state where internal excitation can be
+ignored.</p></li>
+<li><p><strong>Define an “operator” in the context of Chapter
+8.</strong> An operator is a mathematical entity that acts on a state
+vector to produce a new state vector. It is not a number or a vector
+itself but is described by a matrix of amplitudes.</p></li>
+<li><p><strong>Why is the Hamiltonian matrix
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><annotation encoding="application/x-tex">H_{ij}</annotation></semantics></math>
+also referred to as the “energy matrix”?</strong> Because in a simple
+system with one base state, the solution to the time-dependent equation
+shows that the state varies with a frequency proportional to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>11</mn></msub><annotation encoding="application/x-tex">H_{11}</annotation></semantics></math>,
+which corresponds to a definite energy
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>=</mo><msub><mi>H</mi><mn>11</mn></msub></mrow><annotation encoding="application/x-tex">E = H_{11}</annotation></semantics></math>.</p></li>
+<li><p><strong>In the ammonia molecule, why are
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>11</mn></msub><annotation encoding="application/x-tex">H_{11}</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mn>22</mn></msub><annotation encoding="application/x-tex">H_{22}</annotation></semantics></math>
+assumed to be equal?</strong> Due to symmetry; the state with the
+nitrogen “up” is physically equivalent to the state with the nitrogen
+“down.”</p></li>
+</ol>
+<hr />
+<h2 id="iii.-common-misconceptions">III. Common Misconceptions</h2>
+<ul>
+<li><strong>Misconception: Base states must be physical
+“parts.”</strong>
+<ul>
+<li><em>Correction:</em> Base states are mathematical representations.
+For example, a single electron doesn’t have “parts,” but its base states
+involve combinations of its possible momenta and spin directions.</li>
+</ul></li>
+<li><strong>Misconception: A system stays in its initial state if no
+external force is applied.</strong>
+<ul>
+<li><em>Correction:</em> Even without external changes, internal
+“coupling” (like the nitrogen atom flipping in ammonia) causes the state
+amplitudes to change over time.</li>
+</ul></li>
+<li><strong>Misconception: The Hamiltonian is only about energy
+levels.</strong>
+<ul>
+<li><em>Correction:</em> While it determines energy levels, the
+Hamiltonian matrix
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><annotation encoding="application/x-tex">H_{ij}</annotation></semantics></math>
+contains the complete “physics” of the system, including how different
+base states transition into one another.</li>
+</ul></li>
+</ul>
+<hr />
+<h2 id="iv.-essay-prompts-for-deeper-exploration">IV. Essay Prompts for
+Deeper Exploration</h2>
+<ol type="1">
+<li><strong>The Evolution of Representations:</strong> Discuss the
+challenges described in the text regarding the “correct” representation
+of the world. How does the discovery of internal structures (like those
+in a proton or potentially an electron) change the base states used in
+quantum mechanics?</li>
+<li><strong>Approximation in Physics:</strong> Analyze the conditions
+under which a complex system (like a hydrogen atom) can be treated as a
+single-state or low-state system. What is the relationship between
+kinetic energy, internal excitation, and the choice of base states?</li>
+<li><strong>The Pendulum Analogy:</strong> Explain the mathematical
+similarities between the ammonia molecule’s two-state system and two
+coupled classical pendulums. Why is this analogy considered “no deeper
+than the principle that the same equations have the same
+solutions”?</li>
+</ol>
+<hr />
+<h2 id="v.-glossary-of-important-terms">V. Glossary of Important
+Terms</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Term</th>
+<th style="text-align: left;">Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Bra-Ket</strong></td>
+<td style="text-align: left;">A notation system where a state is
+represented by a “ket”
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">| \rangle</annotation></semantics></math>
+and its conjugate by a “bra”
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⟨</mo><mo stretchy="false" form="prefix">|</mo></mrow><annotation encoding="application/x-tex">\langle |</annotation></semantics></math>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Hamiltonian
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>H</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><annotation encoding="application/x-tex">H_{ij}</annotation></semantics></math>)</strong></td>
+<td style="text-align: left;">A matrix of coefficients that describes
+the physical laws of a system and how its state changes over time.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>S-Matrix</strong></td>
+<td style="text-align: left;">The limit of the time-evolution operator
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>U</mi><annotation encoding="application/x-tex">U</annotation></semantics></math>
+as time ranges from negative infinity to positive infinity.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>State Vector</strong></td>
+<td style="text-align: left;">A mathematical representation of a quantum
+state, often expressed as a linear combination of base states.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Stationary State</strong></td>
+<td style="text-align: left;">A state with a definite energy where the
+amplitude varies at a single frequency.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Two-State System</strong></td>
+<td style="text-align: left;">A system that can be described using only
+two base states (e.g., the “up” and “down” positions of the nitrogen in
+ammonia).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Orthogonal</strong></td>
+<td style="text-align: left;">A condition where the amplitude of one
+base state in another is zero
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⟨</mo><mi>i</mi><mo stretchy="false" form="prefix">|</mo><mi>j</mi><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\langle i|j\rangle = 0</annotation></semantics></math>
+for
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mo>≠</mo><mi>j</mi></mrow><annotation encoding="application/x-tex">i \neq j</annotation></semantics></math>).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Operator</strong></td>
+<td style="text-align: left;">A mathematical entity that transforms one
+state vector into another
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><mo stretchy="false" form="prefix">|</mo><mi>ϕ</mi><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><mo stretchy="false" form="prefix">|</mo><mi>ψ</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">A|\phi\rangle = |\psi\rangle</annotation></semantics></math>).</td>
+</tr>
+</tbody>
+</table>
+  </article>
+</main>
+</body>
+</html>

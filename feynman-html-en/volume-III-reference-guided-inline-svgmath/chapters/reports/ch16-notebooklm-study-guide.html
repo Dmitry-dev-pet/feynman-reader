@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Study Guide: The Dependence of Amplitudes on Position - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="en">
+  <script>
+    (() => {
+      const key = "flp-reader-theme";
+      const applyTheme = (theme) => {
+        const next = theme === "dark" ? "dark" : "light";
+        document.documentElement.dataset.theme = next;
+        document.body.dataset.theme = next;
+        try { localStorage.setItem(key, next); } catch (_) {}
+      };
+      try { applyTheme(localStorage.getItem(key) || "light"); } catch (_) { applyTheme("light"); }
+      document.addEventListener("click", (event) => {
+        const button = event.target.closest('[data-report-action="theme"]');
+        if (!button) return;
+        applyTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark");
+      });
+    })();
+  </script>
+<main class="notebooklm-report-shell">
+    <header aria-label="Quick navigation" class="reader-toolbar report-toolbar">
+      <div class="toolbar-group toolbar-navigation">
+        <a class="toolbar-btn" href="../ch16.html">Back to chapter</a>
+        <a class="toolbar-btn" href="../../../../feynman-reader/index.html">Reader</a>
+        <a class="toolbar-btn" href="../../index.html">Contents</a>
+      </div>
+      <a class="toolbar-title" href="../ch16.html#ch16" title="NotebookLM · Guide">NotebookLM · Guide</a>
+      <div class="toolbar-group toolbar-settings">
+        <button aria-label="Toggle theme" class="toolbar-btn icon-btn" data-report-action="theme" title="Toggle theme" type="button">◐</button>
+      </div>
+    </header>
+    <article class="notebooklm-report">
+<h1 id="study-guide-the-dependence-of-amplitudes-on-position">Study
+Guide: The Dependence of Amplitudes on Position</h1>
+<p>This study guide explores the transition from discrete quantum states
+to the continuous description of particle motion in space. It covers the
+derivation of the Schrödinger equation, the nature of the wave function,
+the Heisenberg uncertainty principle, and the origin of quantized energy
+levels.</p>
+<hr />
+<h2 id="i.-key-concepts">I. Key Concepts</h2>
+<h3 id="from-discrete-lattices-to-continuous-space">1. From Discrete
+Lattices to Continuous Space</h3>
+<p>In earlier models, quantum systems were described using a finite set
+of base states (e.g., an electron on a specific atom in a lattice). By
+letting the lattice spacing
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>
+go to zero while keeping the product
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msup><mi>b</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">Ab^2</annotation></semantics></math>
+constant (where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+is the jump amplitude), the discrete Hamiltonian equations transition
+into a continuous differential equation. This allows for the description
+of an electron’s “amplitude density” at any point
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>
+along a line.</p>
+<h3 id="the-wave-function-and-probability-density">2. The Wave Function
+and Probability Density</h3>
+<p>The function
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ψ</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\psi(x)</annotation></semantics></math>,
+known as the <strong>wave function</strong>, represents the probability
+amplitude to find a particle at coordinate
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>.
+* <strong>Amplitude vs. Probability:</strong> The probability of finding
+a particle at an exact mathematical point is zero. Instead, we use
+<strong>probability density</strong>. * <strong>Probability
+Density:</strong> The probability of finding a particle in a small
+interval
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">\Delta x</annotation></semantics></math>
+is given by
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>ψ</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><msup><mo stretchy="false" form="prefix">|</mo><mn>2</mn></msup><mi mathvariant="normal">Δ</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">|\psi(x)|^2 \Delta x</annotation></semantics></math>.
+* <strong>Normalization:</strong> For a particle to exist, the integral
+of its probability density over all space must equal 1:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mo>∫</mo><mrow><mi>−</mi><mi>∞</mi></mrow><mrow><mi>+</mi><mi>∞</mi></mrow></msubsup><mo stretchy="false" form="prefix">|</mo><mi>ψ</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><msup><mo stretchy="false" form="prefix">|</mo><mn>2</mn></msup><mi>d</mi><mi>x</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\int_{-\infty}^{+\infty} |\psi(x)|^2 dx = 1</annotation></semantics></math>.</p>
+<h3 id="the-schrödinger-equation">3. The Schrödinger Equation</h3>
+<p>The Schrödinger equation is the fundamental law describing how the
+wave function evolves in time. For a particle of mass
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math>
+in a potential
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">V(x)</annotation></semantics></math>,
+the one-dimensional equation is:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mi>ℏ</mi><mfrac><mrow><mi>∂</mi><mi>ψ</mi></mrow><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mi>−</mi><mfrac><msup><mi>ℏ</mi><mn>2</mn></msup><mrow><mn>2</mn><mi>m</mi></mrow></mfrac><mfrac><mrow><msup><mi>∂</mi><mn>2</mn></msup><mi>ψ</mi></mrow><mrow><mi>∂</mi><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac><mo>+</mo><mi>V</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mi>ψ</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">i\hbar \frac{\partial \psi}{\partial t} = -\frac{\hbar^2}{2m} \frac{\partial^2 \psi}{\partial x^2} + V(x)\psi(x)</annotation></semantics></math>
+* <strong>Time Evolution:</strong> The time rate of change of the
+amplitude at
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>
+depends on the second derivative of the amplitude with respect to
+position (diffusion-like behavior) and the local potential. *
+<strong>Imaginary Coefficient:</strong> The presence of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math>
+ensures that the solutions are complex waves rather than simple
+exponential decay/diffusion.</p>
+<h3 id="states-of-definite-momentum">4. States of Definite Momentum</h3>
+<p>A state with a definite momentum
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math>
+has a wave function that varies as
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>i</mi><mi>p</mi><mi>x</mi><mi>/</mi><mi>ℏ</mi></mrow></msup><annotation encoding="application/x-tex">e^{ipx/\hbar}</annotation></semantics></math>.
+There is a reciprocal relationship between position
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(x)</annotation></semantics></math>
+and momentum
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>p</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(p)</annotation></semantics></math>
+representations: * The amplitude to find a particle with momentum
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math>
+is the Fourier transform of its position wave function
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ψ</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\psi(x)</annotation></semantics></math>.
+* <strong>Heisenberg Uncertainty Principle:</strong> If a particle is
+localized in space (small
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">\Delta x</annotation></semantics></math>),
+its momentum distribution must be spread out (large
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>p</mi></mrow><annotation encoding="application/x-tex">\Delta p</annotation></semantics></math>).
+Quantitatively, the product of the root-mean-square widths satisfies:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>p</mi><mo>⋅</mo><mi mathvariant="normal">Δ</mi><mi>x</mi><mo>≥</mo><mfrac><mi>ℏ</mi><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">\Delta p \cdot \Delta x \geq \frac{\hbar}{2}</annotation></semantics></math></p>
+<h3 id="the-dirac-delta-function">5. The Dirac Delta Function</h3>
+<p>To handle continuous base states, the discrete Kronecker delta
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>δ</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><annotation encoding="application/x-tex">\delta_{ij}</annotation></semantics></math>)
+is replaced by the <strong>Dirac Delta function</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>δ</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><msup><mi>x</mi><mo>′</mo></msup><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\delta(x-x&#39;)</annotation></semantics></math>.
+* <strong>Definition:</strong> It is zero everywhere except at
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>=</mo><msup><mi>x</mi><mo>′</mo></msup></mrow><annotation encoding="application/x-tex">x=x&#39;</annotation></semantics></math>,
+where it is “infinitely” high such that its total area is 1. *
+<strong>Sifting Property:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∫</mo><mi>δ</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>−</mo><msup><mi>x</mi><mo>′</mo></msup><mo stretchy="false" form="postfix">)</mo><mi>ψ</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mi>d</mi><mi>x</mi><mo>=</mo><mi>ψ</mi><mo stretchy="false" form="prefix">(</mo><msup><mi>x</mi><mo>′</mo></msup><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\int \delta(x-x&#39;)\psi(x) dx = \psi(x&#39;)</annotation></semantics></math>.
+This function allows for the mathematical projection of states in a
+continuum.</p>
+<h3 id="quantized-energy-levels-in-potential-wells">6. Quantized Energy
+Levels in Potential Wells</h3>
+<p>When a particle is “bound” (confined) by a potential well
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">V(x)</annotation></semantics></math>,
+it can only exist in states with specific, discrete energy levels. *
+<strong>Curvature of the Wave Function:</strong> The equation
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mrow><msup><mi>d</mi><mn>2</mn></msup><mi>a</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mi>d</mi><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac><mo>=</mo><mfrac><mrow><mn>2</mn><mi>m</mi></mrow><msup><mi>ℏ</mi><mn>2</mn></msup></mfrac><mo stretchy="false" form="prefix">[</mo><mi>V</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mi>E</mi><mo stretchy="false" form="postfix">]</mo><mi>a</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\frac{d^2a(x)}{dx^2} = \frac{2m}{\hbar^2} [V(x)-E]a(x)</annotation></semantics></math>
+determines the shape: * If
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>&gt;</mo><mi>E</mi></mrow><annotation encoding="application/x-tex">V &gt; E</annotation></semantics></math>,
+the function is <strong>concave away</strong> from the x-axis
+(exponential-like). * If
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>&lt;</mo><mi>E</mi></mrow><annotation encoding="application/x-tex">V &lt; E</annotation></semantics></math>,
+the function is <strong>concave toward</strong> the x-axis
+(oscillatory). * <strong>Boundary Conditions:</strong> For a state to be
+physical, the wave function must approach zero at infinity. This
+condition is only met for specific values of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math>,
+resulting in a discrete energy spectrum.</p>
+<hr />
+<h2 id="ii.-common-misconceptions">II. Common Misconceptions</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Misconception</th>
+<th style="text-align: left;">Reality</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>The wave function is a physical
+wave in 3D space.</strong></td>
+<td style="text-align: left;">For a single particle, it looks like a 3D
+wave. However, for
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>N</mi><annotation encoding="application/x-tex">N</annotation></semantics></math>
+particles, the wave function exists in
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mi>N</mi></mrow><annotation encoding="application/x-tex">3N</annotation></semantics></math>
+dimensions. It is a function of the coordinates of all particles
+simultaneously.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Probability at a point
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>
+is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>ψ</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><msup><mo stretchy="false" form="prefix">|</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">|\psi(x)|^2</annotation></semantics></math>.</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>ψ</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><msup><mo stretchy="false" form="prefix">|</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">|\psi(x)|^2</annotation></semantics></math>
+is a probability <strong>density</strong>. The probability of being at
+an exact point is zero; it must be calculated over an interval
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">dx</annotation></semantics></math>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Particles in a system move
+independently.</strong></td>
+<td style="text-align: left;">In a multi-particle system, particles are
+generally entangled. You cannot write a separate wave function for one
+particle without considering the coordinates of the others if they
+interact.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>The Schrödinger equation is
+derived from classical mechanics.</strong></td>
+<td style="text-align: left;">The equation cannot be derived from
+classical laws. It was an intuitive discovery by Schrödinger that
+correctly describes the experimental reality of the atomic world.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="iii.-short-answer-self-check-questions">III. Short-Answer
+Self-Check Questions</h2>
+<ol type="1">
+<li><strong>What physical constant must be held fixed when taking the
+limit of a lattice spacing
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>
+to zero to arrive at the Schrödinger equation?</strong>
+<ul>
+<li><em>Answer:</em> The product
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>A</mi><msup><mi>b</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">Ab^2</annotation></semantics></math>
+must be kept constant, which relates to the effective mass:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>m</mi><mtext mathvariant="normal">eff</mtext></msub><mo>=</mo><msup><mi>ℏ</mi><mn>2</mn></msup><mi>/</mi><mn>2</mn><mi>A</mi><msup><mi>b</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">m_{\text{eff}} = \hbar^2 / 2Ab^2</annotation></semantics></math>.</li>
+</ul></li>
+<li><strong>How does the probability density change if the wave function
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ψ</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\psi(x)</annotation></semantics></math>
+is multiplied by a global phase factor
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>i</mi><mi>δ</mi></mrow></msup><annotation encoding="application/x-tex">e^{i\delta}</annotation></semantics></math>?</strong>
+<ul>
+<li><em>Answer:</em> It does not change. The probability density is the
+absolute square
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>ψ</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><msup><mo stretchy="false" form="prefix">|</mo><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">|\psi(x)|^2</annotation></semantics></math>,
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><msup><mi>e</mi><mrow><mi>i</mi><mi>δ</mi></mrow></msup><msup><mo stretchy="false" form="prefix">|</mo><mn>2</mn></msup><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">|e^{i\delta}|^2 = 1</annotation></semantics></math>.</li>
+</ul></li>
+<li><strong>In a region where the potential
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">V(x)</annotation></semantics></math>
+is greater than the total energy
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math>,
+what is the characteristic shape of the wave function?</strong>
+<ul>
+<li><em>Answer:</em> The wave function is concave away from the x-axis,
+behaving like a positive or negative exponential
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>±</mi><mi>x</mi></mrow></msup><annotation encoding="application/x-tex">e^{\pm x}</annotation></semantics></math>).</li>
+</ul></li>
+<li><strong>Why is the Dirac Delta function not considered a “function”
+in the traditional mathematical sense?</strong>
+<ul>
+<li><em>Answer:</em> Because it is defined to be zero everywhere except
+at one point but still maintains a finite integral of 1, which no
+ordinary function can do.</li>
+</ul></li>
+<li><strong>What happens to the discrete energy levels if the energy
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math>
+of a particle exceeds the top of the potential well?</strong>
+<ul>
+<li><em>Answer:</em> The energy levels become continuous; any energy is
+permitted, corresponding to the scattering of free particles.</li>
+</ul></li>
+</ol>
+<hr />
+<h2 id="iv.-essay-prompts-for-deeper-exploration">IV. Essay Prompts for
+Deeper Exploration</h2>
+<ol type="1">
+<li><strong>The Transition from Discrete to Continuous
+Representations:</strong> Explain why Feynman argues that starting with
+two-state systems (like the ammonia molecule) is a more effective way to
+learn quantum mechanics than starting with the Schrödinger equation. How
+does the “amplitude density” concept bridge these two approaches?</li>
+<li><strong>The Geometry of Bound States:</strong> Describe the
+graphical method of finding valid energy states for a potential well.
+Explain why the requirement that the wave function
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ψ</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>→</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\psi(x) \to 0</annotation></semantics></math>
+as
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>→</mo><mi>±</mi><mi>∞</mi></mrow><annotation encoding="application/x-tex">x \to \pm\infty</annotation></semantics></math>
+leads to the quantization of energy.</li>
+<li><strong>The Multi-Particle Wave Function:</strong> Discuss the
+implications of the Schrödinger equation for a system of two interacting
+particles. Why does this representation make it impossible to describe
+the system as two independent waves in 3D space?</li>
+</ol>
+<hr />
+<h2 id="v.-glossary-of-important-terms">V. Glossary of Important
+Terms</h2>
+<ul>
+<li><strong>Amplitude Density:</strong> The value of the wave function
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ψ</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\psi(x)</annotation></semantics></math>
+at a point, representing the density of the probability amplitude in a
+continuous space.</li>
+<li><strong>Bound State:</strong> A condition where a particle’s energy
+is lower than the potential at infinity, confining the particle to a
+specific region and resulting in discrete energy levels.</li>
+<li><strong>Dirac Delta Function
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>δ</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\delta(x)</annotation></semantics></math>):</strong>
+A mathematical construct used to normalize continuous base states; it
+“picks out” the value of a function at a specific point during
+integration.</li>
+<li><strong>Hamiltonian Operator
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>H</mi><mo accent="true">̂</mo></mover><annotation encoding="application/x-tex">\hat{H}</annotation></semantics></math>):</strong>
+The operator representing the total energy of the system; in the
+Schrödinger equation, it includes the kinetic energy
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mfrac><msup><mi>ℏ</mi><mn>2</mn></msup><mrow><mn>2</mn><mi>m</mi></mrow></mfrac><msup><mi>∇</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">-\frac{\hbar^2}{2m} \nabla^2</annotation></semantics></math>)
+and potential energy
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math>).</li>
+<li><strong>Heisenberg Uncertainty Principle:</strong> The fundamental
+limit on the precision with which certain pairs of physical properties,
+such as position and momentum, can be known simultaneously.</li>
+<li><strong>Normalization:</strong> The process of scaling a wave
+function so that the total probability of finding the particle somewhere
+in space is exactly 1.</li>
+<li><strong>Potential Well:</strong> A region in space where the
+potential energy
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">V(x)</annotation></semantics></math>
+is lower than the surrounding areas, potentially trapping a
+particle.</li>
+<li><strong>Wave Function
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ψ</mi><annotation encoding="application/x-tex">\psi</annotation></semantics></math>):</strong>
+The complex-valued function of position and time that contains all the
+information about the quantum state of a system.</li>
+</ul>
+  </article>
+</main>
+</body>
+</html>

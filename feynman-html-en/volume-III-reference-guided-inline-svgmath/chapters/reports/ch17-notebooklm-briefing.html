@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Briefing: Symmetry and Conservation Laws - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="en">
+  <script>
+    (() => {
+      const key = "flp-reader-theme";
+      const applyTheme = (theme) => {
+        const next = theme === "dark" ? "dark" : "light";
+        document.documentElement.dataset.theme = next;
+        document.body.dataset.theme = next;
+        try { localStorage.setItem(key, next); } catch (_) {}
+      };
+      try { applyTheme(localStorage.getItem(key) || "light"); } catch (_) { applyTheme("light"); }
+      document.addEventListener("click", (event) => {
+        const button = event.target.closest('[data-report-action="theme"]');
+        if (!button) return;
+        applyTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark");
+      });
+    })();
+  </script>
+<main class="notebooklm-report-shell">
+    <header aria-label="Quick navigation" class="reader-toolbar report-toolbar">
+      <div class="toolbar-group toolbar-navigation">
+        <a class="toolbar-btn" href="../ch17.html">Back to chapter</a>
+        <a class="toolbar-btn" href="../../../../feynman-reader/index.html">Reader</a>
+        <a class="toolbar-btn" href="../../index.html">Contents</a>
+      </div>
+      <a class="toolbar-title" href="../ch17.html#ch17" title="NotebookLM · Overview">NotebookLM · Overview</a>
+      <div class="toolbar-group toolbar-settings">
+        <button aria-label="Toggle theme" class="toolbar-btn icon-btn" data-report-action="theme" title="Toggle theme" type="button">◐</button>
+      </div>
+    </header>
+    <article class="notebooklm-report">
+<h1 id="briefing-symmetry-and-conservation-laws">Briefing: Symmetry and
+Conservation Laws</h1>
+<h2 id="executive-summary">Executive Summary</h2>
+<p>In quantum mechanics, conservation laws are deeply rooted in the
+symmetries of physical systems and the principle of superposition. While
+classical physics often treats conservation laws as starting points,
+quantum mechanics derives them from the requirement that certain
+operations—such as translations in space, rotations, or
+reflections—commute with the Hamiltonian of the system. This document
+analyzes the relationship between symmetry operations and conserved
+quantities (momentum, energy, angular momentum, and parity), utilizing
+specific case studies like the hydrogen molecular ion and the
+disintegration of the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi mathvariant="normal">Λ</mi><mn>0</mn></msup><annotation encoding="application/x-tex">\Lambda^0</annotation></semantics></math>
+particle to illustrate these fundamental principles.</p>
+<h2 id="fundamental-principles-of-symmetry">Fundamental Principles of
+Symmetry</h2>
+<h3 id="the-symmetry-operator">The Symmetry Operator</h3>
+<p>A physical system is considered symmetric with respect to an
+operation
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>Q</mi><mo accent="true">̂</mo></mover><annotation encoding="application/x-tex">\hat{Q}</annotation></semantics></math>
+if that operation leaves the basic physical situation unchanged.
+Mathematically, this is expressed through the commutation of the
+operator
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>Q</mi><mo accent="true">̂</mo></mover><annotation encoding="application/x-tex">\hat{Q}</annotation></semantics></math>
+with the time-development operator
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>U</mi><mo accent="true">̂</mo></mover><annotation encoding="application/x-tex">\hat{U}</annotation></semantics></math>.</p>
+<p>If the physics is symmetrical under
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>Q</mi><mo accent="true">̂</mo></mover><annotation encoding="application/x-tex">\hat{Q}</annotation></semantics></math>,
+then:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>Q</mi><mo accent="true">̂</mo></mover><mover><mi>U</mi><mo accent="true">̂</mo></mover><mo>=</mo><mover><mi>U</mi><mo accent="true">̂</mo></mover><mover><mi>Q</mi><mo accent="true">̂</mo></mover></mrow><annotation encoding="application/x-tex">\hat{Q}\hat{U} = \hat{U}\hat{Q}</annotation></semantics></math></p>
+<p>For infinitesimal times, this leads to the condition that the
+symmetry operator must commute with the Hamiltonian
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>H</mi><mo accent="true">̂</mo></mover><annotation encoding="application/x-tex">\hat{H}</annotation></semantics></math>):
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>Q</mi><mo accent="true">̂</mo></mover><mover><mi>H</mi><mo accent="true">̂</mo></mover><mo>=</mo><mover><mi>H</mi><mo accent="true">̂</mo></mover><mover><mi>Q</mi><mo accent="true">̂</mo></mover></mrow><annotation encoding="application/x-tex">\hat{Q}\hat{H} = \hat{H}\hat{Q}</annotation></semantics></math></p>
+<h3 id="symmetry-and-phase-factors">Symmetry and Phase Factors</h3>
+<p>If a state
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><msub><mi>ψ</mi><mn>0</mn></msub><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|\psi_0\rangle</annotation></semantics></math>
+is an eigenstate of a symmetry operator
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>Q</mi><mo accent="true">̂</mo></mover><annotation encoding="application/x-tex">\hat{Q}</annotation></semantics></math>,
+such that
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>Q</mi><mo accent="true">̂</mo></mover><mo stretchy="false" form="prefix">|</mo><msub><mi>ψ</mi><mn>0</mn></msub><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><msup><mi>e</mi><mrow><mi>i</mi><mi>δ</mi></mrow></msup><mo stretchy="false" form="prefix">|</mo><msub><mi>ψ</mi><mn>0</mn></msub><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">\hat{Q}|\psi_0\rangle = e^{i\delta}|\psi_0\rangle</annotation></semantics></math>,
+this property is conserved over time. If the Hamiltonian is symmetrical
+under
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>Q</mi><mo accent="true">̂</mo></mover><annotation encoding="application/x-tex">\hat{Q}</annotation></semantics></math>,
+the state will maintain the same symmetry character (the same phase
+factor
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>i</mi><mi>δ</mi></mrow></msup><annotation encoding="application/x-tex">e^{i\delta}</annotation></semantics></math>)
+for all times. This is the bedrock of all quantum mechanical
+conservation laws.</p>
+<h2 id="analysis-of-conserved-quantities">Analysis of Conserved
+Quantities</h2>
+<p>The following table summarizes the relationship between physical
+symmetries and their corresponding conserved quantities:</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Symmetry Operation</th>
+<th style="text-align: left;">Physical Transformation</th>
+<th style="text-align: left;">Conserved Quantity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Displacement in Time</strong></td>
+<td style="text-align: left;">Delaying an experiment by time
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>τ</mi><annotation encoding="application/x-tex">\tau</annotation></semantics></math></td>
+<td style="text-align: left;">Energy
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ω</mi><mi>ℏ</mi></mrow><annotation encoding="application/x-tex">\omega\hbar</annotation></semantics></math>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Displacement in
+Space</strong></td>
+<td style="text-align: left;">Moving the system by distance
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math></td>
+<td style="text-align: left;">Momentum
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>k</mi><mi>ℏ</mi></mrow><annotation encoding="application/x-tex">k\hbar</annotation></semantics></math>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Rotation</strong></td>
+<td style="text-align: left;">Turning the system by angle
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math></td>
+<td style="text-align: left;">Angular Momentum
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mi>ℏ</mi></mrow><annotation encoding="application/x-tex">m\hbar</annotation></semantics></math>)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Inversion (Parity)</strong></td>
+<td style="text-align: left;">Projecting coordinates through the
+origin</td>
+<td style="text-align: left;">Parity (Even/Odd)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Electron Interchange</strong></td>
+<td style="text-align: left;">Swapping two identical electrons</td>
+<td style="text-align: left;">(Unspecified name)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="parity-and-inversion">Parity and Inversion</h3>
+<p>The inversion operator
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>P</mi><mo accent="true">̂</mo></mover><annotation encoding="application/x-tex">\hat{P}</annotation></semantics></math>
+(or parity operator) moves every point at
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(x, y, z)</annotation></semantics></math>
+to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mi>x</mi><mo>,</mo><mi>−</mi><mi>y</mi><mo>,</mo><mi>−</mi><mi>z</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(-x, -y, -z)</annotation></semantics></math>.
+Applying this operation twice returns the system to its original state,
+meaning
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mover><mi>P</mi><mo accent="true">̂</mo></mover><mn>2</mn></msup><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\hat{P}^2 = 1</annotation></semantics></math>.
+Consequently, the eigenvalues for parity are: * <strong>Even
+Parity:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>P</mi><mo accent="true">̂</mo></mover><mo stretchy="false" form="prefix">|</mo><msub><mi>ψ</mi><mn>0</mn></msub><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><mi>+</mi><mo stretchy="false" form="prefix">|</mo><msub><mi>ψ</mi><mn>0</mn></msub><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">\hat{P}|\psi_0\rangle = +|\psi_0\rangle</annotation></semantics></math>
+* <strong>Odd Parity:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>P</mi><mo accent="true">̂</mo></mover><mo stretchy="false" form="prefix">|</mo><msub><mi>ψ</mi><mn>0</mn></msub><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><mi>−</mi><mo stretchy="false" form="prefix">|</mo><msub><mi>ψ</mi><mn>0</mn></msub><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">\hat{P}|\psi_0\rangle = -|\psi_0\rangle</annotation></semantics></math></p>
+<p>While parity is conserved in electromagnetism, gravity, and strong
+interactions, it is <strong>not</strong> conserved in weak interactions
+(such as
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>β</mi><annotation encoding="application/x-tex">\beta</annotation></semantics></math>-decay).</p>
+<h3 id="angular-momentum-and-photons">Angular Momentum and Photons</h3>
+<p>For a state with definite angular momentum
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mi>ℏ</mi></mrow><annotation encoding="application/x-tex">m\hbar</annotation></semantics></math>
+about the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>z</mi><annotation encoding="application/x-tex">z</annotation></semantics></math>-axis,
+a rotation
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mover><mi>R</mi><mo accent="true">̂</mo></mover><mi>z</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>ϕ</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\hat{R}_z(\phi)</annotation></semantics></math>
+results in:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mover><mi>R</mi><mo accent="true">̂</mo></mover><mi>z</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>ϕ</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">|</mo><msub><mi>ψ</mi><mn>0</mn></msub><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><msup><mi>e</mi><mrow><mi>i</mi><mi>m</mi><mi>ϕ</mi></mrow></msup><mo stretchy="false" form="prefix">|</mo><msub><mi>ψ</mi><mn>0</mn></msub><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">\hat{R}_z(\phi)|\psi_0\rangle = e^{im\phi}|\psi_0\rangle</annotation></semantics></math></p>
+<p><strong>Circularly Polarized Light:</strong> * Right Circularly
+Polarized (RHC) photons carry
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>+</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">+1</annotation></semantics></math>
+unit of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ℏ</mi><annotation encoding="application/x-tex">\hbar</annotation></semantics></math>.
+* Left Circularly Polarized (LHC) photons carry
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">-1</annotation></semantics></math>
+unit of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ℏ</mi><annotation encoding="application/x-tex">\hbar</annotation></semantics></math>.
+* Classical light also demonstrates this; a circularly polarized wave
+driving an electron in a circle performs work
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mi>W</mi><mi>/</mi><mi>d</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">dW/dt</annotation></semantics></math>)
+and exerts torque
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><msub><mi>J</mi><mi>z</mi></msub><mi>/</mi><mi>d</mi><mi>t</mi></mrow><annotation encoding="application/x-tex">dJ_z/dt</annotation></semantics></math>)
+such that
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><msub><mi>J</mi><mi>z</mi></msub><mi>/</mi><mi>d</mi><mi>W</mi><mo>=</mo><mn>1</mn><mi>/</mi><mi>ω</mi></mrow><annotation encoding="application/x-tex">dJ_z/dW = 1/\omega</annotation></semantics></math>.</p>
+<p><strong>Spin-One Constraints:</strong> While a general spin-one
+particle has three states
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>=</mo><mi>+</mi><mn>1</mn><mo>,</mo><mn>0</mn><mo>,</mo><mi>−</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">m = +1, 0, -1</annotation></semantics></math>),
+zero-mass particles like photons have only two states
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>=</mo><mi>+</mi><mi>j</mi></mrow><annotation encoding="application/x-tex">m = +j</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mi>j</mi></mrow><annotation encoding="application/x-tex">-j</annotation></semantics></math>
+along the direction of motion). They lack the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">m=0</annotation></semantics></math>
+state because they cannot be at rest.</p>
+<h2 id="case-study-disintegration-of-the-lambda0-particle">Case Study:
+Disintegration of the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi mathvariant="normal">Λ</mi><mn>0</mn></msup><annotation encoding="application/x-tex">\Lambda^0</annotation></semantics></math>
+Particle</h2>
+<p>The decay
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi mathvariant="normal">Λ</mi><mn>0</mn></msup><mo>→</mo><mi>p</mi><mo>+</mo><msup><mi>π</mi><mo>−</mo></msup></mrow><annotation encoding="application/x-tex">\Lambda^0 \to p + \pi^-</annotation></semantics></math>
+provides a practical application of angular momentum conservation and a
+demonstration of parity violation.</p>
+<h3 id="angular-distribution-analysis">Angular Distribution
+Analysis</h3>
+<p>Assume a
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi mathvariant="normal">Λ</mi><mn>0</mn></msup><annotation encoding="application/x-tex">\Lambda^0</annotation></semantics></math>
+is completely polarized (spin “up”). When it decays, the conservation of
+angular momentum requires specific spin states for the resulting proton:
+1. If the proton is emitted along the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>+</mi><mi>z</mi></mrow><annotation encoding="application/x-tex">+z</annotation></semantics></math>-axis,
+it must have spin “up” to match the initial
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi mathvariant="normal">Λ</mi><mn>0</mn></msup><annotation encoding="application/x-tex">\Lambda^0</annotation></semantics></math>
+spin (since the pion has spin zero and cannot contribute orbital angular
+momentum along the axis of motion). 2. The probability of the proton
+being emitted at an angle
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>θ</mi><annotation encoding="application/x-tex">\theta</annotation></semantics></math>
+is determined by two amplitudes: *
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>:
+Amplitude for spin-up
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi mathvariant="normal">Λ</mi><mn>0</mn></msup><annotation encoding="application/x-tex">\Lambda^0</annotation></semantics></math>
+to decay into a spin-up proton. *
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>:
+Amplitude for spin-down
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi mathvariant="normal">Λ</mi><mn>0</mn></msup><annotation encoding="application/x-tex">\Lambda^0</annotation></semantics></math>
+to decay into a spin-down proton.</p>
+<p>The resulting probability distribution
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>θ</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">f(\theta)</annotation></semantics></math>
+is:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>θ</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msup><mrow><mo stretchy="true" form="prefix">|</mo><mi>a</mi><mo stretchy="true" form="postfix">|</mo></mrow><mn>2</mn></msup><msup><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mn>2</mn></msup><mfrac><mi>θ</mi><mn>2</mn></mfrac><mo>+</mo><msup><mrow><mo stretchy="true" form="prefix">|</mo><mi>b</mi><mo stretchy="true" form="postfix">|</mo></mrow><mn>2</mn></msup><msup><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mn>2</mn></msup><mfrac><mi>θ</mi><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">f(\theta) = \left|a\right|^2\cos^2\frac{\theta}{2} + \left|b\right|^2\sin^2\frac{\theta}{2}</annotation></semantics></math>
+Or, simplified:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>f</mi><mo stretchy="false" form="prefix">(</mo><mi>θ</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><msup><mrow><mo stretchy="true" form="prefix">|</mo><mi>a</mi><mo stretchy="true" form="postfix">|</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mo stretchy="true" form="prefix">|</mo><mi>b</mi><mo stretchy="true" form="postfix">|</mo></mrow><mn>2</mn></msup></mrow><mn>2</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mo>+</mo><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mrow><msup><mrow><mo stretchy="true" form="prefix">|</mo><mi>a</mi><mo stretchy="true" form="postfix">|</mo></mrow><mn>2</mn></msup><mo>−</mo><msup><mrow><mo stretchy="true" form="prefix">|</mo><mi>b</mi><mo stretchy="true" form="postfix">|</mo></mrow><mn>2</mn></msup></mrow><mn>2</mn></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>θ</mi></mrow><annotation encoding="application/x-tex">f(\theta) = \left(\frac{\left|a\right|^2+\left|b\right|^2}{2}\right) + \left(\frac{\left|a\right|^2-\left|b\right|^2}{2}\right)\cos\theta</annotation></semantics></math></p>
+<h3 id="experimental-findings">Experimental Findings</h3>
+<ul>
+<li><strong>Parity Violation:</strong> If parity were conserved, the
+amplitudes
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>a</mi><annotation encoding="application/x-tex">a</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>
+would be equal (or
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo>=</mo><mi>−</mi><mi>b</mi></mrow><annotation encoding="application/x-tex">a = -b</annotation></semantics></math>),
+making the distribution uniform. Experiments show an asymmetry
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi><mo>≈</mo><mi>−</mi><mn>0.62</mn></mrow><annotation encoding="application/x-tex">\alpha \approx -0.62</annotation></semantics></math>),
+proving parity is not conserved in this weak interaction.</li>
+<li><strong>Spin Determination:</strong> The fact that the distribution
+follows a linear
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>θ</mi></mrow><annotation encoding="application/x-tex">\cos\theta</annotation></semantics></math>
+dependency confirms that the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi mathvariant="normal">Λ</mi><mn>0</mn></msup><annotation encoding="application/x-tex">\Lambda^0</annotation></semantics></math>
+has spin
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">1/2</annotation></semantics></math>.</li>
+</ul>
+<h2 id="summary-of-rotation-matrices">Summary of Rotation Matrices</h2>
+<p>The following tables summarize matrix elements
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⟨</mo><mi>j</mi><mo stretchy="false" form="prefix">|</mo><mi>R</mi><mo stretchy="false" form="prefix">|</mo><mi>i</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">\langle j | R | i \rangle</annotation></semantics></math>
+for rotations where the state on the left is a base state of the new
+(rotated) frame.</p>
+<h3 id="table-1-spin-one-half">Table 1: Spin One-Half</h3>
+<p>Two states:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>+</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|+\rangle</annotation></semantics></math>
+(m=+1/2),
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>−</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|-\rangle</annotation></semantics></math>
+(m=-1/2)</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Operator</th>
+<th
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>+</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|+\rangle</annotation></semantics></math></th>
+<th
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>−</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|-\rangle</annotation></semantics></math></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td
+style="text-align: left;"><strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>z</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>ϕ</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">R_z(\phi)</annotation></semantics></math></strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>+</mi><mi>i</mi><mi>ϕ</mi><mi>/</mi><mn>2</mn></mrow></msup><annotation encoding="application/x-tex">e^{+i\phi/2}</annotation></semantics></math></td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">0</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>−</mi><mi>i</mi><mi>ϕ</mi><mi>/</mi><mn>2</mn></mrow></msup><annotation encoding="application/x-tex">e^{-i\phi/2}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td
+style="text-align: left;"><strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>y</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>θ</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">R_y(\theta)</annotation></semantics></math></strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>θ</mi><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">\cos\theta/2</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mi>θ</mi><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">\sin\theta/2</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mi>θ</mi><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">-\sin\theta/2</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>θ</mi><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">\cos\theta/2</annotation></semantics></math></td>
+</tr>
+</tbody>
+</table>
+<h3 id="table-2-spin-one">Table 2: Spin One</h3>
+<p>Three states:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>+</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|+\rangle</annotation></semantics></math>
+(m=+1),
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mn>0</mn><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|0\rangle</annotation></semantics></math>
+(m=0),
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>−</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|-\rangle</annotation></semantics></math>
+(m=-1)</p>
+<table>
+<colgroup>
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+<col style="width: 25%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Operator</th>
+<th
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>+</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|+\rangle</annotation></semantics></math></th>
+<th
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mn>0</mn><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|0\rangle</annotation></semantics></math></th>
+<th
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>−</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|-\rangle</annotation></semantics></math></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td
+style="text-align: left;"><strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>z</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>ϕ</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">R_z(\phi)</annotation></semantics></math></strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>+</mi><mi>i</mi><mi>ϕ</mi></mrow></msup><annotation encoding="application/x-tex">e^{+i\phi}</annotation></semantics></math></td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">0</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>−</mi><mi>i</mi><mi>ϕ</mi></mrow></msup><annotation encoding="application/x-tex">e^{-i\phi}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td
+style="text-align: left;"><strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>y</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>θ</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">R_y(\theta)</annotation></semantics></math></strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>θ</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\frac{1}{2}(1+\cos\theta)</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>+</mi><mfrac><mn>1</mn><msqrt><mn>2</mn></msqrt></mfrac><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mi>θ</mi></mrow><annotation encoding="application/x-tex">+\frac{1}{\sqrt{2}}\sin\theta</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>θ</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\frac{1}{2}(1-\cos\theta)</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mfrac><mn>1</mn><msqrt><mn>2</mn></msqrt></mfrac><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mi>θ</mi></mrow><annotation encoding="application/x-tex">-\frac{1}{\sqrt{2}}\sin\theta</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>θ</mi></mrow><annotation encoding="application/x-tex">\cos\theta</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>+</mi><mfrac><mn>1</mn><msqrt><mn>2</mn></msqrt></mfrac><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mi>θ</mi></mrow><annotation encoding="application/x-tex">+\frac{1}{\sqrt{2}}\sin\theta</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>−</mo><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>θ</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\frac{1}{2}(1-\cos\theta)</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mfrac><mn>1</mn><msqrt><mn>2</mn></msqrt></mfrac><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mi>θ</mi></mrow><annotation encoding="application/x-tex">-\frac{1}{\sqrt{2}}\sin\theta</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo stretchy="false" form="prefix">(</mo><mn>1</mn><mo>+</mo><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>θ</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\frac{1}{2}(1+\cos\theta)</annotation></semantics></math></td>
+</tr>
+</tbody>
+</table>
+<h3 id="table-3-photons-spin-one-zero-rest-mass">Table 3: Photons (Spin
+One, Zero Rest Mass)</h3>
+<p>Two states:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>R</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|R\rangle</annotation></semantics></math>
+(RHC, m=+1),
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>L</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|L\rangle</annotation></semantics></math>
+(LHC, m=-1)</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Operator</th>
+<th
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>R</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|R\rangle</annotation></semantics></math></th>
+<th
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>L</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|L\rangle</annotation></semantics></math></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td
+style="text-align: left;"><strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>z</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>ϕ</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">R_z(\phi)</annotation></semantics></math></strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>+</mi><mi>i</mi><mi>ϕ</mi></mrow></msup><annotation encoding="application/x-tex">e^{+i\phi}</annotation></semantics></math></td>
+<td style="text-align: left;">0</td>
+</tr>
+<tr>
+<td style="text-align: left;"></td>
+<td style="text-align: left;">0</td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>−</mi><mi>i</mi><mi>ϕ</mi></mrow></msup><annotation encoding="application/x-tex">e^{-i\phi}</annotation></semantics></math></td>
+</tr>
+</tbody>
+</table>
+<h2 id="key-quotes-and-context">Key Quotes and Context</h2>
+<ul>
+<li><strong>On the beauty of Quantum Mechanics:</strong> “The most
+beautiful thing of quantum mechanics is that the conservation theorems
+can, in a sense, be derived from something else, whereas in classical
+mechanics they are practically the starting points of the laws.”</li>
+<li><strong>On Symmetry and Passivity:</strong> “Making a reflection and
+waiting a while… is the same as waiting a while and then making a
+reflection. These should be the same so long as
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>U</mi><annotation encoding="application/x-tex">U</annotation></semantics></math>
+doesn’t change under the reflection.”</li>
+<li><strong>On the Parity Violation:</strong> “Although until a few
+years ago it was thought that nature always conserved parity, it is now
+known that this is not true… because the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>β</mi><annotation encoding="application/x-tex">\beta</annotation></semantics></math>-decay
+reaction does not have the inversion symmetry.”</li>
+<li><strong>On Zero-Mass Particles:</strong> “Light is screwy; it has
+only two states. It does not have the zero case. This strange lack is
+related to the fact that light cannot stand still.”</li>
+</ul>
+<h2 id="actionable-insights-for-physical-analysis">Actionable Insights
+for Physical Analysis</h2>
+<ol type="1">
+<li><strong>Identify Symmetry to Predict Conservation:</strong> If a
+Hamiltonian is unchanged by a displacement (space or time) or rotation,
+the corresponding momentum, energy, or angular momentum is a “constant
+of the motion.”</li>
+<li><strong>Use Parity to Simplify States:</strong> In systems dominated
+by electromagnetic or strong forces, states of definite energy that are
+non-degenerate must have a definite parity (even or odd). This can be
+used to rule out certain transitions or outcomes.</li>
+<li><strong>Angular Momentum Conservation in Decays:</strong> When
+analyzing particle disintegrations, the total
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>J</mi><mi>z</mi></msub><annotation encoding="application/x-tex">J_z</annotation></semantics></math>
+must remain constant. Use this to determine the required spin
+orientations of daughter particles, especially when particles are
+emitted along the axis of quantization.</li>
+<li><strong>Detecting Parity Violation:</strong> An asymmetric angular
+distribution in a decay (like the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>θ</mi></mrow><annotation encoding="application/x-tex">\cos\theta</annotation></semantics></math>
+term in
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi mathvariant="normal">Λ</mi><mn>0</mn></msup><annotation encoding="application/x-tex">\Lambda^0</annotation></semantics></math>
+decay) is a direct experimental signature of parity violation, typically
+indicating a weak interaction process.</li>
+</ol>
+  </article>
+</main>
+</body>
+</html>

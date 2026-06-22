@@ -1,0 +1,388 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Study Guide: Spin One-Half Transformation and Rotations - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="en">
+  <script>
+    (() => {
+      const key = "flp-reader-theme";
+      const applyTheme = (theme) => {
+        const next = theme === "dark" ? "dark" : "light";
+        document.documentElement.dataset.theme = next;
+        document.body.dataset.theme = next;
+        try { localStorage.setItem(key, next); } catch (_) {}
+      };
+      try { applyTheme(localStorage.getItem(key) || "light"); } catch (_) { applyTheme("light"); }
+      document.addEventListener("click", (event) => {
+        const button = event.target.closest('[data-report-action="theme"]');
+        if (!button) return;
+        applyTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark");
+      });
+    })();
+  </script>
+<main class="notebooklm-report-shell">
+    <header aria-label="Quick navigation" class="reader-toolbar report-toolbar">
+      <div class="toolbar-group toolbar-navigation">
+        <a class="toolbar-btn" href="../ch06.html">Back to chapter</a>
+        <a class="toolbar-btn" href="../../../../feynman-reader/index.html">Reader</a>
+        <a class="toolbar-btn" href="../../index.html">Contents</a>
+      </div>
+      <a class="toolbar-title" href="../ch06.html#ch06" title="NotebookLM · Guide">NotebookLM · Guide</a>
+      <div class="toolbar-group toolbar-settings">
+        <button aria-label="Toggle theme" class="toolbar-btn icon-btn" data-report-action="theme" title="Toggle theme" type="button">◐</button>
+      </div>
+    </header>
+    <article class="notebooklm-report">
+<h1 id="study-guide-spin-one-half-transformation-and-rotations">Study
+Guide: Spin One-Half Transformation and Rotations</h1>
+<p>This study guide covers the principles of quantum mechanical
+transformations for spin one-half particles, specifically focusing on
+how amplitudes change under the rotation of coordinate systems. The
+material is based on the analysis of symmetry in space and the
+mathematical derivation of rotation matrices.</p>
+<hr />
+<h2 id="key-concepts">Key Concepts</h2>
+<h3 id="the-transformation-matrix">1. The Transformation Matrix</h3>
+<p>In quantum mechanics, any state
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>ψ</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|\psi\rangle</annotation></semantics></math>
+can be described by its amplitudes to be in a set of base states. When
+switching from one set of base states (the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>S</mi><annotation encoding="application/x-tex">S</annotation></semantics></math>-representation)
+to another (the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>T</mi><annotation encoding="application/x-tex">T</annotation></semantics></math>-representation),
+the amplitudes are related by a transformation matrix,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>R</mi><mrow><mi>j</mi><mi>i</mi></mrow></msub><annotation encoding="application/x-tex">R_{ji}</annotation></semantics></math>.
+* <strong>Mathematical Expression:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>C</mi><mi>j</mi><mo>′</mo></msubsup><mo>=</mo><msub><mo>∑</mo><mi>i</mi></msub><msub><mi>R</mi><mrow><mi>j</mi><mi>i</mi></mrow></msub><msub><mi>C</mi><mi>i</mi></msub></mrow><annotation encoding="application/x-tex">C_j&#39; = \sum_i R_{ji} C_i</annotation></semantics></math>
+* <strong>Identity:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>R</mi><mrow><mi>j</mi><mi>i</mi></mrow></msub><annotation encoding="application/x-tex">R_{ji}</annotation></semantics></math>
+is equivalent to the amplitude
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⟨</mo><mi>j</mi><mi>T</mi><mo stretchy="false" form="prefix">|</mo><mi>i</mi><mi>S</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">\langle jT | iS \rangle</annotation></semantics></math>.
+* <strong>Standard Form:</strong> To eliminate phase ambiguities,
+rotation matrices are typically put into a “standard form” where the
+determinant of the matrix equals 1 (<span class="math inline">$\Det R =
+1$</span>).</p>
+<h3 id="rotational-invariance">2. Rotational Invariance</h3>
+<p>A fundamental assumption in this analysis is that the physics of a
+system—such as the probability of a particle passing through a
+Stern-Gerlach apparatus—depends only on the relative orientation of the
+equipment, not its absolute orientation in space. This implies that the
+transformation coefficients
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>R</mi><mrow><mi>j</mi><mi>i</mi></mrow></msub><annotation encoding="application/x-tex">R_{ji}</annotation></semantics></math>
+are functions only of the rotation required to move from frame
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>S</mi><annotation encoding="application/x-tex">S</annotation></semantics></math>
+to frame
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>T</mi><annotation encoding="application/x-tex">T</annotation></semantics></math>.</p>
+<h3 id="compounding-rotations">3. Compounding Rotations</h3>
+<p>If a system undergoes two successive rotations (from
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>S</mi><annotation encoding="application/x-tex">S</annotation></semantics></math>
+to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>T</mi><annotation encoding="application/x-tex">T</annotation></semantics></math>,
+then
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>T</mi><annotation encoding="application/x-tex">T</annotation></semantics></math>
+to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>U</mi><annotation encoding="application/x-tex">U</annotation></semantics></math>),
+the resulting transformation matrix is the product of the individual
+matrices:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>R</mi><mrow><mi>k</mi><mi>i</mi></mrow><mrow><mi>U</mi><mi>S</mi></mrow></msubsup><mo>=</mo><munder><mo>∑</mo><mi>j</mi></munder><msubsup><mi>R</mi><mrow><mi>k</mi><mi>j</mi></mrow><mrow><mi>U</mi><mi>T</mi></mrow></msubsup><msubsup><mi>R</mi><mrow><mi>j</mi><mi>i</mi></mrow><mrow><mi>T</mi><mi>S</mi></mrow></msubsup></mrow><annotation encoding="application/x-tex">R_{ki}^{US} = \sum_j R_{kj}^{UT} R_{ji}^{TS}</annotation></semantics></math>
+This allows complex rotations to be broken down into simpler,
+infinitesimal steps.</p>
+<h3 id="rotation-about-the-z-axis">4. Rotation about the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>z</mi><annotation encoding="application/x-tex">z</annotation></semantics></math>-Axis</h3>
+<p>When an apparatus is rotated by an angle
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ϕ</mi><annotation encoding="application/x-tex">\phi</annotation></semantics></math>
+about the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>z</mi><annotation encoding="application/x-tex">z</annotation></semantics></math>-axis,
+the magnitudes of the amplitudes stay the same, but their phases shift.
+* <strong>Transformation:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>C</mi><mo>+</mo><mo>′</mo></msubsup><mo>=</mo><msup><mi>e</mi><mrow><mi>i</mi><mi>ϕ</mi><mi>/</mi><mn>2</mn></mrow></msup><msub><mi>C</mi><mo>+</mo></msub></mrow><annotation encoding="application/x-tex">C_+&#39; = e^{i\phi/2} C_+</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>C</mi><mo>−</mo><mo>′</mo></msubsup><mo>=</mo><msup><mi>e</mi><mrow><mi>−</mi><mi>i</mi><mi>ϕ</mi><mi>/</mi><mn>2</mn></mrow></msup><msub><mi>C</mi><mo>−</mo></msub></mrow><annotation encoding="application/x-tex">C_-&#39; = e^{-i\phi/2} C_-</annotation></semantics></math>
+* <strong>The
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>360</mn><mo>∘</mo></msup><annotation encoding="application/x-tex">360^\circ</annotation></semantics></math>
+Sign Flip:</strong> A rotation of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>360</mn><mo>∘</mo></msup><annotation encoding="application/x-tex">360^\circ</annotation></semantics></math>
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ϕ</mi><mo>=</mo><mn>2</mn><mi>π</mi></mrow><annotation encoding="application/x-tex">\phi = 2\pi</annotation></semantics></math>)
+results in
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>C</mi><mo>+</mo><mo>′</mo></msubsup><mo>=</mo><mi>−</mi><msub><mi>C</mi><mo>+</mo></msub></mrow><annotation encoding="application/x-tex">C_+&#39; = -C_+</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>C</mi><mo>−</mo><mo>′</mo></msubsup><mo>=</mo><mi>−</mi><msub><mi>C</mi><mo>−</mo></msub></mrow><annotation encoding="application/x-tex">C_-&#39; = -C_-</annotation></semantics></math>.
+While the physics remains unchanged (as all amplitudes are multiplied by
+the same factor), the mathematical sign of the amplitude flips. This is
+a unique characteristic of spin one-half particles, requiring
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>=</mo><mn>1</mn><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">m=1/2</annotation></semantics></math>
+in the phase factor
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>i</mi><mi>m</mi><mi>ϕ</mi></mrow></msup><annotation encoding="application/x-tex">e^{im\phi}</annotation></semantics></math>
+to ensure the system returns to its physical state only after a full
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>360</mn><mo>∘</mo></msup><annotation encoding="application/x-tex">360^\circ</annotation></semantics></math>
+turn.</p>
+<h3 id="rotations-about-x-and-y-axes">5. Rotations about
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>y</mi><annotation encoding="application/x-tex">y</annotation></semantics></math>
+Axes</h3>
+<p>Rotations about the axes perpendicular to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>z</mi><annotation encoding="application/x-tex">z</annotation></semantics></math>
+involve mixing the (+) and (-) states. *
+<strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>180</mn><mo>∘</mo></msup><annotation encoding="application/x-tex">180^\circ</annotation></semantics></math>
+about
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>y</mi><annotation encoding="application/x-tex">y</annotation></semantics></math>:</strong>
+This “flips” the apparatus. The (+) state in the old frame becomes the
+(-) state in the new frame (with a sign change for one amplitude to
+maintain the determinant):
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>C</mi><mo>+</mo><mo>′</mo></msubsup><mo>=</mo><msub><mi>C</mi><mo>−</mo></msub></mrow><annotation encoding="application/x-tex">C_+&#39; = C_-</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>C</mi><mo>−</mo><mo>′</mo></msubsup><mo>=</mo><mi>−</mi><msub><mi>C</mi><mo>+</mo></msub></mrow><annotation encoding="application/x-tex">C_-&#39; = -C_+</annotation></semantics></math>.
+*
+<strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>90</mn><mo>∘</mo></msup><annotation encoding="application/x-tex">90^\circ</annotation></semantics></math>
+about
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>y</mi><annotation encoding="application/x-tex">y</annotation></semantics></math>:</strong>
+This relates the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>z</mi><annotation encoding="application/x-tex">z</annotation></semantics></math>-axis
+to the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>-axis.
+A particle in a
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>+</mi><mi>z</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(+z)</annotation></semantics></math>
+state has a 50% chance of being measured as
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>+</mi><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(+x)</annotation></semantics></math>
+and a 50% chance of being measured as
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>−</mi><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(-x)</annotation></semantics></math>.</p>
+<hr />
+<h2 id="summary-tables-of-rotation-matrices">Summary Tables of Rotation
+Matrices</h2>
+<p>The following tables provide the amplitudes
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⟨</mo><mi>j</mi><mi>T</mi><mo stretchy="false" form="prefix">|</mo><mi>i</mi><mi>S</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">\langle jT | iS \rangle</annotation></semantics></math>
+for specific rotations.</p>
+<h3 id="table-1-general-rotation-euler-angles-alpha-beta-gamma">Table 1:
+General Rotation (Euler Angles
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi><mo>,</mo><mi>β</mi><mo>,</mo><mi>γ</mi></mrow><annotation encoding="application/x-tex">\alpha, \beta, \gamma</annotation></semantics></math>)</h3>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⟨</mo><mi>j</mi><mi>T</mi><mo stretchy="false" form="prefix">|</mo><mi>i</mi><mi>S</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">\langle jT | iS \rangle</annotation></semantics></math></th>
+<th
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>+</mi><mi>S</mi></mrow><annotation encoding="application/x-tex">+S</annotation></semantics></math></th>
+<th
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mi>S</mi></mrow><annotation encoding="application/x-tex">-S</annotation></semantics></math></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td
+style="text-align: left;"><strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>+</mi><mi>T</mi></mrow><annotation encoding="application/x-tex">+T</annotation></semantics></math></strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mfrac><mi>α</mi><mn>2</mn></mfrac><msup><mi>e</mi><mrow><mi>i</mi><mo stretchy="false" form="prefix">(</mo><mi>β</mi><mo>+</mo><mi>γ</mi><mo stretchy="false" form="postfix">)</mo><mi>/</mi><mn>2</mn></mrow></msup></mrow><annotation encoding="application/x-tex">\cos \frac{\alpha}{2} e^{i(\beta+\gamma)/2}</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mfrac><mi>α</mi><mn>2</mn></mfrac><msup><mi>e</mi><mrow><mi>−</mi><mi>i</mi><mo stretchy="false" form="prefix">(</mo><mi>β</mi><mo>−</mo><mi>γ</mi><mo stretchy="false" form="postfix">)</mo><mi>/</mi><mn>2</mn></mrow></msup></mrow><annotation encoding="application/x-tex">i \sin \frac{\alpha}{2} e^{-i(\beta-\gamma)/2}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td
+style="text-align: left;"><strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mi>T</mi></mrow><annotation encoding="application/x-tex">-T</annotation></semantics></math></strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mfrac><mi>α</mi><mn>2</mn></mfrac><msup><mi>e</mi><mrow><mi>i</mi><mo stretchy="false" form="prefix">(</mo><mi>β</mi><mo>−</mo><mi>γ</mi><mo stretchy="false" form="postfix">)</mo><mi>/</mi><mn>2</mn></mrow></msup></mrow><annotation encoding="application/x-tex">i \sin \frac{\alpha}{2} e^{i(\beta-\gamma)/2}</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mfrac><mi>α</mi><mn>2</mn></mfrac><msup><mi>e</mi><mrow><mi>−</mi><mi>i</mi><mo stretchy="false" form="prefix">(</mo><mi>β</mi><mo>+</mo><mi>γ</mi><mo stretchy="false" form="postfix">)</mo><mi>/</mi><mn>2</mn></mrow></msup></mrow><annotation encoding="application/x-tex">\cos \frac{\alpha}{2} e^{-i(\beta+\gamma)/2}</annotation></semantics></math></td>
+</tr>
+</tbody>
+</table>
+<h3 id="table-2-rotations-about-specific-axes">Table 2: Rotations about
+Specific Axes</h3>
+<table>
+<colgroup>
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+<col style="width: 20%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Rotation</th>
+<th
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>+</mi><mi>T</mi><mo>,</mo><mi>+</mi><mi>S</mi></mrow><annotation encoding="application/x-tex">+T, +S</annotation></semantics></math></th>
+<th
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>+</mi><mi>T</mi><mo>,</mo><mi>−</mi><mi>S</mi></mrow><annotation encoding="application/x-tex">+T, -S</annotation></semantics></math></th>
+<th
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mi>T</mi><mo>,</mo><mi>+</mi><mi>S</mi></mrow><annotation encoding="application/x-tex">-T, +S</annotation></semantics></math></th>
+<th
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mi>T</mi><mo>,</mo><mi>−</mi><mi>S</mi></mrow><annotation encoding="application/x-tex">-T, -S</annotation></semantics></math></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td
+style="text-align: left;"><strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>z</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>ϕ</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">R_z(\phi)</annotation></semantics></math></strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>i</mi><mi>ϕ</mi><mi>/</mi><mn>2</mn></mrow></msup><annotation encoding="application/x-tex">e^{i\phi/2}</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0</mn><annotation encoding="application/x-tex">0</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0</mn><annotation encoding="application/x-tex">0</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>−</mi><mi>i</mi><mi>ϕ</mi><mi>/</mi><mn>2</mn></mrow></msup><annotation encoding="application/x-tex">e^{-i\phi/2}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td
+style="text-align: left;"><strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>x</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>ϕ</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">R_x(\phi)</annotation></semantics></math></strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mfrac><mi>ϕ</mi><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">\cos \frac{\phi}{2}</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mfrac><mi>ϕ</mi><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">i \sin \frac{\phi}{2}</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mfrac><mi>ϕ</mi><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">i \sin \frac{\phi}{2}</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mfrac><mi>ϕ</mi><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">\cos \frac{\phi}{2}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td
+style="text-align: left;"><strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>R</mi><mi>y</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>ϕ</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">R_y(\phi)</annotation></semantics></math></strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mfrac><mi>ϕ</mi><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">\cos \frac{\phi}{2}</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mfrac><mi>ϕ</mi><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">\sin \frac{\phi}{2}</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mrow><mi mathvariant="normal">sin</mi><mo>&#8289;</mo></mrow><mfrac><mi>ϕ</mi><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">-\sin \frac{\phi}{2}</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mfrac><mi>ϕ</mi><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">\cos \frac{\phi}{2}</annotation></semantics></math></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="common-misconceptions">Common Misconceptions</h2>
+<ul>
+<li><strong>Misconception:</strong> A
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>360</mn><mo>∘</mo></msup><annotation encoding="application/x-tex">360^\circ</annotation></semantics></math>
+rotation must return the amplitudes to their exact original values.
+<ul>
+<li><strong>Reality:</strong> In quantum mechanics, a
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>360</mn><mo>∘</mo></msup><annotation encoding="application/x-tex">360^\circ</annotation></semantics></math>
+rotation of a spin one-half system multiplies all amplitudes by
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">-1</annotation></semantics></math>.
+Because probabilities are the absolute squares of amplitudes, the
+<em>physics</em> is identical, but the <em>mathematical state</em> has a
+sign change.</li>
+</ul></li>
+<li><strong>Misconception:</strong> Rotation matrices can be determined
+uniquely from probabilities.
+<ul>
+<li><strong>Reality:</strong> Probabilities only provide the magnitudes
+of the coefficients. The phases must be determined through symmetry
+arguments and conventions (such as setting the determinant to 1).</li>
+</ul></li>
+<li><strong>Misconception:</strong> If a particle is “up” in
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>z</mi><annotation encoding="application/x-tex">z</annotation></semantics></math>,
+it has no “up” or “down” component in
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>.
+<ul>
+<li><strong>Reality:</strong> A particle in a pure
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>+</mi><mi>z</mi></mrow><annotation encoding="application/x-tex">+z</annotation></semantics></math>
+state is in a simultaneous superposition of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>+</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">+x</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">-x</annotation></semantics></math>
+states. Specifically, it has a 50% probability of being found in either
+state upon measurement.</li>
+</ul></li>
+</ul>
+<hr />
+<h2 id="self-check-practice-questions">Self-Check Practice
+Questions</h2>
+<h3 id="short-answer-quiz">Short-Answer Quiz</h3>
+<ol type="1">
+<li>What is the mathematical relationship between the amplitudes
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msubsup><mi>C</mi><mi>j</mi><mo>′</mo></msubsup><annotation encoding="application/x-tex">C_j&#39;</annotation></semantics></math>
+in representation
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>T</mi><annotation encoding="application/x-tex">T</annotation></semantics></math>
+and the amplitudes
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>C</mi><mi>i</mi></msub><annotation encoding="application/x-tex">C_i</annotation></semantics></math>
+in representation
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>S</mi><annotation encoding="application/x-tex">S</annotation></semantics></math>?</li>
+<li>Why is it necessary for the factor
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math>
+in the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>z</mi><annotation encoding="application/x-tex">z</annotation></semantics></math>-axis
+rotation phase
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>i</mi><mi>m</mi><mi>ϕ</mi></mrow></msup><annotation encoding="application/x-tex">e^{im\phi}</annotation></semantics></math>)
+to be
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>/</mi><mn>2</mn></mrow><annotation encoding="application/x-tex">1/2</annotation></semantics></math>
+rather than
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>1</mn><annotation encoding="application/x-tex">1</annotation></semantics></math>?</li>
+<li>If a spin one-half particle is prepared in a pure
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>+</mi><mi>z</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(+z)</annotation></semantics></math>
+state, what is the amplitude for it to be found in the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>+</mi><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(+x)</annotation></semantics></math>
+state?</li>
+<li>Define the “standard form” for a rotation matrix and explain its
+purpose.</li>
+<li>What are the three Euler angles used to describe an arbitrary
+rotation, and what sequence of rotations do they represent?</li>
+</ol>
+<h3 id="essay-questions">Essay Questions</h3>
+<ol type="1">
+<li><strong>Symmetry and Logic:</strong> Explain how the transformation
+coefficients for spin one-half can be derived using “pure reasoning.”
+What role does the assumption of the isotropy of space (no preferred
+direction) play in this derivation?</li>
+<li><strong>The Geometry of Spin:</strong> Discuss the physical
+implications of the experiment where two Stern-Gerlach apparatuses are
+rotated. How does the phase difference between amplitudes explain why a
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>+</mi><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(+x)</annotation></semantics></math>
+state might behave differently when analyzed by a
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>+</mi><mi>y</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(+y)</annotation></semantics></math>
+apparatus versus a
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>+</mi><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(+x)</annotation></semantics></math>
+apparatus?</li>
+<li><strong>The
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>360</mn><mo>∘</mo></msup><annotation encoding="application/x-tex">360^\circ</annotation></semantics></math>
+Anomaly:</strong> Analyze the sign change that occurs during a
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>360</mn><mo>∘</mo></msup><annotation encoding="application/x-tex">360^\circ</annotation></semantics></math>
+rotation. While it does not change the observable physics of a single
+system, why is it mathematically significant in the context of quantum
+mechanical rotations and compounding transformations?</li>
+</ol>
+<hr />
+<h2 id="glossary-of-important-terms">Glossary of Important Terms</h2>
+<ul>
+<li><strong>Amplitude:</strong> A complex number representing the
+“likelihood” of a system being in a specific state; its absolute square
+gives the probability.</li>
+<li><strong>Base States:</strong> A set of orthogonal states (like “up”
+and “down”) used as a coordinate system to describe any arbitrary
+quantum state.</li>
+<li><strong>Determinant:</strong> A mathematical value calculated from a
+matrix; for rotation matrices in standard form, it is set to 1 to fix
+the phase.</li>
+<li><strong>Euler Angles:</strong> A set of three angles
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>α</mi><mo>,</mo><mi>β</mi><mo>,</mo><mi>γ</mi></mrow><annotation encoding="application/x-tex">\alpha, \beta, \gamma</annotation></semantics></math>)
+used to define the orientation of a coordinate frame relative to another
+through three specific successive rotations.</li>
+<li><strong>Normalization:</strong> The requirement that the sum of the
+absolute squares of the amplitudes for all possible base states must
+equal 1.</li>
+<li><strong>Orthogonal:</strong> Base states are orthogonal if the
+amplitude to be in one, given the system is in another, is zero
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⟨</mo><mi>i</mi><mo stretchy="false" form="prefix">|</mo><mi>j</mi><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><msub><mi>δ</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub></mrow><annotation encoding="application/x-tex">\langle i | j \rangle = \delta_{ij}</annotation></semantics></math>).</li>
+<li><strong>Rotation Matrix:</strong> A matrix of transformation
+coefficients
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>R</mi><mrow><mi>j</mi><mi>i</mi></mrow></msub><annotation encoding="application/x-tex">R_{ji}</annotation></semantics></math>)
+that depends only on the rotation relating two coordinate frames.</li>
+<li><strong>Stern-Gerlach Apparatus:</strong> An experimental device
+used to polarize and analyze the spin states of particles by splitting a
+beam in a magnetic field.</li>
+<li><strong>Transformation Matrix:</strong> The set of coefficients used
+to convert the description of a state from one basis to another.</li>
+</ul>
+  </article>
+</main>
+</body>
+</html>

@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Study Guide: Quantum-Mechanical Operators - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="en">
+  <script>
+    (() => {
+      const key = "flp-reader-theme";
+      const applyTheme = (theme) => {
+        const next = theme === "dark" ? "dark" : "light";
+        document.documentElement.dataset.theme = next;
+        document.body.dataset.theme = next;
+        try { localStorage.setItem(key, next); } catch (_) {}
+      };
+      try { applyTheme(localStorage.getItem(key) || "light"); } catch (_) { applyTheme("light"); }
+      document.addEventListener("click", (event) => {
+        const button = event.target.closest('[data-report-action="theme"]');
+        if (!button) return;
+        applyTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark");
+      });
+    })();
+  </script>
+<main class="notebooklm-report-shell">
+    <header aria-label="Quick navigation" class="reader-toolbar report-toolbar">
+      <div class="toolbar-group toolbar-navigation">
+        <a class="toolbar-btn" href="../ch20.html">Back to chapter</a>
+        <a class="toolbar-btn" href="../../../../feynman-reader/index.html">Reader</a>
+        <a class="toolbar-btn" href="../../index.html">Contents</a>
+      </div>
+      <a class="toolbar-title" href="../ch20.html#ch20" title="NotebookLM · Guide">NotebookLM · Guide</a>
+      <div class="toolbar-group toolbar-settings">
+        <button aria-label="Toggle theme" class="toolbar-btn icon-btn" data-report-action="theme" title="Toggle theme" type="button">◐</button>
+      </div>
+    </header>
+    <article class="notebooklm-report">
+<h1 id="study-guide-quantum-mechanical-operators">Study Guide:
+Quantum-Mechanical Operators</h1>
+<p>This study guide provides a comprehensive overview of the principles
+and mathematical frameworks governing operators in quantum mechanics,
+based on the analysis of physical states, their transformations, and the
+correspondences between abstract operations and algebraic calculus.</p>
+<h2 id="key-concepts">Key Concepts</h2>
+<h3 id="the-nature-of-operators">1. The Nature of Operators</h3>
+<p>In quantum mechanics, an <strong>operator</strong> represents a
+physical operation performed on a state. While a state vector
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>ψ</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|\psi\rangle</annotation></semantics></math>
+is an abstract symbol for a physical state, an operator
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>A</mi><mo accent="true">̂</mo></mover><annotation encoding="application/x-tex">\hat{A}</annotation></semantics></math>
+acts on that state to produce a new state:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>ϕ</mi><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><mover><mi>A</mi><mo accent="true">̂</mo></mover><mo stretchy="false" form="prefix">|</mo><mi>ψ</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|\phi\rangle = \hat{A}|\psi\rangle</annotation></semantics></math></p>
+<p>Operators provide an abstract way to write equations without choosing
+a specific set of base states. However, when a representation (base) is
+chosen, an operator is described numerically by a
+<strong>matrix</strong> of coefficients:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>=</mo><mo stretchy="false" form="prefix">⟨</mo><mi>i</mi><mo stretchy="false" form="prefix">|</mo><mover><mi>A</mi><mo accent="true">̂</mo></mover><mo stretchy="false" form="prefix">|</mo><mi>j</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">A_{ij} = \langle i|\hat{A}|j\rangle</annotation></semantics></math></p>
+<h3 id="hermitian-adjoints-and-self-adjoint-operators">2. Hermitian
+Adjoints and Self-Adjoint Operators</h3>
+<p>The <strong>Hermitian adjoint</strong> of an operator
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>A</mi><mo accent="true">̂</mo></mover><annotation encoding="application/x-tex">\hat{A}</annotation></semantics></math>
+is denoted as
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mover><mi>A</mi><mo accent="true">̂</mo></mover><mo>†</mo></msup><annotation encoding="application/x-tex">\hat{A}^\dagger</annotation></semantics></math>
+(“A dagger”). Its matrix elements are the complex conjugates of the
+transposed matrix elements:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msubsup><mi>A</mi><mrow><mi>i</mi><mi>j</mi></mrow><mo>†</mo></msubsup><mo>=</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>A</mi><mrow><mi>j</mi><mi>i</mi></mrow></msub><msup><mo stretchy="false" form="postfix">)</mo><mo>*</mo></msup></mrow><annotation encoding="application/x-tex">A_{ij}^\dagger = (A_{ji})^*</annotation></semantics></math>
+A <strong>Hermitian</strong> (or self-adjoint) operator is one where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mover><mi>A</mi><mo accent="true">̂</mo></mover><mo>†</mo></msup><mo>=</mo><mover><mi>A</mi><mo accent="true">̂</mo></mover></mrow><annotation encoding="application/x-tex">\hat{A}^\dagger = \hat{A}</annotation></semantics></math>.
+Many important physical observables in quantum mechanics are represented
+by Hermitian operators.</p>
+<h3 id="expectation-values-average-values">3. Expectation Values
+(Average Values)</h3>
+<p>The average value (expected result) of a physical observable
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+for a system in state
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>ψ</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|\psi\rangle</annotation></semantics></math>
+is given by the formula:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⟨</mo><mi>A</mi><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><mo stretchy="false" form="prefix">⟨</mo><mi>ψ</mi><mo stretchy="false" form="prefix">|</mo><mover><mi>A</mi><mo accent="true">̂</mo></mover><mo stretchy="false" form="prefix">|</mo><mi>ψ</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">\langle A \rangle = \langle \psi|\hat{A}|\psi\rangle</annotation></semantics></math>
+For energy, where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>H</mi><mo accent="true">̂</mo></mover><annotation encoding="application/x-tex">\hat{H}</annotation></semantics></math>
+is the Hamiltonian operator:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⟨</mo><mi>E</mi><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><mo stretchy="false" form="prefix">⟨</mo><mi>ψ</mi><mo stretchy="false" form="prefix">|</mo><mover><mi>H</mi><mo accent="true">̂</mo></mover><mo stretchy="false" form="prefix">|</mo><mi>ψ</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">\langle E \rangle = \langle \psi|\hat{H}|\psi\rangle</annotation></semantics></math>
+If the state is not normalized, the average is calculated as:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⟨</mo><mi>A</mi><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><mfrac><mrow><mo stretchy="false" form="prefix">⟨</mo><mi>ψ</mi><mo stretchy="false" form="prefix">|</mo><mover><mi>A</mi><mo accent="true">̂</mo></mover><mo stretchy="false" form="prefix">|</mo><mi>ψ</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><mrow><mo stretchy="false" form="prefix">⟨</mo><mi>ψ</mi><mo stretchy="false" form="prefix">|</mo><mi>ψ</mi><mo stretchy="false" form="postfix">⟩</mo></mrow></mfrac></mrow><annotation encoding="application/x-tex">\langle A \rangle = \frac{\langle \psi|\hat{A}|\psi\rangle}{\langle \psi|\psi \rangle}</annotation></semantics></math></p>
+<h3 id="coordinate-representation-and-algebraic-operators">4. Coordinate
+Representation and Algebraic Operators</h3>
+<p>When working with wave functions
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ψ</mi><mo stretchy="false" form="prefix">(</mo><mi mathvariant="bold-italic">𝒓</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\psi(\mathbf{r})</annotation></semantics></math>
+in the coordinate representation, quantum-mechanical operators
+correspond to algebraic differential operators.</p>
+<table>
+<colgroup>
+<col style="width: 33%" />
+<col style="width: 33%" />
+<col style="width: 33%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Physical Quantity</th>
+<th style="text-align: left;">Abstract Operator</th>
+<th style="text-align: left;">Algebraic Coordinate Form
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi mathvariant="script">𝒜</mi><annotation encoding="application/x-tex">\mathcal{A}</annotation></semantics></math>)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Energy</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>H</mi><mo accent="true">̂</mo></mover><annotation encoding="application/x-tex">\hat{H}</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">ℋ</mi><mo>=</mo><mi>−</mi><mfrac><msup><mi>ℏ</mi><mn>2</mn></msup><mrow><mn>2</mn><mi>m</mi></mrow></mfrac><msup><mi>∇</mi><mn>2</mn></msup><mo>+</mo><mi>V</mi><mo stretchy="false" form="prefix">(</mo><mi mathvariant="bold-italic">𝒓</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mathcal{H} = -\frac{\hbar^2}{2m}\nabla^2 + V(\mathbf{r})</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Position</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>x</mi><mo accent="true">̂</mo></mover><mo>,</mo><mover><mi>y</mi><mo accent="true">̂</mo></mover><mo>,</mo><mover><mi>z</mi><mo accent="true">̂</mo></mover></mrow><annotation encoding="application/x-tex">\hat{x}, \hat{y}, \hat{z}</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi></mrow><annotation encoding="application/x-tex">x, y, z</annotation></semantics></math>
+(multiplication)</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Momentum
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>)</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mover><mi>p</mi><mo accent="true">̂</mo></mover><mi>x</mi></msub><annotation encoding="application/x-tex">\hat{p}_x</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="script">𝒫</mi><mi>x</mi></msub><mo>=</mo><mfrac><mi>ℏ</mi><mi>i</mi></mfrac><mfrac><mi>∂</mi><mrow><mi>∂</mi><mi>x</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\mathcal{P}_x = \frac{\hbar}{i}\frac{\partial}{\partial x}</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Momentum (vector)</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mover><mi>p</mi><mo accent="true">̂</mo></mover><mo accent="true">→</mo></mover><annotation encoding="application/x-tex">\vec{\hat{p}}</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi mathvariant="script">𝒫</mi><mo accent="true">→</mo></mover><mo>=</mo><mfrac><mi>ℏ</mi><mi>i</mi></mfrac><mi>∇</mi></mrow><annotation encoding="application/x-tex">\vec{\mathcal{P}} = \frac{\hbar}{i}\nabla</annotation></semantics></math></td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Angular Momentum
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>z</mi><annotation encoding="application/x-tex">z</annotation></semantics></math>)</strong></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mover><mi>L</mi><mo accent="true">̂</mo></mover><mi>z</mi></msub><annotation encoding="application/x-tex">\hat{L}_z</annotation></semantics></math></td>
+<td
+style="text-align: left;"><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi mathvariant="script">ℒ</mi><mi>z</mi></msub><mo>=</mo><mfrac><mi>ℏ</mi><mi>i</mi></mfrac><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mfrac><mi>∂</mi><mrow><mi>∂</mi><mi>y</mi></mrow></mfrac><mo>−</mo><mi>y</mi><mfrac><mi>∂</mi><mrow><mi>∂</mi><mi>x</mi></mrow></mfrac><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mathcal{L}_z = \frac{\hbar}{i}(x\frac{\partial}{\partial y} - y\frac{\partial}{\partial x})</annotation></semantics></math></td>
+</tr>
+</tbody>
+</table>
+<h3 id="commutation-rules">5. Commutation Rules</h3>
+<p>In quantum mechanics, the order of operators matters. If
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>A</mi><mo accent="true">̂</mo></mover><mover><mi>B</mi><mo accent="true">̂</mo></mover><mo>−</mo><mover><mi>B</mi><mo accent="true">̂</mo></mover><mover><mi>A</mi><mo accent="true">̂</mo></mover><mo>≠</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\hat{A}\hat{B} - \hat{B}\hat{A} \neq 0</annotation></semantics></math>,
+the operators are said to <strong>not commute</strong>. * <strong>The
+Fundamental Commutation Rule:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>x</mi><mo accent="true">̂</mo></mover><msub><mover><mi>p</mi><mo accent="true">̂</mo></mover><mi>x</mi></msub><mo>−</mo><msub><mover><mi>p</mi><mo accent="true">̂</mo></mover><mi>x</mi></msub><mover><mi>x</mi><mo accent="true">̂</mo></mover><mo>=</mo><mi>i</mi><mi>ℏ</mi></mrow><annotation encoding="application/x-tex">\hat{x}\hat{p}_x - \hat{p}_x\hat{x} = i\hbar</annotation></semantics></math>
+* <strong>Angular Momentum Commutation:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mover><mi>L</mi><mo accent="true">̂</mo></mover><mi>x</mi></msub><msub><mover><mi>L</mi><mo accent="true">̂</mo></mover><mi>y</mi></msub><mo>−</mo><msub><mover><mi>L</mi><mo accent="true">̂</mo></mover><mi>y</mi></msub><msub><mover><mi>L</mi><mo accent="true">̂</mo></mover><mi>x</mi></msub><mo>=</mo><mi>i</mi><mi>ℏ</mi><msub><mover><mi>L</mi><mo accent="true">̂</mo></mover><mi>z</mi></msub></mrow><annotation encoding="application/x-tex">\hat{L}_x\hat{L}_y - \hat{L}_y\hat{L}_x = i\hbar\hat{L}_z</annotation></semantics></math></p>
+<p>If Planck’s constant
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ℏ</mi><annotation encoding="application/x-tex">\hbar</annotation></semantics></math>)
+were zero, these operators would commute, and quantum mechanics would
+reduce to classical mechanics.</p>
+<h3 id="time-evolution-of-averages">6. Time Evolution of Averages</h3>
+<p>The rate of change of the average value of an operator
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>A</mi><mo accent="true">̂</mo></mover><annotation encoding="application/x-tex">\hat{A}</annotation></semantics></math>
+(that does not have explicit time dependence) is determined by its
+commutator with the Hamiltonian:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><mi>d</mi><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo stretchy="false" form="prefix">⟨</mo><mi>A</mi><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><mfrac><mi>i</mi><mi>ℏ</mi></mfrac><mo stretchy="false" form="prefix">⟨</mo><mi>ψ</mi><mo stretchy="false" form="prefix">|</mo><mo stretchy="false" form="prefix">(</mo><mover><mi>H</mi><mo accent="true">̂</mo></mover><mover><mi>A</mi><mo accent="true">̂</mo></mover><mo>−</mo><mover><mi>A</mi><mo accent="true">̂</mo></mover><mover><mi>H</mi><mo accent="true">̂</mo></mover><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">|</mo><mi>ψ</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">\frac{d}{dt}\langle A \rangle = \frac{i}{\hbar}\langle \psi|(\hat{H}\hat{A} - \hat{A}\hat{H})|\psi\rangle</annotation></semantics></math>
+This leads to quantum-mechanical versions of classical laws: *
+<strong>Velocity:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mover><mi>x</mi><mo accent="true">̂</mo></mover><mo accent="true">̇</mo></mover><mo>=</mo><mfrac><msub><mover><mi>p</mi><mo accent="true">̂</mo></mover><mi>x</mi></msub><mi>m</mi></mfrac></mrow><annotation encoding="application/x-tex">\dot{\hat{x}} = \frac{\hat{p}_x}{m}</annotation></semantics></math>
+* <strong>Newton’s Law (Force):</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mover><mi>p</mi><mo accent="true">̂</mo></mover><mo accent="true">̇</mo></mover><mo>=</mo><mi>−</mi><mfrac><mrow><mi>d</mi><mi>V</mi></mrow><mrow><mi>d</mi><mi>x</mi></mrow></mfrac></mrow><annotation encoding="application/x-tex">\dot{\hat{p}} = -\frac{dV}{dx}</annotation></semantics></math></p>
+<hr />
+<h2 id="common-misconceptions">Common Misconceptions</h2>
+<ul>
+<li><strong>Operators vs. Functions:</strong> A common mistake is
+treating a quantum-mechanical operator (which acts on abstract state
+vectors) as identical to an algebraic operator (which acts on
+mathematical functions). While they are related in specific
+representations, they are distinct concepts.</li>
+<li><strong>Commutativity:</strong> In classical physics,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mi>p</mi><mo>=</mo><mi>p</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">xp = px</annotation></semantics></math>.
+In quantum mechanics, this is false. The difference
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mi>ℏ</mi></mrow><annotation encoding="application/x-tex">i\hbar</annotation></semantics></math>
+is responsible for the “wondrous complications” of the field, such as
+interference and wave behavior.</li>
+<li><strong>State “Artificiality”:</strong> Applying an operator to a
+state may produce a state that is “mathematically artificial”—for
+example, one that is not normalized or does not represent a physical
+situation found in nature. These states are still useful as intermediate
+steps in calculations.</li>
+<li><strong>Classical Parallels:</strong> While many quantum equations
+look like classical ones (e.g.,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>L</mi><mo accent="true">→</mo></mover><mo>=</mo><mover><mi>r</mi><mo accent="true">→</mo></mover><mo>×</mo><mover><mi>p</mi><mo accent="true">→</mo></mover></mrow><annotation encoding="application/x-tex">\vec{L} = \vec{r} \times \vec{p}</annotation></semantics></math>),
+the order of factors in quantum mechanics is critical due to
+non-commutation, unlike in classical products.</li>
+</ul>
+<hr />
+<h2 id="short-answer-practice-questions">Short-Answer Practice
+Questions</h2>
+<ol type="1">
+<li><strong>What does the operator equation
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>ϕ</mi><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><mover><mi>A</mi><mo accent="true">̂</mo></mover><mo stretchy="false" form="prefix">|</mo><mi>ψ</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|\phi\rangle = \hat{A}|\psi\rangle</annotation></semantics></math>
+mean in terms of base states and amplitudes?</strong>
+<ul>
+<li><em>Answer:</em> It means the amplitude of finding state
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>ϕ</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|\phi\rangle</annotation></semantics></math>
+in base state
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>i</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|i\rangle</annotation></semantics></math>
+is the sum of the matrix elements
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>A</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><annotation encoding="application/x-tex">A_{ij}</annotation></semantics></math>
+multiplied by the amplitudes of finding
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>ψ</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|\psi\rangle</annotation></semantics></math>
+in base states
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>j</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|j\rangle</annotation></semantics></math>:
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⟨</mo><mi>i</mi><mo stretchy="false" form="prefix">|</mo><mi>ϕ</mi><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><msub><mo>∑</mo><mi>j</mi></msub><mo stretchy="false" form="prefix">⟨</mo><mi>i</mi><mo stretchy="false" form="prefix">|</mo><mover><mi>A</mi><mo accent="true">̂</mo></mover><mo stretchy="false" form="prefix">|</mo><mi>j</mi><mo stretchy="false" form="postfix">⟩</mo><mo stretchy="false" form="prefix">⟨</mo><mi>j</mi><mo stretchy="false" form="prefix">|</mo><mi>ψ</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">\langle i|\phi\rangle = \sum_j \langle i|\hat{A}|j\rangle \langle j|\psi\rangle</annotation></semantics></math>.</li>
+</ul></li>
+<li><strong>Define a “self-adjoint” operator.</strong>
+<ul>
+<li><em>Answer:</em> An operator
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>B</mi><mo accent="true">̂</mo></mover><annotation encoding="application/x-tex">\hat{B}</annotation></semantics></math>
+is self-adjoint (or Hermitian) if it is equal to its own Hermitian
+adjoint
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mover><mi>B</mi><mo accent="true">̂</mo></mover><mo>†</mo></msup><mo>=</mo><mover><mi>B</mi><mo accent="true">̂</mo></mover></mrow><annotation encoding="application/x-tex">\hat{B}^\dagger = \hat{B}</annotation></semantics></math>).</li>
+</ul></li>
+<li><strong>How is the momentum operator
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mover><mi>p</mi><mo accent="true">̂</mo></mover><mi>x</mi></msub><annotation encoding="application/x-tex">\hat{p}_x</annotation></semantics></math>
+defined in terms of the displacement operator?</strong>
+<ul>
+<li><em>Answer:</em> If
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mover><mi>D</mi><mo accent="true">̂</mo></mover><mi>x</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>δ</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\hat{D}_x(\delta)</annotation></semantics></math>
+is the operator that displaces a state by a small distance
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>δ</mi><annotation encoding="application/x-tex">\delta</annotation></semantics></math>,
+then
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mover><mi>D</mi><mo accent="true">̂</mo></mover><mi>x</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>δ</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mn>1</mn><mo>+</mo><mfrac><mi>i</mi><mi>ℏ</mi></mfrac><mi>δ</mi><msub><mover><mi>p</mi><mo accent="true">̂</mo></mover><mi>x</mi></msub></mrow><annotation encoding="application/x-tex">\hat{D}_x(\delta) = 1 + \frac{i}{\hbar}\delta\hat{p}_x</annotation></semantics></math>.</li>
+</ul></li>
+<li><strong>What is the formula for the average energy of a system in
+state
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">|</mo><mi>ψ</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">|\psi\rangle</annotation></semantics></math>
+using the Hamiltonian operator?</strong>
+<ul>
+<li><em>Answer:</em>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⟨</mo><mi>E</mi><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><mo stretchy="false" form="prefix">⟨</mo><mi>ψ</mi><mo stretchy="false" form="prefix">|</mo><mover><mi>H</mi><mo accent="true">̂</mo></mover><mo stretchy="false" form="prefix">|</mo><mi>ψ</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">\langle E \rangle = \langle \psi|\hat{H}|\psi\rangle</annotation></semantics></math>.</li>
+</ul></li>
+<li><strong>Write the algebraic form of the Hamiltonian operator in one
+dimension.</strong>
+<ul>
+<li><em>Answer:</em>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="script">ℋ</mi><mo>=</mo><mi>−</mi><mfrac><msup><mi>ℏ</mi><mn>2</mn></msup><mrow><mn>2</mn><mi>m</mi></mrow></mfrac><mfrac><msup><mi>d</mi><mn>2</mn></msup><mrow><mi>d</mi><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac><mo>+</mo><mi>V</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\mathcal{H} = -\frac{\hbar^2}{2m}\frac{d^2}{dx^2} + V(x)</annotation></semantics></math>.</li>
+</ul></li>
+<li><strong>What is the result of the commutation operation
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>x</mi><mo accent="true">̂</mo></mover><msub><mover><mi>p</mi><mo accent="true">̂</mo></mover><mi>x</mi></msub><mo>−</mo><msub><mover><mi>p</mi><mo accent="true">̂</mo></mover><mi>x</mi></msub><mover><mi>x</mi><mo accent="true">̂</mo></mover></mrow><annotation encoding="application/x-tex">\hat{x}\hat{p}_x - \hat{p}_x\hat{x}</annotation></semantics></math>?</strong>
+<ul>
+<li><em>Answer:</em>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mi>ℏ</mi></mrow><annotation encoding="application/x-tex">i\hbar</annotation></semantics></math>
+(or
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mfrac><mi>ℏ</mi><mi>i</mi></mfrac></mrow><annotation encoding="application/x-tex">-\frac{\hbar}{i}</annotation></semantics></math>).</li>
+</ul></li>
+<li><strong>How does one calculate the average value of position
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⟨</mo><mi>x</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">\langle x \rangle</annotation></semantics></math>
+given a wave function
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ψ</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\psi(x)</annotation></semantics></math>?</strong>
+<ul>
+<li><em>Answer:</em>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⟨</mo><mi>x</mi><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><mo>∫</mo><msup><mi>ψ</mi><mo>*</mo></msup><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mi>x</mi><mi>ψ</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mi>d</mi><mi>x</mi></mrow><annotation encoding="application/x-tex">\langle x \rangle = \int \psi^*(x)x\psi(x)dx</annotation></semantics></math>.</li>
+</ul></li>
+<li><strong>According to the text, how can one estimate the ground-state
+energy of a complex system like helium without solving the Schrödinger
+equation?</strong>
+<ul>
+<li><em>Answer:</em> By picking a “guess” wave function with adjustable
+parameters and varying them to find the lowest possible average energy,
+as the calculated average energy will always be higher than (or equal
+to) the true ground-state energy.</li>
+</ul></li>
+</ol>
+<hr />
+<h2 id="essay-prompts-for-deeper-exploration">Essay Prompts for Deeper
+Exploration</h2>
+<ol type="1">
+<li><strong>The Evolution of Mechanical Notation:</strong> Compare the
+shift from component-based classical mechanics to vector notation with
+the shift in quantum mechanics from algebraic equations to state vectors
+and operators. How does the “operator way of writing” avoid specific
+choices, and why is this advantageous?</li>
+<li><strong>Equivalence of Representations:</strong> Discuss how
+Schrödinger’s wave mechanics and Heisenberg’s matrix mechanics, though
+discovered independently, were proven to be equivalent. Use the mapping
+between quantum operators and algebraic operators in the coordinate
+representation to support your explanation.</li>
+<li><strong>The Role of the Hamiltonian in Time Dynamics:</strong>
+Analyze the relationship between the Hamiltonian operator and the time
+evolution of average values. Explain how the “rate of change” operator
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mover><mi>A</mi><mo accent="true">̂</mo></mover><mo accent="true">̇</mo></mover><annotation encoding="application/x-tex">\dot{\hat{A}}</annotation></semantics></math>
+is derived and why it demonstrates that quantum mechanics contains
+classical laws as a special case.</li>
+<li><strong>Physical Observables and Hermitian Operators:</strong>
+Explore why the property of being “self-adjoint” is significant for
+operators representing physical measurements. How does the projection of
+a state onto energy base states justify the formula
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">⟨</mo><mi>E</mi><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><mo stretchy="false" form="prefix">⟨</mo><mi>ψ</mi><mo stretchy="false" form="prefix">|</mo><mover><mi>H</mi><mo accent="true">̂</mo></mover><mo stretchy="false" form="prefix">|</mo><mi>ψ</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">\langle E \rangle = \langle \psi|\hat{H}|\psi\rangle</annotation></semantics></math>?</li>
+</ol>
+<hr />
+<h2 id="glossary-of-important-terms">Glossary of Important Terms</h2>
+<ul>
+<li><strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mover><mi>A</mi><mo accent="true">̂</mo></mover><mo>†</mo></msup><annotation encoding="application/x-tex">\hat{A}^\dagger</annotation></semantics></math>
+(A Dagger):</strong> The Hermitian adjoint of operator
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>A</mi><mo accent="true">̂</mo></mover><annotation encoding="application/x-tex">\hat{A}</annotation></semantics></math>.</li>
+<li><strong>Commutation Rule:</strong> An equation showing the
+difference between
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>A</mi><mo accent="true">̂</mo></mover><mover><mi>B</mi><mo accent="true">̂</mo></mover></mrow><annotation encoding="application/x-tex">\hat{A}\hat{B}</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>B</mi><mo accent="true">̂</mo></mover><mover><mi>A</mi><mo accent="true">̂</mo></mover></mrow><annotation encoding="application/x-tex">\hat{B}\hat{A}</annotation></semantics></math>
+(e.g.,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">[</mo><mover><mi>x</mi><mo accent="true">̂</mo></mover><mo>,</mo><mover><mi>p</mi><mo accent="true">̂</mo></mover><mo stretchy="false" form="postfix">]</mo><mo>=</mo><mi>i</mi><mi>ℏ</mi></mrow><annotation encoding="application/x-tex">[\hat{x}, \hat{p}] = i\hbar</annotation></semantics></math>).</li>
+<li><strong>Coordinate Representation:</strong> Describing a quantum
+state using a wave function
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ψ</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo stretchy="false" form="postfix">)</mo><mo>=</mo><mo stretchy="false" form="prefix">⟨</mo><mi>x</mi><mo stretchy="false" form="prefix">|</mo><mi>ψ</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">\psi(x) = \langle x|\psi\rangle</annotation></semantics></math>
+rather than abstract vectors.</li>
+<li><strong>Hamiltonian
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mover><mi>H</mi><mo accent="true">̂</mo></mover><annotation encoding="application/x-tex">\hat{H}</annotation></semantics></math>):</strong>
+The operator corresponding to the total energy of a system.</li>
+<li><strong>Hermitian Operator:</strong> An operator that is its own
+Hermitian adjoint; usually associated with observable physical
+quantities.</li>
+<li><strong>Local Operator:</strong> An operator that can be written as
+a differential algebraic operator within a coordinate representation
+integral.</li>
+<li><strong>Matrix Elements:</strong> The set of numbers
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>A</mi><mrow><mi>i</mi><mi>j</mi></mrow></msub><mo>=</mo><mo stretchy="false" form="prefix">⟨</mo><mi>i</mi><mo stretchy="false" form="prefix">|</mo><mover><mi>A</mi><mo accent="true">̂</mo></mover><mo stretchy="false" form="prefix">|</mo><mi>j</mi><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">A_{ij} = \langle i|\hat{A}|j\rangle</annotation></semantics></math>
+that describe an operator within a specific basis.</li>
+<li><strong>Normalization:</strong> The scaling of a wave function such
+that the total probability of finding the particle is exactly one
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>∫</mo><mo stretchy="false" form="prefix">|</mo><mi>ψ</mi><msup><mo stretchy="false" form="prefix">|</mo><mn>2</mn></msup><mi>d</mi><mi>V</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">\int |\psi|^2 dV = 1</annotation></semantics></math>).</li>
+<li><strong>Operator:</strong> An abstract symbol standing for a
+physical operation that transforms one state into another.</li>
+<li><strong>Stationary State:</strong> A state of definite energy
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>E</mi><mi>i</mi></msub><annotation encoding="application/x-tex">E_i</annotation></semantics></math>)
+such that
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mover><mi>H</mi><mo accent="true">̂</mo></mover><mo stretchy="false" form="prefix">|</mo><msub><mi>η</mi><mi>i</mi></msub><mo stretchy="false" form="postfix">⟩</mo><mo>=</mo><msub><mi>E</mi><mi>i</mi></msub><mo stretchy="false" form="prefix">|</mo><msub><mi>η</mi><mi>i</mi></msub><mo stretchy="false" form="postfix">⟩</mo></mrow><annotation encoding="application/x-tex">\hat{H}|\eta_i\rangle = E_i|\eta_i\rangle</annotation></semantics></math>.</li>
+</ul>
+  </article>
+</main>
+</body>
+</html>

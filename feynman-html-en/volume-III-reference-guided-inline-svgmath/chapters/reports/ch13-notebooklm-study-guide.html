@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Propagation in a Crystal Lattice: Study Guide - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="en">
+  <script>
+    (() => {
+      const key = "flp-reader-theme";
+      const applyTheme = (theme) => {
+        const next = theme === "dark" ? "dark" : "light";
+        document.documentElement.dataset.theme = next;
+        document.body.dataset.theme = next;
+        try { localStorage.setItem(key, next); } catch (_) {}
+      };
+      try { applyTheme(localStorage.getItem(key) || "light"); } catch (_) { applyTheme("light"); }
+      document.addEventListener("click", (event) => {
+        const button = event.target.closest('[data-report-action="theme"]');
+        if (!button) return;
+        applyTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark");
+      });
+    })();
+  </script>
+<main class="notebooklm-report-shell">
+    <header aria-label="Quick navigation" class="reader-toolbar report-toolbar">
+      <div class="toolbar-group toolbar-navigation">
+        <a class="toolbar-btn" href="../ch13.html">Back to chapter</a>
+        <a class="toolbar-btn" href="../../../../feynman-reader/index.html">Reader</a>
+        <a class="toolbar-btn" href="../../index.html">Contents</a>
+      </div>
+      <a class="toolbar-title" href="../ch13.html#ch13" title="NotebookLM · Guide">NotebookLM · Guide</a>
+      <div class="toolbar-group toolbar-settings">
+        <button aria-label="Toggle theme" class="toolbar-btn icon-btn" data-report-action="theme" title="Toggle theme" type="button">◐</button>
+      </div>
+    </header>
+    <article class="notebooklm-report">
+<h1 id="propagation-in-a-crystal-lattice-study-guide">Propagation in a
+Crystal Lattice: Study Guide</h1>
+<p>This study guide explores the quantum mechanical behavior of
+particles, specifically electrons, as they move through the periodic
+structure of a crystal lattice. Based on the principles of state
+superposition and Hamiltonian equations, it explains why electrons can
+travel freely through solids and how imperfections influence this
+motion.</p>
+<hr />
+<h2 id="i.-key-concepts">I. Key Concepts</h2>
+<h3 id="the-paradox-of-electron-motion">1. The Paradox of Electron
+Motion</h3>
+<p>At first glance, a solid crystal appears to be a dense thicket of
+atoms that should scatter electrons almost immediately. However, in a
+perfect lattice, electrons move smoothly, similar to their behavior in a
+vacuum. This phenomenon is the foundation of modern electronics,
+including the operation of transistors.</p>
+<h3 id="base-states-and-the-hamiltonian">2. Base States and the
+Hamiltonian</h3>
+<p>To analyze a one-dimensional crystal, we define base states <span
+class="math inline">$\ket{n}$</span> where the electron is located at a
+specific atom
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>.
+* <strong>Amplitude Leakage:</strong> Unlike classical leakage (where
+levels equalize exponentially), quantum leakage involves complex
+amplitudes. The presence of the imaginary
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math>
+in the differential equations results in oscillatory solutions rather
+than simple decay. * <strong>The Governing Equation:</strong> The
+time-dependent behavior is described by:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mi>ℏ</mi><mfrac><mrow><mi>d</mi><msub><mi>C</mi><mi>n</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><mrow><mi>d</mi><mi>t</mi></mrow></mfrac><mo>=</mo><msub><mi>E</mi><mn>0</mn></msub><msub><mi>C</mi><mi>n</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mi>A</mi><msub><mi>C</mi><mrow><mi>n</mi><mo>+</mo><mn>1</mn></mrow></msub><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo><mo>−</mo><mi>A</mi><msub><mi>C</mi><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow></msub><mo stretchy="false" form="prefix">(</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">i\hbar \frac{d C_n(t)}{d t} = E_0C_n(t) - AC_{n+1}(t) - AC_{n-1}(t)</annotation></semantics></math>
+Where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>E</mi><mn>0</mn></msub><annotation encoding="application/x-tex">E_0</annotation></semantics></math>
+is the energy of an electron trapped at a single atom and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+represents the amplitude per unit time to jump to a neighboring
+atom.</p>
+<h3 id="stationary-states-and-energy-bands">3. Stationary States and
+Energy Bands</h3>
+<p>Seeking states of definite energy
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>C</mi><mi>n</mi></msub><mo>=</mo><msub><mi>a</mi><mi>n</mi></msub><msup><mi>e</mi><mrow><mi>−</mi><mi>i</mi><mi>E</mi><mi>t</mi><mi>/</mi><mi>ℏ</mi></mrow></msup></mrow><annotation encoding="application/x-tex">C_n = a_n e^{-iEt/\hbar}</annotation></semantics></math>)
+leads to the trial solution
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>=</mo><msup><mi>e</mi><mrow><mi>i</mi><mi>k</mi><msub><mi>x</mi><mi>n</mi></msub></mrow></msup></mrow><annotation encoding="application/x-tex">a_n = e^{ikx_n}</annotation></semantics></math>,
+where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math>
+is the wave number. * <strong>Energy-Wave Number Relation:</strong> The
+energy
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math>
+depends on
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math>:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>=</mo><msub><mi>E</mi><mn>0</mn></msub><mo>−</mo><mn>2</mn><mi>A</mi><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>k</mi><mi>b</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">E = E_0 - 2A \cos(kb)</annotation></semantics></math>
+* <strong>Energy Bands:</strong> The electron cannot have just any
+energy. Its energy is restricted to a “band” ranging from
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mn>0</mn></msub><mo>−</mo><mn>2</mn><mi>A</mi></mrow><annotation encoding="application/x-tex">E_0 - 2A</annotation></semantics></math>
+to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mn>0</mn></msub><mo>+</mo><mn>2</mn><mi>A</mi></mrow><annotation encoding="application/x-tex">E_0 + 2A</annotation></semantics></math>.
+* <strong>Brillouin Zone Range:</strong> Values of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math>
+are physically unique only within the range
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mi>π</mi><mi>/</mi><mi>b</mi></mrow><annotation encoding="application/x-tex">-\pi/b</annotation></semantics></math>
+to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>+</mi><mi>π</mi><mi>/</mi><mi>b</mi></mrow><annotation encoding="application/x-tex">+\pi/b</annotation></semantics></math>.
+Values outside this range merely repeat the same physical states.</p>
+<h3 id="wave-packets-and-effective-mass">4. Wave Packets and Effective
+Mass</h3>
+<p>By superposing states with slightly different
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math>
+values, we create a wave packet that moves at a <strong>group
+velocity</strong>
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>v</mi><mo>=</mo><mi>d</mi><mi>ω</mi><mi>/</mi><mi>d</mi><mi>k</mi></mrow><annotation encoding="application/x-tex">v = d\omega/dk</annotation></semantics></math>).
+* <strong>Classical Analogy:</strong> For small
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math>,
+the energy is proportional to the square of the velocity
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>≈</mo><mfrac><mn>1</mn><mn>2</mn></mfrac><msub><mi>m</mi><mtext mathvariant="normal">eff</mtext></msub><msup><mi>v</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">E \approx \frac{1}{2}m_{\text{eff}}v^2</annotation></semantics></math>).
+* <strong>Effective Mass
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>m</mi><mtext mathvariant="normal">eff</mtext></msub><annotation encoding="application/x-tex">m_{\text{eff}}</annotation></semantics></math>):</strong>
+This is a constant that characterizes the electron’s inertia within the
+crystal:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>m</mi><mtext mathvariant="normal">eff</mtext></msub><mo>=</mo><mfrac><msup><mi>ℏ</mi><mn>2</mn></msup><mrow><mn>2</mn><mi>A</mi><msup><mi>b</mi><mn>2</mn></msup></mrow></mfrac></mrow><annotation encoding="application/x-tex">m_{\text{eff}} = \frac{\hbar^2}{2Ab^2}</annotation></semantics></math>
+* <strong>Momentum:</strong> The relationship
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mo>=</mo><mi>ℏ</mi><mi>k</mi></mrow><annotation encoding="application/x-tex">p = \hbar k</annotation></semantics></math>
+holds true if we define momentum using the effective mass
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>m</mi><mtext mathvariant="normal">eff</mtext></msub><mi>v</mi></mrow><annotation encoding="application/x-tex">m_{\text{eff}}v</annotation></semantics></math>).</p>
+<h3 id="other-objects-in-the-lattice">5. Other “Objects” in the
+Lattice</h3>
+<p>The mathematics governing electron propagation applies to other
+entities: * <strong>Holes:</strong> The absence of an electron in a
+lattice. It behaves like a particle with a positive charge and its own
+effective mass. * <strong>Excitons:</strong> A state where an atom is
+excited and hands that excitation energy to a neighbor. It acts as a
+neutral particle carrying energy through the crystal.</p>
+<h3 id="lattice-imperfections-and-scattering">6. Lattice Imperfections
+and Scattering</h3>
+<p>If an “impurity” atom exists (e.g., at
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">n=0</annotation></semantics></math>
+with energy
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mn>0</mn></msub><mo>+</mo><mi>F</mi></mrow><annotation encoding="application/x-tex">E_0+F</annotation></semantics></math>),
+it acts as a scatterer. * <strong>Reflection and Transmission:</strong>
+An incident wave from the left will be partially reflected (amplitude
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>β</mi><annotation encoding="application/x-tex">\beta</annotation></semantics></math>)
+and partially transmitted (amplitude
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>γ</mi><annotation encoding="application/x-tex">\gamma</annotation></semantics></math>).
+For a single impurity atom,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>γ</mi><mo>=</mo><mn>1</mn><mo>+</mo><mi>β</mi></mrow><annotation encoding="application/x-tex">\gamma = 1 + \beta</annotation></semantics></math>.
+* <strong>Trapping:</strong> If
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>F</mi><annotation encoding="application/x-tex">F</annotation></semantics></math>
+is negative and the energy is below the bottom of the band, the electron
+can become “trapped” near the impurity. The probability of finding the
+electron at nearby atoms drops off exponentially (barrier
+penetration).</p>
+<hr />
+<h2 id="ii.-self-check-questions-short-answer">II. Self-Check Questions
+(Short Answer)</h2>
+<ol type="1">
+<li><strong>What physical constant determines the “inertia” of an
+electron in a crystal lattice, and how does it relate to the jump
+amplitude
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>?</strong></li>
+<li><strong>Why do we only consider values of the wave number
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math>
+between
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mi>π</mi><mi>/</mi><mi>b</mi></mrow><annotation encoding="application/x-tex">-\pi/b</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>+</mi><mi>π</mi><mi>/</mi><mi>b</mi></mrow><annotation encoding="application/x-tex">+\pi/b</annotation></semantics></math>?</strong></li>
+<li><strong>In the energy equation
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>=</mo><msub><mi>E</mi><mn>0</mn></msub><mo>−</mo><mn>2</mn><mi>A</mi><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mo stretchy="false" form="prefix">(</mo><mi>k</mi><mi>b</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">E = E_0 - 2A \cos(kb)</annotation></semantics></math>,
+what does
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>E</mi><mn>0</mn></msub><annotation encoding="application/x-tex">E_0</annotation></semantics></math>
+represent?</strong></li>
+<li><strong>What is the relationship between the transmitted amplitude
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>γ</mi><annotation encoding="application/x-tex">\gamma</annotation></semantics></math>)
+and the reflected amplitude
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>β</mi><annotation encoding="application/x-tex">\beta</annotation></semantics></math>)
+for a single impurity atom?</strong></li>
+<li><strong>How does the behavior of a “hole” differ from a standard
+electron in terms of charge?</strong></li>
+<li><strong>What happens to the trial solution
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false" form="postfix">)</mo><mo>=</mo><msup><mi>e</mi><mrow><mi>i</mi><mi>k</mi><msub><mi>x</mi><mi>n</mi></msub></mrow></msup></mrow><annotation encoding="application/x-tex">a(x_n) = e^{ikx_n}</annotation></semantics></math>
+if we attempt to describe a trapped electron state?</strong></li>
+<li><strong>In a three-dimensional cubic lattice, how does the effective
+mass change with the direction of motion if the lattice is perfectly
+symmetrical?</strong></li>
+<li><strong>What is the physical significance of the imaginary
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>i</mi><annotation encoding="application/x-tex">i</annotation></semantics></math>
+in the differential equations for
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>C</mi><mi>n</mi></msub><annotation encoding="application/x-tex">C_n</annotation></semantics></math>?</strong></li>
+</ol>
+<hr />
+<h2 id="iii.-common-misconceptions">III. Common Misconceptions</h2>
+<ul>
+<li><strong>Misconception:</strong> Effective mass is the same as the
+actual mass of the electron.
+<ul>
+<li><strong>Correction:</strong>
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>m</mi><mtext mathvariant="normal">eff</mtext></msub><annotation encoding="application/x-tex">m_{\text{eff}}</annotation></semantics></math>
+is a parameter determined by the lattice spacing
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>b</mi><annotation encoding="application/x-tex">b</annotation></semantics></math>)
+and the coupling amplitude
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>).
+It can be significantly different (0.1 to 30 times) from the free-space
+mass of an electron.</li>
+</ul></li>
+<li><strong>Misconception:</strong> Electrons “bump” into atoms as they
+move through a metal.
+<ul>
+<li><strong>Correction:</strong> In a perfect lattice, the electron wave
+propagates without friction or “collisions.” Scattering only occurs when
+the lattice is <em>imperfect</em> (e.g., missing atoms or
+impurities).</li>
+</ul></li>
+<li><strong>Misconception:</strong> Energy levels in a crystal are
+discrete like those in a single atom.
+<ul>
+<li><strong>Correction:</strong> While single atoms have discrete
+levels, the coupling of many atoms in a lattice spreads these levels
+into continuous <strong>energy bands</strong>.</li>
+</ul></li>
+<li><strong>Misconception:</strong> Probability “leaks” from one atom to
+another.
+<ul>
+<li><strong>Correction:</strong> It is the <em>amplitude</em> that
+leaks. This is a critical distinction because amplitude leakage leads to
+oscillatory wave behavior, whereas probability leakage would lead to a
+simple exponential equalization of levels.</li>
+</ul></li>
+</ul>
+<hr />
+<h2 id="iv.-essay-prompts-for-deeper-exploration">IV. Essay Prompts for
+Deeper Exploration</h2>
+<ol type="1">
+<li><strong>The Classical-Quantum Transition:</strong> Explain how the
+quantum mechanical wave packet in a crystal lattice eventually manifests
+as the behavior of a classical particle. Discuss the roles of group
+velocity, wave number, and effective mass in this transition.</li>
+<li><strong>The Physics of Imperfection:</strong> Compare and contrast
+the behavior of an electron in a perfect lattice versus one with a
+single impurity atom. Detail the conditions required for “scattering”
+versus “trapping.”</li>
+<li><strong>Analytic Continuation in Particle Physics:</strong> Discuss
+the theoretical relationship between scattering amplitudes and bound
+states. How can the mathematical “pole” of a scattering amplitude
+predict the existence of a trapped electron or a new particle?</li>
+<li><strong>Universality of Wave Propagation:</strong> Using the
+examples of electrons, holes, and excitons, argue how different physical
+phenomena can be described by the same mathematical framework. What does
+this suggest about the nature of quasi-particles in solid-state
+physics?</li>
+</ol>
+<hr />
+<h2 id="v.-glossary-of-important-terms">V. Glossary of Important
+Terms</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Term</th>
+<th style="text-align: left;">Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Base State (<span
+class="math inline">$\ket{n}$</span>)</strong></td>
+<td style="text-align: left;">A state where the electron is localized at
+a specific atom
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+in the lattice.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Energy Band</strong></td>
+<td style="text-align: left;">A continuous range of energies that an
+electron is permitted to have within a crystal.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Jump Amplitude
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>)</strong></td>
+<td style="text-align: left;">The amplitude per unit time for an
+electron to move from one atomic site to its neighbor.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Wave Number
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>k</mi><annotation encoding="application/x-tex">k</annotation></semantics></math>)</strong></td>
+<td style="text-align: left;">A parameter that describes the spatial
+variation of the phase of the electron’s amplitude along the
+lattice.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Effective Mass
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>m</mi><mtext mathvariant="normal">eff</mtext></msub><annotation encoding="application/x-tex">m_{\text{eff}}</annotation></semantics></math>)</strong></td>
+<td style="text-align: left;">A constant that relates the energy of an
+electron in a lattice to its velocity, mimicking classical inertia.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Hole</strong></td>
+<td style="text-align: left;">A “missing electron” in a lattice that
+behaves as a positively charged particle.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Exciton</strong></td>
+<td style="text-align: left;">A neutral “particle” consisting of an
+energy excitation moving through a crystal lattice.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Group Velocity</strong></td>
+<td style="text-align: left;">The speed at which a wave packet (and thus
+the electron it represents) moves through the crystal.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Scattering</strong></td>
+<td style="text-align: left;">The process by which an electron wave is
+reflected or deflected by an imperfection in the lattice.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Bound State</strong></td>
+<td style="text-align: left;">A state where an electron is trapped
+(localized) near an impurity because its energy is outside the allowed
+band.</td>
+</tr>
+</tbody>
+</table>
+  </article>
+</main>
+</body>
+</html>

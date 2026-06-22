@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Study Guide: The Dependence of Amplitudes on Time - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="en">
+  <script>
+    (() => {
+      const key = "flp-reader-theme";
+      const applyTheme = (theme) => {
+        const next = theme === "dark" ? "dark" : "light";
+        document.documentElement.dataset.theme = next;
+        document.body.dataset.theme = next;
+        try { localStorage.setItem(key, next); } catch (_) {}
+      };
+      try { applyTheme(localStorage.getItem(key) || "light"); } catch (_) { applyTheme("light"); }
+      document.addEventListener("click", (event) => {
+        const button = event.target.closest('[data-report-action="theme"]');
+        if (!button) return;
+        applyTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark");
+      });
+    })();
+  </script>
+<main class="notebooklm-report-shell">
+    <header aria-label="Quick navigation" class="reader-toolbar report-toolbar">
+      <div class="toolbar-group toolbar-navigation">
+        <a class="toolbar-btn" href="../ch07.html">Back to chapter</a>
+        <a class="toolbar-btn" href="../../../../feynman-reader/index.html">Reader</a>
+        <a class="toolbar-btn" href="../../index.html">Contents</a>
+      </div>
+      <a class="toolbar-title" href="../ch07.html#ch07" title="NotebookLM · Guide">NotebookLM · Guide</a>
+      <div class="toolbar-group toolbar-settings">
+        <button aria-label="Toggle theme" class="toolbar-btn icon-btn" data-report-action="theme" title="Toggle theme" type="button">◐</button>
+      </div>
+    </header>
+    <article class="notebooklm-report">
+<h1 id="study-guide-the-dependence-of-amplitudes-on-time">Study Guide:
+The Dependence of Amplitudes on Time</h1>
+<p>This study guide explores the principles of how quantum mechanical
+probability amplitudes evolve over time, the relationship between energy
+and frequency, and the transition from quantum behavior to classical
+mechanics. It is based on the analysis of the behavior of particles at
+rest, in uniform motion, and within varying potential fields.</p>
+<hr />
+<h2 id="i.-key-concepts">I. Key Concepts</h2>
+<h3 id="stationary-states-and-definite-energy">1. Stationary States and
+Definite Energy</h3>
+<p>A particle in a state of definite energy
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>E</mi><mn>0</mn></msub><annotation encoding="application/x-tex">E_0</annotation></semantics></math>
+is said to be in a <strong>stationary state</strong>. While the
+probability amplitude varies with time, the probability density (the
+absolute square of the amplitude) remains constant. * <strong>Amplitude
+for a Particle at Rest:</strong> The amplitude to find a particle of
+rest energy
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>E</mi><mn>0</mn></msub><annotation encoding="application/x-tex">E_0</annotation></semantics></math>
+at any point
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(x, y, z)</annotation></semantics></math>
+at time
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>t</mi><annotation encoding="application/x-tex">t</annotation></semantics></math>
+is expressed as:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>a</mi><msup><mi>e</mi><mrow><mi>−</mi><mi>i</mi><mo stretchy="false" form="prefix">(</mo><msub><mi>E</mi><mn>0</mn></msub><mi>/</mi><mi>ℏ</mi><mo stretchy="false" form="postfix">)</mo><mi>t</mi></mrow></msup></mrow><annotation encoding="application/x-tex">ae^{-i(E_0/\hbar)t}</annotation></semantics></math>
+* <strong>Equivalency of Energy:</strong> Energy can be specified in
+three equivalent ways: the frequency of an amplitude
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ω</mi><annotation encoding="application/x-tex">\omega</annotation></semantics></math>),
+classical energy
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math>),
+or inertia/mass
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>M</mi><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">Mc^2</annotation></semantics></math>),
+related by
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ℏ</mi><mi>ω</mi><mo>=</mo><mi>E</mi><mo>=</mo><mi>M</mi><msup><mi>c</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\hbar\omega = E = Mc^2</annotation></semantics></math>.
+* <strong>The Uncertainty Principle:</strong> A particle with a
+precisely definite energy has zero uncertainty in momentum
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>p</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\Delta p = 0</annotation></semantics></math>).
+Consequently, the uncertainty in position is infinite
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>x</mi><mo>=</mo><mi>∞</mi></mrow><annotation encoding="application/x-tex">\Delta x = \infty</annotation></semantics></math>),
+meaning the amplitude to find the particle is identical everywhere in
+space.</p>
+<h3 id="amplitudes-in-uniform-motion">2. Amplitudes in Uniform
+Motion</h3>
+<p>The description of a moving particle is derived by applying
+relativistic Lorentz transformations to the amplitude of a particle at
+rest. * <strong>Phase Variation:</strong> For a moving particle, the
+phase of the amplitude varies in both space and time. The amplitude for
+a particle with momentum
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math>
+and energy
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>E</mi><mi>p</mi></msub><annotation encoding="application/x-tex">E_p</annotation></semantics></math>
+is:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>−</mi><mo stretchy="false" form="prefix">(</mo><mi>i</mi><mi>/</mi><mi>ℏ</mi><mo stretchy="false" form="postfix">)</mo><mo stretchy="false" form="prefix">(</mo><msub><mi>E</mi><mi>p</mi></msub><mi>t</mi><mo>−</mo><mi mathvariant="bold-italic">𝒑</mi><mo>⋅</mo><mi mathvariant="bold-italic">𝒙</mi><mo stretchy="false" form="postfix">)</mo></mrow></msup><annotation encoding="application/x-tex">e^{-(i/\hbar)(E_pt - \mathbf{p}\cdot\mathbf{x})}</annotation></semantics></math>
+* <strong>De Broglie Wavelength:</strong> The spatial variation of the
+amplitude results in a wavelength
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi><mo>=</mo><mi>h</mi><mi>/</mi><mi>p</mi></mrow><annotation encoding="application/x-tex">\lambda = h/p</annotation></semantics></math>.
+* <strong>Group Velocity:</strong> When multiple amplitudes of nearly
+the same energy are superimposed, they create “lumps” in probability
+that move at the group velocity
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>v</mi><mi>g</mi></msub><mo>=</mo><mi>d</mi><mi>ω</mi><mi>/</mi><mi>d</mi><mi>k</mi></mrow><annotation encoding="application/x-tex">v_g = d\omega/dk</annotation></semantics></math>).
+This group velocity corresponds to the classical velocity of the
+particle
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mi>/</mi><mi>M</mi></mrow><annotation encoding="application/x-tex">p/M</annotation></semantics></math>).</p>
+<h3 id="potential-energy-and-energy-conservation">3. Potential Energy
+and Energy Conservation</h3>
+<p>Quantum mechanics incorporates potential energy
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math>)
+by adding it to the total energy coefficient of time. * <strong>Total
+Energy:</strong> The frequency of the amplitude oscillation is
+determined by the total energy: internal energy + kinetic energy +
+potential energy. * <strong>Phase Shifts:</strong> A constant potential
+shifts the phase of all states equally. This does not change the
+relative interference or the resulting probabilities. *
+<strong>Conservation of Energy:</strong> The classical law of
+conservation of energy is equivalent to the quantum mechanical
+requirement that frequencies remain constant across space if conditions
+(potentials) are not changing with time.</p>
+<h3 id="barrier-penetration-quantum-tunneling">4. Barrier Penetration
+(Quantum Tunneling)</h3>
+<p>When a particle encounters a potential barrier
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math>
+higher than its kinetic energy, the momentum
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math>
+becomes an imaginary number. * <strong>Exponential Decay:</strong>
+Instead of an oscillating wave, the amplitude becomes a real exponential
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>−</mi><msup><mi>p</mi><mo>′</mo></msup><mi>x</mi><mi>/</mi><mi>ℏ</mi></mrow></msup><annotation encoding="application/x-tex">e^{-p&#39;x/\hbar}</annotation></semantics></math>)
+that decreases rapidly. * <strong>Leakage:</strong> There is a non-zero
+probability that the amplitude reaches across a narrow forbidden region,
+allowing the particle to appear on the other side. * <strong>Example
+(Alpha Decay):</strong> This explains how alpha particles escape the
+uranium nucleus despite being classically trapped by a massive potential
+barrier. The “leakage” probability is extremely low (e.g.,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>−</mi><mn>45</mn></mrow></msup><annotation encoding="application/x-tex">e^{-45}</annotation></semantics></math>),
+leading to very long half-lives.</p>
+<h3 id="the-classical-limit-and-forces">5. The Classical Limit and
+Forces</h3>
+<p>In the classical limit (where potentials vary slowly and smoothly
+compared to the wavelength), quantum mechanics reproduces Newtonian
+mechanics
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>=</mo><mi>m</mi><mi>a</mi></mrow><annotation encoding="application/x-tex">F=ma</annotation></semantics></math>).
+* <strong>Refraction of Amplitudes:</strong> A transverse potential
+gradient causes different parts of a wavefront to advance in phase at
+different rates. This “bends” the wavefront, resulting in a deflection
+that matches the classical trajectory of a particle under a force.</p>
+<h3 id="spin-precession-in-a-magnetic-field">6. Spin Precession in a
+Magnetic Field</h3>
+<p>The time dependence of amplitudes explains the behavior of spin
+one-half particles in magnetic fields. * <strong>Phase
+Differential:</strong> In a uniform magnetic field
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>B</mi><annotation encoding="application/x-tex">B</annotation></semantics></math>,
+“spin up” and “spin down” states (relative to the field) have their
+phases change at different rates. * <strong>Precession:</strong> If a
+particle starts in a state of polarization in the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>-direction,
+the interference between its up and down components (relative to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>z</mi><annotation encoding="application/x-tex">z</annotation></semantics></math>)
+causes the direction of polarization to rotate (precess) around the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>z</mi><annotation encoding="application/x-tex">z</annotation></semantics></math>-axis.
+* <strong>Precession Frequency:</strong> The frequency at which the spin
+direction rotates is
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>ω</mi><mi>p</mi></msub><mo>=</mo><mn>2</mn><mi>μ</mi><mi>B</mi><mi>/</mi><mi>ℏ</mi></mrow><annotation encoding="application/x-tex">\omega_p = 2\mu B/\hbar</annotation></semantics></math>.</p>
+<hr />
+<h2 id="ii.-short-answer-practice-questions">II. Short-Answer Practice
+Questions</h2>
+<ol type="1">
+<li><strong>Why is a particle with a definite energy called being in a
+“stationary state” if its amplitude is constantly changing?</strong>
+<ul>
+<li><em>Answer:</em> Because any “probability question” asked about the
+state yields an answer independent of time; the absolute square of the
+imaginary exponential
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>−</mi><mi>i</mi><mo stretchy="false" form="prefix">(</mo><mi>E</mi><mi>/</mi><mi>ℏ</mi><mo stretchy="false" form="postfix">)</mo><mi>t</mi></mrow></msup><annotation encoding="application/x-tex">e^{-i(E/\hbar)t}</annotation></semantics></math>
+is 1, so the probability density does not change.</li>
+</ul></li>
+<li><strong>What determines the wavelength of a moving particle in
+quantum mechanics?</strong>
+<ul>
+<li><em>Answer:</em> The momentum
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math>
+of the particle, according to the formula
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>λ</mi><mo>=</mo><mi>h</mi><mi>/</mi><mi>p</mi></mrow><annotation encoding="application/x-tex">\lambda = h/p</annotation></semantics></math>.</li>
+</ul></li>
+<li><strong>How does the choice of the “zero” of the energy scale affect
+physical predictions?</strong>
+<ul>
+<li><em>Answer:</em> It has no effect. Shifting the energy scale by a
+constant
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>A</mi><annotation encoding="application/x-tex">A</annotation></semantics></math>
+multiplies all amplitudes by the same factor
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>−</mi><mi>i</mi><mo stretchy="false" form="prefix">(</mo><mi>A</mi><mi>/</mi><mi>ℏ</mi><mo stretchy="false" form="postfix">)</mo><mi>t</mi></mrow></msup><annotation encoding="application/x-tex">e^{-i(A/\hbar)t}</annotation></semantics></math>.
+When taking the absolute square to find probabilities, this factor
+disappears.</li>
+</ul></li>
+<li><strong>What happens to the momentum
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math>
+in a region where the potential
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>V</mi><annotation encoding="application/x-tex">V</annotation></semantics></math>
+is greater than the total energy
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>E</mi><annotation encoding="application/x-tex">E</annotation></semantics></math>?</strong>
+<ul>
+<li><em>Answer:</em> The momentum becomes an imaginary number, causing
+the amplitude to decay exponentially rather than oscillate.</li>
+</ul></li>
+<li><strong>What is the frequency of probability oscillation for a spin
+one-half particle in a magnetic field?</strong>
+<ul>
+<li><em>Answer:</em> The probability of finding the particle in its
+original state repeats with the frequency
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>μ</mi><mi>B</mi><mi>/</mi><mi>ℏ</mi></mrow><annotation encoding="application/x-tex">2\mu B/\hbar</annotation></semantics></math>.</li>
+</ul></li>
+<li><strong>How does the group velocity of a wave packet relate to
+classical physics?</strong>
+<ul>
+<li><em>Answer:</em> The group velocity
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>v</mi><mi>g</mi></msub><mo>=</mo><mi>d</mi><mi>E</mi><mi>/</mi><mi>d</mi><mi>p</mi></mrow><annotation encoding="application/x-tex">v_g = dE/dp</annotation></semantics></math>)
+is equal to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>p</mi><mi>/</mi><mi>M</mi></mrow><annotation encoding="application/x-tex">p/M</annotation></semantics></math>,
+which is the classical velocity of the particle.</li>
+</ul></li>
+</ol>
+<hr />
+<h2 id="iii.-common-misconceptions">III. Common Misconceptions</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Misconception</th>
+<th style="text-align: left;">Reality based on Source Context</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Particles with definite energy are
+localized.</strong></td>
+<td style="text-align: left;">Due to the uncertainty principle, a
+particle with a precise energy
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>p</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">\Delta p = 0</annotation></semantics></math>)
+has an infinite uncertainty in position
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi mathvariant="normal">Δ</mi><mi>x</mi><mo>=</mo><mi>∞</mi></mrow><annotation encoding="application/x-tex">\Delta x = \infty</annotation></semantics></math>).
+Its amplitude is the same everywhere in space.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>An excited atom has a perfectly
+definite energy.</strong></td>
+<td style="text-align: left;">This is only an approximation. Because
+atoms interact with the electromagnetic field and eventually decay
+(increasing entropy), they do not stay in excited states forever, making
+their energy slightly indefinite.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Particles cannot exist in regions
+where
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>&gt;</mo><mi>E</mi></mrow><annotation encoding="application/x-tex">V &gt; E</annotation></semantics></math>.</strong></td>
+<td style="text-align: left;">Classically, they cannot. Quantum
+mechanically, the amplitude is non-zero in these regions, though it
+decays exponentially. This allows for barrier penetration.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Force is a separate quantum
+concept.</strong></td>
+<td style="text-align: left;">Force is the result of potential
+gradients. A varying potential changes the phase of amplitudes across a
+wavefront, refracting it and causing the particle’s motion to bend,
+which we classically call “force.”</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="iv.-essay-prompts-for-deeper-exploration">IV. Essay Prompts for
+Deeper Exploration</h2>
+<ol type="1">
+<li><strong>The Synthesis of Relativity and Quantum Amplitudes:</strong>
+Explain how the Lorentz transformation of an amplitude for a particle at
+rest leads directly to the de Broglie wavelength for a moving
+particle.</li>
+<li><strong>The Role of Entropy in Atomic Decay:</strong> Discuss why an
+excited atom radiates a photon to reach a ground state rather than
+remaining excited or absorbing energy, specifically addressing the
+concept of equilibrium and the number of available states in the
+electromagnetic field.</li>
+<li><strong>Quantum Mechanics as the Foundation of Newtonian
+Mechanics:</strong> Describe the conditions under which quantum
+mechanical wave propagation produces the same results as
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>F</mi><mo>=</mo><mi>m</mi><mi>a</mi></mrow><annotation encoding="application/x-tex">F=ma</annotation></semantics></math>,
+and explain the mechanism (phase advancement and wavefront bending) that
+facilitates this.</li>
+<li><strong>Experimental Verification of Spin Precession:</strong>
+Analyze the muon decay experiment. How does the periodic variation in
+electron detection confirm the quantum mechanical description of phase
+changes in a magnetic field?</li>
+</ol>
+<hr />
+<h2 id="v.-glossary-of-important-terms">V. Glossary of Important
+Terms</h2>
+<ul>
+<li><strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ℏ</mi><annotation encoding="application/x-tex">\hbar</annotation></semantics></math>
+(h-bar):</strong> The reduced Planck constant
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi><mi>/</mi><mn>2</mn><mi>π</mi></mrow><annotation encoding="application/x-tex">h/2\pi</annotation></semantics></math>),
+used to relate energy to frequency
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo>=</mo><mi>ℏ</mi><mi>ω</mi></mrow><annotation encoding="application/x-tex">E = \hbar\omega</annotation></semantics></math>).</li>
+<li><strong>Amplitude:</strong> A complex number whose absolute square
+represents the probability of an event.</li>
+<li><strong>Barrier Penetration:</strong> The quantum mechanical
+phenomenon where a particle has a non-zero probability of passing
+through a potential energy barrier that it could not classically
+surmount.</li>
+<li><strong>Group Velocity:</strong> The velocity at which the
+“envelope” or “lump” of a superimposed wave group travels.</li>
+<li><strong>Ground State:</strong> The state of lowest possible energy
+for a given system.</li>
+<li><strong>Imaginary Momentum:</strong> A mathematical representation
+of the state of a particle in a classically forbidden region, leading to
+exponential decay of the probability amplitude.</li>
+<li><strong>Lorentz Transformation:</strong> The relativistic equations
+used to relate the coordinates of space and time between two inertial
+frames in motion.</li>
+<li><strong>Phase:</strong> The argument of the complex exponential in
+the amplitude; it determines the interference behavior between
+states.</li>
+<li><strong>Stationary State:</strong> A quantum state with a definite
+energy where the probability distribution is constant over time.</li>
+<li><strong>Transverse Potential Gradient:</strong> A change in
+potential energy occurring perpendicular to the direction of a
+particle’s motion, resulting in a force that deflects the particle.</li>
+</ul>
+  </article>
+</main>
+</body>
+</html>

@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Study Guide: The Hydrogen Atom and The Periodic Table - NotebookLM</title>
+  <link rel="stylesheet" href="../../styles-20260616-inline-math-copy-fallback.css">
+</head>
+<body class="notebooklm-report-page" data-language="en">
+  <script>
+    (() => {
+      const key = "flp-reader-theme";
+      const applyTheme = (theme) => {
+        const next = theme === "dark" ? "dark" : "light";
+        document.documentElement.dataset.theme = next;
+        document.body.dataset.theme = next;
+        try { localStorage.setItem(key, next); } catch (_) {}
+      };
+      try { applyTheme(localStorage.getItem(key) || "light"); } catch (_) { applyTheme("light"); }
+      document.addEventListener("click", (event) => {
+        const button = event.target.closest('[data-report-action="theme"]');
+        if (!button) return;
+        applyTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark");
+      });
+    })();
+  </script>
+<main class="notebooklm-report-shell">
+    <header aria-label="Quick navigation" class="reader-toolbar report-toolbar">
+      <div class="toolbar-group toolbar-navigation">
+        <a class="toolbar-btn" href="../ch19.html">Back to chapter</a>
+        <a class="toolbar-btn" href="../../../../feynman-reader/index.html">Reader</a>
+        <a class="toolbar-btn" href="../../index.html">Contents</a>
+      </div>
+      <a class="toolbar-title" href="../ch19.html#ch19" title="NotebookLM · Guide">NotebookLM · Guide</a>
+      <div class="toolbar-group toolbar-settings">
+        <button aria-label="Toggle theme" class="toolbar-btn icon-btn" data-report-action="theme" title="Toggle theme" type="button">◐</button>
+      </div>
+    </header>
+    <article class="notebooklm-report">
+<h1 id="study-guide-the-hydrogen-atom-and-the-periodic-table">Study
+Guide: The Hydrogen Atom and The Periodic Table</h1>
+<p>This study guide provides a comprehensive overview of the quantum
+mechanical treatment of the hydrogen atom and the resulting theoretical
+framework for the periodic table of elements, based on the principles of
+Schrödinger’s equation.</p>
+<hr />
+<h2 id="i.-key-concepts">I. Key Concepts</h2>
+<h3 id="schrödingers-equation-for-hydrogen">1. Schrödinger’s Equation
+for Hydrogen</h3>
+<p>To solve for the hydrogen atom, the proton is approximated as a fixed
+mass at the center. The electron is described by its amplitude to be at
+a position in space,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>ψ</mi><mo stretchy="false" form="prefix">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi><mo>,</mo><mi>t</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">\psi(x, y, z, t)</annotation></semantics></math>.
+The non-relativistic Schrödinger equation is:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>i</mi><mi>ℏ</mi><mfrac><mrow><mi>∂</mi><mi>ψ</mi></mrow><mrow><mi>∂</mi><mi>t</mi></mrow></mfrac><mo>=</mo><mi>−</mi><mfrac><msup><mi>ℏ</mi><mn>2</mn></msup><mrow><mn>2</mn><mi>m</mi></mrow></mfrac><msup><mi>∇</mi><mn>2</mn></msup><mi>ψ</mi><mo>−</mo><mfrac><msup><mi>e</mi><mn>2</mn></msup><mi>r</mi></mfrac><mi>ψ</mi></mrow><annotation encoding="application/x-tex">i\hbar\frac{\partial \psi}{\partial t} = -\frac{\hbar^2}{2m}\nabla^2\psi - \frac{e^2}{r}\psi</annotation></semantics></math>
+Because the potential energy
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>=</mo><mi>−</mi><msup><mi>e</mi><mn>2</mn></msup><mi>/</mi><mi>r</mi></mrow><annotation encoding="application/x-tex">V = -e^2/r</annotation></semantics></math>
+depends only on the radius
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math>,
+the equation is most effectively solved using <strong>spherical polar
+coordinates</strong>
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>r</mi><mo>,</mo><mi>θ</mi><mo>,</mo><mi>ϕ</mi></mrow><annotation encoding="application/x-tex">r, \theta, \phi</annotation></semantics></math>).</p>
+<h3 id="natural-atomic-units">2. Natural Atomic Units</h3>
+<p>Calculations are simplified by measuring distance and energy in
+“natural” units: * <strong>Bohr Radius
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>r</mi><mi>B</mi></msub><annotation encoding="application/x-tex">r_B</annotation></semantics></math>):</strong>
+The natural unit of length, approximately
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0.529</mn><annotation encoding="application/x-tex">0.529</annotation></semantics></math>
+angstroms
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msup><mi>ℏ</mi><mn>2</mn></msup><mi>/</mi><mi>m</mi><msup><mi>e</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\hbar^2/me^2</annotation></semantics></math>).
+* <strong>Rydberg
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>E</mi><mi>R</mi></msub><annotation encoding="application/x-tex">E_R</annotation></semantics></math>):</strong>
+The natural unit of energy, approximately
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>13.6</mn><annotation encoding="application/x-tex">13.6</annotation></semantics></math>
+electron volts
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><msup><mi>e</mi><mn>4</mn></msup><mi>/</mi><mn>2</mn><msup><mi>ℏ</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">me^4/2\hbar^2</annotation></semantics></math>).</p>
+<h3 id="the-radial-wave-function-and-energy-levels">3. The Radial Wave
+Function and Energy Levels</h3>
+<p>For bound states (where the electron is trapped by the proton), the
+wave function must go to zero as
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math>
+approaches infinity. This requirement forces the energy to be quantized.
+The allowed energies for hydrogen are:
+<math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>E</mi><mi>n</mi></msub><mo>=</mo><mi>−</mi><msub><mi>E</mi><mi>R</mi></msub><mrow><mo stretchy="true" form="prefix">(</mo><mfrac><mn>1</mn><msup><mi>n</mi><mn>2</mn></msup></mfrac><mo stretchy="true" form="postfix">)</mo></mrow></mrow><annotation encoding="application/x-tex">E_n = -E_R\left(\frac{1}{n^2}\right)</annotation></semantics></math>
+The <strong>principal quantum number</strong>
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>)
+is a positive integer
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mo>,</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mi>…</mi></mrow><annotation encoding="application/x-tex">1, 2, 3, \dots</annotation></semantics></math>).
+The lowest energy (ground state) occurs at
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n=1</annotation></semantics></math>.</p>
+<h3 id="quantum-numbers">4. Quantum Numbers</h3>
+<p>Three integers characterize the stationary states of the hydrogen
+atom: * <strong>Principal Quantum Number
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>):</strong>
+Determines the energy level. * <strong>Orbital Quantum Number
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>l</mi><annotation encoding="application/x-tex">l</annotation></semantics></math>):</strong>
+Determines the total orbital angular momentum.
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>l</mi><annotation encoding="application/x-tex">l</annotation></semantics></math>
+can range from
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mn>0</mn><annotation encoding="application/x-tex">0</annotation></semantics></math>
+to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>−</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">n-1</annotation></semantics></math>.
+* <strong>Magnetic Quantum Number
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math>):</strong>
+Determines the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>z</mi><annotation encoding="application/x-tex">z</annotation></semantics></math>-component
+of the angular momentum.
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math>
+ranges from
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>−</mi><mi>l</mi></mrow><annotation encoding="application/x-tex">-l</annotation></semantics></math>
+to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>+</mi><mi>l</mi></mrow><annotation encoding="application/x-tex">+l</annotation></semantics></math>.</p>
+<h3 id="angular-momentum-and-shells">5. Angular Momentum and Shells</h3>
+<p>The orbital angular momentum states are historically labeled with
+letters: *
+<strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>s</mi><annotation encoding="application/x-tex">s</annotation></semantics></math>-states
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>l</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">l=0</annotation></semantics></math>):</strong>
+Spherically symmetric; the amplitude is non-zero at the nucleus. *
+<strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math>-states
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>l</mi><mo>=</mo><mn>1</mn></mrow><annotation encoding="application/x-tex">l=1</annotation></semantics></math>):</strong>
+Three possible states
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>=</mo><mi>+</mi><mn>1</mn><mo>,</mo><mn>0</mn><mo>,</mo><mi>−</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">m = +1, 0, -1</annotation></semantics></math>);
+has a nodal plane. *
+<strong><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>d</mi><mo>,</mo><mi>f</mi><mo>,</mo><mi>g</mi><mo>,</mo><mi>h</mi><mi>…</mi></mrow><annotation encoding="application/x-tex">d, f, g, h \dots</annotation></semantics></math>:</strong>
+Higher angular momentum states
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>l</mi><mo>=</mo><mn>2</mn><mo>,</mo><mn>3</mn><mo>,</mo><mn>4</mn><mo>,</mo><mn>5</mn><mi>…</mi></mrow><annotation encoding="application/x-tex">l = 2, 3, 4, 5 \dots</annotation></semantics></math>).</p>
+<h3 id="the-exclusion-principle-and-the-periodic-table">6. The Exclusion
+Principle and the Periodic Table</h3>
+<p>In multi-electron atoms, the <strong>Pauli Exclusion
+Principle</strong> states that each electronic state can be occupied by
+only one electron. Since an electron can have two spin orientations (up
+or down), each orbital defined by
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>n</mi><mo>,</mo><mi>l</mi><mo>,</mo><mi>m</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(n, l, m)</annotation></semantics></math>
+can hold two electrons. * <strong>Chemical properties</strong> are
+determined by the configuration of the outermost electrons. *
+<strong>Ionization Energy
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>W</mi><mi>I</mi></msub><annotation encoding="application/x-tex">W_I</annotation></semantics></math>):</strong>
+The energy required to remove the most loosely bound electron. High
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>W</mi><mi>I</mi></msub><annotation encoding="application/x-tex">W_I</annotation></semantics></math>
+usually indicates chemical inertness (e.g., Noble Gases).</p>
+<hr />
+<h2 id="ii.-short-answer-practice-questions">II. Short-Answer Practice
+Questions</h2>
+<ol type="1">
+<li><strong>Why is the Schrödinger equation for hydrogen solved in polar
+coordinates instead of rectangular coordinates?</strong> Because the
+potential energy
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo>=</mo><mi>−</mi><msup><mi>e</mi><mn>2</mn></msup><mi>/</mi><mi>r</mi></mrow><annotation encoding="application/x-tex">V = -e^2/r</annotation></semantics></math>
+depends only on the distance
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>r</mi><annotation encoding="application/x-tex">r</annotation></semantics></math>
+from the nucleus (a central field), making the Laplacian much simpler to
+handle in
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mi>r</mi><mo>,</mo><mi>θ</mi><mo>,</mo><mi>ϕ</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">(r, \theta, \phi)</annotation></semantics></math>.</li>
+<li><strong>What physical condition on the wave function leads to the
+quantization of energy levels?</strong> The condition that the wave
+function for a bound electron must go to zero at very large distances
+(large
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ρ</mi><annotation encoding="application/x-tex">\rho</annotation></semantics></math>);
+this requires the power series in the solution to terminate as a finite
+polynomial.</li>
+<li><strong>What is the “pseudo-potential” or “centrifugal force” term
+in the radial equation?</strong> It is the term
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mfrac><mrow><mi>l</mi><mo stretchy="false" form="prefix">(</mo><mi>l</mi><mo>+</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo><msup><mi>ℏ</mi><mn>2</mn></msup></mrow><mrow><mn>2</mn><mi>m</mi><msup><mi>r</mi><mn>2</mn></msup></mrow></mfrac><annotation encoding="application/x-tex">\frac{l(l+1)\hbar^2}{2mr^2}</annotation></semantics></math>,
+which accounts for the energy associated with orbital angular momentum,
+effectively pushing the electron away from the nucleus.</li>
+<li><strong>How many
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math>-states
+exist for a given energy level
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>n</mi><mo>≥</mo><mn>2</mn></mrow><annotation encoding="application/x-tex">n \geq 2</annotation></semantics></math>?</strong>
+There are three states, corresponding to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>=</mo><mi>+</mi><mn>1</mn><mo>,</mo><mn>0</mn><mo>,</mo><mi>−</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">m = +1, 0, -1</annotation></semantics></math>.</li>
+<li><strong>Why does the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>s</mi></mrow><annotation encoding="application/x-tex">2s</annotation></semantics></math>
+state have a lower energy than the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>p</mi></mrow><annotation encoding="application/x-tex">2p</annotation></semantics></math>
+state in lithium, even though they are the same in hydrogen?</strong>
+The
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>s</mi></mrow><annotation encoding="application/x-tex">2s</annotation></semantics></math>
+electron has a higher amplitude to be near the nucleus (penetration),
+where it feels the full charge of the nucleus
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>+</mi><mn>3</mn></mrow><annotation encoding="application/x-tex">+3</annotation></semantics></math>)
+rather than the shielded charge
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>+</mi><mn>1</mn></mrow><annotation encoding="application/x-tex">+1</annotation></semantics></math>)
+felt by the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>p</mi></mrow><annotation encoding="application/x-tex">2p</annotation></semantics></math>
+electron.</li>
+<li><strong>Explain the “break” in ionization energy trends between
+Nitrogen
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Z</mi><mo>=</mo><mn>7</mn></mrow><annotation encoding="application/x-tex">Z=7</annotation></semantics></math>)
+and Oxygen
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Z</mi><mo>=</mo><mn>8</mn></mrow><annotation encoding="application/x-tex">Z=8</annotation></semantics></math>).</strong>
+In Nitrogen, the three
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>p</mi></mrow><annotation encoding="application/x-tex">2p</annotation></semantics></math>
+electrons occupy
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo></mrow><annotation encoding="application/x-tex">x, y,</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>z</mi><annotation encoding="application/x-tex">z</annotation></semantics></math>
+states separately to minimize repulsion. In Oxygen, the fourth
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>p</mi></mrow><annotation encoding="application/x-tex">2p</annotation></semantics></math>
+electron must pair up in an already occupied state, where it experiences
+strong mutual repulsion, making it easier to remove.</li>
+<li><strong>Why is the water molecule
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>2</mn></msub><mi>O</mi></mrow><annotation encoding="application/x-tex">H_2O</annotation></semantics></math>)
+not linear?</strong> Oxygen has two vacancies in its
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>p</mi></mrow><annotation encoding="application/x-tex">2p</annotation></semantics></math>
+orbitals (e.g., in the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>x</mi><annotation encoding="application/x-tex">x</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>y</mi><annotation encoding="application/x-tex">y</annotation></semantics></math>
+directions). Hydrogen atoms share electrons in these directed orbitals,
+which are at
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>90</mn><mo>∘</mo></msup><annotation encoding="application/x-tex">90^\circ</annotation></semantics></math>
+to each other. Electric repulsion between the hydrogens then pushes the
+angle out to
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mn>105</mn><mo>∘</mo></msup><annotation encoding="application/x-tex">105^\circ</annotation></semantics></math>.</li>
+</ol>
+<hr />
+<h2 id="iii.-essay-prompts-for-deeper-exploration">III. Essay Prompts
+for Deeper Exploration</h2>
+<ol type="1">
+<li><strong>The Role of Symmetry in Quantum Mechanics:</strong> Discuss
+how the spherical symmetry of the Coulomb potential
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo stretchy="false" form="prefix">(</mo><mi>r</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">V(r)</annotation></semantics></math>
+allows for the separation of the wave function into radial
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>F</mi><mi>l</mi></msub><mo stretchy="false" form="prefix">(</mo><mi>r</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">F_l(r)</annotation></semantics></math>)
+and angular
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>Y</mi><mrow><mi>l</mi><mo>,</mo><mi>m</mi></mrow></msub><annotation encoding="application/x-tex">Y_{l,m}</annotation></semantics></math>)
+components. How does this symmetry lead to the conservation of angular
+momentum?</li>
+<li><strong>From Hydrogen to the Periodic Table:</strong> Explain the
+approximations necessary to apply the hydrogenic model to multi-electron
+atoms. To what extent does the “central field approximation” succeed in
+explaining the chemical similarities of groups in the periodic
+table?</li>
+<li><strong>Visualizing the Invisible:</strong> Compare and contrast the
+physical structures of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>s</mi><mo>,</mo><mi>p</mi><mo>,</mo></mrow><annotation encoding="application/x-tex">s, p,</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>d</mi><annotation encoding="application/x-tex">d</annotation></semantics></math>
+orbitals. Discuss the significance of “nodes” (nodal planes and
+spherical nodes) in the context of probability amplitudes and
+energy.</li>
+<li><strong>The Physics of Chemical Bonds:</strong> Analyze how the
+angular distribution of
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>p</mi><annotation encoding="application/x-tex">p</annotation></semantics></math>-state
+wave functions (directed valences) dictates the geometric structure of
+molecules like
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>N</mi><msub><mi>H</mi><mn>3</mn></msub></mrow><annotation encoding="application/x-tex">NH_3</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>H</mi><mn>2</mn></msub><mi>S</mi></mrow><annotation encoding="application/x-tex">H_2S</annotation></semantics></math>.
+How does the size of the central atom affect these bond angles?</li>
+</ol>
+<hr />
+<h2 id="iv.-common-misconceptions">IV. Common Misconceptions</h2>
+<ul>
+<li><strong>“The electron orbits the nucleus like a planet.”</strong>
+<ul>
+<li><em>Correction:</em> In quantum mechanics, the electron is described
+by a probability amplitude (a “cloud” or “blob”). There are no precise
+planetary-like paths.</li>
+</ul></li>
+<li><strong>“All states with the same principal quantum number
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+have the same energy.”</strong>
+<ul>
+<li><em>Correction:</em> This is only true for the hydrogen atom
+(ignoring small effects). In all other atoms, the interaction with other
+electrons causes states with different orbital quantum numbers
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>l</mi><annotation encoding="application/x-tex">l</annotation></semantics></math>
+(like
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>s</mi></mrow><annotation encoding="application/x-tex">2s</annotation></semantics></math>
+vs. <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>p</mi></mrow><annotation encoding="application/x-tex">2p</annotation></semantics></math>)
+to have different energies.</li>
+</ul></li>
+<li><strong>“Noble gases are completely inert because their shells are
+filled.”</strong>
+<ul>
+<li><em>Correction:</em> While filled shells lead to great stability,
+some noble gases like Krypton can form weak compounds under specific
+conditions. Furthermore, having a filled shell is not the only
+requirement for stability; Beryllium has a filled
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mi>s</mi></mrow><annotation encoding="application/x-tex">2s</annotation></semantics></math>
+shell but is chemically active because the energy of that shell is
+high.</li>
+</ul></li>
+<li><strong>“The
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mi>d</mi></mrow><annotation encoding="application/x-tex">3d</annotation></semantics></math>
+shell always fills before the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><mi>s</mi></mrow><annotation encoding="application/x-tex">4s</annotation></semantics></math>
+shell.”</strong>
+<ul>
+<li><em>Correction:</em> Due to the centrifugal force pushing higher
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>l</mi><annotation encoding="application/x-tex">l</annotation></semantics></math>
+states to higher energies, the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>4</mn><mi>s</mi></mrow><annotation encoding="application/x-tex">4s</annotation></semantics></math>
+shell is actually lower in energy and fills before the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>3</mn><mi>d</mi></mrow><annotation encoding="application/x-tex">3d</annotation></semantics></math>
+shell begins filling at Scandium
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>Z</mi><mo>=</mo><mn>21</mn></mrow><annotation encoding="application/x-tex">Z=21</annotation></semantics></math>).</li>
+</ul></li>
+</ul>
+<hr />
+<h2 id="v.-glossary-of-important-terms">V. Glossary of Important
+Terms</h2>
+<table>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr>
+<th style="text-align: left;">Term</th>
+<th style="text-align: left;">Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Bohr Radius
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>r</mi><mi>B</mi></msub><annotation encoding="application/x-tex">r_B</annotation></semantics></math>)</strong></td>
+<td style="text-align: left;">The characteristic spreading distance of
+the
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>1</mn><mi>s</mi></mrow><annotation encoding="application/x-tex">1s</annotation></semantics></math>
+state of hydrogen
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≈</mo><mn>0.529</mn></mrow><annotation encoding="application/x-tex">\approx 0.529</annotation></semantics></math>
+Å).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Central Field</strong></td>
+<td style="text-align: left;">A potential
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>V</mi><mo stretchy="false" form="prefix">(</mo><mi>r</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">V(r)</annotation></semantics></math>
+that depends only on the distance from a central point, making the
+Hamiltonian symmetric under rotations.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Degenerate State</strong></td>
+<td style="text-align: left;">A situation where multiple different
+quantum states (different
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>l</mi><annotation encoding="application/x-tex">l</annotation></semantics></math>
+or
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>m</mi><annotation encoding="application/x-tex">m</annotation></semantics></math>)
+have the exact same energy.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Exclusion Principle</strong></td>
+<td style="text-align: left;">The rule that no two electrons in an atom
+can occupy the same quantum state.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Ionization Energy</strong></td>
+<td style="text-align: left;">The energy required to remove an electron
+from an atom; a measure of how tightly an electron is bound.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Legendre Polynomials</strong></td>
+<td style="text-align: left;">Mathematical functions,
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>P</mi><mi>l</mi></msub><mo stretchy="false" form="prefix">(</mo><mrow><mi mathvariant="normal">cos</mi><mo>&#8289;</mo></mrow><mi>θ</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">P_l(\cos\theta)</annotation></semantics></math>,
+used to describe the angular dependence of wave functions when
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mo>=</mo><mn>0</mn></mrow><annotation encoding="application/x-tex">m=0</annotation></semantics></math>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Nodal Surface</strong></td>
+<td style="text-align: left;">A region (plane, cone, or sphere) where
+the probability amplitude
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>ψ</mi><annotation encoding="application/x-tex">\psi</annotation></semantics></math>
+of finding an electron is zero.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Orbital Parity</strong></td>
+<td style="text-align: left;">A property of the wave function related to
+inversion; defined as
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo stretchy="false" form="prefix">(</mo><mn>1</mn><msup><mo stretchy="false" form="postfix">)</mo><mi>l</mi></msup></mrow><annotation encoding="application/x-tex">(1)^l</annotation></semantics></math>.
+For odd
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>l</mi><annotation encoding="application/x-tex">l</annotation></semantics></math>,
+the sign changes (odd parity); for even
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>l</mi><annotation encoding="application/x-tex">l</annotation></semantics></math>,
+it does not (even parity).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Rydberg
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>E</mi><mi>R</mi></msub><annotation encoding="application/x-tex">E_R</annotation></semantics></math>)</strong></td>
+<td style="text-align: left;">The ionization energy of the ground state
+of hydrogen
+(<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mo>≈</mo><mn>13.6</mn></mrow><annotation encoding="application/x-tex">\approx 13.6</annotation></semantics></math>
+eV).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Spherical Harmonics</strong></td>
+<td style="text-align: left;">The set of functions
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>Y</mi><mrow><mi>l</mi><mo>,</mo><mi>m</mi></mrow></msub><mo stretchy="false" form="prefix">(</mo><mi>θ</mi><mo>,</mo><mi>ϕ</mi><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">Y_{l,m}(\theta, \phi)</annotation></semantics></math>
+that describe the angular distribution of waves in spherical
+geometries.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Sub-shell</strong></td>
+<td style="text-align: left;">A set of states within a shell that have
+the same
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>n</mi><annotation encoding="application/x-tex">n</annotation></semantics></math>
+and
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>l</mi><annotation encoding="application/x-tex">l</annotation></semantics></math>
+values, capable of holding
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>2</mn><mo stretchy="false" form="prefix">(</mo><mn>2</mn><mi>l</mi><mo>+</mo><mn>1</mn><mo stretchy="false" form="postfix">)</mo></mrow><annotation encoding="application/x-tex">2(2l+1)</annotation></semantics></math>
+electrons.</td>
+</tr>
+</tbody>
+</table>
+  </article>
+</main>
+</body>
+</html>
