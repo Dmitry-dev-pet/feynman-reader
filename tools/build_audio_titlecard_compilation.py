@@ -67,10 +67,22 @@ def parse_titles(index: Path) -> dict[int, str]:
     return titles
 
 
-def collect_chapters(root: Path, index: Path, start: int, end: int) -> list[Chapter]:
+def parse_chapter_list(raw: str | None) -> list[int] | None:
+    if not raw:
+        return None
+    chapters: list[int] = []
+    for part in raw.split(","):
+        part = part.strip()
+        if part:
+            chapters.append(int(part))
+    return chapters
+
+
+def collect_chapters(root: Path, index: Path, start: int, end: int, explicit_chapters: list[int] | None = None) -> list[Chapter]:
     titles = parse_titles(index)
     chapters: list[Chapter] = []
-    for number in range(start, end + 1):
+    numbers = explicit_chapters if explicit_chapters is not None else list(range(start, end + 1))
+    for number in numbers:
         audio = root / f"ch{number:02d}-notebooklm-audio-deep-dive.mp3"
         if not audio.exists():
             raise SystemExit(f"Missing audio for chapter {number}: {audio}")
@@ -286,6 +298,7 @@ def main() -> int:
     parser.add_argument("--title", default="Feynman Reader RU Volume I - NotebookLM Audio")
     parser.add_argument("--start", type=int, required=True)
     parser.add_argument("--end", type=int, required=True)
+    parser.add_argument("--chapters", help="Comma-separated explicit chapter list; overrides start/end")
     parser.add_argument("--volume-label", default="Том I")
     parser.add_argument("--series-title", default="Фейнмановские лекции по физике")
     parser.add_argument("--chapter-label", default="Глава")
@@ -293,7 +306,7 @@ def main() -> int:
     parser.add_argument("--overwrite", action="store_true")
     args = parser.parse_args()
 
-    chapters = collect_chapters(args.media_root, args.index, args.start, args.end)
+    chapters = collect_chapters(args.media_root, args.index, args.start, args.end, parse_chapter_list(args.chapters))
     card_dir = args.out_dir / "cards"
     segment_dir = args.out_dir / "segments"
     for chapter in chapters:

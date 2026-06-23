@@ -7,6 +7,7 @@ import argparse
 import json
 import re
 import subprocess
+import time
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -78,14 +79,48 @@ def output_dir(language: str, volume_code: str) -> Path:
     return ROOT / f"feynman-html-{language}" / f"volume-{volume_code}-reference-guided-inline-svgmath" / "chapters" / "media"
 
 
-def audio_artifacts(profile: str, notebook_id: str) -> list[dict]:
+def audio_artifacts(profile: str, notebook_id: str, *, completed_only: bool = True) -> list[dict]:
     payload = run_json([str(NOTEBOOKLM), "-p", profile, "artifact", "list", "-n", notebook_id, "--json"])
     artifacts = []
     for artifact in payload.get("artifacts", []):
         type_text = f"{artifact.get('type_id') or ''} {artifact.get('type') or ''}".casefold()
-        if "audio" in type_text and str(artifact.get("status") or "") == "completed":
-            artifacts.append(artifact)
+        if "audio" not in type_text:
+            continue
+        if completed_only and str(artifact.get("status") or "") != "completed":
+            continue
+        artifacts.append(artifact)
     return sorted(artifacts, key=lambda item: str(item.get("created_at") or ""))
+
+
+def poll_artifact(profile: str, notebook_id: str, artifact_id: str) -> dict:
+    return run_json(
+        [
+            str(NOTEBOOKLM),
+            "-p",
+            profile,
+            "artifact",
+            "poll",
+            artifact_id,
+            "-n",
+            notebook_id,
+            "--json",
+        ],
+        timeout=120,
+    )
+
+
+def wait_artifact(args: argparse.Namespace, notebook: NotebookRef, artifact_id: str) -> dict:
+    deadline = time.monotonic() + args.timeout
+    last_payload: dict | None = None
+    while time.monotonic() < deadline:
+        last_payload = poll_artifact(notebook.profile, notebook.notebook_id, artifact_id)
+        status = str(last_payload.get("status") or "")
+        if status == "completed":
+            return last_payload
+        if status in {"failed", "error"}:
+            raise RuntimeError(json.dumps(last_payload, ensure_ascii=False))
+        time.sleep(30)
+    raise TimeoutError(f"timed out waiting for audio artifact {artifact_id}; last={last_payload}")
 
 
 def generate_audio(args: argparse.Namespace, notebook: NotebookRef) -> dict:
@@ -103,7 +138,7 @@ def generate_audio(args: argparse.Namespace, notebook: NotebookRef) -> dict:
         args.length,
         "--language",
         args.language,
-        "--wait",
+        "--no-wait",
         "--timeout",
         str(args.timeout),
         "--json",
@@ -137,11 +172,19 @@ def sync_one(args: argparse.Namespace, notebook: NotebookRef, media_dir: Path) -
     if out_path.exists() and out_path.stat().st_size > 0:
         return {"chapter": notebook.chapter, "profile": notebook.profile, "status": "exists", "path": str(out_path)}
 
+    all_existing = audio_artifacts(notebook.profile, notebook.notebook_id, completed_only=False)
+    pending = [artifact for artifact in all_existing if str(artifact.get("status") or "") in {"in_progress", "pending"}]
+    if pending:
+        wait_artifact(args, notebook, str(pending[-1]["id"]))
+
     artifacts = audio_artifacts(notebook.profile, notebook.notebook_id)
     generated = False
     if not artifacts and args.generate_missing:
-        generate_audio(args, notebook)
+        created = generate_audio(args, notebook)
         generated = True
+        artifact_id = str(created.get("task_id") or created.get("id") or "")
+        if artifact_id:
+            wait_artifact(args, notebook, artifact_id)
         artifacts = audio_artifacts(notebook.profile, notebook.notebook_id)
     if not artifacts:
         return {"chapter": notebook.chapter, "profile": notebook.profile, "status": "missing"}

@@ -7,6 +7,7 @@ import argparse
 import json
 import re
 import subprocess
+import time
 from dataclasses import dataclass
 from pathlib import Path
 
@@ -108,7 +109,7 @@ def generate_video(args: argparse.Namespace, notebook: NotebookRef) -> dict:
         args.style,
         "--language",
         args.language,
-        "--wait",
+        "--no-wait",
         "--timeout",
         str(args.timeout),
         "--json",
@@ -116,23 +117,35 @@ def generate_video(args: argparse.Namespace, notebook: NotebookRef) -> dict:
     return run_json(command, timeout=args.timeout + 60)
 
 
-def wait_artifact(args: argparse.Namespace, notebook: NotebookRef, artifact_id: str) -> dict:
+def poll_artifact(profile: str, notebook_id: str, artifact_id: str) -> dict:
     return run_json(
         [
             str(NOTEBOOKLM),
             "-p",
-            notebook.profile,
+            profile,
             "artifact",
-            "wait",
+            "poll",
             artifact_id,
             "-n",
-            notebook.notebook_id,
-            "--timeout",
-            str(args.timeout),
+            notebook_id,
             "--json",
         ],
-        timeout=args.timeout + 60,
+        timeout=120,
     )
+
+
+def wait_artifact(args: argparse.Namespace, notebook: NotebookRef, artifact_id: str) -> dict:
+    deadline = time.monotonic() + args.timeout
+    last_payload: dict | None = None
+    while time.monotonic() < deadline:
+        last_payload = poll_artifact(notebook.profile, notebook.notebook_id, artifact_id)
+        status = str(last_payload.get("status") or "")
+        if status == "completed":
+            return last_payload
+        if status in {"failed", "error"}:
+            raise RuntimeError(json.dumps(last_payload, ensure_ascii=False))
+        time.sleep(30)
+    raise TimeoutError(f"timed out waiting for video artifact {artifact_id}; last={last_payload}")
 
 
 def download_video(notebook: NotebookRef, artifact_id: str, out_path: Path) -> dict:

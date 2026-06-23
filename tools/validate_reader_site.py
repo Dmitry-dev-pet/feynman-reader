@@ -22,7 +22,7 @@ EXPECTED_CHAPTERS = {
 }
 EXPECTED_MEDIA_PAGES = {
     "ru-I": 52,
-    "en-I": 28,
+    "en-I": 52,
     "ru-II": 42,
     "en-II": 42,
     "ru-III": 21,
