@@ -1,0 +1,74 @@
+15–2 Mechanical and electrical energies
+
+We want now to show why the energy U_{\text{mech}} discussed in the previous section is not the correct energy associated with steady currents—that it does not keep track of the total energy in the world. We have, indeed, emphasized that it can be used like the energy, for computing forces from the principle of virtual work, provided that the current in the loop (and all other currents) do not change. Let’s see why all this works.
+
+Imagine that the loop in Fig. 15–2 is moving in the +x -direction and take the z -axis in the direction of \mathbf{B} . The conduction electrons in side 2 will experience a force along the wire, in the y -direction. But because of their flow—as an electric current—there is a component of their motion in the same direction as the force. Each electron is, therefore, having work done on it at the rate F_yv_y , where v_y , is the component of the electron velocity along the wire. We will call this work done on the electrons electrical work. Now it turns out that if the loop is moving in a uniform field, the total electrical work is zero, since positive work is done on some parts of the loop and an equal amount of negative work is done on other parts. But this is not true if the circuit is moving in a nonuniform field—then there will be a net amount of work done on the electrons. In general, this work would tend to change the flow of the electrons, but if the current is being held constant, energy must be absorbed or delivered by the battery or other source that is keeping the current steady. This energy was not included when we computed U_{\text{mech}} in Eq. ( 15.9), because our computations included only the mechanical forces on the body of the wire.
+
+You may be thinking: But the force on the electrons depends on how fast the wire is moved; perhaps if the wire is moved slowly enough this electrical energy can be neglected. It is true that the rate at which the electrical energy is delivered is proportional to the speed of the wire, but the total energy delivered is proportional also to the time that this rate goes on. So the total electrical energy is proportional to the velocity times the time, which is just the distance moved. For a given distance moved in a field the same amount of electrical work is done.
+
+Let’s consider a segment of wire of unit length carrying the current I and moving in a direction perpendicular to itself and to a magnetic field \mathbf{B} with the speed v_{\text{wire}} . Because of the current the electrons will have a drift velocity v_{\text{drift}} along the wire. The component of the magnetic force on each electron in the direction of the drift is q_ev_{\text{wire}}B . So the rate at which electrical work is being done is Fv_{\text{drift}}=(q_ev_{\text{wire}}B)v_{\text{drift}} . If there are N conduction electrons in the unit length of the wire, the total rate at which electrical work is being done is
+
+\frac{d U_{\text{elect}}}{d t}=Nq_ev_{\text{wire}}Bv_{\text{drift}}.
+
+But Nq_ev_{\text{drift}}=I , the current in the wire, so
+
+\frac{d U_{\text{elect}}}{d t}=Iv_{\text{wire}}B.
+
+Now since the current is held constant, the forces on the conduction electrons do not cause them to accelerate; the electrical energy is not going into the electrons but into the source that is keeping the current constant.
+
+But notice that the force on the wire is IB , so IBv_{\text{wire}} is also the rate of mechanical work done on the wire, dU_{\text{mech}}/dt=IBv_{\text{wire}} . We conclude that the mechanical work done on the wire is just equal to the electrical work done on the current source, so the energy of the loop is a constant!
+
+This is not a coincidence, but a consequence of the law we already know. The total force on each charge in the wire is
+
+\mathbf{F}=q(\mathbf{E}+\mathbf{v}\times\mathbf{B}).
+
+The rate at which work is done is
+
+\mathbf{v}\cdot\mathbf{F}=q[\mathbf{v}\cdot\mathbf{E}+\mathbf{v}\cdot(\mathbf{v}\times\mathbf{B})]. (15.12)
+
+If there are no electric fields we have only the second term, which is always zero. We shall see later that changing magnetic fields produce electric fields, so our reasoning applies only to moving wires in steady magnetic fields.
+
+How is it then that the principle of virtual work gives the right answer? Because we still have not taken into account the total energy of the world. We have not included the energy of the currents that are producing the magnetic field we start out with.
+
+Suppose we imagine a complete system such as that drawn in Fig. 15–3 (a), in which we are moving our loop with the current I_1 into the magnetic field \mathbf{B}_1 produced by the current I_2 in a coil. Now the current I_1 in the loop will also be producing some magnetic field \mathbf{B}_2 at the coil. If the loop is moving, the field \mathbf{B}_2 will be changing. As we shall see in the next chapter, a changing magnetic field generates an \mathbf{E} -field; and this \mathbf{E} -field will do work on the charges in the coil. This energy must also be included in our balance sheet of the total energy.
+
+Figure Ch15-F3
+Caption: Fig. 15–3.Finding the energy of a small loop in a magnetic field.
+Image: figures/Ch15-F3.svg
+![Fig. 15–3.Finding the energy of a small loop in a magnetic field.](figures/Ch15-F3.svg)
+
+We could wait until the next chapter to find out about this new energy term, but we can also see what it will be if we use the principle of relativity in the following way. When we are moving the loop toward the stationary coil we know that its electrical energy is just equal and opposite to the mechanical work done. So
+
+U_{\text{mech}}+U_{\text{elect}}(\text{loop})=0.
+
+Suppose now we look at what is happening from a different point of view, in which the loop is at rest, and the coil is moved toward it. The coil is then moving into the field produced by the loop. The same arguments would give that
+
+U_{\text{mech}}+U_{\text{elect}}(\text{coil})=0.
+
+The mechanical energy is the same in the two cases because it comes from the force between the two circuits.
+
+The sum of the two equations gives
+
+2U_{\text{mech}}+U_{\text{elect}}(\text{loop})+ U_{\text{elect}}(\text{coil})=0.
+
+The total energy of the whole system is, of course, the sum of the two electrical energies plus the mechanical energy taken only once. So we have
+
+\begin{aligned} U_{\text{total}}&=\phantom{-}U_{\text{elect}}(\text{loop})+ U_{\text{elect}}(\text{coil})+U_{\text{mech}}\\[1ex] &=-U_{\text{mech}}. \end{aligned} (15.13)
+
+The total energy of the world is really the negative of U_{\text{mech}} . If we want the true energy of a magnetic dipole, for example, we should write
+
+U_{\text{total}}=+\FLPmu\cdot\mathbf{B}.
+
+It is only if we make the condition that all currents are constant that we can use only a part of the energy, U_{\text{mech}} (which is always the negative of the true energy), to find the mechanical forces. In a more general problem, we must be careful to include all energies.
+
+We have seen an analogous situation in electrostatics. We showed that the energy of a capacitor is equal to Q^2/2C . When we use the principle of virtual work to find the force between the plates of the capacitor, the change in energy is equal to Q^2/2 times the change in 1/C . That is,
+
+\Delta U=\frac{Q^2}{2}\,\Delta\biggl(\frac{1}{C}\biggr)= -\frac{Q^2}{2}\,\frac{\Delta C}{C^2}. (15.14)
+
+Now suppose that we were to calculate the work done in moving two conductors subject to the different condition that the voltage between them is held constant. Then we can get the right answers for force from the principle of virtual work if we do something artificial. Since Q=CV , the real energy is \frac{1}{2}CV^2 . But if we define an artificial energy equal to -\frac{1}{2}CV^2 , then the principle of virtual work can be used to get forces by setting the change in the artificial energy equal to the mechanical work, provided that we insist that the voltage V be held constant. Then
+
+\Delta U_{\text{mech}}=\Delta\biggl(-\frac{CV^2}{2}\biggr)= -\frac{V^2}{2}\,\Delta C, (15.15)
+
+which is the same as Eq. ( 15.14). We get the correct result even though we are neglecting the work done by the electrical system to keep the voltage constant. Again, this electrical energy is just twice as big as the mechanical energy and of the opposite sign.
+
+Thus if we calculate artificially, disregarding the fact that the source of the potential has to do work to maintain the voltages constant, we get the right answer. It is exactly analogous to the situation in magnetostatics.

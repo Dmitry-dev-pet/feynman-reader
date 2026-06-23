@@ -1,0 +1,105 @@
+26–2 The fields of a point charge with a constant velocity
+
+Now that we have the potentials from a point charge moving at constant velocity, we ought to find the fields—for practical reasons. There are many cases where we have uniformly moving particles—for instance, cosmic rays going through a cloud chamber, or even slow-moving electrons in a wire. So let’s at least see what the fields actually do look like for any speed—even for speeds nearly that of light—assuming only that there is no acceleration. It is an interesting question.
+
+We get the fields from the potentials by the usual rules:
+
+\mathbf{E}=-\boldsymbol{\nabla}{\phi}-\frac{\partial \mathbf{A}}{\partial t},\quad \mathbf{B}=\mathbf{c}url{\mathbf{A}}.
+
+First, for E_z
+
+E_z=-\frac{\partial \phi}{\partial z}-\frac{\partial A_z}{\partial t}.
+
+But A_z is zero; so differentiating \phi in equations ( 26.1), we get
+
+E_z\!=\!\frac{q}{\overset{\phantom [}4\pi\epsilon_0\sqrt{1\!-\!v^2}} \frac{z}{\biggl[\! \dfrac{(x\!-\!vt)^2}{1\!-\!v^2}\!+\!y^2\!+\!z^2 \!\biggr]^{3/2}}. (26.2)
+
+Similarly, for E_y ,
+
+E_y\!=\!\frac{q}{\overset{\phantom [}4\pi\epsilon_0\sqrt{1\!-\!v^2}} \frac{y}{\biggl[\! \dfrac{(x\!-\!vt)^2}{1\!-\!v^2}\!+\!y^2\!+\!z^2 \!\biggr]^{3/2}}. (26.3)
+
+The x -component is a little more work. The derivative of \phi is more complicated and A_x is not zero. First,
+
+-\frac{\partial \phi}{\partial x}\!=\!\frac{q}{\overset{\phantom [}4\pi\epsilon_0\sqrt{1\!-\!v^2}} \frac{(x\!-\!vt)/(1\!-\!v^2)}{\biggl[\! \dfrac{(x\!-\!vt)^2}{1\!-\!v^2}\!+\!y^2\!+\!z^2 \!\biggr]^{3/2}}. (26.4)
+
+Then, differentiating A_x with respect to t , we find
+
+-\frac{\partial A_x}{\partial t}\!=\!\frac{q}{\overset{\phantom [}4\pi\epsilon_0\sqrt{1\!-\!v^2}} \frac{-v^2(x\!-\!vt)/(1\!-\!v^2)}{\biggl[\! \dfrac{(x\!-\!vt)^2}{1\!-\!v^2}\!+\!y^2\!+\!z^2 \!\biggr]^{3/2}}. (26.5)
+
+And finally, taking the sum,
+
+E_x\!=\!\frac{q}{\overset{\phantom [}4\pi\epsilon_0\sqrt{1\!-\!v^2}} \frac{x\!-\!vt}{\biggl[\! \dfrac{(x\!-\!vt)^2}{1\!-\!v^2}\!+\!y^2\!+\!z^2 \!\biggr]^{3/2}}. (26.6)
+
+We’ll look at the physics of \mathbf{E} in a minute; let’s first find \mathbf{B} . For the z -component,
+
+B_z=\frac{\partial A_y}{\partial x}-\frac{\partial A_x}{\partial y}.
+
+Since A_y is zero, we have just one derivative to get. Notice, however, that A_x is just v\phi , and \frac{\partial }{\partial y} of v\phi is just -vE_y . So
+
+B_z=vE_y. (26.7)
+
+Similarly,
+
+B_y=\frac{\partial A_x}{\partial z}-\frac{\partial A_z}{\partial x}=+v\,\frac{\partial \phi}{\partial z},
+
+and
+
+B_y=-vE_z. (26.8)
+
+Finally, B_x is zero, since A_y and A_z are both zero. We can write the magnetic field simply as
+
+\mathbf{B}=\mathbf{v}\times\mathbf{E}. (26.9)
+
+Now let’s see what the fields look like. We will try to draw a picture of the field at various positions around the present position of the charge. It is true that the influence of the charge comes, in a certain sense, from the retarded position; but because the motion is exactly specified, the retarded position is uniquely given in terms of the present position. For uniform velocities, it’s nicer to relate the fields to the current position, because the field components at (x,y,z) depend only on (x - vt) , y , and z —which are the components of the displacement \mathbf{r} from the present position to (x,y,z) (see Fig. 26–3 ).
+
+Figure Ch26-F3
+Caption: Fig. 26–3. For a charge moving with constant speed, the electric field points radially from the “present” position of the charge.
+Image: figures/Ch26-F3.svg
+![Fig. 26–3. For a charge moving with constant speed, the electric field points radially from the “present” position of the charge.](figures/Ch26-F3.svg)
+
+Consider first a point with z=0 . Then \mathbf{E} has only x - and y -components. From Eqs. ( 26.3) and ( 26.6), the ratio of these components is just equal to the ratio of the x - and y -components of the displacement. That means that \mathbf{E} is in the same direction as \mathbf{r} , as shown in Fig. 26–3 . Since E_z is also proportional to z , it is clear that this result holds in three dimensions. In short, the electric field is radial from the charge, and the field lines radiate directly out of the charge, just as they do for a stationary charge. Of course, the field isn’t exactly the same as for the stationary charge, because of all the extra factors of (1-v^2) . But we can show something rather interesting. The difference is just what you would get if you were to draw the Coulomb field with a peculiar set of coordinates in which the scale of x was squashed up by the factor \sqrt{1-v^2} . If you do that, the field lines will be spread out ahead and behind the charge and will be squeezed together around the sides, as shown in Fig. 26–4 .
+
+Figure Ch26-F4
+Caption: Fig. 26–4. The electric field of a charge moving with constant speed v=0.9cv=0.9c, part (b), compared with the field of a charge at rest, part (a).
+Image: figures/Ch26-F4.svg
+![Fig. 26–4. The electric field of a charge moving with constant speed v=0.9cv=0.9c, part (b), compared with the field of a charge at rest, part (a).](figures/Ch26-F4.svg)
+
+If we relate the strength of \mathbf{E} to the density of the field lines in the conventional way, we see a stronger field at the sides and a weaker field ahead and behind, which is just what the equations say. First, if we look at the strength of the field at right angles to the line of motion, that is, for (x-vt)=0 , the distance from the charge is \sqrt{y^2+z^2} . Here the total field strength is \sqrt{E_y^2+E_z^2} , which is
+
+E=\frac{q}{4\pi\epsilon_0\sqrt{1-v^2}}\, \frac{1}{y^2+z^2}. (26.10)
+
+The field is proportional to the inverse square of the distance—just like the Coulomb field except increased by the constant, extra factor 1/\sqrt{1-v^2} , which is always greater than one. So at the sides of a moving charge, the electric field is stronger than you get from the Coulomb law. In fact, the field in the sidewise direction is bigger than the Coulomb potential by the ratio of the energy of the particle to its rest mass.
+
+Ahead of the charge (and behind), y and z are zero and
+
+E=E_x=\frac{q(1-v^2)}{4\pi\epsilon_0(x-vt)^2}. (26.11)
+
+The field again varies as the inverse square of the distance from the charge but is now reduced by the factor (1-v^2) , in agreement with the picture of the field lines. If v/c is small, v^2/c^2 is still smaller, and the effect of the (1-v^2) terms is very small; we get back to Coulomb’s law. But if a particle is moving very close to the speed of light, the field in the forward direction is enormously reduced, and the field in the sidewise direction is enormously increased.
+
+Our results for the electric field of a charge can be put this way: Suppose you were to draw on a piece of paper the field lines for a charge at rest, and then set the picture to travelling with the speed v . Then, of course, the whole picture would be compressed by the Lorentz contraction; that is, the carbon granules on the paper would appear in different places. The miracle of it is that the picture you would see as the page flies by would still represent the field lines of the point charge. The contraction moves them closer together at the sides and spreads them out ahead and behind, just in the right way to give the correct line densities. We have emphasized before that field lines are not real but are only one way of representing the field. However, here they almost seem to be real. In this particular case, if you make the mistake of thinking that the field lines are somehow really there in space, and transform them, you get the correct field. That doesn’t, however, make the field lines any more real. All you need do to remind yourself that they aren’t real is to think about the electric fields produced by a charge together with a magnet; when the magnet moves, new electric fields are produced, and destroy the beautiful picture. So the neat idea of the contracting picture doesn’t work in general. It is, however, a handy way to remember what the fields from a fast-moving charge are like.
+
+Figure Ch26-F5
+Caption: Fig. 26–5. The magnetic field near a moving charge is v×E\Figv\times\FigE. [Compare with Fig. 26-4.]
+Image: figures/Ch26-F5.svg
+![Fig. 26–5. The magnetic field near a moving charge is v×E\Figv\times\FigE. [Compare with Fig. 26-4.]](figures/Ch26-F5.svg)
+
+The magnetic field is \mathbf{v}\times\mathbf{E} [from Eq. ( 26.9)]. If you take the velocity crossed into a radial \mathbf{E} -field, you get a \mathbf{B} which circles around the line of motion, as shown in Fig. 26–5. If we put back the c ’s, you will see that it’s the same result we had for low-velocity charges. A good way to see where the c ’s must go is to refer back to the force law,
+
+\mathbf{F}=q(\mathbf{E}+\mathbf{v}\times\mathbf{B}).
+
+You see that a velocity times the magnetic field has the same dimensions as an electric field. So the right-hand side of Eq. ( 26.9) must have a factor 1/c^2 :
+
+\mathbf{B}=\frac{\mathbf{v}\times\mathbf{E}}{c^2}. (26.12)
+
+For a slow-moving charge ( v\ll c ), we can take for \mathbf{E} the Coulomb field; then
+
+\mathbf{B}=\frac{q}{4\pi\epsilon_0 c^2}\, \frac{\mathbf{v}\times\mathbf{r}}{r^3}. (26.13)
+
+This formula corresponds exactly to equations for the magnetic field of a current that we found in Section 14-7 .
+
+We would like to point out, in passing, something interesting for you to think about. (We will come back to discuss it again later.) Imagine two protons with velocities at right angles, so that one will cross over the path of the other, but in front of it, so they don’t collide. At some instant, their relative positions will be as in Fig. 26–6 (a). We look at the force on q_1 due to q_2 and vice versa. On q_2 there is only the electric force from q_1 , since q_1 makes no magnetic field along its line of motion. On q_1 , however, there is again the electric force but, in addition, a magnetic force, since it is moving in a \mathbf{B} -field made by q_2 . The forces are as drawn in Fig. 26–6 (b). The electric forces on q_1 and q_2 are equal and opposite. However, there is a sidewise (magnetic) force on q_1 and no sidewise force on q_2 . Does action not equal reaction? We leave it for you to worry about.
+
+Figure Ch26-F6
+Caption: Fig. 26–6. The forces between two moving charges are not always equal and opposite. It appears that “action” is not equal to “reaction.”
+Image: figures/Ch26-F6.svg
+![Fig. 26–6. The forces between two moving charges are not always equal and opposite. It appears that “action” is not equal to “reaction.”](figures/Ch26-F6.svg)

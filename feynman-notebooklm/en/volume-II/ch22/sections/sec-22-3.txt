@@ -1,0 +1,115 @@
+22–3 Networks of ideal elements; Kirchhoff’s rules
+
+As we have seen in the last section, the description of an ideal circuit element in terms of what happens outside the element is quite simple. The current and the voltage are linearly related. But what is actually happening inside the element is quite complicated, and it is quite difficult to give a precise description in terms of Maxwell’s equations. Imagine trying to give a precise description of the electric and magnetic fields of the inside of a radio which contains hundreds of resistors, capacitors, and inductors. It would be an impossible task to analyze such a thing by using Maxwell’s equations. But by making the many approximations we have described in Section 22–2 and summarizing the essential features of the real circuit elements in terms of idealizations, it becomes possible to analyze an electrical circuit in a relatively straightforward way. We will now show how that is done.
+
+Figure Ch22-F9
+Caption: Fig. 22–9.The sum of the voltage drops around any closed path is zero.
+Image: figures/Ch22-F9.svg
+![Fig. 22–9.The sum of the voltage drops around any closed path is zero.](figures/Ch22-F9.svg)
+
+Suppose we have a circuit consisting of a generator and several impedances connected together, as shown in Fig. 22–9. According to our approximations there is no magnetic field in the region outside the individual circuit elements. Therefore the line integral of \mathbf{E} around any curve which does not pass through any of the elements is zero. Consider then the curve \Gamma shown by the broken line which goes all the way around the circuit in Fig. 22–9. The line integral of \mathbf{E} around this curve is made up of several pieces. Each piece is the line integral from one terminal of a circuit element to the other. This line integral we have called the voltage drop across the circuit element. The complete line integral is then just the sum of the voltage drops across all of the elements in the circuit:
+
+\oint\mathbf{E}\cdot d\mathbf{s}=\sum V_n.
+
+Since the line integral is zero, we have that the sum of the potential differences around a complete loop of a circuit is equal to zero:
+
+\underset{\substack{\text{around}\\\text{any loop}}}{\sum} V_n=0. (22.14)
+
+This result follows from one of Maxwell’s equations—that in a region where there are no magnetic fields the line integral of \mathbf{E} around any complete loop is zero.
+
+Figure Ch22-F10
+Caption: Fig. 22–10.The sum of the currents into any node is zero.
+Image: figures/Ch22-F10.svg
+![Fig. 22–10.The sum of the currents into any node is zero.](figures/Ch22-F10.svg)
+
+Suppose we consider now a circuit like that shown in Fig. 22–10. The horizontal line joining the terminals a , b , c , and d is intended to show that these terminals are all connected, or that they are joined by wires of negligible resistance. In any case, the drawing means that terminals a , b , c , and d are all at the same potential and, similarly, that the terminals e , f , g , and h are also at one common potential. Then the voltage drop V across each of the four elements is the same.
+
+Now one of our idealizations has been that negligible electrical charges accumulate on the terminals of the impedances. We now assume further that any electrical charges on the wires joining terminals can also be neglected. Then the conservation of charge requires that any charge which leaves one circuit element immediately enters some other circuit element. Or, what is the same thing, we require that the algebraic sum of the currents which enter any given junction must be zero. By a junction, of course, we mean any set of terminals such as a , b , c , and d which are connected. Such a set of connected terminals is usually called a “node.” The conservation of charge then requires that for the circuit of Fig. 22–10,
+
+I_1-I_2-I_3-I_4=0. (22.15)
+
+The sum of the currents entering the node which consists of the four terminals e , f , g , and h must also be zero:
+
+-I_1+I_2+I_3+I_4=0. (22.16)
+
+This is, of course, the same as Eq. ( 22.15). The two equations are not independent. The general rule is that the sum of the currents into any node must be zero:
+
+\underset{\substack{\text{into}\\\text{a node}}}{\sum} I_n=0. (22.17)
+
+Our earlier conclusion that the sum of the voltage drops around a closed loop is zero must apply to any loop in a complicated circuit. Also, our result that the sum of the currents into a node is zero must be true for any node. These two equations are known as Kirchhoff’s rules. With these two rules it is possible to solve for the currents and voltages in any network whatever.
+
+Figure Ch22-F11
+Caption: Fig. 22–11.Analyzing a circuit with Kirchhoff’s rules.
+Image: figures/Ch22-F11.svg
+![Fig. 22–11.Analyzing a circuit with Kirchhoff’s rules.](figures/Ch22-F11.svg)
+
+Suppose we consider the more complicated circuit of Fig. 22–11. How shall we find the currents and voltages in this circuit? We can find them in the following straightforward way. We consider separately each of the four subsidiary closed loops, which appear in the circuit. (For instance, one loop goes from terminal a to terminal b to terminal e to terminal d and back to terminal a .) For each of the loops we write the equation for the first of Kirchhoff’s rules—that the sum of the voltages around each loop is equal to zero. We must remember to count the voltage drop as positive if we are going in the direction of the current and negative if we are going across an element in the direction opposite to the current; and we must remember that the voltage drop across a generator is the negative of the emf in that direction. Thus if we consider the small loop that starts and ends at terminal a we have the equation
+
+z_1I_1+z_3I_3+z_4I_4-\emf_1=0.
+
+Applying the same rule to the remaining loops, we would get three more equations of the same kind.
+
+Next, we must write the current equation for each of the nodes in the circuit. For example, summing the currents into the node at terminal b gives the equation
+
+I_1-I_3-I_2=0.
+
+Similarly, for the node labeled e we would have the current equation
+
+I_3-I_4+I_8-I_5=0.
+
+For the circuit shown there are five such current equations. It turns out, however, that any one of these equations can be derived from the other four; there are, therefore, only four independent current equations. We thus have a total of eight independent, linear equations: the four voltage equations and the four current equations. With these eight equations we can solve for the eight unknown currents. Once the currents are known the circuit is solved. The voltage drop across any element is given by the current through that element times its impedance (or, in the case of the voltage sources, it is already known).
+
+We have seen that when we write the current equations, we get one equation which is not independent of the others. Generally it is also possible to write down too many voltage equations. For example, in the circuit of Fig. 22–11, although we have considered only the four small loops, there are a large number of other loops for which we could write the voltage equation. There is, for example, the loop along the path abcfeda . There is another loop which follows the path abcfehgda . You can see that there are many loops. In analyzing complicated circuits it is very easy to get too many equations. There are rules which tell us how to proceed so that only the minimum number of equations is written down, but usually with a little thought it is possible to see how to get the right number of equations in the simplest form. Besides, writing an extra equation or two doesn’t do any harm. They will not lead to any wrong answers, only perhaps a little unnecessary algebra.
+
+Figure Ch22-F12
+Caption: Fig. 22–12.A circuit which can be analyzed in terms of series and parallel combinations.
+Image: figures/Ch22-F12.svg
+![Fig. 22–12.A circuit which can be analyzed in terms of series and parallel combinations.](figures/Ch22-F12.svg)
+
+In Chapter 25 of Vol. I we showed that if the two impedances z_1 and z_2 are in series, they are equivalent to a single impedance z_s given by
+
+z_s=z_1+z_2. (22.18)
+
+We also showed that if the two impedances are connected in parallel, they are equivalent to the single impedance z_p given by
+
+z_p=\frac{1}{(1/z_1)+(1/z_2)}=\frac{z_1z_2}{z_1+z_2}. (22.19)
+
+If you look back you will see that in deriving these results we were in effect making use of Kirchhoff’s rules. It is often possible to analyze a complicated circuit by repeated application of the formulas for series and parallel impedances. For instance, the circuit of Fig. 22–12 can be analyzed that way. First, the impedances z_4 and z_5 can be replaced by their parallel equivalent, and so also can z_6 and z_7 . Then the impedance z_2 can be combined with the parallel equivalent of z_6 and z_7 by the series rule. Proceeding in this way, the whole circuit can be reduced to a generator in series with a single impedance Z . The current through the generator is then just \emf/Z . Then by working backward one can solve for the currents in each of the impedances.
+
+Figure Ch22-F13
+Caption: Fig. 22–13.A circuit that cannot be analyzed in terms of series and parallel combinations.
+Image: figures/Ch22-F13.svg
+![Fig. 22–13.A circuit that cannot be analyzed in terms of series and parallel combinations.](figures/Ch22-F13.svg)
+
+There are, however, quite simple circuits which cannot be analyzed by this method, as for example the circuit of Fig. 22–13. To analyze this circuit we must write down the current and voltage equations from Kirchhoff’s rules. Let’s do it. There is just one current equation:
+
+I_1+I_2+I_3=0,
+
+so we know immediately that
+
+I_3=-(I_1+I_2).
+
+We can save ourselves some algebra if we immediately make use of this result in writing the voltage equations. For this circuit there are two independent voltage equations; they are
+
+-\emf_1+I_2z_2-I_1z_1=0
+
+and
+
+\emf_2-(I_1+I_2)z_3-I_2z_2=0.
+
+There are two equations and two unknown currents. Solving these equations for I_1 and I_2 , we get
+
+I_1=\frac{z_2\emf_2-(z_2+z_3)\emf_1}{z_1(z_2+z_3)+z_2z_3} (22.20)
+
+and
+
+I_2=\frac{z_1\emf_2+z_3\emf_1}{z_1(z_2+z_3)+z_2z_3}. (22.21)
+
+The third current is obtained from the sum of these two.
+
+Figure Ch22-F14
+Caption: Fig. 22–14.A bridge circuit.
+Image: figures/Ch22-F14.svg
+![Fig. 22–14.A bridge circuit.](figures/Ch22-F14.svg)
+
+Another example of a circuit that cannot be analyzed by using the rules for series and parallel impedance is shown in Fig. 22–14. Such a circuit is called a “bridge.” It appears in many instruments used for measuring impedances. With such a circuit one is usually interested in the question: How must the various impedances be related if the current through the impedance z_3 is to be zero? We leave it for you to find the conditions for which this is so.

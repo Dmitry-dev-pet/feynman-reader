@@ -1,0 +1,62 @@
+38–5 Buckling
+
+We want now to use our beam theory to understand the theory of the “buckling” of beams, or columns, or rods. Consider the situation sketched in Fig. 38–16 in which a rod that would normally be straight is held in its bent shape by two opposite forces that push on the ends of the rod. We would like to calculate the shape of the rod and the magnitude of the forces on the ends.
+
+Figure Ch38-F16
+Caption: Fig. 38–16.A buckled beam.
+Image: figures/Ch38-F16.svg
+![Fig. 38–16.A buckled beam.](figures/Ch38-F16.svg)
+
+Let the deflection of the rod from the straight line between the ends be y(x) , where x is the distance from one end. The bending moment \bendingMom at the point P in the figure is equal to the force F multiplied by the moment arm, which is the perpendicular distance y ,
+
+\bendingMom(x)=Fy. (38.43)
+
+Using the beam equation ( 38.36), we have
+
+\frac{YI}{R}=Fy. (38.44)
+
+For small deflections, we can take 1/R=-d^2y/dx^2 (the minus sign because the curvature is downward). We get
+
+\frac{d^2y}{dx^2}=-\frac{F}{YI}\,y, (38.45)
+
+which is the differential equation of a sine wave. So for small deflections, the curve of such a bent beam is a sine curve. The “wavelength” \lambda of the sine wave is twice the distance L between the ends. If the bending is small, this is just twice the unbent length of the rod. So the curve is
+
+y=K\sin\pi x/L.
+
+Taking the second derivative, we get
+
+\frac{d^2y}{dx^2}=-\frac{\pi^2}{L^2}\,y.
+
+Comparing this to Eq. ( 38.45), we see that the force is
+
+F=\pi^2\,\frac{YI}{L^2}. (38.46)
+
+For small bendings the force is independent of the bending displacement y !
+
+We have, then, the following thing physically. If the force is less than the F given in Eq. ( 38.46), there will be no bending at all. But if it is slightly greater than this force, the material will suddenly bend a large amount—that is, for forces above the critical force \pi^2YI/L^2 (often called the “Euler force”) the beam will “buckle.” If the loading on the second floor of a building exceeds the Euler force for the supporting columns, the building will collapse. Another place where the buckling force is most important is in space rockets. On one hand, the rocket must be able to hold its own weight on the launching pad and endure the stresses during acceleration; on the other hand, it is important to keep the weight of the structure to a minimum, so that the payload and fuel capacity may be made as large as possible.
+
+Figure Ch38-F17
+Caption: Fig. 38–17.The coordinates SS and θ\theta for the curve of a bent beam.
+Image: figures/Ch38-F17.svg
+![Fig. 38–17.The coordinates SS and θ\theta for the curve of a bent beam.](figures/Ch38-F17.svg)
+
+Actually a beam will not necessarily collapse completely when the force exceeds the Euler force. When the displacements get large, the force is larger than what we have found because of the terms in 1/R in Eq. ( 38.38) that we have neglected. To find the forces for a large bending of the beam, we have to go back to the exact equation, Eq. ( 38.44), which we had before we used the approximate relation between R and y . Equation ( 38.44) has a rather simple geometrical property. 2 It’s a little complicated to work out, but rather interesting. Instead of describing the curve in terms of x and y , we can use two new variables: S , the distance along the curve, and \theta the slope of the tangent to the curve. See Fig. 38–17. The curvature is the rate of change of angle with distance:
+
+\frac{1}{R}=\frac{d \theta}{d S}.
+
+We can, therefore write the exact equation ( 38.44) as
+
+\frac{d \theta}{d S}=-\frac{F}{YI}\,y.
+
+If we take the derivative of this equation with respect to S and replace dy/dS by \sin\theta , we get
+
+\frac{d^2\theta}{dS^2}=-\frac{F}{YI}\sin\theta. (38.47)
+
+[If \theta is small, we get back Eq. ( 38.45). Everything is O.K.]
+
+Now it may or may not delight you to know that Eq. ( 38.47) is exactly the same one you get for the large amplitude oscillations of a pendulum—with F/YI replaced by another constant, of course. We learned way back in Chapter 9, Vol. I, how to find the solution of such an equation by a numerical calculation. 3 The answers you get are some fascinating curves—known as the curves of the “Elastica.” Figure 38–18 shows three curves for different values of F/YI .
+
+Figure Ch38-F18
+Caption: Fig. 38–18.Curves of a bent rod.
+Image: figures/Ch38-F18.svg
+![Fig. 38–18.Curves of a bent rod.](figures/Ch38-F18.svg)

@@ -1,0 +1,35 @@
+41–2 Viscous flow
+
+We now go to a general theory of viscous flow—at least in the most general form known to man. We already understand that the shear stress components are proportional to the spatial derivatives of the various velocity components such as \frac{\partial v_x}{\partial y} or \frac{\partial v_y}{\partial x} . However, in the general case of a compressible fluid there is another term in the stress which depends on other derivatives of the velocity. The general expression is
+
+S_{ij}=\eta\biggl(\frac{\partial v_i}{\partial x_j}+\frac{\partial v_j}{\partial x_i}\biggr)+ \eta'\,\delta_{ij}(\mathbf{d}iv{\mathbf{v}}), (41.13)
+
+where x_i is any one of the rectangular coordinates x , y , or z , and v_i is any one of the rectangular coordinates of the velocity. (The symbol \delta_{ij} is the Kronecker delta which is 1 when i=j and 0 for i\neq j .) The additional term adds \eta'\,\mathbf{d}iv{\mathbf{v}} to all the diagonal elements S_{ii} of the stress tensor. If the liquid is incompressible \mathbf{d}iv{\mathbf{v}}=0 , and this extra term doesn’t appear. So it has to do with internal forces during compression. So two constants are required to describe the liquid, just as we had two constants to describe a homogeneous elastic solid. The coefficient \eta is the “ordinary” coefficient of viscosity which we have already encountered. It is also called the first coefficient of viscosity or the “shear viscosity coefficient,” and the new coefficient \eta' is called the second coefficient of viscosity.
+
+Now we want to determine the viscous force per unit volume, \FLPf_{\text{visc}} , so we can put it into Eq. ( 41.1) to get the equation of motion for a real fluid. The force on a small cubical volume element of a fluid is the resultant of the forces on all the six faces. Taking them two at a time, we will get differences that depend on the derivatives of the stresses, and, therefore, on the second derivatives of the velocity. This is nice because it will get us back to a vector equation. The component of the viscous force per unit volume in the direction of the rectangular coordinate x_i is
+
+\begin{aligned} (f_{\text{visc}})_i =&\sum_{j=1}^3\frac{\partial S_{ij}}{\partial x_j}\\[.75ex] =&\sum_{j=1}^3\frac{\partial }{\partial x_j}\biggl\{ \eta\biggl(\frac{\partial v_i}{\partial x_j}+\frac{\partial v_j}{\partial x_i}\biggr) \biggr\}\\ &+\;\;\frac{\partial }{\partial x_i}\,(\eta'\,\mathbf{d}iv{\mathbf{v}}). \end{aligned} (41.14)
+
+Usually, the variation of the viscosity coefficients with position is not significant and can be neglected. Then, the viscous force per unit volume contains only second derivatives of the velocity. We saw in Chapter 39 that the most general form of second derivatives that can occur in a vector equation is the sum of a term in the Laplacian ( \mathbf{d}iv{\boldsymbol{\nabla}}\mathbf{v}=\nabla^2\mathbf{v} ), and a term in the gradient of the divergence \bigl(\boldsymbol{\nabla}{(\mathbf{d}iv{\mathbf{v}})}\bigr) . Equation ( 41.14) is just such a sum with the coefficients \eta and (\eta+\eta') . We get
+
+\FLPf_{\text{visc}}=\eta\,\nabla^2\mathbf{v}+(\eta+\eta')\, \boldsymbol{\nabla}{(\mathbf{d}iv{\mathbf{v}})}. (41.15)
+
+In the incompressible case, \mathbf{d}iv{\mathbf{v}}=0 , and the viscous force per unit volume is just \eta\,\nabla^2\mathbf{v} . That is all that many people use; however, if you should want to calculate the absorption of sound in a fluid, you would need the second term.
+
+We can now complete our general equation of motion for a real fluid. Substituting Eq. ( 41.15) into Eq. ( 41.1), we get
+
+\begin{aligned} \rho\biggl\{\frac{\partial \mathbf{v}}{\partial t}+(\mathbf{v}\cdot\boldsymbol{\nabla})\mathbf{v}\biggr\}=\\[1.25ex] -\boldsymbol{\nabla}{p}-\rho\,\boldsymbol{\nabla}{\phi}+\eta\,\nabla^2\mathbf{v}+ (\eta+\eta')\,\boldsymbol{\nabla}{(\mathbf{d}iv{\mathbf{v}})}. \end{aligned}
+
+It’s complicated. But that’s the way nature is.
+
+If we introduce the vorticity \boldsymbol{\Omega}=\mathbf{c}url{\mathbf{v}} , as we did before, we can write our equation as
+
+\begin{gathered} \rho\biggl\{\frac{\partial \mathbf{v}}{\partial t}+\boldsymbol{\Omega}\times\mathbf{v}+ \frac{1}{2}\,\boldsymbol{\nabla}{v^2}\biggr\}=\\[1.25ex] -\boldsymbol{\nabla}{p}-\rho\,\boldsymbol{\nabla}{\phi}+\eta\,\nabla^2\mathbf{v} +(\eta+\eta')\,\boldsymbol{\nabla}{(\mathbf{d}iv{\mathbf{v}})}. \end{gathered} (41.16)
+
+We are supposing again that the only body forces acting are conservative forces like gravity. To see what the new term means, let’s look at the incompressible fluid case. Then, if we take the curl of Eq. ( 41.16), we get
+
+\frac{\partial \boldsymbol{\Omega}}{\partial t}+\mathbf{c}url{(\boldsymbol{\Omega}\times\mathbf{v})}= \frac{\eta}{\rho}\,\nabla^2\boldsymbol{\Omega}. (41.17)
+
+This is like Eq. ( 40.9) except for the new term on the right-hand side. When the right-hand side was zero, we had the Helmholtz theorem that the vorticity stays with the fluid. Now, we have the rather complicated nonzero term on the right-hand side which, however, has straightforward physical consequences. If we disregard for the moment the term \mathbf{c}url{(\boldsymbol{\Omega}\times\mathbf{v})} , we have a diffusion equation. The new term means that the vorticity \boldsymbol{\Omega} diffuses through the fluid. If there is a large gradient in the vorticity, it will spread out into the neighboring fluid.
+
+This is the term that causes the smoke ring to get thicker as it goes along. Also, it shows up nicely if you send a “clean” vortex (a “smokeless” ring made by the apparatus described in the last chapter) through a cloud of smoke. When it comes out of the cloud, it will have picked up some smoke, and you will see a hollow shell of a smoke ring. Some of the \boldsymbol{\Omega} diffuses outward into the smoke, while still maintaining its forward motion with the vortex.

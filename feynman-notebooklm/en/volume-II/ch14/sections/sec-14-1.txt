@@ -1,0 +1,100 @@
+14–1 The vector potential
+
+In this chapter we continue our discussion of magnetic fields associated with steady currents—the subject of magnetostatics. The magnetic field is related to electric currents by our basic equations
+
+\begin{aligned} \mathbf{d}iv{\mathbf{B}}=0,\\[1ex] c^2\mathbf{c}url{\mathbf{B}}=\frac{\mathbf{j}}{\epsilon_0}. \end{aligned} (14.1)
+
+We want now to solve these equations mathematically in a general way, that is, without requiring any special symmetry or intuitive guessing. In electrostatics, we found that there was a straightforward procedure for finding the field when the positions of all electric charges are known: One simply works out the scalar potential \phi by taking an integral over the charges—as in Eq. ( 4.25). Then if one wants the electric field, it is obtained from the derivatives of \phi . We will now show that there is a corresponding procedure for finding the magnetic field \mathbf{B} if we know the current density \mathbf{j} of all moving charges.
+
+In electrostatics we saw that (because the curl of \mathbf{E} was always zero) it was possible to represent \mathbf{E} as the gradient of a scalar field \phi . Now the curl of \mathbf{B} is not always zero, so it is not possible, in general, to represent it as a gradient. However, the divergence of \mathbf{B} is always zero, and this means that we can always represent \mathbf{B} as the curl of another vector field. For, as we saw in Section 2–7 , the divergence of a curl is always zero. Thus we can always relate \mathbf{B} to a field we will call \mathbf{A} by
+
+\mathbf{B}=\mathbf{c}url{\mathbf{A}}. (14.3)
+
+Or, by writing out the components,
+
+\begin{alignedat}{4} &B_x&&=(\mathbf{c}url{\mathbf{A}})_x&&=\frac{\partial A_z}{\partial y}&&-\frac{\partial A_y}{\partial z},\\[.75ex] &B_y&&=(\mathbf{c}url{\mathbf{A}})_y&&=\frac{\partial A_x}{\partial z}&&-\frac{\partial A_z}{\partial x},\\[.75ex] &B_z&&=(\mathbf{c}url{\mathbf{A}})_z&&=\frac{\partial A_y}{\partial x}&&-\frac{\partial A_x}{\partial y}.\\ \end{alignedat} (14.4)
+
+Writing \mathbf{B}=\mathbf{c}url{\mathbf{A}} guarantees that Eq. ( 14.1) is satisfied, since, necessarily,
+
+\mathbf{d}iv{\mathbf{B}}=\mathbf{d}iv{(\mathbf{c}url{\mathbf{A}})}=0.
+
+The field \mathbf{A} is called the vector potential.
+
+You will remember that the scalar potential \phi was not completely specified by its definition. If we have found \phi for some problem, we can always find another potential \phi' that is equally good by adding a constant:
+
+\phi'=\phi+C.
+
+The new potential \phi' gives the same electric fields, since the gradient \boldsymbol{\nabla}{C} is zero; \phi' and \phi represent the same physics.
+
+Similarly, we can have different vector potentials \mathbf{A} which give the same magnetic fields. Again, because \mathbf{B} is obtained from \mathbf{A} by differentiation, adding a constant to \mathbf{A} doesn’t change anything physical. But there is even more latitude for \mathbf{A} . We can add to \mathbf{A} any field which is the gradient of some scalar field, without changing the physics. We can show this as follows. Suppose we have an \mathbf{A} that gives correctly the magnetic field \mathbf{B} for some real situation, and ask in what circumstances some other new vector potential \mathbf{A}' will give the same field \mathbf{B} if substituted into ( 14.3). Then \mathbf{A} and \mathbf{A}' must have the same curl:
+
+\mathbf{B}=\mathbf{c}url{\mathbf{A}'}=\mathbf{c}url{\mathbf{A}}.
+
+Therefore
+
+\mathbf{c}url{\mathbf{A}'}-\mathbf{c}url{\mathbf{A}}=\mathbf{c}url{(\mathbf{A}'-\mathbf{A})}=\FLPzero.
+
+But if the curl of a vector is zero it must be the gradient of some scalar field, say \psi , so \mathbf{A}'-\mathbf{A}=\boldsymbol{\nabla}{\psi} . That means that if \mathbf{A} is a satisfactory vector potential for a problem then, for any \psi , at all,
+
+\mathbf{A}'=\mathbf{A}+\boldsymbol{\nabla}{\psi} (14.5)
+
+will be an equally satisfactory vector potential, leading to the same field \mathbf{B} .
+
+It is usually convenient to take some of the “latitude” out of \mathbf{A} by arbitrarily placing some other condition on it (in much the same way that we found it convenient—often—to choose to make the potential \phi zero at large distances). We can, for instance, restrict \mathbf{A} by choosing arbitrarily what the divergence of \mathbf{A} must be. We can always do that without affecting \mathbf{B} . This is because although \mathbf{A}' and \mathbf{A} have the same curl, and give the same \mathbf{B} , they do not need to have the same divergence. In fact, \mathbf{d}iv{\mathbf{A}'}=\mathbf{d}iv{\mathbf{A}}+\nabla^2\psi , and by a suitable choice of \psi we can make \mathbf{d}iv{\mathbf{A}'} anything we wish.
+
+What should we choose for \mathbf{d}iv{\mathbf{A}} ? The choice should be made to get the greatest mathematical convenience and will depend on the problem we are doing. For magnetostatics, we will make the simple choice
+
+\mathbf{d}iv{\mathbf{A}}=0. (14.6)
+
+(Later, when we take up electrodynamics, we will change our choice.) Our complete definition 1 of \mathbf{A} is then, for the moment, \mathbf{c}url{\mathbf{A}}=\mathbf{B} and \mathbf{d}iv{\mathbf{A}}=0 .
+
+To get some experience with the vector potential, let’s look first at what it is for a uniform magnetic field \mathbf{B}_0 . Taking our z -axis in the direction of \mathbf{B}_0 , we must have
+
+\begin{alignedat}{4} &B_x&&=\frac{\partial A_z}{\partial y}&&-\frac{\partial A_y}{\partial z}&&=0,\\[1ex] &B_y&&=\frac{\partial A_x}{\partial z}&&-\frac{\partial A_z}{\partial x}&&=0,\\[1ex] &B_z&&=\frac{\partial A_y}{\partial x}&&-\frac{\partial A_x}{\partial y}&&=B_0.\\ \end{alignedat} (14.7)
+
+By inspection, we see that one possible solution of these equations is
+
+A_y=xB_0,\quad A_x=0,\quad A_z=0.
+
+Or we could equally well take
+
+A_x=-yB_0,\quad A_y=0,\quad A_z=0.
+
+Still another solution is a linear combination of the two:
+
+A_x=-\frac{1}{2}yB_0,\quad A_y=\frac{1}{2}xB_0,\quad A_z=0. (14.8)
+
+It is clear that for any particular field \mathbf{B} , the vector potential \mathbf{A} is not unique; there are many possibilities.
+
+The third solution, Eq. ( 14.8), has some interesting properties. Since the x -component is proportional to -y and the y -component is proportional to +x , \mathbf{A} must be at right angles to the vector from the z -axis, which we will call \mathbf{r}' (the “prime” is to remind us that it is not the vector displacement from the origin). Also, the magnitude of \mathbf{A} is proportional to \sqrt{x^2+y^2} and, hence, to r' . So \mathbf{A} can be simply written (for our uniform field) as
+
+\mathbf{A}=\frac{1}{2}\mathbf{B}_0\times\mathbf{r}'. (14.9)
+
+The vector potential \mathbf{A} has the magnitude B_0r'/2 and rotates about the z -axis as shown in Fig. 14–1 . If, for example, the \mathbf{B} field is the axial field inside a solenoid, then the vector potential circulates in the same sense as do the currents of the solenoid.
+
+Figure Ch14-F1
+Caption: Fig. 14–1.A uniform magnetic field B\FigB in the zz-direction corresponds to a vector potential A\FigA that rotates about the zz-axis, with the magnitude A=Br′/2A=Br'/2 (r′r' is the displacement from the zz-axis).
+Image: figures/Ch14-F1.svg
+![Fig. 14–1.A uniform magnetic field B\FigB in the zz-direction corresponds to a vector potential A\FigA that rotates about the zz-axis, with the magnitude A=Br′/2A=Br'/2 (r′r' is the displacement from the zz-axis).](figures/Ch14-F1.svg)
+
+The vector potential for a uniform field can be obtained in another way. The circulation of \mathbf{A} on any closed loop \Gamma can be related to the surface integral of \mathbf{c}url{\mathbf{A}} by Stokes’ theorem, Eq. ( 3.38):
+
+\oint_\Gamma\mathbf{A}\cdot d\mathbf{s}= \underset{\text{inside $\Gamma$}}{\int} (\mathbf{c}url{\mathbf{A}})\cdot\FLPn\,da. (14.10)
+
+But the integral on the right is equal to the flux of \mathbf{B} through the loop, so
+
+\oint_\Gamma\mathbf{A}\cdot d\mathbf{s}= \underset{\text{inside $\Gamma$}}{\int} \mathbf{B}\cdot\FLPn\,da. (14.11)
+
+So the circulation of \mathbf{A} around any loop is equal to the flux of \mathbf{B} through the loop. If we take a circular loop, of radius r' in a plane perpendicular to a uniform field \mathbf{B} , the flux is just
+
+\pi r'^2B.
+
+If we choose our origin on an axis of symmetry, so that we can take \mathbf{A} as circumferential and a function only of r' , the circulation will be
+
+\oint\mathbf{A}\cdot d\mathbf{s}=2\pi r'A=\pi r'^2B.
+
+We get, as before,
+
+A=\frac{Br'}{2}.
+
+In the example we have just given, we have calculated the vector potential from the magnetic field, which is opposite to what one normally does. In complicated problems it is usually easier to solve for the vector potential, and then determine the magnetic field from it. We will now show how this can be done.

@@ -1,0 +1,33 @@
+27–2 Energy conservation and electromagnetism
+
+We want now to write quantitatively the conservation of energy for electromagnetism. To do that, we have to describe how much energy there is in any volume element of space, and also the rate of energy flow. Suppose we think first only of the electromagnetic field energy. We will let u represent the energy density in the field (that is, the amount of energy per unit volume in space) and let the vector \FLPS represent the energy flux of the field (that is, the flow of energy per unit time across a unit area perpendicular to the flow). Then, in perfect analogy with the conservation of charge, Eq. ( 27.1), we can write the “local” law of energy conservation in the field as
+
+\frac{\partial u}{\partial t}=-\mathbf{d}iv{\FLPS}. (27.2)
+
+Of course, this law is not true in general; it is not true that the field energy is conserved. Suppose you are in a dark room and then turn on the light switch. All of a sudden the room is full of light, so there is energy in the field, although there wasn’t any energy there before. Equation ( 27.2) is not the complete conservation law, because the field energy alone is not conserved, only the total energy in the world—there is also the energy of matter. The field energy will change if there is some work being done by matter on the field or by the field on matter.
+
+However, if there is matter inside the volume of interest, we know how much energy it has: Each particle has the energy m_0c^2/\sqrt{1-v^2/c^2} . The total energy of the matter is just the sum of all the particle energies, and the flow of this energy through a surface is just the sum of the energy carried by each particle that crosses the surface. We want now to talk only about the energy of the electromagnetic field. So we must write an equation which says that the total field energy in a given volume decreases either because field energy flows out of the volume or because the field loses energy to matter (or gains energy, which is just a negative loss). The field energy inside a volume V is
+
+\int_Vu\,dV,
+
+and its rate of decrease is minus the time derivative of this integral. The flow of field energy out of the volume V is the integral of the normal component of \FLPS over the surface \Sigma that encloses V ,
+
+\int_\Sigma\FLPS\cdot\FLPn\,da.
+
+So
+
+-\frac{d }{d t}\int_Vu\,dV=\int_\Sigma\FLPS\cdot\FLPn\,da+ \begin{pmatrix} \text{work done}\\[-.5ex] \text{on matter}\\[-.5ex] \text{inside $V$} \end{pmatrix}\!. (27.3)
+
+We have seen before that the field does work on each unit volume of matter at the rate \mathbf{E}\cdot\mathbf{j} . [The force on a particle is \mathbf{F}=q(\mathbf{E}+\mathbf{v}\times\mathbf{B}) , and the rate of doing work is \mathbf{F}\cdot\mathbf{v}=q\mathbf{E}\cdot\mathbf{v} . If there are N particles per unit volume, the rate of doing work per unit volume is Nq\mathbf{E}\cdot\mathbf{v} , but Nq\mathbf{v}=\mathbf{j} .] So the quantity \mathbf{E}\cdot\mathbf{j} must be equal to the loss of energy per unit time and per unit volume by the field. Equation ( 27.3) then becomes
+
+-\frac{d }{d t}\int_Vu\,dV=\int_\Sigma\FLPS\cdot\FLPn\,da+ \int_V\mathbf{E}\cdot\mathbf{j}\,dV. (27.4)
+
+This is our conservation law for energy in the field. We can convert it into a differential equation like Eq. ( 27.2) if we can change the second term to a volume integral. That is easy to do with Gauss’ theorem. The surface integral of the normal component of \FLPS is the integral of its divergence over the volume inside. So Eq. ( 27.3) is equivalent to
+
+-\int_V\frac{\partial u}{\partial t}\,dV=\int_V\mathbf{d}iv{\FLPS}\,dV+ \int_V\mathbf{E}\cdot\mathbf{j}\,dV,
+
+where we have put the time derivative of the first term inside the integral. Since this equation is true for any volume, we can take away the integrals and we have the energy equation for the electromagnetic fields:
+
+-\frac{\partial u}{\partial t}=\mathbf{d}iv{\FLPS}+\mathbf{E}\cdot\mathbf{j}. (27.5)
+
+Now this equation doesn’t do us a bit of good unless we know what u and \FLPS are. Perhaps we should just tell you what they are in terms of \mathbf{E} and \mathbf{B} , because all we really want is the result. However, we would rather show you the kind of argument that was used by Poynting in 1884 to obtain formulas for \FLPS and u , so you can see where they come from. (You won’t, however, need to learn this derivation for our later work.)

@@ -1,0 +1,16 @@
+## 5–5 The field of a line charge
+
+Gauss’ law can be used to solve a number of electrostatic field problems involving a special symmetry—usually spherical, cylindrical, or planar symmetry. In the remainder of this chapter we will apply Gauss’ law to a few such problems. The ease with which these problems can be solved may give the misleading impression that the method is very powerful, and that one should be able to go on to many other problems. It is unfortunately not so. One soon exhausts the list of problems that can be solved easily with Gauss’ law. In later chapters we will develop more powerful methods for investigating electrostatic fields.
+
+As our first example, we consider a system with cylindrical symmetry. Suppose that we have a very long, uniformly charged rod. By this we mean that electric charges are distributed uniformly along an indefinitely long straight line, with the charge \lambda per unit length. We wish to know the electric field. The problem can, of course, be solved by integrating the contribution to the field from every part of the line. We are going to do it without integrating, by using Gauss’ law and some guesswork. First, we surmise that the electric field will be directed radially outward from the line. Any axial component from charges on one side would be accompanied by an equal axial component from charges on the other side. The result could only be a radial field. It also seems reasonable that the field should have the same magnitude at all points equidistant from the line. This is obvious. (It may not be easy to prove, but it is true if space is symmetric—as we believe it is.)
+
+### Figure Ch5-F5
+Caption: Fig. 5–5.A cylindrical Gaussian surface coaxial with a line charge.
+Image: figures/Ch5-F5.svg
+![Fig. 5–5.A cylindrical Gaussian surface coaxial with a line charge.](figures/Ch5-F5.svg)
+
+We can use Gauss’ law in the following way. We consider an imaginary surface in the shape of a cylinder coaxial with the line, as shown in Fig. 5–5 . According to Gauss’ law, the total flux of \mathbf{E} from this surface is equal to the charge inside divided by \epsilon_0 . Since the field is assumed to be normal to the surface, the normal component is the magnitude of the field. Let’s call it E . Also, let the radius of the cylinder be r , and its length be taken as one unit, for convenience. The flux through the cylindrical surface is equal to E times the area of the surface, which is 2\pi r . The flux through the two end faces is zero because the electric field is tangential to them. The total charge inside our surface is just \lambda , because the length of the line inside is one unit. Gauss’ law then gives
+
+\begin{aligned} E\cdot2\pi r=\lambda/\epsilon_0,\\[1ex] E=\frac{\lambda}{2\pi\epsilon_0 r}. \end{aligned} (5.2)
+
+The electric field of a line charge depends inversely on the first power of the distance from the line.

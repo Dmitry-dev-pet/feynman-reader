@@ -1,0 +1,47 @@
+## 3–7 Curl-free and divergence-free fields
+
+### Figure Ch3-F12
+Caption: Fig. 3–12.If ∇×C\Fignabla\times\FigC is zero, the circulation around the closed curve Γ\Gamma is zero. The line integral from (1)(1) to (2)(2) along aa must be the same as the line integral along bb.
+Image: figures/Ch3-F12.svg
+![Fig. 3–12.If ∇×C\Fignabla\times\FigC is zero, the circulation around the closed curve Γ\Gamma is zero. The line integral from (1)(1) to (2)(2) along aa must be the same as the line integral along bb.](figures/Ch3-F12.svg)
+
+We would like, now, to consider some consequences of our new theorems. Take first the case of a vector whose curl is everywhere zero. Then Stokes’ theorem says that the circulation around any loop is zero. Now if we choose two points (1) and (2) on a closed curve (Fig. 3–12), it follows that the line integral of the tangential component from (1) to (2) is independent of which of the two possible paths is taken. We can conclude that the integral from (1) to (2) can depend only on the location of these points—that is to say, it is some function of position only. The same logic was used in Chapter 14 of Vol. I, where we proved that if the integral around a closed loop of some quantity is always zero, then that integral can be represented as the difference of a function of the position of the two ends. This fact allowed us to invent the idea of a potential. We proved, furthermore, that the vector field was the gradient of this potential function (see Eq. ( 14.13) of Vol. I).
+
+It follows that any vector field whose curl is zero is equal to the gradient of some scalar function. That is, if \mathbf{c}url{\mathbf{C}}=\FLPzero , everywhere, there is some \psi (psi) for which \mathbf{C}=\boldsymbol{\nabla}{\psi} —a useful idea. We can, if we wish, describe this special kind of vector field by means of a scalar field.
+
+Let’s show something else. Suppose we have any scalar field \phi (phi). If we take its gradient, \boldsymbol{\nabla}{\phi} , the integral of this vector around any closed loop must be zero. Its line integral from point (1) to point (2) is [\phi(2)-\phi(1)] . If (1) and (2) are the same points, our Theorem 1, Eq. ( 3.8), tells us that the line integral is zero:
+
+\underset{\text{loop}}{\oint}\boldsymbol{\nabla}{\phi}\cdot d\mathbf{s}=0.
+
+Using Stokes’ theorem, we can conclude that
+
+\int(\mathbf{c}url{(\boldsymbol{\nabla}{\phi})})_n\,da=0
+
+over any surface. But if the integral is zero over any surface, the integrand must be zero. So
+
+\mathbf{c}url{(\boldsymbol{\nabla}{\phi})}=\FLPzero,\quad\text{always}.
+
+We proved the same result in Section 2–7 by vector algebra.
+
+### Figure Ch3-F13
+Caption: Fig. 3–13.Going to the limit of a closed surface, we find that the surface integral of (∇×C)n(\Fignabla\times\FigC)_n must vanish.
+Image: figures/Ch3-F13.svg
+![Fig. 3–13.Going to the limit of a closed surface, we find that the surface integral of (∇×C)n(\Fignabla\times\FigC)_n must vanish.](figures/Ch3-F13.svg)
+
+Let’s look now at a special case in which we fill in a small loop \Gamma with a large surface S , as indicated in Fig. 3–13. We would like, in fact, to see what happens when the loop shrinks down to a point, so that the surface boundary disappears—the surface becomes closed. Now if the vector \mathbf{C} is everywhere finite, the line integral around \Gamma must go to zero as we shrink the loop—the integral is roughly proportional to the circumference of \Gamma , which goes to zero. According to Stokes’ theorem, the surface integral of (\mathbf{c}url{\mathbf{C}})_n must also vanish. Somehow, as we close the surface we add in contributions that cancel out what was there before. So we have a new theorem:
+
+\underset{\substack{\text{any closed}\\\text{surface}}}{\int} (\mathbf{c}url{\mathbf{C}})_n\,da=0. (3.39)
+
+Now this is interesting, because we already have a theorem about the surface integral of a vector field. Such a surface integral is equal to the volume integral of the divergence of the vector, according to Gauss’ theorem (Eq. 3.18). Gauss’ theorem, applied to \mathbf{c}url{\mathbf{C}} , says
+
+\underset{\substack{\text{closed}\\\text{surface}}}{\int} (\mathbf{c}url{\mathbf{C}})_n\,da= \underset{\substack{\text{volume}\\\text{inside}}}{\int} \mathbf{d}iv{(\mathbf{c}url{\mathbf{C}})}\,dV. (3.40)
+
+So we conclude that the second integral must also be zero:
+
+\underset{\substack{\text{any}\\\text{volume}}}{\int} \mathbf{d}iv{(\mathbf{c}url{\mathbf{C}})}\,dV=0, (3.41)
+
+and this is true for any vector field \mathbf{C} whatever. Since Eq. ( 3.41) is true for any volume, it must be true that at every point in space the integrand is zero. We have
+
+\mathbf{d}iv{(\mathbf{c}url{\mathbf{C}})}=0,\quad\text{always}.
+
+But this is the same result we got from vector algebra in Section 2–7 . Now we begin to see how everything fits together.

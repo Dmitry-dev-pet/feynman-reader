@@ -1,0 +1,78 @@
+## 8–5 Energy in the electrostatic field
+
+We now consider other methods of calculating electrostatic energy. They can all be derived from the basic relation Eq. ( 8.3), the sum, over all pairs of charges, of the mutual energies of each charge-pair. First we wish to write an expression for the energy of a charge distribution. As usual, we consider that each volume element dV contains the element of charge \rho\,dV . Then Eq. ( 8.3) should be written
+
+U=\frac{1}{2}\underset{\substack{\text{all}\\\text{space}}}{\int} \frac{\rho(1)\rho(2)}{4\pi\epsilon_0 r_{12}}\,dV_1dV_2. (8.27)
+
+Notice the factor \frac{1}{2} , which is introduced because in the double integral over dV_1 and dV_2 we have counted all pairs of charge elements twice. (There is no convenient way of writing an integral that keeps track of the pairs so that each pair is counted only once.) Next we notice that the integral over dV_2 in ( 8.27) is just the potential at (1) . That is,
+
+\int\frac{\rho(2)}{4\pi\epsilon_0 r_{12}}\,dV_2=\phi(1),
+
+so that ( 8.27) can be written as
+
+U=\frac{1}{2}\int\rho(1)\phi(1)\,dV_1.
+
+Or, since the point (2) no longer appears, we can simply write
+
+U=\frac{1}{2}\int\rho\phi\,dV. (8.28)
+
+This equation can be interpreted as follows. The potential energy of the charge \rho\,dV is the product of this charge and the potential at the same point. The total energy is therefore the integral over \phi\rho\,dV . But there is again the factor \frac{1}{2} . It is still required because we are counting energies twice. The mutual energies of two charges is the charge of one times the potential at it due to the other. Or, it can be taken as the second charge times the potential at it from the first. Thus for two point charges we would write
+
+U=q_1\phi(1)=q_1\,\frac{q_2}{4\pi\epsilon_0 r_{12}}
+
+or
+
+U=q_2\phi(2)=q_2\,\frac{q_1}{4\pi\epsilon_0 r_{12}}.
+
+Notice that we could also write
+
+U=\frac{1}{2}[q_1\phi(1)+q_2\phi(2)]. (8.29)
+
+The integral in ( 8.28) corresponds to the sum of both terms in the brackets of ( 8.29). That is why we need the factor \frac{1}{2} .
+
+An interesting question is: Where is the electrostatic energy located? One might also ask: Who cares? What is the meaning of such a question? If there is a pair of interacting charges, the combination has a certain energy. Do we need to say that the energy is located at one of the charges or the other, or at both, or in between? These questions may not make sense because we really know only that the total energy is conserved. The idea that the energy is located somewhere is not necessary.
+
+Yet suppose that it did make sense to say, in general, that energy is located at a certain place, as it does for heat energy. We might then extend our principle of the conservation of energy with the idea that if the energy in a given volume changes, we should be able to account for the change by the flow of energy into or out of that volume. You realize that our early statement of the principle of the conservation of energy is still perfectly all right if some energy disappears at one place and appears somewhere else far away without anything passing (that is, without any special phenomena occurring) in the space between. We are, therefore, now discussing an extension of the idea of the conservation of energy. We might call it a principle of the local conservation of energy. Such a principle would say that the energy in any given volume changes only by the amount that flows into or out of the volume. It is indeed possible that energy is conserved locally in such a way. If it is, we would have a much more detailed law than the simple statement of the conservation of total energy. It does turn out that in nature energy is conserved locally. We can find formulas for where the energy is located and how it travels from place to place.
+
+There is also a physical reason why it is imperative that we be able to say where energy is located. According to the theory of gravitation, all mass is a source of gravitational attraction. We also know, by E=mc^2 , that mass and energy are equivalent. All energy is, therefore, a source of gravitational force. If we could not locate the energy, we could not locate all the mass. We would not be able to say where the sources of the gravitational field are located. The theory of gravitation would be incomplete.
+
+If we restrict ourselves to electrostatics there is really no way to tell where the energy is located. The complete Maxwell equations of electrodynamics give us much more information (although even then the answer is, strictly speaking, not unique.) We will therefore discuss this question in detail again in a later chapter. We will give you now only the result for the particular case of electrostatics. The energy is located in space, where the electric field is. This seems reasonable because we know that when charges are accelerated they radiate electric fields. We would like to say that when light or radiowaves travel from one point to another, they carry their energy with them. But there are no charges in the waves. So we would like to locate the energy where the electromagnetic field is and not at the charges from which it came. We thus describe the energy, not in terms of the charges, but in terms of the fields they produce. We can, in fact, show that Eq. ( 8.28) is numerically equal to
+
+U=\frac{\epsilon_0}{2}\int\mathbf{E}\cdot\mathbf{E}\,dV. (8.30)
+
+We can then interpret this formula as saying that when an electric field is present, there is located in space an energy whose density (energy per unit volume) is
+
+u=\frac{\epsilon_0}{2}\,\mathbf{E}\cdot\mathbf{E}=\frac{\epsilon_0 E^2}{2}. (8.31)
+
+This idea is illustrated in Fig. 8–8.
+
+### Figure Ch8-F8
+Caption: Fig. 8–8.Each volume element dV=dxdydzdV=dx\,dy\,dz in an electric field contains the energy (ϵ0/2)E2dV(\epsO/2)E^2\,dV.
+Image: figures/Ch8-F8.svg
+![Fig. 8–8.Each volume element dV=dxdydzdV=dx\,dy\,dz in an electric field contains the energy (ϵ0/2)E2dV(\epsO/2)E^2\,dV.](figures/Ch8-F8.svg)
+
+To show that Eq. ( 8.30) is consistent with our laws of electrostatics, we begin by introducing into Eq. ( 8.28) the relation between \rho and \phi that we obtained in Chapter 6:
+
+\rho=-\epsilon_0\,\nabla^2\phi.
+
+We get
+
+U=-\frac{\epsilon_0}{2}\int\phi\,\nabla^2\phi\,dV. (8.32)
+
+Writing out the components of the integrand, we see that
+
+\begin{aligned} \phi\,\nabla^2\phi&=\phi\biggl( \frac{\partial^2\phi}{\partial x^2}+ \frac{\partial^2\phi}{\partial y^2}+ \frac{\partial^2\phi}{\partial z^2} \biggr)\\[.5ex] &=\quad\frac{\partial }{\partial x}\biggl(\!\phi\,\frac{\partial \phi}{\partial x}\!\biggr)- \biggl(\!\frac{\partial \phi}{\partial x}\!\biggr)^2\\&\quad+ \frac{\partial }{\partial y}\biggl(\!\phi\,\frac{\partial \phi}{\partial y}\!\biggr)- \biggl(\!\frac{\partial \phi}{\partial y}\!\biggr)^2\\&\quad+ \frac{\partial }{\partial z}\biggl(\!\phi\,\frac{\partial \phi}{\partial z}\!\biggr)- \biggl(\!\frac{\partial \phi}{\partial z}\!\biggr)^2 \\[1.5ex] &=\mathbf{d}iv{(\phi\,\boldsymbol{\nabla}{\phi})}-(\boldsymbol{\nabla}{\phi})\cdot(\boldsymbol{\nabla}{\phi}). \end{aligned} (8.33)
+
+Our energy integral is then
+
+U=\frac{\epsilon_0}{2}\int(\boldsymbol{\nabla}{\phi})\cdot(\boldsymbol{\nabla}{\phi})\,dV- \frac{\epsilon_0}{2}\int\mathbf{d}iv{(\phi\,\boldsymbol{\nabla}{\phi})}\,dV.
+
+We can use Gauss’ theorem to change the second integral into a surface integral:
+
+\underset{\text{vol.}}{\int}\mathbf{d}iv{(\phi\,\boldsymbol{\nabla}{\phi})}\,dV= \underset{\text{surface}}{\int}(\phi\,\boldsymbol{\nabla}{\phi})\cdot\FLPn\,da. (8.34)
+
+We evaluate the surface integral in the case that the surface goes to infinity (so the volume integrals become integrals over all space), supposing that all the charges are located within some finite distance. The simple way to proceed is to take a spherical surface of enormous radius R whose center is at the origin of coordinates. We know that when we are very far away from all charges, \phi varies as 1/R and \boldsymbol{\nabla}{\phi} as 1/R^2 . (Both will decrease even faster with R if there the net charge in the distribution is zero.) Since the surface area of the large sphere increases as R^2 , we see that the surface integral falls off as (1/R)(1/R^2)R^2=(1/R) as the radius of the sphere increases. So if we include all space in our integration ( R\to\infty ), the surface integral goes to zero and we have that
+
+U=\frac{\epsilon_0}{2} \underset{\substack{\text{all}\\\text{space}}}{\int} (\boldsymbol{\nabla}{\phi})\cdot(\boldsymbol{\nabla}{\phi})\,dV= \frac{\epsilon_0}{2} \underset{\substack{\text{all}\\\text{space}}}{\int} \mathbf{E}\cdot\mathbf{E}\,dV. (8.35)
+
+We see that it is possible for us to represent the energy of any charge distribution as being the integral over an energy density located in the field.

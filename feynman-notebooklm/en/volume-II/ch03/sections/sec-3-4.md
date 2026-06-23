@@ -1,0 +1,84 @@
+## 3–4 Heat conduction; the diffusion equation
+
+Let’s consider an example of the use of this theorem, just to get familiar with it. Suppose we take again the case of heat flow in, say, a metal. Suppose we have a simple situation in which all the heat has been previously put in and the body is just cooling off. There are no sources of heat, so that heat is conserved. Then how much heat is there inside some chosen volume at any time? It must be decreasing by just the amount that flows out of the surface of the volume. If our volume is a little cube, we would write, following Eq. ( 3.17),
+
+\text{Heat out}=\underset{\text{cube}}{\int}\FLPh\cdot\FLPn\,da= \mathbf{d}iv{\FLPh}\,\Delta V. (3.19)
+
+But this must equal the rate of loss of the heat inside the cube. If q is the heat per unit volume, the heat in the cube is q\,\Delta V , and the rate of loss is
+
+-\frac{\partial }{\partial t}(q\,\Delta V)=-\frac{\partial q}{\partial t}\,\Delta V. (3.20)
+
+Comparing ( 3.19) and ( 3.20), we see that
+
+-\frac{\partial q}{\partial t}=\mathbf{d}iv{\FLPh}. (3.21)
+
+Take careful note of the form of this equation; the form appears often in physics. It expresses a conservation law—here the conservation of heat. We have expressed the same physical fact in another way in Eq. ( 3.13). Here we have the differential form of a conservation equation, while Eq. ( 3.13) is the integral form.
+
+We have obtained Eq. ( 3.21) by applying Eq. ( 3.13) to an infinitesimal cube. We can also go the other way. For a big volume V bounded by S , Gauss’ law says that
+
+\int_S\FLPh\cdot\FLPn\,da=\int_V\mathbf{d}iv{\FLPh}\,dV. (3.22)
+
+Using ( 3.21), the integral on the right-hand side is found to be just -dQ/dt , and again we have Eq. ( 3.13).
+
+Now let’s consider a different case. Imagine that we have a block of material and that inside it there is a very tiny hole in which some chemical reaction is taking place and generating heat. Or we could imagine that there are some wires running into a tiny resistor that is being heated by an electric current. We shall suppose that the heat is generated practically at a point, and let W represent the energy liberated per second at that point. We shall suppose that in the rest of the volume heat is conserved, and that the heat generation has been going on for a long time—so that now the temperature is no longer changing anywhere. The problem is: What does the heat vector \FLPh look like at various places in the metal? How much heat flow is there at each point?
+
+### Figure Ch3-F6
+Caption: Fig. 3–6.In the region near a point source of heat, the heat flow is radially outward.
+Image: figures/Ch3-F6.svg
+![Fig. 3–6.In the region near a point source of heat, the heat flow is radially outward.](figures/Ch3-F6.svg)
+
+We know that if we integrate the normal component of \FLPh over a closed surface that encloses the source, we will always get W . All the heat that is being generated at the point source must flow out through the surface, since we have supposed that the flow is steady. We have the difficult problem of finding a vector field which, when integrated over any surface, always gives W . We can, however, find the field rather easily by taking a somewhat special surface. We take a sphere of radius R , centered at the source, and assume that the heat flow is radial (Fig. 3–6 ). Our intuition tells us that \FLPh should be radial if the block of material is large and we don’t get too close to the edges, and it should also have the same magnitude at all points on the sphere. You see that we are adding a certain amount of guesswork—usually called “physical intuition”—to our mathematics in order to find the answer.
+
+When \FLPh is radial and spherically symmetric, the integral of the normal component of \FLPh over the area is very simple, because the normal component is just the magnitude of \FLPh and is constant. The area over which we integrate is 4\pi R^2 . We have then that
+
+\int_S\FLPh\cdot\FLPn\,da=h\cdot4\pi R^2 (3.23)
+
+(where h is the magnitude of \FLPh ). This integral should equal W , the rate at which heat is produced at the source. We get
+
+h=\frac{W}{4\pi R^2},
+
+or
+
+\FLPh=\frac{W}{4\pi R^2}\,\mathbf{e}_{r}, (3.24)
+
+where, as usual, \mathbf{e}_r represents a unit vector in the radial direction. Our result says that \FLPh is proportional to W and varies inversely as the square of the distance from the source.
+
+The result we have just obtained applies to the heat flow in the vicinity of a point source of heat. Let’s now try to find the equations that hold in the most general kind of heat flow, keeping only the condition that heat is conserved. We will be dealing only with what happens at places outside of any sources or absorbers of heat.
+
+The differential equation for the conduction of heat was derived in Chapter 2. According to Eq. ( 2.44),
+
+\FLPh=-\kappa\,\boldsymbol{\nabla}{T}. (3.25)
+
+(Remember that this relationship is an approximate one, but fairly good for some materials like metals.) It is applicable, of course, only in regions of the material where there is no generation or absorption of heat. We derived above another relation, Eq. ( 3.21), that holds when heat is conserved. If we combine that equation with ( 3.25), we get
+
+-\frac{\partial q}{\partial t} =\mathbf{d}iv{\FLPh}=-\mathbf{d}iv{(\kappa\,\boldsymbol{\nabla}{T})},
+
+or
+
+\frac{\partial q}{\partial t} =\kappa\,\mathbf{d}iv{\boldsymbol{\nabla}{T}}=\kappa\,\nabla^2T, (3.26)
+
+if \kappa is a constant. You remember that q is the amount of heat in a unit volume and \mathbf{d}iv{\boldsymbol{\nabla}}=\nabla^2 is the Laplacian operator
+
+\nabla^2=\frac{\partial^2}{\partial x^2}+\frac{\partial^2}{\partial y^2}+ \frac{\partial^2}{\partial z^2}.
+
+If we now make one more assumption we can obtain a very interesting equation. We assume that the temperature of the material is proportional to the heat content per unit volume—that is, that the material has a definite specific heat. When this assumption is valid (as it often is), we can write
+
+\Delta q=c_v\,\Delta T
+
+or
+
+\frac{\partial q}{\partial t}=c_v\,\frac{\partial T}{\partial t}. (3.27)
+
+The rate of change of heat is proportional to the rate of change of temperature. The constant of proportionality c_v is, here, the specific heat per unit volume of the material. Using Eq. ( 3.27) with ( 3.26), we get
+
+\frac{\partial T}{\partial t}=\frac{\kappa}{c_v}\,\nabla^2T. (3.28)
+
+We find that the time rate of change of T —at every point—is proportional to the Laplacian of T , which is the second derivative of its spatial dependence. We have a differential equation—in x , y , z , and t —for the temperature T .
+
+The differential equation ( 3.28) is called the heat diffusion equation. It is often written as
+
+\frac{\partial T}{\partial t}=D\,\nabla^2T, (3.29)
+
+where D is called the diffusion constant, and is here equal to \kappa/c_v .
+
+The diffusion equation appears in many physical problems—in the diffusion of gases, in the diffusion of neutrons, and in others. We have already discussed the physics of some of these phenomena in Chapter 43 of Vol. I. Now you have the complete equation that describes diffusion in the most general possible situation. At some later time we will take up ways of solving the diffusion equation to find how the temperature varies in particular cases. We turn back now to consider other theorems about vector fields.

@@ -1,0 +1,23 @@
+2–8 Pitfalls
+
+We have been applying our knowledge of ordinary vector algebra to the algebra of the operator \boldsymbol{\nabla} . We have to be careful, though, because it is possible to go astray. There are two pitfalls which we will mention, although they will not come up in this course. What would you say about the following expression, that involves the two scalar functions \psi and \phi (phi):
+
+(\boldsymbol{\nabla}{\psi})\times(\boldsymbol{\nabla}{\phi})?
+
+You might want to say: it must be zero because it’s just like
+
+(\mathbf{A} a)\times(\mathbf{A} b),
+
+which is zero because the cross product of two equal vectors \mathbf{A}\times\mathbf{A} is always zero. But in our example the two operators \boldsymbol{\nabla} are not equal! The first one operates on one function, \psi ; the other operates on a different function, \phi . So although we represent them by the same symbol \boldsymbol{\nabla} , they must be considered as different operators. Clearly, the direction of \boldsymbol{\nabla}{\psi} depends on the function \psi , so it is not likely to be parallel to \boldsymbol{\nabla}{\phi} :
+
+(\boldsymbol{\nabla}{\psi})\times(\boldsymbol{\nabla}{\phi})\neq0\quad(\text{generally}).
+
+Fortunately, we won’t have to use such expressions. (What we have said doesn’t change the fact that \mathbf{c}url{\boldsymbol{\nabla}{\psi}}=\FLPzero for any scalar field, because here both \boldsymbol{\nabla} ’s operate on the same function.)
+
+Pitfall number two (which, again, we need not get into in our course) is the following: The rules that we have outlined here are simple and nice when we use rectangular coordinates. For example, if we have \nabla^2\FLPh and we want the x -component, it is
+
+(\nabla^2\FLPh)_x=\biggl(\frac{\partial^2}{\partial x^2}+\frac{\partial^2}{\partial y^2}+\frac{\partial^2}{\partial z^2}\biggr)h_x=\nabla^2h_x. (2.60)
+
+The same expression would not work if we were to ask for the radial component of \nabla^2\FLPh . The radial component of \nabla^2\FLPh is not equal to \nabla^2h_r . The reason is that when we are dealing with the algebra of vectors, the directions of the vectors are all quite definite. But when we are dealing with vector fields, their directions are different at different places. If we try to describe a vector field in, say, polar coordinates, what we call the “radial” direction varies from point to point. So we can get into a lot of trouble when we start to differentiate the components. For example, even for a constant vector field, the radial component changes from point to point.
+
+It is usually safest and simplest just to stick to rectangular coordinates and avoid trouble, but there is one exception worth mentioning: Since the Laplacian \nabla^2 , is a scalar, we can write it in any coordinate system we want to (for example, in polar coordinates). But since it is a differential operator, we should use it only on vectors whose components are in a fixed direction—that means rectangular coordinates. So we shall express all of our vector fields in terms of their x -, y -, and z -components when we write our vector differential equations out in components.

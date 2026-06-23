@@ -1,0 +1,109 @@
+22–1 Impedances
+
+Most of our work in this course has been aimed at reaching the complete equations of Maxwell. In the last two chapters we have been discussing the consequences of these equations. We have found that the equations contain all the static phenomena we had worked out earlier, as well as the phenomena of electromagnetic waves and light that we had gone over in some detail in Volume I. The Maxwell equations give both phenomena, depending upon whether one computes the fields close to the currents and charges, or very far from them. There is not much interesting to say about the intermediate region; no special phenomena appear there.
+
+There still remain, however, several subjects in electromagnetism that we want to take up. We want to discuss the question of relativity and the Maxwell equations—what happens when one looks at the Maxwell equations with respect to moving coordinate systems. There is also the question of the conservation of energy in electromagnetic systems. Then there is the broad subject of the electromagnetic properties of materials; so far, except for the study of the properties of dielectrics, we have considered only the electromagnetic fields in free space. And although we covered the subject of light in some detail in Volume I, there are still a few things we would like to do again from the point of view of the field equations.
+
+In particular, we want to take up again the subject of the index of refraction, particularly for dense materials. Finally, there are the phenomena associated with waves confined in a limited region of space. We touched on this kind of problem briefly when we were studying sound waves. Maxwell’s equations lead also to solutions which represent confined waves of the electric and magnetic fields. We will take up this subject, which has important technical applications, in some of the following chapters. In order to lead up to that subject, we will begin by considering the properties of electrical circuits at low frequencies. We will then be able to make a comparison between those situations in which the almost static approximations of Maxwell’s equations are applicable and those situations in which high-frequency effects are dominant.
+
+So we descend from the great and esoteric heights of the last few chapters and turn to the relatively low-level subject of electrical circuits. We will see, however, that even such a mundane subject, when looked at in sufficient detail, can contain great complications.
+
+We have already discussed some of the properties of electrical circuits in Chapters 23 and 25 of Vol. I. Now we will cover some of the same material again, but in greater detail. Again we are going to deal only with linear systems and with voltages and currents which all vary sinusoidally; we can then represent all voltages and currents by complex numbers, using the exponential notation described in Chapter 23 of Vol. I. Thus a time-varying voltage V(t) will be written
+
+V(t)=\hat{V}e^{i\omega t}, (22.1)
+
+where \hat{V} represents a complex number that is independent of t . It is, of course, understood that the actual time-varying voltage V(t) is given by the real part of the complex function on the right-hand side of the equation.
+
+Similarly, all of our other time-varying quantities will be taken to vary sinusoidally at the same frequency \omega . So we write
+
+\begin{aligned} I&=\hat{I}\,e^{i\omega t}\quad(\text{current}),\\[3pt] \emf&=\hat{\emf}\,e^{i\omega t}\quad(\text{emf}),\\[3pt] \mathbf{E}&=\hat{\mathbf{E}}\,e^{i\omega t}\quad(\text{electric field}), \end{aligned} (22.2)
+
+and so on.
+
+Most of the time we will write our equations in terms of V , I , \emf , … (instead of in terms of \hat{V} , \hat{I} , \hat{\emf} , …), remembering, though, that the time variations are as given in ( 22.2).
+
+In our earlier discussion of circuits we assumed that such things as inductances, capacitances, and resistances were familiar to you. We want now to look in a little more detail at what is meant by these idealized circuit elements. We begin with the inductance.
+
+Figure Ch22-F1
+Caption: Fig. 22–1.An inductance.
+Image: figures/Ch22-F1.svg
+![Fig. 22–1.An inductance.](figures/Ch22-F1.svg)
+
+An inductance is made by winding many turns of wire in the form of a coil and bringing the two ends out to terminals at some distance from the coil, as shown in Fig. 22–1 . We want to assume that the magnetic field produced by currents in the coil does not spread out strongly all over space and interact with other parts of the circuit. This is usually arranged by winding the coil in a doughnut-shaped form, or by confining the magnetic field by winding the coil on a suitable iron core, or by placing the coil in some suitable metal box, as indicated schematically in Fig. 22–1 . In any case, we assume that there is a negligible magnetic field in the external region near the terminals a and b . We are also going to assume that we can neglect any electrical resistance in the wire of the coil. Finally, we will assume that we can neglect the amount of electrical charge that appears on the surface of a wire in building up the electric fields.
+
+With all these approximations we have what we call an “ideal” inductance. (We will come back later and discuss what happens in a real inductance.) For an ideal inductance we say that the voltage across the terminals is equal to L(dI/dt) . Let’s see why that is so. When there is a current through the inductance, a magnetic field proportional to the current is built up inside the coil. If the current changes with time, the magnetic field also changes. In general, the curl of \mathbf{E} is equal to -\frac{\partial \mathbf{B}}{\partial t} ; or, put differently, the line integral of \mathbf{E} all the way around any closed path is equal to the negative of the rate of change of the flux of \mathbf{B} through the loop. Now suppose we consider the following path: Begin at terminal a and go along the coil (staying always inside the wire) to terminal b ; then return from terminal b to terminal a through the air in the space outside the inductance. The line integral of \mathbf{E} around this closed path can be written as the sum of two parts:
+
+\oint\mathbf{E}\cdot d\mathbf{s}=\kern{-1ex} \underset{\substack{\text{via}\\\text{coil}}}{\int_a^b} \kern{-.5ex}\mathbf{E}\cdot d\mathbf{s}\;+\kern{-.75ex} \underset{\text{outside}}{\int_b^a} \kern{-1.5ex}\mathbf{E}\cdot d\mathbf{s}. (22.3)
+
+As we have seen before, there can be no electric fields inside a perfect conductor. (The smallest fields would produce infinite currents.) Therefore the integral from a to b via the coil is zero. The whole contribution to the line integral of \mathbf{E} comes from the path outside the inductance from terminal b to terminal a . Since we have assumed that there are no magnetic fields in the space outside of the “box,” this part of the integral is independent of the path chosen and we can define the potentials of the two terminals. The difference of these two potentials is what we call the voltage difference, or simply the voltage V , so we have
+
+V=-\int_b^a\kern{-1ex}\mathbf{E}\cdot d\mathbf{s}=-\oint\mathbf{E}\cdot d\mathbf{s}.
+
+The complete line integral is what we have before called the electromotive force \emf and is, of course, equal to the rate of change of the magnetic flux in the coil. We have seen earlier that this emf is proportional to the negative rate of change of the current, so we have
+
+V=-\emf=L\,\frac{d I}{d t},
+
+where L is the inductance of the coil. Since dI/dt=i\omega I , we have
+
+V=i\omega LI. (22.4)
+
+The way we have described the ideal inductance illustrates the general approach to other ideal circuit elements—usually called “lumped” elements. The properties of the element are described completely in terms of currents and voltages that appear at the terminals. By making suitable approximations, it is possible to ignore the great complexities of the fields that appear inside the object. A separation is made between what happens inside and what happens outside.
+
+For all the circuit elements we will find a relation like the one in Eq. ( 22.4), in which the voltage is proportional to the current with a proportionality constant that is, in general, a complex number. This complex coefficient of proportionality is called the impedance and is usually written as z (not to be confused with the z -coordinate). It is, in general, a function of the frequency \omega . So for any lumped element we write
+
+\frac{V}{I}=\frac{\hat{V}}{\hat{I}}=z. (22.5)
+
+For an inductance, we have
+
+z\,(\text{inductance})=z_L=i\omega L. (22.6)
+
+Now let’s look at a capacitor from the same point of view. 1 A capacitor consists of a pair of conducting plates from which two wires are brought out to suitable terminals. The plates may be of any shape whatsoever, and are often separated by some dielectric material. We illustrate such a situation schematically in Fig. 22–2 . Again we make several simplifying assumptions. We assume that the plates and the wires are perfect conductors. We also assume that the insulation between the plates is perfect, so that no charges can flow across the insulation from one plate to the other. Next, we assume that the two conductors are close to each other but far from all others, so that all field lines which leave one plate end up on the other. Then there are always equal and opposite charges on the two plates and the charges on the plates are much larger than the charges on the surfaces of the lead-in wires. Finally, we assume that there are no magnetic fields close to the capacitor.
+
+Figure Ch22-F2
+Caption: Fig. 22–2.A capacitor (or condenser).
+Image: figures/Ch22-F2.svg
+![Fig. 22–2.A capacitor (or condenser).](figures/Ch22-F2.svg)
+
+Suppose now we consider the line integral of \mathbf{E} around a closed loop which starts at terminal a , goes along inside the wire to the top plate of the capacitor, jumps across the space between the plates, passes from the lower plate to terminal b through the wire, and returns to terminal a in the space outside the capacitor. Since there is no magnetic field, the line integral of \mathbf{E} around this closed path is zero. The integral can be broken down into three parts:
+
+\oint\mathbf{E}\cdot d\mathbf{s}=\kern{-1.3ex} \underset{\substack{\text{along}\\\text{wires}}}{\int} % ebook insert: \mathbf{E}\cdot d\mathbf{s}+\kern{-2.2ex} \underset{\substack{\text{between}\\\text{plates}}}{\int} \kern{-1.5ex}\mathbf{E}\cdot d\mathbf{s}+\kern{-1.2ex} \underset{\text{outside}}{\int_b^a} \kern{-1.6ex}\mathbf{E}\cdot d\mathbf{s}. (22.7)
+
+The integral along the wires is zero, because there are no electric fields inside perfect conductors. The integral from b to a outside the capacitor is equal to the negative of the potential difference between the terminals. Since we imagined that the two plates are in some way isolated from the rest of the world, the total charge on the two plates must be zero; if there is a charge Q on the upper plate, there is an equal, opposite charge -Q on the lower plate. We have seen earlier that if two conductors have equal and opposite charges, plus and minus Q , the potential difference between the plates is equal to Q/C , where C is called the capacity of the two conductors. From Eq. ( 22.7) the potential difference between the terminals a and b is equal to the potential difference between the plates. We have, therefore, that
+
+V=\frac{Q}{C}.
+
+The electric current I entering the capacitor through terminal a (and leaving through terminal b ) is equal to dQ/dt , the rate of change of the electric charge on the plates. Writing dV/dt as i\omega V , we can put the voltage current relationship for a capacitor in the following way:
+
+i\omega V=\frac{I}{C},
+
+or
+
+V=\frac{I}{i\omega C}. (22.8)
+
+The impedance z of a capacitor, is then
+
+z\,(\text{capacitor})=z_C=\frac{1}{i\omega C}. (22.9)
+
+Figure Ch22-F3
+Caption: Fig. 22–3.A resistor
+Image: figures/Ch22-F3.svg
+![Fig. 22–3.A resistor](figures/Ch22-F3.svg)
+
+The third element we want to consider is a resistor. However, since we have not yet discussed the electrical properties of real materials, we are not yet ready to talk about what happens inside a real conductor. We will just have to accept as fact that electric fields can exist inside real materials, that these electric fields give rise to a flow of electric charge—that is, to a current—and that this current is proportional to the integral of the electric field from one end of the conductor to the other. We then imagine an ideal resistor constructed as in the diagram of Fig. 22–3 . Two wires which we take to be perfect conductors go from the terminals a and b to the two ends of a bar of resistive material. Following our usual line of argument, the potential difference between the terminals a and b is equal to the line integral of the external electric field, which is also equal to the line integral of the electric field through the bar of resistive material. It then follows that the current I through the resistor is proportional to the terminal voltage V :
+
+I=\frac{V}{R},
+
+where R is called the resistance. We will see later that the relation between the current and the voltage for real conducting materials is only approximately linear. We will also see that this approximate proportionality is expected to be independent of the frequency of variation of the current and voltage only if the frequency is not too high. For alternating currents then, the voltage across a resistor is in phase with the current, which means that the impedance is a real number:
+
+z\,(\text{resistance})=z_R=R. (22.10)
+
+Figure Ch22-F4
+Caption: Fig. 22–4.The ideal lumped circuit elements (passive).
+Image: figures/Ch22-F4.svg
+![Fig. 22–4.The ideal lumped circuit elements (passive).](figures/Ch22-F4.svg)
+
+Our results for the three lumped circuit elements—the inductor, the capacitor, and the resistor—are summarized in Fig. 22–4 . In this figure, as well as in the preceding ones, we have indicated the voltage by an arrow that is directed from one terminal to another. If the voltage is “positive”—that is, if the terminal a is at a higher potential than the terminal b —the arrow indicates the direction of a positive “voltage drop.”
+
+Although we are talking about alternating currents, we can of course include the special case of circuits with steady currents by taking the limit as the frequency \omega goes to zero. For zero frequency—that is, for dc —the impedance of an inductance goes to zero; it becomes a short circuit. For dc, the impedance of a condenser goes to infinity; it becomes an open circuit. Since the impedance of a resistor is independent of frequency, it is the only element left when we analyze a circuit for dc.
+
+In the circuit elements we have described so far, the current and voltage are proportional to each other. If one is zero, so also is the other. We usually think in terms like these: An applied voltage is “responsible” for the current, or a current “gives rise to” a voltage across the terminals; so in a sense the elements “respond” to the “applied” external conditions. For this reason these elements are called passive elements. They can thus be contrasted with the active elements, such as the generators we will consider in the next section, which are the sources of the oscillating currents or voltages in a circuit.

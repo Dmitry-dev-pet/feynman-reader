@@ -1,0 +1,104 @@
+41–1 Viscosity
+
+In the last chapter we discussed the behavior of water, disregarding the phenomenon of viscosity. Now we would like to discuss the phenomena of the flow of fluids, including the effects of viscosity. We want to look at the real behavior of fluids. We will describe qualitatively the actual behavior of the fluids under various different circumstances so that you will get some feel for the subject. Although you will see some complicated equations and hear about some complicated things, it is not our purpose that you should learn all these things. This is, in a sense, a “cultural” chapter which will give you some idea of the way the world is. There is only one item which is worth learning, and that is the simple definition of viscosity which we will come to in a moment. The rest is only for your entertainment.
+
+In the last chapter we found that the laws of motion of a fluid are contained in the equation
+
+\frac{\partial \mathbf{v}}{\partial t}+(\mathbf{v}\cdot\boldsymbol{\nabla})\mathbf{v}= -\frac{\boldsymbol{\nabla}{p}}{\rho}-\boldsymbol{\nabla}{\phi}+ \frac{\FLPf_{\text{visc}}}{\rho}. (41.1)
+
+In our “dry” water approximation we left out the last term, so we were neglecting all viscous effects. Also, we sometimes made an additional approximation by considering the fluid as incompressible; then we had the additional equation
+
+\mathbf{d}iv{\mathbf{v}}=0.
+
+This last approximation is often quite good—particularly when flow speeds are much slower than the speed of sound. But in real fluids it is almost never true that we can neglect the internal friction that we call viscosity; most of the interesting things that happen come from it in one way or another. For example, we saw that in “dry” water the circulation never changes—if there is none to start out with, there will never be any. Yet, circulation in fluids is an everyday occurrence. We must fix up our theory.
+
+We begin with an important experimental fact. When we worked out the flow of “dry” water around or past a cylinder—the so-called “potential flow”—we had no reason not to permit the water to have a velocity tangent to the surface; only the normal component had to be zero. We took no account of the possibility that there might be a shear force between the liquid and the solid. It turns out—although it is not at all self-evident—that in all circumstances where it has been experimentally checked, the velocity of a fluid is exactly zero at the surface of a solid. You have noticed, no doubt, that the blade of a fan will collect a thin layer of dust—and that it is still there after the fan has been churning up the air. You can see the same effect even on the great fan of a wind tunnel. Why isn’t the dust blown off by the air? In spite of the fact that the fan blade is moving at high speed through the air, the speed of the air relative to the fan blade goes to zero right at the surface. So the very smallest dust particles are not disturbed. 1 We must modify the theory to agree with the experimental fact that in all ordinary fluids, the molecules next to a solid surface have zero velocity (relative to the surface). 2
+
+Figure Ch41-F1
+Caption: Fig. 41–1.Viscous drag between two parallel plates.
+Image: figures/Ch41-F1.svg
+![Fig. 41–1.Viscous drag between two parallel plates.](figures/Ch41-F1.svg)
+
+We originally characterized a liquid by the fact that if you put a shearing stress on it—no matter how small—it would give way. It flows. In static situations, there are no shear stresses. But before equilibrium is reached—as long as you still push on it—there can be shear forces. Viscosity describes these shear forces which exist in a moving fluid. To get a measure of the shear forces during the motion of a fluid, we consider the following kind of experiment. Suppose that we have two solid plane surfaces with water between them, as in Fig. 41–1 , and we keep one stationary while moving the other parallel to it at the slow speed v_0 . If you measure the force required to keep the upper plate moving, you find that it is proportional to the area of the plates and to v_0/d , where d is the distance between the plates. So the shear stress F/A is proportional to v_0/d :
+
+\frac{F}{A}=\eta\,\frac{v_0}{d}.
+
+The constant of proportionality \eta is called the coefficient of viscosity.
+
+Figure Ch41-F2
+Caption: Fig. 41–2.The shear stress in a viscous fluid.
+Image: figures/Ch41-F2.svg
+![Fig. 41–2.The shear stress in a viscous fluid.](figures/Ch41-F2.svg)
+
+If we have a more complicated situation, we can always consider a little, flat, rectangular cell in the water with its faces parallel to the flow, as in Fig. 41–2 . The shear force across this cell is given by
+
+\frac{\Delta F}{\Delta A}=\eta\,\frac{\Delta v_x}{\Delta y} =\eta\frac{\partial v_x}{\partial y}. (41.2)
+
+Now, \frac{\partial v_x}{\partial y} is the rate of change of the shear strain we defined in Chapter 39, so for a liquid, the shear stress is proportional to the rate of change of the shear strain.
+
+In the general case we write
+
+S_{xy}=\eta\biggl(\frac{\partial v_y}{\partial x}+\frac{\partial v_x}{\partial y}\biggr). (41.3)
+
+If there is a uniform rotation of the fluid, \frac{\partial v_x}{\partial y} is the negative of \frac{\partial v_y}{\partial x} and S_{xy} is zero—as it should be since there are no stresses in a uniformly rotating fluid. (We did a similar thing in defining e_{xy} in Chapter 39.) There are, of course, the corresponding expressions for S_{yz} and S_{zx} .
+
+Figure Ch41-F3
+Caption: Fig. 41–3.The flow in a fluid between two concentric cylinders rotating at different angular velocities.
+Image: figures/Ch41-F3.svg
+![Fig. 41–3.The flow in a fluid between two concentric cylinders rotating at different angular velocities.](figures/Ch41-F3.svg)
+
+As an example of the application of these ideas, we consider the motion of a fluid between two coaxial cylinders. Let the inner one have the radius a and the peripheral velocity v_a , and let the outer one have radius b and velocity v_b . See Fig. 41–3 . We might ask, what is the velocity distribution between the cylinders? To answer this question, we begin by finding a formula for the viscous shear in the fluid at a distance r from the axis. From the symmetry of the problem, we can assume that the flow is always tangential and that its magnitude depends only on r ; v=v(r) . If we watch a speck in the water at the radius r , its coordinates as a function of time are
+
+x=r\cos\omega t,\quad y=r\sin\omega t,
+
+where \omega=v/r . Then the x - and y -components of velocity are
+
+\begin{alignedat}{3} v_x\;&=&\;-r\omega\sin\omega t\;&=&\;-\omega&y,\\[.5ex] v_y\;&=&\;r\omega\cos\omega t\;&=&\omega&x. \end{alignedat} (41.4)
+
+From Eq. ( 41.3), we have
+
+\begin{aligned} S_{xy}&=\eta\biggl[\frac{\partial }{\partial x}\,(x\omega)-\frac{\partial }{\partial y}\,(y\omega)\biggl]\\[1.25ex] &=\eta\biggl[x\,\frac{\partial \omega}{\partial x}-y\,\frac{\partial \omega}{\partial y}\biggl]. \end{aligned} (41.5)
+
+For a point at y=0 , \frac{\partial \omega}{\partial y}=0 , and x\,\frac{\partial \omega}{\partial x} is the same as r\,d\omega/dr . So at that point
+
+(S_{xy})_{y=0}=\eta r\,\frac{d \omega}{d r}. (41.6)
+
+(It is reasonable that S should depend on \frac{\partial \omega}{\partial r} ; when there is no change in \omega with r , the liquid is in uniform rotation and there are no stresses.)
+
+The stress we have calculated is the tangential shear which is the same all around the cylinder. We can get the torque acting across a cylindrical surface at the radius r by multiplying the shear stress by the moment arm r and the area 2\pi rl (where l is the length of the cylinder). We get
+
+\tau=2\pi r^2l(S_{xy})_{y=0}=2\pi\eta lr^3\,\frac{d \omega}{d r}. (41.7)
+
+Since the motion of the water is steady—there is no angular acceleration—the net torque on the cylindrical shell of water between r and r+dr must be zero; that is, the torque at r must be balanced by an equal and opposite torque at r+dr , so that \tau must be independent of r . In other words, r^3\,d\omega/dr is equal to some constant, say A , and
+
+\frac{d \omega}{d r}=\frac{A}{r^3}. (41.8)
+
+Integrating, we find that \omega varies with r as
+
+\omega=-\frac{A}{2r^2}+B. (41.9)
+
+The constants A and B are to be determined to fit the conditions that \omega=\omega_a at r=a , and \omega=\omega_b at r=b . We get that
+
+\begin{aligned} A&=\frac{2a^2b^2}{b^2-a^2}\,(\omega_b-\omega_a),\\[1.5ex] B&=\frac{b^2\omega_b-a^2\omega_a}{b^2-a^2}. \end{aligned} (41.10)
+
+So we know \omega as a function of r , and from it v=\omega r .
+
+If we want the torque, we can get it from Eqs. ( 41.7) and ( 41.8):
+
+\tau=2\pi\eta lA
+
+or
+
+\tau=\frac{4\pi\eta la^2b^2}{b^2-a^2}\,(\omega_b-\omega_a). (41.11)
+
+It is proportional to the relative angular velocities of the two cylinders. One standard apparatus for measuring the coefficients of viscosity is built this way. One cylinder—say the outer one—is on pivots but is held stationary by a spring balance which measures the torque on it, while the inner one is rotated at a constant angular velocity. The coefficient of viscosity is then determined from Eq. ( 41.11).
+
+From its definition, you see that the units of \eta are newton \cdot sec/m ^2 . For water at 20^\circ C,
+
+\eta=10^{-3}\:\text{newton$\cdot$sec/m$^2$}.
+
+It is usually more convenient to use the kinematic viscosity, which is \eta divided by the density \rho . The values for water and air are then comparable:
+
+\begin{aligned} \text{water at $20^\circ$C},&\quad \eta/\rho=10^{-6}\text{ m$^2$/sec},\\[.5ex] \text{air at $20^\circ$C},&\quad \eta/\rho=15\times10^{-6}\text{ m$^2$/sec}. \end{aligned} (41.12)
+
+Viscosities usually depend strongly on temperature. For instance, for water just above the freezing point, \eta/\rho is 1.8 times larger than it is at 20^\circ C.

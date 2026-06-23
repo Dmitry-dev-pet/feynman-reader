@@ -1,0 +1,369 @@
+# 13. Magnetostatics
+
+## 13–1 The magnetic field
+
+The force on an electric charge depends not only on where it is, but also on how fast it is moving. Every point in space is characterized by two vector quantities which determine the force on any charge. First, there is the electric force, which gives a force component independent of the motion of the charge. We describe it by the electric field, \mathbf{E} . Second, there is an additional force component, called the magnetic force, which depends on the velocity of the charge. This magnetic force has a strange directional character: At any particular point in space, both the direction of the force and its magnitude depend on the direction of motion of the particle: at every instant the force is always at right angles to the velocity vector; also, at any particular point, the force is always at right angles to a fixed direction in space (see Fig. 13–1 ); and finally, the magnitude of the force is proportional to the component of the velocity at right angles to this unique direction. It is possible to describe all of this behavior by defining the magnetic field vector \mathbf{B} , which specifies both the unique direction in space and the constant of proportionality with the velocity, and to write the magnetic force as q\mathbf{v}\times\mathbf{B} . The total electromagnetic force on a charge can, then, be written as
+
+\mathbf{F}=q(\mathbf{E}+\mathbf{v}\times\mathbf{B}). (13.1)
+
+This is called the Lorentz force.
+
+### Figure Ch13-F1
+Caption: Fig. 13–1.The velocity-dependent component of the force on a moving charge is at right angles to v\Figv and to the direction of B\FigB. It is also proportional to the component of v\Figv at right angles to B\FigB, that is, to vsinθv\sin\theta.
+Image: figures/Ch13-F1.svg
+![Fig. 13–1.The velocity-dependent component of the force on a moving charge is at right angles to v\Figv and to the direction of B\FigB. It is also proportional to the component of v\Figv at right angles to B\FigB, that is, to vsinθv\sin\theta.](figures/Ch13-F1.svg)
+
+The magnetic force is easily demonstrated by bringing a bar magnet close to a cathode-ray tube. The deflection of the electron beam shows that the presence of the magnet results in forces on the electrons transverse to their direction of motion, as we described in Chapter 12 of Vol. I.
+
+The unit of magnetic field \mathbf{B} is evidently one newton \cdot second per coulomb-meter. The same unit is also one volt \cdot second per meter ^2 . It is also called one weber per square meter.
+
+## 13–2 Electric current; the conservation of charge
+
+We consider first how we can understand the magnetic forces on wires carrying electric currents. In order to do this, we define what is meant by the current density. Electric currents are electrons or other charges in motion with a net drift or flow. We can represent the charge flow by a vector which gives the amount of charge passing per unit area and per unit time through a surface element at right angles to the flow (just as we did for the case of heat flow). We call this the current density and represent it by the vector \mathbf{j} . It is directed along the motion of the charges. If we take a small area \Delta S at a given place in the material, the amount of charge flowing across that area in a unit time is
+
+\mathbf{j}\cdot\FLPn\,\Delta S, (13.2)
+
+where \FLPn is the unit vector normal to \Delta S .
+
+### Figure Ch13-F2
+Caption: Fig. 13–2.If a charge distribution of density ρ\rho moves with the velocity v\Figv, the charge per unit time through ΔS\Delta S is ρv⋅nΔS\rho\Figv\cdot\Fign\,\Delta S.
+Image: figures/Ch13-F2.svg
+![Fig. 13–2.If a charge distribution of density ρ\rho moves with the velocity v\Figv, the charge per unit time through ΔS\Delta S is ρv⋅nΔS\rho\Figv\cdot\Fign\,\Delta S.](figures/Ch13-F2.svg)
+
+The current density is related to the average flow velocity of the charges. Suppose that we have a distribution of charges whose average motion is a drift with the velocity \mathbf{v} . As this distribution passes over a surface element \Delta S , the charge \Delta q passing through the surface element in a time \Delta t is equal to the charge contained in a parallelepiped whose base is \Delta S and whose height is v\,\Delta t , as shown in Fig. 13–2 . The volume of the parallelepiped is the projection of \Delta S at right angles to \mathbf{v} times v\,\Delta t , which when multiplied by the charge density \rho will give \Delta q . Thus
+
+\Delta q=\rho\mathbf{v}\cdot\FLPn\,\Delta S\,\Delta t.
+
+The charge per unit time is then \rho\mathbf{v}\cdot\FLPn\,\Delta S , from which we get
+
+\mathbf{j}=\rho\mathbf{v}. (13.3)
+
+If the charge distribution consists of individual charges, say electrons, each with the charge q and moving with the mean velocity \mathbf{v} , then the current density is
+
+\mathbf{j}=Nq\mathbf{v}. (13.4)
+
+where N is the number of charges per unit volume.
+
+### Figure Ch13-F3
+Caption: Fig. 13–3.The current II through the surface SS is ∫j⋅ndS\int\Figj\cdot\Fign\,dS.
+Image: figures/Ch13-F3.svg
+![Fig. 13–3.The current II through the surface SS is ∫j⋅ndS\int\Figj\cdot\Fign\,dS.](figures/Ch13-F3.svg)
+
+The total charge passing per unit time through any surface S is called the electric current, I . It is equal to the integral of the normal component of the flow through all of the elements of the surface:
+
+I=\int_S\mathbf{j}\cdot\FLPn\,dS (13.5)
+
+(see Fig. 13–3 ).
+
+### Figure Ch13-F4
+Caption: Fig. 13–4.The integral of j⋅n\Figj\cdot\Fign over a closed surface is negative the rate of change of the total charge QQ inside.
+Image: figures/Ch13-F4.svg
+![Fig. 13–4.The integral of j⋅n\Figj\cdot\Fign over a closed surface is negative the rate of change of the total charge QQ inside.](figures/Ch13-F4.svg)
+
+The current I out of a closed surface S represents the rate at which charge leaves the volume V enclosed by S . One of the basic laws of physics is that electric charge is indestructible; it is never lost or created. Electric charges can move from place to place but never appear from nowhere. We say that charge is conserved. If there is a net current out of a closed surface, the amount of charge inside must decrease by the corresponding amount (Fig. 13–4 ). We can, therefore, write the law of the conservation of charge as
+
+\underset{\substack{\text{any closed}\\\text{surface}}}{\int} \mathbf{j}\cdot\FLPn\,dS=-\frac{d }{d t}(Q_{\text{inside}}). (13.6)
+
+The charge inside can be written as a volume integral of the charge density:
+
+Q_{\text{inside}}= \underset{\substack{\text{$V$}\\\text{inside $S$}}}{\int} \rho\,dV. (13.7)
+
+If we apply ( 13.6) to a small volume \Delta V , we know that the left-hand integral is \mathbf{d}iv{\mathbf{j}}\,\Delta V . The charge inside is \rho\,\Delta V , so the conservation of charge can also be written as
+
+\mathbf{d}iv{\mathbf{j}}=-\frac{\partial \rho}{\partial t} (13.8)
+
+(Gauss’ mathematics once again!).
+
+## 13–3 The magnetic force on a current
+
+### Figure Ch13-F5
+Caption: Fig. 13–5.The magnetic force on a current-carrying wire is the sum of the forces on the individual moving charges.
+Image: figures/Ch13-F5.svg
+![Fig. 13–5.The magnetic force on a current-carrying wire is the sum of the forces on the individual moving charges.](figures/Ch13-F5.svg)
+
+Now we are ready to find the force on a current-carrying wire in a magnetic field. The current consists of charged particles moving with the velocity \mathbf{v} along the wire. Each charge feels a transverse force
+
+\mathbf{F}=q\mathbf{v}\times\mathbf{B}
+
+(Fig. 13–5 a). If there are N such charges per unit volume, the number in a small volume \Delta V of the wire is N\,\Delta V . The total magnetic force \Delta\mathbf{F} on the volume \Delta V is the sum of the forces on the individual charges, that is,
+
+\Delta\mathbf{F}=(N\,\Delta V)(q\mathbf{v}\times\mathbf{B}).
+
+But Nq\mathbf{v} is just \mathbf{j} , so
+
+\Delta\mathbf{F}=\mathbf{j}\times\mathbf{B}\,\Delta V (13.9)
+
+(Fig. 13–5 b). The force per unit volume is \mathbf{j}\times\mathbf{B} .
+
+If the current is uniform across a wire whose cross-sectional area is A , we may take as the volume element a cylinder with the base area A and the length \Delta L . Then
+
+\Delta\mathbf{F}=\mathbf{j}\times\mathbf{B} A\,\Delta L. (13.10)
+
+Now we can call \mathbf{j} A the vector current \FLPI in the wire. (Its magnitude is the electric current in the wire, and its direction is along the wire.) Then
+
+\Delta\mathbf{F}=\FLPI\times\mathbf{B}\,\Delta L. (13.11)
+
+The force per unit length on a wire is \FLPI\times\mathbf{B} .
+
+This equation gives the important result that the magnetic force on a wire, due to the movement of charges in it, depends only on the total current, and not on the amount of charge carried by each particle—or even its sign! The magnetic force on a wire near a magnet is easily shown by observing its deflection when a current is turned on, as was described in Chapter 1 (see Fig. 1–6 ).
+
+## 13–4 The magnetic field of steady currents; Ampère’s law
+
+We have seen that there is a force on a wire in the presence of a magnetic field, produced, say, by a magnet. From the principle that action equals reaction we might expect that there should be a force on the source of the magnetic field, i.e., on the magnet, when there is a current through the wire. 1 There are indeed such forces, as is seen by the deflection of a compass needle near a current-carrying wire. Now we know that magnets feel forces from other magnets, so that means that when there is a current in a wire, the wire itself generates a magnetic field. Moving charges, then, produce a magnetic field. We would like now to try to discover the laws that determine how such magnetic fields are created. The question is: Given a current, what magnetic field does it make? The answer to this question was determined experimentally by three critical experiments and a brilliant theoretical argument given by Ampère. We will pass over this interesting historical development and simply say that a large number of experiments have demonstrated the validity of Maxwell’s equations. We take them as our starting point. If we drop the terms involving time derivatives in these equations we get the equations of magnetostatics:
+
+\mathbf{d}iv{\mathbf{B}}=0 (13.12)
+
+and
+
+c^2\mathbf{c}url{\mathbf{B}}=\frac{\mathbf{j}}{\epsilon_0}. (13.13)
+
+These equations are valid only if all electric charge densities are constant and all currents are steady, so that the electric and magnetic fields are not changing with time—all of the fields are “static.”
+
+We may remark that it is rather dangerous to think that there is such a thing as a static magnetic situation, because there must be currents in order to get a magnetic field at all—and currents can come only from moving charges. “Magnetostatics” is, therefore, an approximation. It refers to a special kind of dynamic situation with large numbers of charges in motion, which we can approximate by a steady flow of charge. Only then can we speak of a current density \mathbf{j} which does not change with time. The subject should more accurately be called the study of steady currents. Assuming that all fields are steady, we drop all terms in \frac{\partial \mathbf{E}}{\partial t} and \frac{\partial \mathbf{B}}{\partial t} from the complete Maxwell equations, Eqs. ( 2.41), and obtain the two equations ( 13.12) and ( 13.13) above. Also notice that since the divergence of the curl of any vector is necessarily zero, Eq. ( 13.13) requires that \mathbf{d}iv{\mathbf{j}}=0 . This is true, by Eq. ( 13.8), only if \frac{\partial \rho}{\partial t} is zero. But that must be so if \mathbf{E} is not changing with time, so our assumptions are consistent.
+
+The requirement that \mathbf{d}iv{\mathbf{j}}=0 means that we may only have charges which flow in paths that close back on themselves. They may, for instance, flow in wires that form complete loops—called circuits. The circuits may, of course, contain generators or batteries that keep the charges flowing. But they may not include condensers which are charging or discharging. (We will, of course, extend the theory later to include dynamic fields, but we want first to take the simpler case of steady currents.)
+
+Now let us look at Eqs. ( 13.12) and ( 13.13) to see what they mean. The first one says that the divergence of \mathbf{B} is zero. Comparing it to the analogous equation in electrostatics, which says that \mathbf{d}iv{\mathbf{E}}=\rho/\epsilon_0 , we can conclude that there is no magnetic analog of an electric charge. There are no magnetic charges from which lines of \mathbf{B} can emerge. If we think in terms of “lines” of the vector field \mathbf{B} , they can never start and they never stop. Then where do they come from? Magnetic fields “appear” in the presence of currents; they have a curl proportional to the current density. Wherever there are currents, there are lines of magnetic field making loops around the currents. Since lines of \mathbf{B} do not begin or end, they will often close back on themselves, making closed loops. But there can also be complicated situations in which the lines are not simple closed loops. But whatever they do, they never diverge from points. No magnetic charges have ever been discovered, so \mathbf{d}iv{\mathbf{B}}=0 . This much is true not only for magnetostatics, it is always true—even for dynamic fields.
+
+### Figure Ch13-F6
+Caption: Fig. 13–6.The line integral of the tangential component of B\FigB is equal to the surface integral of the normal component of ∇×B\Fignabla\times\FigB.
+Image: figures/Ch13-F6.svg
+![Fig. 13–6.The line integral of the tangential component of B\FigB is equal to the surface integral of the normal component of ∇×B\Fignabla\times\FigB.](figures/Ch13-F6.svg)
+
+The connection between the \mathbf{B} field and currents is contained in Eq. ( 13.13). Here we have a new kind of situation which is quite different from electrostatics, where we had \mathbf{c}url{\mathbf{E}}=\FLPzero . That equation meant that the line integral of \mathbf{E} around any closed path is zero:
+
+\underset{\text{loop}}{\oint}\mathbf{E}\cdot d\mathbf{s}=0.
+
+We got that result from Stokes’ theorem, which says that the integral around any closed path of any vector field is equal to the surface integral of the normal component of the curl of the vector (taken over any surface which has the closed loop as its periphery). Applying the same theorem to the magnetic field vector and using the symbols shown in Fig. 13–6 , we get
+
+\oint_\Gamma\mathbf{B}\cdot d\mathbf{s}= \int_S(\mathbf{c}url{\mathbf{B}})\cdot\FLPn\,dS. (13.14)
+
+Taking the curl of \mathbf{B} from Eq. ( 13.13), we have
+
+\oint_\Gamma\mathbf{B}\cdot d\mathbf{s}= \frac{1}{\epsilon_0 c^2} \int_S\mathbf{j}\cdot\FLPn\,dS. (13.15)
+
+The integral over S , according to ( 13.5), is the total current I through the surface S . Since for steady currents the current through S is independent of the shape of S , so long as it is bounded by the curve \Gamma , one usually speaks of “the current through the loop \Gamma .” We have, then, a general law: the circulation of \mathbf{B} around any closed curve is equal to the current I through the loop, divided by \epsilon_0 c^2 :
+
+\oint_\Gamma\mathbf{B}\cdot d\mathbf{s}= \frac{I_{\text{through $\Gamma$}}}{\epsilon_0 c^2}. (13.16)
+
+This law—called Ampère’s law —plays the same role in magnetostatics that Gauss’ law played in electrostatics. Ampère’s law alone does not determine \mathbf{B} from currents; we must, in general, also use \mathbf{d}iv{\mathbf{B}}=0 . But, as we will see in the next section, it can be used to find the field in special circumstances which have certain simple symmetries.
+
+## 13–5 The magnetic field of a straight wire and of a solenoid; atomic currents
+
+### Figure Ch13-F7
+Caption: Fig. 13–7.The magnetic field outside of a long wire carrying the current II.
+Image: figures/Ch13-F7.svg
+![Fig. 13–7.The magnetic field outside of a long wire carrying the current II.](figures/Ch13-F7.svg)
+
+We can illustrate the use of Ampère’s law by finding the magnetic field near a wire. We ask: What is the field outside a long straight wire with a cylindrical cross section? We will assume something which may not be at all evident, but which is nevertheless true: that the field lines of \mathbf{B} go around the wire in closed circles. If we make this assumption, then Ampère’s law, Eq. ( 13.16), tells us how strong the field is. From the symmetry of the problem, \mathbf{B} has the same magnitude at all points on a circle concentric with the wire (see Fig. 13–7 ). We can then do the line integral of \mathbf{B}\cdot d\mathbf{s} quite easily; it is just the magnitude of \mathbf{B} times the circumference. If r is the radius of the circle, then
+
+\oint\mathbf{B}\cdot d\mathbf{s}=B\cdot2\pi r.
+
+The total current through the loop is merely the current I in the wire, so
+
+B\cdot2\pi r=\frac{I}{\epsilon_0 c^2},
+
+or
+
+B=\frac{1}{4\pi\epsilon_0 c^2}\,\frac{2I}{r}. (13.17)
+
+The strength of the magnetic field drops off inversely as r , the distance from the axis of the wire. We can, if we wish, write Eq. ( 13.17) in vector form. Remembering that \mathbf{B} is at right angles both to \FLPI and to \mathbf{r} , we have
+
+\mathbf{B}=\frac{1}{4\pi\epsilon_0 c^2}\,\frac{2\FLPI\times\mathbf{e}_r}{r}. (13.18)
+
+We have separated out the factor 1/4\pi\epsilon_0 c^2 , because it appears often. It is worth remembering that it is exactly 10^{-7} (in the mks system), since an equation like ( 13.17) is used to define the unit of current, the ampere. At one meter from a current of one ampere the magnetic field is 2\times10^{-7} webers per square meter.
+
+Since a current produces a magnetic field, it will exert a force on a nearby wire which is also carrying a current. In Chapter 1 we described a simple demonstration of the forces between two current-carrying wires. If the wires are parallel, each is at right angles to the \mathbf{B} field of the other; the wires should then be pushed either toward or away from each other. When currents are in the same direction, the wires attract; when the currents are moving in opposite directions, the wires repel.
+
+Let’s take another example that can be analyzed by Ampère’s law if we add some knowledge about the field. Suppose we have a long coil of wire wound in a tight spiral, as shown by the cross sections in Fig. 13–8 . Such a coil is called a solenoid. We observe experimentally that when a solenoid is very long compared with its diameter, the field outside is very small compared with the field inside. Using just that fact, together with Ampère’s law, we can find the size of the field inside.
+
+### Figure Ch13-F8
+Caption: Fig. 13–8.The magnetic field of a long solenoid.
+Image: figures/Ch13-F8.svg
+![Fig. 13–8.The magnetic field of a long solenoid.](figures/Ch13-F8.svg)
+
+Since the field stays inside (and has zero divergence), its lines must go along parallel to the axis, as shown in Fig. 13–8 . That being the case, we can use Ampère’s law with the rectangular “curve” \Gamma shown in the figure. This loop goes the distance L inside the solenoid, where the field is, say, \mathbf{B}_0 , then goes at right angles to the field, and returns along the outside, where the field is negligible. The line integral of \mathbf{B} for this curve is just B_0L , and it must be 1/\epsilon_0 c^2 times the total current through \Gamma , which is NI if there are N turns of the solenoid in the length L . We have
+
+B_0L=\frac{NI}{\epsilon_0 c^2}.
+
+Or, letting n be the number of turns per unit length of the solenoid (that is, n=N/L ), we get
+
+B_0=\frac{nI}{\epsilon_0 c^2}. (13.19)
+
+What happens to the lines of \mathbf{B} when they get to the end of the solenoid? Presumably, they spread out in some way and return to enter the solenoid at the other end, as sketched in Fig. 13–9. Such a field is just what is observed outside of a bar magnet. But what is a magnet anyway? Our equations say that \mathbf{B} comes from the presence of currents. Yet we know that ordinary bars of iron (no batteries or generators) also produce magnetic fields. You might expect that there should be some other terms on the right-hand side of ( 13.12) or ( 13.13) to represent “the density of magnetic iron” or some such quantity. But there is no such term. Our theory says that the magnetic effects of iron come from some internal currents which are already taken care of by the \mathbf{j} term.
+
+### Figure Ch13-F9
+Caption: Fig. 13–9.The magnetic field outside of a solenoid.
+Image: figures/Ch13-F9.svg
+![Fig. 13–9.The magnetic field outside of a solenoid.](figures/Ch13-F9.svg)
+
+Matter is very complex when looked at from a fundamental point of view—as we saw when we tried to understand dielectrics. In order not to interrupt our present discussion, we will wait until later to deal in detail with the interior mechanisms of magnetic materials like iron: You will have to accept, for the moment, that all magnetism is produced from currents, and that in a permanent magnet there are permanent internal currents. In the case of iron, these currents come from electrons spinning around their own axes. Every electron has such a spin, which corresponds to a tiny circulating current. Of course, one electron doesn’t produce much magnetic field, but in an ordinary piece of matter there are billions and billions of electrons. Normally these spin and point every which way, so that there is no net effect. The miracle is that in a very few substances, like iron, a large fraction of the electrons spin with their axes in the same direction—for iron, two electrons of each atom take part in this cooperative motion. In a bar magnet there are large numbers of electrons all spinning in the same direction and, as we will see, their total effect is equivalent to a current circulating on the surface of the bar. (This is quite analogous to what we found for dielectrics—that a uniformly polarized dielectric is equivalent to a distribution of charges on its surface.) It is, therefore, no accident that a bar magnet is equivalent to a solenoid.
+
+## 13–6 The relativity of magnetic and electric fields
+
+When we said that the magnetic force on a charge was proportional to its velocity, you may have wondered: “What velocity? With respect to which reference frame?” It is, in fact, clear from the definition of \mathbf{B} given at the beginning of this chapter that what this vector is will depend on what we choose as a reference frame for our specification of the velocity of charges. But we have said nothing about which is the proper frame for specifying the magnetic field.
+
+It turns out that any inertial frame will do. We will also see that magnetism and electricity are not independent things—that they should always be taken together as one complete electromagnetic field. Although in the static case Maxwell’s equations separate into two distinct pairs, one pair for electricity and one pair for magnetism, with no apparent connection between the two fields, nevertheless, in nature itself there is a very intimate relationship between them that arises from the principle of relativity. Historically, the principle of relativity was discovered after Maxwell’s equations. It was, in fact, the study of electricity and magnetism which led ultimately to Einstein’s discovery of his principle of relativity. But let’s see what our knowledge of relativity would tell us about magnetic forces if we assume that the relativity principle is applicable—as it is—to electromagnetism.
+
+Suppose we think about what happens when a negative charge moves with velocity v_0 parallel to a current-carrying wire, as in Fig. 13–10. We will try to understand what goes on in two reference frames: one fixed with respect to the wire, as in part (a) of the figure, and one fixed with respect to the particle, as in part (b). We will call the first frame S and the second S' .
+
+### Figure Ch13-F10
+Caption: Fig. 13–10.The interaction of a current-carrying wire and a particle with the charge qq as seen in two frames. In frame SS (part a), the wire is at rest; in frame S′S' (part b), the charge is at rest.
+Image: figures/Ch13-F10.svg
+![Fig. 13–10.The interaction of a current-carrying wire and a particle with the charge qq as seen in two frames. In frame SS (part a), the wire is at rest; in frame S′S' (part b), the charge is at rest.](figures/Ch13-F10.svg)
+
+In the S -frame, there is clearly a magnetic force on the particle. The force is directed toward the wire, so if the charge were moving freely we would see it curve in toward the wire. But in the S' -frame there can be no magnetic force on the particle, because its velocity is zero. Does it, therefore, stay where it is? Would we see different things happening in the two systems? The principle of relativity would say that in S' we should also see the particle move closer to the wire. We must try to understand why that would happen.
+
+We return to our atomic description of a wire carrying a current. In a normal conductor, like copper, the electric currents come from the motion of some of the negative electrons—called the conduction electrons—while the positive nuclear charges and the remainder of the electrons stay fixed in the body of the material. We let the charge density of the conduction electrons be \rho_- and their velocity in S be \mathbf{v} . The density of the charges at rest in S is \rho_+ , which must be equal to the negative of \rho_- , since we are considering an uncharged wire. There is thus no electric field outside the wire, and the force on the moving particle is just
+
+\mathbf{F}=q\mathbf{v}_0\times\mathbf{B}.
+
+Using the result we found in Eq. ( 13.18) for the magnetic field at the distance r from the axis of a wire, we conclude that the force on the particle is directed toward the wire and has the magnitude
+
+F=\frac{1}{4\pi\epsilon_0 c^2}\cdot\frac{2Iqv_0}{r}.
+
+Using Eqs. ( 13.3) and ( 13.5), the current I can be written as \rho_-vA , where A is the area of a cross section of the wire. Then
+
+F=\frac{1}{4\pi\epsilon_0 c^2}\cdot\frac{2q\rho_-Avv_0}{r}. (13.20)
+
+We could continue to treat the general case of arbitrary velocities for v and v_0 , but it will be just as good to look at the special case in which the velocity v_0 of the particle is the same as the velocity v of the conduction electrons. So we write v_0=v , and Eq. ( 13.20) becomes
+
+F=\frac{q}{2\pi\epsilon_0}\,\frac{\rho_-A}{r}\,\frac{v^2}{c^2}. (13.21)
+
+Now we turn our attention to what happens in S' , in which the particle is at rest and the wire is running past (toward the left in the figure) with the speed v . The positive charges moving with the wire will make some magnetic field \mathbf{B}' at the particle. But the particle is now at rest, so there is no magnetic force on it! If there is any force on the particle, it must come from an electric field. It must be that the moving wire has produced an electric field. But it can do that only if it appears charged —it must be that a neutral wire with a current appears to be charged when set in motion.
+
+We must look into this. We must try to compute the charge density in the wire in S' from what we know about it in S . One might, at first, think they are the same; but we know that lengths are changed between S and S' (see Chapter 15, Vol. I), so volumes will change also. Since the charge densities depend on the volume occupied by charges, the densities will change, too.
+
+Before we can decide about the charge densities in S' , we must know what happens to the electric charge of a bunch of electrons when the charges are moving. We know that the apparent mass of a particle changes by 1/\sqrt{1-v^2/c^2} . Does its charge do something similar? No! Charges are always the same, moving or not. Otherwise we would not always observe that the total charge is conserved.
+
+Suppose that we take a block of material, say a conductor, which is initially uncharged. Now we heat it up. Because the electrons have a different mass than the protons, the velocities of the electrons and of the protons will change by different amounts. If the charge of a particle depended on the speed of the particle carrying it, in the heated block the charge of the electrons and protons would no longer balance. A block would become charged when heated. As we have seen earlier, a very small fractional change in the charge of all the electrons in a block would give rise to enormous electric fields. No such effect has ever been observed.
+
+Also, we can point out that the mean speed of the electrons in matter depends on its chemical composition. If the charge on an electron changed with speed, the net charge in a piece of material would be changed in a chemical reaction. Again, a straightforward calculation shows that even a very small dependence of charge on speed would give enormous fields from the simplest chemical reactions. No such effect is observed, and we conclude that the electric charge of a single particle is independent of its state of motion.
+
+So the charge q on a particle is an invariant scalar quantity, independent of the frame of reference. That means that in any frame the charge density of a distribution of electrons is just proportional to the number of electrons per unit volume. We need only worry about the fact that the volume can change because of the relativistic contraction of distances.
+
+We now apply these ideas to our moving wire. If we take a length L_0 of the wire, in which there is a charge density \rho_0 of stationary charges, it will contain the total charge Q=\rho_0L_0A_0 . If the same charges are observed in a different frame to be moving with velocity v , they will all be found in a piece of the material with the shorter length
+
+L=L_0\sqrt{1-v^2/c^2}, (13.22)
+
+but with the same area A_0 (since dimensions transverse to the motion are unchanged). See Fig. 13–11.
+
+### Figure Ch13-F11
+Caption: Fig. 13–11.If a distribution of charged particles at rest has the charge density ρ0\rho_0, the same charges will have the density ρ=ρ0/√1−v2/c2\rho=\rho_0/\sqrt{1-v^2/c^2} when seen from a frame with the relative velocity vv.
+Image: figures/Ch13-F11.svg
+![Fig. 13–11.If a distribution of charged particles at rest has the charge density ρ0\rho_0, the same charges will have the density ρ=ρ0/√1−v2/c2\rho=\rho_0/\sqrt{1-v^2/c^2} when seen from a frame with the relative velocity vv.](figures/Ch13-F11.svg)
+
+If we call \rho the density of charges in the frame in which they are moving, the total charge Q will be \rho LA_0 . This must also be equal to \rho_0L_0A_0 , because charge is the same in any system, so that \rho L=\rho_0L_0 or, from ( 13.22),
+
+\rho=\frac{\rho_0}{\sqrt{1-v^2/c^2}}. (13.23)
+
+The charge density of a moving distribution of charges varies in the same way as the relativistic mass of a particle.
+
+We now use this general result for the positive charge density \rho_+ of our wire. These charges are at rest in frame S . In S' , however, where the wire moves with the speed v , the positive charge density becomes
+
+\rho_+'=\frac{\rho_+}{\sqrt{1-v^2/c^2}}. (13.24)
+
+The negative charges are at rest in S' . So they have their “rest density” \rho_0 in this frame. In Eq. ( 13.23) \rho_0=\rho_-' , because they have the density \rho_- when the wire is at rest, i.e., in frame S , where the speed of the negative charges is v . For the conduction electrons, we then have that
+
+\rho_-=\frac{\rho_-'}{\sqrt{1-v^2/c^2}}, (13.25)
+
+or
+
+\rho_-'=\rho_-\sqrt{1-v^2/c^2}. (13.26)
+
+Now we can see why there are electric fields in S' —because in this frame the wire has the net charge density \rho' given by
+
+\rho'=\rho_+'+\rho_-'.
+
+Using ( 13.24) and ( 13.26), we have
+
+\rho'=\frac{\rho_+}{\sqrt{1-v^2/c^2}}+\rho_-\sqrt{1-v^2/c^2}.
+
+Since the stationary wire is neutral, \rho_-=-\rho_+ , and we have
+
+\rho'=\rho_+\,\frac{v^2/c^2}{\sqrt{1-v^2/c^2}}. (13.27)
+
+Our moving wire is positively charged and will produce an electric field E' at the external stationary particle. We have already solved the electrostatic problem of a uniformly charged cylinder. The electric field at the distance r from the axis of the cylinder is
+
+E'=\frac{\rho'A}{2\pi\epsilon_0 r}= \frac{\rho_+Av^2/c^2}{2\pi\epsilon_0 r\sqrt{1-v^2/c^2}}. (13.28)
+
+The force on the negatively charged particle is toward the wire. We have, at least, a force in the same direction from the two points of view; the electric force in S' has the same direction as the magnetic force in S .
+
+The magnitude of the force in S' is
+
+F'=\frac{q}{2\pi\epsilon_0}\,\frac{\rho_+A}{r}\, \frac{v^2/c^2}{\sqrt{1-v^2/c^2}}. (13.29)
+
+Comparing this result for F' with our result for F in Eq. ( 13.21), we see that the magnitudes of the forces are almost identical from the two points of view. In fact,
+
+F'=\frac{F}{\sqrt{1-v^2/c^2}}, (13.30)
+
+so for the small velocities we have been considering, the two forces are equal. We can say that for low velocities, at least, we understand that magnetism and electricity are just “two ways of looking at the same thing.”
+
+But things are even better than that. If we take into account the fact that forces also transform when we go from one system to the other, we find that the two ways of looking at what happens do indeed give the same physical result for any velocity.
+
+One way of seeing this is to ask a question like: What transverse momentum will the particle have after the force has acted for a little while? We know from Chapter 16 of Vol. I that the transverse momentum of a particle should be the same in both the S - and S' -frames. Calling the transverse coordinate y , we want to compare \Delta p_y and \Delta p_y' . Using the relativistically correct equation of motion, \mathbf{F}=d\mathbf{p}/dt , we expect that after the time \Delta t our particle will have a transverse momentum \Delta p_y in the S -system given by
+
+\Delta p_y=F\,\Delta t. (13.31)
+
+In the S' -system, the transverse momentum will be
+
+\Delta p_y'=F'\,\Delta t'. (13.32)
+
+We must, of course, compare \Delta p_y and \Delta p_y' for corresponding time intervals \Delta t and \Delta t' . We have seen in Chapter 15 of Vol. I that the time intervals referred to a moving particle appear to be longer than those in the rest system of the particle. Since our particle is initially at rest in S' , we expect, for small \Delta t , that
+
+\Delta t=\frac{\Delta t'}{\sqrt{1-v^2/c^2}}, (13.33)
+
+and everything comes out O.K. From ( 13.31) and ( 13.32),
+
+\frac{\Delta p_y'}{\Delta p_y}=\frac{F'\,\Delta t'}{F\,\Delta t},
+
+which is just =1 if we combine ( 13.30) and ( 13.33).
+
+We have found that we get the same physical result whether we analyze the motion of a particle moving along a wire in a coordinate system at rest with respect to the wire, or in a system at rest with respect to the particle. In the first instance, the force was purely “magnetic,” in the second, it was purely “electric.” The two points of view are illustrated in Fig. 13–12 (although there is still a magnetic field B' in the second frame, it produces no forces on the stationary particle).
+
+### Figure Ch13-F12
+Caption: Fig. 13–12.In frame SS the charge density is zero and the current density is j\Figj. There is only a magnetic field. In S′S', there is a charge density ρ′\rho' and a different current density j′\Figj'. The magnetic field B′\FigB' is different and there is an electric field E′\FigE'.
+Image: figures/Ch13-F12.svg
+![Fig. 13–12.In frame SS the charge density is zero and the current density is j\Figj. There is only a magnetic field. In S′S', there is a charge density ρ′\rho' and a different current density j′\Figj'. The magnetic field B′\FigB' is different and there is an electric field E′\FigE'.](figures/Ch13-F12.svg)
+
+If we had chosen still another coordinate system, we would have found a different mixture of \mathbf{E} and \mathbf{B} fields. Electric and magnetic forces are part of one physical phenomenon—the electromagnetic interactions of particles. The separation of this interaction into electric and magnetic parts depends very much on the reference frame chosen for the description. But a complete electromagnetic description is invariant; electricity and magnetism taken together are consistent with Einstein’s relativity.
+
+Since electric and magnetic fields appear in different mixtures if we change our frame of reference, we must be careful about how we look at the fields \mathbf{E} and \mathbf{B} . For instance, if we think of “lines” of \mathbf{E} or \mathbf{B} , we must not attach too much reality to them. The lines may disappear if we try to observe them from a different coordinate system. For example, in system S' there are electric field lines, which we do not find “moving past us with velocity v in system S .” In system S there are no electric field lines at all! Therefore it makes no sense to say something like: When I move a magnet, it takes its field with it, so the lines of \mathbf{B} are also moved. There is no way to make sense, in general, out of the idea of “the speed of a moving field line.” The fields are our way of describing what goes on at a point in space. In particular, \mathbf{E} and \mathbf{B} tell us about the forces that will act on a moving particle. The question “What is the force on a charge from a moving magnetic field?” doesn’t mean anything precise. The force is given by the values of \mathbf{E} and \mathbf{B} at the charge, and the formula ( 13.1) is not to be altered if the source of \mathbf{E} or \mathbf{B} is moving (it is the values of \mathbf{E} and \mathbf{B} that will be altered by the motion). Our mathematical description deals only with the fields as a function of x , y , z , and t with respect to some inertial frame.
+
+We will later be speaking of “a wave of electric and magnetic fields travelling through space,” as, for instance, a light wave. But that is like speaking of a wave travelling on a string. We don’t then mean that some part of the string is moving in the direction of the wave, we mean that the displacement of the string appears first at one place and later at another. Similarly, in an electromagnetic wave, the wave travels; but the magnitude of the fields change. So in the future when we—or someone else—speaks of a “moving” field, you should think of it as just a handy, short way of describing a changing field in some circumstances.
+
+## 13–7 The transformation of currents and charges
+
+You may have worried about the simplification we made above when we took the same velocity v for the particle and for the conduction electrons in the wire. We could go back and carry through the analysis again for two different velocities, but it is easier to simply notice that charge and current density are the components of a four-vector (see Chapter 17, Vol. I).
+
+We have seen that if \rho_0 is the density of the charges in their rest frame, then in a frame in which they have the velocity \mathbf{v} , the density is
+
+\rho=\frac{\rho_0}{\sqrt{1-v^2/c^2}}.
+
+In that frame their current density is
+
+\mathbf{j}=\rho\mathbf{v}=\frac{\rho_0\mathbf{v}}{\sqrt{1-v^2/c^2}}. (13.34)
+
+Now we know that the energy U and momentum \mathbf{p} of a particle moving with velocity \mathbf{v} are given by
+
+U=\frac{m_0c^2}{\sqrt{1-v^2/c^2}},\quad \mathbf{p}=\frac{m_0\mathbf{v}}{\sqrt{1-v^2/c^2}},
+
+where m_0 is its rest mass. We also know that U/c = m_0c/\sqrt{1-v^2/c^2} and \mathbf{p} form a relativistic four-vector. Since c\rho = c\rho_0/\sqrt{1-v^2/c^2} and \mathbf{j} depend on the velocity \mathbf{v} exactly as do U/c and \mathbf{p} , we can conclude that c\rho and \mathbf{j} are also the components of a relativistic four-vector. This property is the key to a general analysis of the field of a wire moving with any velocity, which we would need if we want to do the problem again with the velocity \mathbf{v}_0 of the particle different from the velocity of the conduction electrons.
+
+If we wish to transform \rho and \mathbf{j} to a coordinate system moving with a velocity u in the x -direction, we know that they transform just like t and (x,y,z) , so that we have (see Chapter 15, Vol. I)
+
+\begin{aligned} x'&=\frac{x-ut}{\sqrt{1-u^2/c^2}}, \quad&j_x'&=\frac{j_x-u\rho}{\sqrt{1-u^2/c^2}}\\ y'&=y, &j_y'&=j_y,\\[1ex] z'&=z, &j_z'&=j_z,\\ t'&=\frac{t-ux/c^2}{\sqrt{1-u^2/c^2}}, \quad&\rho'&=\frac{\rho-uj_x/c^2}{\sqrt{1-u^2/c^2}}. \end{aligned} (13.35)
+
+With these equations we can relate charges and currents in one frame to those in another. Taking the charges and currents in either frame, we can solve the electromagnetic problem in that frame by using our Maxwell equations. The result we obtain for the motions of particles will be the same no matter which frame we choose. We will return at a later time to the relativistic transformations of the electromagnetic fields.
+
+## 13–8 Superposition; the right-hand rule
+
+We will conclude this chapter by making two further points regarding the subject of magnetostatics. First, our basic equations for the magnetic field,
+
+\mathbf{d}iv{\mathbf{B}}=0,\quad\mathbf{c}url{\mathbf{B}}=\mathbf{j}/c^2\epsilon_0,
+
+are linear in \mathbf{B} and \mathbf{j} . That means that the principle of superposition also applies to magnetic fields. The field produced by two different steady currents is the sum of the individual fields from each current acting alone. Our second remark concerns the right-hand rules which we have encountered (such as the right-hand rule for the magnetic field produced by a current). We have also observed that the magnetization of an iron magnet is to be understood from the spin of the electrons in the material. The direction of the magnetic field of a spinning electron is related to its spin axis by the same right-hand rule. Because \mathbf{B} is determined by a “handed” rule—involving either a cross product or a curl—it is called an axial vector. (Vectors whose direction in space does not depend on a reference to a right or left hand are called polar vectors. Displacement, velocity, force, and \mathbf{E} , for example, are polar vectors.)
+
+Physically observable quantities in electromagnetism are not, however, right- (or left-) handed. Electromagnetic interactions are symmetrical under reflection (see Chapter 52, Vol. I). Whenever magnetic forces between two sets of currents are computed, the result is invariant with respect to a change in the hand convention. Our equations lead, independently of the right-hand convention, to the end result that parallel currents attract, or that currents in opposite directions repel. (Try working out the force using “left-hand rules.”) An attraction or repulsion is a polar vector. This happens because in describing any complete interaction, we use the right-hand rule twice—once to find \mathbf{B} from currents, again to find the force this \mathbf{B} produces on a second current. Using the right-hand rule twice is the same as using the left-hand rule twice. If we were to change our conventions to a left-hand system all our \mathbf{B} fields would be reversed, but all forces—or, what is perhaps more relevant, the observed accelerations of objects—would be unchanged.
+
+Although physicists have recently found to their surprise that all the laws of nature are not always invariant for mirror reflections, the laws of electromagnetism do have such a basic symmetry.

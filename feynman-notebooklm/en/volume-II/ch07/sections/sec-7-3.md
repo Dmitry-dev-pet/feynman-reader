@@ -1,0 +1,78 @@
+## 7–3 Plasma oscillations
+
+We consider now some physical situations in which the field is determined neither by fixed charges nor by charges on conducting surfaces, but by a combination of two physical phenomena. In other words, the field will be governed simultaneously by two sets of equations: (1) the equations from electrostatics relating electric fields to charge distribution, and (2) an equation from another part of physics that determines the positions or motions of the charges in the presence of the field.
+
+The first example that we will discuss is a dynamic one in which the motion of the charges is governed by Newton’s laws. A simple example of such a situation occurs in a plasma, which is an ionized gas consisting of ions and free electrons distributed over a region in space. The ionosphere—an upper layer of the atmosphere—is an example of such a plasma. The ultraviolet rays from the sun knock electrons off the molecules of the air, creating free electrons and ions. In such a plasma the positive ions are very much heavier than the electrons, so we may neglect the ionic motion, in comparison to that of the electrons.
+
+Let n_0 be the density of electrons in the undisturbed, equilibrium state. Assuming the molecules are singly ionized, this must also be the density of positive ions, since the plasma is electrically neutral (when undisturbed). Now we suppose that the electrons are somehow moved from equilibrium and ask what happens. If the density of the electrons in one region is increased, they will repel each other and tend to return to their equilibrium positions. As the electrons move toward their original positions they pick up kinetic energy, and instead of coming to rest in their equilibrium configuration, they overshoot the mark. They will oscillate back and forth. The situation is similar to what occurs in sound waves, in which the restoring force is the gas pressure. In a plasma, the restoring force is the electrical force on the electrons.
+
+### Figure Ch7-F6
+Caption: Fig. 7–6.Motion in a plasma wave. The electrons at the plane aa move to a′a', and those at bb move to b′b'.
+Image: figures/Ch7-F6.svg
+![Fig. 7–6.Motion in a plasma wave. The electrons at the plane aa move to a′a', and those at bb move to b′b'.](figures/Ch7-F6.svg)
+
+To simplify the discussion, we will worry only about a situation in which the motions are all in one dimension, say x . Let us suppose that the electrons originally at x are, at the instant t , displaced from their equilibrium positions by a small amount s(x,t) . Since the electrons have been displaced, their density will, in general, be changed. The change in density is easily calculated. Referring to Fig. 7–6, the electrons initially contained between the two planes a and b have moved and are now contained between the planes a' and b' . The number of electrons that were between a and b is proportional to n_0\Delta x ; the same number are now contained in the space whose width is \Delta x+\Delta s . The density has changed to
+
+n=\frac{n_0\Delta x}{\Delta x+\Delta s}=\frac{n_0}{1+(\Delta s/\Delta x)}. (7.16)
+
+If the change in density is small, we can write [using the binomial expansion for (1+\epsilon)^{-1} ]
+
+n=n_0\biggl(1-\frac{\Delta s}{\Delta x}\biggr). (7.17)
+
+We assume that the positive ions do not move appreciably (because of the much larger inertia), so their density remains n_0 . Each electron carries the charge -q_e , so the average charge density at any point is given by
+
+\rho =-(n-n_0)q_e,
+
+or
+
+\rho =n_0q_e\,\frac{ds}{dx} (7.18)
+
+(where we have written the differential form for \Delta s/\Delta x ).
+
+The charge density is related to the electric field by Maxwell’s equations, in particular,
+
+\mathbf{d}iv{\mathbf{E}}=\frac{\rho}{\epsilon_0}. (7.19)
+
+If the problem is indeed one-dimensional (and if there are no other fields but the one due to the displacements of the electrons), the electric field \mathbf{E} has a single component E_x . Equation ( 7.19), together with ( 7.18), gives
+
+\frac{\partial E_x}{\partial x}=\frac{n_0q_e}{\epsilon_0}\,\frac{\partial s}{\partial x}. (7.20)
+
+Integrating Eq. ( 7.20) gives
+
+E_x=\frac{n_0q_e}{\epsilon_0}\,s+K. (7.21)
+
+Since E_x=0 when s=0 , the integration constant K is zero.
+
+The force on an electron in the displaced position is
+
+F_x=-\frac{n_0q_e^2}{\epsilon_0}\,s, (7.22)
+
+a restoring force proportional to the displacement s of the electron. This leads to a harmonic oscillation of the electrons. The equation of motion of a displaced electron is
+
+m_e\frac{d^2s}{dt^2}=-\frac{n_0q_e^2}{\epsilon_0}\,s. (7.23)
+
+We find that s will vary harmonically. Its time variation will be as \cos\omega_pt , or—using the exponential notation of Vol. I—as
+
+e^{i\omega_pt}. (7.24)
+
+The frequency of oscillation \omega_p is determined from ( 7.23):
+
+\omega_p^2=\frac{n_0q_e^2}{\epsilon_0 m_e}, (7.25)
+
+and is called the plasma frequency. It is a characteristic number of the plasma.
+
+When dealing with electron charges many people prefer to express their answers in terms of a quantity e^2 defined by
+
+e^2=\frac{q_e^2}{4\pi\epsilon_0}= 2.3068\times10^{-28}\text{ newton$\cdot$meter$^2$}. (7.26)
+
+Using this convention, Eq. ( 7.25) becomes
+
+\omega_p^2=\frac{4\pi e^2n_0}{m_e}, (7.27)
+
+which is the form you will find in most books.
+
+Thus we have found that a disturbance of a plasma will set up free oscillations of the electrons about their equilibrium positions at the natural frequency \omega_p , which is proportional to the square root of the density of the electrons. The plasma electrons behave like a resonant system, such as those we described in Chapter 23 of Vol. I.
+
+This natural resonance of a plasma has some interesting effects. For example, if one tries to propagate a radiowave through the ionosphere, one finds that it can penetrate only if its frequency is higher than the plasma frequency. Otherwise the signal is reflected back. We must use high frequencies if we wish to communicate with a satellite in space. On the other hand, if we wish to communicate with a radio station beyond the horizon, we must use frequencies lower than the plasma frequency, so that the signal will be reflected back to the earth.
+
+Another interesting example of plasma oscillations occurs in metals. In a metal we have a contained plasma of positive ions, and free electrons. The density n_0 is very high, so \omega_p is also. But it should still be possible to observe the electron oscillations. Now, according to quantum mechanics, a harmonic oscillator with a natural frequency \omega_p has energy levels which are separated by the energy increment \hbar\omega_p . If, then, one shoots electrons through, say, an aluminum foil, and makes very careful measurements of the electron energies on the other side, one might expect to find that the electrons sometimes lose the energy \hbar\omega_p to the plasma oscillations. This does indeed happen. It was first observed experimentally in 1936 that electrons with energies of a few hundred to a few thousand electron volts lost energy in jumps when scattering from or going through a thin metal foil. The effect was not understood until 1953 when Bohm and Pines 1 showed that the observations could be explained in terms of quantum excitations of the plasma oscillations in the metal.

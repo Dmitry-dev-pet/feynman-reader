@@ -1,0 +1,59 @@
+## 3–6 The circulation around a square; Stokes’ theorem
+
+How shall we find the circulation for each little square? One question is, how is the square oriented in space? We could easily make the calculation if it had a special orientation. For example, if it were in one of the coordinate planes. Since we have not assumed anything as yet about the orientation of the coordinate axes, we can just as well choose the axes so that the one little square we are concentrating on at the moment lies in the xy -plane, as in Fig. 3–10. If our result is expressed in vector notation, we can say that it will be the same no matter what the particular orientation of the plane.
+
+### Figure Ch3-F10
+Caption: Fig. 3–10.Computing the circulation of C\FigC around a small square.
+Image: figures/Ch3-F10.svg
+![Fig. 3–10.Computing the circulation of C\FigC around a small square.](figures/Ch3-F10.svg)
+
+We want now to find the circulation of the field \mathbf{C} around our little square. It will be easy to do the line integral if we make the square small enough that the vector \mathbf{C} doesn’t change much along any one side of the square. (The assumption is better the smaller the square, so we are really talking about infinitesimal squares.) Starting at the point (x,y) —the lower left corner of the figure—we go around in the direction indicated by the arrows. Along the first side—marked (1) —the tangential component is C_x(1) and the distance is \Delta x . The first part of the integral is C_x(1)\,\Delta x . Along the second leg, we get C_y(2)\,\Delta y . Along the third, we get -C_x(3)\,\Delta x , and along the fourth, -C_y(4)\,\Delta y . The minus signs are required because we want the tangential component in the direction of travel. The whole line integral is then
+
+\begin{aligned} \oint\mathbf{C}\cdot d\mathbf{s}=\;&C_x(1)\,\Delta x&+&\,C_y(2)\,\Delta y\\ -&C_x(3)\,\Delta x&-&\,C_y(4)\,\Delta y. \end{aligned} (3.31)
+
+Now let’s look at the first and third pieces. Together they are
+
+[C_x(1)-C_x(3)]\,\Delta x. (3.32)
+
+You might think that to our approximation the difference is zero. That is true to the first approximation. We can be more accurate, however, and take into account the rate of change of C_x . If we do, we may write
+
+C_x(3)=C_x(1)+\frac{\partial C_x}{\partial y}\,\Delta y. (3.33)
+
+If we included the next approximation, it would involve terms in (\Delta y)^2 , but since we will ultimately think of the limit as \Delta y\to0 , such terms can be neglected. Putting ( 3.33) together with ( 3.32), we find that
+
+[C_x(1)-C_x(3)]\,\Delta x=-\frac{\partial C_x}{\partial y}\,\Delta x\,\Delta y. (3.34)
+
+The derivative can, to our approximation, be evaluated at (x,y) .
+
+Similarly, for the other two terms in the circulation, we may write
+
+C_y(2)\,\Delta y-C_y(4)\,\Delta y=\frac{\partial C_y}{\partial x}\,\Delta x\,\Delta y. (3.35)
+
+The circulation around our square is then
+
+\biggl(\frac{\partial C_y}{\partial x}-\frac{\partial C_x}{\partial y}\biggr)\Delta x\,\Delta y, (3.36)
+
+which is interesting, because the two terms in the parentheses are just the z -component of the curl. Also, we note that \Delta x\,\Delta y is the area of our square. So we can write our circulation ( 3.36) as
+
+(\mathbf{c}url{\mathbf{C}})_z\,\Delta a.
+
+But the z -component really means the component normal to the surface element. We can, therefore, write the circulation around a differential square in an invariant vector form:
+
+\oint\mathbf{C}\cdot d\mathbf{s}=(\mathbf{c}url{\mathbf{C}})_n\,\Delta a=(\mathbf{c}url{\mathbf{C}})\cdot\FLPn\,\Delta a. (3.37)
+
+Our result is: the circulation of any vector \mathbf{C} around an infinitesimal square is the component of the curl of \mathbf{C} normal to the surface, times the area of the square.
+
+### Figure Ch3-F11
+Caption: Fig. 3–11.The circulation of C\FigC around Γ\Gamma is the surface integral of the normal component of ∇×C\Fignabla\times\FigC.
+Image: figures/Ch3-F11.svg
+![Fig. 3–11.The circulation of C\FigC around Γ\Gamma is the surface integral of the normal component of ∇×C\Fignabla\times\FigC.](figures/Ch3-F11.svg)
+
+The circulation around any loop \Gamma can now be easily related to the curl of the vector field. We fill in the loop with any convenient surface S , as in Fig. 3–11, and add the circulations around a set of infinitesimal squares in this surface. The sum can be written as an integral. Our result is a very useful theorem called Stokes’ theorem (after Mr. Stokes). Stokes’ Theorem
+
+\oint_\Gamma\mathbf{C}\cdot d\mathbf{s}=\int_S(\mathbf{c}url{\mathbf{C}})_n\,da, (3.38)
+
+where S is any surface bounded by \Gamma .
+
+We must now speak about a convention of signs. In Fig. 3–10 the z -axis would point toward you in a “usual”—that is, “right-handed”—system of axes. When we took our line integral with a “positive” sense of rotation, we found that the circulation was equal to the z -component of \mathbf{c}url{\mathbf{C}} . If we had gone around the other way, we would have gotten the opposite sign. Now how shall we know, in general, what direction to choose for the positive direction of the “normal” component of \mathbf{c}url{\mathbf{C}} ? The “positive” normal must always be related to the sense of rotation, as in Fig. 3–10. It is indicated for the general case in Fig. 3–11.
+
+One way of remembering the relationship is by the “right-hand rule.” If you make the fingers of your right hand go around the curve \Gamma , with the fingertips pointed in the direction of the positive sense of d\mathbf{s} , then your thumb points in the direction of the positive normal to the surface S .

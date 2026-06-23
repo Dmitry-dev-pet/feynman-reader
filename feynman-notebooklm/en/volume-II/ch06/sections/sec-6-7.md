@@ -1,0 +1,19 @@
+## 6–7 The method of images
+
+We have solved, for example, the field of two point charges. Figure 6–8 shows some of the field lines and equipotential surfaces we obtained by the computations in Chapter 4. Now consider the equipotential surface marked A . Suppose we were to shape a thin sheet of metal so that it just fits this surface. If we place it right at the surface and adjust its potential to the proper value, no one would ever know it was there, because nothing would be changed.
+
+### Figure Ch6-F8
+Caption: Fig. 6–8.The field lines and equipotentials for two point charges.
+Image: figures/Ch6-F8.svg
+![Fig. 6–8.The field lines and equipotentials for two point charges.](figures/Ch6-F8.svg)
+
+But notice! We have really solved a new problem. We have a situation in which the surface of a curved conductor with a given potential is placed near a point charge. If the metal sheet we placed at the equipotential surface eventually closes on itself (or, in practice, if it goes far enough) we have the kind of situation considered in Section 5–10 , in which our space is divided into two regions, one inside and one outside a closed conducting shell. We found there that the fields in the two regions are quite independent of each other. So we would have the same fields outside our curved conductor no matter what is inside. We can even fill up the whole inside with conducting material. We have found, therefore, the fields for the arrangement of Fig. 6–9 . In the space outside the conductor the field is just like that of two point charges, as in Fig. 6–8 . Inside the conductor, it is zero. Also—as it must be—the electric field just outside the conductor is normal to the surface.
+
+### Figure Ch6-F9
+Caption: Fig. 6–9.The field outside a conductor shaped like the equipotential AA of Fig. 6–8.
+Image: figures/Ch6-F9.svg
+![Fig. 6–9.The field outside a conductor shaped like the equipotential AA of Fig. 6–8.](figures/Ch6-F9.svg)
+
+Thus we can compute the fields in Fig. 6–9 by computing the field due to q and to an imaginary point charge -q at a suitable point. The point charge we “imagine” existing behind the conducting surface is called an image charge.
+
+In books you can find long lists of solutions for hyperbolic-shaped conductors and other complicated looking things, and you wonder how anyone ever solved these terrible shapes. They were solved backwards! Someone solved a simple problem with given charges. He then saw that some equipotential surface showed up in a new shape, and he wrote a paper in which he pointed out that the field outside that particular shape can be described in a certain way.

@@ -1,0 +1,46 @@
+6–5 The dipole approximation for an arbitrary distribution
+
+The dipole field appears in another circumstance both interesting and important. Suppose that we have an object that has a complicated distribution of charge—like the water molecule (Fig. 6–2 )—and we are interested only in the fields far away. We will show that it is possible to find a relatively simple expression for the fields which is appropriate for distances large compared with the size of the object.
+
+Figure Ch6-F7
+Caption: Fig. 6–7.Computation of the potential at a point PP at a large distance from a set of charges.
+Image: figures/Ch6-F7.svg
+![Fig. 6–7.Computation of the potential at a point PP at a large distance from a set of charges.](figures/Ch6-F7.svg)
+
+We can think of our object as an assembly of point charges q_i in a certain limited region, as shown in Fig. 6–7 . (We can, later, replace q_i by \rho\,dV if we wish.) Let each charge q_i be located at the displacement \mathbf{d}_i from an origin chosen somewhere in the middle of the group of charges. What is the potential at the point P , located at \mathbf{R} , where \mathbf{R} is much larger than the maximum \mathbf{d}_i ? The potential from the whole collection is given by
+
+\phi=\frac{1}{4\pi\epsilon_0}\sum_i\frac{q_i}{r_i}, (6.21)
+
+where r_i is the distance from P to the charge q_i (the length of the vector \mathbf{R}-\mathbf{d}_i ). Now if the distance from the charges to P , the point of observation, is enormous, each of the r_i ’s can be approximated by R . Each term becomes q_i/R , and we can take 1/R out as a factor in front of the summation. This gives us the simple result
+
+\phi=\frac{1}{4\pi\epsilon_0}\,\frac{1}{R}\sum_iq_i= \frac{Q}{4\pi\epsilon_0 R}, (6.22)
+
+where Q is just the total charge of the whole object. Thus we find that for points far enough from any lump of charge, the lump looks like a point charge. The result is not too surprising.
+
+But what if there are equal numbers of positive and negative charges? Then the total charge Q of the object is zero. This is not an unusual case; in fact, as we know, objects are usually neutral. The water molecule is neutral, but the charges are not all at one point, so if we are close enough we should be able to see some effects of the separate charges. We need a better approximation than ( 6.22) for the potential from an arbitrary distribution of charge in a neutral object. Equation ( 6.21) is still precise, but we can no longer just set r_i=R . We need a more accurate expression for r_i . If the point P is at a large distance, r_i will differ from R to an excellent approximation by the projection of \mathbf{d} on \mathbf{R} , as can be seen from Fig. 6–7 . (You should imagine that P is really farther away than is shown in the figure.) In other words, if \mathbf{e}_R is the unit vector in the direction of \mathbf{R} , then our next approximation to r_i is
+
+r_i\approx R-\mathbf{d}_i\cdot\mathbf{e}_R. (6.23)
+
+What we really want is 1/r_i , which, since d_i\ll R , can be written to our approximation as
+
+\frac{1}{r_i}\approx\frac{1}{R}\biggl(1+\frac{\mathbf{d}_i\cdot\mathbf{e}_R}{R}\biggr). (6.24)
+
+Substituting this in ( 6.21), we get that the potential is
+
+\phi=\frac{1}{4\pi\epsilon_0}\biggl(\frac{Q}{R}+ \sum_iq_i\frac{\mathbf{d}_i\cdot\mathbf{e}_R}{R^2}+\dotsb\biggr). (6.25)
+
+The three dots indicate the terms of higher order in d_i/R that we have neglected. These, as well as the ones we have already obtained, are successive terms in a Taylor expansion of 1/r_i about 1/R in powers of d_i/R .
+
+The first term in ( 6.25) is what we got before; it drops out if the object is neutral. The second term depends on 1/R^2 , just as for a dipole. In fact, if we define
+
+\mathbf{p}=\sum_iq_i\mathbf{d}_i (6.26)
+
+as a property of the charge distribution, the second term of the potential ( 6.25) is
+
+\phi=\frac{1}{4\pi\epsilon_0}\,\frac{\mathbf{p}\cdot\mathbf{e}_R}{R^2}, (6.27)
+
+precisely a dipole potential. The quantity \mathbf{p} is called the dipole moment of the distribution. It is a generalization of our earlier definition, and reduces to it for the special case of two point charges.
+
+Our result is that, far enough away from any mess of charges that is as a whole neutral, the potential is a dipole potential. It decreases as 1/R^2 and varies as \cos\theta —and its strength depends on the dipole moment of the distribution of charge. It is for these reasons that dipole fields are important, since the simple case of a pair of point charges is quite rare.
+
+The water molecule, for example, has a rather strong dipole moment. The electric fields that result from this moment are responsible for some of the important properties of water. For many molecules, for example CO _2 , the dipole moment vanishes because of the symmetry of the molecule. For them we should expand still more accurately, obtaining another term in the potential which decreases as 1/R^3 , and which is called a quadrupole potential. We will discuss such cases later.

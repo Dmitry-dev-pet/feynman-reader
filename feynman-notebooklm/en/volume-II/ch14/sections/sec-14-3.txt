@@ -1,0 +1,36 @@
+14–3 A straight wire
+
+For our first example, we will again find the field of a straight wire—which we solved in the last chapter by using Eq. ( 14.2) and some arguments of symmetry. We take a long straight wire of radius a , carrying the steady current I . Unlike the charge on a conductor in the electrostatic case, a steady current in a wire is uniformly distributed throughout the cross section of the wire. If we choose our coordinates as shown in Fig. 14–3 , the current density vector \mathbf{j} has only a z -component. Its magnitude is
+
+j_z=\frac{I}{\pi a^2} (14.20)
+
+inside the wire, and zero outside.
+
+Figure Ch14-F3
+Caption: Fig. 14–3.A long cylindrical wire along the zz-axis with a uniform current density j\Figj.
+Image: figures/Ch14-F3.svg
+![Fig. 14–3.A long cylindrical wire along the zz-axis with a uniform current density j\Figj.](figures/Ch14-F3.svg)
+
+Since j_x and j_y are both zero, we have immediately
+
+A_x=0,\qquad A_y=0.
+
+To get A_z we can use our solution for the electrostatic potential \phi of a wire with a uniform charge density \rho=j_z/c^2 . For points outside an infinite charged cylinder, the electrostatic potential is
+
+\phi=-\frac{\lambda}{2\pi\epsilon_0}\ln r',
+
+where r'=\sqrt{x^2+y^2} and \lambda is the charge per unit length, \pi a^2\rho . So A_z must be
+
+A_z=-\frac{\pi a^2j_z}{2\pi\epsilon_0 c^2}\ln r'
+
+for points outside a long wire carrying a uniform current. Since \pi a^2j_z=I , we can also write
+
+A_z=-\frac{I}{2\pi\epsilon_0 c^2}\ln r' (14.21)
+
+Now we can find \mathbf{B} from ( 14.4). There are only two of the six derivatives that are not zero. We get
+
+\begin{aligned} &B_x&&=-&&\frac{I}{2\pi\epsilon_0 c^2}\frac{\partial }{\partial y}&&\ln r'= -&&\frac{I}{2\pi\epsilon_0 c^2}\,\frac{y}{r'^2}&&,\\[1ex] &B_y&&=&&\frac{I}{2\pi\epsilon_0 c^2}\vphantom{\frac{\partial }{\partial y}}\frac{\partial }{\partial x}&&\ln r'= &&\frac{I}{2\pi\epsilon_0 c^2}\,\frac{x}{r'^2}&&,\\[2pt] % ebook insert: &B_z&&=&&0\vphantom{\frac{\partial }{\partial y}}. \end{aligned} (14.22)
+
+We get the same result as before: \mathbf{B} circles around the wire, and has the magnitude
+
+B=\frac{1}{4\pi\epsilon_0 c^2}\,\frac{2I}{r'}. (14.24)

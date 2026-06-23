@@ -1,0 +1,37 @@
+# Figure context for Volume II, Chapter 31
+
+## Ch31-F1
+Caption: Fig. 31–1.The vector addition of polarizations in an anisotropic crystal.
+Image: figures/Ch31-F1.svg
+
+## Ch31-F2
+Caption: Fig. 31–2.Locus of the vector E=(Ex,Ey)\FigE=(E_x,E_y) that gives a constant energy of polarization.
+Image: figures/Ch31-F2.svg
+
+## Ch31-F3
+Caption: Fig. 31–3.The energy ellipsoid of the polarization tensor.
+Image: figures/Ch31-F3.svg
+
+## Ch31-F4
+Caption: Fig. 31–4.The angular momentum L\FigL of a solid object is not, in general, parallel to its angular velocity ω\Figomega.
+Image: figures/Ch31-F4.svg
+
+## Ch31-F5
+Caption: Fig. 31–5.The material to the left of the plane σ\sigma exerts across the area ΔyΔz\Delta y\,\Delta z the force ΔF1\Delta\FigF_1 on the material to the right of the plane.
+Image: figures/Ch31-F5.svg
+
+## Ch31-F6
+Caption: Fig. 31–6.The force ΔF1\Delta\FigF_1 across an element of area ΔyΔz\Delta y\,\Delta z perpendicular to the xx-axis is resolved into three components ΔFx1\Delta F_{x1}, ΔFy1\Delta F_{y1}, and ΔFz1\Delta F_{z1}.
+Image: figures/Ch31-F6.svg
+
+## Ch31-F7
+Caption: Fig. 31–7.The force across an element of area perpendicular to yy is resolved into three rectangular components.
+Image: figures/Ch31-F7.svg
+
+## Ch31-F8
+Caption: Fig. 31–8.The force Fn\FigF_n across the face NN (whose unit normal is n\Fign) is resolved into components.
+Image: figures/Ch31-F8.svg
+
+## Ch31-F9
+Caption: Fig. 31–9.The xx- and yy-forces on four faces of a small unit cube.
+Image: figures/Ch31-F9.svg

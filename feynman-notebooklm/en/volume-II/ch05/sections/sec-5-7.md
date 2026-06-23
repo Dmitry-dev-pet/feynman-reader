@@ -1,0 +1,24 @@
+## 5–7 A sphere of charge; a spherical shell
+
+We have already (in Chapter 4) used Gauss’ law to find the field outside a uniformly charged spherical region. The same method can also give us the field at points inside the sphere. For example, the computation can be used to obtain a good approximation to the field inside an atomic nucleus. In spite of the fact that the protons in a nucleus repel each other, they are, because of the strong nuclear forces, spread nearly uniformly throughout the body of the nucleus.
+
+### Figure Ch5-F8
+Caption: Fig. 5–8.Gauss’ law can be used to find the field inside a uniformly charged sphere.
+Image: figures/Ch5-F8.svg
+![Fig. 5–8.Gauss’ law can be used to find the field inside a uniformly charged sphere.](figures/Ch5-F8.svg)
+
+Suppose that we have a sphere of radius R filled uniformly with charge. Let \rho be the charge per unit volume. Again using arguments of symmetry, we assume the field to be radial and equal in magnitude at all points at the same distance from the center. To find the field at the distance r from the center, we take a spherical Gaussian surface of radius r ( r<R ), as shown in Fig. 5–8 . The flux out of this surface is
+
+4\pi r^2E.
+
+The charge inside our Gaussian surface is the volume inside times \rho , or
+
+\frac{4}{3}\pi r^3\rho.
+
+Using Gauss’ law, it follows that the magnitude of the field is given by
+
+E=\frac{\rho r}{3\epsilon_0}\quad(r<R). (5.7)
+
+You can see that this formula gives the proper result for r=R . The electric field is proportional to the radius and is directed radially outward.
+
+The arguments we have just given for a uniformly charged sphere can be applied also to a thin spherical shell of charge. Assuming that the field is everywhere radial and is spherically symmetric, one gets immediately from Gauss’ law that the field outside the shell is like that of a point charge, while the field everywhere inside the shell is zero. (A Gaussian surface inside the shell will contain no charge.)

@@ -1,0 +1,83 @@
+27–3 Energy density and energy flow in the electromagnetic field
+
+The idea is to suppose that there is a field energy density u and a flux \FLPS that depend only upon the fields \mathbf{E} and \mathbf{B} . (For example, we know that in electrostatics, at least, the energy density can be written \frac{1}{2}\epsilon_0\mathbf{E}\cdot\mathbf{E} .) Of course, the u and \FLPS might depend on the potentials or something else, but let’s see what we can work out. We can try to rewrite the quantity \mathbf{E}\cdot\mathbf{j} in such a way that it becomes the sum of two terms: one that is the time derivative of one quantity and another that is the divergence of a second quantity. The first quantity would then be u and the second would be \FLPS (with suitable signs). Both quantities must be written in terms of the fields only; that is, we want to write our equality as
+
+\mathbf{E}\cdot\mathbf{j}=-\frac{\partial u}{\partial t}-\mathbf{d}iv{\FLPS}. (27.6)
+
+The left-hand side must first be expressed in terms of the fields only. How can we do that? By using Maxwell’s equations, of course. From Maxwell’s equation for the curl of \mathbf{B} ,
+
+\mathbf{j}=\epsilon_0 c^2\mathbf{c}url{\mathbf{B}}-\epsilon_0\,\frac{\partial \mathbf{E}}{\partial t}.
+
+Substituting this in ( 27.6) we will have only \mathbf{E} ’s and \mathbf{B} ’s:
+
+\mathbf{E}\cdot\mathbf{j}=\epsilon_0 c^2\mathbf{E}\cdot(\mathbf{c}url{\mathbf{B}})- \epsilon_0\mathbf{E}\cdot\frac{\partial \mathbf{E}}{\partial t}. (27.7)
+
+We are already partly finished. The last term is a time derivative—it is (\frac{\partial }{\partial t})(\frac{1}{2}\epsilon_0\mathbf{E}\cdot\mathbf{E}) . So \frac{1}{2}\epsilon_0\mathbf{E}\cdot\mathbf{E} is at least one part of u . It’s the same thing we found in electrostatics. Now, all we have to do is to make the other term into the divergence of something.
+
+Notice that the first term on the right-hand side of ( 27.7) is the same as
+
+(\mathbf{c}url{\mathbf{B}})\cdot\mathbf{E}. (27.8)
+
+And, as you know from vector algebra, (\mathbf{a}\times\mathbf{b})\cdot\mathbf{c} is the same as \mathbf{a}\cdot(\mathbf{b}\times\mathbf{c}) ; so our term is also the same as
+
+\mathbf{d}iv{(\mathbf{B}\times\mathbf{E})} (27.9)
+
+and we have the divergence of “something,” just as we wanted. Only that’s wrong! We warned you before that \boldsymbol{\nabla} is “like” a vector, but not “exactly” the same. The reason it is not is because there is an additional convention from calculus: when a derivative operator is in front of a product, it works on everything to the right. In Eq. ( 27.7), the \boldsymbol{\nabla} operates only on \mathbf{B} , not on \mathbf{E} . But in the form ( 27.9), the normal convention would say that \boldsymbol{\nabla} operates on both \mathbf{B} and \mathbf{E} . So it’s not the same thing. In fact, if we work out the components of \mathbf{d}iv{(\mathbf{B}\times\mathbf{E})} we can see that it is equal to \mathbf{E}\cdot(\mathbf{c}url{\mathbf{B}}) plus some other terms. It’s like what happens when we take a derivative of a product in algebra. For instance,
+
+\frac{d }{d x}(fg)=\frac{d f}{d x}\,g+f\,\frac{d g}{d x}.
+
+Rather than working out all the components of \mathbf{d}iv{(\mathbf{B}\times\mathbf{E})} , we would like to show you a trick that is very useful for this kind of problem. It is a trick that allows you to use all the rules of vector algebra on expressions with the \boldsymbol{\nabla} operator, without getting into trouble. The trick is to throw out—for a while at least—the rule of the calculus notation about what the derivative operator works on. You see, ordinarily, the order of terms is used for two separate purposes. One is for calculus: f(d/dx)g is not the same as g(d/dx)f ; and the other is for vectors: \mathbf{a}\times\mathbf{b} is different from \mathbf{b}\times\mathbf{a} . We can, if we want, choose to abandon momentarily the calculus rule. Instead of saying that a derivative operates on everything to the right, we make a new rule that doesn’t depend on the order in which terms are written down. Then we can juggle terms around without worrying.
+
+Here is our new convention: we show, by a subscript, what a differential operator works on; the order has no meaning. Suppose we let the operator D stand for \frac{\partial }{\partial x} . Then D_f means that only the derivative of the variable quantity f is taken. Then
+
+D_ff=\frac{\partial f}{\partial x}.
+
+But if we have D_ffg , it means
+
+D_ffg=\biggl(\frac{\partial f}{\partial x}\biggr)g.
+
+But notice now that according to our new rule, fD_fg means the same thing. We can write the same thing any which way:
+
+D_ffg=gD_ff=fD_fg=fgD_f.
+
+You see, the D_f can even come after everything. (It’s surprising that such a handy notation is never taught in books on mathematics or physics.)
+
+You may wonder: What if I want to write the derivative of fg ? I want the derivative of both terms. That’s easy, you just say so; you write D_f(fg)+D_g(fg) . That is just g(\frac{\partial f}{\partial x})+f(\frac{\partial g}{\partial x}) , which is what you mean in the old notation by \frac{\partial (fg)}{\partial x} .
+
+You will see that it is now going to be very easy to work out a new expression for \mathbf{d}iv{(\mathbf{B}\times\mathbf{E})} . We start by changing to the new notation; we write
+
+\mathbf{d}iv{(\mathbf{B}\times\mathbf{E})}=\boldsymbol{\nabla}_B\cdot(\mathbf{B}\times\mathbf{E})+ \boldsymbol{\nabla}_E\cdot(\mathbf{B}\times\mathbf{E}). (27.10)
+
+The moment we do that we don’t have to keep the order straight any more. We always know that \boldsymbol{\nabla}_E operates on \mathbf{E} only, and \boldsymbol{\nabla}_B operates on \mathbf{B} only. In these circumstances, we can use \boldsymbol{\nabla} as though it were an ordinary vector. (Of course, when we are finished, we will want to return to the “standard” notation that everybody usually uses.) So now we can do the various things like interchanging dots and crosses and making other kinds of rearrangements of the terms. For instance, the middle term of Eq. ( 27.10) can be rewritten as \mathbf{E}\cdot\boldsymbol{\nabla}_B\times\mathbf{B} . (You remember that \mathbf{a}\cdot\mathbf{b}\times\mathbf{c}=\mathbf{b}\cdot\mathbf{c}\times\mathbf{a} .) And the last term is the same as \mathbf{B}\cdot\mathbf{E}\times\boldsymbol{\nabla}_E . It looks freakish, but it is all right. Now if we try to go back to the ordinary convention, we have to arrange that the \boldsymbol{\nabla} operates only on its “own” variable. The first one is already that way, so we can just leave off the subscript. The second one needs some rearranging to put the \boldsymbol{\nabla} in front of the \mathbf{E} , which we can do by reversing the cross product and changing sign:
+
+\mathbf{B}\cdot(\mathbf{E}\times\boldsymbol{\nabla}_E)= -\mathbf{B}\cdot(\boldsymbol{\nabla}_E\times\mathbf{E}).
+
+Now it is in a conventional order, so we can return to the usual notation. Equation ( 27.10) is equivalent to
+
+\mathbf{d}iv{(\mathbf{B}\times\mathbf{E})}= \mathbf{E}\cdot(\mathbf{c}url{\mathbf{B}})-\mathbf{B}\cdot(\mathbf{c}url{\mathbf{E}}). (27.11)
+
+(A quicker way would have been to use components in this special case, but it was worth taking the time to show you the mathematical trick. You probably won’t see it anywhere else, and it is very good for unlocking vector algebra from the rules about the order of terms with derivatives.)
+
+We now return to our energy conservation discussion and use our new result, Eq. ( 27.11), to transform the \mathbf{c}url{\mathbf{B}} term of Eq. ( 27.7). That energy equation becomes
+
+\begin{aligned} \mathbf{E}\cdot\mathbf{j}=\,&\epsilon_0 c^2\mathbf{d}iv{(\mathbf{B}\times\mathbf{E})}\,+\\ &\epsilon_0 c^2\mathbf{B}\cdot(\mathbf{c}url{\mathbf{E}})\,-\frac{\partial }{\partial t}(\frac{1}{2}\epsilon_0 \mathbf{E}\cdot\mathbf{E}). \end{aligned} (27.12)
+
+Now you see, we’re almost finished. We have one term which is a nice derivative with respect to t to use for u and another that is a beautiful divergence to represent \FLPS . Unfortunately, there is the center term left over, which is neither a divergence nor a derivative with respect to t . So we almost made it, but not quite. After some thought, we look back at the differential equations of Maxwell and discover that \mathbf{c}url{\mathbf{E}} is, fortunately, equal to -\frac{\partial \mathbf{B}}{\partial t} , which means that we can turn the extra term into something that is a pure time derivative:
+
+\mathbf{B}\cdot(\mathbf{c}url{\mathbf{E}})=\mathbf{B}\cdot\biggl( -\frac{\partial \mathbf{B}}{\partial t}\biggr)=-\frac{\partial }{\partial t}\biggl( \frac{\mathbf{B}\cdot\mathbf{B}}{2}\biggr).
+
+Now we have exactly what we want. Our energy equation reads
+
+\begin{aligned} \mathbf{E}\cdot\mathbf{j}=\;&\mathbf{d}iv{(\epsilon_0 c^2\mathbf{B}\times\mathbf{E})}\,-\\[1ex] &\frac{\partial }{\partial t}\biggl(\frac{\epsilon_0 c^2}{2}\,\mathbf{B}\cdot\mathbf{B}+ \frac{\epsilon_0}{2}\,\mathbf{E}\cdot\mathbf{E}\biggr), \end{aligned} (27.13)
+
+which is exactly like Eq. ( 27.6), if we make the definitions
+
+u=\frac{\epsilon_0}{2}\,\mathbf{E}\cdot\mathbf{E}+ \frac{\epsilon_0 c^2}{2}\,\mathbf{B}\cdot\mathbf{B} (27.14)
+
+and
+
+\FLPS=\epsilon_0 c^2\mathbf{E}\times\mathbf{B}. (27.15)
+
+(Reversing the cross product makes the signs come out right.)
+
+Our program was successful. We have an expression for the energy density that is the sum of an “electric” energy density and a “magnetic” energy density, whose forms are just like the ones we found in statics when we worked out the energy in terms of the fields. Also, we have found a formula for the energy flow vector of the electromagnetic field. This new vector, \FLPS=\epsilon_0 c^2\mathbf{E}\times\mathbf{B} , is called “Poynting’s vector,” after its discoverer. It tells us the rate at which the field energy moves around in space. The energy which flows through a small area da per second is \FLPS\cdot\FLPn\,da , where \FLPn is the unit vector perpendicular to da . (Now that we have our formulas for u and \FLPS , you can forget the derivations if you want.)

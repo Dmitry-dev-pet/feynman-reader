@@ -1,0 +1,420 @@
+SOURCE: Feynman Lectures on Physics, Volume II, Chapter 26
+LANGUAGE: en
+TITLE: Chapter 26. Lorentz Transformations of the Fields
+SOURCE_URL: https://www.feynmanlectures.caltech.edu/II_26.html
+NOTEBOOKLM_USE: clean lecture text with TeX math and figure captions; reader navigation removed.
+
+26. LORENTZ TRANSFORMATIONS OF THE FIELDS
+
+26–1 The four-potential of a moving charge
+
+FIGURE Ch26-F1
+Caption: Fig. 26–1. Finding the fields at (x,y,z)(x,y,z) due to a charge qq moving along the xx-axis with the constant speed vv. The field “now” at the point (x,y,z)(x,y,z) can be expressed in terms of the “present” position PP, as well as in terms of P′P', the “retarded” position (at t′=t−r′/ct'=t-r'/c).
+Image file: figures/Ch26-F1.svg
+
+We saw in the last chapter that the potential A_\mu=(\phi,\mathbf{A}) is a four-vector. The time component is the scalar potential \phi , and the three space components are the vector potential \mathbf{A} . We also worked out the potentials of a particle moving with uniform speed on a straight line by using the Lorentz transformation. (We had already found them by another method in Chapter 21.) For a point charge whose position at the time t is (vt,0,0) , the potentials at the point (x,y,z) are
+
+\begin{aligned} \phi&=\frac{1}{\overset{\phantom [}{4\pi\epsilon_0\sqrt{1-v^2}}}\, \frac{q}{\biggl[ \dfrac{(x-vt)^2}{1-v^2}+y^2+z^2 \biggr]^{1/2}}\\[1.5ex] A_x&=\frac{1}{\overset{\phantom [}4\pi\epsilon_0\sqrt{1-v^2}}\, \frac{qv}{\biggl[ \dfrac{(x-vt)^2}{1-v^2}+y^2+z^2 \biggr]^{1/2}}\\[1ex] A_y&=A_z=0. \end{aligned} (26.1)
+
+Equations ( 26.1) give the potentials at x , y , and z at the time t , for a charge whose “present” position (by which we mean the position at the time t ) is at x=vt . Notice that the equations are in terms of (x-vt) , y , and z which are the coordinates measured from the current position P of the moving charge (see Fig. 26–1 ). The actual influence we know really travels at the speed c , so it is the behavior of the charge back at the retarded position P' that really counts. 1 The point P' is at x=vt' (where t'=t-r'/c is the retarded time). But we said that the charge was moving with uniform velocity in a straight line, so naturally the behavior at P' and the current position are directly related. In fact, if we make the added assumption that the potentials depend only upon the position and the velocity at the retarded moment, we have in equations ( 26.1) a complete formula for the potentials for a charge moving any way. It works this way. Suppose that you have a charge moving in some arbitrary fashion, say with the trajectory in Fig. 26–2 , and you are trying to find the potentials at the point (x,y,z) . First, you find the retarded position P' and the velocity v' at that point. Then you imagine that the charge would keep on moving with this velocity during the delay time (t'-t) , so that it would then appear at an imaginary position P_{\text{proj}} , which we can call the “projected position,” and would arrive there with the velocity v' . (Of course, it doesn’t do that; its real position at t is at P .) Then the potentials at (x,y,z) are just what equations ( 26.1) would give for the imaginary charge at the projected position P_{\text{proj}} . What we are saying is that since the potentials depend only on what the charge is doing at the retarded time, the potentials will be the same whether the charge continued moving at a constant velocity or whether it changed its velocity after t' —that is, after the potentials that were going to appear at (x,y,z) at the time t were already determined.
+
+FIGURE Ch26-F2
+Caption: Fig. 26–2. A charge moves on an arbitrary trajectory. The potentials at (x,y,z)(x,y,z) at the time tt are determined by the position P′P' and velocity v′\Figv' at the retarded time t−r′/ct-r'/c. They are conveniently expressed in terms of the coordinates from the “projected” position PprojP_{\text{proj}}. (The actual position at tt is PP.)
+Image file: figures/Ch26-F2.svg
+
+You know, of course, that the moment that we have the formula for the potentials from a charge moving in any manner whatsoever, we have the complete electrodynamics; we can get the potentials of any charge distribution by superposition. Therefore we can summarize all the phenomena of electrodynamics either by writing Maxwell’s equations or by the following series of remarks. (Remember them in case you are ever on a desert island. From them, all can be reconstructed. You will, of course, know the Lorentz transformation; you will never forget that on a desert island or anywhere else.)
+
+First, A_\mu is a four-vector. Second, the Coulomb potential for a stationary charge is q/4\pi\epsilon_0 r . Third, the potentials produced by a charge moving in any way depend only upon the velocity and position at the retarded time. With those three facts we have everything. From the fact that A_\mu is a four-vector, we transform the Coulomb potential, which we know, and get the potentials for a constant velocity. Then, by the last statement that potentials depend only upon the past velocity at the retarded time, we can use the projected position game to find them. It is not a particularly useful way of doing things, but it is interesting to show that the laws of physics can be put in so many different ways.
+
+It is sometimes said, by people who are careless, that all of electrodynamics can be deduced solely from the Lorentz transformation and Coulomb’s law. Of course, that is completely false. First, we have to suppose that there is a scalar potential and a vector potential that together make a four-vector. That tells us how the potentials transform. Then why is it that the effects at the retarded time are the only things that count? Better yet, why is it that the potentials depend only on the position and the velocity and not, for instance, on the acceleration? The fields \mathbf{E} and \mathbf{B} do depend on the acceleration. If you try to make the same kind of an argument with respect to them, you would say that they depend only upon the position and velocity at the retarded time. But then the fields from an accelerating charge would be the same as the fields from a charge at the projected position—which is false. The fields depend not only on the position and the velocity along the path but also on the acceleration. So there are several additional tacit assumptions in this great statement that everything can be deduced from the Lorentz transformation. (Whenever you see a sweeping statement that a tremendous amount can come from a very small number of assumptions, you always find that it is false. There are usually a large number of implied assumptions that are far from obvious if you think about them sufficiently carefully.)
+
+26–2 The fields of a point charge with a constant velocity
+
+Now that we have the potentials from a point charge moving at constant velocity, we ought to find the fields—for practical reasons. There are many cases where we have uniformly moving particles—for instance, cosmic rays going through a cloud chamber, or even slow-moving electrons in a wire. So let’s at least see what the fields actually do look like for any speed—even for speeds nearly that of light—assuming only that there is no acceleration. It is an interesting question.
+
+We get the fields from the potentials by the usual rules:
+
+\mathbf{E}=-\boldsymbol{\nabla}{\phi}-\frac{\partial \mathbf{A}}{\partial t},\quad \mathbf{B}=\mathbf{c}url{\mathbf{A}}.
+
+First, for E_z
+
+E_z=-\frac{\partial \phi}{\partial z}-\frac{\partial A_z}{\partial t}.
+
+But A_z is zero; so differentiating \phi in equations ( 26.1), we get
+
+E_z\!=\!\frac{q}{\overset{\phantom [}4\pi\epsilon_0\sqrt{1\!-\!v^2}} \frac{z}{\biggl[\! \dfrac{(x\!-\!vt)^2}{1\!-\!v^2}\!+\!y^2\!+\!z^2 \!\biggr]^{3/2}}. (26.2)
+
+Similarly, for E_y ,
+
+E_y\!=\!\frac{q}{\overset{\phantom [}4\pi\epsilon_0\sqrt{1\!-\!v^2}} \frac{y}{\biggl[\! \dfrac{(x\!-\!vt)^2}{1\!-\!v^2}\!+\!y^2\!+\!z^2 \!\biggr]^{3/2}}. (26.3)
+
+The x -component is a little more work. The derivative of \phi is more complicated and A_x is not zero. First,
+
+-\frac{\partial \phi}{\partial x}\!=\!\frac{q}{\overset{\phantom [}4\pi\epsilon_0\sqrt{1\!-\!v^2}} \frac{(x\!-\!vt)/(1\!-\!v^2)}{\biggl[\! \dfrac{(x\!-\!vt)^2}{1\!-\!v^2}\!+\!y^2\!+\!z^2 \!\biggr]^{3/2}}. (26.4)
+
+Then, differentiating A_x with respect to t , we find
+
+-\frac{\partial A_x}{\partial t}\!=\!\frac{q}{\overset{\phantom [}4\pi\epsilon_0\sqrt{1\!-\!v^2}} \frac{-v^2(x\!-\!vt)/(1\!-\!v^2)}{\biggl[\! \dfrac{(x\!-\!vt)^2}{1\!-\!v^2}\!+\!y^2\!+\!z^2 \!\biggr]^{3/2}}. (26.5)
+
+And finally, taking the sum,
+
+E_x\!=\!\frac{q}{\overset{\phantom [}4\pi\epsilon_0\sqrt{1\!-\!v^2}} \frac{x\!-\!vt}{\biggl[\! \dfrac{(x\!-\!vt)^2}{1\!-\!v^2}\!+\!y^2\!+\!z^2 \!\biggr]^{3/2}}. (26.6)
+
+We’ll look at the physics of \mathbf{E} in a minute; let’s first find \mathbf{B} . For the z -component,
+
+B_z=\frac{\partial A_y}{\partial x}-\frac{\partial A_x}{\partial y}.
+
+Since A_y is zero, we have just one derivative to get. Notice, however, that A_x is just v\phi , and \frac{\partial }{\partial y} of v\phi is just -vE_y . So
+
+B_z=vE_y. (26.7)
+
+Similarly,
+
+B_y=\frac{\partial A_x}{\partial z}-\frac{\partial A_z}{\partial x}=+v\,\frac{\partial \phi}{\partial z},
+
+and
+
+B_y=-vE_z. (26.8)
+
+Finally, B_x is zero, since A_y and A_z are both zero. We can write the magnetic field simply as
+
+\mathbf{B}=\mathbf{v}\times\mathbf{E}. (26.9)
+
+Now let’s see what the fields look like. We will try to draw a picture of the field at various positions around the present position of the charge. It is true that the influence of the charge comes, in a certain sense, from the retarded position; but because the motion is exactly specified, the retarded position is uniquely given in terms of the present position. For uniform velocities, it’s nicer to relate the fields to the current position, because the field components at (x,y,z) depend only on (x - vt) , y , and z —which are the components of the displacement \mathbf{r} from the present position to (x,y,z) (see Fig. 26–3 ).
+
+FIGURE Ch26-F3
+Caption: Fig. 26–3. For a charge moving with constant speed, the electric field points radially from the “present” position of the charge.
+Image file: figures/Ch26-F3.svg
+
+Consider first a point with z=0 . Then \mathbf{E} has only x - and y -components. From Eqs. ( 26.3) and ( 26.6), the ratio of these components is just equal to the ratio of the x - and y -components of the displacement. That means that \mathbf{E} is in the same direction as \mathbf{r} , as shown in Fig. 26–3 . Since E_z is also proportional to z , it is clear that this result holds in three dimensions. In short, the electric field is radial from the charge, and the field lines radiate directly out of the charge, just as they do for a stationary charge. Of course, the field isn’t exactly the same as for the stationary charge, because of all the extra factors of (1-v^2) . But we can show something rather interesting. The difference is just what you would get if you were to draw the Coulomb field with a peculiar set of coordinates in which the scale of x was squashed up by the factor \sqrt{1-v^2} . If you do that, the field lines will be spread out ahead and behind the charge and will be squeezed together around the sides, as shown in Fig. 26–4 .
+
+FIGURE Ch26-F4
+Caption: Fig. 26–4. The electric field of a charge moving with constant speed v=0.9cv=0.9c, part (b), compared with the field of a charge at rest, part (a).
+Image file: figures/Ch26-F4.svg
+
+If we relate the strength of \mathbf{E} to the density of the field lines in the conventional way, we see a stronger field at the sides and a weaker field ahead and behind, which is just what the equations say. First, if we look at the strength of the field at right angles to the line of motion, that is, for (x-vt)=0 , the distance from the charge is \sqrt{y^2+z^2} . Here the total field strength is \sqrt{E_y^2+E_z^2} , which is
+
+E=\frac{q}{4\pi\epsilon_0\sqrt{1-v^2}}\, \frac{1}{y^2+z^2}. (26.10)
+
+The field is proportional to the inverse square of the distance—just like the Coulomb field except increased by the constant, extra factor 1/\sqrt{1-v^2} , which is always greater than one. So at the sides of a moving charge, the electric field is stronger than you get from the Coulomb law. In fact, the field in the sidewise direction is bigger than the Coulomb potential by the ratio of the energy of the particle to its rest mass.
+
+Ahead of the charge (and behind), y and z are zero and
+
+E=E_x=\frac{q(1-v^2)}{4\pi\epsilon_0(x-vt)^2}. (26.11)
+
+The field again varies as the inverse square of the distance from the charge but is now reduced by the factor (1-v^2) , in agreement with the picture of the field lines. If v/c is small, v^2/c^2 is still smaller, and the effect of the (1-v^2) terms is very small; we get back to Coulomb’s law. But if a particle is moving very close to the speed of light, the field in the forward direction is enormously reduced, and the field in the sidewise direction is enormously increased.
+
+Our results for the electric field of a charge can be put this way: Suppose you were to draw on a piece of paper the field lines for a charge at rest, and then set the picture to travelling with the speed v . Then, of course, the whole picture would be compressed by the Lorentz contraction; that is, the carbon granules on the paper would appear in different places. The miracle of it is that the picture you would see as the page flies by would still represent the field lines of the point charge. The contraction moves them closer together at the sides and spreads them out ahead and behind, just in the right way to give the correct line densities. We have emphasized before that field lines are not real but are only one way of representing the field. However, here they almost seem to be real. In this particular case, if you make the mistake of thinking that the field lines are somehow really there in space, and transform them, you get the correct field. That doesn’t, however, make the field lines any more real. All you need do to remind yourself that they aren’t real is to think about the electric fields produced by a charge together with a magnet; when the magnet moves, new electric fields are produced, and destroy the beautiful picture. So the neat idea of the contracting picture doesn’t work in general. It is, however, a handy way to remember what the fields from a fast-moving charge are like.
+
+FIGURE Ch26-F5
+Caption: Fig. 26–5. The magnetic field near a moving charge is v×E\Figv\times\FigE. [Compare with Fig. 26-4.]
+Image file: figures/Ch26-F5.svg
+
+The magnetic field is \mathbf{v}\times\mathbf{E} [from Eq. ( 26.9)]. If you take the velocity crossed into a radial \mathbf{E} -field, you get a \mathbf{B} which circles around the line of motion, as shown in Fig. 26–5. If we put back the c ’s, you will see that it’s the same result we had for low-velocity charges. A good way to see where the c ’s must go is to refer back to the force law,
+
+\mathbf{F}=q(\mathbf{E}+\mathbf{v}\times\mathbf{B}).
+
+You see that a velocity times the magnetic field has the same dimensions as an electric field. So the right-hand side of Eq. ( 26.9) must have a factor 1/c^2 :
+
+\mathbf{B}=\frac{\mathbf{v}\times\mathbf{E}}{c^2}. (26.12)
+
+For a slow-moving charge ( v\ll c ), we can take for \mathbf{E} the Coulomb field; then
+
+\mathbf{B}=\frac{q}{4\pi\epsilon_0 c^2}\, \frac{\mathbf{v}\times\mathbf{r}}{r^3}. (26.13)
+
+This formula corresponds exactly to equations for the magnetic field of a current that we found in Section 14-7 .
+
+We would like to point out, in passing, something interesting for you to think about. (We will come back to discuss it again later.) Imagine two protons with velocities at right angles, so that one will cross over the path of the other, but in front of it, so they don’t collide. At some instant, their relative positions will be as in Fig. 26–6 (a). We look at the force on q_1 due to q_2 and vice versa. On q_2 there is only the electric force from q_1 , since q_1 makes no magnetic field along its line of motion. On q_1 , however, there is again the electric force but, in addition, a magnetic force, since it is moving in a \mathbf{B} -field made by q_2 . The forces are as drawn in Fig. 26–6 (b). The electric forces on q_1 and q_2 are equal and opposite. However, there is a sidewise (magnetic) force on q_1 and no sidewise force on q_2 . Does action not equal reaction? We leave it for you to worry about.
+
+FIGURE Ch26-F6
+Caption: Fig. 26–6. The forces between two moving charges are not always equal and opposite. It appears that “action” is not equal to “reaction.”
+Image file: figures/Ch26-F6.svg
+
+26–3 Relativistic transformation of the fields
+
+In the last section we calculated the electric and magnetic fields from the transformed potentials. The fields are important, of course, in spite of the arguments given earlier that there is physical meaning and reality to the potentials. The fields, too, are real. It would be convenient for many purposes to have a way to compute the fields in a moving system if you already know the fields in some “rest” system. We have the transformation laws for \phi and \mathbf{A} , because A_\mu is a four-vector. Now we would like to know the transformation laws of \mathbf{E} and \mathbf{B} . Given \mathbf{E} and \mathbf{B} in one frame, how do they look in another frame moving past? It is a convenient transformation to have. We could always work back through the potentials, but it is useful sometimes to be able to transform the fields directly. We will now see how that goes.
+
+How can we find the transformation laws of the fields? We know the transformation laws of the \phi and \mathbf{A} , and we know how the fields are given in terms of \phi and \mathbf{A} —it should be easy to find the transformation for the \mathbf{B} and \mathbf{E} . (You might think that with every vector there should be something to make it a four-vector, so with \mathbf{E} there’s got to be something else we can use for the fourth component. And also for \mathbf{B} . But it’s not so. It’s quite different from what you would expect.) To begin with, let’s take just a magnetic field \mathbf{B} , which is, of course \mathbf{c}url{\mathbf{A}} . Now we know that the vector potential with its x -, y -, and z -components is only a piece of something; there is also a t -component. Also we know that for derivatives like \boldsymbol{\nabla} , besides the x , y , z parts, there is also a derivative with respect to t . So let’s try to figure out what happens if we replace a “ y ” by a “ t ”, or a “ z ” by a “ t ,” or something like that.
+
+First, notice the form of the terms in \mathbf{c}url{\mathbf{A}} when we write out the components:
+
+\begin{aligned} B_x&=\frac{\partial A_z}{\partial y}-\frac{\partial A_y}{\partial z},\\[1ex] B_y&=\frac{\partial A_x}{\partial z}-\frac{\partial A_z}{\partial x},\\[1ex] B_z&=\frac{\partial A_y}{\partial x}-\frac{\partial A_x}{\partial y}. \end{aligned} (26.14)
+
+The x -component is equal to a couple of terms that involve only y - and z -components. Suppose we call this combination of derivatives and components a “ zy -thing,” and give it a shorthand name, F_{zy} . We simply mean that
+
+F_{zy}\equiv\frac{\partial A_z}{\partial y}-\frac{\partial A_y}{\partial z}. (26.15)
+
+Similarly, B_y is equal to the same kind of “thing,” but this time it is an “ xz -thing.” And B_z is, of course, the corresponding “ yx -thing.” We have
+
+B_x=F_{zy},\quad B_y=F_{xz},\quad B_z=F_{yx}. (26.16)
+
+Now what happens if we simply try to concoct also some “ t ”-type things like F_{xt} and F_{tz} (since nature should be nice and symmetric in x , y , z , and t )? For instance, what is F_{tz} ? It is, of course,
+
+\frac{\partial A_t}{\partial z}-\frac{\partial A_z}{\partial t}.
+
+But remember that A_t=\phi , so it is also
+
+\frac{\partial \phi}{\partial z}-\frac{\partial A_z}{\partial t}.
+
+You’ve seen that before. It is the z -component of \mathbf{E} . Well, almost—there is a sign wrong. But we forgot that in the four-dimensional gradient the t -derivative comes with the opposite sign from x , y , and z . So we should really have taken the more consistent extension of F_{tz} , as
+
+F_{tz}=\frac{\partial A_t}{\partial z}+\frac{\partial A_z}{\partial t} (26.17)
+
+Then it is exactly equal to -E_z . Trying also F_{tx} and F_{ty} , we find that the three possibilities give
+
+F_{tx}=-E_x,\quad F_{ty}=-E_y,\quad F_{tz}=-E_z. (26.18)
+
+What happens if both subscripts are t ? Or, for that matter, if both are x ? We get things like
+
+F_{tt}=\frac{\partial A_t}{\partial t}-\frac{\partial A_t}{\partial t},
+
+and
+
+F_{xx}=\frac{\partial A_x}{\partial x}-\frac{\partial A_x}{\partial x},
+
+which give nothing but zero.
+
+We have then six of these F -things. There are six more which you get by reversing the subscripts, but they give nothing really new, since
+
+F_{xy}=-F_{yx},
+
+and so on. So, out of sixteen possible combinations of the four subscripts taken in pairs, we get only six different physical objects; and they are the components of \mathbf{B} and \mathbf{E} .
+
+To represent the general term of F , we will use the general subscripts \mu and \nu , where each can stand for 0 , 1 , 2 , or 3 —meaning in our usual four-vector notation t , x , y , and z . Also, everything will be consistent with our four-vector notation if we define F_{\mu\nu} by
+
+F_{\mu\nu}=\nabla\!_\mu A_\nu-\nabla\!_\nu A_\mu, (26.19)
+
+remembering that \fournabla=(\frac{\partial }{\partial t},-\frac{\partial }{\partial x},-\frac{\partial }{\partial y},-\frac{\partial }{\partial z}) and that A_\mu=(\phi,A_x,A_y,A_z) .
+
+What we have found is that there are six quantities that belong together in nature—that are different aspects of the same thing. The electric and magnetic fields which we have considered as separate vectors in our slow-moving world (where we don’t worry about the speed of light) are not vectors in four-space. They are parts of a new “thing.” Our physical “field” is really the six-component object F_{\mu\nu} . That is the way we must look at it for relativity. We summarize our results on F_{\mu\nu} in Table 26–1 .
+
+| \displaystyle\begin{aligned} F_{\mu\nu}&=-F_{\nu\mu}\\[1ex] F_{\mu\mu}&=0 \end{aligned} |  |
+| --- | --- |
+| \displaystyle\begin{aligned} F_{xy}&=-B_z\\[1ex] F_{yz}&=-B_x\\[1ex] F_{zx}&=-B_y \end{aligned} | \displaystyle\begin{aligned} F_{xt}&=E_x\\[1ex] F_{yt}&=E_y\\[1ex] F_{zt}&=E_z \end{aligned} |
+
+You see that what we have done here is to generalize the cross product. We began with the curl operation, and the fact that the transformation properties of the curl are the same as the transformation properties of two vectors—the ordinary three-dimensional vector \mathbf{A} and the gradient operator which we know also behaves like a vector. Let’s look for a moment at an ordinary cross product in three dimensions, for example, the angular momentum of a particle. When an object is moving in a plane, the quantity (xv_y-yv_x) is important. For motion in three dimensions, there are three such important quantities, which we call the angular momentum:
+
+\begin{aligned} L_{xy}&=m(xv_y-yv_x),\\[1ex] L_{yz}&=m(yv_z-zv_y),\\[1ex] L_{zx}&=m(zv_x-xv_z). \end{aligned}
+
+Then (although you may have forgotten by now) we discovered in Chapter 20 of Vol. I the miracle that these three quantities could be identified with the components of a vector. In order to do so, we had to make an artificial rule with a right-hand convention. It was just luck. It was luck because L_{ij} (with i and j equal to x , y , or z ) was an antisymmetric object:
+
+L_{ij}=-L_{ji},\quad L_{ii}=0.
+
+Of the nine possible quantities, there are only three independent numbers. And it just happens that when you change coordinate systems these three objects transform in exactly the same way as the components of a vector.
+
+The same thing lets us represent an element of surface as a vector. A surface element has two parts—say dx and dy —which we can represent by the vector d\mathbf{a} normal to the surface. But we can’t do that in four dimensions. What is the “normal” to dx\,dy ? Is it along z or along t ?
+
+In short, for three dimensions it happens by luck that after you’ve taken a combination of two vectors like L_{ij} , you can represent it again by another vector because there are just three terms that happen to transform like the components of a vector. But in four dimensions that is evidently impossible, because there are six independent terms, and you can’t represent six things by four things.
+
+Even in three dimensions it is possible to have combinations of vectors that can’t be represented by vectors. Suppose we take any two vectors \mathbf{a}=(a_x,a_y,a_z) and \mathbf{b}=(b_x,b_y,b_z) , and make the various possible combinations of components, like a_xb_x , a_xb_y , etc. There would be nine possible quantities:
+
+\begin{aligned} &a_xb_x,&\quad&a_xb_y,&\quad&a_xb_z,\\ &a_yb_x,&\quad&a_yb_y,&\quad&a_yb_z,\\ &a_zb_x,&\quad&a_zb_y,&\quad&a_zb_z. \end{aligned}
+
+We might call these quantities T_{ij} .
+
+If we now go to a rotated coordinate system (say rotated about the z -axis), the components of \mathbf{a} and \mathbf{b} are changed. In the new system, a_x , for example, gets replaced by
+
+a_x'=a_x\cos\theta+a_y\sin\theta,
+
+and b_y gets replaced by
+
+b_y'=b_y\cos\theta-b_x\sin\theta.
+
+And similarly for other components. The nine components of the product quantity T_{ij} we have invented are all changed too, of course. For instance, T_{xy}=a_xb_y gets changed to
+
+\begin{aligned} T_{xy}'=\;&a_xb_y(\cos^2\theta)-a_xb_x(\cos\theta\sin\theta)\,+\\[.5ex] &a_yb_y(\sin\theta\cos\theta)-a_yb_x(\sin^2\theta), \end{aligned}
+
+or
+
+\begin{aligned} T_{xy}'=\;&T_{xy}\cos^2\theta-T_{xx}\cos\theta\sin\theta\,+\\[.5ex] &T_{yy}\sin\theta\cos\theta-T_{yx}\sin^2\theta. \end{aligned}
+
+Each component of T_{ij}' is a linear combination of the components of T_{ij} .
+
+So we discover that it is not only possible to have a “vector product” like \mathbf{a}\times\mathbf{b} which has three components that transform like a vector, but we can—artificially—also make another kind of “product” of two vectors T_{ij} with nine components that transform under a rotation by a complicated set of rules that we could figure out. Such an object which has two indices to describe it, instead of one, is called a tensor. It is a tensor of the “second rank,” because you can play this game with three vectors too and get a tensor of the third rank—or with four, to get a tensor of the fourth rank, and so on. A tensor of the first rank is a vector.
+
+The point of all this is that our electromagnetic quantity F_{\mu\nu} is also a tensor of the second rank, because it has two indices in it. It is, however, a tensor in four dimensions. It transforms in a special way which we will work out in a moment—it is just the way a product of vectors transforms. For F_{\mu\nu} it happens that if you change the indices around, F_{\mu\nu} changes sign. That’s a special case—it is an antisymmetric tensor. So we say: the electric and magnetic fields are both part of an antisymmetric tensor of the second rank in four dimensions.
+
+You’ve come a long way. Remember way back when we defined what a velocity meant? Now we are talking about “an antisymmetric tensor of the second rank in four dimensions.”
+
+Now we have to find the law of the transformation of F_{\mu\nu} . It isn’t at all difficult to do; it’s just laborious—the brains involved are nil, but the work is not. What we want is the Lorentz transformation of \nabla\!_\mu A_\nu-\nabla\!_\nu A_\mu . Since \fournabla is just a special case of a vector, we will work with the general antisymmetric vector combination, which we can call G_{\mu\nu} :
+
+G_{\mu\nu}=a_\mu b_\nu-a_\nu b_\mu. (26.20)
+
+(For our purposes, a_\mu will eventually be replaced by \fournabla and b_\mu will be replaced by the potential A_\mu .) The components of a_\mu and b_\mu transform by the Lorentz formulas, which are
+
+\begin{alignedat}{2} a_t'&=\frac{a_t-va_x}{\sqrt{1-v^2}},&\quad b_t'&=\frac{b_t-vb_x}{\sqrt{1-v^2}},\\[1ex] a_x'&=\frac{a_x-va_t}{\sqrt{1-v^2}},&\quad b_x'&=\frac{b_x-vb_t}{\sqrt{1-v^2}},\\[1ex] a_y'&=a_y,&\quad b_y'&=b_y,\\[1ex] a_z'&=a_z,&\quad b_z'&=b_z. \end{alignedat} (26.21)
+
+Now let’s transform the components of G_{\mu\nu} . We start with G_{tx} :
+
+\begin{aligned} G_{tx}'&=a_t'b_x'-a_x'b_t'\\[1ex] &=\biggl(\!\frac{a_t-va_x}{\sqrt{1-v^2}}\!\biggr)\! \biggl(\!\frac{b_x-vb_t}{\sqrt{1-v^2}}\!\biggr)\!-\! \biggl(\!\frac{a_x-va_t}{\sqrt{1-v^2}}\!\biggr)\! \biggl(\!\frac{b_t-vb_x}{\sqrt{1-v^2}}\!\biggr)\\[1ex] &=a_tb_x-a_xb_t. \end{aligned}
+
+But that is just G_{tx} ; so we have the simple result
+
+G_{tx}'=G_{tx}.
+
+We will do one more.
+
+\begin{aligned} G_{ty}'&=\frac{a_t-va_x}{\sqrt{1-v^2}}\,b_y- a_y\,\frac{b_t-vb_x}{\sqrt{1-v^2}}\\[1.5ex] &=\frac{(a_tb_y-a_yb_t)-v(a_xb_y-a_yb_x)}{\sqrt{1-v^2}}. \end{aligned}
+
+So we get that
+
+G_{ty}'=\frac{G_{ty}-vG_{xy}}{\sqrt{1-v^2}}.
+
+And, of course, in the same way,
+
+G_{tz}'=\frac{G_{tz}-vG_{xz}}{\sqrt{1-v^2}}.
+
+It is clear how the rest will go. Let’s make a table of all six terms; only now we may as well write them for F_{\mu\nu} :
+
+\begin{alignedat}{2} F_{tx}'&=F_{tx},&\quad F_{xy}'&=\frac{F_{xy}-vF_{ty}}{\sqrt{1-v^2}},\\[.75ex] F_{ty}'&=\frac{F_{ty}-vF_{xy}}{\sqrt{1-v^2}},&\quad F_{yz}'&=F_{yz},\\[1ex] F_{tz}'&=\frac{F_{tz}-vF_{xz}}{\sqrt{1-v^2}},&\quad F_{zx}'&=\frac{F_{zx}-vF_{zt}}{\sqrt{1-v^2}}. \end{alignedat} (26.22)
+
+Of course, we still have F_{\mu\nu}'=-F_{\nu\mu}' and F_{\mu\mu}'=0 .
+
+So we have the transformation of the electric and magnetic fields. All we have to do is look at Table 26–1 to find out what our grand notation in terms of F_{\mu\nu} means in terms of \mathbf{E} and \mathbf{B} . It’s just a matter of substitution. So that we can see how it looks in the ordinary symbols, we’ll rewrite our transformation of the field components in Table 26–2 .
+
+| \displaystyle\begin{aligned} E_x'&=E_x\\[2.5ex] E_y'&=\dfrac{E_y-vB_z}{\sqrt{1-v^2}}\\[2.5ex] E_z'&=\dfrac{E_z+vB_y}{\sqrt{1-v^2}} \end{aligned} | \displaystyle\begin{aligned} B_x'&=B_x\\[2.5ex] B_y'&=\dfrac{B_y+vE_z}{\sqrt{1-v^2}}\\[2.5ex] B_z'&=\dfrac{B_z-vE_y}{\sqrt{1-v^2}} \end{aligned} |
+| --- | --- |
+
+The equations in Table 26–2 tell us how \mathbf{E} and \mathbf{B} change if we go from one inertial frame to another. If we know \mathbf{E} and \mathbf{B} in one system, we can find what they are in another that moves by with the speed v .
+
+We can write these equations in a form that is easier to remember if we notice that since v is in the x -direction, all the terms with v are components of the cross products \mathbf{v}\times\mathbf{E} and \mathbf{v}\times\mathbf{B} . So we can rewrite the transformations as shown in Table 26–3 .
+
+| \displaystyle\begin{aligned} E_x'&=E_x\\[2.5ex] E_y'&=\dfrac{(\mathbf{E}+\mathbf{v}\times\mathbf{B})_y}{\sqrt{1-v^2}}\\[2.5ex] E_z'&=\dfrac{(\mathbf{E}+\mathbf{v}\times\mathbf{B})_z}{\sqrt{1-v^2}} \end{aligned} | \displaystyle\begin{aligned} B_x'&=B_x\\[2.5ex] B_y'&=\dfrac{(\mathbf{B}-\mathbf{v}\times\mathbf{E})_y}{\sqrt{1-v^2}}\\[2.5ex] B_z'&=\dfrac{(\mathbf{B}-\mathbf{v}\times\mathbf{E})_z}{\sqrt{1-v^2}} \end{aligned} |
+| --- | --- |
+
+It is now easier to remember which components go where. In fact, the transformation can be written even more simply if we define the field components along x as the “parallel” components E_\parallel and B_\parallel (because they are parallel to the relative velocity of S and S' ), and the total transverse components—the vector sums of the y - and z -components—as the “perpendicular” components E_\perp and B_\perp . Then we get the equations in Table 26–4 . (We have also put back the c ’s, so it will be more convenient when we want to refer back later.)
+
+| \displaystyle\begin{aligned} E_\parallel'&=E_\parallel\\[3.5ex] E_\perp'&=\dfrac{(\mathbf{E}+\mathbf{v}\times\mathbf{B})_\perp}{\sqrt{1-v^2/c^2}} \end{aligned} | \displaystyle\begin{aligned} B_\parallel'&=B_\parallel\\[0.5ex] B_\perp'&=\dfrac{\biggl(\mathbf{B}-\dfrac{\mathbf{v}\times\mathbf{E}}{c^2}\biggr)_\perp}{\sqrt{1-v^2/c^2}} \end{aligned} |
+| --- | --- |
+
+The field transformations give us another way of solving some problems we have done before—for instance, for finding the fields of a moving point charge. We have worked out the fields before by differentiating the potentials. But we could now do it by transforming the Coulomb field. If we have a point charge at rest in the S -frame, then there is only the simple radial \mathbf{E} -field. In the S' -frame we will see a point charge moving with the velocity u , if the S' -frame moves by the S -frame with the speed v=-u . We will let you show that the transformations of Tables 26–3 and 26–4 give the same electric and magnetic fields we got in Section 26-2 .
+
+FIGURE Ch26-F7
+Caption: Fig. 26–7. The coordinate frame S′S' moving through a static electric field.
+Image file: figures/Ch26-F7.svg
+
+The transformation of Table 26–2 gives us an interesting and simple answer for what we see if we move past any system of fixed charges. For example, suppose we want to know the fields in our frame S' if we are moving along between the plates of a condenser, as shown in Fig. 26–7. (It is, of course, the same thing if we say that a charged condenser is moving past us.) What do we see? The transformation is easy in this case because the \mathbf{B} -field in the original system is zero. Suppose, first, that our motion is perpendicular to \mathbf{E} ; then we will see an \mathbf{E}'=\mathbf{E}/\sqrt{1-v^2/c^2} which is still completely transverse. We will see, in addition, a magnetic field \mathbf{B}'=-\mathbf{v}\times\mathbf{E}'/c^2 . (The \sqrt{1-v^2/c^2} doesn’t appear in our formula for \mathbf{B}' because we wrote it in terms of \mathbf{E}' rather than \mathbf{E} ; but it's the same thing.) So when we move along perpendicular to a static electric field, we see an added transverse \mathbf{B} . If our motion is not perpendicular to \mathbf{E} , we break \mathbf{E} into \mathbf{E}_\parallel and \mathbf{E}_\perp . The parallel part is unchanged, E_\parallel'=E_\parallel , and the perpendicular component does as just described.
+
+Let’s take the opposite case, and imagine we are moving through a pure static magnetic field. This time we would see an electric field \mathbf{E}' equal to \mathbf{v}\times\mathbf{B}' , and the magnetic field changed by the factor 1/\sqrt{1-v^2/c^2} (assuming it is transverse). So long as v is much less than c , we can neglect the change in the magnetic field, and the main effect is that an electric field appears. As one example of this effect, consider this once famous problem of determining the speed of an airplane. It’s no longer famous, since radar can now be used to determine the air speed from ground reflections, but for many years it was very hard to find the speed of an airplane in bad weather. You could not see the ground and you didn’t know which way was up, and so on. Yet it was important to know how fast you were moving relative to the earth. How can this be done without seeing the earth? Many who knew the transformation formulas thought of the idea of using the fact that the airplane moves in the magnetic field of the earth. Suppose that an airplane is flying where there is a magnetic field more or less known. Let’s just take the simple case where the magnetic field is vertical. If we were flying through it with a horizontal velocity \mathbf{v} , then, according to our formula, we should see an electric field which is \mathbf{v}\times\mathbf{B} , i.e., perpendicular to the line of motion. If we hang an insulated wire across the airplane, this electric field will induce charges on the ends of the wire. That is nothing new. From the point of view of someone on the ground, we are moving a wire through a field, and the \mathbf{v}\times\mathbf{B} force causes charges to move to the ends of the wire. The transformation equations just say the same thing in a different way. (The fact that we can say the thing more than one way doesn’t mean that one way is better than another. We are getting so many different methods and tools that we can usually get the same result in 65 different ways!)
+
+So to measure v , all we have to do is measure the voltage between the ends of the wire. We can’t do it with a voltmeter because the same fields will act on the wires in the voltmeter, but there are ways of measuring such fields. We talked about some of them when we discussed atmospheric electricity in Chapter 9. So it should be possible to measure the speed of the airplane.
+
+This important problem was, however, never solved this way. The reason is that the electric field that is developed is of the order of millivolts per meter. It is possible to measure such fields, but the trouble is that these fields are, unfortunately, not any different from any other electric fields. The field that is produced by motion through the magnetic field can’t be distinguished from some electric field that was already in the air from another cause, say from electrostatic charges in the air, or on the clouds. We described in Chapter 9 that there are, typically, electric fields above the surface of the earth with strengths of about 100 volts per meter. But they are quite irregular. So as the airplane flies through the air, it sees fluctuations of atmospheric electric fields which are enormous in comparison to the tiny fields produced by the \mathbf{v}\times\mathbf{B} term, and it turns out for practical reasons to be impossible to measure speeds of an airplane by its motion through the earth’s magnetic field.
+
+26–4 The equations of motion in relativistic notation2
+
+It doesn’t do much good to find electric and magnetic fields from Maxwell’s equations unless we know what the fields do when we have them. You may remember that the fields are required to find the forces on charges, and that those forces determine the motion of the charge. So, of course, part of the theory of electrodynamics is the relation between the motion of charges and the forces.
+
+For a single charge in the fields \mathbf{E} and \mathbf{B} , the force is
+
+\mathbf{F}=q(\mathbf{E}+\mathbf{v}\times\mathbf{B}). (26.23)
+
+This force is equal to the mass times the acceleration for low velocities, but the correct law for any velocity is that the force is equal to d\mathbf{p}/dt . Writing \mathbf{p}=m_0\mathbf{v}/\sqrt{1-v^2/c^2} , we find that the relativistically correct equation of motion is
+
+\frac{d }{d t}\biggl(\frac{m_0\mathbf{v}}{\sqrt{1-v^2/c^2}}\biggr)= \mathbf{F}=q(\mathbf{E}+\mathbf{v}\times\mathbf{B}). (26.24)
+
+We would like now to discuss this equation from the point of view of relativity. Since we have put our Maxwell equations in relativistic form, it would be interesting to see what the equations of motion would look like in relativistic form. Let’s see whether we can rewrite the equation in a four-vector notation.
+
+We know that the momentum is part of a four-vector p_\mu whose time component is the energy m_0c^2/\sqrt{1-v^2/c^2} divided by c . So we might think to replace the left-hand side of Eq. ( 26.24) by dp_\mu/dt . Then we need only find a fourth component to go with \mathbf{F} . This fourth component must be related to the rate-of-change of the energy, or the rate of doing work, which is \mathbf{F}\cdot\mathbf{v} . We would then like to write the right-hand side of Eq. ( 26.24) as a four-vector like (\mathbf{F}\cdot\mathbf{v}/c,F_x,F_y,F_z) . But this does not make a four-vector.
+
+The time derivative of a four-vector is no longer a four-vector, because the d/dt requires the choice of some special frame for measuring t . We got into that trouble before when we tried to make \mathbf{v} into a four-vector. Our first guess was that the time component would be cdt/dt=c . But the quantities
+
+\biggl(c,\frac{d x}{d t},\frac{d y}{d t},\frac{d z}{d t}\biggl)=(c,\mathbf{v}) (26.25)
+
+are not the components of a four-vector. We found that they could be made into one by multiplying each component by 1/\sqrt{1-v^2/c^2} . The “four-velocity” u_\mu is the four-vector
+
+u_\mu=\biggl(\frac{c}{\sqrt{1-v^2/c^2}}, \frac{\mathbf{v}}{\sqrt{1-v^2/c^2}}\biggr). (26.26)
+
+So it appears that the trick is to multiply d/dt by 1/\sqrt{1-v^2/c^2} , if we want the derivatives to make a four-vector.
+
+Our second guess then is that
+
+\frac{1}{\sqrt{1-v^2/c^2}}\,\frac{d }{d t}(p_\mu) (26.27)
+
+should be a four-vector. But what is \mathbf{v} ? It is the velocity of the particle—not of a coordinate frame! Then the quantity f_\mu defined by
+
+f_\mu=\biggl(\frac{\mathbf{F}\cdot\mathbf{v}/c}{\sqrt{1-v^2/c^2}}, \frac{\mathbf{F}}{\sqrt{1-v^2/c^2}}\biggr) (26.28)
+
+is the extension into four dimensions of a force—we can call it the “four-force.” It is indeed a four-vector, and its space components are not the components of \mathbf{F} but of \mathbf{F}/\sqrt{1-v^2/c^2} .
+
+The question is—why is f_\mu a four-vector? It would be nice to get a little understanding of that 1/\sqrt{1-v^2/c^2} factor. Since it has come up twice now, it is time to see why the d/dt can always be fixed by the same factor. The answer is in the following: When we take the time derivative of some function x , we compute the increment \Delta x in a small interval \Delta t in the variable t . But in another frame, the interval \Delta t might correspond to a change in both t' and x' , so if we vary only t' , the change in x will be different. We have to find a variable for our differentiation that is a measure of an “interval” in space-time, which will then be the same in all coordinate systems. When we take \Delta x for that interval, it will be the same for all coordinate frames. When a particle “moves” in four-space, there are the changes \Delta t , \Delta x , \Delta y , \Delta z . Can we make an invariant interval out of them? Well, they are the components of the four-vector x_\mu=(ct,x,y,z) so if we define a quantity \Delta s by
+
+\begin{aligned} (\Delta s)^2&=\frac{1}{c^2}\,\Delta x_\mu\Delta x_\mu\\[1ex] &=\frac{1}{c^2}(c^2\Delta t^2-\Delta x^2-\Delta y^2-\Delta z^2) \end{aligned} (26.29)
+
+—which is a four-dimensional dot product—we then have a good four-scalar to use as a measure of a four-dimensional interval. From \Delta s —or its limit ds —we can define a parameter s=\int ds . And a derivative with respect to s , d/ds , is a nice four-dimensional operation, because it is invariant with respect to a Lorentz transformation.
+
+It is easy to relate ds to dt for a moving particle. For a moving point particle,
+
+dx=v_x\,dt,\quad dy=v_y\,dt,\quad dz=v_z\,dt, (26.30)
+
+and
+
+\begin{aligned} ds&=\sqrt{(dt^2/c^2)(c^2-v_x^2-v_y^2-v_z^2)}\\[1ex] &=dt\sqrt{1-v^2/c^2}. \end{aligned} (26.31)
+
+So the operator
+
+\frac{1}{\sqrt{1-v^2/c^2}}\,\frac{d }{d t}
+
+is an invariant operator. If we operate on any four-vector with it, we get another four-vector. For instance, if we operate on (ct,x,y,z) , we get the four-velocity u_\mu :
+
+\frac{d x_\mu}{d s}=u_\mu.
+
+We see now why the factor \sqrt{1-v^2/c^2} fixes things up.
+
+The invariant variable s is a useful physical quantity. It is called the “proper time” along the path of a particle, because ds is always an interval of time in a frame that is moving with the particle at any particular instant. (Then, \Delta x= \Delta y= \Delta z= 0 , and \Delta s=\Delta t .) If you can imagine some “clock” whose rate doesn’t depend on the acceleration, such a clock carried along with the particle would show the time s .
+
+We can now go back and write Newton’s law (as corrected by Einstein) in the neat form
+
+\frac{d p_\mu}{d s}=f_\mu, (26.32)
+
+where f_\mu is given in Eq. ( 26.28). Also, the momentum p_\mu can be written as
+
+p_\mu=m_0u_\mu=m_0\,\frac{d x_\mu}{d s}, (26.33)
+
+where the coordinates x_\mu=(ct,x,y,z) now describe the trajectory of the particle. Finally, the four-dimensional notation gives us this very simple form of the equations of motion:
+
+f_\mu=m_0\,\frac{d^2x_\mu}{ds^2}, (26.34)
+
+which is reminiscent of F=ma . It is important to notice that Eq. ( 26.34) is not the same as F=ma , because the four-vector formula Eq. ( 26.34) has in it the relativistic mechanics which are different from Newton’s law for high velocities. It is unlike the case of Maxwell’s equations, where we were able to rewrite the equations in the relativistic form without any change in the meaning at all —but with just a change of notation.
+
+Now let’s return to Eq. ( 26.24) and see how we can write the right-hand side in four-vector notation. The three components—when divided by \sqrt{1-v^2/c^2} —are the components of f_\mu , so
+
+\begin{aligned} f_x&=\frac{q(\mathbf{E}+\mathbf{v}\times\mathbf{B})_x}{\sqrt{1-v^2/c^2}}\\[1.1ex] &=q\biggl[ \frac{E_x}{\sqrt{1-v^2/c^2}}\,+\\[.5ex] &\phantom{=q\biggl[\;}\frac{v_yB_z}{\sqrt{1-v^2/c^2}}- \frac{v_zB_y}{\sqrt{1-v^2/c^2}} \biggr]. \end{aligned} (26.35)
+
+Now we must put all quantities in their relativistic notation. First, c/\sqrt{1-v^2/c^2} and v_y/\sqrt{1-v^2/c^2} and v_z/\sqrt{1-v^2/c^2} are the t -, y -, and z -components of the four-velocity u_\mu . And the components of \mathbf{E} and \mathbf{B} are components of the second-rank tensor of the fields F_{\mu\nu} . Looking back in Table 26–1 for the components of F_{\mu\nu} that correspond to E_x , B_z , and B_y , we get 3
+
+f_x=q(u_tF_{xt}-u_yF_{xy}-u_zF_{xz}),
+
+which begins to look interesting. Every term has the subscript x , which is reasonable, since we’re finding an x -component. Then all the others appear in pairs: tt , yy , zz —except that the xx -term is missing. So we just stick it in, and write
+
+f_x=q(u_tF_{xt}-u_xF_{xx}-u_yF_{xy}-u_zF_{xz}). (26.36)
+
+We haven’t changed anything because F_{\mu\nu} is antisymmetric, and F_{xx} is zero. The reason for wanting to put in the xx -term is so that we can write Eq. ( 26.36) in the short-hand form
+
+f_\mu=qu_\nu F_{\mu\nu}. (26.37)
+
+This equation is the same as Eq. ( 26.36) if we make the rule that whenever any subscript occurs twice (as \nu does here), you automatically sum over terms in the same way as for the scalar product, using the same convention for the signs.
+
+You can easily believe that ( 26.37) works equally well for \mu=y or \mu=z , but what about \mu=t ? Let’s see, for fun, what it says:
+
+f_t=q(u_tF_{tt}-u_xF_{tx}-u_yF_{ty}-u_zF_{tz}).
+
+Now we have to translate back to E ’s and B ’s. We get
+
+\begin{aligned} f_t=q\biggl(0&+\frac{v_x}{\sqrt{1-v^2/c^2}}\,E_x/c\\[.5ex] &+\frac{v_y}{\sqrt{1-v^2/c^2}}\,E_y/c\\[.25ex] &+\frac{v_z}{\sqrt{1-v^2/c^2}}\,E_z/c\biggr), \end{aligned} (26.38)
+
+or
+
+f_t=\frac{q\mathbf{v}\cdot\mathbf{E}/c}{\sqrt{1-v^2/c^2}}.
+
+But from Eq. ( 26.28), f_t is supposed to be
+
+\frac{\mathbf{F}\cdot\mathbf{v}/c}{\sqrt{1-v^2/c^2}}= \frac{q(\mathbf{E}+\mathbf{v}\times\mathbf{B})\cdot\mathbf{v}/c}{\sqrt{1-v^2/c^2}}.
+
+This is the same thing as Eq. ( 26.38), since (\mathbf{v}\times\mathbf{B})\cdot\mathbf{v} is zero. So everything comes out all right.
+
+Summarizing, our equation of motion can be written in the elegant form
+
+m_0\,\frac{d^2x_\mu}{ds^2}=f_\mu=qu_\nu F_{\mu\nu}. (26.39)
+
+Although it is nice to see that the equations can be written that way, this form is not particularly useful. It’s usually more convenient to solve for particle motions by using the original equations ( 26.24), and that’s what we will usually do.

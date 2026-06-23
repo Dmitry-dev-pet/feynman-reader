@@ -1,0 +1,55 @@
+22–2 Generators
+
+Now we want to talk about an active circuit element—one that is a source of the currents and voltages in a circuit—namely, a generator.
+
+Figure Ch22-F5
+Caption: Fig. 22–5.A generator consisting of a fixed coil and a rotating magnetic field.
+Image: figures/Ch22-F5.svg
+![Fig. 22–5.A generator consisting of a fixed coil and a rotating magnetic field.](figures/Ch22-F5.svg)
+
+Suppose that we have a coil like an inductance except that it has very few turns, so that we may neglect the magnetic field of its own current. This coil, however, sits in a changing magnetic field such as might be produced by a rotating magnet, as sketched in Fig. 22–5 . (We have seen earlier that such a rotating magnetic field can also be produced by a suitable set of coils with alternating currents.) Again we must make several simplifying assumptions. The assumptions we will make are all the ones that we described for the case of the inductance. In particular, we assume that the varying magnetic field is restricted to a definite region in the vicinity of the coil and does not appear outside the generator in the space between the terminals.
+
+Following closely the analysis we made for the inductance, we consider the line integral of \mathbf{E} around a complete loop that starts at terminal a , goes through the coil to terminal b and returns to its starting point in the space between the two terminals. Again we conclude that the potential difference between the terminals is equal to the total line integral of \mathbf{E} around the loop:
+
+V=-\oint\mathbf{E}\cdot d\mathbf{s}.
+
+This line integral is equal to the emf in the circuit, so the potential difference V across the terminals of the generator is also equal to the rate of change of the magnetic flux linking the coil:
+
+V=-\emf=\frac{d }{d t}\,(\text{flux}). (22.11)
+
+For an ideal generator we assume that the magnetic flux linking the coil is determined by external conditions—such as the angular velocity of a rotating magnetic field—and is not influenced in any way by the currents through the generator. Thus a generator—at least the ideal generator we are considering—is not an impedance. The potential difference across its terminals is determined by the arbitrarily assigned electromotive force \emf(t) . Such an ideal generator is represented by the symbol shown in Fig. 22–6 . The little arrow represents the direction of the emf when it is positive. A positive emf in the generator of Fig. 22–6 will produce a voltage V=\emf , with the terminal a at a higher potential than the terminal b .
+
+Figure Ch22-F6
+Caption: Fig. 22–6.Symbol for an ideal generator.
+Image: figures/Ch22-F6.svg
+![Fig. 22–6.Symbol for an ideal generator.](figures/Ch22-F6.svg)
+
+There is another way to make a generator which is quite different on the inside but which is indistinguishable from the one we have just described insofar as what happens beyond its terminals. Suppose we have a coil of wire which is rotated in a fixed magnetic field, as indicated in Fig. 22–7 . We show a bar magnet to indicate the presence of a magnetic field; it could, of course, be replaced by any other source of a steady magnetic field, such as an additional coil carrying a steady current. As shown in the figure, connections from the rotating coil are made to the outside world by means of sliding contacts or “slip rings.” Again, we are interested in the potential difference that appears across the two terminals a and b , which is of course the integral of the electric field from terminal a to terminal b along a path outside the generator.
+
+Figure Ch22-F7
+Caption: Fig. 22–7.A generator consisting of a coil rotating in a fixed magnetic field.
+Image: figures/Ch22-F7.svg
+![Fig. 22–7.A generator consisting of a coil rotating in a fixed magnetic field.](figures/Ch22-F7.svg)
+
+Now in the system of Fig. 22–7 there are no changing magnetic fields, so we might at first wonder how any voltage could appear at the generator terminals. In fact, there are no electric fields anywhere inside the generator. We are, as usual, assuming for our ideal elements that the wires inside are made of a perfectly conducting material, and as we have said many times, the electric field inside a perfect conductor is equal to zero. But that is not true. It is not true when a conductor is moving in a magnetic field. The true statement is that the total force on any charge inside a perfect conductor must be zero. Otherwise there would be an infinite flow of the free charges. So what is always true is that the sum of the electric field \mathbf{E} and the cross product of the velocity of the conductor and the magnetic field \mathbf{B} —which is the total force on a unit charge—must have the value zero inside the conductor:
+
+\begin{aligned} \mathbf{F}/\text{unit charge}&=\mathbf{E}+\mathbf{v}\times\mathbf{B}\\ &=\FLPzero\;(\text{in a perfect conductor}), \end{aligned} (22.12)
+
+where \mathbf{v} represents the velocity of the conductor. Our earlier statement that there is no electric field inside a perfect conductor is all right if the velocity \mathbf{v} of the conductor is zero; otherwise the correct statement is given by Eq. ( 22.12).
+
+Returning to our generator of Fig. 22–7 , we now see that the line integral of the electric field \mathbf{E} from terminal a to terminal b through the conducting path of the generator must be equal to the line integral of \mathbf{v}\times\mathbf{B} on the same path,
+
+\underset{\substack{\text{inside}\\\text{conductor}}}{\int_a^b} \kern{-1.75ex}\mathbf{E}\cdot d\mathbf{s}\;=-\kern{-1.75ex} \underset{\substack{\text{inside}\\\text{conductor}}}{\int_a^b} \kern{-1.5ex}(\mathbf{v}\times\mathbf{B})\cdot d\mathbf{s}. (22.13)
+
+It is still true, however, that the line integral of \mathbf{E} around a complete loop, including the return from b to a outside the generator, must be zero, because there are no changing magnetic fields. So the first integral in Eq. ( 22.13) is also equal to V , the voltage between the two terminals. It turns out that the right-hand integral of Eq. ( 22.13) is just the rate of change of the flux linkage through the coil and is therefore—by the flux rule—equal to the emf in the coil. So we have again that the potential difference across the terminals is equal to the electromotive force in the circuit, in agreement with Eq. ( 22.11). So whether we have a generator in which a magnetic field changes near a fixed coil, or one in which a coil moves in a fixed magnetic field, the external properties of the generators are the same. There is a voltage difference V across the terminals, which is independent of the current in the circuit but depends only on the arbitrarily assigned conditions inside the generator.
+
+Figure Ch22-F8
+Caption: Fig. 22–8.A chemical cell.
+Image: figures/Ch22-F8.svg
+![Fig. 22–8.A chemical cell.](figures/Ch22-F8.svg)
+
+So long as we are trying to understand the operation of generators from the point of view of Maxwell’s equations, we might also ask about the ordinary chemical cell, like a flashlight battery. It is also a generator, i.e., a voltage source, although it will of course only appear in dc circuits. The simplest kind of cell to understand is shown in Fig. 22–8 . We imagine two metal plates immersed in some chemical solution. We suppose that the solution contains positive and negative ions. We suppose also that one kind of ion, say the negative, is much heavier than the one of opposite polarity, so that its motion through the solution by the process of diffusion is much slower. We suppose next that by some means or other it is arranged that the concentration of the solution is made to vary from one part of the liquid to the other, so that the number of ions of both polarities near, say, the lower plate is much larger than the concentration of ions near the upper plate. Because of their rapid mobility the positive ions will drift more readily into the region of lower concentration, so that there will be a slight excess of positive charge arriving at the upper plate. The upper plate will become positively charged and the lower plate will have a net negative charge.
+
+As more and more charges diffuse to the upper plate, the potential of this plate will rise until the resulting electric field between the plates produces forces on the ions which just compensate for their excess mobility, so the two plates of the cell quickly reach a potential difference which is characteristic of the internal construction.
+
+Arguing just as we did for the ideal capacitor, we see that the potential difference between the terminals a and b is just equal to the line integral of the electric field between the two plates when there is no longer any net diffusion of the ions. There is, of course, an essential difference between a capacitor and such a chemical cell. If we short-circuit the terminals of a condenser for a moment, the capacitor is discharged and there is no longer any potential difference across the terminals. In the case of the chemical cell a current can be drawn from the terminals continuously without any change in the emf—until, of course, the chemicals inside the cell have been used up. In a real cell it is found that the potential difference across the terminals decreases as the current drawn from the cell increases. In keeping with the abstractions we have been making, however, we may imagine an ideal cell in which the voltage across the terminals is independent of the current. A real cell can then be looked at as an ideal cell in series with a resistor.

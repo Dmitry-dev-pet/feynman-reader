@@ -1,0 +1,42 @@
+36–5 Electromagnets
+
+Figure Ch36-F10
+Caption: Fig. 36–10.An electromagnet.
+Image: figures/Ch36-F10.svg
+![Fig. 36–10.An electromagnet.](figures/Ch36-F10.svg)
+
+Now let’s discuss a practical situation which is a little more complicated. Suppose we have an electromagnet of the rather standard form shown in Fig. 36–10 —there is a “C-shaped” yoke of iron, with a coil of many turns of wire wrapped around the yoke. What is the magnetic field \mathbf{B} in the gap?
+
+If the gap thickness is small compared with all the other dimensions, we can, as a first approximation, assume that the lines of \mathbf{B} will go around through the loop, just as they did in the torus. They will look more or less as shown in Fig. 36–11 (a). They tend to spread out somewhat in the gap, but if the gap is narrow, this will be a small effect. It is a fair approximation to assume that the flux of \mathbf{B} through any cross section of the yoke is a constant. If the yoke has a uniform cross-sectional area A —and if we neglect any edge effects at the gaps or at the corners—we can say that \mathbf{B} is uniform around the yoke.
+
+Figure Ch36-F11
+Caption: Fig. 36–11.Cross section of an electromagnet.
+Image: figures/Ch36-F11.svg
+![Fig. 36–11.Cross section of an electromagnet.](figures/Ch36-F11.svg)
+
+Also, \mathbf{B} will have the same value in the gap. This follows from Eq. ( 36.16). Imagine the closed surface S , shown in Fig. 36–11 (b), which has one face in the gap and the other in the iron. The total flux of \mathbf{B} out of this surface must be zero. Calling B_1 the field in the gap and B_2 the field in the iron, we have (to our approximation) that
+
+B_1A-B_2A=0.
+
+It follows that B_1=B_2 .
+
+Now let’s look at H . We can again use Eq. ( 36.19), taking the line integral around the curve \Gamma in Fig. 36–11 (b). As before, the integral on the right-hand side is NI , the number of turns times the current. Now, however, H will be different in the iron and in the air. Calling H_2 the field in the iron and l_2 the path length around the yoke, this part of the curve will contribute the amount H_2l_2 to the integral. Calling H_1 the field in the gap and l_1 the gap thickness, we get the contribution H_1l_1 from the gap. We have that
+
+H_1l_1+H_2l_2=\frac{NI}{\epsilon_0 c^2}. (36.26)
+
+Now we know something else: that in the air gap, the magnetization is negligible, so that B_1=H_1 . Since B_1=B_2 , Eq. ( 36.26) becomes
+
+B_2l_1+H_2l_2=\frac{NI}{\epsilon_0 c^2}. (36.27)
+
+We still have two unknowns. To find B_2 and H_2 , we need another relationship—namely, the one which relates B to H in the iron.
+
+If we can make the approximation that B_2=\mu H_2 , we can solve the equation algebraically. However, let’s do the general case, in which the magnetization curve of the iron is one like that shown in Fig. 36–8. What we want is the simultaneous solution of this functional relationship together with Eq. ( 36.27). We can find it by plotting a graph of Eq. ( 36.27) on the same graph with the magnetization curve, as is done in Fig. 36–12. Where the two curves intersect, we have our solution.
+
+Figure Ch36-F12
+Caption: Fig. 36–12.Solving for the field in an electromagnet.
+Image: figures/Ch36-F12.svg
+![Fig. 36–12.Solving for the field in an electromagnet.](figures/Ch36-F12.svg)
+
+For a given current I , the function ( 36.27) is the straight line marked I>0 in Fig. 36–12. The line intersects the H -axis ( B_2=0 ) at H_2=NI/\epsilon_0 c^2l_2 , and the slope is -l_2/l_1 . Different currents just shift the line horizontally. From Fig. 36–12, we see that for a given current there are several different solutions, depending on how you got there. If you have just built the magnet and turned the current up to I , the field B_2 (which is also B_1 ) will have the value given by point a . If you have run the current to some very high value and come down to I , the field will be given by point b . Or, if you have just had a high negative current in the magnet and then come up to I , the field is the one at point c . The field in the gap will depend on what you have done in the past.
+
+When the current in the magnet is zero, the relation between B_2 and H_2 in Eq. ( 36.27) is shown by the line marked I=0 in the figure. There are still various possible solutions. If you have first saturated the iron, there may be a considerable residual field in the magnet as given by point d . You can take the coil off, and you have a permanent magnet. You can see that for a good permanent magnet, you would want a material with a wide hysteresis loop. Special alloys, such as Alnico V, have very wide loops.

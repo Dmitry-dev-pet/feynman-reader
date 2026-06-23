@@ -1,0 +1,65 @@
+## 3–2 The flux of a vector field
+
+Before we consider our next integral theorem—a theorem about the divergence—we would like to study a certain idea which has an easily understood physical significance in the case of heat flow. We have defined the vector \FLPh , which represents the heat that flows through a unit area in a unit time. Suppose that inside a block of material we have some closed surface S which encloses the volume V (Fig. 3–3 ). We would like to find out how much heat is flowing out of this volume. We can, of course, find it by calculating the total heat flow out of the surface S .
+
+### Figure Ch3-F3
+Caption: Fig. 3–3.The closed surface SS defines the volume VV. The unit vector n\Fign is the outward normal to the surface element dada, and h\Figh is the heat-flow vector at the surface element.
+Image: figures/Ch3-F3.svg
+![Fig. 3–3.The closed surface SS defines the volume VV. The unit vector n\Fign is the outward normal to the surface element dada, and h\Figh is the heat-flow vector at the surface element.](figures/Ch3-F3.svg)
+
+We write da for the area of an element of the surface. The symbol stands for a two-dimensional differential. If, for instance, the area happened to be in the xy -plane we would have
+
+da=dx\,dy.
+
+Later we shall have integrals over volume and for these it is convenient to consider a differential volume that is a little cube. So when we write dV we mean
+
+dV=dx\,dy\,dz.
+
+Some people like to write d^2a instead of da to remind themselves that it is kind of a second-order quantity. They would also write d^3V instead of dV . We will use the simpler notation, and assume that you can remember that an area has two dimensions and a volume has three.
+
+The heat flow out through the surface element da is the area times the component of \FLPh perpendicular to da . We have already defined \FLPn as a unit vector pointing outward at right angles to the surface (Fig. 3–3 ). The component of \FLPh that we want is
+
+h_n=\FLPh\cdot\FLPn. (3.9)
+
+The heat flow out through da is then
+
+\FLPh\cdot\FLPn\,da. (3.10)
+
+To get the total heat flow through any surface we sum the contributions from all the elements of the surface. In other words, we integrate ( 3.10) over the whole surface:
+
+\begin{pmatrix} \text{Total heat flow}\\[-.5ex] \text{outward through $S$} \end{pmatrix} =\int_S\FLPh\cdot\FLPn\,da. (3.11)
+
+We are also going to call this surface integral “the flux of \FLPh through the surface.” Originally the word flux meant flow, so that the surface integral just means the flow of \FLPh through the surface. We may think: \FLPh is the “current density” of heat flow and the surface integral of it is the total heat current directed out of the surface; that is, the thermal energy per unit time (joules per second).
+
+We would like to generalize this idea to the case where the vector does not represent the flow of anything; for instance, it might be the electric field. We can certainly still integrate the normal component of the electric field over an area if we wish. Although it is not the flow of anything, we still call it the “flux.” We say
+
+\begin{pmatrix} \text{Flux of $\mathbf{E}$}\\[-.5ex] \text{through the}\\[-.5ex] \text{surface $S$} \end{pmatrix} =\int_S\mathbf{E}\cdot\FLPn\,da. (3.12)
+
+We generalize the word “flux” to mean the “surface integral of the normal component” of a vector. We will also use the same definition even when the surface considered is not a closed one, as it is here.
+
+Returning to the special case of heat flow, let us take a situation in which heat is conserved. For example, imagine some material in which after an initial heating no further heat energy is generated or absorbed. Then, if there is a net heat flow out of a closed surface, the heat content of the volume inside must decrease. So, in circumstances in which heat would be conserved, we say that
+
+\int_S\FLPh\cdot\FLPn\,da=-\frac{d Q}{d t}, (3.13)
+
+where Q is the heat inside the surface. The heat flux out of S is equal to minus the rate of change with respect to time of the total heat Q inside of S . This interpretation is possible because we are speaking of heat flow and also because we supposed that the heat was conserved. We could not, of course, speak of the total heat inside the volume if heat were being generated there.
+
+### Figure Ch3-F4
+Caption: Fig. 3–4.A volume VV contained inside the surface SS is divided into two pieces by a “cut” at the surface SabS_{ab}. We now have the volume V1V_1 enclosed in the surface S1=Sa+SabS_1=S_a+S_{ab} and the volume V2V_2 enclosed in the surface S2=Sb+SabS_2=S_b+S_{ab}.
+Image: figures/Ch3-F4.svg
+![Fig. 3–4.A volume VV contained inside the surface SS is divided into two pieces by a “cut” at the surface SabS_{ab}. We now have the volume V1V_1 enclosed in the surface S1=Sa+SabS_1=S_a+S_{ab} and the volume V2V_2 enclosed in the surface S2=Sb+SabS_2=S_b+S_{ab}.](figures/Ch3-F4.svg)
+
+Now we shall point out an interesting fact about the flux of any vector. You may think of the heat flow vector if you wish, but what we say will be true for any vector field \mathbf{C} . Imagine that we have a closed surface S that encloses the volume V . We now separate the volume into two parts by some kind of a “cut,” as in Fig. 3–4 . Now we have two closed surfaces and volumes. The volume V_1 is enclosed in the surface S_1 , which is made up of part of the original surface S_a and of the surface of the cut, S_{ab} . The volume V_2 is enclosed by S_2 , which is made up of the rest of the original surface S_b and closed off by the cut S_{ab} . Now consider the following question: Suppose we calculate the flux out through surface S_1 and add to it the flux through surface S_2 . Does the sum equal the flux through the whole surface that we started with? The answer is yes. The flux through the part of the surfaces S_{ab} common to both S_1 and S_2 just exactly cancels out. For the flux of the vector \mathbf{C} out of V_1 we can write
+
+\begin{gathered} \text{Flux through $S_1$}=\\[.75ex] \int_{S_a}\mathbf{C}\cdot\FLPn\,da+ \int_{S_{ab}}\mathbf{C}\cdot\FLPn_1\,da, \end{gathered} (3.14)
+
+and for the flux out of V_2 ,
+
+\begin{gathered} \text{Flux through $S_2$}=\\[.75ex] \int_{S_b}\mathbf{C}\cdot\FLPn\,da+ \int_{S_{ab}}\mathbf{C}\cdot\FLPn_2\,da. \end{gathered} (3.15)
+
+Note that in the second integral we have written \FLPn_1 for the outward normal for S_{ab} when it belongs to S_1 , and \FLPn_2 when it belongs to S_2 , as shown in Fig. 3–4 . Clearly, \FLPn_1=-\FLPn_2 , so that
+
+\int_{S_{ab}}\mathbf{C}\cdot\FLPn_1\,da=-\int_{S_{ab}}\mathbf{C}\cdot\FLPn_2\,da. (3.16)
+
+If we now add Eqs. ( 3.14) and ( 3.15), we see that the sum of the fluxes through S_1 and S_2 is just the sum of two integrals which, taken together, give the flux through the original surface S=S_a+S_b .
+
+We see that the flux through the complete outer surface S can be considered as the sum of the fluxes from the two pieces into which the volume was broken. We can similarly subdivide again—say by cutting V_1 into two pieces. You see that the same arguments apply. So for any way of dividing the original volume, it must be generally true that the flux through the outer surface, which is the original integral, is equal to a sum of the fluxes out of all the little interior pieces.

@@ -1,0 +1,350 @@
+# 12. Electrostatic Analogs
+
+## 12–1 The same equations have the same solutions
+
+The total amount of information which has been acquired about the physical world since the beginning of scientific progress is enormous, and it seems almost impossible that any one person could know a reasonable fraction of it. But it is actually quite possible for a physicist to retain a broad knowledge of the physical world rather than to become a specialist in some narrow area. The reasons for this are threefold: First, there are great principles which apply to all the different kinds of phenomena—such as the principles of the conservation of energy and of angular momentum. A thorough understanding of such principles gives an understanding of a great deal all at once. Second, there is the fact that many complicated phenomena, such as the behavior of solids under compression, really basically depend on electrical and quantum-mechanical forces, so that if one understands the fundamental laws of electricity and quantum mechanics, there is at least some possibility of understanding many of the phenomena that occur in complex situations. Finally, there is a most remarkable coincidence: The equations for many different physical situations have exactly the same appearance. Of course, the symbols may be different—one letter is substituted for another—but the mathematical form of the equations is the same. This means that having studied one subject, we immediately have a great deal of direct and precise knowledge about the solutions of the equations of another.
+
+We are now finished with the subject of electrostatics, and will soon go on to study magnetism and electrodynamics. But before doing so, we would like to show that while learning electrostatics we have simultaneously learned about a large number of other subjects. We will find that the equations of electrostatics appear in several other places in physics. By a direct translation of the solutions (of course the same mathematical equations must have the same solutions) it is possible to solve problems in other fields with the same ease—or with the same difficulty—as in electrostatics.
+
+The equations of electrostatics, we know, are
+
+\begin{aligned} \mathbf{d}iv{(\kappa\mathbf{E})}&=\frac{\rho_{\text{free}}}{\epsilon_0},\\[1ex] \mathbf{c}url{\mathbf{E}}&=\FLPzero. \end{aligned} (12.1)
+
+(We take the equations of electrostatics with dielectrics so as to have the most general situation.) The same physics can be expressed in another mathematical form:
+
+\begin{aligned} \mathbf{E}=&-\boldsymbol{\nabla}{\phi},\\[1ex] \mathbf{d}iv{(\kappa\,\boldsymbol{\nabla}{\phi})}&=-\frac{\rho_{\text{free}}}{\epsilon_0}. \end{aligned} (12.3)
+
+Now the point is that there are many physics problems whose mathematical equations have the same form. There is a potential ( \phi ) whose gradient multiplied by a scalar function ( \kappa ) has a divergence equal to another scalar function ( -\rho_{\text{free}}/\epsilon_0 ).
+
+Whatever we know about electrostatics can immediately be carried over into that other subject, and vice versa. (It works both ways, of course—if the other subject has some particular characteristics that are known, then we can apply that knowledge to the corresponding electrostatic problem.) We want to consider a series of examples from different subjects that produce equations of this form.
+
+## 12–2 The flow of heat; a point source near an infinite plane boundary
+
+We have discussed one example earlier (Section 3–4 )—the flow of heat. Imagine a block of material, which need not be homogeneous but may consist of different materials at different places, in which the temperature varies from point to point. As a consequence of these temperature variations there is a flow of heat, which can be represented by the vector \FLPh . It represents the amount of heat energy which flows per unit time through a unit area perpendicular to the flow. The divergence of \FLPh represents the rate per unit volume at which heat is leaving a region:
+
+\mathbf{d}iv{\FLPh}=\text{rate of heat out per unit volume}.
+
+(We could, of course, write the equation in integral form—just as we did in electrostatics with Gauss’ law—which would say that the flux through a surface is equal to the rate of change of heat energy inside the material. We will not bother to translate the equations back and forth between the differential and the integral forms, because it goes exactly the same as in electrostatics.)
+
+The rate at which heat is generated or absorbed at various places depends, of course, on the problem. Suppose, for example, that there is a source of heat inside the material (perhaps a radioactive source, or a resistor heated by an electrical current). Let us call s the heat energy produced per unit volume per second by this source. There may also be losses (or gains) of thermal energy to other internal energies in the volume. If u is the internal energy per unit volume, -du/dt will also be a “source” of heat energy. We have, then,
+
+\mathbf{d}iv{\FLPh}=s-\frac{d u}{d t}. (12.5)
+
+We are not going to discuss just now the complete equation in which things change with time, because we are making an analogy to electrostatics, where nothing depends on the time. We will consider only steady heat-flow problems, in which constant sources have produced an equilibrium state. In these cases,
+
+\mathbf{d}iv{\FLPh}=s. (12.6)
+
+It is, of course, necessary to have another equation, which describes how the heat flows at various places. In many materials the heat current is approximately proportional to the rate of change of the temperature with position: the larger the temperature difference, the more the heat current. As we have seen, the vector heat current is proportional to the temperature gradient. The constant of proportionality K , a property of the material, is called the thermal conductivity:
+
+\FLPh=-K\,\boldsymbol{\nabla}{T}. (12.7)
+
+If the properties of the material vary from place to place, then K=K(x,y,z) , a function of position. [Equation ( 12.7) is not as fundamental as ( 12.5), which expresses the conservation of heat energy, since the former depends upon a special property of the substance.] If now we substitute Eq. ( 12.7) into Eq. ( 12.6) we have
+
+\mathbf{d}iv{(K\,\boldsymbol{\nabla}{T})}=-s, (12.8)
+
+which has exactly the same form as ( 12.4). Steady heat-flow problems and electrostatic problems are the same. The heat flow vector \FLPh corresponds to \mathbf{E} , and the temperature T corresponds to \phi . We have already noticed that a point heat source produces a temperature field which varies as 1/r and a heat flow which varies as 1/r^2 . This is nothing more than a translation of the statements from electrostatics that a point charge generates a potential which varies as 1/r and an electric field which varies as 1/r^2 . We can, in general, solve static heat problems as easily as we can solve electrostatic problems.
+
+Consider a simple example. Suppose that we have a cylinder of radius a at the temperature T_1 , maintained by the generation of heat in the cylinder. (It could be, for example, a wire carrying a current, or a pipe with steam condensing inside.) The cylinder is covered with a concentric sheath of insulating material which has a conductivity K . Say the outside radius of the insulation is b and the outside is kept at temperature T_2 (Fig. 12–1 a). We want to find out at what rate heat will be lost by the wire, or steampipe, or whatever it is in the center. Let the total amount of heat lost from a length L of the pipe be called G —which is what we are trying to find.
+
+### Figure Ch12-F1
+Caption: Fig. 12–1.(a) Heat flow in a cylindrical geometry. (b) The corresponding electrical problem.
+Image: figures/Ch12-F1.svg
+![Fig. 12–1.(a) Heat flow in a cylindrical geometry. (b) The corresponding electrical problem.](figures/Ch12-F1.svg)
+
+How can we solve this problem? We have the differential equations, but since these are the same as those of electrostatics, we have really already solved the mathematical problem. The analogous problem is that of a conductor of radius a at the potential \phi_1 , separated from another conductor of radius b at the potential \phi_2 , with a concentric layer of dielectric material in between, as drawn in Fig. 12–1 (b). Now since the heat flow \FLPh corresponds to the electric field \mathbf{E} , the quantity G that we want to find corresponds to the flux of the electric field, i.e., the electric charge over \epsilon_0 . We have solved the electrostatic problem by using Gauss’ law. We follow the same procedure for our heat-flow problem.
+
+From the symmetry of the situation, we know that h depends only on the distance from the center. So we enclose the pipe in a Gaussian cylinder of length L and radius r . From Gauss’ law, we know that the heat flow h multiplied by the area 2\pi rL of the surface must be equal to the total amount of heat generated inside, which is what we are calling G :
+
+2\pi rLh=G\quad\text{or}\quad h=\frac{G}{2\pi rL}. (12.9)
+
+The heat flow is proportional to the temperature gradient:
+
+\FLPh=-K\,\boldsymbol{\nabla}{T},
+
+or, in this case, the radial component of \FLPh is
+
+h=-K\,\frac{d T}{d r}.
+
+This, together with ( 12.9), gives
+
+\frac{d T}{d r}=-\frac{G}{2\pi KLr}. (12.10)
+
+Integrating from r=a to r=b , we get
+
+T_2-T_1=-\frac{G}{2\pi KL}\ln\frac{b}{a}. (12.11)
+
+Solving for G , we find
+
+G=\frac{2\pi KL(T_1-T_2)}{\ln(b/a)}. (12.12)
+
+This result corresponds exactly to the result for the charge on a cylindrical condenser:
+
+\frac{Q}{\epsilon_0}=\frac{2\pi\kappa L(\phi_1-\phi_2)}{\ln(b/a)}.
+
+The problems are the same, and they have the same solutions. From our knowledge of electrostatics, we also know how much heat is lost by an insulated pipe.
+
+Let’s consider another example of heat flow. Suppose we wish to know the heat flow in the neighborhood of a point source of heat located a little way beneath the surface of the earth, or near the surface of a large metal block. The localized heat source might be an atomic bomb that was set off underground, leaving an intense source of heat, or it might correspond to a small radioactive source inside a block of iron—there are numerous possibilities.
+
+We will treat the idealized problem of a point heat source of strength G at the distance a beneath the surface of an infinite block of uniform material whose thermal conductivity is K . And we will neglect the thermal conductivity of the air outside the material. We want to determine the distribution of the temperature on the surface of the block. How hot is it right above the source and at various places on the surface of the block?
+
+How shall we solve it? It is like an electrostatic problem with two materials with different dielectric coefficients \kappa on opposite sides of a plane boundary. Aha! Perhaps it is the analog of a point charge near the boundary between a dielectric and a conductor, or something similar. Let’s see what the situation is near the surface. The physical condition is that the normal component of \FLPh on the surface is zero, since we have assumed there is no heat flow out of the block. We should ask: In what electrostatic problem do we have the condition that the normal component of the electric field \mathbf{E} (which is the analog of \FLPh ) is zero at a surface? There is none!
+
+That is one of the things that we have to watch out for. For physical reasons, there may be certain restrictions in the kinds of mathematical conditions which arise in any one subject. So if we have analyzed the differential equation only for certain limited cases, we may have missed some kinds of solutions that can occur in other physical situations. For example, there is no material with a dielectric constant of zero, whereas a vacuum does have zero thermal conductivity. So there is no electrostatic analogy for a perfect heat insulator. We can, however, still use the same methods. We can try to imagine what would happen if the dielectric constant were zero. (Of course, the dielectric constant is never zero in any real situation. But we might have a case in which there is a material with a very high dielectric constant, so that we could neglect the dielectric constant of the air outside.)
+
+How shall we find an electric field that has no component perpendicular to the surface? That is, one which is always tangent at the surface? You will notice that our problem is opposite to the one of a point charge near a plane conductor. There we wanted the field to be perpendicular to the surface, because the conductor was all at the same potential. In the electrical problem, we invented a solution by imagining a point charge behind the conducting plate. We can use the same idea again. We try to pick an “image source” that will automatically make the normal component of the field zero at the surface. The solution is shown in Fig. 12–2 . An image source of the same sign and the same strength placed at the distance a above the surface will cause the field to be always horizontal at the surface. The normal components of the two sources cancel out.
+
+### Figure Ch12-F2
+Caption: Fig. 12–2.The heat flow and isothermals near a point heat source at the distance aa below the surface of a good thermal conductor.
+Image: figures/Ch12-F2.svg
+![Fig. 12–2.The heat flow and isothermals near a point heat source at the distance aa below the surface of a good thermal conductor.](figures/Ch12-F2.svg)
+
+Thus our heat flow problem is solved. The temperature everywhere is the same, by direct analogy, as the potential due to two equal point charges! The temperature T at the distance r from a single point source G in an infinite medium is
+
+T=\frac{G}{4\pi Kr}. (12.13)
+
+(This, of course, is just the analog of \phi=q/4\pi\epsilon_0 R .) The temperature for a point source, together with its image source, is
+
+T=\frac{G}{4\pi Kr_1}+\frac{G}{4\pi Kr_2}. (12.14)
+
+This formula gives us the temperature everywhere in the block. Several isothermal surfaces are shown in Fig. 12–2 . Also shown are lines of \FLPh , which can be obtained from \FLPh=-K\,\boldsymbol{\nabla}{T} .
+
+We originally asked for the temperature distribution on the surface. For a point on the surface at the distance \rho from the axis, r_1= r_2= \sqrt{\rho^2+a^2} , so
+
+T(\text{surface})=\frac{1}{4\pi K}\,\frac{2G}{\sqrt{\rho^2+a^2}}. (12.15)
+
+This function is also shown in the figure. The temperature is, naturally, higher right above the source than it is farther away. This is the kind of problem that geophysicists often need to solve. We now see that it is the same kind of thing we have already been solving for electricity.
+
+## 12–3 The stretched membrane
+
+Now let us consider a completely different physical situation which, nevertheless, gives the same equations again. Consider a thin rubber sheet—a membrane—which has been stretched over a large horizontal frame (like a drumhead). Suppose now that the membrane is pushed up in one place and down in another; as shown in Fig. 12–3 . Can we describe the shape of the surface? We will show how the problem can be solved when the deflections of the membrane are not too large.
+
+### Figure Ch12-F3
+Caption: Fig. 12–3.A thin rubber sheet stretched over a cylindrical frame (like a drumhead). If the sheet is pushed up at AA and down at BB, what is the shape of the surface?
+Image: figures/Ch12-F3.svg
+![Fig. 12–3.A thin rubber sheet stretched over a cylindrical frame (like a drumhead). If the sheet is pushed up at AA and down at BB, what is the shape of the surface?](figures/Ch12-F3.svg)
+
+There are forces in the sheet because it is stretched. If we were to make a small cut anywhere, the two sides of the cut would pull apart (see Fig. 12–4 ). So there is a surface tension in the sheet, analogous to the one-dimensional tension in a stretched string. We define the magnitude of the surface tension \tau as the force per unit length which will just hold together the two sides of a cut such as one of those shown in Fig. 12–4 .
+
+### Figure Ch12-F4
+Caption: Fig. 12–4.The surface tension τ\tau of a stretched rubber sheet is the force per unit length across a line.
+Image: figures/Ch12-F4.svg
+![Fig. 12–4.The surface tension τ\tau of a stretched rubber sheet is the force per unit length across a line.](figures/Ch12-F4.svg)
+
+Suppose now that we look at a vertical cross section of the membrane. It will appear as a curve, like the one in Fig. 12–5 . Let u be the vertical displacement of the membrane from its normal position, and x and y the coordinates in the horizontal plane. (The cross section shown is parallel to the x -axis.)
+
+### Figure Ch12-F5
+Caption: Fig. 12–5.Cross section of the deflected sheet.
+Image: figures/Ch12-F5.svg
+![Fig. 12–5.Cross section of the deflected sheet.](figures/Ch12-F5.svg)
+
+Consider a little piece of the surface of length \Delta x and width \Delta y . There will be forces on the piece from the surface tension along each edge. The force along edge 1 of the figure will be \tau_1\,\Delta y , directed tangent to the surface—that is, at the angle \theta_1 from the horizontal. Along edge 2 , the force will be \tau_2\,\Delta y at the angle \theta_2 . (There will be similar forces on the other two edges of the piece, but we will forget them for the moment.) The net upward force on the piece from edges 1 and 2 is
+
+\Delta F=\tau_2\,\Delta y\sin\theta_2-\tau_1\,\Delta y\sin\theta_1.
+
+We will limit our considerations to small distortions of the membrane, i.e., to small slopes: we can then replace \sin\theta by \tan\theta , which can be written as \frac{\partial u}{\partial x} . The force is then
+
+\Delta F= \biggl[\tau_2\,\biggl(\frac{\partial u}{\partial x}\biggr)_2- \tau_1\,\biggl(\frac{\partial u}{\partial x}\biggr)_1\biggr]\Delta y.
+
+The quantity in brackets can be equally well written (for small \Delta x ) as
+
+\frac{\partial }{\partial x}\biggl(\tau\,\frac{\partial u}{\partial x}\biggr)\Delta x;
+
+then
+
+\Delta F= \frac{\partial }{\partial x}\biggl(\tau\,\frac{\partial u}{\partial x}\biggr)\Delta x\,\Delta y.
+
+There will be another contribution to \Delta F from the forces on the other two edges; the total is evidently
+
+\Delta F=\biggl[ \frac{\partial }{\partial x}\biggl(\tau\,\frac{\partial u}{\partial x}\biggr)+ \frac{\partial }{\partial y}\biggl(\tau\,\frac{\partial u}{\partial y}\biggr) \biggr]\Delta x\,\Delta y. (12.16)
+
+The distortions of the diaphragm are caused by external forces. Let’s let f represent the upward force per unit area on the sheet (a kind of “pressure”) from the external forces. When the membrane is in equilibrium (the static case), this force must be balanced by the internal force we have just computed, Eq. ( 12.16). That is
+
+f=-\frac{\Delta F}{\Delta x\,\Delta y}.
+
+Equation ( 12.16) can then be written
+
+f=-\mathbf{d}iv{(\tau\,\boldsymbol{\nabla}{u})}, (12.17)
+
+where by \boldsymbol{\nabla} we now mean, of course, the two-dimensional gradient operator (\frac{\partial }{\partial x},\frac{\partial }{\partial y}) . We have the differential equation that relates u(x,y) to the applied forces f(x,y) and the surface tension \tau(x,y) , which may, in general, vary from place to place in the sheet. (The distortions of a three-dimensional elastic body are also governed by similar equations, but we will stick to two-dimensions.) We will worry only about the case in which the tension \tau is constant throughout the sheet. We can then write for Eq. ( 12.17),
+
+\nabla^2u=-\frac{f}{\tau}. (12.18)
+
+We have another equation that is the same as for electrostatics!—only this time, limited to two-dimensions. The displacement u corresponds to \phi , and f/\tau corresponds to \rho/\epsilon_0 . So all the work we have done for infinite plane charged sheets, or long parallel wires, or charged cylinders is directly applicable to the stretched membrane.
+
+Suppose we push the membrane at some points up to a definite height —that is, we fix the value of u at some places. That is the analog of having a definite potential at the corresponding places in an electrical situation. So, for instance, we may make a positive “potential” by pushing up on the membrane with an object having the cross-sectional shape of the corresponding cylindrical conductor. For example, if we push the sheet up with a round rod, the surface will take on the shape shown in Fig. 12–6 . The height u is the same as the electrostatic potential \phi of a charged cylindrical rod. It falls off as \ln(1/r) . (The slope, which corresponds to the electric field E , drops off as 1/r .)
+
+### Figure Ch12-F6
+Caption: Fig. 12–6.Cross section of a stretched rubber sheet pushed up by a round rod. The function u(x,y)u(x,y) is the same as the electric potential ϕ(x,y)\phi(x,y) near a very long charged rod.
+Image: figures/Ch12-F6.svg
+![Fig. 12–6.Cross section of a stretched rubber sheet pushed up by a round rod. The function u(x,y)u(x,y) is the same as the electric potential ϕ(x,y)\phi(x,y) near a very long charged rod.](figures/Ch12-F6.svg)
+
+The stretched rubber sheet has often been used as a way of solving complicated electrical problems experimentally. The analogy is used backwards! Various rods and bars are pushed against the sheet to heights that correspond to the potentials of a set of electrodes. Measurements of the height then give the electrical potential for the electrical situation. The analogy has been carried even further. If little balls are placed on the membrane, their motion corresponds approximately to the motion of electrons in the corresponding electric field. One can actually watch the “electrons” move on their trajectories. This method was used to design the complicated geometry of many photomultiplier tubes (such as the ones used for scintillation counters, and the one used for controlling the headlight beams on Cadillacs). The method is still used, but the accuracy is limited. For the most accurate work, it is better to determine the fields by numerical methods, using the large electronic computing machines.
+
+## 12–4 The diffusion of neutrons; a uniform spherical source in a homogeneous medium
+
+We take another example that gives the same kind of equation, this time having to do with diffusion. In Chapter 43 of Vol. I we considered the diffusion of ions in a single gas, and of one gas through another. This time, let’s take a different example—the diffusion of neutrons in a material like graphite. We choose to speak of graphite (a pure form of carbon) because carbon doesn’t absorb slow neutrons. In it the neutrons are free to wander around. They travel in a straight line for several centimeters, on the average, before being scattered by a nucleus and deflected into a new direction. So if we have a large block—many meters on a side—the neutrons initially at one place will diffuse to other places. We want to find a description of their average behavior—that is, their average flow.
+
+Let N(x,y,z)\,\Delta V be the number of neutrons in the element of volume \Delta V at the point (x,y,z) . Because of their motion, some neutrons will be leaving \Delta V , and others will be coming in. If there are more neutrons in one region than in a nearby region, more neutrons will go from the first region to the second than come back; there will be a net flow. Following the arguments of Chapter 43 in Vol. I, we describe the flow by a flow vector \FLPJ . Its x -component J_x is the net number of neutrons that pass in unit time a unit area perpendicular to the x -direction. We found that
+
+J_x=-D\,\frac{\partial N}{\partial x}, (12.19)
+
+where the diffusion constant D is given in terms of the mean velocity v , and the mean-free-path l between scatterings is given by
+
+D=\frac{1}{3}\,lv.
+
+The vector equation for \FLPJ is
+
+\FLPJ=-D\,\boldsymbol{\nabla}{N}. (12.20)
+
+The rate at which neutrons flow across any surface element da is \FLPJ\cdot\FLPn\,da (where, as usual, \FLPn is the unit normal). The net flow out of a volume element is then (following the usual Gaussian argument) \mathbf{d}iv{\FLPJ}\,dV . This flow would result in a decrease with time of the number in \Delta V unless neutrons are being created in \Delta V (by some nuclear process). If there are sources in the volume that generate S neutrons per unit time in a unit volume, then the net flow out of \Delta V will be equal to (S-\frac{\partial N}{\partial t})\,\Delta V . We have then that
+
+\mathbf{d}iv{\FLPJ}=S-\frac{\partial N}{\partial t}. (12.21)
+
+Combining ( 12.21) with ( 12.20), we get the neutron diffusion equation
+
+\mathbf{d}iv{(-D\,\boldsymbol{\nabla}{N})}=S-\frac{\partial N}{\partial t}. (12.22)
+
+In the static case—where \frac{\partial N}{\partial t}=0 —we have Eq. ( 12.4) all over again! We can use our knowledge of electrostatics to solve problems about the diffusion of neutrons. So let’s solve a problem. (You may wonder: Why do a problem if we have already done all the problems in electrostatics? We can do it faster this time because we have done the electrostatic problems!)
+
+### Figure Ch12-F7
+Caption: Fig. 12–7.(a) Neutrons are produced uniformly throughout a sphere of radius aa in a large graphite block and diffuse outward. The neutron density NN is found as a function of rr, the distance from the center of the source. (b) The analogous electrostatic situation: a uniform sphere of charge, where NN corresponds to ϕ\phi and J\FigJ corresponds to E\FigE.
+Image: figures/Ch12-F7.svg
+![Fig. 12–7.(a) Neutrons are produced uniformly throughout a sphere of radius aa in a large graphite block and diffuse outward. The neutron density NN is found as a function of rr, the distance from the center of the source. (b) The analogous electrostatic situation: a uniform sphere of charge, where NN corresponds to ϕ\phi and J\FigJ corresponds to E\FigE.](figures/Ch12-F7.svg)
+
+Suppose we have a block of material in which neutrons are being generated—say by uranium fission—uniformly throughout a spherical region of radius a (Fig. 12–7 ). We would like to know: What is the density of neutrons everywhere? How uniform is the density of neutrons in the region where they are being generated? What is the ratio of the neutron density at the center to the neutron density at the surface of the source region? Finding the answers is easy. The source density S_0 replaces the charge density \rho , so our problem is the same as the problem of a sphere of uniform charge density. Finding N is just like finding the potential \phi . We have already worked out the fields inside and outside of a uniformly charged sphere; we can integrate them to get the potential. Outside, the potential is Q/4\pi\epsilon_0 r , with the total charge Q given by 4\pi a^3\rho/3 . So
+
+\phi_{\text{outside}}=\frac{\rho a^3}{3\epsilon_0 r}. (12.23)
+
+For points inside, the field is due only to the charge Q(r) inside the sphere of radius r , Q(r)=4\pi r^3\rho/3 , so
+
+E=\frac{\rho r}{3\epsilon_0}. (12.24)
+
+The field increases linearly with r . Integrating E to get \phi , we have
+
+\phi_{\text{inside}}=-\frac{\rho r^2}{6\epsilon_0}+\text{a constant}.
+
+At the radius a , \phi_{\text{inside}} must be the same as \phi_{\text{outside}} , so the constant must be \rho a^2/2\epsilon_0 . (We are assuming that \phi is zero at large distances from the source, which will correspond to N being zero for the neutrons.) Therefore,
+
+\phi_{\text{inside}}=\frac{\rho}{3\epsilon_0} \biggl(\frac{3a^2}{2}-\frac{r^2}{2}\biggr). (12.25)
+
+We know immediately the neutron density in our other problem. The answer is
+
+N_{\text{outside}}=\frac{Sa^3}{3Dr}, (12.26)
+
+and
+
+N_{\text{inside}}=\frac{S}{3D} \biggl(\frac{3a^2}{2}-\frac{r^2}{2}\biggr). (12.27)
+
+N is shown as a function of r in Fig. 12–7 .
+
+Now what is the ratio of density at the center to that at the edge? At the center ( r=0 ), it is proportional to 3a^2/2 . At the edge ( r=a ) it is proportional to 2a^2/2 , so the ratio of densities is 3/2 . A uniform source doesn’t produce a uniform density of neutrons. You see, our knowledge of electrostatics gives us a good start on the physics of nuclear reactors.
+
+There are many physical circumstances in which diffusion plays a big part. The motion of ions through a liquid, or of electrons through a semiconductor, obeys the same equation. We find again and again the same equations.
+
+## 12–5 Irrotational fluid flow; the flow past a sphere
+
+Let’s now consider an example which is not really a very good one, because the equations we will use will not really represent the subject with complete generality but only in an artificial idealized situation. We take up the problem of water flow. In the case of the stretched sheet, our equations were an approximation which was correct only for small deflections. For our consideration of water flow, we will not make that kind of an approximation; we must make restrictions that do not apply at all to real water. We treat only the case of the steady flow of an incompressible, nonviscous, circulation-free liquid. Then we represent the flow by giving the velocity \mathbf{v}(\mathbf{r}) as a function of position \mathbf{r} . If the motion is steady (the only case for which there is an electrostatic analog) \mathbf{v} is independent of time. If \rho is the density of the fluid, then \rho\mathbf{v} is the amount of mass which passes per unit time through a unit area. By the conservation of matter, the divergence of \rho\mathbf{v} will be, in general, the time rate of change of the mass of the material per unit volume. We will assume that there are no processes for the continuous creation or destruction of matter. The conservation of matter then requires that \mathbf{d}iv{\rho\mathbf{v}}=0 . (It should, in general, be equal to -\frac{\partial \rho}{\partial t} , but since our fluid is incompressible, \rho cannot change.) Since \rho is everywhere the same, we can factor it out, and our equation is simply
+
+\mathbf{d}iv{\mathbf{v}}=0.
+
+Good! We have electrostatics again (with no charges); it’s just like \mathbf{d}iv{\mathbf{E}}=0 . Not so! Electrostatics is not simply \mathbf{d}iv{\mathbf{E}}=0 . It is a pair of equations. One equation does not tell us enough; we need still an additional equation. To match electrostatics, we should have also that the curl of \mathbf{v} is zero. But that is not generally true for real liquids. Most liquids will ordinarily develop some circulation. So we are restricted to the situation in which there is no circulation of the fluid. Such flow is often called irrotational. Anyway, if we make all our assumptions, we can imagine a case of fluid flow that is analogous to electrostatics. So we take
+
+\mathbf{d}iv{\mathbf{v}}=0 (12.28)
+
+and
+
+\mathbf{c}url{\mathbf{v}}=0. (12.29)
+
+We want to emphasize that the number of circumstances in which liquid flow follows these equations is far from the great majority, but there are a few. They must be cases in which we can neglect surface tension, compressibility, and viscosity, and in which we can assume that the flow is irrotational. These assumptions are valid so rarely for real water that the mathematician John von Neumann said that people who analyze Eqs. ( 12.28) and ( 12.29) are studying “dry water”! (We take up the problem of fluid flow in more detail in Chapters 40 and 41.)
+
+Because \mathbf{c}url{\mathbf{v}}=0 , the velocity of “dry water” can be written as the gradient of some potential:
+
+\mathbf{v}=-\boldsymbol{\nabla}{\psi}. (12.30)
+
+What is the physical meaning of \psi ? There isn’t any very useful meaning. The velocity can be written as the gradient of a potential simply because the flow is irrotational. And by analogy with electrostatics, \psi is called the velocity potential, but it is not related to a potential energy in the way that \phi is. Since the divergence of \mathbf{v} is zero, we have
+
+\mathbf{d}iv{(\boldsymbol{\nabla}{\psi})}=\nabla^2\psi=0. (12.31)
+
+The velocity potential \psi obeys the same differential equation as the electrostatic potential in free space ( \rho=0 ).
+
+Let’s pick a problem in irrotational flow and see whether we can solve it by the methods we have learned. Consider the problem of a spherical ball falling through a liquid. If it is going too slowly, the viscous forces, which we are disregarding, will be important. If it is going too fast, little whirlpools (turbulence) will appear in its wake and there will be some circulation of the water. But if the ball is going neither too fast nor too slow, it is more or less true that the water flow will fit our assumptions, and we can describe the motion of the water by our simple equations.
+
+It is convenient to describe what happens in a frame of reference fixed in the sphere. In this frame we are asking the question: How does water flow past a sphere at rest when the flow at large distances is uniform? That is, when, far from the sphere, the flow is everywhere the same. The flow near the sphere will be as shown by the streamlines drawn in Fig. 12–8. These lines, always parallel to \mathbf{v} , correspond to lines of electric field. We want to get a quantitative description for the velocity field, i.e., an expression for the velocity at any point P .
+
+### Figure Ch12-F8
+Caption: Fig. 12–8.The velocity field of irrotational fluid flow past a sphere.
+Image: figures/Ch12-F8.svg
+![Fig. 12–8.The velocity field of irrotational fluid flow past a sphere.](figures/Ch12-F8.svg)
+
+We can find the velocity from the gradient of \psi , so we first work out the potential. We want a potential that satisfies Eq. ( 12.31) everywhere, and which also satisfies two restrictions: (1) there is no flow in the spherical region inside the surface of the ball, and (2) the flow is constant at large distances. To satisfy (1), the component of \mathbf{v} normal to the surface of the sphere must be zero. That means that \frac{\partial \psi}{\partial r} is zero at r=a . To satisfy (2), we must have \frac{\partial \psi}{\partial z}=v_0 at all points where r\gg a . Strictly speaking, there is no electrostatic case which corresponds exactly to our problem. It really corresponds to putting a sphere of dielectric constant zero in a uniform electric field. If we had worked out the solution to the problem of a sphere of a dielectric constant \kappa in a uniform field, then by putting \kappa=0 we would immediately have the solution to this problem.
+
+We have not actually worked out this particular electrostatic problem in detail, but let’s do it now. (We could work directly on the fluid problem with \mathbf{v} and \psi , but we will use \mathbf{E} and \phi because we are so used to them.)
+
+The problem is: Find a solution of \nabla^2\phi=0 such that \mathbf{E}=-\boldsymbol{\nabla}{\phi} is a constant, say \mathbf{E}_0 , for large r , and such that the radial component of \mathbf{E} is equal to zero at r=a . That is,
+
+\left.\frac{\partial \phi}{\partial r}\right|_{r=a}=0. (12.32)
+
+Our problem involves a new kind of boundary condition, not one for which \phi is a constant on a surface, but for which \frac{\partial \phi}{\partial r} is a constant. That is a little different. It is not easy to get the answer immediately. First of all, without the sphere, \phi would be -E_0z . Then \mathbf{E} would be in the z -direction and have the constant magnitude E_0 , everywhere. Now we have analyzed the case of a dielectric sphere which has a uniform polarization inside it, and we found that the field inside such a polarized sphere is a uniform field, and that outside it is the same as the field of a point dipole located at the center. So let’s guess that the solution we want is a superposition of a uniform field plus the field of a dipole. The potential of a dipole (Chapter 6) is pz/4\pi\epsilon_0 r^3 . Thus we assume that
+
+\phi=-E_0z+\frac{pz}{4\pi\epsilon_0 r^3}. (12.33)
+
+Since the dipole field falls off as 1/r^3 , at large distances we have just the field E_0 . Our guess will automatically satisfy condition (2) above. But what do we take for the dipole strength p ? To find out, we may use the other condition on \phi , Eq. ( 12.32). We must differentiate \phi with respect to r , but of course we must do so at a constant angle \theta , so it is more convenient if we first express \phi in terms of r and \theta , rather than of z and r . Since z=r\cos\theta , we get
+
+\phi=-E_0r\cos\theta+\frac{p\cos\theta}{4\pi\epsilon_0 r^2}. (12.34)
+
+The radial component of \mathbf{E} is
+
+-\frac{\partial \phi}{\partial r}=+E_0\cos\theta+\frac{p\cos\theta}{2\pi\epsilon_0 r^3}. (12.35)
+
+This must be zero at r=a for all \theta . This will be true if
+
+p=-2\pi\epsilon_0 a^3E_0. (12.36)
+
+Note carefully that if both terms in Eq. ( 12.35) had not had the same \theta -dependence, it would not have been possible to choose p so that ( 12.35) turned out to be zero at r=a for all angles. The fact that it works out means that we have guessed wisely in writing Eq. ( 12.33). Of course, when we made the guess we were looking ahead; we knew that we would need another term that (a) satisfied \nabla^2\phi=0 (any real field would do that), (b) dependent on \cos\theta , and (c) fell to zero at large r . The dipole field is the only one that does all three.
+
+Using ( 12.36), our potential is
+
+\phi=-E_0\cos\theta\biggl(r+\frac{a^3}{2r^2}\biggr). (12.37)
+
+The solution of the fluid flow problem can be written simply as
+
+\psi=-v_0\cos\theta\biggl(r+\frac{a^3}{2r^2}\biggr). (12.38)
+
+It is straightforward to find \mathbf{v} from this potential. We will not pursue the matter further.
+
+## 12–6 Illumination; the uniform lighting of a plane
+
+### Figure Ch12-F9
+Caption: Fig. 12–9.The illumination InI_n of a surface is the radiant energy per unit time arriving at a unit area of the surface.
+Image: figures/Ch12-F9.svg
+![Fig. 12–9.The illumination InI_n of a surface is the radiant energy per unit time arriving at a unit area of the surface.](figures/Ch12-F9.svg)
+
+In this section we turn to a completely different physical problem—we want to illustrate the great variety of possibilities. This time we will do something that leads to the same kind of integral that we found in electrostatics. (If we have a mathematical problem which gives us a certain integral, then we know something about the properties of that integral if it is the same integral that we had to do for another problem.) We take our example from illumination engineering. Suppose there is a light source at the distance z above a plane surface. What is the illumination of the surface? That is, what is the radiant energy per unit time arriving at a unit area of the surface? (See Fig. 12–9.) We suppose that the source is spherically symmetric, so that light is radiated equally in all directions. Then the amount of radiant energy which passes through a unit area at right angles to a light flow varies inversely as the square of the distance. It is evident that the intensity of the light in the direction normal to the flow is given by the same kind of formula as for the electric field from a point source. If the light rays meet the surface at an angle \theta to the normal, then I_n , the energy arriving per unit area of the surface, is only \cos\theta as great, because the same energy goes onto an area larger by 1/\cos\theta . If we call the strength of our light source S , then I_n , the illumination of a surface, is
+
+I_n=\frac{S}{r^2}\,\mathbf{e}_r\cdot\FLPn, (12.39)
+
+where \mathbf{e}_r is the unit vector from the source and \FLPn is the unit normal to the surface. The illumination I_n corresponds to the normal component of the electric field from a point charge of strength 4\pi\epsilon_0 S . Knowing that, we see that for any distribution of light sources, we can find the answer by solving the corresponding electrostatic problem. We calculate the vertical component of electric field on the plane due to a distribution of charge in the same way as for that of the light sources. 1
+
+Consider the following example. We wish for some special experimental situation to arrange that the top surface of a table will have a very uniform illumination. We have available long tubular fluorescent lights which radiate uniformly along their lengths. We can illuminate the table by placing the fluorescent tubes in a regular array on the ceiling, which is at the height z above the table. What is the widest spacing b from tube to tube that we should use if we want the surface illumination to be uniform to, say, within one part in a thousand? Answer: (1) Find the electric field from a grid of wires with the spacing b , each charged uniformly; (2) compute the vertical component of the electric field; (3) find out what b must be so that the ripples of the field are not more than one part in a thousand.
+
+In Chapter 7 we saw that the electric field of a grid of charged wires could be represented as a sum of terms, each one of which gave a sinusoidal variation of the field with a period of b/n , where n is an integer. The amplitude of any one of these terms is given by Eq. ( 7.44):
+
+F_n=A_ne^{-2\pi nz/b}.
+
+We need consider only n=1 , so long as we only want the field at points not too close to the grid. For a complete solution, we would still need to determine the coefficients A_n , which we have not yet done (although it is a straightforward calculation). Since we need only A_1 , we can estimate that its magnitude is roughly the same as that of the average field. The exponential factor would then give us directly the relative amplitude of the variations. If we want this factor to be 10^{-3} , we find that b must be 0.91z . If we make the spacing of the fluorescent tubes 3/4 of the distance to the ceiling, the exponential factor is then 1/4000 , and we have a safety factor of 4 , so we are fairly sure that we will have the illumination constant to one part in a thousand. (An exact calculation shows that A_1 is really twice the average field, so that b\approx0.83z .) It is somewhat surprising that for such a uniform illumination the allowed separation of the tubes comes out so large.
+
+## 12–7 The “underlying unity” of nature
+
+In this chapter, we wished to show that in learning electrostatics you have learned at the same time how to handle many subjects in physics, and that by keeping this in mind, it is possible to learn almost all of physics in a limited number of years.
+
+However, a question surely suggests itself at the end of such a discussion: Why are the equations from different phenomena so similar? We might say: “It is the underlying unity of nature.” But what does that mean? What could such a statement mean? It could mean simply that the equations are similar for different phenomena; but then, of course, we have given no explanation. The “underlying unity” might mean that everything is made out of the same stuff, and therefore obeys the same equations. That sounds like a good explanation, but let us think. The electrostatic potential, the diffusion of neutrons, heat flow—are we really dealing with the same stuff? Can we really imagine that the electrostatic potential is physically identical to the temperature, or to the density of particles? Certainly \phi is not exactly the same as the thermal energy of particles. The displacement of a membrane is certainly not like a temperature. Why, then, is there “an underlying unity”?
+
+A closer look at the physics of the various subjects shows, in fact, that the equations are not really identical. The equation we found for neutron diffusion is only an approximation that is good when the distance over which we are looking is large compared with the mean free path. If we look more closely, we would see the individual neutrons running around. Certainly the motion of an individual neutron is a completely different thing from the smooth variation we get from solving the differential equation. The differential equation is an approximation, because we assume that the neutrons are smoothly distributed in space.
+
+Is it possible that this is the clue? That the thing which is common to all the phenomena is the space, the framework into which the physics is put? As long as things are reasonably smooth in space, then the important things that will be involved will be the rates of change of quantities with position in space. That is why we always get an equation with a gradient. The derivatives must appear in the form of a gradient or a divergence; because the laws of physics are independent of direction, they must be expressible in vector form. The equations of electrostatics are the simplest vector equations that one can get which involve only the spatial derivatives of quantities. Any other simple problem—or simplification of a complicated problem—must look like electrostatics. What is common to all our problems is that they involve space and that we have imitated what is actually a complicated phenomenon by a simple differential equation.
+
+That leads us to another interesting question. Is the same statement perhaps also true for the electrostatic equations? Are they also correct only as a smoothed-out imitation of a really much more complicated microscopic world? Could it be that the real world consists of little X-ons which can be seen only at very tiny distances? And that in our measurements we are always observing on such a large scale that we can’t see these little X-ons, and that is why we get the differential equations?
+
+Our currently most complete theory of electrodynamics does indeed have its difficulties at very short distances. So it is possible, in principle, that these equations are smoothed-out versions of something. They appear to be correct at distances down to about 10^{-14} cm, but then they begin to look wrong. It is possible that there is some as yet undiscovered underlying “machinery,” and that the details of an underlying complexity are hidden in the smooth-looking equations—as is so in the “smooth” diffusion of neutrons. But no one has yet formulated a successful theory that works that way.
+
+Strangely enough, it turns out (for reasons that we do not at all understand) that the combination of relativity and quantum mechanics as we know them seems to forbid the invention of an equation that is fundamentally different from Eq. ( 12.4), and which does not at the same time lead to some kind of contradiction. Not simply a disagreement with experiment, but an internal contradiction. As, for example, the prediction that the sum of the probabilities of all possible occurrences is not equal to unity, or that energies may sometimes come out as complex numbers, or some other such idiocy. No one has yet made up a theory of electricity for which \nabla^2\phi=-\rho/\epsilon_0 is understood as a smoothed-out approximation to a mechanism underneath, and which does not lead ultimately to some kind of an absurdity. But, it must be added, it is also true that the assumption that \nabla^2\phi=-\rho/\epsilon_0 is valid for all distances, no matter how small, leads to absurdities of its own (the electrical energy of an electron is infinite)—absurdities from which no one yet knows an escape.

@@ -1,0 +1,103 @@
+39–1 The tensor of strain
+
+In the last chapter we talked about the distortions of particular elastic objects. In this chapter we want to look at what can happen in general inside an elastic material. We would like to be able to describe the conditions of stress and strain inside some big glob of jello which is twisted and squashed in some complicated way. To do this, we need to be able to describe the local strain at every point in an elastic body; we can do it by giving a set of six numbers—which are the components of a symmetric tensor—for each point. Earlier, we spoke of the stress tensor (Chapter 31); now we need the tensor of strain.
+
+Figure Ch39-F1
+Caption: Fig. 39–1.A speck of the material at the point PP in an unstrained block moves to P′P' where the block is strained.
+Image: figures/Ch39-F1.svg
+![Fig. 39–1.A speck of the material at the point PP in an unstrained block moves to P′P' where the block is strained.](figures/Ch39-F1.svg)
+
+Imagine that we start with the material initially unstrained and watch the motion of a small speck of “dirt” embedded in the material when the strain is applied. A speck that was at the point P located at \mathbf{r}=(x,y,z) moves to a new position P' at \mathbf{r}'=(x',y',z') as shown in Fig. 39–1 . We will call \FLPu the vector displacements from P to P' . Then
+
+\FLPu=\mathbf{r}'-\mathbf{r}. (39.1)
+
+The displacement \FLPu depends, of course, on which point P we start with, so \FLPu is a vector function of \mathbf{r} —or, if you prefer, of (x,y,z) .
+
+Figure Ch39-F2
+Caption: Fig. 39–2.A homogenous stretch-type strain.
+Image: figures/Ch39-F2.svg
+![Fig. 39–2.A homogenous stretch-type strain.](figures/Ch39-F2.svg)
+
+Let’s look first at a simple situation in which the strain is constant over the material—so we have what is called a homogeneous strain. Suppose, for instance, that we have a block of material and we stretch it uniformly. We just change its dimensions uniformly in one direction—say, in the x -direction, as shown in Fig. 39–2 . The motion u_x of a speck at x is proportional to x . In fact,
+
+\frac{u_x}{x}=\frac{\Delta l}{l}.
+
+We will write u_x this way:
+
+u_x=e_{xx}x.
+
+The proportionality constant e_{xx} is, of course, the same thing as \Delta l/l . (You will see shortly why we use a double subscript.)
+
+If the strain is not uniform, the relation between u_x and x will vary from place to place in the material. For the general situation, we define the e_{xx} by a kind of local \Delta l/l , namely by
+
+e_{xx}=\frac{\partial u_x}{\partial x}. (39.2)
+
+This number—which is now a function of x , y , and z —describes the amount of stretching in the x -direction throughout the hunk of jello. There may, of course, also be stretching in the y - and z -directions. We describe them by the numbers
+
+e_{yy}=\frac{\partial u_y}{\partial y},\quad e_{zz}=\frac{\partial u_z}{\partial z}. (39.3)
+
+Figure Ch39-F3
+Caption: Fig. 39–3.A homogenous shear strain.
+Image: figures/Ch39-F3.svg
+![Fig. 39–3.A homogenous shear strain.](figures/Ch39-F3.svg)
+
+We need to be able to describe also the shear-type strains. Suppose we imagine a little cube marked out in the initially undisturbed jello. When the jello is pushed out of shape, this cube may get changed into a parallelogram, as sketched in Fig. 39–3 . 1 In this kind of a strain, the x -motion of each particle is proportional to its y -coordinate,
+
+u_x=\frac{\theta}{2}\,y. (39.4)
+
+And there is also a y -motion proportional to x ,
+
+u_y=\frac{\theta}{2}\,x. (39.5)
+
+So we can describe such a shear-type strain by writing
+
+u_x=e_{xy}y,\quad u_y=e_{yx}x
+
+with
+
+e_{xy}=e_{yx}=\frac{\theta}{2}.
+
+Now you might think that when the strains are not homogeneous we could describe the generalized shear strains by defining the quantities e_{xy} and e_{yx} by
+
+e_{xy}=\frac{\partial u_x}{\partial y},\quad e_{yx}=\frac{\partial u_y}{\partial x}. (39.6)
+
+But there is one difficulty. Suppose that the displacements u_x and u_y were given by
+
+u_x=\frac{\theta}{2}\,y,\quad u_y=-\frac{\theta}{2}\,x
+
+They are like Eqs. ( 39.4) and ( 39.5) except that the sign of u_y is reversed. With these displacements a little cube in the jello simply gets shifted by the angle \theta/2 , as shown in Fig. 39–4 . There is no strain at all—just a rotation in space. There is no distortion of the material; the relative positions of all the atoms are not changed at all. We must somehow make our definitions so that pure rotations are not included in our definitions of a shear strain. The key point is that if \frac{\partial u_y}{\partial x} and \frac{\partial u_x}{\partial y} are equal and opposite, there is no strain; so we can fix things up by defining
+
+e_{xy}=e_{yx}=\frac{1}{2}(\frac{\partial u_y}{\partial x}+\frac{\partial u_x}{\partial y}).
+
+For a pure rotation they are both zero, but for a pure shear we get that e_{xy} is equal to e_{yx} , as we would like.
+
+Figure Ch39-F4
+Caption: Fig. 39–4.A homogenous rotation—there is no strain.
+Image: figures/Ch39-F4.svg
+![Fig. 39–4.A homogenous rotation—there is no strain.](figures/Ch39-F4.svg)
+
+In the most general distortion—which may include stretching or compression as well as shear—we define the state of strain by giving the nine numbers
+
+\begin{aligned} e_{xx}&=\frac{\partial u_x}{\partial x},\\[2pt] e_{yy}&=\frac{\partial u_y}{\partial y},\\[-2pt] &\qquad\vdots\\ e_{xy}&=\frac{1}{2}(\frac{\partial u_y}{\partial x}+\frac{\partial u_x}{\partial y}),\\[-4pt] &\qquad\vdots \end{aligned} (39.7)
+
+These are the terms of a tensor of strain. Because it is a symmetric tensor —our definitions make e_{xy}=e_{yx} , always—there are really only six different numbers. You remember (see Chapter 31) that the general characteristic of a tensor is that the terms transform like the products of the components of two vectors. (If \mathbf{A} and \mathbf{B} are vectors, C_{ij}=A_iB_j is a tensor.) Each term of e_{ij} is a product (or the sum of such products) of the components of the vector \FLPu=(u_x,u_y,u_z) , and of the operator \boldsymbol{\nabla}=(\frac{\partial }{\partial x},\frac{\partial }{\partial y},\frac{\partial }{\partial z}) , which we know transforms like a vector. Let’s let x_1 , x_2 , and x_3 stand for x , y , and z and u_1 , u_2 , and u_3 stand for u_x , u_y , and u_z ; then we can write the general term e_{ij} of the strain tensor as
+
+e_{ij}=\frac{1}{2}(\frac{\partial u_j}{\partial x_i}+\frac{\partial u_i}{\partial x_j}), (39.8)
+
+where i and j can be 1 , 2 , or 3 .
+
+When we have a homogeneous strain—which may include both stretching and shear—all of the e_{ij} are constants, and we can write
+
+u_x=e_{xx}x+e_{xy}y+e_{xz}z. (39.9)
+
+(We choose our origin of x , y , z at the point where \FLPu is zero.) In this case, the strain tensor e_{ij} gives the relationship between two vectors: the coordinate vector \mathbf{r}=(x,y,z) and the displacement vector \FLPu=(u_x,u_y,u_z) .
+
+When the strains are not homogeneous, any piece of the jello may also get somewhat twisted—there will be a local rotation. If the distortions are all small, we would have
+
+\Delta u_i=\sum_j(e_{ij}-\omega_{ij})\,\Delta x_j, (39.10)
+
+where \omega_{ij} is an antisymmetric tensor,
+
+\omega_{ij}=\frac{1}{2}(\frac{\partial u_j}{\partial x_i}-\frac{\partial u_i}{\partial x_j}), (39.11)
+
+which describes the rotation. We will, however, not worry any more about rotations, but only about the strains described by the symmetric tensor e_{ij} .

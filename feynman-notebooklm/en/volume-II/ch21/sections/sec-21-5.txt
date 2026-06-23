@@ -1,0 +1,87 @@
+21–5 The potentials of a moving charge; the general solution of Liénard and Wiechert
+
+In the last section we made a simplification in calculating our integral for \mathbf{A} by considering only low velocities. But in doing so we missed an important point and also one where it is easy to go wrong. We will therefore take up now a calculation of the potentials for a point charge moving in any way whatever—even with a relativistic velocity. Once we have this result, we will have the complete electromagnetism of electric charges. Even Eq. ( 21.1) can then be derived by taking derivatives. The story will be complete. So bear with us.
+
+Let’s try to calculate the scalar potential \phi(1) at the point (x_1,y_1,z_1) produced by a point charge, such as an electron, moving in any manner whatsoever. By a “point” charge we mean a very small ball of charge, shrunk down as small as you like, with a charge density \rho(x,y,z) . We can find \phi from Eq. ( 21.15):
+
+\phi(1,t)=\frac{1}{4\pi\epsilon_0} \int\frac{\rho(2,t-r_{12}/c)}{r_{12}}\,dV_2. (21.28)
+
+The answer would seem to be—and almost everyone would, at first, think—that the integral of \rho over such a “point” charge is just the total charge q , so that
+
+\phi(1,t)=\frac{1}{4\pi\epsilon_0}\,\frac{q}{r_{12}'}\quad(\text{wrong}).
+
+By \mathbf{r}_{12}' we mean the radius vector from the charge at point (2) to point (1) at the retarded time (t-r_{12}/c) . It is wrong.
+
+The correct answer is
+
+\phi(1,t)=\frac{1}{4\pi\epsilon_0}\,\frac{q}{r_{12}'}\cdot \frac{1}{1-v_{r'}/c}, (21.29)
+
+where v_{r'} , is the component of the velocity of the charge parallel to \mathbf{r}_{12}' —namely, toward point (1) . We will now show you why. To make the argument easier to follow, we will make the calculation first for a “point” charge which is in the form of a little cube of charge moving toward the point (1) with the speed v , as shown in Fig. 21-5 (a). Let the length of a side of the cube be a , which we take to be much, much less than r_{12} , the distance from the center of the charge to the point (1) .
+
+Figure Ch21-F5
+Caption: Fig. 21–5. (a) A “point” charge—considered as a small cubical distribution of charge—moving with the speed [math]v toward point [math](1). (b) The volume element [math]\Delta V_i used for calculating the potentials.
+Image: figures/Ch21-F5.svg
+![Fig. 21–5. (a) A “point” charge—considered as a small cubical distribution of charge—moving with the speed [math]v toward point [math](1). (b) The volume element [math]\Delta V_i used for calculating the potentials.](figures/Ch21-F5.svg)
+
+Now to evaluate the integral of Eq. ( 21.28), we will return to basic principles; we will write it as the sum
+
+\sum_i\frac{\rho_i\,\Delta V_i}{r_i}, (21.30)
+
+where r_i is the distance from point (1) to the i th volume element \Delta V_i and \rho_i is the charge density at \Delta V_i at the time t_i=t-r_i/c . Since r_i\gg a , always, it will be convenient to take our \Delta V_i in the form of thin, rectangular slices perpendicular to \mathbf{r}_{12} , as shown in Fig. 21-5 (b).
+
+Suppose we start by taking the volume elements \Delta V_i with some thickness w much less than a . The individual elements will appear as shown in Fig. 21-6 (a), where we have put in more than enough to cover the charge. But we have not shown the charge, and for a good reason. Where should we draw it? For each volume element \Delta V_i we are to take \rho at the time t_i=(t-r_i/c) , but since the charge is moving, it is in a different place for each volume element \Delta V_i !
+
+Figure Ch21-F6
+Caption: Fig. 21–6. Integrating [math]\rho(t-r'/c)\,dV for a moving charge.
+Image: figures/Ch21-F6.svg
+![Fig. 21–6. Integrating [math]\rho(t-r'/c)\,dV for a moving charge.](figures/Ch21-F6.svg)
+
+Let’s say that we begin with the volume element labeled “1” in Fig. 21-6 (a), chosen so that at the time t_1=(t-r_1/c) the “back” edge of the charge occupies \Delta V_1 , as shown in Fig. 21-6 (b). Then when we evaluate \rho_2\,\Delta V_2 , we must use the position of the charge at the slightly later time t_2=(t-r_2/c) , when the charge will be in the position shown in Fig. 21-6 (c). And so on, for \Delta V_3 , \Delta V_4 , etc. Now we can evaluate the sum.
+
+Since the thickness of each \Delta V_i is w , its volume is wa^2 . Then each volume element that overlaps the charge distribution contains the amount of charge wa^2\rho , where \rho is the density of charge within the cube—which we take to be uniform. When the distance from the charge to point (1) is large, we will make a negligible error by setting all the r_i ’s in the denominators equal to some average value, say the retarded position r' of the center of the charge. Then the sum ( 21.30) is
+
+\sum_{i=1}^N\frac{\rho wa^2}{r'},
+
+where \Delta V_N is the last \Delta V_i that overlaps the charge distributions, as shown in Fig. 21-6 (e). The sum is, clearly,
+
+N\,\frac{\rho wa^2}{r'}=\frac{\rho a^3}{r'}\biggl(\frac{Nw}{a}\biggr).
+
+Now \rho a^3 is just the total charge q and Nw is the length b shown in part (e) of the figure. So we have
+
+\phi=\frac{q}{4\pi\epsilon_0 r'}\biggl(\frac{b}{a}\biggr). (21.31)
+
+What is b ? It is the length of the cube of charge increased by the distance moved by the charge between t_1=(t-r_1/c) and t_N=(t-r_N/c) —which is the distance the charge moves in the time
+
+\Delta t=t_N-t_1=(r_1-r_N)/c=b/c.
+
+Since the speed of the charge is v , the distance moved is v\,\Delta t=vb/c . But the length b is this distance added to a :
+
+b=a+\frac{v}{c}\,b.
+
+Solving for b , we get
+
+b=\frac{a}{1-(v/c)}.
+
+Of course by v we mean the velocity at the retarded time t'=(t-r'/c) , which we can indicate by writing [1-v/c]_{\text{ret}} , and Eq. ( 21.31) for the potential becomes
+
+\phi(1,t)=\frac{q}{4\pi\epsilon_0 r'}\,\frac{1}{[1-(v/c)]_{\text{ret}}}.
+
+This result agrees with our assertion, Eq. ( 21.29). There is a correction term which comes about because the charge is moving as our integral “sweeps over the charge.” When the charge is moving toward the point (1) , its contribution to the integral is increased by the ratio b/a . Therefore the correct integral is q/r' multiplied by b/a , which is 1/[1-v/c]_{\text{ret}} .
+
+If the velocity of the charge is not directed toward the observation point (1) , you can see that what matters is the component of its velocity toward point (1) . Calling this velocity component v_r , the correction factor is 1/[1-v_r/c]_{\text{ret}} . Also, the analysis we have made goes exactly the same way for a charge distribution of any shape—it doesn’t have to be a cube. Finally, since the “size” of the charge q doesn’t enter into the final result, the same result holds when we let the charge shrink to any size—even to a point. The general result is that the scalar potential for a point charge moving with any velocity is
+
+\phi(1,t)=\frac{q}{4\pi\epsilon_0 r'[1-(v_r/c)]_{\text{ret}}}. (21.32)
+
+This equation is often written in the equivalent form
+
+\phi(1,t)=\frac{q}{4\pi\epsilon_0[r-(\mathbf{v}\cdot\mathbf{r}/c)]_{\text{ret}}}, (21.33)
+
+where \mathbf{r} is the vector from the charge to the point (1) , where \phi is being evaluated, and all the quantities in the bracket are to have their values at the retarded time t'=t-r'/c .
+
+The same thing happens when we compute \mathbf{A} for a point charge, from Eq. ( 21.16). The current density is \rho\mathbf{v} and the integral over \rho is the same as we found for \phi . The vector potential is
+
+\mathbf{A}(1,t)=\frac{q\mathbf{v}_{\text{ret}}} {4\pi\epsilon_0 c^2[r-(\mathbf{v}\cdot\mathbf{r}/c)]_{\text{ret}}}. (21.34)
+
+The potentials for a point charge were first deduced in this form by Liénard and Wiechert and are called the Liénard-Wiechert potentials.
+
+To close the ring back to Eq. ( 21.1) it is only necessary to compute \mathbf{E} and \mathbf{B} from these potentials (using \mathbf{B}=\mathbf{c}url{\mathbf{A}} and \mathbf{E}=-\boldsymbol{\nabla}{\phi}-\frac{\partial \mathbf{A}}{\partial t} ). It is now only arithmetic. The arithmetic, however, is fairly involved, so we will not write out the details. Perhaps you will take our word for it that Eq. ( 21.1) is equivalent to the Liénard-Wiechert potentials we have derived. 2

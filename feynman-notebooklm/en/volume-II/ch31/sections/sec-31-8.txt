@@ -1,0 +1,39 @@
+31–8 The four-tensor of electromagnetic momentum
+
+All the tensors we have looked at so far in this chapter relate to the three dimensions of space; they are defined to have a certain transformation property under spatial rotations. In Chapter 26 we had occasion to use a tensor in the four dimensions of relativistic space-time—the electromagnetic field tensor F_{\mu\nu} . The components of such a four-tensor transform under a Lorentz transformation of the coordinates in a special way that we worked out. (Although we did not do it that way, we could have considered the Lorentz transformation as a “rotation” in a four-dimensional “space” called Minkowski space; then the analogy with what we are doing here would have been clearer.)
+
+As our last example, we want to consider another tensor in the four dimensions (t,x,y,z) of relativity theory. When we wrote the stress tensor, we defined S_{ij} as a component of a force across a unit area. But a force is equal to the time rate of change of a momentum. Therefore, instead of saying “ S_{xy} is the x -component of the force across a unit area perpendicular to y ,” we could equally well say, “ S_{xy} is the rate of flow of the x -component of momentum through a unit area perpendicular to y .” In other words, each term of S_{ij} also represents the flow of the i -component of momentum through a unit area perpendicular to the j -direction. These are pure space components, but they are parts of a “larger” tensor S_{\mu\nu} in four dimensions ( \mu and \nu=t,x,y,z ) containing additional components like S_{tx} , S_{yt} , S_{tt} , etc. We will now try to find the physical meaning of these extra components.
+
+We know that the space components represent flow of momentum. We can get a clue on how to extend this to the time dimension by studying another kind of “flow”—the flow of electric charge. For the scalar quantity, charge, the rate of flow (per unit area perpendicular to the flow) is a space vector —the current density vector \mathbf{j} . We have seen that the time component of this flow vector is the density of the stuff that is flowing. For instance, \mathbf{j} can be combined with a time component, j_t=\rho , the charge density, to make the four-vector j_\mu=(\rho,\mathbf{j}) ; that is, the \mu in j_\mu takes on the values t , x , y , z to mean “density, rate of flow in the x -direction, rate of flow in y , rate of flow in z ” of the scalar charge.
+
+Now by analogy with our statement about the time component of the flow of a scalar quantity, we might expect that with S_{xx} , S_{xy} , and S_{xz} , describing the flow of the x -component of momentum, there should be a time component S_{xt} which would be the density of whatever is flowing; that is, S_{xt} should be the density of x -momentum. So we can extend our tensor horizontally to include a t -component. We have
+
+\begin{aligned} S_{xt}&=\text{density of $x$-momentum},\\[1ex] S_{xx}&=\text{$x$-flow of $x$-momentum},\\[1ex] S_{xy}&=\text{$y$-flow of $x$-momentum},\\[1ex] S_{xz}&=\text{$z$-flow of $x$-momentum}. \end{aligned}
+
+Similarly, for the y -component of momentum we have the three components of flow— S_{yx} , S_{yy} , S_{yz} —to which we should add a fourth term:
+
+S_{yt}=\text{density of $y$-momentum}.
+
+And, of course, to S_{zx} , S_{zy} , S_{zz} we would add
+
+S_{zt}=\text{density of $z$-momentum}.
+
+In four dimensions there is also a t -component of momentum, which is, we know, energy. So the tensor S_{ij} should be extended vertically with S_{tx} , S_{ty} , and S_{tz} , where
+
+\begin{aligned} S_{tx}&=\text{$x$-flow of energy},\\[1ex] S_{ty}&=\text{$y$-flow of energy},\\[1ex] S_{tz}&=\text{$z$-flow of energy}; \end{aligned} (31.28)
+
+that is, S_{tx} is the flow of energy per unit area and per unit time across a surface perpendicular to the x -axis, and so on. Finally, to complete our tensor we need S_{tt} , which would be the density of energy. We have extended our stress tensor S_{ij} of three dimensions to the four-dimensional stress-energy tensor S_{\mu\nu} . The index \mu can take on the four values t , x , y , and z , meaning, respectively, “density,” “flow per unit area in the x -direction,” “flow per unit area in the y -direction,” and “flow per unit area in the z -direction.” In the same way, \nu takes on the four values t , x , y , z to tell us what flows, namely, “energy,” “momentum in the x -direction,” “momentum in the y -direction,” and “momentum in the z -direction.”
+
+As an example, we will discuss this tensor not in matter, but in a region of free space in which there is an electromagnetic field. We know that the flow of energy is the Poynting vector \FLPS=\epsilon_0 c^2\mathbf{E}\times\mathbf{B} . So the x -, y -, and z -components of \FLPS are, from the relativistic point of view, the components S_{tx} , S_{ty} , and S_{tz} of our four-dimensional stress-energy tensor. The symmetry of the tensor S_{ij} carries over into the time components as well, so the four-dimensional tensor S_{\mu\nu} is symmetric:
+
+S_{\mu\nu}=S_{\nu\mu}. (31.29)
+
+In other words, the components S_{xt} , S_{yt} , S_{zt} , which are the densities of x , y , and z momentum, are also equal to the x -, y -, and z -components of the Poynting vector \FLPS , the energy flow —as we have already shown in an earlier chapter by a different kind of argument.
+
+The remaining components of the electromagnetic stress tensor S_{\mu\nu} can also be expressed in terms of the electric and magnetic fields \mathbf{E} and \mathbf{B} . That is to say, we must admit stress or, to put it less mysteriously, flow of momentum in the electromagnetic field. We discussed this in Chapter 27 in connection with Eq. ( 27.21), but did not work out the details.
+
+Those who want to exercise their prowess in tensors in four dimensions might like to see the formula for S_{\mu\nu} in terms of the fields:
+
+S_{\mu\nu}=-\epsilon_0\biggl( \sum_\alpha F_{\mu\alpha}F_{\nu\alpha}-\frac{1}{4}\delta_{\mu\nu} \sum_{\alpha,\beta}F_{\beta\alpha}F_{\beta\alpha} \biggr),
+
+where sums on \alpha , \beta are on t , x , y , z but (as usual in relativity) we adopt a special meaning for the sum sign \sum and for the symbol \delta . In the sums the x , y , z terms are to be subtracted and \delta_{tt}=+1 , while \delta_{xx}= \delta_{yy}= \delta_{zz}= -1 and \delta_{\mu\nu}=0 for \mu\neq\nu ( c=1 ). Can you verify that it gives the energy density S_{tt}=(\epsilon_0/2)\,(E^2+B^2) and the Poynting vector \epsilon_0\mathbf{E}\times\mathbf{B} ? Can you show that in an electrostatic field with \mathbf{B}=\FLPzero the principal axes of stress are in the direction of the electric field, that there is a tension (\epsilon_0/2)E^2 along the direction of the field, and that there is an equal pressure in directions perpendicular to the field direction?

@@ -1,0 +1,284 @@
+# 10. Dielectrics
+
+## 10–1 The dielectric constant
+
+Here we begin to discuss another of the peculiar properties of matter under the influence of the electric field. In an earlier chapter we considered the behavior of conductors, in which the charges move freely in response to an electric field to such points that there is no field left inside a conductor. Now we will discuss insulators, materials which do not conduct electricity. One might at first believe that there should be no effect whatsoever. However, using a simple electroscope and a parallel-plate capacitor, Faraday discovered that this was not so. His experiments showed that the capacitance of such a capacitor is increased when an insulator is put between the plates. If the insulator completely fills the space between the plates, the capacitance is increased by a factor \kappa which depends only on the nature of the insulating material. Insulating materials are also called dielectrics; the factor \kappa is then a property of the dielectric, and is called the dielectric constant. The dielectric constant of a vacuum is, of course, unity.
+
+Our problem now is to explain why there is any electrical effect if the insulators are indeed insulators and do not conduct electricity. We begin with the experimental fact that the capacitance is increased and try to reason out what might be going on. Consider a parallel-plate capacitor with some charges on the surfaces of the conductors, let us say negative charge on the top plate and positive charge on the bottom plate. Suppose that the spacing between the plates is d and the area of each plate is A . As we have proved earlier, the capacitance is
+
+C=\frac{\epsilon_0 A}{d}, (10.1)
+
+and the charge and voltage on the capacitor are related by
+
+Q=CV. (10.2)
+
+Now the experimental fact is that if we put a piece of insulating material like lucite or glass between the plates, we find that the capacitance is larger. That means, of course, that the voltage is lower for the same charge. But the voltage difference is the integral of the electric field across the capacitor; so we must conclude that inside the capacitor, the electric field is reduced even though the charges on the plates remain unchanged.
+
+### Figure Ch10-F1
+Caption: Fig. 10–1.A parallel-plate capacitor with a dielectric. The lines of E\FigE are shown.
+Image: figures/Ch10-F1.svg
+![Fig. 10–1.A parallel-plate capacitor with a dielectric. The lines of E\FigE are shown.](figures/Ch10-F1.svg)
+
+Now how can that be? We have a law due to Gauss that tells us that the flux of the electric field is directly related to the enclosed charge. Consider the Gaussian surface S shown by broken lines in Fig. 10–1 . Since the electric field is reduced with the dielectric present, we conclude that the net charge inside the surface must be lower than it would be without the material. There is only one possible conclusion, and that is that there must be positive charges on the surface of the dielectric. Since the field is reduced but is not zero, we would expect this positive charge to be smaller than the negative charge on the conductor. So the phenomena can be explained if we could understand in some way that when a dielectric material is placed in an electric field there is positive charge induced on one surface and negative charge induced on the other.
+
+### Figure Ch10-F2
+Caption: Fig. 10–2.If we put a conducting plate in the gap of a parallel-plate condenser, the induced charges reduce the field in the conductor to zero.
+Image: figures/Ch10-F2.svg
+![Fig. 10–2.If we put a conducting plate in the gap of a parallel-plate condenser, the induced charges reduce the field in the conductor to zero.](figures/Ch10-F2.svg)
+
+We would expect that to happen for a conductor. For example, suppose that we had a capacitor with a plate spacing d , and we put between the plates a neutral conductor whose thickness is b , as in Fig. 10–2 . The electric field induces a positive charge on the upper surface and a negative charge on the lower surface, so there is no field inside the conductor. The field in the rest of the space is the same as it was without the conductor, because it is the surface density of charge divided by \epsilon_0 ; but the distance over which we have to integrate to get the voltage (the potential difference) is reduced. The voltage is
+
+V=\frac{\sigma}{\epsilon_0}\,(d-b).
+
+The resulting equation for the capacitance is like Eq. ( 10.1), with (d-b) substituted for d :
+
+C=\frac{\epsilon_0 A}{d[1-(b/d)]}. (10.3)
+
+The capacitance is increased by a factor which depends upon (b/d) , the proportion of the volume which is occupied by the conductor.
+
+### Figure Ch10-F3
+Caption: Fig. 10–3.A model of a dielectric: small conducting spheres embedded in an idealized insulator.
+Image: figures/Ch10-F3.svg
+![Fig. 10–3.A model of a dielectric: small conducting spheres embedded in an idealized insulator.](figures/Ch10-F3.svg)
+
+This gives us an obvious model for what happens with dielectrics—that inside the material there are many little sheets of conducting material. The trouble with such a model is that it has a specific axis, the normal to the sheets, whereas most dielectrics have no such axis. However, this difficulty can be eliminated if we assume that all insulating materials contain small conducting spheres separated from each other by insulation, as shown in Fig. 10–3 . The phenomenon of the dielectric constant is explained by the effect of the charges which would be induced on each sphere. This is one of the earliest physical models of dielectrics used to explain the phenomenon that Faraday observed. More specifically, it was assumed that each of the atoms of a material was a perfect conductor, but insulated from the others. The dielectric constant \kappa would depend on the proportion of space which was occupied by the conducting spheres. This is not, however, the model that is used today.
+
+## 10–2 The polarization vector P\FLPP
+
+If we follow the above analysis further, we discover that the idea of regions of perfect conductivity and insulation is not essential. Each of the small spheres acts like a dipole, the moment of which is induced by the external field. The only thing that is essential to the understanding of dielectrics is that there are many little dipoles induced in the material. Whether the dipoles are induced because there are tiny conducting spheres or for any other reason is irrelevant.
+
+Why should a field induce a dipole moment in an atom if the atom is not a conducting sphere? This subject will be discussed in much greater detail in the next chapter, which will be about the inner workings of dielectric materials. However, we give here one example to illustrate a possible mechanism. An atom has a positive charge on the nucleus, which is surrounded by negative electrons. In an electric field, the nucleus will be attracted in one direction and the electrons in the other. The orbits or wave patterns of the electrons (or whatever picture is used in quantum mechanics) will be distorted to some extent, as shown in Fig. 10–4 ; the center of gravity of the negative charge will be displaced and will no longer coincide with the positive charge of the nucleus. We have already discussed such distributions of charge. If we look from a distance, such a neutral configuration is equivalent, to a first approximation, to a little dipole.
+
+### Figure Ch10-F4
+Caption: Fig. 10–4.An atom in an electric field has its distribution of electrons displaced with respect to the nucleus.
+Image: figures/Ch10-F4.svg
+![Fig. 10–4.An atom in an electric field has its distribution of electrons displaced with respect to the nucleus.](figures/Ch10-F4.svg)
+
+It seems reasonable that if the field is not too enormous, the amount of induced dipole moment will be proportional to the field. That is, a small field will displace the charges a little bit and a larger field will displace them further—and in proportion to the field—unless the displacement gets too large. For the remainder of this chapter, it will be supposed that the dipole moment is exactly proportional to the field.
+
+We will now assume that in each atom there are charges q separated by a distance \mathbf{d}elta , so that q\mathbf{d}elta is the dipole moment per atom. (We use \mathbf{d}elta because we are already using d for the plate separation.) If there are N atoms per unit volume, there will be a dipole moment per unit volume equal to Nq\mathbf{d}elta . This dipole moment per unit volume will be represented by a vector, \FLPP . Needless to say, it is in the direction of the individual dipole moments, i.e., in the direction of the charge separation \mathbf{d}elta :
+
+\FLPP=Nq\mathbf{d}elta. (10.4)
+
+In general, \FLPP will vary from place to place in the dielectric. However, at any point in the material, \FLPP is proportional to the electric field \mathbf{E} . The constant of proportionality, which depends on the ease with which the electrons are displaced, will depend on the kinds of atoms in the material.
+
+What actually determines how this constant of proportionality behaves, how accurately it is constant for very large fields, and what is going on inside different materials, we will discuss at a later time. For the present, we will simply suppose that there exists a mechanism by which a dipole moment is induced which is proportional to the electric field.
+
+## 10–3 Polarization charges
+
+Now let us see what this model gives for the theory of a condenser with a dielectric. First consider a sheet of material in which there is a certain dipole moment per unit volume. Will there be on the average any charge density produced by this? Not if \FLPP is uniform. If the positive and negative charges being displaced relative to each other have the same average density, the fact that they are displaced does not produce any net charge inside the volume. On the other hand, if \FLPP were larger at one place and smaller at another, that would mean that more charge would be moved into some region than away from it; we would then expect to get a volume density of charge. For the parallel-plate condenser, we suppose that \FLPP is uniform, so we need to look only at what happens at the surfaces. At one surface the negative charges, the electrons, have effectively moved out a distance \delta ; at the other surface they have moved in, leaving some positive charge effectively out a distance \delta . As shown in Fig. 10–5 , we will have a surface density of charge, which will be called the surface polarization charge.
+
+### Figure Ch10-F5
+Caption: Fig. 10–5.A dielectric slab in a uniform field. The positive charges displaced the distance δ\delta with respect to the negatives.
+Image: figures/Ch10-F5.svg
+![Fig. 10–5.A dielectric slab in a uniform field. The positive charges displaced the distance δ\delta with respect to the negatives.](figures/Ch10-F5.svg)
+
+This charge can be calculated as follows. If A is the area of the plate, the number of electrons that appear at the surface is the product of A and N , the number per unit volume, and the displacement \delta , which we assume here is perpendicular to the surface. The total charge is obtained by multiplying by the electronic charge q_e . To get the surface density of the polarization charge induced on the surface, we divide by A . The magnitude of the surface charge density is
+
+\sigma_{\text{pol}}=Nq_e\delta.
+
+But this is just equal to the magnitude P of the polarization vector \FLPP , Eq. ( 10.4):
+
+\sigma_{\text{pol}}=P. (10.5)
+
+The surface density of charge is equal to the polarization inside the material. The surface charge is, of course, positive on one surface and negative on the other.
+
+Now let us assume that our slab is the dielectric of a parallel-plate capacitor. The plates of the capacitor also have a surface charge, which we will call \sigma_{\text{free}} , because they can move “freely” anywhere on the conductor. This is, of course, the charge that we put on when we charged the capacitor. It should be emphasized that \sigma_{\text{pol}} exists only because of \sigma_{\text{free}} . If \sigma_{\text{free}} is removed by discharging the capacitor, then \sigma_{\text{pol}} will disappear, not by going out on the discharging wire, but by moving back into the material—by the relaxation of the polarization inside the material.
+
+We can now apply Gauss’ law to the Gaussian surface S in Fig. 10–1 . The electric field \mathbf{E} in the dielectric is equal to the total surface charge density divided by \epsilon_0 . It is clear that \sigma_{\text{pol}} and \sigma_{\text{free}} have opposite signs, so
+
+E=\frac{\sigma_{\text{free}}-\sigma_{\text{pol}}}{\epsilon_0}. (10.6)
+
+Note that the field E_0 between the metal plate and the surface of the dielectric is higher than the field E ; it corresponds to \sigma_{\text{free}} alone. But here we are concerned with the field inside the dielectric which, if the dielectric nearly fills the gap, is the field over nearly the whole volume. Using Eq. ( 10.5), we can write
+
+E=\frac{\sigma_{\text{free}}-P}{\epsilon_0}. (10.7)
+
+This equation doesn’t tell us what the electric field is unless we know what P is. Here, however, we are assuming that P depends on E —in fact, that it is proportional to E . This proportionality is usually written as
+
+\FLPP=\chi\epsilon_0\mathbf{E}. (10.8)
+
+The constant \chi (Greek “khi”) is called the electric susceptibility of the dielectric.
+
+Then Eq. ( 10.7) becomes
+
+E=\frac{\sigma_{\text{free}}}{\epsilon_0}\,\frac{1}{(1+\chi)}, (10.9)
+
+which gives us the factor 1/(1+\chi) by which the field is reduced.
+
+The voltage between the plates is the integral of the electric field. Since the field is uniform, the integral is just the product of E and the plate separation d . We have that
+
+V=Ed=\frac{\sigma_{\text{free}}d}{\epsilon_0(1+\chi)}.
+
+The total charge on the capacitor is \sigma_{\text{free}}A , so that the capacitance defined by ( 10.2) becomes
+
+C=\frac{\epsilon_0 A(1+\chi)}{d}=\frac{\kappa\epsilon_0 A}{d}. (10.10)
+
+We have explained the observed facts. When a parallel-plate capacitor is filled with a dielectric, the capacitance is increased by the factor
+
+\kappa=1+\chi, (10.11)
+
+which is a property of the material. Our explanation, of course, is not complete until we have explained—as we will do later—how the atomic polarization comes about.
+
+Let’s now consider something a little bit more complicated—the situation in which the polarization \FLPP is not everywhere the same. As mentioned earlier, if the polarization is not constant, we would expect in general to find a charge density in the volume, because more charge might come into one side of a small volume element than leaves it on the other. How can we find out how much charge is gained or lost from a small volume?
+
+First let’s compute how much charge moves across any imaginary surface when the material is polarized. The amount of charge that goes across a surface is just P times the surface area if the polarization is normal to the surface. Of course, if the polarization is tangential to the surface, no charge moves across it.
+
+Following the same arguments we have already used, it is easy to see that the charge moved across any surface element is proportional to the component of \FLPP perpendicular to the surface. Compare Fig. 10–6 with Fig. 10–5 . We see that Eq. ( 10.5) should, in the general case, be written
+
+\sigma_{\text{pol}}=\FLPP\cdot\FLPn. (10.12)
+
+### Figure Ch10-F6
+Caption: Fig. 10–6.The charge moved across an element of an imaginary surface in a dielectric is proportional to the component of P\FigP normal to the surface.
+Image: figures/Ch10-F6.svg
+![Fig. 10–6.The charge moved across an element of an imaginary surface in a dielectric is proportional to the component of P\FigP normal to the surface.](figures/Ch10-F6.svg)
+
+If we are thinking of an imagined surface element inside the dielectric, Eq. ( 10.12) gives the charge moved across the surface but doesn’t result in a net surface charge, because there are equal and opposite contributions from the dielectric on the two sides of the surface.
+
+### Figure Ch10-F7
+Caption: Fig. 10–7.A nonuniform polarization P\FigP can result in a net charge in the body of a dielectric.
+Image: figures/Ch10-F7.svg
+![Fig. 10–7.A nonuniform polarization P\FigP can result in a net charge in the body of a dielectric.](figures/Ch10-F7.svg)
+
+The displacements of the charges can, however, result in a volume charge density. The total charge displaced out of any volume V by the polarization is the integral of the outward normal component of \FLPP over the surface S that bounds the volume (see Fig. 10–7). An equal excess charge of the opposite sign is left behind. Denoting the net charge inside V by \Delta Q_{\text{pol}} we write
+
+\Delta Q_{\text{pol}}=-\int_S\FLPP\cdot\FLPn\,da. (10.13)
+
+We can attribute \Delta Q_{\text{pol}} to a volume distribution of charge with the density \rho_{\text{pol}} , and so
+
+\Delta Q_{\text{pol}}=\int_V\rho_{\text{pol}}\,dV. (10.14)
+
+Combining the two equations yields
+
+\int_V\rho_{\text{pol}}\,dV=-\int_S\FLPP\cdot\FLPn\,da. (10.15)
+
+We have a kind of Gauss’ theorem that relates the charge density from polarized materials to the polarization vector \FLPP . We can see that it agrees with the result we got for the surface polarization charge or the dielectric in a parallel-plate capacitor. Using Eq. ( 10.15) with the Gaussian surface of Fig. 10–1 , the surface integral gives P\,\Delta A , and the charge inside is \sigma_{\text{pol}}\,\Delta A , so we get again that \sigma_{\text{pol}}=P .
+
+Just as we did for Gauss’ law of electrostatics, we can convert Eq. ( 10.15) to a differential form—using Gauss’ mathematical theorem:
+
+\int_S\FLPP\cdot\FLPn\,da=\int_V\mathbf{d}iv{\FLPP}\,dV.
+
+We get
+
+\rho_{\text{pol}}=-\mathbf{d}iv{\FLPP}. (10.16)
+
+If there is a nonuniform polarization, its divergence gives the net density of charge appearing in the material. We emphasize that this is a perfectly real charge density; we call it “polarization charge” only to remind ourselves how it got there.
+
+## 10–4 The electrostatic equations with dielectrics
+
+Now let’s combine the above result with our theory of electrostatics. The fundamental equation is
+
+\mathbf{d}iv{\mathbf{E}}=\frac{\rho}{\epsilon_0}. (10.17)
+
+The \rho here is the density of all electric charges. Since it is not easy to keep track of the polarization charges, it is convenient to separate \rho into two parts. Again we call \rho_{\text{pol}} the charges due to nonuniform polarizations, and call \rho_{\text{free}} all the rest. Usually \rho_{\text{free}} is the charge we put on conductors, or at known places in space. Equation ( 10.17) then becomes
+
+\mathbf{d}iv{\mathbf{E}}=\frac{\rho_{\text{free}}+\rho_{\text{pol}}}{\epsilon_0}= \frac{\rho_{\text{free}}-\mathbf{d}iv{\FLPP}}{\epsilon_0}
+
+or
+
+\mathbf{d}iv{\biggl(\mathbf{E}+\frac{\FLPP}{\epsilon_0}\biggr)}= \frac{\rho_{\text{free}}}{\epsilon_0}. (10.18)
+
+Of course, the equation for the curl of \mathbf{E} is unchanged:
+
+\mathbf{c}url{\mathbf{E}}=\FLPzero. (10.19)
+
+Taking \FLPP from Eq. ( 10.8), we get the simpler equation
+
+\mathbf{d}iv{[(1+\chi)\mathbf{E}]}=\mathbf{d}iv{(\kappa\mathbf{E})}= \frac{\rho_{\text{free}}}{\epsilon_0}. (10.20)
+
+These are the equations of electrostatics when there are dielectrics. They don’t, of course, say anything new, but they are in a form which is more convenient for computation in cases where \rho_{\text{free}} is known and the polarization \FLPP is proportional to \mathbf{E} .
+
+Notice that we have not taken the dielectric “constant,” \kappa , out of the divergence. That is because it may not be the same everywhere. If it has everywhere the same value, it can be factored out and the equations are just those of electrostatics with the charge density \rho_{\text{free}} divided by \kappa . In the form we have given, the equations apply to the general case where different dielectrics may be in different places in the field. Then the equations may be quite difficult to solve.
+
+There is a matter of some historical importance which should be mentioned here. In the early days of electricity, the atomic mechanism of polarization was not known and the existence of \rho_{\text{pol}} was not appreciated. The charge \rho_{\text{free}} was considered to be the entire charge density. In order to write Maxwell’s equations in a simple form, a new vector \FLPD was defined to be equal to a linear combination of \mathbf{E} and \FLPP :
+
+\FLPD=\epsilon_0\mathbf{E}+\FLPP. (10.21)
+
+As a result, Eqs. ( 10.18) and ( 10.19) were written in an apparently very simple form:
+
+\mathbf{d}iv{\FLPD}=\rho_{\text{free}},\quad\mathbf{c}url{\mathbf{E}}=\FLPzero. (10.22)
+
+Can one solve these? Only if a third equation is given for the relationship between \FLPD and \mathbf{E} . When Eq. ( 10.8) holds, this relationship is
+
+\FLPD=\epsilon_0(1+\chi)\mathbf{E}=\kappa\epsilon_0\mathbf{E}. (10.23)
+
+This equation was usually written
+
+\FLPD=\epsilon\mathbf{E}, (10.24)
+
+where \epsilon is still another constant for describing the dielectric property of materials. It is called the “permittivity.” (Now you see why we have \epsilon_0 in our equations, it is the “permittivity of empty space.”) Evidently,
+
+\epsilon=\kappa\epsilon_0=(1+\chi)\epsilon_0. (10.25)
+
+Today we look upon these matters from another point of view, namely, that we have simpler equations in a vacuum, and if we exhibit in every case all the charges, whatever their origin, the equations are always correct. If we separate some of the charges away for convenience, or because we do not want to discuss what is going on in detail, then we can, if we wish, write our equations in any other form that may be convenient.
+
+One more point should be emphasized. An equation like \FLPD=\epsilon\mathbf{E} is an attempt to describe a property of matter. But matter is extremely complicated, and such an equation is in fact not correct. For instance, if \mathbf{E} gets too large, then \FLPD is no longer proportional to \mathbf{E} . For some substances, the proportionality breaks down even with relatively small fields. Also, the “constant” of proportionality may depend on how fast \mathbf{E} changes with time. Therefore this kind of equation is a kind of approximation, like Hooke’s law. It cannot be a deep and fundamental equation. On the other hand, our fundamental equations for \mathbf{E} , ( 10.17) and ( 10.19), represent our deepest and most complete understanding of electrostatics.
+
+## 10–5 Fields and forces with dielectrics
+
+We will now prove some rather general theorems for electrostatics in situations where dielectrics are present. We have seen that the capacitance of a parallel-plate capacitor is increased by a definite factor if it is filled with a dielectric. We can show that this is true for a capacitor of any shape, provided the entire region in the neighborhood of the two conductors is filled with a uniform linear dielectric. Without the dielectric, the equations to be solved are
+
+\mathbf{d}iv{\mathbf{E}_0}=\frac{\rho_{\text{free}}}{\epsilon_0}\quad \text{and} \quad \mathbf{c}url{\mathbf{E}_0}=\FLPzero.
+
+With the dielectric present, the first of these equations is modified; we have instead the equations
+
+\mathbf{d}iv{(\kappa\mathbf{E})}=\frac{\rho_{\text{free}}}{\epsilon_0}\quad \text{and} \quad \mathbf{c}url{\mathbf{E}}=\FLPzero. (10.26)
+
+Now since we are taking \kappa to be everywhere the same, the last two equations can be written as
+
+\mathbf{d}iv{(\kappa\mathbf{E})}=\frac{\rho_{\text{free}}}{\epsilon_0}\quad \text{and} \quad \mathbf{c}url{(\kappa\mathbf{E})}=\FLPzero. (10.27)
+
+We therefore have the same equations for \kappa\mathbf{E} as for \mathbf{E}_0 , so they have the solution \kappa\mathbf{E}=\mathbf{E}_0 . In other words, the field is everywhere smaller, by the factor 1/\kappa , than in the case without the dielectric. Since the voltage difference is a line integral of the field, the voltage is reduced by this same factor. Since the charge on the electrodes of the capacitor has been taken the same in both cases, Eq. ( 10.2) tells us that the capacitance, in the case of an everywhere uniform dielectric, is increased by the factor \kappa .
+
+Let us now ask what the force would be between two charged conductors in a dielectric. We consider a liquid dielectric that is homogeneous everywhere. We have seen earlier that one way to obtain the force is to differentiate the energy with respect to the appropriate distance. If the conductors have equal and opposite charges, the energy U=Q^2/2C , where C is their capacitance. Using the principle of virtual work, any component is given by a differentiation; for example,
+
+F_x=-\frac{\partial U}{\partial x}=-\frac{Q^2}{2}\,\frac{\partial }{\partial x}\biggl(\frac{1}{C}\biggr). (10.28)
+
+Since the dielectric increases the capacity by a factor \kappa , all forces will be reduced by this same factor.
+
+One point should be emphasized. What we have said is true only if the dielectric is a liquid. Any motion of conductors that are embedded in a solid dielectric changes the mechanical stress conditions of the dielectric and alters its electrical properties, as well as causing some mechanical energy change in the dielectric. Moving the conductors in a liquid does not change the liquid. The liquid moves to a new place but its electrical characteristics are not changed.
+
+Many older books on electricity start with the “fundamental” law that the force between two charges is
+
+F=\frac{q_1q_2}{4\pi\epsilon_0\kappa r^2}, (10.29)
+
+a point of view which is thoroughly unsatisfactory. For one thing, it is not true in general; it is true only for a world filled with a liquid. Secondly, it depends on the fact that \kappa is a constant, which is only approximately true for most real materials. It is much better to start with Coulomb’s law for charges in a vacuum, which is always right (for stationary charges).
+
+What does happen in a solid? This is a very difficult problem which has not been solved, because it is, in a sense, indeterminate. If you put charges inside a dielectric solid, there are many kinds of pressures and strains. You cannot deal with virtual work without including also the mechanical energy required to compress the solid, and it is a difficult matter, generally speaking, to make a unique distinction between the electrical forces and the mechanical forces due to the solid material itself. Fortunately, no one ever really needs to know the answer to the question proposed. He may sometimes want to know how much strain there is going to be in a solid, and that can be worked out. But it is much more complicated than the simple result we got for liquids.
+
+A surprisingly complicated problem in the theory of dielectrics is the following: Why does a charged object pick up little pieces of dielectric? If you comb your hair on a dry day, the comb readily picks up small scraps of paper. If you thought casually about it, you probably assumed the comb had one charge on it and the paper had the opposite charge on it. But the paper is initially electrically neutral. It hasn’t any net charge, but it is attracted anyway. It is true that sometimes the paper will come up to the comb and then fly away, repelled immediately after it touches the comb. The reason is, of course, that when the paper touches the comb, it picks up some negative charges and then the like charges repel. But that doesn’t answer the original question. Why did the paper come toward the comb in the first place?
+
+The answer has to do with the polarization of a dielectric when it is placed in an electric field. There are polarization charges of both signs, which are attracted and repelled by the comb. There is a net attraction, however, because the field nearer the comb is stronger than the field farther away—the comb is not an infinite sheet. Its charge is localized. A neutral piece of paper will not be attracted to either plate inside the parallel plates of a capacitor. The variation of the field is an essential part of the attraction mechanism.
+
+### Figure Ch10-F8
+Caption: Fig. 10–8.A dielectric object in a nonuniform field feels a force toward regions of higher field strength.
+Image: figures/Ch10-F8.svg
+![Fig. 10–8.A dielectric object in a nonuniform field feels a force toward regions of higher field strength.](figures/Ch10-F8.svg)
+
+As illustrated in Fig. 10–8, a dielectric is always drawn from a region of weak field toward a region of stronger field. In fact, one can prove that for small objects the force is proportional to the gradient of the square of the electric field. Why does it depend on the square of the field? Because the induced polarization charges are proportional to the fields, and for given charges the forces are proportional to the field. However, as we have just indicated, there will be a net force only if the square of the field is changing from point to point. So the force is proportional to the gradient of the square of the field. The constant of proportionality involves, among other things, the dielectric constant of the object, and it also depends upon the size and shape of the object.
+
+### Figure Ch10-F9
+Caption: Fig. 10–9.The force on a dielectric sheet in a parallel-plate capacitor can be computed by applying the principle of energy conservation.
+Image: figures/Ch10-F9.svg
+![Fig. 10–9.The force on a dielectric sheet in a parallel-plate capacitor can be computed by applying the principle of energy conservation.](figures/Ch10-F9.svg)
+
+There is a related problem in which the force on a dielectric can be worked out quite accurately. If we have a parallel-plate capacitor with a dielectric slab only partially inserted, as shown in Fig. 10–9, there will be a force driving the sheet in. A detailed examination of the force is quite complicated; it is related to nonuniformities in the field near the edges of the dielectric and the plates. However, if we do not look at the details, but merely use the principle of conservation of energy, we can easily calculate the force. We can find the force from the formula we derived earlier. Equation ( 10.28) is equivalent to
+
+F_x=-\frac{\partial U}{\partial x}=+\frac{V^2}{2}\,\frac{\partial C}{\partial x}. (10.30)
+
+We need only find out how the capacitance varies with the position of the dielectric slab.
+
+Let’s suppose that the total length of the plates is L , that the width of the plates is W , that the plate separation and dielectric thickness are d , and that the distance to which the dielectric has been inserted is x . The capacitance is the ratio of the total free charge on the plates to the voltage between the plates. We have seen above that for a given voltage V the surface charge density of free charge is \kappa\epsilon_0 V/d . So the total charge on the plates is
+
+Q=\frac{\kappa\epsilon_0 V}{d}\,xW+\frac{\epsilon_0 V}{d}\,(L-x)W,
+
+from which we get the capacitance:
+
+C=\frac{\epsilon_0 W}{d}\,(\kappa x+L-x). (10.31)
+
+Using ( 10.30), we have
+
+F_x=\frac{V^2}{2}\,\frac{\epsilon_0 W}{d}\,(\kappa-1). (10.32)
+
+Now this equation is not particularly useful for anything unless you happen to need to know the force in such circumstances. We only wished to show that the theory of energy can often be used to avoid enormous complications in determining the forces on dielectric materials—as there would be in the present case.
+
+Our discussion of the theory of dielectrics has dealt only with electrical phenomena, accepting the fact that the material has a polarization which is proportional to the electric field. Why there is such a proportionality is perhaps of greater interest to physics. Once we understand the origin of the dielectric constants from an atomic point of view, we can use electrical measurements of the dielectric constants in varying circumstances to obtain detailed information about atomic or molecular structure. This aspect will be treated in part in the next chapter.

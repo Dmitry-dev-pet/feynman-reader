@@ -1,0 +1,104 @@
+25–2 The scalar product
+
+It is an accident of life, if you wish, that under coordinate rotations the distance of a point from the origin does not change. This means mathematically that r^2=x^2+y^2+z^2 is an invariant. In other words, after a rotation r'^2=r^2 , or
+
+x'^2+y'^2+z'^2=x^2+y^2+z^2.
+
+Now the question is: Is there a similar quantity which is invariant under the Lorentz transformation? There is. From Eq. ( 25.1) you can see that
+
+t'^2-x'^2=t^2-x^2.
+
+That is pretty nice, except that it depends on a particular choice of the x -direction. We can fix that up by subtracting y^2 and z^2 . Then any Lorentz transformation plus a rotation will leave the quantity unchanged. So the quantity which is analogous to r^2 for three dimensions, in four dimensions is
+
+t^2-x^2-y^2-z^2.
+
+It is an invariant under what is called the “complete Lorentz group”—which means for transformation of both translations at constant velocity and rotations.
+
+Now since this invariance is an algebraic matter depending only on the transformation rules of Eq. ( 25.1)—plus rotations—it is true for any four-vector (by definition they all transform the same). So for a four-vector a_\mu we have that
+
+a_t'^2-a_x'^2-a_y'^2-a_z'^2=a_t^2-a_x^2-a_y^2-a_z^2.
+
+We will call this quantity the square of “the length” of the four-vector a_\mu . (Sometimes people change the sign of all the terms and call the length a_x^2+a_y^2+a_z^2-a_t^2 , so you’ll have to watch out.)
+
+Now if we have two vectors a_\mu and b_\mu their corresponding components transform in the same way, so the combination
+
+a_tb_t-a_xb_x-a_yb_y-a_zb_z
+
+is also an invariant (scalar) quantity. (We have in fact already proved this in Chapter 17 of Vol. I.) Clearly this expression is quite analogous to the dot product for vectors. We will, in fact, call it the dot product or scalar product of two four-vectors. It would seem logical to write it as a_\mu\cdot b_\mu , so it would look like a dot product. But, unhappily, it’s not done that way; it is usually written without the dot. So we will follow the convention and write the dot product simply as a_\mu b_\mu . So, by definition,
+
+a_\mu b_\mu=a_tb_t-a_xb_x-a_yb_y-a_zb_z. (25.7)
+
+Whenever you see two identical subscripts together (we will occasionally have to use \nu or some other letter instead of \mu ) it means that you are to take the four products and sum, remembering the minus sign for the products of the space components. With this convention the invariance of the scalar product under a Lorentz transformation can be written as
+
+a_\mu'b_\mu'=a_\mu b_\mu.
+
+Since the last three terms in ( 25.7) are just the scalar dot product in three dimensions, it is often more convenient to write
+
+a_\mu b_\mu=a_tb_t-\mathbf{a}\cdot\mathbf{b}.
+
+It is also obvious that the four-dimensional length we described above can be written as a_\mu a_\mu :
+
+a_\mu a_\mu=a_t^2-a_x^2-a_y^2-a_z^2= a_t^2-\mathbf{a}\cdot\mathbf{a}. (25.8)
+
+It will also be convenient to sometimes write this quantity as a_\mu^2 :
+
+a_\mu^2\equiv a_\mu a_\mu.
+
+We will now give you an illustration of the usefulness of four-vector dot products. Antiprotons ( \overline{\text{P}} ) are produced in large accelerators by the reaction
+
+\text{P}+\text{P}\to \text{P}+\text{P}+\text{P}+\overline{\text{P}}.
+
+That is, an energetic proton collides with a proton at rest (for example, in a hydrogen target placed in the beam), and if the incident proton has enough energy, a proton-antiproton pair may be produced, in addition to the two original protons. 1 The question is: How much energy must be given to the incident proton to make this reaction energetically possible?
+
+Figure Ch25-F1
+Caption: Fig. 25–1. The reaction P+P→3P+¯P\text{P}+\text{P}\to3\text{P}+\overline{\text{P}} viewed in the laboratory and CM systems. The incident proton is supposed to have just barely enough energy to make the reaction go. Protons are denoted by solid circles; antiprotons by open circles.
+Image: figures/Ch25-F1.svg
+![Fig. 25–1. The reaction P+P→3P+¯P\text{P}+\text{P}\to3\text{P}+\overline{\text{P}} viewed in the laboratory and CM systems. The incident proton is supposed to have just barely enough energy to make the reaction go. Protons are denoted by solid circles; antiprotons by open circles.](figures/Ch25-F1.svg)
+
+The easiest way to get the answer is to consider what the reaction looks like in the center-of-mass (CM) system (see Fig. 25–1 ). We’ll call the incident proton a and its four-momentum p_\mu^a . Similarly, we’ll call the target proton b and its four-momentum p_\mu^b . If the incident proton has just barely enough energy to make the reaction go, the final state—the situation after the collision—will consist of a glob containing three protons and an antiproton at rest in the CM system. If the incident energy were slightly higher, the final state particles would have some kinetic energy and be moving apart; if the incident energy were slightly lower, there would not be enough energy to make the four particles.
+
+If we call p_\mu^c the total four-momentum of the whole glob in the final state, conservation of energy and momentum tells us that
+
+\mathbf{p}^a+\mathbf{p}^b=\mathbf{p}^c,
+
+and
+
+E^a+E^b=E^c.
+
+Combining these two equations, we can write that
+
+p_\mu^a+p_\mu^b=p_\mu^c. (25.9)
+
+Now the important thing is that this is an equation among four-vectors, and is, therefore, true in any inertial frame. We can use this fact to simplify our calculations. We start by taking the “length” of each side of Eq. ( 25.9); they are, of course, also equal. We get
+
+(p_\mu^a+p_\mu^b)(p_\mu^a+p_\mu^b)= p_\mu^cp_\mu^c. (25.10)
+
+Since p_\mu^cp_\mu^c is invariant, we can evaluate it in any coordinate system. In the CM system, the time component of p_\mu^c is the rest energy of four protons, namely 4M , and the space part \mathbf{p} is zero; so p_\mu^c=(4M,\FLPzeroi) . We have used the fact that the rest mass of an antiproton equals the rest mass of a proton, and we have called this common mass M .
+
+Thus, Eq. ( 25.10) becomes
+
+p_\mu^ap_\mu^a+2p_\mu^ap_\mu^b+p_\mu^bp_\mu^b=16M^2. (25.11)
+
+Now p_\mu^ap_\mu^a and p_\mu^bp_\mu^b are very easy, since the “length” of the momentum four-vector of any particle is just the mass of the particle squared:
+
+p_\mu p_\mu=E^2-\mathbf{p}^2=M^2.
+
+This can be shown by direct calculation or, more cleverly, by noting that for a particle at rest p_\mu=(M,\FLPzeroi) , so p_\mu p_\mu=M^2 . But since it is an invariant, it is equal to M^2 in any frame. Using these results in Eq. ( 25.11), we have
+
+2p_\mu^ap_\mu^b=14M^2
+
+or
+
+p_\mu^ap_\mu^b=7M^2. (25.12)
+
+Now we can also evaluate p_\mu^ap_\mu^b={p_\mu^a}'{p_\mu^b}' in the laboratory system. The four-vector {p_\mu^a}' can be written ({E^a}',{\mathbf{p}^a}') , while {p_\mu^b}'=(M,\FLPzeroi) , since it describes a proton at rest. Thus, {p_\mu^a}'{p_\mu^b}' must also be equal to M{E^a}' ; and since we know the scalar product is an invariant this must be numerically the same as what we found in ( 25.12). So we have that
+
+{E^a}'=7M,
+
+which is the result we were after. The total energy of the initial proton must be at least 7M (about 6.6 GeV since M=938 MeV) or, subtracting the rest mass M , the kinetic energy must be at least 6M (about 5.6 GeV). The Bevatron accelerator at Berkeley was designed to give about 6.2 GeV of kinetic energy to the protons it accelerates, in order to be able to make antiprotons.
+
+Since scalar products are invariant, they are always interesting to evaluate. What about the “length” of the four-velocity u_\mu u_\mu ?
+
+u_\mu u_\mu=u_t^2-\FLPu^2=\frac{1}{1-v^2}-\frac{v^2}{1-v^2}=1.
+
+Thus, u_\mu is the unit four-vector.

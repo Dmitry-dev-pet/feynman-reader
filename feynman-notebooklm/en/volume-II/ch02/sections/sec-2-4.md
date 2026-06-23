@@ -1,0 +1,31 @@
+## 2–4 The operator ∇\FLPnabla
+
+Now we can do something that is extremely amusing and ingenious—and characteristic of the things that make mathematics beautiful. The argument that \grad T , or \boldsymbol{\nabla}{T} , is a vector did not depend upon what scalar field we were differentiating. All the arguments would go the same if T were replaced by any scalar field. Since the transformation equations are the same no matter what we differentiate, we could just as well omit the T and replace Eq. ( 2.26) by the operator equation
+
+\frac{\partial }{\partial x}=\frac{\partial }{\partial x'}\cos\theta-\frac{\partial }{\partial y'}\sin\theta. (2.27)
+
+We leave the operators, as Jeans said, “hungry for something to differentiate.”
+
+Since the differential operators themselves transform as the components of a vector should, we can call them components of a vector operator. We can write
+
+\boldsymbol{\nabla}=\biggl(\frac{\partial }{\partial x},\frac{\partial }{\partial y},\frac{\partial }{\partial z}\biggr), (2.28)
+
+which means, of course,
+
+\nabla_x=\frac{\partial }{\partial x},\quad\nabla_y=\frac{\partial }{\partial y},\quad\nabla_z=\frac{\partial }{\partial z}. (2.29)
+
+We have abstracted the gradient away from the T —that is the wonderful idea.
+
+You must always remember, of course, that \boldsymbol{\nabla} is an operator. Alone, it means nothing. If \boldsymbol{\nabla} by itself means nothing, what does it mean if we multiply it by a scalar—say T —to get the product T\boldsymbol{\nabla} ? (One can always multiply a vector by a scalar.) It still does not mean anything. Its x -component is
+
+T\frac{\partial }{\partial x}, (2.30)
+
+which is not a number, but is still some kind of operator. However, according to the algebra of vectors we would still call T\boldsymbol{\nabla} a vector.
+
+Now let’s multiply \boldsymbol{\nabla} by a scalar on the other side, so that we have the product (\boldsymbol{\nabla}{T}) . In ordinary algebra
+
+T\mathbf{A}=\mathbf{A} T, (2.31)
+
+but we have to remember that operator algebra is a little different from ordinary vector algebra. With operators we must always keep the sequence right, so that the operations make proper sense. You will have no difficulty if you just remember that the operator \boldsymbol{\nabla} obeys the same convention as the derivative notation. What is to be differentiated must be placed on the right of the \boldsymbol{\nabla} . The order is important.
+
+Keeping in mind this problem of order, we understand that T\boldsymbol{\nabla} is an operator, but the product \boldsymbol{\nabla}{T} is no longer a hungry operator; the operator is completely satisfied. It is indeed a physical vector having a meaning. It represents the spatial rate of change of T . The x -component of \boldsymbol{\nabla}{T} is how fast T changes in the x -direction. What is the direction of the vector \boldsymbol{\nabla}{T} ? We know that the rate of change of T in any direction is the component of \boldsymbol{\nabla}{T} in that direction (see Eq. ( 2.15)). It follows that the direction of \boldsymbol{\nabla}{T} is that in which it has the largest possible component—in other words, the direction in which T changes the fastest. The gradient of T has the direction of the steepest uphill slope (in T ).

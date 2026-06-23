@@ -1,0 +1,66 @@
+21–6 The potentials for a charge moving with constant velocity; the Lorentz formula
+
+We want next to use the Liénard-Wiechert potentials for a special case—to find the fields of a charge moving with uniform velocity in a straight line. We will do it again later, using the principle of relativity. We already know what the potentials are when we are standing in the rest frame of a charge. When the charge is moving, we can figure everything out by a relativistic transformation from one system to the other. But relativity had its origin in the theory of electricity and magnetism. The formulas of the Lorentz transformation (Chapter 15, Vol. I) were discoveries made by Lorentz when he was studying the equations of electricity and magnetism. So that you can appreciate where things have come from, we would like to show that the Maxwell equations do lead to the Lorentz transformation. We begin by calculating the potentials of a charge moving with uniform velocity, directly from the electrodynamics of Maxwell’s equations. We have shown that Maxwell’s equations lead to the potentials for a moving charge that we got in the last section. So when we use these potentials, we are using Maxwell’s theory.
+
+Figure Ch21-F7
+Caption: Fig. 21–7. Finding the potential at [math]P of a charge moving with uniform velocity along the [math]x-axis.
+Image: figures/Ch21-F7.svg
+![Fig. 21–7. Finding the potential at [math]P of a charge moving with uniform velocity along the [math]x-axis.](figures/Ch21-F7.svg)
+
+Suppose we have a charge moving along the x -axis with the speed v . We want the potentials at the point P(x,y,z) , as shown in Fig. 21-7. If t=0 is the moment when the charge is at the origin, at the time t the charge is at x=vt , y=z=0 . What we need to know, however, is its position at the retarded time
+
+t'=t-\frac{r'}{c}, (21.35)
+
+where r' is the distance to the point P from the charge at the retarded time. At the earlier time t' , the charge was at x=vt' , so
+
+r'=\sqrt{(x-vt')^2+y^2+z^2}. (21.36)
+
+To find r' or t' we have to combine this equation with Eq. ( 21.35). First, we eliminate r' by solving Eq. ( 21.35) for r' and substituting in Eq. ( 21.36). Then, squaring both sides, we get
+
+c^2(t-t')^2=(x-vt')^2+y^2+z^2,
+
+which is a quadratic equation in t' . Expanding the squared binomials and collecting like terms in t' , we get
+
+(v^2-c^2)t'^2-2(xv-c^2t)t'+x^2+y^2+z^2-(ct)^2=0.
+
+Solving for t' ,
+
+\begin{aligned} \biggl(1-\frac{v^2}{c^2}\biggr)t'=\\[1.5ex] t-\frac{vx}{c^2}-\frac{1}{c} \sqrt{(x-vt)^2+\biggl(1-\frac{v^2}{c^2}\biggr)(y^2+z^2)}. \end{aligned} (21.37)
+
+To get r' we have to substitute this expression for t' into
+
+r'=c(t-t').
+
+Now we are ready to find \phi from Eq. ( 21.33), which, since \mathbf{v} is constant, becomes
+
+\phi(x,y,z,t)=\frac{q}{4\pi\epsilon_0}\, \frac{1}{r'-(\mathbf{v}\cdot\mathbf{r}'/c)}. (21.38)
+
+The component of \mathbf{v} in the direction of \mathbf{r}' is v\times(x-vt')/r' , so \mathbf{v}\cdot\mathbf{r}' is just v\times(x-vt') , and the whole denominator is
+
+c(t-t')-\frac{v}{c}(x-vt')=c\biggl[ t-\frac{vx}{c^2}-\biggl( 1-\frac{v^2}{c^2} \biggr)t' \biggr].
+
+Substituting for (1-v^2/c^2)t' from Eq. ( 21.37), we get for \phi
+
+\begin{aligned} \phi(x,y,z,t)=\\[1ex] \frac{q}{4\pi\epsilon_0}\,\frac{1} {\sqrt{(x-vt)^2+\biggl(1-\dfrac{v^2}{c^2}\biggr)(y^2+z^2)}}. \end{aligned}
+
+This equation is more understandable if we rewrite it as
+
+\begin{aligned} \phi(x,y,z,t)=\\[1ex] \frac{q}{4\pi\epsilon_0} \frac{1}{\sqrt{1\!-\!\dfrac{v^2}{c^2}}} \frac{1} {\biggl[\!\biggl( \dfrac{x-vt}{\sqrt{1\!-\!v^2/c^2}}\! \biggr)^2\kern{-1.75ex}+\!y^2\!+\!z^2 \biggr]^{1/2}}. \end{aligned} (21.39)
+
+The vector potential \mathbf{A} is the same expression with an additional factor of \mathbf{v}/c^2 :
+
+\mathbf{A}=\frac{\mathbf{v}}{c^2}\,\phi.
+
+In Eq. ( 21.39) you can clearly see the beginning of the Lorentz transformation. If the charge were at the origin in its own rest frame, its potential would be
+
+\phi(x,y,z)=\frac{q}{4\pi\epsilon_0}\, \frac{1}{[x^2+y^2+z^2]^{1/2}}.
+
+We are seeing it in a moving coordinate system, and it appears that the coordinates should be transformed by
+
+\begin{aligned} &x\to\frac{x-vt}{\sqrt{1-v^2/c^2}},\\ &y\to y,\\ &z\to z. \end{aligned}
+
+That is just the Lorentz transformation, and what we have done is essentially the way Lorentz discovered it.
+
+But what about that extra factor 1/\sqrt{1-v^2/c^2} that appears at the front of Eq. ( 21.39)? Also, how does the vector potential \mathbf{A} appear, when it is everywhere zero in the rest frame of the particle? We will soon show that (when c=1 ) \mathbf{A} and \phi together constitute a four-vector, like the momentum \mathbf{p} and the total energy U of a particle. The extra 1/\sqrt{1-v^2/c^2} in Eq. ( 21.39) is the same factor that always comes in when one transforms the components of a four-vector—just as the charge density \rho transforms to \rho/\sqrt{1-v^2/c^2} . In fact, it is almost apparent from Eqs. ( 21.4) and ( 21.5) that \mathbf{A} and \phi/c are components of a four-vector, because we have already shown in Chapter 13 that \mathbf{j} and c\rho are the components of a four-vector.
+
+Later we will take up in more detail the relativity of electrodynamics; here we only wished to show how naturally the Maxwell equations lead to the Lorentz transformation. You will not, then, be surprised to find that the laws of electricity and magnetism are already correct for Einstein’s relativity. We will not have to “fix them up,” as we had to do for Newton’s laws of mechanics.

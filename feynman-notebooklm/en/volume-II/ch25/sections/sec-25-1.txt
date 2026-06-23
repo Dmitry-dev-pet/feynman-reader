@@ -1,0 +1,75 @@
+25–1 Four-vectors
+
+We now discuss the application of the special theory of relativity to electrodynamics. Since we have already studied the special theory of relativity in Chapters 15 through 17 of Vol. I, we will just review quickly the basic ideas.
+
+It is found experimentally that the laws of physics are unchanged if we move with uniform velocity. You can’t tell if you are inside a spaceship moving with uniform velocity in a straight line, unless you look outside the spaceship, or at least make an observation having to do with the world outside. Any true law of physics we write down must be arranged so that this fact of nature is built in.
+
+The relationship between the space and time of two systems of coordinates, one, S' , in uniform motion in the x -direction with speed v relative to the other, S , is given by the Lorentz transformation:
+
+\begin{alignedat}{2} t'&=\frac{t-vx}{\sqrt{1-v^2}},&\quad y'&=y,\\[1ex] x'&=\frac{x-vt}{\sqrt{1-v^2}},&\quad z'&=z. \end{alignedat} (25.1)
+
+The laws of physics must be such that after a Lorentz transformation, the new form of the laws looks just like the old form. This is just like the principle that the laws of physics don’t depend on the orientation of our coordinate system. In Chapter 11 of Vol. I, we saw that the way to describe mathematically the invariance of physics with respect to rotations was to write our equations in terms of vectors.
+
+For example, if we have two vectors
+
+\mathbf{A}=(A_x,A_y,A_z)\quad\text{and}\quad \mathbf{B}=(B_x,B_y,B_z),
+
+we found that the combination
+
+\mathbf{A}\cdot\mathbf{B}=A_xB_x+A_yB_y+A_zB_z
+
+was not changed if we transformed to a rotated coordinate system. So we know that if we have a scalar product like \mathbf{A}\cdot\mathbf{B} on both sides of an equation, the equation will have exactly the same form in all rotated coordinate systems. We also discovered an operator (see Chapter 2),
+
+\boldsymbol{\nabla}=\biggl(\frac{\partial }{\partial x},\frac{\partial }{\partial y},\frac{\partial }{\partial z}\biggr),
+
+which, when applied to a scalar function, gave three quantities which transform just like a vector. With this operator we defined the gradient, and in combination with other vectors, the divergence and the Laplacian. Finally we discovered that by taking sums of certain products of pairs of the components of two vectors we could get three new quantities which behaved like a new vector. We called it the cross product of two vectors. Using the cross product with our operator \boldsymbol{\nabla} we then defined the curl of a vector.
+
+Since we will be referring back to what we have done in vector analysis, we have put in Table 25–1 a summary of all the important vector operations in three dimensions that we have used in the past. The point is that it must be possible to write the equations of physics so that both sides transform the same way under rotations. If one side is a vector, the other side must also be a vector, and both sides will change together in exactly the same way if we rotate our coordinate system. Similarly, if one side is a scalar, the other side must also be a scalar, so that neither side changes when we rotate coordinates, and so on.
+
+| Definition of a vector | \mathbf{A}=(A_x,A_y,A_z) |
+| --- | --- |
+| Scalar product | \mathbf{A}\cdot\mathbf{B} |
+| Differential vector operator | \boldsymbol{\nabla} |
+| Gradient | \boldsymbol{\nabla}{\phi} |
+| Divergence | \mathbf{d}iv{\mathbf{A}} |
+| Laplacian | \boldsymbol{\nabla}\cdot\boldsymbol{\nabla}=\nabla^2 |
+| Cross product | \mathbf{A}\times\mathbf{B} |
+| Curl | \mathbf{c}url{\mathbf{A}} |
+
+Now in the case of special relativity, time and space are inextricably mixed, and we must do the analogous things for four dimensions. We want our equations to remain the same not only for rotations, but also for any inertial frame. That means that our equations should be invariant under the Lorentz transformation of equations ( 25.1). The purpose of this chapter is to show you how that can be done. Before we get started, however, we want to do something that makes our work a lot easier (and saves some confusion). And that is to choose our units of length and time so that the speed of light c is equal to 1 . You can think of it as taking our unit of time to be the time that it takes light to go one meter (which is about 3\times10^{-9} sec). We can even call this time unit “one meter.” Using this unit, all of our equations will show more clearly the space-time symmetry. Also, all the c ’s will disappear from our relativistic equations. (If this bothers you, you can always put the c ’s back into any equation by replacing every t by ct , or, in general, by sticking in a c wherever it is needed to make the dimensions of the equations come out right.) With this groundwork we are ready to begin. Our program is to do in the four dimensions of space-time all of the things we did with vectors for three dimensions. It is really quite a simple game; we just work by analogy. The only real complication is the notation (we’ve already used up the vector symbol for three dimensions) and one slight twist of signs.
+
+First, by analogy with vectors in three dimensions, we define a four-vector as a set of the four quantities a_t , a_x , a_y , and a_z , which transform like t , x , y , and z when we change to a moving coordinate system. There are several different notations people use for a four-vector; we will write a_\mu , by which we mean the group of four numbers (a_t,a_x,a_y,a_z) —in other words, the subscript \mu can take on the four “values” t , x , y , z . It will also be convenient, at times, to indicate the three space components by a three-vector, like this: a_\mu=(a_t,\mathbf{a}) .
+
+We have already encountered one four-vector, which consists of the energy and momentum of a particle (Chapter 17, Vol. I): In our new notation we write
+
+p_\mu=(E,\mathbf{p}), (25.2)
+
+which means that the four-vector p_\mu is made up of the energy E and the three components of the three-vector \mathbf{p} of a particle.
+
+It looks as though the game is really very simple—for each three-vector in physics all we have to do is find what the remaining component should be, and we have a four-vector. To see that this is not the case, consider the velocity vector with components
+
+v_x=\frac{d x}{d t},\quad v_y=\frac{d y}{d t},\quad v_z=\frac{d z}{d t}.
+
+The question is: What is the time component? Instinct should give the right answer. Since four-vectors are like t , x , y , z , we would guess that the time component is
+
+v_t=\frac{d t}{d t}=1.
+
+This is wrong. The reason is that the t in each denominator is not an invariant when we make a Lorentz transformation. The numerators have the right behavior to make a four-vector, but the dt in the denominator spoils things; it is unsymmetric and is not the same in two different systems.
+
+It turns out that the four “velocity” components which we have written down will become the components of a four-vector if we just divide by \sqrt{1-v^2} . We can see that that is true because if we start with the momentum four-vector
+
+p_\mu=(E,\mathbf{p})=\biggl( \frac{m_0}{\sqrt{1-v^2}}, \frac{m_0\mathbf{v}}{\sqrt{1-v^2}} \biggr), (25.3)
+
+and divide it by the rest mass m_0 , which is an invariant scalar in four dimensions, we have
+
+\frac{p_\mu}{m_0}=\biggl( \frac{1}{\sqrt{1-v^2}}, \frac{\mathbf{v}}{\sqrt{1-v^2}} \biggr), (25.4)
+
+which must still be a four-vector. (Dividing by an invariant scalar doesn’t change the transformation properties.) So we can define the “ velocity four-vector ” u_\mu by
+
+\begin{alignedat}{2} u_t&=\frac{1}{\sqrt{1-v^2}},&\quad u_y&=\frac{v_y}{\sqrt{1-v^2}},\\[1ex] u_x&=\frac{v_x}{\sqrt{1-v^2}},&\quad u_z&=\frac{v_z}{\sqrt{1-v^2}}, \end{alignedat} (25.5)
+
+The four-velocity is a useful quantity; we can, for instance, write
+
+p_\mu=m_0u_\mu. (25.6)
+
+This is the typical sort of form an equation which is relativistically correct must have; each side is a four-vector. (The right-hand side is an invariant times a four-vector, which is still a four-vector.)

@@ -1,0 +1,171 @@
+26–3 Relativistic transformation of the fields
+
+In the last section we calculated the electric and magnetic fields from the transformed potentials. The fields are important, of course, in spite of the arguments given earlier that there is physical meaning and reality to the potentials. The fields, too, are real. It would be convenient for many purposes to have a way to compute the fields in a moving system if you already know the fields in some “rest” system. We have the transformation laws for \phi and \mathbf{A} , because A_\mu is a four-vector. Now we would like to know the transformation laws of \mathbf{E} and \mathbf{B} . Given \mathbf{E} and \mathbf{B} in one frame, how do they look in another frame moving past? It is a convenient transformation to have. We could always work back through the potentials, but it is useful sometimes to be able to transform the fields directly. We will now see how that goes.
+
+How can we find the transformation laws of the fields? We know the transformation laws of the \phi and \mathbf{A} , and we know how the fields are given in terms of \phi and \mathbf{A} —it should be easy to find the transformation for the \mathbf{B} and \mathbf{E} . (You might think that with every vector there should be something to make it a four-vector, so with \mathbf{E} there’s got to be something else we can use for the fourth component. And also for \mathbf{B} . But it’s not so. It’s quite different from what you would expect.) To begin with, let’s take just a magnetic field \mathbf{B} , which is, of course \mathbf{c}url{\mathbf{A}} . Now we know that the vector potential with its x -, y -, and z -components is only a piece of something; there is also a t -component. Also we know that for derivatives like \boldsymbol{\nabla} , besides the x , y , z parts, there is also a derivative with respect to t . So let’s try to figure out what happens if we replace a “ y ” by a “ t ”, or a “ z ” by a “ t ,” or something like that.
+
+First, notice the form of the terms in \mathbf{c}url{\mathbf{A}} when we write out the components:
+
+\begin{aligned} B_x&=\frac{\partial A_z}{\partial y}-\frac{\partial A_y}{\partial z},\\[1ex] B_y&=\frac{\partial A_x}{\partial z}-\frac{\partial A_z}{\partial x},\\[1ex] B_z&=\frac{\partial A_y}{\partial x}-\frac{\partial A_x}{\partial y}. \end{aligned} (26.14)
+
+The x -component is equal to a couple of terms that involve only y - and z -components. Suppose we call this combination of derivatives and components a “ zy -thing,” and give it a shorthand name, F_{zy} . We simply mean that
+
+F_{zy}\equiv\frac{\partial A_z}{\partial y}-\frac{\partial A_y}{\partial z}. (26.15)
+
+Similarly, B_y is equal to the same kind of “thing,” but this time it is an “ xz -thing.” And B_z is, of course, the corresponding “ yx -thing.” We have
+
+B_x=F_{zy},\quad B_y=F_{xz},\quad B_z=F_{yx}. (26.16)
+
+Now what happens if we simply try to concoct also some “ t ”-type things like F_{xt} and F_{tz} (since nature should be nice and symmetric in x , y , z , and t )? For instance, what is F_{tz} ? It is, of course,
+
+\frac{\partial A_t}{\partial z}-\frac{\partial A_z}{\partial t}.
+
+But remember that A_t=\phi , so it is also
+
+\frac{\partial \phi}{\partial z}-\frac{\partial A_z}{\partial t}.
+
+You’ve seen that before. It is the z -component of \mathbf{E} . Well, almost—there is a sign wrong. But we forgot that in the four-dimensional gradient the t -derivative comes with the opposite sign from x , y , and z . So we should really have taken the more consistent extension of F_{tz} , as
+
+F_{tz}=\frac{\partial A_t}{\partial z}+\frac{\partial A_z}{\partial t} (26.17)
+
+Then it is exactly equal to -E_z . Trying also F_{tx} and F_{ty} , we find that the three possibilities give
+
+F_{tx}=-E_x,\quad F_{ty}=-E_y,\quad F_{tz}=-E_z. (26.18)
+
+What happens if both subscripts are t ? Or, for that matter, if both are x ? We get things like
+
+F_{tt}=\frac{\partial A_t}{\partial t}-\frac{\partial A_t}{\partial t},
+
+and
+
+F_{xx}=\frac{\partial A_x}{\partial x}-\frac{\partial A_x}{\partial x},
+
+which give nothing but zero.
+
+We have then six of these F -things. There are six more which you get by reversing the subscripts, but they give nothing really new, since
+
+F_{xy}=-F_{yx},
+
+and so on. So, out of sixteen possible combinations of the four subscripts taken in pairs, we get only six different physical objects; and they are the components of \mathbf{B} and \mathbf{E} .
+
+To represent the general term of F , we will use the general subscripts \mu and \nu , where each can stand for 0 , 1 , 2 , or 3 —meaning in our usual four-vector notation t , x , y , and z . Also, everything will be consistent with our four-vector notation if we define F_{\mu\nu} by
+
+F_{\mu\nu}=\nabla\!_\mu A_\nu-\nabla\!_\nu A_\mu, (26.19)
+
+remembering that \fournabla=(\frac{\partial }{\partial t},-\frac{\partial }{\partial x},-\frac{\partial }{\partial y},-\frac{\partial }{\partial z}) and that A_\mu=(\phi,A_x,A_y,A_z) .
+
+What we have found is that there are six quantities that belong together in nature—that are different aspects of the same thing. The electric and magnetic fields which we have considered as separate vectors in our slow-moving world (where we don’t worry about the speed of light) are not vectors in four-space. They are parts of a new “thing.” Our physical “field” is really the six-component object F_{\mu\nu} . That is the way we must look at it for relativity. We summarize our results on F_{\mu\nu} in Table 26–1 .
+
+| \displaystyle\begin{aligned} F_{\mu\nu}&=-F_{\nu\mu}\\[1ex] F_{\mu\mu}&=0 \end{aligned} |  |
+| --- | --- |
+| \displaystyle\begin{aligned} F_{xy}&=-B_z\\[1ex] F_{yz}&=-B_x\\[1ex] F_{zx}&=-B_y \end{aligned} | \displaystyle\begin{aligned} F_{xt}&=E_x\\[1ex] F_{yt}&=E_y\\[1ex] F_{zt}&=E_z \end{aligned} |
+
+You see that what we have done here is to generalize the cross product. We began with the curl operation, and the fact that the transformation properties of the curl are the same as the transformation properties of two vectors—the ordinary three-dimensional vector \mathbf{A} and the gradient operator which we know also behaves like a vector. Let’s look for a moment at an ordinary cross product in three dimensions, for example, the angular momentum of a particle. When an object is moving in a plane, the quantity (xv_y-yv_x) is important. For motion in three dimensions, there are three such important quantities, which we call the angular momentum:
+
+\begin{aligned} L_{xy}&=m(xv_y-yv_x),\\[1ex] L_{yz}&=m(yv_z-zv_y),\\[1ex] L_{zx}&=m(zv_x-xv_z). \end{aligned}
+
+Then (although you may have forgotten by now) we discovered in Chapter 20 of Vol. I the miracle that these three quantities could be identified with the components of a vector. In order to do so, we had to make an artificial rule with a right-hand convention. It was just luck. It was luck because L_{ij} (with i and j equal to x , y , or z ) was an antisymmetric object:
+
+L_{ij}=-L_{ji},\quad L_{ii}=0.
+
+Of the nine possible quantities, there are only three independent numbers. And it just happens that when you change coordinate systems these three objects transform in exactly the same way as the components of a vector.
+
+The same thing lets us represent an element of surface as a vector. A surface element has two parts—say dx and dy —which we can represent by the vector d\mathbf{a} normal to the surface. But we can’t do that in four dimensions. What is the “normal” to dx\,dy ? Is it along z or along t ?
+
+In short, for three dimensions it happens by luck that after you’ve taken a combination of two vectors like L_{ij} , you can represent it again by another vector because there are just three terms that happen to transform like the components of a vector. But in four dimensions that is evidently impossible, because there are six independent terms, and you can’t represent six things by four things.
+
+Even in three dimensions it is possible to have combinations of vectors that can’t be represented by vectors. Suppose we take any two vectors \mathbf{a}=(a_x,a_y,a_z) and \mathbf{b}=(b_x,b_y,b_z) , and make the various possible combinations of components, like a_xb_x , a_xb_y , etc. There would be nine possible quantities:
+
+\begin{aligned} &a_xb_x,&\quad&a_xb_y,&\quad&a_xb_z,\\ &a_yb_x,&\quad&a_yb_y,&\quad&a_yb_z,\\ &a_zb_x,&\quad&a_zb_y,&\quad&a_zb_z. \end{aligned}
+
+We might call these quantities T_{ij} .
+
+If we now go to a rotated coordinate system (say rotated about the z -axis), the components of \mathbf{a} and \mathbf{b} are changed. In the new system, a_x , for example, gets replaced by
+
+a_x'=a_x\cos\theta+a_y\sin\theta,
+
+and b_y gets replaced by
+
+b_y'=b_y\cos\theta-b_x\sin\theta.
+
+And similarly for other components. The nine components of the product quantity T_{ij} we have invented are all changed too, of course. For instance, T_{xy}=a_xb_y gets changed to
+
+\begin{aligned} T_{xy}'=\;&a_xb_y(\cos^2\theta)-a_xb_x(\cos\theta\sin\theta)\,+\\[.5ex] &a_yb_y(\sin\theta\cos\theta)-a_yb_x(\sin^2\theta), \end{aligned}
+
+or
+
+\begin{aligned} T_{xy}'=\;&T_{xy}\cos^2\theta-T_{xx}\cos\theta\sin\theta\,+\\[.5ex] &T_{yy}\sin\theta\cos\theta-T_{yx}\sin^2\theta. \end{aligned}
+
+Each component of T_{ij}' is a linear combination of the components of T_{ij} .
+
+So we discover that it is not only possible to have a “vector product” like \mathbf{a}\times\mathbf{b} which has three components that transform like a vector, but we can—artificially—also make another kind of “product” of two vectors T_{ij} with nine components that transform under a rotation by a complicated set of rules that we could figure out. Such an object which has two indices to describe it, instead of one, is called a tensor. It is a tensor of the “second rank,” because you can play this game with three vectors too and get a tensor of the third rank—or with four, to get a tensor of the fourth rank, and so on. A tensor of the first rank is a vector.
+
+The point of all this is that our electromagnetic quantity F_{\mu\nu} is also a tensor of the second rank, because it has two indices in it. It is, however, a tensor in four dimensions. It transforms in a special way which we will work out in a moment—it is just the way a product of vectors transforms. For F_{\mu\nu} it happens that if you change the indices around, F_{\mu\nu} changes sign. That’s a special case—it is an antisymmetric tensor. So we say: the electric and magnetic fields are both part of an antisymmetric tensor of the second rank in four dimensions.
+
+You’ve come a long way. Remember way back when we defined what a velocity meant? Now we are talking about “an antisymmetric tensor of the second rank in four dimensions.”
+
+Now we have to find the law of the transformation of F_{\mu\nu} . It isn’t at all difficult to do; it’s just laborious—the brains involved are nil, but the work is not. What we want is the Lorentz transformation of \nabla\!_\mu A_\nu-\nabla\!_\nu A_\mu . Since \fournabla is just a special case of a vector, we will work with the general antisymmetric vector combination, which we can call G_{\mu\nu} :
+
+G_{\mu\nu}=a_\mu b_\nu-a_\nu b_\mu. (26.20)
+
+(For our purposes, a_\mu will eventually be replaced by \fournabla and b_\mu will be replaced by the potential A_\mu .) The components of a_\mu and b_\mu transform by the Lorentz formulas, which are
+
+\begin{alignedat}{2} a_t'&=\frac{a_t-va_x}{\sqrt{1-v^2}},&\quad b_t'&=\frac{b_t-vb_x}{\sqrt{1-v^2}},\\[1ex] a_x'&=\frac{a_x-va_t}{\sqrt{1-v^2}},&\quad b_x'&=\frac{b_x-vb_t}{\sqrt{1-v^2}},\\[1ex] a_y'&=a_y,&\quad b_y'&=b_y,\\[1ex] a_z'&=a_z,&\quad b_z'&=b_z. \end{alignedat} (26.21)
+
+Now let’s transform the components of G_{\mu\nu} . We start with G_{tx} :
+
+\begin{aligned} G_{tx}'&=a_t'b_x'-a_x'b_t'\\[1ex] &=\biggl(\!\frac{a_t-va_x}{\sqrt{1-v^2}}\!\biggr)\! \biggl(\!\frac{b_x-vb_t}{\sqrt{1-v^2}}\!\biggr)\!-\! \biggl(\!\frac{a_x-va_t}{\sqrt{1-v^2}}\!\biggr)\! \biggl(\!\frac{b_t-vb_x}{\sqrt{1-v^2}}\!\biggr)\\[1ex] &=a_tb_x-a_xb_t. \end{aligned}
+
+But that is just G_{tx} ; so we have the simple result
+
+G_{tx}'=G_{tx}.
+
+We will do one more.
+
+\begin{aligned} G_{ty}'&=\frac{a_t-va_x}{\sqrt{1-v^2}}\,b_y- a_y\,\frac{b_t-vb_x}{\sqrt{1-v^2}}\\[1.5ex] &=\frac{(a_tb_y-a_yb_t)-v(a_xb_y-a_yb_x)}{\sqrt{1-v^2}}. \end{aligned}
+
+So we get that
+
+G_{ty}'=\frac{G_{ty}-vG_{xy}}{\sqrt{1-v^2}}.
+
+And, of course, in the same way,
+
+G_{tz}'=\frac{G_{tz}-vG_{xz}}{\sqrt{1-v^2}}.
+
+It is clear how the rest will go. Let’s make a table of all six terms; only now we may as well write them for F_{\mu\nu} :
+
+\begin{alignedat}{2} F_{tx}'&=F_{tx},&\quad F_{xy}'&=\frac{F_{xy}-vF_{ty}}{\sqrt{1-v^2}},\\[.75ex] F_{ty}'&=\frac{F_{ty}-vF_{xy}}{\sqrt{1-v^2}},&\quad F_{yz}'&=F_{yz},\\[1ex] F_{tz}'&=\frac{F_{tz}-vF_{xz}}{\sqrt{1-v^2}},&\quad F_{zx}'&=\frac{F_{zx}-vF_{zt}}{\sqrt{1-v^2}}. \end{alignedat} (26.22)
+
+Of course, we still have F_{\mu\nu}'=-F_{\nu\mu}' and F_{\mu\mu}'=0 .
+
+So we have the transformation of the electric and magnetic fields. All we have to do is look at Table 26–1 to find out what our grand notation in terms of F_{\mu\nu} means in terms of \mathbf{E} and \mathbf{B} . It’s just a matter of substitution. So that we can see how it looks in the ordinary symbols, we’ll rewrite our transformation of the field components in Table 26–2 .
+
+| \displaystyle\begin{aligned} E_x'&=E_x\\[2.5ex] E_y'&=\dfrac{E_y-vB_z}{\sqrt{1-v^2}}\\[2.5ex] E_z'&=\dfrac{E_z+vB_y}{\sqrt{1-v^2}} \end{aligned} | \displaystyle\begin{aligned} B_x'&=B_x\\[2.5ex] B_y'&=\dfrac{B_y+vE_z}{\sqrt{1-v^2}}\\[2.5ex] B_z'&=\dfrac{B_z-vE_y}{\sqrt{1-v^2}} \end{aligned} |
+| --- | --- |
+
+The equations in Table 26–2 tell us how \mathbf{E} and \mathbf{B} change if we go from one inertial frame to another. If we know \mathbf{E} and \mathbf{B} in one system, we can find what they are in another that moves by with the speed v .
+
+We can write these equations in a form that is easier to remember if we notice that since v is in the x -direction, all the terms with v are components of the cross products \mathbf{v}\times\mathbf{E} and \mathbf{v}\times\mathbf{B} . So we can rewrite the transformations as shown in Table 26–3 .
+
+| \displaystyle\begin{aligned} E_x'&=E_x\\[2.5ex] E_y'&=\dfrac{(\mathbf{E}+\mathbf{v}\times\mathbf{B})_y}{\sqrt{1-v^2}}\\[2.5ex] E_z'&=\dfrac{(\mathbf{E}+\mathbf{v}\times\mathbf{B})_z}{\sqrt{1-v^2}} \end{aligned} | \displaystyle\begin{aligned} B_x'&=B_x\\[2.5ex] B_y'&=\dfrac{(\mathbf{B}-\mathbf{v}\times\mathbf{E})_y}{\sqrt{1-v^2}}\\[2.5ex] B_z'&=\dfrac{(\mathbf{B}-\mathbf{v}\times\mathbf{E})_z}{\sqrt{1-v^2}} \end{aligned} |
+| --- | --- |
+
+It is now easier to remember which components go where. In fact, the transformation can be written even more simply if we define the field components along x as the “parallel” components E_\parallel and B_\parallel (because they are parallel to the relative velocity of S and S' ), and the total transverse components—the vector sums of the y - and z -components—as the “perpendicular” components E_\perp and B_\perp . Then we get the equations in Table 26–4 . (We have also put back the c ’s, so it will be more convenient when we want to refer back later.)
+
+| \displaystyle\begin{aligned} E_\parallel'&=E_\parallel\\[3.5ex] E_\perp'&=\dfrac{(\mathbf{E}+\mathbf{v}\times\mathbf{B})_\perp}{\sqrt{1-v^2/c^2}} \end{aligned} | \displaystyle\begin{aligned} B_\parallel'&=B_\parallel\\[0.5ex] B_\perp'&=\dfrac{\biggl(\mathbf{B}-\dfrac{\mathbf{v}\times\mathbf{E}}{c^2}\biggr)_\perp}{\sqrt{1-v^2/c^2}} \end{aligned} |
+| --- | --- |
+
+The field transformations give us another way of solving some problems we have done before—for instance, for finding the fields of a moving point charge. We have worked out the fields before by differentiating the potentials. But we could now do it by transforming the Coulomb field. If we have a point charge at rest in the S -frame, then there is only the simple radial \mathbf{E} -field. In the S' -frame we will see a point charge moving with the velocity u , if the S' -frame moves by the S -frame with the speed v=-u . We will let you show that the transformations of Tables 26–3 and 26–4 give the same electric and magnetic fields we got in Section 26-2 .
+
+Figure Ch26-F7
+Caption: Fig. 26–7. The coordinate frame S′S' moving through a static electric field.
+Image: figures/Ch26-F7.svg
+![Fig. 26–7. The coordinate frame S′S' moving through a static electric field.](figures/Ch26-F7.svg)
+
+The transformation of Table 26–2 gives us an interesting and simple answer for what we see if we move past any system of fixed charges. For example, suppose we want to know the fields in our frame S' if we are moving along between the plates of a condenser, as shown in Fig. 26–7. (It is, of course, the same thing if we say that a charged condenser is moving past us.) What do we see? The transformation is easy in this case because the \mathbf{B} -field in the original system is zero. Suppose, first, that our motion is perpendicular to \mathbf{E} ; then we will see an \mathbf{E}'=\mathbf{E}/\sqrt{1-v^2/c^2} which is still completely transverse. We will see, in addition, a magnetic field \mathbf{B}'=-\mathbf{v}\times\mathbf{E}'/c^2 . (The \sqrt{1-v^2/c^2} doesn’t appear in our formula for \mathbf{B}' because we wrote it in terms of \mathbf{E}' rather than \mathbf{E} ; but it's the same thing.) So when we move along perpendicular to a static electric field, we see an added transverse \mathbf{B} . If our motion is not perpendicular to \mathbf{E} , we break \mathbf{E} into \mathbf{E}_\parallel and \mathbf{E}_\perp . The parallel part is unchanged, E_\parallel'=E_\parallel , and the perpendicular component does as just described.
+
+Let’s take the opposite case, and imagine we are moving through a pure static magnetic field. This time we would see an electric field \mathbf{E}' equal to \mathbf{v}\times\mathbf{B}' , and the magnetic field changed by the factor 1/\sqrt{1-v^2/c^2} (assuming it is transverse). So long as v is much less than c , we can neglect the change in the magnetic field, and the main effect is that an electric field appears. As one example of this effect, consider this once famous problem of determining the speed of an airplane. It’s no longer famous, since radar can now be used to determine the air speed from ground reflections, but for many years it was very hard to find the speed of an airplane in bad weather. You could not see the ground and you didn’t know which way was up, and so on. Yet it was important to know how fast you were moving relative to the earth. How can this be done without seeing the earth? Many who knew the transformation formulas thought of the idea of using the fact that the airplane moves in the magnetic field of the earth. Suppose that an airplane is flying where there is a magnetic field more or less known. Let’s just take the simple case where the magnetic field is vertical. If we were flying through it with a horizontal velocity \mathbf{v} , then, according to our formula, we should see an electric field which is \mathbf{v}\times\mathbf{B} , i.e., perpendicular to the line of motion. If we hang an insulated wire across the airplane, this electric field will induce charges on the ends of the wire. That is nothing new. From the point of view of someone on the ground, we are moving a wire through a field, and the \mathbf{v}\times\mathbf{B} force causes charges to move to the ends of the wire. The transformation equations just say the same thing in a different way. (The fact that we can say the thing more than one way doesn’t mean that one way is better than another. We are getting so many different methods and tools that we can usually get the same result in 65 different ways!)
+
+So to measure v , all we have to do is measure the voltage between the ends of the wire. We can’t do it with a voltmeter because the same fields will act on the wires in the voltmeter, but there are ways of measuring such fields. We talked about some of them when we discussed atmospheric electricity in Chapter 9. So it should be possible to measure the speed of the airplane.
+
+This important problem was, however, never solved this way. The reason is that the electric field that is developed is of the order of millivolts per meter. It is possible to measure such fields, but the trouble is that these fields are, unfortunately, not any different from any other electric fields. The field that is produced by motion through the magnetic field can’t be distinguished from some electric field that was already in the air from another cause, say from electrostatic charges in the air, or on the clouds. We described in Chapter 9 that there are, typically, electric fields above the surface of the earth with strengths of about 100 volts per meter. But they are quite irregular. So as the airplane flies through the air, it sees fluctuations of atmospheric electric fields which are enormous in comparison to the tiny fields produced by the \mathbf{v}\times\mathbf{B} term, and it turns out for practical reasons to be impossible to measure speeds of an airplane by its motion through the earth’s magnetic field.

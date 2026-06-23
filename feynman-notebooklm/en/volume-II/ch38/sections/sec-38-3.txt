@@ -1,0 +1,103 @@
+38–3 The torsion bar; shear waves
+
+Let’s now turn our attention to an example which is more complicated because different parts of the material are stressed by different amounts. We consider a twisted rod such as you would find in a drive shaft of some machinery, or in a quartz fiber suspension used in a delicate instrument. As you probably know from experiments with the torsion pendulum, the torque on a twisted rod is proportional to the angle —the constant of proportionality obviously depending upon the length of the rod, on the radius of the rod, and on the properties of the material. The question is: In what way? We are now in a position to answer this question; it’s just a matter of working out some geometry.
+
+Figure Ch38-F9
+Caption: Fig. 38–9.(a) A cylindrical bar in torsion. (b) A cylindrical shell in torsion. (c) Each small piece of the shell is in shear.
+Image: figures/Ch38-F9.svg
+![Fig. 38–9.(a) A cylindrical bar in torsion. (b) A cylindrical shell in torsion. (c) Each small piece of the shell is in shear.](figures/Ch38-F9.svg)
+
+Fig. 38–9 (a) shows a cylindrical rod of length L , and radius a , with one end twisted by the angle \phi with respect to the other. If we want to relate the strains to what we already know, we can think of the rod as being made up of many cylindrical shells and work out separately what happens to each shell. We start by looking at a thin, short cylinder of radius r (less than a ) and thickness \Delta r —as drawn in Fig. 38–9 (b). Now if we look at a piece of this cylinder that was originally a small square, we see that it has been distorted into a parallelogram. Each such element of the cylinder is in shear, and the shear angle \theta is
+
+\theta=\frac{r\phi}{L}.
+
+The shear stress g in the material is, therefore [from Eq. ( 38.13)],
+
+g=\mu\theta=\mu\,\frac{r\phi}{L}. (38.21)
+
+The shear stress is the tangential force \Delta F on the end of the square divided by the area \Delta l\,\Delta r of the end [see Fig. 38–9 (c)]
+
+g=\frac{\Delta F}{\Delta l\,\Delta r}.
+
+The force \Delta F on the end of such a square contributes a torque \Delta\tau around the axis of the rod equal to
+
+\Delta\tau=r\,\Delta F=rg\,\Delta l\,\Delta r. (38.22)
+
+The total torque \tau is the sum of such torques around a complete circumference of the cylinder. So putting together enough pieces so that the \Delta l ’s add up to 2\pi r , we find that the total torque, for a hollow tube, is
+
+rg(2\pi r)\,\Delta r. (38.23)
+
+Or, using ( 38.21),
+
+\tau=2\pi\mu\,\frac{r^3\,\Delta r\phi}{L}. (38.24)
+
+We get that the rotational stiffness, \tau/\phi , of a hollow tube is proportional to the cube of the radius r and to the thickness \Delta r , and inversely proportional to the length L .
+
+We can now imagine a solid rod to be made up of a series of concentric tubes, each twisted by the same angle \phi (although the internal stresses are different for each tube). The total torque is the sum of the torques required to rotate each shell; for the solid rod
+
+\tau=2\pi\mu\,\frac{\phi}{L}\int r^3\,dr,
+
+where the integral goes from r=0 to r=a , the radius of the rod. Integrating, we have
+
+\tau=\mu\,\frac{\pi a^4}{2L}\,\phi. (38.25)
+
+For a rod in torsion, the torque is proportional to the angle and is proportional to the fourth power of the diameter—a rod twice as thick is sixteen times as stiff for torsion.
+
+Before leaving the subject of torsion, let us apply what we have just learned to an interesting problem: torsional waves. If you take a long rod and suddenly twist one end, a wave of twist works its way along the rod, as sketched in Fig. 38–10 (a). That’s a little more exciting than a steady twist—let’s see whether we can work out what happens.
+
+Figure Ch38-F10
+Caption: Fig. 38–10.(a) A torsional wave on a rod. (b) A volume element of the rod.
+Image: figures/Ch38-F10.svg
+![Fig. 38–10.(a) A torsional wave on a rod. (b) A volume element of the rod.](figures/Ch38-F10.svg)
+
+Let z be the distance to some point down the rod. For a static torsion the torque is the same everywhere along the rod, and is proportional to \phi/L , the total torsion angle over the total length. What matters to the material is the local torsional strain, which is, you will appreciate, \frac{\partial \phi}{\partial z} . When the torsion along the rod is not uniform, we should replace Eq. ( 38.25) by
+
+\tau(z)=\mu\,\frac{\pi a^4}{2}\,\frac{\partial \phi}{\partial z}. (38.26)
+
+Now let’s look at what happens to an element of length \Delta z shown magnified in Fig. 38–10 (b). There is a torque \tau(z) at end 1 of the little hunk of rod, and a different torque \tau(z+\Delta z) at end 2 . If \Delta z is small enough, we can use a Taylor expansion and write
+
+\tau(z+\Delta z)=\tau(z)+\biggl(\frac{\partial \tau}{\partial z}\biggr)\Delta z. (38.27)
+
+The net torque \Delta\tau acting on the little piece of rod between z and z+\Delta z is clearly the difference between \tau(z) and \tau(z+\Delta z) , or \Delta\tau=(\frac{\partial \tau}{\partial z})\,\Delta z . Differentiating Eq. ( 38.26), we get
+
+\Delta\tau=\mu\,\frac{\pi a^4}{2}\, \frac{\partial^2\phi}{\partial z^2}\,\Delta z. (38.28)
+
+The effect of this net torque is to give an angular acceleration to the little slice of the rod. The mass of the slice is
+
+\Delta M=(\pi a^2\,\Delta z)\rho,
+
+where \rho is the density of the material. We worked out in Chapter 19, Vol. I, that the moment of inertia of a circular cylinder is mr^2/2 ; calling the moment of inertia of our piece \Delta I , we have
+
+\Delta I=\frac{\pi}{2}\,\rho a^4\,\Delta z. (38.29)
+
+Newton’s law says the torque is equal to the moment of inertia times the angular acceleration, or
+
+\Delta\tau=\Delta I\,\frac{\partial^2\phi}{\partial t^2}. (38.30)
+
+Pulling everything together, we get
+
+\mu\,\frac{\pi a^4}{2}\, \frac{\partial^2\phi}{\partial z^2}\,\Delta z= \frac{\pi}{2}\,\rho a^4\,\Delta z\, \frac{\partial^2\phi}{\partial t^2},
+
+or
+
+\frac{\partial^2\phi}{\partial z^2}-\frac{\rho}{\mu}\, \frac{\partial^2\phi}{\partial t^2}=0. (38.31)
+
+You will recognize this as the one-dimensional wave equation. We have found that waves of torsion will propagate down the rod with the speed
+
+C_{\text{shear}}=\sqrt{\frac{\mu}{\rho}}. (38.32)
+
+The denser the rod—for the same stiffness—the slower the waves; and the stiffer the rod, the quicker the waves work their way down. The speed does not depend upon the diameter of the rod.
+
+Torsional waves are a special example of shear waves. In general, shear waves are those in which the strains do not change the volume of any part of the material. In torsional waves, we have a particular distribution of such shear stresses—namely, distributed on a circle. But for any arrangement of shear stresses, waves will propagate with the same speed—the one given in Eq. ( 38.32). For example, the seismologists find such shear waves travelling in the interior of the earth.
+
+We can have another kind of a wave in the elastic world inside a solid material. If you push something, you can start “longitudinal” waves—also called “compressional” waves. They are like the sound waves in air or in water—the displacements are in the same direction as the wave propagation. (At the surfaces of an elastic body there can also be other types of waves—called “Rayleigh waves” or “Love waves.” In them, the strains are neither purely longitudinal nor purely transverse. We will not have time to study them.)
+
+While we’re on the subject of waves, what is the velocity of the pure compressional waves in a large solid body like the earth? We say “large” because the speed of sound in a thick body is different from what it is, for instance, along a thin rod. By a “thick” body we mean one in which the transverse dimensions are much larger than the wavelength of the sound. Then, when we push on the object, it cannot expand sideways—it can only compress in one dimension. Fortunately, we have already worked out the special case of the compression of a constrained elastic material. We have also worked out in Chapter 47, Vol. I, the speed of sound waves in a gas. Following the same arguments you can see that the speed of sound in a solid is equal to \sqrt{Y'/\rho} , where Y' is the “longitudinal modulus”—or pressure divided by the relative change in length—for the constrained case. This is just the ratio of \Delta l/l to F/A we got in Eq. ( 38.20). So the speed of the longitudinal waves is given by
+
+C_{\text{long}}^2=\frac{Y'}{\rho}= \frac{1-\sigma}{(1+\sigma)(1-2\sigma)}\,\frac{Y}{\rho}. (38.33)
+
+So long as \sigma is between zero and 1/2 , the shear modulus \mu is less than Young’s modulus Y , and also Y' is greater than Y , so
+
+\mu<Y<Y'.
+
+This means that longitudinal waves travel faster than shear waves. One of the most precise ways of measuring the elastic constants of a substance is by measuring the density of the material and the speeds of the two kinds of waves. From this information one can get both Y and \sigma . It is, incidentally, by measuring the difference in the arrival times of the two kinds of waves from an earthquake that a seismologist can estimate—even from the signals at only one station—the distance to the quake.

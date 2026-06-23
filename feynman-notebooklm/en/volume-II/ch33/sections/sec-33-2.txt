@@ -1,0 +1,103 @@
+33–2 Waves in dense materials
+
+First, we remind you about the convenient way of describing a sinusoidal plane wave we used in Chapter 34 of Volume I. Any field component in the wave (we use E as an example) can be written in the form
+
+E=E_0e^{i(\omega t-\mathbf{k}\cdot\mathbf{r})}, (33.6)
+
+where E represents the amplitude at the point \mathbf{r} (from the origin) at the time t . The vector \mathbf{k} points in the direction the wave is travelling, and its magnitude \left|\mathbf{k}\right|= k= 2\pi/\lambda is the wave number. The phase velocity of the wave is v_{\text{ph}}=\omega/k ; for a light wave in a material of index n , v_{\text{ph}}=c/n , so
+
+k=\frac{\omega n}{c}. (33.7)
+
+Suppose \mathbf{k} is in the z -direction; then \mathbf{k}\cdot\mathbf{r} is just kz , as we have often used it. For \mathbf{k} in any other direction, we should replace z by r_k , the distance from the origin in the \mathbf{k} -direction; that is, we should replace kz by kr_k , which is just \mathbf{k}\cdot\mathbf{r} . (See Fig. 33–2 .) So Eq. ( 33.6) is a convenient representation of a wave in any direction.
+
+Figure Ch33-F2
+Caption: Fig. 33–2.For a wave moving in the direction k\Figk, the phase at any point PP is (ωt−k⋅r)(\omega t-\Figk\cdot\Figr).
+Image: figures/Ch33-F2.svg
+![Fig. 33–2.For a wave moving in the direction k\Figk, the phase at any point PP is (ωt−k⋅r)(\omega t-\Figk\cdot\Figr).](figures/Ch33-F2.svg)
+
+We must remember, of course, that
+
+\mathbf{k}\cdot\mathbf{r}=k_xx+k_yy+k_zz,
+
+where k_x , k_y , and k_z are the components of \mathbf{k} along the three axes. In fact, we pointed out once that (\omega,k_x,k_y,k_z) is a four-vector, and that its scalar product with (t,x,y,z) is an invariant. So the phase of a wave is an invariant, and Eq. ( 33.6) could be written
+
+E=E_0e^{ik_\mu x_\mu}.
+
+But we don’t need to be that fancy now.
+
+For a sinusoidal E , as in Eq. ( 33.6), \frac{\partial E}{\partial t} is the same as i\omega E , and \frac{\partial E}{\partial x} is -ik_xE , and so on for the other components. You can see why it is very convenient to use the form in Eq. ( 33.6) when working with differential equations—differentiations are replaced by multiplications. One further useful point: The operation \boldsymbol{\nabla}=(\frac{\partial }{\partial x},\frac{\partial }{\partial y},\frac{\partial }{\partial z}) gets replaced by the three multiplications (-ik_x,-ik_y,-ik_z) . But these three factors transform as the components of the vector \mathbf{k} , so the operator \boldsymbol{\nabla} gets replaced by multiplication with -i\mathbf{k} :
+
+\begin{aligned} &\frac{\partial }{\partial t}\to i\omega,\\[1ex] &\boldsymbol{\nabla}\to-i\mathbf{k}. \end{aligned} (33.8)
+
+This remains true for any \boldsymbol{\nabla} operation—whether it is the gradient, or the divergence, or the curl. For instance, the z -component of \mathbf{c}url{\mathbf{E}} is
+
+\frac{\partial E_y}{\partial x}-\frac{\partial E_x}{\partial y}.
+
+If both E_y and E_x vary as e^{-i\mathbf{k}\cdot\mathbf{r}} , then we get
+
+-ik_xE_y+ik_yE_x,
+
+which is, you see, the z -component of -i\mathbf{k}\times\mathbf{E} .
+
+So we have the very useful general fact that whenever you have to take the gradient of a vector that varies as a wave in three dimensions (they are an important part of physics), you can always take the derivations quickly and almost without thinking by remembering that the operation \boldsymbol{\nabla} is equivalent to multiplication by -i\mathbf{k} .
+
+For instance, the Faraday equation
+
+\mathbf{c}url{\mathbf{E}}=-\frac{\partial \mathbf{B}}{\partial t}
+
+becomes for a wave
+
+-i\mathbf{k}\times\mathbf{E}=-i\omega\mathbf{B}.
+
+This tells us that
+
+\mathbf{B}=\frac{\mathbf{k}\times\mathbf{E}}{\omega}, (33.9)
+
+which corresponds to the result we found earlier for waves in free space—that \mathbf{B} , in a wave, is at right angles to \mathbf{E} and to the wave direction. (In free space, \omega/k=c .) You can remember the sign in Eq. ( 33.9) from the fact that \mathbf{k} is in the direction of Poynting’s vector \FLPS=\epsilon_0 c^2\mathbf{E}\times\mathbf{B} .
+
+If you use the same rule with the other Maxwell equations, you get again the results of the last chapter and, in particular, that
+
+\mathbf{k}\cdot\mathbf{k}=k^2=\frac{\omega^2n^2}{c^2}. (33.10)
+
+But since we know that, we won’t do it again.
+
+If you want to entertain yourself, you can try the following terrifying problem that was the ultimate test for graduate students back in 1890: solve Maxwell’s equations for plane waves in an anisotropic crystal, that is, when the polarization \FLPP is related to the electric field \mathbf{E} by a tensor of polarizability. You should, of course, choose your axes along the principal axes of the tensor, so that the relations are simplest (then P_x=\alpha_aE_x , P_y=\alpha_bE_y , and P_z=\alpha_cE_z ), but let the waves have an arbitrary direction and polarization. You should be able to find the relations between \mathbf{E} and \mathbf{B} , and how \mathbf{k} varies with direction and wave polarization. Then you will understand the optics of an anisotropic crystal. It would be best to start with the simpler case of a birefringent crystal—like calcite—for which two of the polarizabilities are equal (say, \alpha_b=\alpha_c ), and see if you can understand why you see double when you look through such a crystal. If you can do that, then try the hardest case, in which all three \alpha ’s are different. Then you will know whether you are up to the level of a graduate student of 1890. In this chapter, however, we will consider only isotropic substances.
+
+We know from experience that when a plane wave arrives at the boundary between two different materials—say, air and glass, or water and oil—there is a wave reflected and a wave transmitted. Suppose we assume no more than that and see what we can work out. We choose our axes with the yz -plane in the surface and the xy -plane perpendicular to the incident wave surfaces, as shown in Fig. 33–3 .
+
+Figure Ch33-F3
+Caption: Fig. 33–3.The propagation vectors k\Figk, k′\Figk', and k″\Figk'' for the incident, reflected, and transmitted waves.
+Image: figures/Ch33-F3.svg
+![Fig. 33–3.The propagation vectors k\Figk, k′\Figk', and k″\Figk'' for the incident, reflected, and transmitted waves.](figures/Ch33-F3.svg)
+
+The electric vector of the incident wave can then be written as
+
+\mathbf{E}_i=\mathbf{E}_0e^{i(\omega t-\mathbf{k}\cdot\mathbf{r})}. (33.11)
+
+Since \mathbf{k} is perpendicular to the z -axis,
+
+\mathbf{k}\cdot\mathbf{r}=k_xx+k_yy. (33.12)
+
+We write the reflected wave as
+
+\mathbf{E}_r=\mathbf{E}_0'e^{i(\omega't-\mathbf{k}'\cdot\mathbf{r})}, (33.13)
+
+so that its frequency is \omega' , its wave number is \mathbf{k}' , and its amplitude is \mathbf{E}_0' . (We know, of course, that the frequency is the same and the magnitude of \mathbf{k}' is the same as for the incident wave, but we are not going to assume even that. We will let it come out of the mathematical machinery.) Finally, we write for the transmitted wave,
+
+\mathbf{E}_t=\mathbf{E}_0''e^{i(\omega''t-\mathbf{k}''\cdot\mathbf{r})}. (33.14)
+
+We know that one of Maxwell’s equations gives Eq. ( 33.9), so for each of the waves we have
+
+\mathbf{B}_i=\frac{\mathbf{k}\times\mathbf{E}_i}{\omega},\quad \mathbf{B}_r=\frac{\mathbf{k}'\times\mathbf{E}_r}{\omega'},\quad \mathbf{B}_t=\frac{\mathbf{k}''\times\mathbf{E}_t}{\omega''}. (33.15)
+
+Also, if we call the indexes of the two media n_1 and n_2 , we have from Eq. ( 33.10)
+
+k^2=k_x^2+k_y^2=\frac{\omega^2n_1^2}{c^2}. (33.16)
+
+Since the reflected wave is in the same material, then
+
+k'^2=\frac{\omega'^2n_1^2}{c^2} (33.17)
+
+whereas for the transmitted wave,
+
+k''^2=\frac{\omega''^2n_2^2}{c^2}. (33.18)

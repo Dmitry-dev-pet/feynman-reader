@@ -1,0 +1,55 @@
+32–1 Polarization of matter
+
+We want now to discuss the phenomenon of the refraction of light—and also, therefore, the absorption of light—by dense materials. In Chapter 31 of Volume I we discussed the theory of the index of refraction, but because of our limited mathematical abilities at that time, we had to restrict ourselves to finding the index only for materials of low density, like gases. The physical principles that produced the index were, however, made clear. The electric field of the light wave polarizes the molecules of the gas, producing oscillating dipole moments. The acceleration of the oscillating charges radiates new waves of the field. This new field, interfering with the old field, produces a changed field which is equivalent to a phase shift of the original wave. Because this phase shift is proportional to the thickness of the material, the effect is equivalent to having a different phase velocity in the material. When we looked at the subject before, we neglected the complications that arise from such effects as the new wave changing the fields at the oscillating dipoles. We assumed that the forces on the charges in the atoms came just from the incoming wave, whereas, in fact, their oscillations are driven not only by the incoming wave but also by the radiated waves of all the other atoms. It would have been difficult for us at that time to include this effect, so we studied only the rarefied gas, where such effects are not important.
+
+Now, however, we will find that it is very easy to treat the problem by the use of differential equations. This method obscures the physical origin of the index (as coming from the re-radiated waves interfering with the original waves), but it makes the theory for dense materials much simpler. This chapter will bring together a large number of pieces from our earlier work. We’ve taken up practically everything we will need, so there are relatively few really new ideas to be introduced. Since you may need to refresh your memory about what we are going to need, we give in Table 32–1 a list of the equations we are going to use, together with a reference to the place where each can be found. In most instances, we will not take the time to give the physical arguments again, but will just use the equations.
+
+| Subject | Reference | Equation |
+| --- | --- | --- |
+| Damped oscillations | Vol. I, Chap. 23 | m(\ddot{x}+\gamma\dot{x}+\omega_0^2x)=F |
+| Index of gases | Vol. I, Chap. 31 | n=1+\dfrac{1}{2}\,\dfrac{Nq_e^2}{\epsilon_0 m(\omega_0^2-\omega^2)} |
+| n=n'-in'' |  |  |
+| Mobility | Vol. I, Chap. 41 | m\ddot{x}+\mu\dot{x}=F |
+| Electrical conductivity | Vol. I, Chap. 43 | \mu=\dfrac{\tau}{m};\,\sigma=\dfrac{Nq_e^2\tau}{m} |
+| Polarizability | Vol. II, Chap. 10 | \rho_{\text{pol}}=-\mathbf{d}iv{\FLPP} |
+| Inside dielectrics | Vol. II, Chap. 11 | \mathbf{E}_{\text{local}}=\mathbf{E}+\dfrac{1}{3\epsilon_0}\,\FLPP |
+
+We begin by recalling the machinery of the index of refraction for a gas. We suppose that there are N particles per unit volume and that each particle behaves as a harmonic oscillator. We use a model of an atom or molecule in which the electron is bound with a force proportional to its displacement (as though the electron were held in place by a spring). We emphasized that this was not a legitimate classical model of an atom, but we will show later that the correct quantum mechanical theory gives results equivalent to this model (in simple cases). In our earlier treatment, we did not include the possibility of a damping force in the atomic oscillators, but we will do so now. Such a force corresponds to a resistance to the motion, that is, to a force proportional to the velocity of the electron. Then the equation of motion is
+
+F=q_eE=m(\ddot{x}+\gamma\dot{x}+\omega_0^2x), (32.1)
+
+where x is the displacement parallel to the direction of \mathbf{E} . (We are assuming an isotropic oscillator whose restoring force is the same in all directions. Also, we are taking, for the moment, a linearly polarized wave, so that \mathbf{E} doesn’t change direction.) If the electric field acting on the atom varies sinusoidally with time, we write
+
+E=E_0e^{i\omega t}. (32.2)
+
+The displacement will then oscillate with the same frequency, and we can let
+
+x=x_0e^{i\omega t}.
+
+Substituting \dot{x}=i\omega x and \ddot{x}=-\omega^2x , we can solve for x in terms of E :
+
+x=\frac{q_e/m}{-\omega^2+i\gamma\omega+\omega_0^2}\,E. (32.3)
+
+Knowing the displacement, we can calculate the acceleration \ddot{x} and find the radiated wave responsible for the index. This was the way we computed the index in Chapter 31 of Volume I.
+
+Now, however, we want to take a different approach. The induced dipole moment p of an atom is q_ex or, using Eq. ( 32.3),
+
+\mathbf{p}=\frac{q_e^2/m}{-\omega^2+i\gamma\omega+\omega_0^2}\,\mathbf{E}. (32.4)
+
+Since \mathbf{p} is proportional to \mathbf{E} , we write
+
+\mathbf{p}=\epsilon_0\alpha(\omega)\mathbf{E}, (32.5)
+
+where \alpha is called the atomic polarizability. 1 With this definition, we have
+
+\alpha=\frac{q_e^2/m\epsilon_0}{-\omega^2+i\gamma\omega+\omega_0^2}. (32.6)
+
+The quantum mechanical solution for the motions of electrons in atoms gives a similar answer except with the following modifications. The atoms have several natural frequencies, each frequency with its own dissipation constant \gamma . Also the effective “strength” of each mode is different, which we can represent by multiplying the polarizability for each frequency by a strength factor f , which is a number we expect to be of the order of 1 . Representing the three parameters \omega_0 , \gamma , and f by \omega_{0k} , \gamma_k , and f_k for each mode of oscillation, and summing over the various modes, we modify Eq. ( 32.6) to read
+
+\alpha(\omega)=\frac{q_e^2}{\epsilon_0 m} \sum_k\frac{f_k}{-\omega^2+i\gamma_k\omega+\omega_{0k}^2}. (32.7)
+
+If N is the number of atoms per unit volume in the material, the polarization P is just Np=\epsilon_0 N\alpha E , and is proportional to E :
+
+\FLPP=\epsilon_0 N\alpha(\omega)\mathbf{E}. (32.8)
+
+In other words, when there is a sinusoidal electric field acting in a material, there is an induced dipole moment per unit volume which is proportional to the electric field—with a proportionality constant \alpha that, we emphasize, depends upon the frequency. At very high frequencies, \alpha is small; there is not much response. However, at low frequencies there can be a strong response. Also, the proportionality constant is a complex number, which means that the polarization does not exactly follow the electric field, but may be shifted in phase to some extent. At any rate, there is a polarization per unit volume whose magnitude is proportional to the strength of the electric field.

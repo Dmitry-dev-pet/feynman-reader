@@ -1,0 +1,65 @@
+## 3–1 Vector integrals; the line integral of ∇ψ\FLPgrad{\boldsymbol{\psi}}
+
+We found in Chapter 2 that there were various ways of taking derivatives of fields. Some gave vector fields; some gave scalar fields. Although we developed many different formulas, everything in Chapter 2 could be summarized in one rule: the operators \frac{\partial }{\partial x} , \frac{\partial }{\partial y} , and \frac{\partial }{\partial z} are the three components of a vector operator \boldsymbol{\nabla} . We would now like to get some understanding of the significance of the derivatives of fields. We will then have a better feeling for what a vector field equation means.
+
+We have already discussed the meaning of the gradient operation ( \boldsymbol{\nabla} on a scalar). Now we turn to the meanings of the divergence and curl operations. The interpretation of these quantities is best done in terms of certain vector integrals and equations relating such integrals. These equations cannot, unfortunately, be obtained from vector algebra by some easy substitution, so you will just have to learn them as something new. Of these integral formulas, one is practically trivial, but the other two are not. We will derive them and explain their implications. The equations we shall study are really mathematical theorems. They will be useful not only for interpreting the meaning and the content of the divergence and the curl, but also in working out general physical theories. These mathematical theorems are, for the theory of fields, what the theorem of the conservation of energy is to the mechanics of particles. General theorems like these are important for a deeper understanding of physics. You will find, though, that they are not very useful for solving problems—except in the simplest cases. It is delightful, however, that in the beginning of our subject there will be many simple problems which can be solved with the three integral formulas we are going to treat. We will see, however, as the problems get harder, that we can no longer use these simple methods.
+
+### Figure Ch3-F1
+Caption: Fig. 3–1.The terms used in Eq. (3.1). The vector ∇ψ\Fignabla\psi is evaluated at the line elements dsd\Figs.
+Image: figures/Ch3-F1.svg
+![Fig. 3–1.The terms used in Eq. (3.1). The vector ∇ψ\Fignabla\psi is evaluated at the line elements dsd\Figs.](figures/Ch3-F1.svg)
+
+We take up first an integral formula involving the gradient. The relation contains a very simple idea: Since the gradient represents the rate of change of a field quantity, if we integrate that rate of change, we should get the total change. Suppose we have the scalar field \psi(x,y,z) . At any two points (1) and (2) , the function \psi will have the values \psi(1) and \psi(2) , respectively. [We use a convenient notation, in which (2) represents the point (x_2,y_2,z_2) and \psi(2) means the same thing as \psi(x_2,y_2,z_2) .] If \Gamma (gamma) is any curve joining (1) and (2) , as in Fig. 3–1 , the following relation is true: Theorem 1.
+
+\psi(2)-\psi(1)= \underset{\text{along $\Gamma$}}{\int_{(1)}^{(2)}} (\boldsymbol{\nabla}{\psi})\cdot d\mathbf{s}\,. (3.1)
+
+The integral is a line integral, from (1) to (2) along the curve \Gamma , of the dot product of \boldsymbol{\nabla}{\psi} —a vector—with d\mathbf{s} —another vector which is an infinitesimal line element of the curve \Gamma (directed away from (1) and toward (2) ).
+
+### Figure Ch3-F2
+Caption: Fig. 3–2.The line integral is the limit of a sum.
+Image: figures/Ch3-F2.svg
+![Fig. 3–2.The line integral is the limit of a sum.](figures/Ch3-F2.svg)
+
+First, we should review what we mean by a line integral. Consider a scalar function f(x,y,z) , and the curve \Gamma joining two points (1) and (2) . We mark off the curve at a number of points and join these points by straight-line segments, as shown in Fig. 3–2 . Each segment has the length \Delta s_i , where i is an index that runs 1 , 2 , 3 , … By the line integral
+
+\underset{\text{along $\Gamma$}}{\int_{(1)}^{(2)}} f\,ds
+
+we mean the limit of the sum
+
+\sum\nolimits_if_i\Delta s_i,
+
+where f_i is the value of the function at the i th segment. The limiting value is what the sum approaches as we add more and more segments (in a sensible way, so that the largest \Delta s_i\to0 ).
+
+The integral in our theorem, Eq. ( 3.1), means the same thing, although it looks a little different. Instead of f , we have another scalar—the component of \boldsymbol{\nabla}{\psi} in the direction of \Delta\mathbf{s} . If we write (\boldsymbol{\nabla}{\psi})_t for this tangential component, it is clear that
+
+(\boldsymbol{\nabla}{\psi})_t\,\Delta s=(\boldsymbol{\nabla}{\psi})\cdot\Delta\mathbf{s}. (3.2)
+
+The integral in Eq. ( 3.1) means the sum of such terms.
+
+Now let’s see why Eq. ( 3.1) is true. In Chapter 2, we showed that the component of \boldsymbol{\nabla}{\psi} along a small displacement \Delta\mathbf{R} was the rate of change of \psi in the direction of \Delta\mathbf{R} . Consider the line segment \Delta\mathbf{s} from (1) to point a in Fig. 3–2 . According to our definition,
+
+\Delta\psi_1=\psi(a)-\psi(1)=(\boldsymbol{\nabla}{\psi})_1\cdot\Delta\mathbf{s}_1. (3.3)
+
+Also, we have
+
+\psi(b)-\psi(a)=(\boldsymbol{\nabla}{\psi})_2\cdot\Delta\mathbf{s}_2, (3.4)
+
+where, of course, (\boldsymbol{\nabla}{\psi})_1 means the gradient evaluated at the segment \Delta\mathbf{s}_1 , and (\boldsymbol{\nabla}{\psi})_2 , the gradient evaluated at \Delta\mathbf{s}_2 . If we add Eqs. ( 3.3) and ( 3.4), we get
+
+\psi(b)-\psi(1)=(\boldsymbol{\nabla}{\psi})_1\cdot\Delta\mathbf{s}_1+ (\boldsymbol{\nabla}{\psi})_2\cdot\Delta\mathbf{s}_2. (3.5)
+
+You can see that if we keep adding such terms, we get the result
+
+\psi(2)-\psi(1)=\sum\nolimits_i(\boldsymbol{\nabla}{\psi})_i\cdot\Delta\mathbf{s}_i. (3.6)
+
+The left-hand side doesn’t depend on how we choose our intervals—if (1) and (2) are kept always the same—so we can take the limit of the right-hand side. We have therefore proved Eq. ( 3.1).
+
+You can see from our proof that just as the equality doesn’t depend on how the points a b , c , …, are chosen, similarly it doesn’t depend on what we choose for the curve \Gamma to join (1) and (2) . Our theorem is correct for any curve from (1) to (2) .
+
+One remark on notation: You will see that there is no confusion if we write, for convenience,
+
+(\boldsymbol{\nabla}{\psi})\cdot d\mathbf{s}=\boldsymbol{\nabla}{\psi}\cdot d\mathbf{s}. (3.7)
+
+With this notation, our theorem is Theorem 1.
+
+\psi(2)-\psi(1)= \underset{\substack{\text{any curve from}\\\text{$(1)$ to $(2)$}}}{\int_{(1)}^{(2)}} \boldsymbol{\nabla}{\psi}\cdot d\mathbf{s}\,. (3.8)

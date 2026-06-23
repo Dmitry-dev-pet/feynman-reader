@@ -1,0 +1,64 @@
+## 4–2 Coulomb’s law; superposition
+
+It would be logical to use Eqs. ( 4.5) and ( 4.6) as our starting points. It will be easier, however, if we start somewhere else and come back to these equations. The results will be equivalent. We will start with a law that we have talked about before, called Coulomb’s law, which says that between two charges at rest there is a force directly proportional to the product of the charges and inversely proportional to the square of the distance between. The force is along the straight line from one charge to the other. Coulomb’s law:
+
+\mathbf{F}_1=\frac{1}{4\pi\epsilon_0}\,\frac{q_1q_2}{r_{12}^2}\,\mathbf{e}_{12}=-\mathbf{F}_2. (4.9)
+
+\mathbf{F}_1 is the force on charge q_1 , \mathbf{e}_{12} is the unit vector in the direction to q_1 from q_2 , and r_{12} is the distance between q_1 and q_2 . The force \mathbf{F}_2 on q_2 is equal and opposite to \mathbf{F}_1 .
+
+The constant of proportionality, for historical reasons, is written as 1/4\pi\epsilon_0 . In the system of units which we use—the mks system—it is defined as exactly 10^{-7} times the speed of light squared. Now since the speed of light is approximately 3\times10^8 meters per second, the constant is approximately 9\times10^9 , and the unit turns out to be newton \cdot meter ^2 per coulomb ^2 or volt \cdot meter per coulomb.
+
+\begin{aligned} \frac{1}{4\pi\epsilon_0}&=10^{-7}c^2\;\quad\,\text{(by definition)}\\[-1pt] &=9.0\times10^9\;\text{(by experiment).}\\[2pt] \text{Unit:}&\quad\text{newton$\cdot$meter$^2$$/$coulomb$^2$,}\\[2pt] \text{or}&\quad\text{volt$\cdot$meter$/$coulomb.} \end{aligned} (4.10)
+
+When there are more than two charges present—the only really interesting times—we must supplement Coulomb’s law with one other fact of nature: the force on any charge is the vector sum of the Coulomb forces from each of the other charges. This fact is called “the principle of superposition.” That’s all there is to electrostatics. If we combine the Coulomb law and the principle of superposition, there is nothing else. Equations ( 4.5) and ( 4.6)—the electrostatic equations—say no more and no less.
+
+When applying Coulomb’s law, it is convenient to introduce the idea of an electric field. We say that the field \mathbf{E}(1) is the force per unit charge on q_1 (due to all other charges). Dividing Eq. ( 4.9) by q_1 , we have, for one other charge besides q_1 ,
+
+\mathbf{E}(1)=\frac{1}{4\pi\epsilon_0}\,\frac{q_2}{r_{12}^2}\,\mathbf{e}_{12}. (4.11)
+
+Also, we consider that \mathbf{E}(1) describes something about the point (1) even if q_1 were not there—assuming that all other charges keep their same positions. We say: \mathbf{E}(1) is the electric field at the point (1) .
+
+The electric field \mathbf{E} is a vector, so by Eq. ( 4.11) we really mean three equations—one for each component. Writing out explicitly the x -component, Eq. ( 4.11) means
+
+\begin{aligned} E_x&(x_1,y_1,z_1)=\\[1.5ex] &\frac{q_2}{4\pi\epsilon_0} \frac{x_1\!-x_2}{[(x_1\!-\!x_2)^2\!+\!(y_1\!-\!y_2)^2\!+\!(z_1\!-\!z_2)^2]^{3/2}}, \end{aligned} (4.12)
+
+and similarly for the other components.
+
+If there are many charges present, the field \mathbf{E} at any point (1) is a sum of the contributions from each of the other charges. Each term of the sum will look like ( 4.11) or ( 4.12). Letting q_j be the magnitude of the j th charge, and \mathbf{r}_{1j} the displacement from q_j to the point (1) , we write
+
+\mathbf{E}(1)=\sum_j\frac{1}{4\pi\epsilon_0}\,\frac{q_j}{r_{1j}^2}\,\mathbf{e}_{1j}. (4.13)
+
+Which means, of course,
+
+\begin{aligned} E_x&(x_1,y_1,z_1)=\\[.5ex] &\sum_j\!\frac{1}{4\pi\epsilon_0} \frac{q_j(x_1-x_j)}{[(x_1\!-\!x_j)^2\!+\!(y_1\!-\!y_j)^2\!+\!(z_1\!-\!z_j)^2]^{3/2}}, \end{aligned} (4.14)
+
+and so on.
+
+Often it is convenient to ignore the fact that charges come in packages like electrons and protons, and think of them as being spread out in a continuous smear—or in a “distribution,” as it is called. This is O.K. so long as we are not interested in what is happening on too small a scale. We describe a charge distribution by the “charge density,” \rho(x,y,z) . If the amount of charge in a small volume \Delta V_2 located at the point (2) is \Delta q_2 , then \rho is defined by
+
+\Delta q_2=\rho(2)\Delta V_2. (4.15)
+
+### Figure Ch4-F1
+Caption: Fig. 4–1. The electric field E\FigE at point (1)(1), from a charge distribution, is obtained from an integral over the distribution. Point (1)(1) could also be inside the distribution.
+Image: figures/Ch4-F1.svg
+![Fig. 4–1. The electric field E\FigE at point (1)(1), from a charge distribution, is obtained from an integral over the distribution. Point (1)(1) could also be inside the distribution.](figures/Ch4-F1.svg)
+
+To use Coulomb’s law with such a description, we replace the sums of Eqs. ( 4.13) or ( 4.14) by integrals over all volumes containing charges. Then we have
+
+\mathbf{E}(1)=\frac{1}{4\pi\epsilon_0} \underset{\substack{\text{all}\\\text{space}}}{\int} \frac{\rho(2)\mathbf{e}_{12}\,dV_2}{r_{12}^2}. (4.16)
+
+Some people prefer to write
+
+\mathbf{e}_{12}=\frac{\mathbf{r}_{12}}{r_{12}},
+
+where \mathbf{r}_{12} is the vector displacement to (1) from (2) , as shown in Fig. 4-1 . The integral for \mathbf{E} is then written as
+
+\mathbf{E}(1)=\frac{1}{4\pi\epsilon_0} \underset{\substack{\text{all}\\\text{space}}}{\int} \frac{\rho(2)\mathbf{r}_{12}\,dV_2}{r_{12}^3}. (4.17)
+
+When we want to calculate something with these integrals, we usually have to write them out in explicit detail. For the x -component of either Eq. ( 4.16) or ( 4.17), we would have
+
+\begin{aligned} &E_x(x_1,y_1,z_1)=\\[1.5ex] &\underset{\substack{\text{all}\\\text{space}}}{\int}\!\! \frac{(x_1-x_2)\rho(x_2,y_2,z_2)\,dx_2\,dy_2\,dz_2} {4\pi\epsilon_0 [(x_1\!-\!x_2)^2\!+\!(y_1\!-\!y_2)^2\!+\!(z_1\!-\!z_2)^2]^{3/2}}. \end{aligned} (4.18)
+
+We are not going to use this formula much. We write it here only to emphasize the fact that we have completely solved all the electrostatic problems in which we know the locations of all of the charges. Given the charges, what are the fields? Answer: Do this integral. So there is nothing to the subject; it is just a case of doing complicated integrals over three dimensions—strictly a job for a computing machine!
+
+With our integrals we can find the fields produced by a sheet of charge, from a line of charge, from a spherical shell of charge, or from any specified distribution. It is important to realize, as we go on to draw field lines, to talk about potentials, or to calculate divergences, that we already have the answer here. It is merely a matter of it being sometimes easier to do an integral by some clever guesswork than by actually carrying it out. The guesswork requires learning all kinds of strange things. In practice, it might be easier to forget trying to be clever and always to do the integral directly instead of being so smart. We are, however, going to try to be smart about it. We shall go on to discuss some other features of the electric field.

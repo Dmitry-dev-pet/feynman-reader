@@ -1,0 +1,31 @@
+31–7 Tensors of higher rank
+
+The stress tensor S_{ij} describes the internal forces of matter. If the material is elastic, it is convenient to describe the internal distortion in terms of another tensor T_{ij} —called the strain tensor. For a simple object like a bar of metal, you know that the change in length, \Delta L , is approximately proportional to the force, so we say it obeys Hooke’s law:
+
+\Delta L=\gamma F.
+
+For a solid elastic body with arbitrary distortions, the strain T_{ij} is related to the stress S_{ij} by a set of linear equations:
+
+T_{ij}=\sum_{k,l}\gamma_{ijkl}S_{kl}. (31.26)
+
+Also, you know that the potential energy of a spring (or bar) is
+
+\frac{1}{2}F\,\Delta L=\frac{1}{2}\gamma F^2.
+
+The generalization for the elastic energy density in a solid body is
+
+U_{\text{elastic}}=\sum_{ijkl}\frac{1}{2}\gamma_{ijkl}S_{ij}S_{kl}. (31.27)
+
+The complete description of the elastic properties of a crystal must be given in terms of the coefficients \gamma_{ijkl} . This introduces us to a new beast. It is a tensor of the fourth rank. Since each index can take on any one of three values, x , y , or z , there are 3^4=81 coefficients. But there are really only 21 different numbers. First, since S_{ij} is symmetric, it has only six different values, and only 36 different coefficients are needed in Eq. ( 31.27). But also, S_{ij} can be interchanged with S_{kl} without changing the energy, so \gamma_{ijkl} must be symmetric if we interchange ij and kl . This reduces the number of different coefficients to 21 . So to describe the elastic properties of a crystal of the lowest possible symmetry requires 21 elastic constants! This number is, of course, reduced for crystals of higher symmetry. For example, a cubic crystal has only three elastic constants, and an isotropic substance has only two.
+
+That the latter is true can be seen as follows. How can the components of \gamma_{ijkl} be independent of the direction of the axes, as they must be if the material is isotropic? Answer: They can be independent only if they are expressible in terms of the tensor \delta_{ij} . There are two possible expressions, \delta_{ij}\delta_{kl} and \delta_{ik}\delta_{jl}+\delta_{il}\delta_{jk} , which have the required symmetry, so \gamma_{ijkl} must be a linear combination of them. Therefore, for isotropic materials,
+
+\gamma_{ijkl}=a(\delta_{ij}\delta_{kl})+ b(\delta_{ik}\delta_{jl}+\delta_{il}\delta_{jk}),
+
+and the material requires two constants, a and b , to describe its elastic properties. We will leave it for you to show that a cubic crystal needs only three.
+
+As a final example, this time of a third-rank tensor, we have the piezoelectric effect. Under stress, a crystal generates an electric field proportional to the stress; hence, in general, the law is
+
+E_i=\sum_{j,k}P_{ijk}S_{jk},
+
+where E_i is the electric field, and the P_{ijk} are the piezoelectric coefficients—or the piezoelectric tensor. Can you show that if the crystal has a center of inversion (invariant under x,y,z\to-x,-y,-z ) the piezoelectric coefficients are all zero?

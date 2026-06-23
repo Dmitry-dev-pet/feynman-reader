@@ -1,0 +1,50 @@
+15–6 What is true for statics is false for dynamics
+
+We are now at the end of our exploration of the subject of static fields. Already in this chapter we have come perilously close to having to worry about what happens when fields change with time. We were barely able to avoid it in our treatment of magnetic energy by taking refuge in a relativistic argument. Even so, our treatment of the energy problem was somewhat artificial and perhaps even mysterious, because we ignored the fact that moving coils must, in fact, produce changing fields. It is now time to take up the treatment of time-varying fields—the subject of electrodynamics. We will do so in the next chapter. First, however, we would like to emphasize a few points.
+
+Although we began this course with a presentation of the complete and correct equations of electromagnetism, we immediately began to study some incomplete pieces—because that was easier. There is a great advantage in starting with the simpler theory of static fields, and proceeding only later to the more complicated theory which includes dynamic fields. There is less new material to learn all at once, and there is time for you to develop your intellectual muscles in preparation for the bigger task.
+
+But there is the danger in this process that before we get to see the complete story, the incomplete truths learned on the way may become ingrained and taken as the whole truth—that what is true and what is only sometimes true will become confused. So we give in Table 15–1 a summary of the important formulas we have covered, separating those which are true in general from those which are true for statics, but false for dynamics. This summary also shows, in part, where we are going, since as we treat dynamics we will be developing in detail what we must just state here without proof.
+
+| FALSE IN GENERAL (true only for statics) | TRUE ALWAYS |  |  |
+| --- | --- | --- | --- |
+| F=\dfrac{1}{4\pi\epsilon_0}\,\dfrac{q_1q_2}{r^2} | (Coulomb’s law) | \mathbf{F}=q(\mathbf{E}+\mathbf{v}\times\mathbf{B}) | (Lorentz force) |
+| \rightarrowding | \mathbf{d}iv{\mathbf{E}}=\dfrac{\rho}{\epsilon_0} | (Gauss’ law) |  |
+| \mathbf{c}url{\mathbf{E}}=0 | \rightarrowding | \displaystyle\mathbf{c}url{\mathbf{E}}=-\frac{\partial \mathbf{B}}{\partial t} | (Faraday’s law) |
+| \mathbf{E}=-\boldsymbol{\nabla}{\phi} | \displaystyle\mathbf{E}=-\boldsymbol{\nabla}{\phi}-\frac{\partial \mathbf{A}}{\partial t} |  |  |
+| \displaystyle\raise 2.5ex{\mathbf{E}(1)=\frac{1}{4\pi\epsilon_0}\int\frac{\rho(2)\mathbf{e}_{12}}{r_{12}^2}\,dV_2} |  |  |  |
+| For conductors, \mathbf{E}=0 , \phi={} constant. Q=CV | In a conductor, \mathbf{E} makes currents. |  |  |
+| \raise 2em{\rightarrowding} | \begin{aligned} &\mathbf{d}iv{\mathbf{B}}=0\\[1.75ex] &\mathbf{B}=\mathbf{c}url{\mathbf{A}} \end{aligned} | (No magnetic charges) |  |
+| c^2\mathbf{c}url{\mathbf{B}}=\dfrac{\mathbf{j}}{\epsilon_0} | (Ampère’s law) | \rightarrowding | \displaystyle c^2\mathbf{c}url{\mathbf{B}}=\frac{\mathbf{j}}{\epsilon_0}+\frac{\partial \mathbf{E}}{\partial t} |
+| \displaystyle\raise 2.5ex{\mathbf{B}(1)=\frac{1}{4\pi\epsilon_0 c^2}\int\frac{\mathbf{j}(2)\times\mathbf{e}_{12}}{r_{12}^2}\,dV_2} |  |  |  |
+| \nabla^2\phi=-\dfrac{\rho}{\epsilon_0} | (Poisson’s equation) | \nabla^2\phi-\dfrac{1}{c^2}\dfrac{\partial^2\phi}{\partial t^2}=-\dfrac{\rho}{\epsilon_0} |  |
+| and |  |  |  |
+| \nabla^2\mathbf{A}=-\dfrac{\mathbf{j}}{\epsilon_0 c^2} | \nabla^2\mathbf{A}-\dfrac{1}{c^2}\dfrac{\partial^2\mathbf{A}}{\partial t^2}=-\dfrac{\mathbf{j}}{\epsilon_0 c^2} |  |  |
+| with | with |  |  |
+| \mathbf{d}iv{\mathbf{A}}=0 | \displaystyle c^2\mathbf{d}iv{\mathbf{A}}+\frac{\partial \phi}{\partial t}=0 |  |  |
+| \displaystyle\phi(1)=\frac{1}{4\pi\epsilon_0}\int\frac{\rho(2)}{r_{12}}\,dV_2 | \displaystyle\phi(1,t)=\frac{1}{4\pi\epsilon_0}\int\frac{\rho(2,t')}{r_{12}}\,dV_2 |  |  |
+| and |  |  |  |
+| \displaystyle\mathbf{A}(1)=\frac{1}{4\pi\epsilon_0 c^2}\int\frac{\mathbf{j}(2)}{r_{12}}\,dV_2 | \displaystyle\mathbf{A}(1,t)=\frac{1}{4\pi\epsilon_0 c^2}\int\frac{\mathbf{j}(2,t')}{r_{12}}\,dV_2 |  |  |
+| with |  |  |  |
+| t'=t-\dfrac{r_{12}}{c} |  |  |  |
+| \displaystyle U=\frac{1}{2}\int\rho\phi\,dV+\frac{1}{2}\int\mathbf{j}\cdot\mathbf{A}\,dV | \displaystyle U=\int\biggl(\frac{\epsilon_0}{2}\,\mathbf{E}\cdot\mathbf{E}+\frac{\epsilon_0 c^2}{2}\,\mathbf{B}\cdot\mathbf{B}\biggr)dV |  |  |
+| The equations marked with ( \rightarrowding ) are Maxwell’s equations. |  |  |  |
+
+It may be useful to make a few remarks about the table. First, you should notice that the equations we started with are the true equations—we have not misled you there. The electromagnetic force (often called the Lorentz force) \mathbf{F}=q(\mathbf{E}+\mathbf{v}\times\mathbf{B}) is true. It is only Coulomb’s law that is false, to be used only for statics. The four Maxwell equations for \mathbf{E} and \mathbf{B} are also true. The equations we took for statics are false, of course, because we left off all terms with time derivatives.
+
+Gauss’ law, \mathbf{d}iv{\mathbf{E}}=\rho/\epsilon_0 , remains, but the curl of \mathbf{E} is not zero in general. So \mathbf{E} cannot always be equated to the gradient of a scalar—the electrostatic potential. We will see that a scalar potential still remains, but it is a time-varying quantity that must be used together with vector potentials for a complete description of the electric field. The equations governing this new scalar potential are, necessarily, also new.
+
+We must also give up the idea that \mathbf{E} is zero in conductors. When the fields are changing, the charges in conductors do not, in general, have time to rearrange themselves to make the field zero. They are set in motion, but never reach equilibrium. The only general statement is: electric fields in conductors produce currents. So in varying fields a conductor is not an equipotential. It also follows that the idea of a capacitance is no longer precise.
+
+Since there are no magnetic charges, the divergence of \mathbf{B} is always zero. So \mathbf{B} can always be equated to \mathbf{c}url{\mathbf{A}} . (Everything doesn’t change!) But the generation of \mathbf{B} is not only from currents; \mathbf{c}url{\mathbf{B}} is proportional to the current density plus a new term \frac{\partial \mathbf{E}}{\partial t} . This means that \mathbf{A} is related to currents by a new equation. It is also related to \phi . If we make use of our freedom to choose \mathbf{d}iv{\mathbf{A}} for our own convenience, the equations for \mathbf{A} or \phi can be arranged to take on a simple and elegant form. We therefore make the condition that c^2\mathbf{d}iv{\mathbf{A}}=-\frac{\partial \phi}{\partial t} , and the differential equations for \mathbf{A} or \phi appear as shown in the table.
+
+The potentials \mathbf{A} and \phi can still be found by integrals over the currents and charges, but not the same integrals as for statics. Most wonderfully, though, the true integrals are like the static ones, with only a small and physically appealing modification. When we do the integrals to find the potentials at some point, say point (1) in Fig. 15–10, we must use the values of \mathbf{j} and \rho at the point (2) at an earlier time t'=t-r_{12}/c . As you would expect, the influences propagate from point (2) to point (1) at the speed c . With this small change, one can solve for the fields of varying currents and charges, because once we have \mathbf{A} and \phi , we get \mathbf{B} from \mathbf{c}url{\mathbf{A}} , as before, and \mathbf{E} from -\boldsymbol{\nabla}{\phi}-\frac{\partial \mathbf{A}}{\partial t} .
+
+Figure Ch15-F10
+Caption: Figure 15-10.The potentials at point [math](1) and at the time [math]t are given by summing the contributions from each element of the source at the roving point [math](2), using the currents and charges which were present at the earlier time [math]t-r_{12}/c.
+Image: figures/Ch15-F10.svg
+![Figure 15-10.The potentials at point [math](1) and at the time [math]t are given by summing the contributions from each element of the source at the roving point [math](2), using the currents and charges which were present at the earlier time [math]t-r_{12}/c.](figures/Ch15-F10.svg)
+
+Finally, you will notice that some results—for example, that the energy density in an electric field is \epsilon_0 E^2/2 —are true for electrodynamics as well as for statics. You should not be misled into thinking that this is at all “natural.” The validity of any formula derived in the static case must be demonstrated over again for the dynamic case. A contrary example is the expression for the electrostatic energy in terms of a volume integral of \rho\phi . This result is true only for statics.
+
+We will consider all these matters in more detail in due time, but it will perhaps be useful to keep in mind this summary, so you will know what you can forget, and what you should remember as always true.

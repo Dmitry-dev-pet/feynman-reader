@@ -1,0 +1,109 @@
+6–2 The electric dipole
+
+Figure Ch6-F1
+Caption: Fig. 6–1.A dipole: two charges +q+q and −q-q the distance dd apart.
+Image: figures/Ch6-F1.svg
+![Fig. 6–1.A dipole: two charges +q+q and −q-q the distance dd apart.](figures/Ch6-F1.svg)
+
+First, take two point charges, +q and -q , separated by the distance d . Let the z -axis go through the charges, and pick the origin halfway between, as shown in Fig. 6–1 . Then, using ( 4.24), the potential from the two charges is given by
+
+\begin{aligned} \phi(&x,y,z)\\[.5ex] &=\frac{1}{4\pi\epsilon_0}\!\biggl[ &\frac{q}{\sqrt{[z\!-\!(d/2)]^2\!+\!x^2\!+\!y^2}}\,+\\ &\phantom{\frac{1}{4\pi\epsilon_0}\biggl[} &\frac{-q}{\sqrt{[z\!+\!(d/2)]^2\!+\!x^2\!+\!y^2}}\biggr]. \end{aligned} (6.8)
+
+We are not going to write out the formula for the electric field, but we can always calculate it once we have the potential. So we have solved the problem of two charges.
+
+There is an important special case in which the two charges are very close together—which is to say that we are interested in the fields only at distances from the charges large in comparison with their separation. We call such a close pair of charges a dipole. Dipoles are very common.
+
+A “dipole” antenna can often be approximated by two charges separated by a small distance—if we don’t ask about the field too close to the antenna. (We are usually interested in antennas with moving charges; then the equations of statics do not really apply, but for some purposes they are an adequate approximation.)
+
+More important perhaps, are atomic dipoles. If there is an electric field in any material, the electrons and protons feel opposite forces and are displaced relative to each other. In a conductor, you remember, some of the electrons move to the surfaces, so that the field inside becomes zero. In an insulator the electrons cannot move very far; they are pulled back by the attraction of the nucleus. They do, however, shift a little bit. So although an atom, or molecule, remains neutral in an external electric field, there is a very tiny separation of its positive and negative charges and it becomes a microscopic dipole. If we are interested in the fields of these atomic dipoles in the neighborhood of ordinary-sized objects, we are normally dealing with distances large compared with the separations of the pairs of charges.
+
+Figure Ch6-F2
+Caption: Fig. 6–2.The water molecule H2_2O. The hydrogen atoms have slightly less than their share of the electron cloud; the oxygen, slightly more.
+Image: figures/Ch6-F2.svg
+![Fig. 6–2.The water molecule H2_2O. The hydrogen atoms have slightly less than their share of the electron cloud; the oxygen, slightly more.](figures/Ch6-F2.svg)
+
+In some molecules the charges are somewhat separated even in the absence of external fields, because of the form of the molecule. In a water molecule, for example, there is a net negative charge on the oxygen atom and a net positive charge on each of the two hydrogen atoms, which are not placed symmetrically but as in Fig. 6–2 . Although the charge of the whole molecule is zero, there is a charge distribution with a little more negative charge on one side and a little more positive charge on the other. This arrangement is certainly not as simple as two point charges, but when seen from far away the system acts like a dipole. As we shall see a little later, the field at large distances is not sensitive to the fine details.
+
+Let’s look, then, at the field of two opposite charges with a small separation d . If d becomes zero, the two charges are on top of each other, the two potentials cancel, and there is no field. But if they are not exactly on top of each other, we can get a good approximation to the potential by expanding the terms of ( 6.8) in a power series in the small quantity d (using the binomial expansion). Keeping terms only to first order in d , we can write
+
+\biggl(z-\frac{d}{2}\biggr)^2\approx z^2-zd.
+
+It is convenient to write
+
+x^2+y^2+z^2=r^2.
+
+Then
+
+\begin{aligned} \biggl(z-\frac{d}{2}\biggr)^2+x^2+y^2\approx r^2-zd\\[1ex] =r^2\biggl(1-\frac{zd}{r^2}\biggr), \end{aligned}
+
+and
+
+\begin{aligned} \frac{1}{\sqrt{[z-(d/2)]^2+x^2+y^2}}\approx \frac{1}{\sqrt{r^2[1-(zd/r^2)]}}\\[2ex] =\frac{1}{r}\biggl(1-\frac{zd}{r^2}\biggr)^{-1/2}. \end{aligned}
+
+Using the binomial expansion again for [1-(zd/r^2)]^{-1/2} —and throwing away terms with the square or higher powers of d —we get
+
+\frac{1}{r}\biggl(1+\frac{1}{2}\,\frac{zd}{r^2}\biggr).
+
+Similarly,
+
+\frac{1}{\sqrt{[z+(d/2)]^2+x^2+y^2}}\approx \frac{1}{r}\biggl(1-\frac{1}{2}\,\frac{zd}{r^2}\biggr).
+
+The difference of these two terms gives for the potential
+
+\phi(x,y,z)=\frac{1}{4\pi\epsilon_0}\,\frac{z}{r^3}\,qd. (6.9)
+
+The potential, and hence the field, which is its derivative, is proportional to qd , the product of the charge and the separation. This product is defined as the dipole moment of the two charges, for which we will use the symbol p (do not confuse with momentum!):
+
+p=qd. (6.10)
+
+Equation ( 6.9) can also be written as
+
+\phi(x,y,z)=\frac{1}{4\pi\epsilon_0}\,\frac{p\cos\theta}{r^2}, (6.11)
+
+since z/r=\cos\theta , where \theta is the angle between the axis of the dipole and the radius vector to the point (x,y,z) —see Fig. 6–1 . The potential of a dipole decreases as 1/r^2 for a given direction from the axis (whereas for a point charge it goes as 1/r ). The electric field \mathbf{E} of the dipole will then decrease as 1/r^3 .
+
+Figure Ch6-F3
+Caption: Fig. 6–3.Vector notation for a dipole.
+Image: figures/Ch6-F3.svg
+![Fig. 6–3.Vector notation for a dipole.](figures/Ch6-F3.svg)
+
+We can put our formula into a vector form if we define \mathbf{p} as a vector whose magnitude is p and whose direction is along the axis of the dipole, pointing from -q toward +q . Then
+
+p\cos\theta=\mathbf{p}\cdot\mathbf{e}_r, (6.12)
+
+where \mathbf{e}_r is the unit radial vector (Fig. 6–3 ). We can also represent the point (x,y,z) by \mathbf{r} . Then Dipole potential:
+
+\phi(\mathbf{r})=\frac{1}{4\pi\epsilon_0}\,\frac{\mathbf{p}\cdot\mathbf{e}_r}{r^2}= \frac{1}{4\pi\epsilon_0}\,\frac{\mathbf{p}\cdot\mathbf{r}}{r^3} (6.13)
+
+This formula is valid for a dipole with any orientation and position if \mathbf{r} represents the vector from the dipole to the point of interest.
+
+If we want the electric field of the dipole we can get it by taking the gradient of \phi . For example, the z -component of the field is -\frac{\partial \phi}{\partial z} . For a dipole oriented along the z -axis we can use ( 6.9):
+
+-\frac{\partial \phi}{\partial z}=-\frac{p}{4\pi\epsilon_0}\,\frac{\partial }{\partial z}\biggl(\frac{z}{r^3}\biggr) =-\frac{p}{4\pi\epsilon_0}\biggl(\frac{1}{r^3}-\frac{3z^2}{r^5}\biggr),
+
+or
+
+E_z=\frac{p}{4\pi\epsilon_0}\,\frac{3\cos^2\theta-1}{r^3}. (6.14)
+
+The x - and y -components are
+
+E_x=\frac{p}{4\pi\epsilon_0}\,\frac{3zx}{r^5},\quad E_y=\frac{p}{4\pi\epsilon_0}\,\frac{3zy}{r^5}.
+
+These two can be combined to give one component directed perpendicular to the z -axis, which we will call the transverse component E_\perp :
+
+E_\perp=\sqrt{E_x^2+E_y^2}=\frac{p}{4\pi\epsilon_0}\,\frac{3z}{r^5} \sqrt{x^2+y^2}
+
+or
+
+E_\perp=\frac{p}{4\pi\epsilon_0}\,\frac{3\cos\theta\sin\theta}{r^3}. (6.15)
+
+The transverse component E_\perp is in the xy -plane and points directly away from the axis of the dipole. The total field, of course, is
+
+E=\sqrt{E_z^2+E_\perp^2}.
+
+The dipole field varies inversely as the cube of the distance from the dipole. On the axis, at \theta=0 , it is twice as strong as at \theta=90^\circ . At both of these special angles the electric field has only a z -component, but of opposite sign at the two places (Fig. 6–4 ).
+
+Figure Ch6-F4
+Caption: Fig. 6–4.The electric field of a dipole.
+Image: figures/Ch6-F4.svg
+![Fig. 6–4.The electric field of a dipole.](figures/Ch6-F4.svg)

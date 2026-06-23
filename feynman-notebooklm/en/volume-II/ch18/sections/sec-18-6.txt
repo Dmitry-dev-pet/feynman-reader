@@ -1,0 +1,89 @@
+18–6 Solving Maxwell’s equations; the potentials and the wave equation
+
+Now we would like to do something mathematical; we want to write Maxwell’s equations in a simpler form. You may consider that we are complicating them, but if you will be patient a little bit, they will suddenly come out simpler. Although by this time you are thoroughly used to each of the Maxwell equations, there are many pieces that must all be put together. That’s what we want to do.
+
+We begin with \mathbf{d}iv{\mathbf{B}}=0 —the simplest of the equations. We know that it implies that \mathbf{B} is the curl of something. So, if we write
+
+\mathbf{B}=\mathbf{c}url{\mathbf{A}}, (18.16)
+
+we have already solved one of Maxwell’s equations. (Incidentally, you appreciate that it remains true that another vector \mathbf{A}' would be just as good if \mathbf{A}'=\mathbf{A}+\boldsymbol{\nabla}{\psi} —where \psi is any scalar field—because the curl of \boldsymbol{\nabla}{\psi} is zero, and \mathbf{B} is still the same. We have talked about that before.)
+
+We take next the Faraday law, \mathbf{c}url{\mathbf{E}}=-\frac{\partial \mathbf{B}}{\partial t} , because it doesn’t involve any currents or charges. If we write \mathbf{B} as \mathbf{c}url{\mathbf{A}} and differentiate with respect to t , we can write Faraday’s law in the form
+
+\mathbf{c}url{\mathbf{E}}=-\frac{\partial }{\partial t}\,\mathbf{c}url{\mathbf{A}}.
+
+Since we can differentiate either with respect to time or to space first, we can also write this equation as
+
+\mathbf{c}url{\biggl(\mathbf{E}+\frac{\partial \mathbf{A}}{\partial t}\biggr)}=\FLPzero. (18.17)
+
+We see that \mathbf{E}+\frac{\partial \mathbf{A}}{\partial t} is a vector whose curl is equal to zero. Therefore that vector is the gradient of something. When we worked on electrostatics, we had \mathbf{c}url{\mathbf{E}}=\FLPzero , and then we decided that \mathbf{E} itself was the gradient of something. We took it to be the gradient of -\phi (the minus for technical convenience). We do the same thing for \mathbf{E}+\frac{\partial \mathbf{A}}{\partial t} ; we set
+
+\mathbf{E}+\frac{\partial \mathbf{A}}{\partial t}=-\boldsymbol{\nabla}{\phi}. (18.18)
+
+We use the same symbol \phi so that, in the electrostatic case where nothing changes with time and the \frac{\partial \mathbf{A}}{\partial t} term disappears, \mathbf{E} will be our old -\boldsymbol{\nabla}{\phi} . So Faraday’s equation can be put in the form
+
+\mathbf{E}=-\boldsymbol{\nabla}{\phi}-\frac{\partial \mathbf{A}}{\partial t}. (18.19)
+
+We have solved two of Maxwell’s equations already, and we have found that to describe the electromagnetic fields \mathbf{E} and \mathbf{B} , we need four potential functions: a scalar potential \phi and a vector potential \mathbf{A} , which is, of course, three functions.
+
+Now that \mathbf{A} determines part of \mathbf{E} , as well as \mathbf{B} , what happens when we change \mathbf{A} to \mathbf{A}'=\mathbf{A}+\boldsymbol{\nabla}{\psi} ? In general, \mathbf{E} would change if we didn’t take some special precaution. We can, however, still allow \mathbf{A} to be changed in this way without affecting the fields \mathbf{E} and \mathbf{B} —that is, without changing the physics—if we always change \mathbf{A} and \phi together by the rules
+
+\mathbf{A}'=\mathbf{A}+\boldsymbol{\nabla}{\psi},\quad \phi'=\phi-\frac{\partial \psi}{\partial t}. (18.20)
+
+Then neither \mathbf{B} nor \mathbf{E} , obtained from Eq. ( 18.19), is changed.
+
+Previously, we chose to make \mathbf{d}iv{\mathbf{A}}=0 , to make the equations of statics somewhat simpler. We are not going to do that now; we are going to make a different choice. But we’ll wait a bit before saying what the choice is, because later it will be clear why the choice is made.
+
+Now we return to the two remaining Maxwell equations which will give us relations between the potentials and the sources \rho and \mathbf{j} . Once we can determine \mathbf{A} and \phi from the currents and charges, we can always get \mathbf{E} and \mathbf{B} from Eqs. ( 18.16) and ( 18.19), so we will have another form of Maxwell’s equations.
+
+We begin by substituting Eq. ( 18.19) into \mathbf{d}iv{\mathbf{E}}=\rho/\epsilon_0 ; we get
+
+\mathbf{d}iv{\biggl(-\boldsymbol{\nabla}{\phi}-\frac{\partial \mathbf{A}}{\partial t}\biggr)}=\frac{\rho}{\epsilon_0},
+
+which we can write also as
+
+-\nabla^2\phi-\frac{\partial }{\partial t}\,\mathbf{d}iv{\mathbf{A}}=\frac{\rho}{\epsilon_0}. (18.21)
+
+This is one equation relating \phi and \mathbf{A} to the sources.
+
+Our final equation will be the most complicated. We start by rewriting the fourth Maxwell equation as
+
+c^2\mathbf{c}url{\mathbf{B}}-\frac{\partial \mathbf{E}}{\partial t}=\frac{\mathbf{j}}{\epsilon_0},
+
+and then substitute for \mathbf{B} and \mathbf{E} in terms of the potentials, using Eqs. ( 18.16) and ( 18.19):
+
+c^2\mathbf{c}url{(\mathbf{c}url{\mathbf{A}})}-\frac{\partial }{\partial t}\, \biggl(-\boldsymbol{\nabla}{\phi}-\frac{\partial \mathbf{A}}{\partial t}\biggr)= \frac{\mathbf{j}}{\epsilon_0}.
+
+The first term can be rewritten using the algebraic identity: \mathbf{c}url{(\mathbf{c}url{\mathbf{A}})}= \boldsymbol{\nabla}{(\mathbf{d}iv{\mathbf{A}})}-\nabla^2\mathbf{A} ; we get
+
+\begin{aligned} -c^2\nabla^2\mathbf{A}&+c^2\boldsymbol{\nabla}{(\mathbf{d}iv{\mathbf{A}})}\\[.5ex] &+\frac{\partial }{\partial t}\,\boldsymbol{\nabla}{\phi}+\frac{\partial^2\mathbf{A}}{\partial t^2}= \frac{\mathbf{j}}{\epsilon_0}. \end{aligned} (18.22)
+
+It’s not very simple!
+
+Fortunately, we can now make use of our freedom to choose arbitrarily the divergence of \mathbf{A} . What we are going to do is to use our choice to fix things so that the equations for \mathbf{A} and for \phi are separated but have the same form. We can do this by taking 2
+
+\mathbf{d}iv{\mathbf{A}}=-\frac{1}{c^2}\,\frac{\partial \phi}{\partial t}. (18.23)
+
+When we do that, the two middle terms in \mathbf{A} and \phi in Eq. ( 18.22) cancel, and that equation becomes much simpler:
+
+\nabla^2\mathbf{A}-\frac{1}{c^2}\,\frac{\partial^2\mathbf{A}}{\partial t^2}= -\frac{\mathbf{j}}{\epsilon_0 c^2}. (18.24)
+
+And our equation for \phi —Eq. ( 18.21)—takes on the same form:
+
+\nabla^2\phi-\frac{1}{c^2}\,\frac{\partial^2\phi}{\partial t^2}= -\frac{\rho}{\epsilon_0}. (18.25)
+
+What a beautiful set of equations! They are beautiful, first, because they are nicely separated—with the charge density, goes \phi ; with the current, goes \mathbf{A} . Furthermore, although the left side looks a little funny—a Laplacian together with a \partial^2/\partial t^2 —when we unfold it we see
+
+\frac{\partial^2\phi}{\partial x^2}+ \frac{\partial^2\phi}{\partial y^2}+ \frac{\partial^2\phi}{\partial z^2}- \frac{1}{c^2}\,\frac{\partial^2\phi}{\partial t^2}= -\frac{\rho}{\epsilon_0}. (18.26)
+
+It has a nice symmetry in x , y , z , t —the -1/c^2 is necessary because, of course, time and space are different; they have different units.
+
+Maxwell’s equations have led us to a new kind of equation for the potentials \phi and \mathbf{A} but to the same mathematical form for all four functions \phi , A_x , A_y , and A_z . Once we learn how to solve these equations, we can get \mathbf{B} and \mathbf{E} from \mathbf{c}url{\mathbf{A}} and -\boldsymbol{\nabla}{\phi}-\frac{\partial \mathbf{A}}{\partial t} . We have another form of the electromagnetic laws exactly equivalent to Maxwell’s equations, and in many situations they are much simpler to handle.
+
+We have, in fact, already solved an equation much like Eq. ( 18.26). When we studied sound in Chapter 47 of Vol. I, we had an equation of the form
+
+\frac{\partial^2\phi}{\partial x^2}= \frac{1}{c^2}\,\frac{\partial^2\phi}{\partial t^2},
+
+and we saw that it described the propagation of waves in the x -direction at the speed c . Equation ( 18.26) is the corresponding wave equation for three dimensions. So in regions where there are no longer any charges and currents, the solution of these equations is not that \phi and \mathbf{A} are zero. (Although that is indeed one possible solution.) There are solutions in which there is some set of \phi and \mathbf{A} which are changing in time but always moving out at the speed c . The fields travel onward through free space, as in our example at the beginning of the chapter.
+
+With Maxwell’s new term in Eq. IV, we have been able to write the field equations in terms of \mathbf{A} and \phi in a form that is simple and that makes immediately apparent that there are electromagnetic waves. For many practical purposes, it will still be convenient to use the original equations in terms of \mathbf{E} and \mathbf{B} . But they are on the other side of the mountain we have already climbed. Now we are ready to cross over to the other side of the peak. Things will look different—we are ready for some new and beautiful views.

@@ -1,0 +1,39 @@
+22–8 Other circuit elements
+
+Figure Ch22-F26
+Caption: Fig. 22-26.Equivalent circuit of a mutual inductance.
+Image: figures/Ch22-F26.svg
+![Fig. 22-26.Equivalent circuit of a mutual inductance.](figures/Ch22-F26.svg)
+
+We have so far defined only the ideal circuit impedances—the inductance, the capacitance, and the resistance—as well as the ideal voltage generator. We want now to show that other elements, such as mutual inductances or transistors or vacuum tubes, can be described by using only the same basic elements. Suppose that we have two coils and that on purpose, or otherwise, some flux from one of the coils links the other, as shown in Fig. 22–26 (a). Then the two coils will have a mutual inductance M such that when the current varies in one of the coils, there will be a voltage generated in the other. Can we take into account such an effect in our equivalent circuits? We can in the following way. We have seen that the induced emf’s in each of two interacting coils can be written as the sum of two parts:
+
+\begin{aligned} \emf_1&=-L_1\,\frac{d I_1}{d t}\pm M\,\frac{d I_2}{d t},\\[1.5ex] \emf_2&=-L_2\,\frac{d I_2}{d t}\pm M\,\frac{d I_1}{d t}. \end{aligned} (22.34)
+
+The first term comes from the self-inductance of the coil, and the second term comes from its mutual inductance with the other coil. The sign of the second term can be plus or minus, depending on the way the flux from one coil links the other. Making the same approximations we used in describing an ideal inductance, we would say that the potential difference across the terminals of each coil is equal to the electromotive force in the coil. Then the two equations of ( 22.34) are the same as the ones we would get from the circuit of Fig. 22–26 (b), provided the electromotive force in each of the two circuits shown depends on the current in the opposite circuit according to the relations
+
+\emf_1=\pm i\omega MI_2,\quad \emf_2=\pm i\omega MI_1. (22.35)
+
+So what we can do is represent the effect of the self-inductance in a normal way but replace the effect of the mutual inductance by an auxiliary ideal voltage generator. We must in addition, of course, have the equation that relates this emf to the current in some other part of the circuit; but so long as this equation is linear, we have just added more linear equations to our circuit equations, and all of our earlier conclusions about equivalent circuits and so forth are still correct.
+
+In addition to mutual inductances there may also be mutual capacitances. So far, when we have talked about condensers we have always imagined that there were only two electrodes, but in many situations, for example in a vacuum tube, there may be many electrodes close to each other. If we put an electric charge on any one of the electrodes, its electric field will induce charges on each of the other electrodes and affect its potential. As an example, consider the arrangement of four plates shown in Fig. 22–27 (a). Suppose these four plates are connected to external circuits by means of the wires A , B , C , and D . So long as we are only worried about electrostatic effects, the equivalent circuit of such an arrangement of electrodes is as shown in part (b) of the figure. The electrostatic interaction of any electrode with each of the others is equivalent to a capacity between the two electrodes.
+
+Figure Ch22-F27
+Caption: Fig. 22-27.Equivalent circuit of mutual capacitance.
+Image: figures/Ch22-F27.svg
+![Fig. 22-27.Equivalent circuit of mutual capacitance.](figures/Ch22-F27.svg)
+
+Finally, let’s consider how we should represent such complicated devices as transistors and radio tubes in an ac circuit. We should point out at the start that such devices are often operated in such a way that the relationship between the currents and voltages is not at all linear. In such cases, those statements we have made which depend on the linearity of equations are, of course, no longer correct. On the other hand, in many applications the operating characteristics are sufficiently linear that we may consider the transistors and tubes to be linear devices. By this we mean that the alternating currents in, say, the plate of a vacuum tube are linearly proportional to the voltages that appear on the other electrodes, say the grid voltage and the plate voltage. When we have such linear relationships, we can incorporate the device into our equivalent circuit representation.
+
+Figure Ch22-F28
+Caption: Fig. 22-28.A low-frequency equivalent circuit of a vacuum triode.
+Image: figures/Ch22-F28.svg
+![Fig. 22-28.A low-frequency equivalent circuit of a vacuum triode.](figures/Ch22-F28.svg)
+
+As in the case of the mutual inductance, our representation will have to include auxiliary voltage generators which describe the influence of the voltages or currents in one part of the device on the currents or voltages in another part. For example, the plate circuit of a triode can usually be represented by a resistance in series with an ideal voltage generator whose source strength is proportional to the grid voltage. We get the equivalent circuit shown in Fig. 22–28. 2 Similarly, the collector circuit of a transistor is conveniently represented as a resistor in series with an ideal voltage generator whose source strength is proportional to the current from the emitter to the base of the transistor. The equivalent circuit is then like that in Fig. 22–29. So long as the equations which describe the operation are linear, we can use such representations for tubes or transistors. Then, when they are incorporated in a complicated network, our general conclusions about the equivalent representation of any arbitrary connection of elements is still valid.
+
+Figure Ch22-F29
+Caption: Fig. 22-29.A low-frequency equivalent circuit of a transistor.
+Image: figures/Ch22-F29.svg
+![Fig. 22-29.A low-frequency equivalent circuit of a transistor.](figures/Ch22-F29.svg)
+
+There is one remarkable thing about transistor and radio tube circuits which is different from circuits containing only impedances: the real part of the effective impedance z_{\text{eff}} can become negative. We have seen that the real part of z represents the loss of energy. But it is the important characteristic of transistors and tubes that they supply energy to the circuit. (Of course they don’t just “make” energy; they take energy from the dc circuits of the power supplies and convert it into ac energy.) So it is possible to have a circuit with a negative resistance. Such a circuit has the property that if you connect it to an impedance with a positive real part, i.e., a positive resistance, and arrange matters so that the sum of the two real parts is exactly zero, then there is no dissipation in the combined circuit. If there is no loss of energy, any alternating voltage once started will remain forever. This is the basic idea behind the operation of an oscillator or signal generator which can be used as a source of alternating voltage at any desired frequency.

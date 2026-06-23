@@ -1,0 +1,163 @@
+33–4 The reflected and transmitted waves
+
+Now we are ready to apply our boundary conditions to the waves we wrote down in Section 33–2 . We had:
+
+\begin{aligned} \mathbf{E}_i&=\mathbf{E}_0e^{i(\omega t-k_xx-k_yy)},\\[1.3ex] \mathbf{E}_r&=\mathbf{E}_0'e^{i(\omega't-k_x'x-k_y'y)},\\[1.3ex] \mathbf{E}_t&=\mathbf{E}_0''e^{i(\omega''t-k_x''x-k_y''y)},\\[1.5ex] \mathbf{B}_i&=\frac{\mathbf{k}\times\mathbf{E}_i}{\omega},\\[1ex] \mathbf{B}_r&=\frac{\mathbf{k}'\times\mathbf{E}_r}{\omega'},\\[1ex] \mathbf{B}_t&=\frac{\mathbf{k}''\times\mathbf{E}_t}{\omega''}. \end{aligned} (33.32)
+
+We have one further bit of knowledge: \mathbf{E} is perpendicular to its propagation vector \mathbf{k} for each wave.
+
+The results will depend on the direction of the \mathbf{E} -vector (the “polarization”) of the incoming wave. The analysis is much simplified if we treat separately the case of an incident wave with its \mathbf{E} -vector parallel to the “plane of incidence” (that is, the xy -plane) and the case of an incident wave with the \mathbf{E} -vector perpendicular to the plane of incidence. A wave of any other polarization is just a linear combination of two such waves. In other words, the reflected and transmitted intensities are different for different polarizations, and it is easiest to pick the two simplest cases and treat them separately.
+
+We will carry through the analysis for an incoming wave polarized perpendicular to the plane of incidence and then just give you the result for the other. We are cheating a little by taking the simplest case, but the principle is the same for both. So we take that \mathbf{E}_i has only a z -component, and since all the \mathbf{E} -vectors are in the same direction we can leave off the vector signs.
+
+Figure Ch33-F6
+Caption: Fig. 33–6.Polarization of the reflected and transmitted waves when the [math]\FigE-field of the incident wave is perpendicular to the plane of incidence.
+Image: figures/Ch33-F6.svg
+![Fig. 33–6.Polarization of the reflected and transmitted waves when the [math]\FigE-field of the incident wave is perpendicular to the plane of incidence.](figures/Ch33-F6.svg)
+
+So long as both materials are isotropic, the induced oscillations of charges in the material will also be in the z -direction, and the \mathbf{E} -field of the transmitted and radiated waves will have only z -components. So for all the waves, E_x and E_y and P_x and P_y are zero. The waves will have their \mathbf{E} - and \mathbf{B} -vectors as drawn in Fig. 33–6 . (We are cutting a corner here on our original plan of getting everything from the equations. This result would also come out of the boundary conditions, but we can save a lot of algebra by using the physical argument. When you have some spare time, see if you can get the same result from the equations. It is clear that what we have said agrees with the equations; it is just that we have not shown that there are no other possibilities.)
+
+Now our boundary conditions, Eqs. ( 33.26) through ( 33.31), give relations between the components of \mathbf{E} and \mathbf{B} in regions 1 and 2 . For region 2 we have only the transmitted wave, but in region 1 we have two waves. Which one do we use? The fields in region 1 are, of course, the superposition of the fields of the incident and reflected waves. (Since each satisfies Maxwell’s equations, so does the sum.) So when we use the boundary conditions, we must use that
+
+\mathbf{E}_1=\mathbf{E}_i+\mathbf{E}_r,\quad \mathbf{E}_2=\mathbf{E}_t,
+
+and similarly for the \mathbf{B} ’s.
+
+For the polarization we are considering, Eqs. ( 33.26) and ( 33.28) give us no new information; only Eq. ( 33.27) is useful. It says that
+
+E_i+E_r=E_t,
+
+at the boundary, that is, for x=0 . So we have that
+
+E_0e^{i(\omega t-k_yy)}+E_0'e^{i(\omega't-k_y'y)}= E_0''e^{i(\omega''t-k_y''y)}, (33.38)
+
+which must be true for all t and for all y . Suppose we look first at y=0 . Then we have
+
+E_0e^{i\omega t}+E_0'e^{i\omega't}= E_0''e^{i\omega''t}.
+
+This equation says that two oscillating terms are equal to a third oscillation. That can happen only if all the oscillations have the same frequency. (It is impossible for three—or any number—of such terms with different frequencies to add to zero for all times.) So
+
+\omega''=\omega'=\omega. (33.39)
+
+As we knew all along, the frequencies of the reflected and transmitted waves are the same as that of the incident wave.
+
+We should really have saved ourselves some trouble by putting that in at the beginning, but we wanted to show you that it can also be got out of the equations. When you are doing a real problem, it is usually the best thing to put everything you know into the works right at the start and save yourself a lot of trouble.
+
+By definition, the magnitude of \mathbf{k} is given by k^2=n^2\omega^2/c^2 , so we have also that
+
+\frac{k''^2}{n_2^2}=\frac{k'^2}{n_1^2}=\frac{k^2}{n_1^2}. (33.40)
+
+Now look at Eq. ( 33.38) for t=0 . Using again the same kind of argument we have just made, but this time based on the fact that the equation must hold for all values of y , we get that
+
+k_y''=k_y'=k_y. (33.41)
+
+From Eq. ( 33.40), k'^2=k^2 , so
+
+k_x'^2+k_y'^2=k_x^2+k_y^2.
+
+Combining this with Eq. ( 33.41), we have that
+
+k_x'^2=k_x^2,
+
+or that k_x'=\pm k_x . The positive sign makes no sense; that would not give a reflected wave, but another incident wave, and we said at the start that we were solving the problem of only one incident wave. So we have
+
+k_x'=-k_x. (33.42)
+
+The two equations ( 33.41) and ( 33.42) give us that the angle of reflection is equal to the angle of incidence, as we expected. (See Fig. 33–3 .) The reflected wave is
+
+E_r=E_0'e^{i(\omega t+k_xx-k_yy)}. (33.43)
+
+For the transmitted wave we already have that
+
+k_y''=k_y,
+
+and
+
+\frac{k''^2}{n_2^2}=\frac{k^2}{n_1^2}; (33.44)
+
+so we can solve these to find k_x'' . We get
+
+k_x''^2=k''^2-k_y''^2=\frac{n_2^2}{n_1^2}\,k^2-k_y^2. (33.45)
+
+Suppose for a moment that n_1 and n_2 are real numbers (that the imaginary parts of the indexes are very small). Then all the k ’s are also real numbers, and from Fig. 33–3 we find that
+
+\frac{k_y}{k}=\sin\theta_i,\quad \frac{k_y''}{k''}=\sin\theta_t. (33.46)
+
+From ( 33.44) we get that
+
+n_2\sin\theta_t=n_1\sin\theta_i, (33.47)
+
+which is Snell’s law of refraction—again, something we already knew. If the indexes are not real, the wave numbers are complex, and we have to use Eq. ( 33.45). [We could still define the angles \theta_i and \theta_t by Eq. ( 33.46), and Snell’s law, Eq. ( 33.47), would be true in general. But then the “angles” also are complex numbers, thereby losing their simple geometrical interpretation as angles. It is best then to describe the behavior of the waves by their complex k_x or k_x'' values.]
+
+So far, we haven’t found anything new. We have just had the simple-minded delight of getting some obvious answers from a complicated mathematical machinery. Now we are ready to find the amplitudes of the waves which we have not yet known. Using our results for the \omega ’s and k ’s, the exponential factors in Eq. ( 33.38) can be cancelled, and we get
+
+E_0+E_0'=E_0''. (33.48)
+
+Since both E_0' and E_0'' are unknown, we need one more relationship. We must use another of the boundary conditions. The equations for E_x and E_y are no help, because all the \mathbf{E} ’s have only a z -component. So we must use the conditions on \mathbf{B} . Let’s try Eq. ( 33.29):
+
+B_{x2}=B_{x1}.
+
+From Eqs. ( 33.35) through ( 33.37),
+
+\begin{aligned} B_{xi}&=\frac{k_yE_i}{\omega},\\[1ex] B_{xr}&=\frac{k_y'E_r}{\omega'},\\[1ex] B_{xt}&=\frac{k_y''E_t}{\omega''}. \end{aligned}
+
+Recalling that \omega''=\omega'=\omega and k_y''=k_y'=k_y , we get that
+
+E_0+E_0'=E_0''.
+
+But this is just Eq. ( 33.48) all over again! We’ve just wasted time getting something we already knew.
+
+We could try Eq. ( 33.30), B_{z2}=B_{z1} , but there are no z -components of \mathbf{B} ! So there’s only one equation left: Eq. ( 33.31), B_{y2}=B_{y1} . For the three waves:
+
+\begin{aligned} B_{yi}=-\frac{k_xE_i}{\omega},\\[1ex] B_{yr}=-\frac{k_x'E_r}{\omega'},\\[1ex] B_{yt}=-\frac{k_x''E_t}{\omega''}. \end{aligned} (33.49)
+
+Putting for E_i , E_r , and E_t the wave expression for x=0 (to be at the boundary), the boundary condition is
+
+\frac{k_x}{\omega}\,E_0e^{i(\omega t-k_yy)}+ \frac{k_x'}{\omega'}\,E_0'e^{i(\omega't-k_y'y)}= \frac{k_x''}{\omega''}\,E_0''e^{i(\omega''t-k_y''y)}.
+
+Again all \omega ’s and k_y ’s are equal, so this reduces to
+
+k_xE_0+k_x'E_0'=k_x''E_0''. (33.50)
+
+This gives us an equation for the E ’s that is different from Eq. ( 33.48). With the two, we can solve for E_0' and E_0'' . Remembering that k_x'=-k_x , we get
+
+\begin{aligned} E_0'&=\frac{k_x-k_x''}{k_x+k_x''}\,E_0,\\[1ex] E_0''&=\frac{2k_x}{k_x+k_x''}\,E_0. \end{aligned} (33.51)
+
+These, together with Eq. ( 33.45) or Eq. ( 33.46) for k_x'' , give us what we wanted to know. We will discuss the consequences of this result in the next section.
+
+Figure Ch33-F7
+Caption: Fig. 33–7.Polarization of the waves when the [math]\FigE-field of the incident wave is parallel to the plane of incidence.
+Image: figures/Ch33-F7.svg
+![Fig. 33–7.Polarization of the waves when the [math]\FigE-field of the incident wave is parallel to the plane of incidence.](figures/Ch33-F7.svg)
+
+If we begin with a wave polarized with its \mathbf{E} -vector parallel to the plane of incidence, \mathbf{E} will have both x - and y -components, as shown in Fig. 33–7. The algebra is straightforward but more complicated. (The work can be somewhat reduced by expressing things in this case in terms of the magnetic fields, which are all in the z -direction.) One finds that
+
+\left|E_0'\right|=\frac{n_2^2k_x-n_1^2k_x''}{n_2^2k_x+n_1^2k_x''}\, \left|E_0\right| (33.53)
+
+and
+
+\left|E_0''\right|=\frac{2n_1n_2k_x}{n_2^2k_x+n_1^2k_x''}\, \left|E_0\right|. (33.54)
+
+Let’s see whether our results agree with those we got earlier. Equation ( 33.3) is the result we worked out in Chapter 33 of Volume I for the ratio of the intensity of the reflected wave to the intensity of the incident wave. Then, however, we were considering only real indexes. For real indexes (and k ’s), we can write
+
+\begin{aligned} k_x=k\cos\theta_i=\frac{\omega n_1}{c}\cos\theta_i,\\[1ex] k_x''=k''\cos\theta_t=\frac{\omega n_2}{c}\cos\theta_t. \end{aligned}
+
+Substituting in Eq. ( 33.51), we have
+
+\frac{E_0'}{E_0}=\frac{n_1\cos\theta_i-n_2\cos\theta_t} {n_1\cos\theta_i+n_2\cos\theta_t}, (33.55)
+
+which does not look the same as Eq. ( 33.3). It will, however, if we use Snell’s law to get rid of the n ’s. Setting n_2=n_1\sin\theta_i/\sin\theta_t , and multiplying the numerator and denominator by \sin\theta_t , we get
+
+\frac{E_0'}{E_0}=\frac{\cos\theta_i\sin\theta_t-\sin\theta_i\cos\theta_t} {\cos\theta_i\sin\theta_t+\sin\theta_i\cos\theta_t}.
+
+The numerator and denominator are just the sines of -(\theta_i-\theta_t) and (\theta_i+\theta_t) ; we get
+
+\frac{E_0'}{E_0}=-\frac{\sin(\theta_i-\theta_t)} {\sin(\theta_i+\theta_t)}. (33.56)
+
+Since E_0' and E_0 are in the same material, the intensities are proportional to the squares of the electric fields, and we get the same result as before. Similarly, Eq. ( 33.53) is the same as Eq. ( 33.4).
+
+For waves which arrive at normal incidence, \theta_i=0 and \theta_t=0 . Equation ( 33.56) gives 0/0 , which is not very useful. We can, however, go back to Eq. ( 33.55), which gives
+
+\frac{I_r}{I_i}=\biggl(\frac{E_0'}{E_0}\biggr)^2=\biggl( \frac{n_1-n_2}{n_1+n_2}\biggr)^2. (33.57)
+
+This result, naturally, applies for “either” polarization, since for normal incidence there is no special “plane of incidence.”

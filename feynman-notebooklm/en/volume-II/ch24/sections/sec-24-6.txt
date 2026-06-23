@@ -1,0 +1,40 @@
+24–6 Waveguide plumbing
+
+An important practical use of waveguides is for the transmission of high-frequency power, as, for example, in coupling the high-frequency oscillator or output amplifier of a radar set to an antenna. In fact, the antenna itself usually consists of a parabolic reflector fed at its focus by a waveguide flared out at the end to make a “horn” that radiates the waves coming along the guide. Although high frequencies can be transmitted along a coaxial cable, a waveguide is better for transmitting large amounts of power. First, the maximum power that can be transmitted along a line is limited by the breakdown of the insulation (solid or gas) between the conductors. For a given amount of power, the field strengths in a guide are usually less than they are in a coaxial cable, so higher powers can be transmitted before breakdown occurs. Second, the power losses in the coaxial cable are usually greater than in a waveguide. In a coaxial cable there must be insulating material to support the central conductor, and there is an energy loss in this material—particularly at high frequencies. Also, the current densities on the central conductor are quite high, and since the losses go as the square of the current density, the lower currents that appear on the walls of the guide result in lower energy losses. To keep these losses to a minimum, the inner surfaces of the guide are often plated with a material of high conductivity, such as silver.
+
+Figure Ch24-F9
+Caption: Fig. 24–9.Sections of waveguide connected with flanges.
+Image: figures/Ch24-F9.jpg
+![Fig. 24–9.Sections of waveguide connected with flanges.](figures/Ch24-F9.jpg)
+
+The problem of connecting a “circuit” with waveguides is quite different from the corresponding circuit problem at low frequencies, and is usually called microwave “plumbing.” Many special devices have been developed for the purpose. For instance, two sections of waveguide are usually connected together by means of flanges, as can be seen in Fig. 24–9. Such connections can, however, cause serious energy losses, because the surface currents must flow across the joint, which may have a relatively high resistance. One way to avoid such losses is to make the flanges as shown in the cross section drawn in Fig. 24–10. A small space is left between the adjacent sections of the guide, and a groove is cut in the face of one of the flanges to make a small cavity of the type shown in Fig. 23–16 (c). The dimensions are chosen so that this cavity is resonant at the frequency being used. This resonant cavity presents a high “impedance” to the currents, so relatively little current flows across the metallic joints (at a in Fig. 24–10). The high guide currents simply charge and discharge the “capacity” of the gap (at b in the figure), where there is little dissipation of energy.
+
+Figure Ch24-F10
+Caption: Fig. 24–10.A low-loss connection between two sections of waveguide.
+Image: figures/Ch24-F10.svg
+![Fig. 24–10.A low-loss connection between two sections of waveguide.](figures/Ch24-F10.svg)
+
+Suppose you want to stop a waveguide in a way that won’t result in reflected waves. Then you must put something at the end that imitates an infinite length of guide. You need a “termination” which acts for the guide like the characteristic impedance does for a transmission line—something that absorbs the arriving waves without making reflections. Then the guide will act as though it went on forever. Such terminations are made by putting inside the guide some wedges of resistance material carefully designed to absorb the wave energy while generating almost no reflected waves.
+
+Figure Ch24-F11
+Caption: Fig. 24–11.A waveguide “T.” (The flanges have plastic end caps to keep the inside clean while the “T” is not being used.)
+Image: figures/Ch24-F11.jpg
+![Fig. 24–11.A waveguide “T.” (The flanges have plastic end caps to keep the inside clean while the “T” is not being used.)](figures/Ch24-F11.jpg)
+
+If you want to connect three things together—for instance, one source to two different antennas—then you can use a “T” like the one shown in Fig. 24–11. Power fed in at the center section of the “T” will be split and go out the two side arms (and there may also be some reflected waves). You can see qualitatively from the sketches in Fig. 24–12 that the fields would spread out when they get to the end of the input section and make electric fields that will start waves going out the two arms. Depending on whether electric fields in the guide are parallel or perpendicular to the “top” of the “T,” the fields at the junction would be roughly as shown in (a) or (b) of Fig. 24–12.
+
+Figure Ch24-F12
+Caption: Fig. 24–12.The electric fields in a waveguide “T” for two possible field orientations.
+Image: figures/Ch24-F12.svg
+![Fig. 24–12.The electric fields in a waveguide “T” for two possible field orientations.](figures/Ch24-F12.svg)
+
+Finally, we would like to describe a device called a “unidirectional coupler,” which is very useful for telling what is going on after you have connected a complicated arrangement of waveguides. Suppose you want to know which way the waves are going in a particular section of guide—you might be wondering, for instance, whether or not there is a strong reflected wave. The unidirectional coupler takes out a small fraction of the power of a guide if there is a wave going one way, but none if the wave is going the other way. By connecting the output of the coupler to a detector, you can measure the “one-way” power in the guide.
+
+Figure Ch24-F13
+Caption: Fig. 24–13.A unidirectional coupler.
+Image: figures/Ch24-F13.svg
+![Fig. 24–13.A unidirectional coupler.](figures/Ch24-F13.svg)
+
+Figure 24–13 is a drawing of a unidirectional coupler; a piece of waveguide AB has another piece of waveguide CD soldered to it along one face. The guide CD is curved away so that there is room for the connecting flanges. Before the guides are soldered together, two (or more) holes have been drilled in each guide (matching each other) so that some of the fields in the main guide AB can be coupled into the secondary guide CD . Each of the holes acts like a little antenna that produces a wave in the secondary guide. If there were only one hole, waves would be sent in both directions and would be the same no matter which way the wave was going in the primary guide. But when there are two holes with a separation space equal to one-quarter of the guide wavelength, they will make two sources 90^\circ out of phase. Do you remember that we considered in Chapter 29 of Vol. I the interference of the waves from two antennas spaced \lambda/4 apart and excited 90^\circ out of phase in time? We found that the waves subtract in one direction and add in the opposite direction. The same thing will happen here. The wave produced in the guide CD will be going in the same direction as the wave in AB .
+
+If the wave in the primary guide is travelling from A toward B , there will be a wave at the output D of the secondary guide. If the wave in the primary guide goes from B toward A , there will be a wave going toward the end C of the secondary guide. This end is equipped with a termination, so that this wave is absorbed and there is no wave at the output of the coupler.

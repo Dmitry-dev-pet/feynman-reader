@@ -1,0 +1,386 @@
+# 2. Differential Calculus of Vector Fields
+
+## 2–1 Understanding physics
+
+The physicist needs a facility in looking at problems from several points of view. The exact analysis of real physical problems is usually quite complicated, and any particular physical situation may be too complicated to analyze directly by solving the differential equation. But one can still get a very good idea of the behavior of a system if one has some feel for the character of the solution in different circumstances. Ideas such as the field lines, capacitance, resistance, and inductance are, for such purposes, very useful. So we will spend much of our time analyzing them. In this way we will get a feel as to what should happen in different electromagnetic situations. On the other hand, none of the heuristic models, such as field lines, is really adequate and accurate for all situations. There is only one precise way of presenting the laws, and that is by means of differential equations. They have the advantage of being fundamental and, so far as we know, precise. If you have learned the differential equations you can always go back to them. There is nothing to unlearn.
+
+It will take you some time to understand what should happen in different circumstances. You will have to solve the equations. Each time you solve the equations, you will learn something about the character of the solutions. To keep these solutions in mind, it will be useful also to study their meaning in terms of field lines and of other concepts. This is the way you will really “understand” the equations. That is the difference between mathematics and physics. Mathematicians, or people who have very mathematical minds, are often led astray when “studying” physics because they lose sight of the physics. They say: “Look, these differential equations—the Maxwell equations—are all there is to electrodynamics; it is admitted by the physicists that there is nothing which is not contained in the equations. The equations are complicated, but after all they are only mathematical equations and if I understand them mathematically inside out, I will understand the physics inside out.” Only it doesn’t work that way. Mathematicians who study physics with that point of view—and there have been many of them—usually make little contribution to physics and, in fact, little to mathematics. They fail because the actual physical situations in the real world are so complicated that it is necessary to have a much broader understanding of the equations.
+
+What it means really to understand an equation—that is, in more than a strictly mathematical sense—was described by Dirac. He said: “I understand what an equation means if I have a way of figuring out the characteristics of its solution without actually solving it.” So if we have a way of knowing what should happen in given circumstances without actually solving the equations, then we “understand” the equations, as applied to these circumstances. A physical understanding is a completely unmathematical, imprecise, and inexact thing, but absolutely necessary for a physicist.
+
+Ordinarily, a course like this is given by developing gradually the physical ideas—by starting with simple situations and going on to more and more complicated situations. This requires that you continuously forget things you previously learned—things that are true in certain situations, but which are not true in general. For example, the “law” that the electrical force depends on the square of the distance is not always true. We prefer the opposite approach. We prefer to take first the complete laws, and then to step back and apply them to simple situations, developing the physical ideas as we go along. And that is what we are going to do.
+
+Our approach is completely opposite to the historical approach in which one develops the subject in terms of the experiments by which the information was obtained. But the subject of physics has been developed over the past 200 years by some very ingenious people, and as we have only a limited time to acquire our knowledge, we cannot possibly cover everything they did. Unfortunately one of the things that we shall have a tendency to lose in these lectures is the historical, experimental development. It is hoped that in the laboratory some of this lack can be corrected. You can also fill in what we must leave out by reading the Encyclopedia Britannica, which has excellent historical articles on electricity and on other parts of physics. You will also find historical information in many textbooks on electricity and magnetism.
+
+## 2–2 Scalar and vector fields—T\boldsymbol{T} and h\FLPh
+
+We begin now with the abstract, mathematical view of the theory of electricity and magnetism. The ultimate idea is to explain the meaning of the laws given in Chapter 1. But to do this we must first explain a new and peculiar notation that we want to use. So let us forget electromagnetism for the moment and discuss the mathematics of vector fields. It is of very great importance, not only for electromagnetism, but for all kinds of physical circumstances. Just as ordinary differential and integral calculus is so important to all branches of physics, so also is the differential calculus of vectors. We turn to that subject.
+
+Listed below are a few facts from the algebra of vectors. It is assumed that you already know them.
+
+\begin{aligned} &\mathbf{A}\,\cdot\,\mathbf{B}=\text{scalar}=A_xB_x+A_yB_y+A_zB_z\\[1ex] &\mathbf{A}\times\mathbf{B}=\text{vector}\\[1pt] &\begin{alignedat}{5} % ebook insert: &\qquad(\mathbf{A}\times\mathbf{B})_z&&=A_x&&B_y&&-A_y&&B_x\\[.25ex] % ebook insert: &\qquad(\mathbf{A}\times\mathbf{B})_x&&=A_y&&B_z&&-A_z&&B_y\\[.25ex] % ebook insert: &\qquad(\mathbf{A}\times\mathbf{B})_y&&=A_z&&B_x&&-A_x&&B_z \end{alignedat}\\[1ex] &\mathbf{A}\times\mathbf{A}=\FLPzero\\[1ex] &\mathbf{A}\cdot(\mathbf{A}\times\mathbf{B})=0\\[1ex] &\mathbf{A}\cdot(\mathbf{B}\times\mathbf{C})=(\mathbf{A}\times\mathbf{B})\cdot\mathbf{C}\\[1ex] &\mathbf{A}\times(\mathbf{B}\times\mathbf{C})=\mathbf{B}(\mathbf{A}\cdot\mathbf{C})-\mathbf{C}(\mathbf{A}\cdot\mathbf{B}) \end{aligned} (2.1)
+
+Also we will want to use the two following equalities from the calculus:
+
+\begin{aligned} \Delta f(x,y,z)=\frac{\partial f}{\partial x}\,\Delta x+\frac{\partial f}{\partial y}\,\Delta y+\frac{\partial f}{\partial z}\,\Delta z,\\[1ex] \frac{\partial^2f}{\partial x\,\partial y}= \frac{\partial^2f}{\partial y\,\partial x}. \end{aligned} (2.7)
+
+The first equation ( 2.7) is, of course, true only in the limit that \Delta x , \Delta y , and \Delta z go toward zero.
+
+The simplest possible physical field is a scalar field. By a field, you remember, we mean a quantity which depends upon position in space. By a scalar field we merely mean a field which is characterized at each point by a single number—a scalar. Of course the number may change in time, but we need not worry about that for the moment. We will talk about what the field looks like at a given instant. As an example of a scalar field, consider a solid block of material which has been heated at some places and cooled at others, so that the temperature of the body varies from point to point in a complicated way. Then the temperature will be a function of x , y , and z , the position in space measured in a rectangular coordinate system. Temperature is a scalar field.
+
+### Figure Ch2-F1
+Caption: Fig. 2–1. Temperature TT is an example of a scalar field. With each point (x,y,z)(x,y,z) in space there is associated a number T(x,y,z)T(x,y,z). All points on the surface marked T=20∘T=20^\circ (shown as a curve at z=0z=0) are at the same temperature. The arrows are samples of the heat flow vector h\Figh.
+Image: figures/Ch2-F1.svg
+![Fig. 2–1. Temperature TT is an example of a scalar field. With each point (x,y,z)(x,y,z) in space there is associated a number T(x,y,z)T(x,y,z). All points on the surface marked T=20∘T=20^\circ (shown as a curve at z=0z=0) are at the same temperature. The arrows are samples of the heat flow vector h\Figh.](figures/Ch2-F1.svg)
+
+One way of thinking about scalar fields is to imagine “contours” which are imaginary surfaces drawn through all points for which the field has the same value, just as contour lines on a map connect points with the same height. For a temperature field the contours are called “isothermal surfaces” or isotherms. Figure 2–1 illustrates a temperature field and shows the dependence of T on x and y when z=0 . Several isotherms are drawn.
+
+### Figure Ch2-F2
+Caption: Fig. 2–2. The velocity of the atoms in a rotating object is an example of a vector field.
+Image: figures/Ch2-F2.svg
+![Fig. 2–2. The velocity of the atoms in a rotating object is an example of a vector field.](figures/Ch2-F2.svg)
+
+There are also vector fields. The idea is very simple. A vector is given for each point in space. The vector varies from point to point. As an example, consider a rotating body. The velocity of the material of the body at any point is a vector which is a function of position (Fig. 2–2 ). As a second example, consider the flow of heat in a block of material. If the temperature in the block is high at one place and low at another, there will be a flow of heat from the hotter places to the colder. The heat will be flowing in different directions in different parts of the block. The heat flow is a directional quantity which we call \FLPh . Its magnitude is a measure of how much heat is flowing. Examples of the heat flow vector are also shown in Fig. 2–1 .
+
+### Figure Ch2-F3
+Caption: Fig. 2–3. Heat flow is a vector field. The vector h\Figh points along the direction of the flow. Its magnitude is the energy transported per unit time across a surface element oriented perpendicular to the flow, divided by the area of the surface element.
+Image: figures/Ch2-F3.svg
+![Fig. 2–3. Heat flow is a vector field. The vector h\Figh points along the direction of the flow. Its magnitude is the energy transported per unit time across a surface element oriented perpendicular to the flow, divided by the area of the surface element.](figures/Ch2-F3.svg)
+
+Let’s make a more precise definition of \FLPh : The magnitude of the vector heat flow at a point is the amount of thermal energy that passes, per unit time and per unit area, through an infinitesimal surface element at right angles to the direction of flow. The vector points in the direction of flow (see Fig. 2–3 ). In symbols: If \Delta J is the thermal energy that passes per unit time through the surface element \Delta a , then
+
+\FLPh=\frac{\Delta J}{\Delta a}\,\mathbf{e}_f, (2.9)
+
+where \mathbf{e}_f is a unit vector in the direction of flow.
+
+### Figure Ch2-F4
+Caption: Fig. 2–4. The heat flow through Δa2\Delta a_2 is the same as through Δa1\Delta a_1.
+Image: figures/Ch2-F4.svg
+![Fig. 2–4. The heat flow through Δa2\Delta a_2 is the same as through Δa1\Delta a_1.](figures/Ch2-F4.svg)
+
+The vector \FLPh can be defined in another way—in terms of its components. We ask how much heat flows through a small surface at any angle with respect to the flow. In Fig. 2–4 we show a small surface \Delta a_2 inclined with respect to \Delta a_1 , which is perpendicular to the flow. The unit vector \FLPn is normal to the surface \Delta a_2 . The angle \theta between \FLPn and \FLPh is the same as the angle between the surfaces (since \FLPh is normal to \Delta a_1 ). Now what is the heat flow per unit area through \Delta a_2 ? The flow through \Delta a_2 is the same as through \Delta a_1 ; only the areas are different. In fact, \Delta a_1=\Delta a_2\cos\theta . The heat flow through \Delta a_2 is
+
+\frac{\Delta J}{\Delta a_2}=\frac{\Delta J}{\Delta a_1}\cos\theta= \FLPh\cdot\FLPn. (2.10)
+
+We interpret this equation: the heat flow (per unit time and per unit area) through any surface element whose unit normal is \FLPn , is given by \FLPh\cdot\FLPn . Equally, we could say: the component of the heat flow perpendicular to the surface element \Delta a_2 is \FLPh\cdot\FLPn . We can, if we wish, consider that these statements define \FLPh . We will be applying the same ideas to other vector fields.
+
+## 2–3 Derivatives of fields—the gradient
+
+When fields vary in time, we can describe the variation by giving their derivatives with respect to t . We want to describe the variations with position in a similar way, because we are interested in the relationship between, say, the temperature in one place and the temperature at a nearby place. How shall we take the derivative of the temperature with respect to position? Do we differentiate the temperature with respect to x ? Or with respect to y , or z ?
+
+Useful physical laws do not depend upon the orientation of the coordinate system. They should, therefore, be written in a form in which either both sides are scalars or both sides are vectors. What is the derivative of a scalar field, say \frac{\partial T}{\partial x} ? Is it a scalar, or a vector, or what? It is neither a scalar nor a vector, as you can easily appreciate, because if we took a different x -axis, \frac{\partial T}{\partial x} would certainly be different. But notice: We have three possible derivatives: \frac{\partial T}{\partial x} , \frac{\partial T}{\partial y} , and \frac{\partial T}{\partial z} . Since there are three kinds of derivatives and we know that it takes three numbers to form a vector, perhaps these three derivatives are the components of a vector:
+
+\biggl(\frac{\partial T}{\partial x},\frac{\partial T}{\partial y},\frac{\partial T}{\partial z}\biggr)\overset{?}{=}\text{a vector}. (2.11)
+
+Of course it is not generally true that any three numbers form a vector. It is true only if, when we rotate the coordinate system, the components of the vector transform among themselves in the correct way. So it is necessary to analyze how these derivatives are changed by a rotation of the coordinate system. We shall show that ( 2.11) is indeed a vector. The derivatives do transform in the correct way when the coordinate system is rotated.
+
+We can see this in several ways. One way is to ask a question whose answer is independent of the coordinate system, and try to express the answer in an “invariant” form. For instance, if S=\mathbf{A}\cdot\mathbf{B} , and if \mathbf{A} and \mathbf{B} are vectors, we know—because we proved it in Chapter 11 of Vol. I—that S is a scalar. We know that S is a scalar without investigating whether it changes with changes in coordinate systems. It can’t, because it’s a dot product of two vectors. Similarly, if we have three numbers B_1 , B_2 , and B_3 and we find out that for every vector \mathbf{A}
+
+A_xB_1+A_yB_2+A_zB_3=S, (2.12)
+
+where S is the same for any coordinate system, then it must be that the three numbers B_1 , B_2 , B_3 are the components B_x , B_y , B_z of some vector \mathbf{B} .
+
+Now let’s think of the temperature field. Suppose we take two points P_1 and P_2 , separated by the small interval \Delta\mathbf{R} . The temperature at P_1 is T_1 and at P_2 is T_2 , and the difference \Delta T=T_2-T_1 . The temperatures at these real, physical points certainly do not depend on what axis we choose for measuring the coordinates. In particular, \Delta T is a number independent of the coordinate system. It is a scalar.
+
+### Figure Ch2-F5
+Caption: Fig. 2–5. The vector ΔR\Delta\FigR, whose components are Δx\Delta x, Δy\Delta y, and Δz\Delta z.
+Image: figures/Ch2-F5.svg
+![Fig. 2–5. The vector ΔR\Delta\FigR, whose components are Δx\Delta x, Δy\Delta y, and Δz\Delta z.](figures/Ch2-F5.svg)
+
+If we choose some convenient set of axes, we could write T_1=T(x,y,z) and T_2=T(x+\Delta x,y+\Delta y,z+\Delta z) , where \Delta x , \Delta y , and \Delta z are the components of the vector \Delta\mathbf{R} (Fig. 2–5 ). Remembering Eq. ( 2.7), we can write
+
+\Delta T=\frac{\partial T}{\partial x}\,\Delta x+\frac{\partial T}{\partial y}\,\Delta y+\frac{\partial T}{\partial z}\,\Delta z. (2.13)
+
+The left side of Eq. ( 2.13) is a scalar. The right side is the sum of three products with \Delta x , \Delta y , and \Delta z , which are the components of a vector. It follows that the three numbers
+
+\frac{\partial T}{\partial x},\frac{\partial T}{\partial y},\frac{\partial T}{\partial z}
+
+are also the x -, y -, and z -components of a vector. We write this new vector with the symbol \boldsymbol{\nabla}{T} . The symbol \boldsymbol{\nabla} (called “del”) is an upside-down \Delta , and is supposed to remind us of differentiation. People read \boldsymbol{\nabla}{T} in various ways: “del- T ,” or “gradient of T ,” or “ \grad T ;” 1
+
+\grad T=\boldsymbol{\nabla}{T}=\biggl(\frac{\partial T}{\partial x},\frac{\partial T}{\partial y},\frac{\partial T}{\partial z}\biggr). (2.14)
+
+Using this notation, we can rewrite Eq. ( 2.13) in the more compact form
+
+\Delta T=\boldsymbol{\nabla}{T}\cdot\Delta\mathbf{R}. (2.15)
+
+In words, this equation says that the difference in temperature between two nearby points is the dot product of the gradient of T and the vector displacement between the points. The form of Eq. ( 2.15) also illustrates clearly our proof above that \boldsymbol{\nabla}{T} is indeed a vector.
+
+Perhaps you are still not convinced? Let’s prove it in a different way. (Although if you look carefully, you may be able to see that it’s really the same proof in a longer-winded form!) We shall show that the components of \boldsymbol{\nabla}{T} transform in just the same way that components of \mathbf{R} do. If they do, \boldsymbol{\nabla}{T} is a vector according to our original definition of a vector in Chapter 11 of Vol. I. We take a new coordinate system x' , y' , z' , and in this new system we calculate \frac{\partial T}{\partial x'} , \frac{\partial T}{\partial y'} , and \frac{\partial T}{\partial z'} . To make things a little simpler, we let z=z' , so that we can forget about the z -coordinate. (You can check out the more general case for yourself.)
+
+### Figure Ch2-F6
+Caption: Fig. 2–6. (a) Transformation to a rotated coordinate system. (b) Special case of an interval ΔR\Delta\FigR parallel to the xx-axis.
+Image: figures/Ch2-F6.svg
+![Fig. 2–6. (a) Transformation to a rotated coordinate system. (b) Special case of an interval ΔR\Delta\FigR parallel to the xx-axis.](figures/Ch2-F6.svg)
+
+We take an x'y' -system rotated an angle \theta with respect to the xy -system, as in Fig. 2–6 (a). For a point (x,y) the coordinates in the prime system are
+
+\begin{aligned} &x'&&=\phantom{-}x\cos\theta&&+y\sin\theta,\\[1ex] &y'&&=-x\sin\theta&&+y\cos\theta. \end{aligned} (2.16)
+
+Or, solving for x and y ,
+
+\begin{aligned} &x&&=x'\cos\theta&&-y'\sin\theta,\\[1ex] &y&&=x'\sin\theta&&+y'\cos\theta. \end{aligned} (2.18)
+
+If any pair of numbers transforms with these equations in the same way that x and y do, they are the components of a vector.
+
+Now let’s look at the difference in temperature between the two nearby points P_1 and P_2 , chosen as in Fig. 2–6 (b). If we calculate with the x - and y -coordinates, we would write
+
+\Delta T=\frac{\partial T}{\partial x}\,\Delta x (2.20)
+
+—since \Delta y is zero.
+
+What would a computation in the prime system give? We would have written
+
+\Delta T=\frac{\partial T}{\partial x'}\,\Delta x'+\frac{\partial T}{\partial y'}\,\Delta y'. (2.21)
+
+Looking at Fig. 2–6 (b), we see that
+
+\Delta x'=\phantom{-}\Delta x\cos\theta (2.22)
+
+and
+
+\Delta y'=-\Delta x\sin\theta, (2.23)
+
+since \Delta y' is negative when \Delta x is positive. Substituting these in Eq. ( 2.21), we find that
+
+\begin{aligned} \Delta T&=\frac{\partial T}{\partial x'}\,\Delta x\cos\theta-\frac{\partial T}{\partial y'}\,\Delta x\sin\theta\\[1ex] &=\biggl(\frac{\partial T}{\partial x'}\cos\theta-\frac{\partial T}{\partial y'}\sin\theta\biggr)\Delta x. \end{aligned} (2.24)
+
+Comparing Eq. ( 2.25) with ( 2.20), we see that
+
+\frac{\partial T}{\partial x}=\frac{\partial T}{\partial x'}\cos\theta-\frac{\partial T}{\partial y'}\sin\theta. (2.26)
+
+This equation says that \frac{\partial T}{\partial x} is obtained from \frac{\partial T}{\partial x'} and \frac{\partial T}{\partial y'} , just as x is obtained from x' and y' in Eq. ( 2.18). So \frac{\partial T}{\partial x} is the x -component of a vector. The same kind of arguments would show that \frac{\partial T}{\partial y} and \frac{\partial T}{\partial z} are y - and z -components. So \boldsymbol{\nabla}{T} is definitely a vector. It is a vector field derived from the scalar field T .
+
+## 2–4 The operator ∇\FLPnabla
+
+Now we can do something that is extremely amusing and ingenious—and characteristic of the things that make mathematics beautiful. The argument that \grad T , or \boldsymbol{\nabla}{T} , is a vector did not depend upon what scalar field we were differentiating. All the arguments would go the same if T were replaced by any scalar field. Since the transformation equations are the same no matter what we differentiate, we could just as well omit the T and replace Eq. ( 2.26) by the operator equation
+
+\frac{\partial }{\partial x}=\frac{\partial }{\partial x'}\cos\theta-\frac{\partial }{\partial y'}\sin\theta. (2.27)
+
+We leave the operators, as Jeans said, “hungry for something to differentiate.”
+
+Since the differential operators themselves transform as the components of a vector should, we can call them components of a vector operator. We can write
+
+\boldsymbol{\nabla}=\biggl(\frac{\partial }{\partial x},\frac{\partial }{\partial y},\frac{\partial }{\partial z}\biggr), (2.28)
+
+which means, of course,
+
+\nabla_x=\frac{\partial }{\partial x},\quad\nabla_y=\frac{\partial }{\partial y},\quad\nabla_z=\frac{\partial }{\partial z}. (2.29)
+
+We have abstracted the gradient away from the T —that is the wonderful idea.
+
+You must always remember, of course, that \boldsymbol{\nabla} is an operator. Alone, it means nothing. If \boldsymbol{\nabla} by itself means nothing, what does it mean if we multiply it by a scalar—say T —to get the product T\boldsymbol{\nabla} ? (One can always multiply a vector by a scalar.) It still does not mean anything. Its x -component is
+
+T\frac{\partial }{\partial x}, (2.30)
+
+which is not a number, but is still some kind of operator. However, according to the algebra of vectors we would still call T\boldsymbol{\nabla} a vector.
+
+Now let’s multiply \boldsymbol{\nabla} by a scalar on the other side, so that we have the product (\boldsymbol{\nabla}{T}) . In ordinary algebra
+
+T\mathbf{A}=\mathbf{A} T, (2.31)
+
+but we have to remember that operator algebra is a little different from ordinary vector algebra. With operators we must always keep the sequence right, so that the operations make proper sense. You will have no difficulty if you just remember that the operator \boldsymbol{\nabla} obeys the same convention as the derivative notation. What is to be differentiated must be placed on the right of the \boldsymbol{\nabla} . The order is important.
+
+Keeping in mind this problem of order, we understand that T\boldsymbol{\nabla} is an operator, but the product \boldsymbol{\nabla}{T} is no longer a hungry operator; the operator is completely satisfied. It is indeed a physical vector having a meaning. It represents the spatial rate of change of T . The x -component of \boldsymbol{\nabla}{T} is how fast T changes in the x -direction. What is the direction of the vector \boldsymbol{\nabla}{T} ? We know that the rate of change of T in any direction is the component of \boldsymbol{\nabla}{T} in that direction (see Eq. ( 2.15)). It follows that the direction of \boldsymbol{\nabla}{T} is that in which it has the largest possible component—in other words, the direction in which T changes the fastest. The gradient of T has the direction of the steepest uphill slope (in T ).
+
+## 2–5 Operations with ∇\FLPnabla
+
+Can we do any other algebra with the vector operator \boldsymbol{\nabla} ? Let us try combining it with a vector. We can combine two vectors by making a dot product. We could make the products
+
+(\text{a vector})\cdot\boldsymbol{\nabla},\quad\text{or}\quad\mathbf{d}iv{(\text{a vector})}.
+
+The first one doesn’t mean anything yet, because it is still an operator. What it might ultimately mean would depend on what it is made to operate on. The second product is some scalar field. ( \mathbf{A}\cdot\mathbf{B} is always a scalar.)
+
+Let’s try the dot product of \boldsymbol{\nabla} with a vector field we know, say \FLPh . We write out the components:
+
+\mathbf{d}iv{\FLPh}=\nabla_xh_x+\nabla_yh_y+\nabla_zh_z (2.32)
+
+or
+
+\mathbf{d}iv{\FLPh}=\frac{\partial h_x}{\partial x}+\frac{\partial h_y}{\partial y}+\frac{\partial h_z}{\partial z}. (2.33)
+
+The sum is invariant under a coordinate transformation. If we were to choose a different system (indicated by primes), we would have 2
+
+\boldsymbol{\nabla}'\cdot\FLPh=\frac{\partial h_{x'}}{\partial x'}+\frac{\partial h_{y'}}{\partial y'}+\frac{\partial h_{z'}}{\partial z'}, (2.34)
+
+which is the same number as would be gotten from Eq. ( 2.33), even though it looks different. That is,
+
+\boldsymbol{\nabla}'\cdot\FLPh=\mathbf{d}iv{\FLPh} (2.35)
+
+for every point in space. So \mathbf{d}iv{\FLPh} is a scalar field, which must represent some physical quantity. You should realize that the combination of derivatives in \mathbf{d}iv{\FLPh} is rather special. There are all sorts of other combinations like \frac{\partial h_y}{\partial x} , which are neither scalars nor components of vectors.
+
+The scalar quantity \mathbf{d}iv{(\text{a vector})} is extremely useful in physics. It has been given the name the divergence. For example,
+
+\mathbf{d}iv{\FLPh}=\ndiv\FLPh=\text{“divergence of $\FLPh$.”} (2.36)
+
+As we did for \boldsymbol{\nabla}{T} , we can ascribe a physical significance to \mathbf{d}iv{\FLPh} . We shall, however, postpone that until later.
+
+First, we wish to see what else we can cook up with the vector operator \boldsymbol{\nabla} . What about a cross product? We must expect that
+
+\mathbf{c}url{\FLPh}=\text{a vector}. (2.37)
+
+It is a vector whose components we can write by the usual rule for cross products (see Eq. ( 2.2)):
+
+(\mathbf{c}url{\FLPh})_z= \nabla_x h_y -\nabla_y h_x =\frac{\partial h_y}{\partial x} -\frac{\partial h_x}{\partial y}. (2.38)
+
+Similarly,
+
+(\mathbf{c}url{\FLPh})_x = \nabla_y h_z -\nabla_z h_y =\frac{\partial h_z}{\partial y} -\frac{\partial h_y}{\partial z}\phantom{.} (2.39)
+
+and
+
+(\mathbf{c}url{\FLPh})_y = \nabla_z h_x -\nabla_x h_z =\frac{\partial h_x}{\partial z} -\frac{\partial h_z}{\partial x}. (2.40)
+
+The combination \mathbf{c}url{\FLPh} is called “the curl of \FLPh .” The reason for the name and the physical meaning of the combination will be discussed later.
+
+Summarizing, we have three kinds of combinations with \boldsymbol{\nabla} :
+
+\begin{aligned} &\boldsymbol{\nabla}{T}&&=\grad T\;&&=\text{a vector},\\[1ex] &\mathbf{d}iv{\FLPh}&&=\ndiv\FLPh&&=\text{a scalar},\\[1ex] &\mathbf{c}url{\FLPh}\;&&=\curl\FLPh&&=\text{a vector}. \end{aligned}
+
+Using these combinations, we can write about the spatial variations of fields in a convenient way—in a way that is general, in that it doesn’t depend on any particular set of axes.
+
+As an example of the use of our vector differential operator \boldsymbol{\nabla} , we write a set of vector equations which contain the same laws of electromagnetism that we gave in words in Chapter 1. They are called Maxwell’s equations.
+
+\begin{aligned} \textit{Maxwell’s Equations}\\[1ex] \begin{alignedat}{2} &(1)&\quad \mathbf{d}iv{\mathbf{E}}\;&=\frac{\rho}{\epsilon_0}\\[.5ex] &(2)&\quad\mathbf{c}url{\mathbf{E}}\;&=-\frac{\partial \mathbf{B}}{\partial t}\\[.5ex] &(3)&\quad\mathbf{d}iv{\mathbf{B}}\;&=0\\[.5ex] &(4)&\quad c^2\,\mathbf{c}url{\mathbf{B}}\;&=\frac{\partial \mathbf{E}}{\partial t}+\frac{\mathbf{j}}{\epsilon_0} \end{alignedat} \end{aligned} (2.41)
+
+where \rho (rho), the “electric charge density,” is the amount of charge per unit volume, and \mathbf{j} , the “electric current density,” is the rate at which charge flows through a unit area per second. These four equations contain the complete classical theory of the electromagnetic field. You see what an elegantly simple form we can get with our new notation!
+
+## 2–6 The differential equation of heat flow
+
+Let us give another example of a law of physics written in vector notation. The law is not a precise one, but for many metals and a number of other substances that conduct heat it is quite accurate. You know that if you take a slab of material and heat one face to temperature T_2 and cool the other to a different temperature T_1 the heat will flow through the material from T_2 to T_1 [Fig. 2–7 (a)]. The heat flow is proportional to the area A of the faces, and to the temperature difference. It is also inversely proportional to d , the distance between the plates. (For a given temperature difference, the thinner the slab the greater the heat flow.) Letting J be the thermal energy that passes per unit time through the slab, we write
+
+J=\kappa(T_2-T_1)\,\frac{A}{d}. (2.42)
+
+The constant of proportionality \kappa (kappa) is called the thermal conductivity.
+
+### Figure Ch2-F7
+Caption: Fig. 2–7. (a) Heat flow through a slab. (b) An infinitesimal slab parallel to an isothermal surface in a large block.
+Image: figures/Ch2-F7.svg
+![Fig. 2–7. (a) Heat flow through a slab. (b) An infinitesimal slab parallel to an isothermal surface in a large block.](figures/Ch2-F7.svg)
+
+What will happen in a more complicated case? Say in an odd-shaped block of material in which the temperature varies in peculiar ways? Suppose we look at a tiny piece of the block and imagine a slab like that of Fig. 2–7 (a) on a miniature scale. We orient the faces parallel to the isothermal surfaces, as in Fig. 2–7 (b), so that Eq. ( 2.42) is correct for the small slab.
+
+If the area of the small slab is \Delta A , the heat flow per unit time is
+
+\Delta J=\kappa\,\Delta T\,\frac{\Delta A}{\Delta s}, (2.43)
+
+where \Delta s is the thickness of the slab. Now \Delta J/\Delta A we have defined earlier as the magnitude of \FLPh , whose direction is the heat flow. The heat flow will be from T_1+\Delta T toward T_1 and so it will be perpendicular to the isotherms, as drawn in Fig. 2–7 (b). Also, \Delta T/\Delta s is just the rate of change of T with position. And since the position change is perpendicular to the isotherms, our \Delta T/\Delta s is the maximum rate of change. It is, therefore, just the magnitude of \boldsymbol{\nabla}{T} . Now since the direction of \boldsymbol{\nabla}{T} is opposite to that of \FLPh , we can write ( 2.43) as a vector equation:
+
+\FLPh=-\kappa\,\boldsymbol{\nabla}{T}. (2.44)
+
+(The minus sign is necessary because heat flows “downhill” in temperature.) Equation ( 2.44) is the differential equation of heat conduction in bulk materials. You see that it is a proper vector equation. Each side is a vector if \kappa is just a number. It is the generalization to arbitrary cases of the special relation ( 2.42) for rectangular slabs. Later we should learn to write all sorts of elementary physics relations like ( 2.42) in the more sophisticated vector notation. This notation is useful not only because it makes the equations look simpler. It also shows most clearly the physical content of the equations without reference to any arbitrarily chosen coordinate system.
+
+## 2–7 Second derivatives of vector fields
+
+So far we have had only first derivatives. Why not second derivatives? We could have several combinations:
+
+\begin{alignedat}{2} &(\text{a})&\quad&\mathbf{d}iv{(\boldsymbol{\nabla}{T})}\\[.5ex] &(\text{b})&&\mathbf{c}url{(\boldsymbol{\nabla}{T})}\\[.5ex] &(\text{c})&&\boldsymbol{\nabla}{(\mathbf{d}iv{\FLPh})}\\[.5ex] &(\text{d})&&\mathbf{d}iv{(\mathbf{c}url{\FLPh})}\\[.5ex] &(\text{e})&&\mathbf{c}url{(\mathbf{c}url{\FLPh})} \end{alignedat} (2.45)
+
+You can check that these are all the possible combinations.
+
+Let’s look first at the second one, (b). It has the same form as
+
+\mathbf{A}\times(\mathbf{A} T)=(\mathbf{A}\times\mathbf{A})T=\FLPzero,
+
+since \mathbf{A}\times\mathbf{A} is always zero. So we should have
+
+\curl(\grad T)=\mathbf{c}url{(\boldsymbol{\nabla}{T})}=\FLPzero. (2.46)
+
+We can see how this equation comes about if we go through once with the components:
+
+\begin{aligned} [\mathbf{c}url{(\boldsymbol{\nabla}{T})}]_z&= \nabla_x(\boldsymbol{\nabla}{T})_y-\nabla_y(\boldsymbol{\nabla}{T})_x\\[1ex] &=\frac{\partial }{\partial x}\biggl(\frac{\partial T}{\partial y}\biggr)-\frac{\partial }{\partial y}\biggl(\frac{\partial T}{\partial x}\biggr), \end{aligned} (2.47)
+
+which is zero (by Eq. ( 2.8)). It goes the same for the other components. So \mathbf{c}url{(\boldsymbol{\nabla}{T})}=\FLPzero , for any temperature distribution—in fact, for any scalar function.
+
+Now let us take another example. Let us see whether we can find another zero. The dot product of a vector with a cross product which contains that vector is zero:
+
+\mathbf{A}\cdot(\mathbf{A}\times\mathbf{B})=0, (2.48)
+
+because \mathbf{A}\times\mathbf{B} is perpendicular to \mathbf{A} , and so has no components in the direction \mathbf{A} . The same combination appears in (d) of ( 2.45), so we have
+
+\mathbf{d}iv{(\mathbf{c}url{\FLPh})}=\ndiv(\curl\FLPh)=0. (2.49)
+
+Again, it is easy to show that it is zero by carrying through the operations with components.
+
+Now we are going to state two mathematical theorems that we will not prove. They are very interesting and useful theorems for physicists to know.
+
+In a physical problem we frequently find that the curl of some quantity—say of the vector field \mathbf{A} —is zero. Now we have seen (Eq. ( 2.46)) that the curl of a gradient is zero, which is easy to remember because of the way the vectors work. It could certainly be, then, that \mathbf{A} is the gradient of some quantity, because then its curl would necessarily be zero. The interesting theorem is that if the \curl\mathbf{A} is zero, then \mathbf{A} is always the gradient of something —there is some scalar field \psi (psi) such that \mathbf{A} is equal to \grad\psi . In other words, we have the
+
+\begin{aligned} \text{Theorem:}\\[3pt] &\text{If}&\boldsymbol{\nabla}\times\mathbf{A}&=\FLPzero\\[3pt] &\text{there is a}&\psi&\\[3pt] &\text{such that}\quad&\mathbf{A}=\boldsymbol{\nabla}\psi&. \end{aligned} (2.50)
+
+There is a similar theorem if the divergence of \mathbf{A} is zero. We have seen in Eq. ( 2.49) that the divergence of a curl of something is always zero. If you come across a vector field \FLPD for which \ndiv\FLPD is zero, then you can conclude that \FLPD is the curl of some vector field \mathbf{C} .
+
+\begin{aligned} \text{Theorem:}\\[3pt] &\text{If}&\boldsymbol{\nabla}\cdot\FLPD&=0\\[3pt] &\text{there is a}&\mathbf{C}&\\[3pt] &\text{such that}\quad&\FLPD=\boldsymbol{\nabla}&\times\mathbf{C}. \end{aligned} (2.51)
+
+In looking at the possible combinations of two \boldsymbol{\nabla} operators, we have found that two of them always give zero. Now we look at the ones that are not zero. Take the combination \mathbf{d}iv{(\boldsymbol{\nabla}{T})} , which was first on our list. It is not, in general, zero. We write out the components:
+
+\boldsymbol{\nabla}{T}=\mathbf{i}\nabla_xT+\mathbf{j}\nabla_yT+\mathbf{k}\nabla_zT.
+
+Then
+
+\begin{aligned} \mathbf{d}iv{(\boldsymbol{\nabla}{T})}&= \nabla_x(\nabla_xT)+\nabla_y(\nabla_yT)+\nabla_z(\nabla_zT)\\[1ex] &=\frac{\partial^2T}{\partial x^2}+\frac{\partial^2T}{\partial y^2}+ \frac{\partial^2T}{\partial z^2}, \end{aligned} (2.52)
+
+which would, in general, come out to be some number. It is a scalar field.
+
+You see that we do not need to keep the parentheses, but can write, without any chance of confusion,
+
+\mathbf{d}iv{(\boldsymbol{\nabla}{T})}=\mathbf{d}iv{\boldsymbol{\nabla}{T}}=(\mathbf{d}iv{\boldsymbol{\nabla}})T=\nabla^2T. (2.53)
+
+We look at \nabla^2 as a new operator. It is a scalar operator. Because it appears often in physics, it has been given a special name—the Laplacian.
+
+\text{Laplacian}=\nabla^2=\frac{\partial^2}{\partial x^2}+\frac{\partial^2}{\partial y^2}+ \frac{\partial^2}{\partial z^2}. (2.54)
+
+Since the Laplacian is a scalar operator, we may operate with it on a vector—by which we mean the same operation on each component in rectangular coordinates:
+
+\nabla^2\FLPh=(\nabla^2h_x,\nabla^2h_y,\nabla^2h_z).
+
+Let’s look at one more possibility: \mathbf{c}url{(\mathbf{c}url{\FLPh})} , which was (e) in the list ( 2.45). Now the curl of the curl can be written differently if we use the vector equality ( 2.6):
+
+\mathbf{A}\times(\mathbf{B}\times\mathbf{C})=\mathbf{B}(\mathbf{A}\cdot\mathbf{C})-\mathbf{C}(\mathbf{A}\cdot\mathbf{B}). (2.55)
+
+In order to use this formula, we should replace \mathbf{A} and \mathbf{B} by the operator \boldsymbol{\nabla} and put \mathbf{C}=\FLPh . If we do that, we get
+
+\mathbf{c}url{(\mathbf{c}url{\FLPh})}=\boldsymbol{\nabla}{(\mathbf{d}iv{\FLPh})}- \FLPh(\mathbf{d}iv{\boldsymbol{\nabla}})\ldots\text{???}
+
+Wait a minute! Something is wrong. The first two terms are vectors all right (the operators are satisfied), but the last term doesn’t come out to anything. It’s still an operator. The trouble is that we haven’t been careful enough about keeping the order of our terms straight. If you look again at Eq. ( 2.55), however, you see that we could equally well have written it as
+
+\mathbf{A}\times(\mathbf{B}\times\mathbf{C})= \mathbf{B}(\mathbf{A}\cdot\mathbf{C})-(\mathbf{A}\cdot\mathbf{B})\mathbf{C}. (2.56)
+
+The order of terms looks better. Now let’s make our substitution in ( 2.56). We get
+
+\mathbf{c}url{(\mathbf{c}url{\FLPh})}=\boldsymbol{\nabla}{(\mathbf{d}iv{\FLPh})}- (\mathbf{d}iv{\boldsymbol{\nabla}})\FLPh. (2.57)
+
+This form looks all right. It is, in fact, correct, as you can verify by computing the components. The last term is the Laplacian, so we can equally well write
+
+\mathbf{c}url{(\mathbf{c}url{\FLPh})}=\boldsymbol{\nabla}{(\mathbf{d}iv{\FLPh})}-\nabla^2\FLPh. (2.58)
+
+We have had something to say about all of the combinations in our list of double \boldsymbol{\nabla} 's, except for (c), \boldsymbol{\nabla}{(\mathbf{d}iv{\FLPh})} . It is a possible vector field, but there is nothing special to say about it. It’s just some vector field which may occasionally come up.
+
+It will be convenient to have a table of our conclusions:
+
+\begin{alignedat}{2} &(\text{a})&&\mathbf{d}iv{(\boldsymbol{\nabla}{T})}=\nabla^2T=\text{a scalar field}\\[.5ex] &(\text{b})&&\mathbf{c}url{(\boldsymbol{\nabla}{T})}=\FLPzero\\[.5ex] &(\text{c})&&\boldsymbol{\nabla}{(\mathbf{d}iv{\FLPh})}=\text{a vector field}\\[.5ex] &(\text{d})&&\mathbf{d}iv{(\mathbf{c}url{\FLPh})}=0\\[.5ex] &(\text{e})&&\mathbf{c}url{(\mathbf{c}url{\FLPh})}= \boldsymbol{\nabla}{(\mathbf{d}iv{\FLPh})}-\nabla^2\FLPh\\[.5ex] &(\text{f})&\quad(&\mathbf{d}iv{\boldsymbol{\nabla}})\FLPh=\nabla^2\FLPh=\text{a vector field} \end{alignedat} (2.59)
+
+You may notice that we haven’t tried to invent a new vector operator (\mathbf{c}url{\boldsymbol{\nabla}}) . Do you see why?
+
+## 2–8 Pitfalls
+
+We have been applying our knowledge of ordinary vector algebra to the algebra of the operator \boldsymbol{\nabla} . We have to be careful, though, because it is possible to go astray. There are two pitfalls which we will mention, although they will not come up in this course. What would you say about the following expression, that involves the two scalar functions \psi and \phi (phi):
+
+(\boldsymbol{\nabla}{\psi})\times(\boldsymbol{\nabla}{\phi})?
+
+You might want to say: it must be zero because it’s just like
+
+(\mathbf{A} a)\times(\mathbf{A} b),
+
+which is zero because the cross product of two equal vectors \mathbf{A}\times\mathbf{A} is always zero. But in our example the two operators \boldsymbol{\nabla} are not equal! The first one operates on one function, \psi ; the other operates on a different function, \phi . So although we represent them by the same symbol \boldsymbol{\nabla} , they must be considered as different operators. Clearly, the direction of \boldsymbol{\nabla}{\psi} depends on the function \psi , so it is not likely to be parallel to \boldsymbol{\nabla}{\phi} :
+
+(\boldsymbol{\nabla}{\psi})\times(\boldsymbol{\nabla}{\phi})\neq0\quad(\text{generally}).
+
+Fortunately, we won’t have to use such expressions. (What we have said doesn’t change the fact that \mathbf{c}url{\boldsymbol{\nabla}{\psi}}=\FLPzero for any scalar field, because here both \boldsymbol{\nabla} ’s operate on the same function.)
+
+Pitfall number two (which, again, we need not get into in our course) is the following: The rules that we have outlined here are simple and nice when we use rectangular coordinates. For example, if we have \nabla^2\FLPh and we want the x -component, it is
+
+(\nabla^2\FLPh)_x=\biggl(\frac{\partial^2}{\partial x^2}+\frac{\partial^2}{\partial y^2}+\frac{\partial^2}{\partial z^2}\biggr)h_x=\nabla^2h_x. (2.60)
+
+The same expression would not work if we were to ask for the radial component of \nabla^2\FLPh . The radial component of \nabla^2\FLPh is not equal to \nabla^2h_r . The reason is that when we are dealing with the algebra of vectors, the directions of the vectors are all quite definite. But when we are dealing with vector fields, their directions are different at different places. If we try to describe a vector field in, say, polar coordinates, what we call the “radial” direction varies from point to point. So we can get into a lot of trouble when we start to differentiate the components. For example, even for a constant vector field, the radial component changes from point to point.
+
+It is usually safest and simplest just to stick to rectangular coordinates and avoid trouble, but there is one exception worth mentioning: Since the Laplacian \nabla^2 , is a scalar, we can write it in any coordinate system we want to (for example, in polar coordinates). But since it is a differential operator, we should use it only on vectors whose components are in a fixed direction—that means rectangular coordinates. So we shall express all of our vector fields in terms of their x -, y -, and z -components when we write our vector differential equations out in components.

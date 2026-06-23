@@ -1,0 +1,56 @@
+## 3–3 The flux from a cube; Gauss’ theorem
+
+### Figure Ch3-F5
+Caption: Fig. 3–5.Computation of the flux of C\FigC out of a small cube.
+Image: figures/Ch3-F5.svg
+![Fig. 3–5.Computation of the flux of C\FigC out of a small cube.](figures/Ch3-F5.svg)
+
+We now take the special case of a small cube 1 and find an interesting formula for the flux out of it. Consider a cube whose edges are lined up with the axes as in Fig. 3–5 . Let us suppose that the coordinates of the corner nearest the origin are x , y , z . Let \Delta x be the length of the cube in the x -direction, \Delta y be the length in the y -direction, and \Delta z be the length in the z -direction. We wish to find the flux of a vector field \mathbf{C} through the surface of the cube. We shall do this by making a sum of the fluxes through each of the six faces. First, consider the face marked 1 in the figure. The flux outward on this face is the negative of the x -component of \mathbf{C} , integrated over the area of the face. This flux is
+
+-\int C_x\,dy\,dz.
+
+Since we are considering a small cube, we can approximate this integral by the value of C_x at the center of the face—which we call the point (1) —multiplied by the area of the face, \Delta y\,\Delta z :
+
+\text{Flux out of $1$}=-C_x(1)\,\Delta y\,\Delta z.
+
+Similarly, for the flux out of face 2 , we write
+
+\text{Flux out of $2$}=C_x(2)\,\Delta y\,\Delta z.
+
+Now C_x(1) and C_x(2) are, in general, slightly different. If \Delta x is small enough, we can write
+
+C_x(2)=C_x(1)+\frac{\partial C_x}{\partial x}\,\Delta x.
+
+There are, of course, more terms, but they will involve (\Delta x)^2 and higher powers, and so will be negligible if we consider only the limit of small \Delta x . So the flux through face 2 is
+
+\text{Flux out of $2$}=\biggl[C_x(1)+\frac{\partial C_x}{\partial x}\,\Delta x\biggr]\,\Delta y\,\Delta z.
+
+Summing the fluxes for faces 1 and 2 , we get
+
+\text{Flux out of $1$ and $2$}=\frac{\partial C_x}{\partial x}\,\Delta x\,\Delta y\,\Delta z.
+
+The derivative should really be evaluated at the center of face 1 ; that is, at [x,y+(\Delta y/2),z+(\Delta z/2)] . But in the limit of an infinitesimal cube, we make a negligible error if we evaluate it at the corner (x,y,z) .
+
+Applying the same reasoning to each of the other pairs of faces, we have
+
+\text{Flux out of $3$ and $4$}=\frac{\partial C_y}{\partial y}\,\Delta x\,\Delta y\,\Delta z
+
+and
+
+\text{Flux out of $5$ and $6$}=\frac{\partial C_z}{\partial z}\,\Delta x\,\Delta y\,\Delta z.
+
+The total flux through all the faces is the sum of these terms. We find that
+
+\underset{\text{cube}}{\int}\mathbf{C}\cdot\FLPn\,da= \biggl(\frac{\partial C_x}{\partial x}+\frac{\partial C_y}{\partial y}+\frac{\partial C_z}{\partial z}\biggr)\Delta x\,\Delta y\,\Delta z,
+
+and the sum of the derivatives is just \mathbf{d}iv{\mathbf{C}} . Also, \Delta x\,\Delta y\,\Delta z=\Delta V , the volume of the cube. So we can say that for an infinitesimal cube
+
+\underset{\text{surface}}{\int}\mathbf{C}\cdot\FLPn\,da= (\mathbf{d}iv{\mathbf{C}})\,\Delta V. (3.17)
+
+We have shown that the outward flux from the surface of an infinitesimal cube is equal to the divergence of the vector multiplied by the volume of the cube. We now see the “meaning” of the divergence of a vector. The divergence of a vector at the point P is the flux—the outgoing “flow” of \mathbf{C} — per unit volume, in the neighborhood of P .
+
+We have connected the divergence of \mathbf{C} to the flux of \mathbf{C} out of each infinitesimal volume. For any finite volume we can use the fact we proved above—that the total flux from a volume is the sum of the fluxes out of each part. We can, that is, integrate the divergence over the entire volume. This gives us the theorem that the integral of the normal component of any vector over any closed surface can also be written as the integral of the divergence of the vector over the volume enclosed by the surface. This theorem is named after Gauss. Gauss’ Theorem
+
+\int_S\mathbf{C}\cdot\FLPn\,da=\int_V\mathbf{d}iv{\mathbf{C}}\,dV, (3.18)
+
+where S is any closed surface and V is the volume inside it.

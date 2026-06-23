@@ -1,0 +1,111 @@
+32–3 Waves in a dielectric
+
+We want now to find out what kind of electromagnetic waves can exist in a dielectric material in which there are no extra charges other than those bound in atoms. So we take \rho=-\mathbf{d}iv{\FLPP} and \mathbf{j}=\frac{\partial \FLPP}{\partial t} . Maxwell’s equations then become
+
+\begin{aligned} &(\text{a})\;\;\mathbf{d}iv{\mathbf{E}}=-\dfrac{\mathbf{d}iv{\FLPP}}{\epsilon_0}\\[1ex] &(\text{b})\;\;c^2\mathbf{c}url{\mathbf{B}}=\displaystyle\frac{\partial }{\partial t}\biggl(\dfrac{\FLPP}{\epsilon_0}+\mathbf{E}\biggr)\\[1ex] &(\text{c})\;\;\mathbf{c}url{\mathbf{E}}=-\displaystyle\frac{\partial \mathbf{B}}{\partial t}\\[1.5ex] &(\text{d})\;\;\mathbf{d}iv{\mathbf{B}}=0 \end{aligned} (32.19)
+
+We can solve these equations as we have done before. We start by taking the curl of Eq. ( 32.19 c):
+
+\mathbf{c}url{(\mathbf{c}url{\mathbf{E}})}=-\frac{\partial }{\partial t}\,\mathbf{c}url{\mathbf{B}}.
+
+Next, we make use of the vector identity
+
+\mathbf{c}url{(\mathbf{c}url{\mathbf{E}})}=\boldsymbol{\nabla}{(\mathbf{d}iv{\mathbf{E}})}-\nabla^2\mathbf{E},
+
+and also substitute for \mathbf{c}url{\mathbf{B}} , using Eq. ( 32.19 b); we get
+
+\boldsymbol{\nabla}{(\mathbf{d}iv{\mathbf{E}})}-\nabla^2\mathbf{E}= -\frac{1}{\epsilon_0 c^2}\,\frac{\partial^2\FLPP}{\partial t^2}- \frac{1}{c^2}\,\frac{\partial^2\mathbf{E}}{\partial t^2}.
+
+Using Eq. ( 32.19 a) for \mathbf{d}iv{\mathbf{E}} , we get
+
+\begin{aligned} \nabla^2\mathbf{E}&-\frac{1}{c^2}\,\frac{\partial^2\mathbf{E}}{\partial t^2}=\\[1ex] &-\frac{1}{\epsilon_0}\,\boldsymbol{\nabla}{(\mathbf{d}iv{\FLPP})}+ \frac{1}{\epsilon_0 c^2}\,\frac{\partial^2\FLPP}{\partial t^2}. \end{aligned} (32.20)
+
+So instead of the wave equation, we now get that the d’Alembertian of \mathbf{E} is equal to two terms involving the polarization \FLPP .
+
+Since \FLPP depends on \mathbf{E} , however, Eq. ( 32.20) can still have wave solutions. We will now limit ourselves to isotropic dielectrics, so that \FLPP is always in the same direction as \mathbf{E} . Let’s try to find a solution for a wave going in the z -direction. Then, the electric field might vary as e^{i(\omega t-kz)} . We will also suppose that the wave is polarized in the x -direction—that the electric field has only an x -component. We write
+
+E_x=E_0e^{i(\omega t-kz)}. (32.21)
+
+You know that any function of (z-vt) represents a wave that travels with the speed v . The exponent of Eq. ( 32.21) can be written as
+
+-ik\biggl(z-\frac{\omega}{k}\,t\biggr),
+
+so, Eq. ( 32.21) represents a wave with the phase velocity
+
+v_{\text{ph}}=\omega/k.
+
+The index of refraction n is defined (see Chapter 31, Vol. I) by letting
+
+v_{\text{ph}}=\frac{c}{n}.
+
+Thus Eq. ( 32.21) becomes
+
+E_x=E_0e^{i\omega(t-nz/c)}.
+
+So we can find n by finding what value of k is required if Eq. ( 32.21) is to satisfy the proper field equations, and then using
+
+n=\frac{kc}{\omega}. (32.22)
+
+In an isotropic material, there will be only an x -component of the polarization; then \FLPP has no variation with the x -coordinate, so \mathbf{d}iv{\FLPP}=0 , and we get rid of the first term on the right-hand side of Eq. ( 32.20). Also, since we are assuming a linear dielectric, P_x will vary as e^{i\omega t} , and \partial^2P_x/\partial t^2=-\omega^2P_x . The Laplacian in Eq. ( 32.20) becomes simply \partial^2E_x/\partial z^2=-k^2E_x , so we get
+
+-k^2E_x+\frac{\omega^2}{c^2}\,E_x=-\frac{\omega^2}{\epsilon_0 c^2}\,P_x. (32.23)
+
+Now let us assume for the moment that since \mathbf{E} is varying sinusoidally, we can set \FLPP proportional to \mathbf{E} , as in Eq. ( 32.8). (We’ll come back to discuss this assumption later.) We write
+
+P_x=\epsilon_0 N\alpha E_x.
+
+Then E_x drops out of Eq. ( 32.23), and we find
+
+k^2=\frac{\omega^2}{c^2}\,(1+N\alpha). (32.24)
+
+We have found that a wave like Eq. ( 32.21), with the wave number k given by Eq. ( 32.24), will satisfy the field equations. Using Eq. ( 32.22), the index n is given by
+
+n^2=1+N\alpha. (32.25)
+
+Let’s compare this formula with what we obtained in our theory of the index of a gas (Chapter 31, Vol. I). There, we got Eq. ( 31.19), which is
+
+n=1+\frac{1}{2}\,\frac{Nq_e^2}{m\epsilon_0}\,\frac{1}{-\omega^2+\omega_0^2}. (32.26)
+
+Taking \alpha from Eq. ( 32.6), Eq. ( 32.25) would give us
+
+n^2=1+\frac{Nq_e^2}{m\epsilon_0}\,\frac{1}{-\omega^2+i\gamma\omega+\omega_0^2}. (32.27)
+
+First, we have the new term in i\gamma\omega , because we are including the dissipation of the oscillators. Second, the left-hand side is n instead of n^2 , and there is an extra factor of 1/2 . But notice that if N is small enough so that n is close to one (as it is for a gas), then Eq. ( 32.27) says that n^2 is one plus a small number: n^2=1+\epsilon . We can then write n=\sqrt{1+\epsilon}\approx1+\epsilon/2 , and the two expressions are equivalent. Thus our new method gives for a gas the same result we found earlier.
+
+Now you might think that Eq. ( 32.27) should give the index of refraction for dense materials also. It needs to be modified, however, for several reasons. First, the derivation of this equation assumes that the polarizing field on each atom is the field E_x . That assumption is not right, however, because in dense materials there is also the field produced by other atoms in the vicinity, which may be comparable to E_x . We considered a similar problem when we studied the static fields in dielectrics. (See Chapter 11.) You will remember that we estimated the field at a single atom by imagining that it sat in a spherical hole in the surrounding dielectric. The field in such a hole—which we called the local field—is increased over the average field E by the amount P/3\epsilon_0 . (Remember, however, that this result is only strictly true in isotropic materials—including the special case of a cubic crystal.)
+
+The same arguments will hold for the electric field in a wave, so long as the wavelength of the wave is much longer than the spacing between atoms. Limiting ourselves to such cases, we write
+
+E_{\text{local}}=E+\frac{P}{3\epsilon_0}. (32.28)
+
+This local field is the one that should be used for E in Eq. ( 32.3); that is, Eq. ( 32.8) should be rewritten:
+
+P=\epsilon_0 N\alpha E_{\text{local}}. (32.29)
+
+Using E_{\text{local}} from Eq. ( 32.28), we find
+
+P=\epsilon_0 N\alpha\biggl(E+\frac{P}{3\epsilon_0}\biggr)
+
+or
+
+P=\frac{N\alpha}{1-(N\alpha/3)}\,\epsilon_0 E. (32.30)
+
+In other words, for dense materials P is still proportional to E (for sinusoidal fields). However, the constant of proportionality is not \epsilon_0 N\alpha , as we wrote below Eq. ( 32.23), but should be \epsilon_0 N\alpha/[1-(N\alpha/3)] . So we should correct Eq. ( 32.25) to read
+
+n^2=1+\frac{N\alpha}{1-(N\alpha/3)}. (32.31)
+
+It will be more convenient if we rewrite this equation as
+
+3\,\frac{n^2-1}{n^2+2}=N\alpha, (32.32)
+
+which is algebraically equivalent. This is known as the Clausius-Mossotti equation.
+
+There is another complication in dense materials. Because neighboring atoms are so close, there are strong interactions between them. The internal modes of oscillation are, therefore, modified. The natural frequencies of the atomic oscillations are spread out by the interactions, and they are usually quite heavily damped—the resistance coefficient becomes quite large. So the \omega_0 ’s and \gamma ’s of the solid will be quite different from those of the free atoms. With these reservations, we can still represent \alpha , at least approximately, by Eq. ( 32.7). We have then that
+
+3\,\frac{n^2-1}{n^2+2}=\frac{Nq_e^2}{m\epsilon_0} \sum_k\frac{f_k}{-\omega^2+i\gamma_k\omega+\omega_{0k}^2}. (32.33)
+
+One final complication. If the dense material is a mixture of several components, each will contribute to the polarization. The total \alpha will be the sum of the contributions from each component of the mixture [except for the inaccuracy of the local field approximation, Eq. ( 32.28), in ordered crystals—effects we discussed when analyzing ferroelectrics]. Writing N_j as the number of atoms of each component per unit volume, we should replace Eq. ( 32.32) by
+
+3\biggl(\frac{n^2-1}{n^2+2}\biggr)= \sum_jN_j\alpha_j, (32.34)
+
+where each \alpha_j will be given by an expression like Eq. ( 32.7). Equation ( 32.34) completes our theory of the index of refraction. The quantity 3(n^2-1)/(n^2+2) is given by some complex function of frequency, which is the mean atomic polarizability \alpha(\omega) . The precise evaluation of \alpha(\omega) (that is, finding f_k , \gamma_k and \omega_{0k} ) in dense substances is a difficult problem of quantum mechanics. It has been done from first principles only for a few especially simple substances.

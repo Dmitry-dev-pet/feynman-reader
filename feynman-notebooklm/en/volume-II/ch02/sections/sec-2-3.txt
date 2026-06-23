@@ -1,0 +1,85 @@
+2–3 Derivatives of fields—the gradient
+
+When fields vary in time, we can describe the variation by giving their derivatives with respect to t . We want to describe the variations with position in a similar way, because we are interested in the relationship between, say, the temperature in one place and the temperature at a nearby place. How shall we take the derivative of the temperature with respect to position? Do we differentiate the temperature with respect to x ? Or with respect to y , or z ?
+
+Useful physical laws do not depend upon the orientation of the coordinate system. They should, therefore, be written in a form in which either both sides are scalars or both sides are vectors. What is the derivative of a scalar field, say \frac{\partial T}{\partial x} ? Is it a scalar, or a vector, or what? It is neither a scalar nor a vector, as you can easily appreciate, because if we took a different x -axis, \frac{\partial T}{\partial x} would certainly be different. But notice: We have three possible derivatives: \frac{\partial T}{\partial x} , \frac{\partial T}{\partial y} , and \frac{\partial T}{\partial z} . Since there are three kinds of derivatives and we know that it takes three numbers to form a vector, perhaps these three derivatives are the components of a vector:
+
+\biggl(\frac{\partial T}{\partial x},\frac{\partial T}{\partial y},\frac{\partial T}{\partial z}\biggr)\overset{?}{=}\text{a vector}. (2.11)
+
+Of course it is not generally true that any three numbers form a vector. It is true only if, when we rotate the coordinate system, the components of the vector transform among themselves in the correct way. So it is necessary to analyze how these derivatives are changed by a rotation of the coordinate system. We shall show that ( 2.11) is indeed a vector. The derivatives do transform in the correct way when the coordinate system is rotated.
+
+We can see this in several ways. One way is to ask a question whose answer is independent of the coordinate system, and try to express the answer in an “invariant” form. For instance, if S=\mathbf{A}\cdot\mathbf{B} , and if \mathbf{A} and \mathbf{B} are vectors, we know—because we proved it in Chapter 11 of Vol. I—that S is a scalar. We know that S is a scalar without investigating whether it changes with changes in coordinate systems. It can’t, because it’s a dot product of two vectors. Similarly, if we have three numbers B_1 , B_2 , and B_3 and we find out that for every vector \mathbf{A}
+
+A_xB_1+A_yB_2+A_zB_3=S, (2.12)
+
+where S is the same for any coordinate system, then it must be that the three numbers B_1 , B_2 , B_3 are the components B_x , B_y , B_z of some vector \mathbf{B} .
+
+Now let’s think of the temperature field. Suppose we take two points P_1 and P_2 , separated by the small interval \Delta\mathbf{R} . The temperature at P_1 is T_1 and at P_2 is T_2 , and the difference \Delta T=T_2-T_1 . The temperatures at these real, physical points certainly do not depend on what axis we choose for measuring the coordinates. In particular, \Delta T is a number independent of the coordinate system. It is a scalar.
+
+Figure Ch2-F5
+Caption: Fig. 2–5. The vector ΔR\Delta\FigR, whose components are Δx\Delta x, Δy\Delta y, and Δz\Delta z.
+Image: figures/Ch2-F5.svg
+![Fig. 2–5. The vector ΔR\Delta\FigR, whose components are Δx\Delta x, Δy\Delta y, and Δz\Delta z.](figures/Ch2-F5.svg)
+
+If we choose some convenient set of axes, we could write T_1=T(x,y,z) and T_2=T(x+\Delta x,y+\Delta y,z+\Delta z) , where \Delta x , \Delta y , and \Delta z are the components of the vector \Delta\mathbf{R} (Fig. 2–5 ). Remembering Eq. ( 2.7), we can write
+
+\Delta T=\frac{\partial T}{\partial x}\,\Delta x+\frac{\partial T}{\partial y}\,\Delta y+\frac{\partial T}{\partial z}\,\Delta z. (2.13)
+
+The left side of Eq. ( 2.13) is a scalar. The right side is the sum of three products with \Delta x , \Delta y , and \Delta z , which are the components of a vector. It follows that the three numbers
+
+\frac{\partial T}{\partial x},\frac{\partial T}{\partial y},\frac{\partial T}{\partial z}
+
+are also the x -, y -, and z -components of a vector. We write this new vector with the symbol \boldsymbol{\nabla}{T} . The symbol \boldsymbol{\nabla} (called “del”) is an upside-down \Delta , and is supposed to remind us of differentiation. People read \boldsymbol{\nabla}{T} in various ways: “del- T ,” or “gradient of T ,” or “ \grad T ;” 1
+
+\grad T=\boldsymbol{\nabla}{T}=\biggl(\frac{\partial T}{\partial x},\frac{\partial T}{\partial y},\frac{\partial T}{\partial z}\biggr). (2.14)
+
+Using this notation, we can rewrite Eq. ( 2.13) in the more compact form
+
+\Delta T=\boldsymbol{\nabla}{T}\cdot\Delta\mathbf{R}. (2.15)
+
+In words, this equation says that the difference in temperature between two nearby points is the dot product of the gradient of T and the vector displacement between the points. The form of Eq. ( 2.15) also illustrates clearly our proof above that \boldsymbol{\nabla}{T} is indeed a vector.
+
+Perhaps you are still not convinced? Let’s prove it in a different way. (Although if you look carefully, you may be able to see that it’s really the same proof in a longer-winded form!) We shall show that the components of \boldsymbol{\nabla}{T} transform in just the same way that components of \mathbf{R} do. If they do, \boldsymbol{\nabla}{T} is a vector according to our original definition of a vector in Chapter 11 of Vol. I. We take a new coordinate system x' , y' , z' , and in this new system we calculate \frac{\partial T}{\partial x'} , \frac{\partial T}{\partial y'} , and \frac{\partial T}{\partial z'} . To make things a little simpler, we let z=z' , so that we can forget about the z -coordinate. (You can check out the more general case for yourself.)
+
+Figure Ch2-F6
+Caption: Fig. 2–6. (a) Transformation to a rotated coordinate system. (b) Special case of an interval ΔR\Delta\FigR parallel to the xx-axis.
+Image: figures/Ch2-F6.svg
+![Fig. 2–6. (a) Transformation to a rotated coordinate system. (b) Special case of an interval ΔR\Delta\FigR parallel to the xx-axis.](figures/Ch2-F6.svg)
+
+We take an x'y' -system rotated an angle \theta with respect to the xy -system, as in Fig. 2–6 (a). For a point (x,y) the coordinates in the prime system are
+
+\begin{aligned} &x'&&=\phantom{-}x\cos\theta&&+y\sin\theta,\\[1ex] &y'&&=-x\sin\theta&&+y\cos\theta. \end{aligned} (2.16)
+
+Or, solving for x and y ,
+
+\begin{aligned} &x&&=x'\cos\theta&&-y'\sin\theta,\\[1ex] &y&&=x'\sin\theta&&+y'\cos\theta. \end{aligned} (2.18)
+
+If any pair of numbers transforms with these equations in the same way that x and y do, they are the components of a vector.
+
+Now let’s look at the difference in temperature between the two nearby points P_1 and P_2 , chosen as in Fig. 2–6 (b). If we calculate with the x - and y -coordinates, we would write
+
+\Delta T=\frac{\partial T}{\partial x}\,\Delta x (2.20)
+
+—since \Delta y is zero.
+
+What would a computation in the prime system give? We would have written
+
+\Delta T=\frac{\partial T}{\partial x'}\,\Delta x'+\frac{\partial T}{\partial y'}\,\Delta y'. (2.21)
+
+Looking at Fig. 2–6 (b), we see that
+
+\Delta x'=\phantom{-}\Delta x\cos\theta (2.22)
+
+and
+
+\Delta y'=-\Delta x\sin\theta, (2.23)
+
+since \Delta y' is negative when \Delta x is positive. Substituting these in Eq. ( 2.21), we find that
+
+\begin{aligned} \Delta T&=\frac{\partial T}{\partial x'}\,\Delta x\cos\theta-\frac{\partial T}{\partial y'}\,\Delta x\sin\theta\\[1ex] &=\biggl(\frac{\partial T}{\partial x'}\cos\theta-\frac{\partial T}{\partial y'}\sin\theta\biggr)\Delta x. \end{aligned} (2.24)
+
+Comparing Eq. ( 2.25) with ( 2.20), we see that
+
+\frac{\partial T}{\partial x}=\frac{\partial T}{\partial x'}\cos\theta-\frac{\partial T}{\partial y'}\sin\theta. (2.26)
+
+This equation says that \frac{\partial T}{\partial x} is obtained from \frac{\partial T}{\partial x'} and \frac{\partial T}{\partial y'} , just as x is obtained from x' and y' in Eq. ( 2.18). So \frac{\partial T}{\partial x} is the x -component of a vector. The same kind of arguments would show that \frac{\partial T}{\partial y} and \frac{\partial T}{\partial z} are y - and z -components. So \boldsymbol{\nabla}{T} is definitely a vector. It is a vector field derived from the scalar field T .

@@ -1,0 +1,35 @@
+15–4 B\FLPB versus A\FLPA
+
+In this section we would like to discuss the following questions: Is the vector potential merely a device which is useful in making calculations—as the scalar potential is useful in electrostatics—or is the vector potential a “real” field? Isn’t the magnetic field the “real” field, because it is responsible for the force on a moving particle? First we should say that the phrase “a real field” is not very meaningful. For one thing, you probably don’t feel that the magnetic field is very “real” anyway, because even the whole idea of a field is a rather abstract thing. You cannot put out your hand and feel the magnetic field. Furthermore, the value of the magnetic field is not very definite; by choosing a suitable moving coordinate system, for instance, you can make a magnetic field at a given point disappear.
+
+What we mean here by a “real” field is this: a real field is a mathematical function we use for avoiding the idea of action at a distance. If we have a charged particle at the position P , it is affected by other charges located at some distance from P . One way to describe the interaction is to say that the other charges make some “condition”—whatever it may be—in the environment at P . If we know that condition, which we describe by giving the electric and magnetic fields, then we can determine completely the behavior of the particle—with no further reference to how those conditions came about.
+
+In other words, if those other charges were altered in some way, but the conditions at P that are described by the electric and magnetic field at P remain the same, then the motion of the charge will also be the same. A “real” field is then a set of numbers we specify in such a way that what happens at a point depends only on the numbers at that point. We do not need to know any more about what’s going on at other places. It is in this sense that we will discuss whether the vector potential is a “real” field.
+
+You may be wondering about the fact that the vector potential is not unique—that it can be changed by adding the gradient of any scalar with no change at all in the forces on particles. That has not, however, anything to do with the question of reality in the sense that we are talking about. For instance, the magnetic field is in a sense altered by a relativity change (as are also \mathbf{E} and \mathbf{A} ). But we are not worried about what happens if the field can be changed in this way. That doesn’t really make any difference; that has nothing to do with the question of whether the vector potential is a proper “real” field for describing magnetic effects, or whether it is just a useful mathematical tool.
+
+We should also make some remarks on the usefulness of the vector potential \mathbf{A} . We have seen that it can be used in a formal procedure for calculating the magnetic fields of known currents, just as \phi can be used to find electric fields. In electrostatics we saw that \phi was given by the scalar integral
+
+\phi(1)=\frac{1}{4\pi\epsilon_0}\int\frac{\rho(2)}{r_{12}}\,dV_2. (15.22)
+
+From this \phi , we get the three components of \mathbf{E} by three differential operations. This procedure is usually easier to handle than evaluating the three integrals in the vector formula
+
+\mathbf{E}(1)=\frac{1}{4\pi\epsilon_0}\int\frac{\rho(2)\mathbf{e}_{12}}{r_{12}^2}\,dV_2. (15.23)
+
+First, there are three integrals; and second, each integral is in general somewhat more difficult.
+
+The advantages are much less clear for magnetostatics. The integral for \mathbf{A} is already a vector integral:
+
+\mathbf{A}(1)=\frac{1}{4\pi\epsilon_0 c^2}\int \frac{\mathbf{j}(2)\,dV_2}{r_{12}}, (15.24)
+
+which is, of course, three integrals. Also, when we take the curl of \mathbf{A} to get \mathbf{B} , we have six derivatives to do and combine by pairs. It is not immediately obvious whether in most problems this procedure is really any easier than computing \mathbf{B} directly from
+
+\mathbf{B}(1)=\frac{1}{4\pi\epsilon_0 c^2}\int \frac{\mathbf{j}(2)\times\mathbf{e}_{12}}{r_{12}^2}\,dV_2. (15.25)
+
+Using the vector potential is often more difficult for simple problems for the following reason. Suppose we are interested only in the magnetic field \mathbf{B} at one point, and that the problem has some nice symmetry—say we want the field at a point on the axis of a ring of current. Because of the symmetry, we can easily get \mathbf{B} by doing the integral of Eq. ( 15.25). If, however, we were to find \mathbf{A} first, we would have to compute \mathbf{B} from derivatives of \mathbf{A} , so we must know what \mathbf{A} is at all points in the neighborhood of the point of interest. And most of these points are off the axis of symmetry, so the integral for \mathbf{A} gets complicated. In the ring problem, for example, we would need to use elliptic integrals. In such problems, \mathbf{A} is clearly not very useful. It is true that in many complex problems it is easier to work with \mathbf{A} , but it would be hard to argue that this ease of technique would justify making you learn about one more vector field.
+
+We have introduced \mathbf{A} because it does have an important physical significance. Not only is it related to the energies of currents, as we saw in the last section, but it is also a “real” physical field in the sense that we described above. In classical mechanics it is clear that we can write the force on a particle as
+
+\mathbf{F}=q(\mathbf{E}+\mathbf{v}\times\mathbf{B}), (15.26)
+
+so that, given the forces, everything about the motion is determined. In any region where \mathbf{B}=\FLPzero even if \mathbf{A} is not zero, such as outside a solenoid, there is no discernible effect of \mathbf{A} . Therefore for a long time it was believed that \mathbf{A} was not a “real” field. It turns out, however, that there are phenomena involving quantum mechanics which show that the field \mathbf{A} is in fact a “real” field in the sense we have defined it. In the next section we will show you how that works.

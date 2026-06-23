@@ -1,0 +1,58 @@
+## 4–3 Electric potential
+
+First we take up the idea of electric potential, which is related to the work done in carrying a charge from one point to another. There is some distribution of charge, which produces an electric field. We ask about how much work it would take to carry a small charge from one place to another. The work done against the electrical forces in carrying a charge along some path is the negative of the component of the electrical force in the direction of the motion, integrated along the path. If we carry a charge from point a to point b ,
+
+W=-\int_a^b\mathbf{F}\cdot d\mathbf{s},
+
+where \mathbf{F} is the electrical force on the charge at each point, and d\mathbf{s} is the differential vector displacement along the path. (See Fig. 4-2 .)
+
+### Figure Ch4-F2
+Caption: Fig. 4–2. The work done in carrying a charge from aa to bb is the negative of the integral of F⋅ds\FigF\cdot d\Figs along the path taken.
+Image: figures/Ch4-F2.svg
+![Fig. 4–2. The work done in carrying a charge from aa to bb is the negative of the integral of F⋅ds\FigF\cdot d\Figs along the path taken.](figures/Ch4-F2.svg)
+
+It is more interesting for our purposes to consider the work that would be done in carrying one unit of charge. Then the force on the charge is numerically the same as the electric field. Calling the work done against electrical forces in this case W(\text{unit}) , we write
+
+W(\text{unit})=-\int_a^b\mathbf{E}\cdot d\mathbf{s}. (4.19)
+
+Now, in general, what we get with this kind of an integral depends on the path we take. But if the integral of ( 4.19) depended on the path from a to b , we could get work out of the field by carrying the charge to b along one path and then back to a on the other. We would go to b along the path for which W is smaller and back along the other, getting out more work than we put in.
+
+There is nothing impossible, in principle, about getting energy out of a field. We shall, in fact, encounter fields where it is possible. It could be that as you move a charge you produce forces on the other part of the “machinery.” If the “machinery” moved against the force it would lose energy, thereby keeping the total energy in the world constant. For electrostatics, however, there is no such “machinery.” We know what the forces back on the sources of the field are. They are the Coulomb forces on the charges responsible for the field. If the other charges are fixed in position—as we assume in electrostatics only—these back forces can do no work on them. There is no way to get energy from them—provided, of course, that the principle of energy conservation works for electrostatic situations. We believe that it will work, but let’s just show that it must follow from Coulomb’s law of force.
+
+### Figure Ch4-F3
+Caption: Fig. 4–3. In carrying a test charge from aa to bb the same work is done along either path.
+Image: figures/Ch4-F3.svg
+![Fig. 4–3. In carrying a test charge from aa to bb the same work is done along either path.](figures/Ch4-F3.svg)
+
+We consider first what happens in the field due to a single charge q . Let point a be at the distance r_a from q , and point b at r_b . Now we carry a different charge, which we will call the “test” charge, and whose magnitude we choose to be one unit, from a to b . Let’s start with the easiest possible path to calculate. We carry our test charge first along the arc of a circle, then along a radius, as shown in part (a) of Fig. 4-3 . Now on that particular path it is child’s play to find the work done (otherwise we wouldn’t have picked it). First, there is no work done at all on the path from a to a' . The field is radial (from Coulomb’s law), so it is at right angles to the direction of motion. Next, on the path from a' to b , the field is in the direction of motion and varies as 1/r^2 . Thus the work done on the test charge in carrying it from a to b would be
+
+\begin{aligned} -\int_a^b\mathbf{E}\cdot d\mathbf{s} &=-\frac{q}{4\pi\epsilon_0}\int_{a'}^b \frac{dr}{r^2}\\[1ex] &=-\frac{q}{4\pi\epsilon_0} \biggl(\frac{1}{r_a}-\frac{1}{r_b}\biggr). \end{aligned} (4.20)
+
+Now let’s take another easy path. For instance, the one shown in part (b) of Fig. 4-3 . It goes for awhile along an arc of a circle, then radially for awhile, then along an arc again, then radially, and so on. Every time we go along the circular parts, we do no work. Every time we go along the radial parts, we must just integrate 1/r^2 . Along the first radial stretch, we integrate from r_a to r_{a'} , then along the next radial stretch from r_{a'} to r_{a''} , and so on. The sum of all these integrals is the same as a single integral directly from r_a to r_b . We get the same answer for this path that we did for the first path we tried. It is clear that we would get the same answer for any path which is made up of an arbitrary number of the same kinds of pieces.
+
+What about smooth paths? Would we get the same answer? We discussed this point previously in Chapter 13 of Vol. I. Applying the same arguments used there, we can conclude that work done in carrying a unit charge from a to b is independent of the path.
+
+\left.\begin{gathered} W(\text{unit})\\[1ex] a\to b \end{gathered} \right\} =-\underset{\substack{\text{any}\\\text{path}}}{\int_a^b}\mathbf{E}\cdot d\mathbf{s}.
+
+Since the work done depends only on the endpoints, it can be represented as the difference between two numbers. We can see this in the following way. Let’s choose a reference point P_0 and agree to evaluate our integral by using a path that always goes by way of point P_0 . Let \phi(a) stand for the work done against the field in going from P_0 to point a , and let \phi(b) be the work done in going from P_0 to point b (Fig. 4-4 ). The work in going to P_0 from a (on the way to b ) is the negative of \phi(a) , so we have that
+
+-\int_a^b\mathbf{E}\cdot d\mathbf{s}=\phi(b)-\phi(a). (4.21)
+
+### Figure Ch4-F4
+Caption: Fig. 4–4. The work done in going along any path from [math]a to [math]b is the negative of the work from some point [math]P_0 to [math]a plus the work from [math]P_0 to [math]b.
+Image: figures/Ch4-F4.svg
+![Fig. 4–4. The work done in going along any path from [math]a to [math]b is the negative of the work from some point [math]P_0 to [math]a plus the work from [math]P_0 to [math]b.](figures/Ch4-F4.svg)
+
+Since only the difference in the function \phi at two points is ever involved, we do not really have to specify the location of P_0 . Once we have chosen some reference point, however, a number \phi is determined for any point in space; \phi is then a scalar field. It is a function of x , y , z . We call this scalar function the electrostatic potential at any point. Electrostatic potential:
+
+\phi(P)=-\int_{P_0}^P\mathbf{E}\cdot d\mathbf{s}. (4.22)
+
+For convenience, we will often take the reference point at infinity. Then, for a single charge at the origin, the potential \phi is given for any point (x,y,z) —using Eq. ( 4.20):
+
+\phi(x,y,z)=\frac{q}{4\pi\epsilon_0}\,\frac{1}{r}. (4.23)
+
+The electric field from several charges can be written as the sum of the electric field from the first, from the second, from the third, etc. When we integrate the sum to find the potential we get a sum of integrals. Each of the integrals is the negative of the potential from one of the charges. We conclude that the potential \phi from a lot of charges is the sum of the potentials from all the individual charges. There is a superposition principle also for potentials. Using the same kind of arguments by which we found the electric field from a group of charges and for a distribution of charges, we can get the complete formulas for the potential \phi at a point we call (1) :
+
+\begin{aligned} \phi(1)&=\sum_{j}\frac{1}{4\pi\epsilon_0}\,\frac{q_j}{r_{1j}},\\[1ex] \phi(1)&=\frac{1}{4\pi\epsilon_0} \underset{\substack{\text{all}\\\text{space}}}{\int} \frac{\rho(2)\,dV_2}{r_{12}}. \end{aligned} (4.24)
+
+Remember that the potential \phi has a physical significance: it is the potential energy which a unit charge would have if brought to the specified point in space from some reference point.

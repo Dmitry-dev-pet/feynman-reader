@@ -1,0 +1,37 @@
+6–1 Equations of the electrostatic potential
+
+This chapter will describe the behavior of the electric field in a number of different circumstances. It will provide some experience with the way the electric field behaves, and will describe some of the mathematical methods which are used to find this field.
+
+We begin by pointing out that the whole mathematical problem is the solution of two equations, the Maxwell equations for electrostatics:
+
+\begin{aligned} \mathbf{d}iv{\mathbf{E}}&=\frac{\rho}{\epsilon_0},\\[1ex] \mathbf{c}url{\mathbf{E}}&=\FLPzero. \end{aligned} (6.1)
+
+In fact, the two can be combined into a single equation. From the second equation, we know at once that we can describe the field as the gradient of a scalar (see Section 3–7 ):
+
+\mathbf{E}=-\boldsymbol{\nabla}{\phi}. (6.3)
+
+We may, if we wish, completely describe any particular electric field in terms of its potential \phi . We obtain the differential equation that \phi must obey by substituting Eq. ( 6.3) into ( 6.1), to get
+
+\mathbf{d}iv{\boldsymbol{\nabla}{\phi}}=-\frac{\rho}{\epsilon_0}. (6.4)
+
+The divergence of the gradient of \phi is the same as \nabla^2 operating on \phi :
+
+\mathbf{d}iv{\boldsymbol{\nabla}{\phi}}=\nabla^2\phi= \frac{\partial^2\phi}{\partial x^2}+ \frac{\partial^2\phi}{\partial y^2}+ \frac{\partial^2\phi}{\partial z^2}, (6.5)
+
+so we write Eq. ( 6.4) as
+
+\nabla^2\phi=-\frac{\rho}{\epsilon_0}. (6.6)
+
+The operator \nabla^2 is called the Laplacian, and Eq. ( 6.6) is called the Poisson equation. The entire subject of electrostatics, from a mathematical point of view, is merely a study of the solutions of the single equation ( 6.6). Once \phi is obtained by solving Eq. ( 6.6) we can find \mathbf{E} immediately from Eq. ( 6.3).
+
+We take up first the special class of problems in which \rho is given as a function of x , y , z . In that case the problem is almost trivial, for we already know the solution of Eq. ( 6.6) for the general case. We have shown that if \rho is known at every point, the potential at point (1) is
+
+\phi(1)=\int\frac{\rho(2)\,dV_2}{4\pi\epsilon_0 r_{12}}, (6.7)
+
+where \rho(2) is the charge density, dV_2 is the volume element at point (2) , and r_{12} is the distance between points (1) and (2) . The solution of the differential equation ( 6.6) is reduced to an integration over space. The solution ( 6.7) should be especially noted, because there are many situations in physics that lead to equations like
+
+\nabla^2(\text{something})=(\text{something else}),
+
+and Eq. ( 6.7) is a prototype of the solution for any of these problems.
+
+The solution of electrostatic field problems is thus completely straightforward when the positions of all the charges are known. Let’s see how it works in a few examples.

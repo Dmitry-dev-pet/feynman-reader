@@ -1,0 +1,67 @@
+41–3 The Reynolds number
+
+We will now describe the changes which are made in the character of fluid flow as a consequence of the new viscosity term. We will look at two problems in some detail. The first of these is the flow of a fluid past a cylinder—a flow which we tried to calculate in the previous chapter using the theory for nonviscous flow. It turns out that the viscous equations can be solved by man today only for a few special cases. So some of what we will tell you is based on experimental measurements—assuming that the experimental model satisfies Eq. ( 41.17).
+
+The mathematical problem is this: We would like the solution for the flow of an incompressible, viscous fluid past a long cylinder of diameter D . The flow should be given by Eq. ( 41.17) and by
+
+\boldsymbol{\Omega}=\mathbf{c}url{\mathbf{v}} (41.18)
+
+with the conditions that the velocity at large distances is some constant velocity, say V (parallel to the x -axis), and at the surface of the cylinder is zero. That is,
+
+v_x=v_y=v_z=0 (41.19)
+
+for
+
+x^2+y^2=\frac{D^2}{4}.
+
+That specifies completely the mathematical problem.
+
+If you look at the equations, you see that there are four different parameters to the problem: \eta , \rho , D , and V . You might think that we would have to give a whole series of cases for different V ’s, different D ’s, and so on. However, that is not the case. All the different possible solutions correspond to different values of one parameter. This is the most important general thing we can say about viscous flow. To see why this is so, notice first that the viscosity and density appear only in the ratio \eta/\rho —the kinematic viscosity. That reduces the number of independent parameters to three. Now suppose we measure all distances in the only length that appears in the problem, the diameter D of the cylinder; that is, we substitute for x , y , z , the new variables x' , y' , z' with
+
+x=x'D,\quad y=y'D,\quad z=z'D.
+
+Then D disappears from ( 41.19). In the same way, if we measure all velocities in terms of V —that is, we set v=v'V —we get rid of the V , and v' is just equal to 1 at large distances. Since we have fixed our units of length and velocity, our unit of time is now D/V ; so we should set
+
+t=t'\,\frac{D}{V}. (41.20)
+
+With our new variables, the derivatives in Eq. ( 41.18) get changed from \frac{\partial }{\partial x} to (1/D)\,\frac{\partial }{\partial x'} , and so on; so Eq. ( 41.18) becomes
+
+\boldsymbol{\Omega}=\mathbf{c}url{\mathbf{v}}=\frac{V}{D}\,\boldsymbol{\nabla}'\times\mathbf{v}'= \frac{V}{D}\,\boldsymbol{\Omega}'. (41.21)
+
+Our main equation ( 41.17) then reads
+
+\frac{\partial \boldsymbol{\Omega}'}{\partial t'}+\boldsymbol{\nabla}'\times(\boldsymbol{\Omega}'\times\mathbf{v}')= \frac{\eta}{\rho VD}\,\nabla'^2\boldsymbol{\Omega}'.
+
+All the constants condense into one factor which we write, following tradition, as 1/\ReynoldsR :
+
+\ReynoldsR=\frac{\rho}{\eta}\,VD. (41.22)
+
+If we just remember that all of our equations are to be written with all quantities in the new units, we can omit all the primes. Our equations for the flow are then
+
+\frac{\partial \boldsymbol{\Omega}}{\partial t}+\mathbf{c}url{(\boldsymbol{\Omega}\times\mathbf{v})}= \frac{1}{\ReynoldsR}\,\nabla^2\boldsymbol{\Omega}. (41.23)
+
+and
+
+\boldsymbol{\Omega}=\mathbf{c}url{\mathbf{v}}
+
+with the conditions
+
+\mathbf{v}=\FLPzero
+
+for
+
+x^2+y^2=1/4 (41.24)
+
+and
+
+v_x=1,\quad v_y=v_z=0
+
+for
+
+x^2+y^2+z^2\gg1.
+
+What this all means physically is very interesting. It means, for example, that if we solve the problem of the flow for one velocity V_1 and a certain cylinder diameter D_1 , and then ask about the flow for a different diameter D_2 and a different fluid, the flow will be the same for the velocity V_2 which gives the same Reynolds number—that is, when
+
+\ReynoldsR_1=\frac{\rho_1}{\eta_1}\,V_1D_1= \ReynoldsR_2=\frac{\rho_2}{\eta_2}\,V_2D_2. (41.25)
+
+For any two situations which have the same Reynolds number, the flows will “look” the same—in terms of the appropriate scaled x' , y' , z' , and t' . This is an important proposition because it means that we can determine what the behavior of the flow of air past an airplane wing will be without having to build an airplane and try it. We can, instead, make a model and make measurements using a velocity that gives the same Reynolds number. This is the principle which allows us to apply the results of “wind-tunnel” measurements on small-scale airplanes, or “model-basin” results on scale model boats, to the full-scale objects. Remember, however, that we can only do this provided the compressibility of the fluid can be neglected. Otherwise, a new quantity enters—the speed of sound. And different situations will really correspond to each other only if the ratio of V to the sound speed is also the same. This latter ratio is called the Mach number. So, for velocities near the speed of sound or above, the flows are the same in two situations if both the Mach number and the Reynolds number are the same for both situations.

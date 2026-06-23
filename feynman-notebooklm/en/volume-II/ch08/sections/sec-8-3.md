@@ -1,0 +1,60 @@
+## 8–3 The electrostatic energy of an ionic crystal
+
+We now consider an application of the concept of electrostatic energy in atomic physics. We cannot easily measure the forces between atoms, but we are often interested in the energy differences between one atomic arrangement and another, as, for example, the energy of a chemical change. Since atomic forces are basically electrical, chemical energies are in large part just electrostatic energies.
+
+Let’s consider, for example, the electrostatic energy of an ionic lattice. An ionic crystal like NaCl consists of positive and negative ions which can be thought of as rigid spheres. They attract electrically until they begin to touch; then there is a repulsive force which goes up very rapidly if we try to push them closer together.
+
+For our first approximation, therefore, we imagine a set of rigid spheres that represent the atoms in a salt crystal. The structure of the lattice has been determined by x-ray diffraction. It is a cubic lattice—like a three-dimensional checkerboard. Figure 8–5 shows a cross-sectional view. The spacing of the ions is 2.81 Å ( =2.81\times10^{-8} cm).
+
+### Figure Ch8-F5
+Caption: Fig. 8–5.Cross section of a salt crystal on an atomic scale. The checkerboard arrangement of Na and Cl ions is the same in the two cross sections perpendicular to the one shown. (See Vol. I, Fig. 1–7.)
+Image: figures/Ch8-F5.svg
+![Fig. 8–5.Cross section of a salt crystal on an atomic scale. The checkerboard arrangement of Na and Cl ions is the same in the two cross sections perpendicular to the one shown. (See Vol. I, Fig. 1–7.)](figures/Ch8-F5.svg)
+
+If our picture of this system is correct, we should be able to check it by asking the following question: How much energy will it take to pull all these ions apart—that is, to separate the crystal completely into ions? This energy should be equal to the heat of vaporization of NaCl plus the energy required to dissociate the molecules into ions. This total energy to separate NaCl to ions is determined experimentally to be 7.92 electron volts per molecule. Using the conversion
+
+1\text{ eV}=1.602\times10^{-19}\text{ joule},
+
+and Avogadro’s number for the number of molecules in a mole,
+
+N_0=6.02\times10^{23},
+
+the energy of dissociation can also be given as
+
+W=7.64\times10^5\text{ joules/mole}.
+
+Physical chemists prefer for an energy unit the kilocalorie, which is 4190 joules; so that 1 eV per molecule is 23 kilocalories per mole. A chemist would then say that the dissociation energy of NaCl is
+
+W=183\text{ kcal/mole}.
+
+Can we obtain this chemical energy theoretically by computing how much work it would take to pull apart the crystal? According to our theory, this work is the sum of the potential energies of all the pairs of ions. The easiest way to figure out this sum is to pick out a particular ion and compute its potential energy with each of the other ions. That will give us twice the energy per ion, because the energy belongs to the pairs of charges. If we want the energy to be associated with one particular ion, we should take half the sum. But we really want the energy per molecule, which contains two ions, so that the sum we compute will give directly the energy per molecule.
+
+The energy of an ion with one of its nearest neighbors is e^2/a , where e^2=q_e^2/4\pi\epsilon_0 and a is the center-to-center spacing between ions. (We are considering monovalent ions.) This energy is 5.12 eV, which we already see is going to give us a result of the correct order of magnitude. But it is still a long way from the infinite sum of terms we need.
+
+Let’s begin by summing all the terms from the ions along a straight line. Considering that the ion marked Na in Fig. 8–5 is our special ion, we shall consider first those ions on a horizontal line with it. There are two nearest Cl ions with negative charges, each at the distance a . Then there are two positive ions at the distance 2a , etc. Calling the energy of this sum U_1 , we write
+
+\begin{aligned} U_1&=\frac{e^2}{a}\biggl( -\frac{2}{1}+\frac{2}{2}-\frac{2}{3}+\frac{2}{4}\mp\dotsb \biggr)\\[1.5ex] &=-\frac{2e^2}{a}\biggl( 1-\frac{1}{2}+\frac{1}{3}-\frac{1}{4}\pm\dotsb \biggr). \end{aligned} (8.19)
+
+The series converges slowly, so it is difficult to evaluate numerically, but it is known to be equal to \ln2 . So
+
+U_1=-\frac{2e^2}{a}\ln2=-1.386\:\frac{e^2}{a}. (8.20)
+
+Now consider the next adjacent line of ions above. The nearest is negative and at the distance a . Then there are two positives at the distance \sqrt{2}\,a . The next pair are at the distance \sqrt{5}\,a , the next at \sqrt{10}\,a , and so on. So for the whole line we get the series
+
+\frac{e^2}{a}\biggl( -\frac{1}{1}+\frac{2}{\sqrt{2}}-\frac{2}{\sqrt{5}}+ \frac{2}{\sqrt{10}}\mp\dotsb \biggr). (8.21)
+
+There are four such lines: above, below, in front, and in back. Then there are the four lines which are the nearest lines on diagonals, and on and on.
+
+If you work patiently through for all the lines, and then take the sum, you find that the grand total is
+
+U=-1.747\,\frac{e^2}{a},
+
+which is just somewhat more than what we obtained in ( 8.20) for the first line. Using e^2/a=5.12 eV, we get
+
+U=-8.94\text{ eV}.
+
+Our answer is about 10\% above the experimentally observed energy. It shows that our idea that the whole lattice is held together by electrical Coulomb forces is fundamentally correct. This is the first time that we have obtained a specific property of a macroscopic substance from a knowledge of atomic physics. We will do much more later. The subject that tries to understand the behavior of bulk matter in terms of the laws of atomic behavior is called solid-state physics.
+
+Now what about the error in our calculation? Why is it not exactly right? It is because of the repulsion between the ions at close distances. They are not perfectly rigid spheres, so when they are close together they are partly squashed. They are not very soft, so they squash only a little bit. Some energy, however, is used in deforming them, and when the ions are pulled apart this energy is released. The actual energy needed to pull the ions apart is a little less than the energy that we calculated; the repulsion helps in overcoming the electrostatic attraction.
+
+Is there any way we can make an allowance for this contribution? We could if we knew the law of the repulsive force. We are not ready to analyze the details of this repulsive mechanism, but we can get some idea of its characteristics from some large-scale measurements. From a measurement of the compressibility of the whole crystal, it is possible to obtain a quantitative idea of the law of repulsion between the ions and therefore of its contribution to the energy. In this way it has been found that this contribution must be 1/9.4 of the contribution from the electrostatic attraction and, of course, of opposite sign. If we subtract this contribution from the pure electrostatic energy, we obtain 7.99 eV for the dissociation energy per molecule. It is much closer to the observed result of 7.92 eV, but still not in perfect agreement. There is one more thing we haven’t taken into account: we have made no allowance for the kinetic energy of the crystal vibrations. If a correction is made for this effect, very good agreement with the experimental number is obtained. The ideas are then correct; the major contribution to the energy of a crystal like NaCl is electrostatic.

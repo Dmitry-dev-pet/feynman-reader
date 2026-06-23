@@ -1,0 +1,115 @@
+15–1 The forces on a current loop; energy of a dipole
+
+In the last chapter we studied the magnetic field produced by a small rectangular current loop. We found that it is a dipole field, with the dipole moment given by
+
+\mu=IA, (15.1)
+
+where I is the current and A is the area of the loop. The direction of the moment is normal to the plane of the loop, so we can also write
+
+\FLPmu=IA\FLPn,
+
+where \FLPn is the unit normal to the area A .
+
+A current loop—or magnetic dipole—not only produces magnetic fields, but will also experience forces when placed in the magnetic field of other currents. We will look first at the forces on a rectangular loop in a uniform magnetic field. Let the z -axis be along the direction of the field, and the plane of the loop be placed through the y -axis, making the angle \theta with the xy -plane as in Fig. 15–1 . Then the magnetic moment of the loop—which is normal to its plane—will make the angle \theta with the magnetic field.
+
+Figure Ch15-F1
+Caption: Fig. 15–1.A rectangular loop carrying the current II sits in a uniform field B\FigB (in the zz-direction). The torque on the loop is τ=μ×B\Figtau=\Figmu\times\FigB, where the magnetic moment μ=Iab\mu=Iab.
+Image: figures/Ch15-F1.svg
+![Fig. 15–1.A rectangular loop carrying the current II sits in a uniform field B\FigB (in the zz-direction). The torque on the loop is τ=μ×B\Figtau=\Figmu\times\FigB, where the magnetic moment μ=Iab\mu=Iab.](figures/Ch15-F1.svg)
+
+Since the currents are opposite on opposite sides of the loop, the forces are also opposite, so there is no net force on the loop (when the field is uniform). Because of forces on the two sides marked 1 and 2 in the figure, however, there is a torque which tends to rotate the loop about the y -axis. The magnitude of these forces F_1 and F_2 is
+
+F_1=F_2=IBb.
+
+Their moment arm is
+
+a\sin\theta,
+
+so the torque is
+
+\tau=IabB\sin\theta.
+
+or, since Iab is the magnetic moment of the loop,
+
+\tau=\mu B\sin\theta.
+
+The torque can be written in vector notation:
+
+\boldsymbol{\tau}=\FLPmu\times\mathbf{B}. (15.2)
+
+Although we have only shown that the torque is given by Eq. ( 15.2) in one rather special case, the result is right for a small loop of any shape, as we will see. The same kind of relationship holds for the torque of an electric dipole in an electric field:
+
+\boldsymbol{\tau}=\mathbf{p}\times\mathbf{E}.
+
+We now ask about the mechanical energy of our current loop. Since there is a torque, the energy evidently depends on the orientation. The principle of virtual work says that the torque is the rate of change of energy with angle, so we can write
+
+dU=\tau\,d\theta.
+
+Setting \tau=\mu B\sin\theta , and integrating, we can write for the energy
+
+U=-\mu B\cos\theta+\text{a constant}. (15.3)
+
+(The sign is negative because the torque tries to line up the moment with the field; the energy is lowest when \FLPmu and \mathbf{B} are parallel.)
+
+For reasons which we will discuss later, this energy is not the total energy of a current loop. (We have, for one thing, not taken into account the energy required to maintain the current in the loop.) We will, therefore, call this energy U_{\text{mech}} , to remind us that it is only part of the energy. Also, since we are leaving out some of the energy anyway, we can set the constant of integration equal to zero in Eq. ( 15.3). So we rewrite the equation:
+
+U_{\text{mech}}=-\FLPmu\cdot\mathbf{B}. (15.4)
+
+Again, this corresponds to the result for an electric dipole:
+
+U=-\mathbf{p}\cdot\mathbf{E}. (15.5)
+
+Now the electrostatic energy U in Eq. ( 15.5) is the true energy, but U_{\text{mech}} in ( 15.4) is not the real energy. It can, however, be used in computing forces, by the principle of virtual work, supposing that the current in the loop—or at least \mu —is kept constant.
+
+We can show for our rectangular loop that U_{\text{mech}} also corresponds to the mechanical work done in bringing the loop into the field. The total force on the loop is zero only in a uniform field; in a nonuniform field there are net forces on a current loop. In putting the loop into a region with a field, we must have gone through places where the field was not uniform, and so work was done. To make the calculation simple, we shall imagine that the loop is brought into the field with its moment pointing along the field. (It can be rotated to its final position after it is in place.)
+
+Imagine that we want to move the loop in the x -direction—toward a region of stronger field—and that the loop is oriented as shown in Fig. 15–2 . We start somewhere where the field is zero and integrate the force times the distance as we bring the loop into the field.
+
+Figure Ch15-F2
+Caption: Fig. 15–2.A loop is carried along the xx-direction through the field B\FigB, at right angles to xx.
+Image: figures/Ch15-F2.svg
+![Fig. 15–2.A loop is carried along the xx-direction through the field B\FigB, at right angles to xx.](figures/Ch15-F2.svg)
+
+First, let’s compute the work done on each side separately and then take the sum (rather than adding the forces before integrating). The forces on sides 3 and 4 are at right angles to the direction of motion, so no work is done on them. The force on side 2 is IbB(x) in the x -direction, and to get the work done against the magnetic forces we must integrate this from some x where the field is zero, say at x=-\infty , to x_2 , its present position:
+
+W_2=-\int_{-\infty}^{x_2}F_2\,dx=-Ib\int_{-\infty}^{x_2}B(x)\,dx. (15.6)
+
+Similarly, the work done against the forces on side 1 is
+
+W_1=-\int_{-\infty}^{x_1}F_1\,dx=Ib\int_{-\infty}^{x_1}B(x)\,dx. (15.7)
+
+To find each integral, we need to know how B(x) depends on x . But notice that side 1 follows along right behind side 2 , so that its integral includes most of the work done on side 2 . In fact, the sum of ( 15.6) and ( 15.7) is just
+
+W=-Ib\int_{x_1}^{x_2}B(x)\,dx. (15.8)
+
+But if we are in a region where B is nearly the same on both sides 1 and 2 , we can write the integral as
+
+\int_{x_1}^{x_2}B(x)\,dx=(x_2-x_1)B=aB,
+
+where B is the field at the center of the loop. The total mechanical energy we have put in is
+
+U_{\text{mech}}=W=-Iab\,B=-\mu B. (15.9)
+
+The result agrees with the energy we took for Eq. ( 15.4).
+
+We would, of course, have gotten the same result if we had added the forces on the loop before integrating to find the work. If we let B_1 be the field at side 1 and B_2 be the field at side 2 , then the total force in the x -direction is
+
+F_x=Ib(B_2-B_1).
+
+If the loop is “small,” that is, if B_2 and B_1 are not too different, we can write
+
+B_2=B_1+\frac{\partial B}{\partial x}\,\Delta x=B_1+\frac{\partial B}{\partial x}\,a.
+
+So the force is
+
+F_x=Iab\,\frac{\partial B}{\partial x}. (15.10)
+
+The total work done on the loop by external forces is
+
+-\int_{-\infty}^xF_x\,dx=-Iab\int\frac{\partial B}{\partial x}\,dx=-IabB,
+
+which is again just -\mu B . Only now we see why it is that the force on a small current loop is proportional to the derivative of the magnetic field, as we would expect from
+
+F_x\,\Delta x=-\Delta U_{\text{mech}}=-\Delta(-\FLPmu\cdot\mathbf{B}). (15.11)
+
+Our result, then, is that even though U_{\text{mech}}=-\FLPmu\cdot\mathbf{B} may not include all the energy of a system—it is a fake kind of energy—it can still be used with the principle of virtual work to find the forces on steady current loops.

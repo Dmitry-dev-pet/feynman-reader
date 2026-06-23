@@ -1,0 +1,61 @@
+## 2–5 Operations with ∇\FLPnabla
+
+Can we do any other algebra with the vector operator \boldsymbol{\nabla} ? Let us try combining it with a vector. We can combine two vectors by making a dot product. We could make the products
+
+(\text{a vector})\cdot\boldsymbol{\nabla},\quad\text{or}\quad\mathbf{d}iv{(\text{a vector})}.
+
+The first one doesn’t mean anything yet, because it is still an operator. What it might ultimately mean would depend on what it is made to operate on. The second product is some scalar field. ( \mathbf{A}\cdot\mathbf{B} is always a scalar.)
+
+Let’s try the dot product of \boldsymbol{\nabla} with a vector field we know, say \FLPh . We write out the components:
+
+\mathbf{d}iv{\FLPh}=\nabla_xh_x+\nabla_yh_y+\nabla_zh_z (2.32)
+
+or
+
+\mathbf{d}iv{\FLPh}=\frac{\partial h_x}{\partial x}+\frac{\partial h_y}{\partial y}+\frac{\partial h_z}{\partial z}. (2.33)
+
+The sum is invariant under a coordinate transformation. If we were to choose a different system (indicated by primes), we would have 2
+
+\boldsymbol{\nabla}'\cdot\FLPh=\frac{\partial h_{x'}}{\partial x'}+\frac{\partial h_{y'}}{\partial y'}+\frac{\partial h_{z'}}{\partial z'}, (2.34)
+
+which is the same number as would be gotten from Eq. ( 2.33), even though it looks different. That is,
+
+\boldsymbol{\nabla}'\cdot\FLPh=\mathbf{d}iv{\FLPh} (2.35)
+
+for every point in space. So \mathbf{d}iv{\FLPh} is a scalar field, which must represent some physical quantity. You should realize that the combination of derivatives in \mathbf{d}iv{\FLPh} is rather special. There are all sorts of other combinations like \frac{\partial h_y}{\partial x} , which are neither scalars nor components of vectors.
+
+The scalar quantity \mathbf{d}iv{(\text{a vector})} is extremely useful in physics. It has been given the name the divergence. For example,
+
+\mathbf{d}iv{\FLPh}=\ndiv\FLPh=\text{“divergence of $\FLPh$.”} (2.36)
+
+As we did for \boldsymbol{\nabla}{T} , we can ascribe a physical significance to \mathbf{d}iv{\FLPh} . We shall, however, postpone that until later.
+
+First, we wish to see what else we can cook up with the vector operator \boldsymbol{\nabla} . What about a cross product? We must expect that
+
+\mathbf{c}url{\FLPh}=\text{a vector}. (2.37)
+
+It is a vector whose components we can write by the usual rule for cross products (see Eq. ( 2.2)):
+
+(\mathbf{c}url{\FLPh})_z= \nabla_x h_y -\nabla_y h_x =\frac{\partial h_y}{\partial x} -\frac{\partial h_x}{\partial y}. (2.38)
+
+Similarly,
+
+(\mathbf{c}url{\FLPh})_x = \nabla_y h_z -\nabla_z h_y =\frac{\partial h_z}{\partial y} -\frac{\partial h_y}{\partial z}\phantom{.} (2.39)
+
+and
+
+(\mathbf{c}url{\FLPh})_y = \nabla_z h_x -\nabla_x h_z =\frac{\partial h_x}{\partial z} -\frac{\partial h_z}{\partial x}. (2.40)
+
+The combination \mathbf{c}url{\FLPh} is called “the curl of \FLPh .” The reason for the name and the physical meaning of the combination will be discussed later.
+
+Summarizing, we have three kinds of combinations with \boldsymbol{\nabla} :
+
+\begin{aligned} &\boldsymbol{\nabla}{T}&&=\grad T\;&&=\text{a vector},\\[1ex] &\mathbf{d}iv{\FLPh}&&=\ndiv\FLPh&&=\text{a scalar},\\[1ex] &\mathbf{c}url{\FLPh}\;&&=\curl\FLPh&&=\text{a vector}. \end{aligned}
+
+Using these combinations, we can write about the spatial variations of fields in a convenient way—in a way that is general, in that it doesn’t depend on any particular set of axes.
+
+As an example of the use of our vector differential operator \boldsymbol{\nabla} , we write a set of vector equations which contain the same laws of electromagnetism that we gave in words in Chapter 1. They are called Maxwell’s equations.
+
+\begin{aligned} \textit{Maxwell’s Equations}\\[1ex] \begin{alignedat}{2} &(1)&\quad \mathbf{d}iv{\mathbf{E}}\;&=\frac{\rho}{\epsilon_0}\\[.5ex] &(2)&\quad\mathbf{c}url{\mathbf{E}}\;&=-\frac{\partial \mathbf{B}}{\partial t}\\[.5ex] &(3)&\quad\mathbf{d}iv{\mathbf{B}}\;&=0\\[.5ex] &(4)&\quad c^2\,\mathbf{c}url{\mathbf{B}}\;&=\frac{\partial \mathbf{E}}{\partial t}+\frac{\mathbf{j}}{\epsilon_0} \end{alignedat} \end{aligned} (2.41)
+
+where \rho (rho), the “electric charge density,” is the amount of charge per unit volume, and \mathbf{j} , the “electric current density,” is the rate at which charge flows through a unit area per second. These four equations contain the complete classical theory of the electromagnetic field. You see what an elegantly simple form we can get with our new notation!

@@ -1,0 +1,29 @@
+21–3 The general solution of Maxwell’s equations
+
+We have found the solution of Eq. ( 21.7) for a “point” source. The next question is: What is the solution for a spread-out source? That’s easy; we can think of any source s(x,y,z,t) as made up of the sum of many “point” sources, one for each volume element dV , and each with the source strength s(x,y,z,t)\,dV . Since Eq. ( 21.7) is linear, the resultant field is the superposition of the fields from all of such source elements.
+
+Using the results of the preceding section [Eq. ( 21.13)] we know that the field d\psi at the point (x_1,y_1,z_1) —or (1) for short—at the time t , from a source element s\,dV at the point (x_2,y_2,z_2) —or (2) for short—is given by
+
+d\psi(1,t)=\frac{s(2,t-r_{12}/c)\,dV_2}{4\pi r_{12}},
+
+where r_{12} is the distance from (2) to (1) . Adding the contributions from all the pieces of the source means, of course, doing an integral over all regions where s\neq0 ; so we have
+
+\psi(1,t)=\int\frac{s(2,t-r_{12}/c)}{4\pi r_{12}}\,dV_2. (21.14)
+
+That is, the field at (1) at the time t is the sum of all the spherical waves which leave the source elements at (2) at the times (t-r_{12}/c) . This is the solution of our wave equation for any set of sources.
+
+We see now how to obtain a general solution for Maxwell’s equations. If for \psi we mean the scalar potential \phi , the source function s becomes \rho/\epsilon_0 . Or we can let \psi represent any one of the three components of the vector potential \mathbf{A} , replacing s by the corresponding component of \mathbf{j}/\epsilon_0 c^2 . Thus, if we know the charge density \rho(x,y,z,t) and the current density \mathbf{j}(x,y,z,t) everywhere, we can immediately write down the solutions of Eqs. ( 21.4) and ( 21.5). They are
+
+\phi(1,t)=\int\frac{\rho(2,t-r_{12}/c)}{4\pi\epsilon_0 r_{12}}\,dV_2 (21.15)
+
+and
+
+\mathbf{A}(1,t)=\int\frac{\mathbf{j}(2,t-r_{12}/c)}{4\pi\epsilon_0 c^2r_{12}}\,dV_2. (21.16)
+
+The fields \mathbf{E} and \mathbf{B} can then be found by differentiating the potentials, using Eqs. ( 21.2) and ( 21.3). [Incidentally, it is possible to verify that the \phi and \mathbf{A} obtained from Eqs. ( 21.15) and ( 21.16) do satisfy the equality ( 21.6).]
+
+We have solved Maxwell’s equations. Given the currents and charges in any circumstance, we can find the potentials directly from these integrals and then differentiate and get the fields. So we have finished with the Maxwell theory. Also this permits us to close the ring back to our theory of light, because to connect with our earlier work on light, we need only calculate the electric field from a moving charge. All that remains is to take a moving charge, calculate the potentials from these integrals, and then differentiate to find \mathbf{E} from -\boldsymbol{\nabla}{\phi}-\frac{\partial \mathbf{A}}{\partial t} . We should get Eq. ( 21.1). It turns out to be lots of work, but that’s the principle.
+
+So here is the center of the universe of electromagnetism—the complete theory of electricity and magnetism, and of light; a complete description of the fields produced by any moving charges; and more. It is all here. Here is the structure built by Maxwell, complete in all its power and beauty. It is probably one of the greatest accomplishments of physics. To remind you of its importance, we will put it all together in a nice frame.
+
+\begin{aligned} \begin{aligned} \textbf{Maxwell’s equ}&\textbf{ations:}\\ \mathbf{d}iv{\mathbf{E}}&=\frac{\rho}{\epsilon_0}\\ \mathbf{c}url{\mathbf{E}}&=-\frac{\partial \mathbf{B}}{\partial t}\\[1ex] \mathbf{d}iv{\mathbf{B}}&=0\\[1ex] c^2\mathbf{c}url{\mathbf{B}}&=\frac{\mathbf{j}}{\epsilon_0}+\frac{\partial \mathbf{E}}{\partial t}\\[2.5ex] \textbf{Their solution}&\textbf{s:} \end{aligned}\\ \mathbf{E}=-\boldsymbol{\nabla}{\phi}-\frac{\partial \mathbf{A}}{\partial t}\\ \mathbf{B}=\mathbf{c}url{\mathbf{A}}\\[1ex] \phi(1,t)=\int\frac{\rho(2,t-r_{12}/c)}{4\pi\epsilon_0 r_{12}}\,dV_2\\[1ex] \mathbf{A}(1,t)=\int\frac{\mathbf{j}(2,t-r_{12}/c)}{4\pi\epsilon_0 c^2r_{12}}\,dV_2 \end{aligned}

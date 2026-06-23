@@ -1,0 +1,46 @@
+36–4 Iron-core inductances
+
+One of the most important applications of magnetic materials is in electrical circuits—for example, in transformers, electric motors, and so on. One reason is that with iron we can control where the magnetic fields go, and also get much larger fields for a given electric current. For example, the typical “toroidal” inductance is made very much like the object shown in Fig. 36–7. For a given inductance, it can be much smaller in volume and use much less copper than an equivalent “air-core” inductance. For a given inductance, we get a much smaller resistance in the winding, so the inductance is more nearly “ideal”—particularly for low frequencies. It is very easy to understand, qualitatively, how such an inductance works. If I is the current in the winding, then the field \FLPH which is produced in the inside is proportional to I —as given by Eq. ( 36.20). The voltage \voltage across the terminals is related to the magnetic field \mathbf{B} . Neglecting the resistance of the winding, the voltage \voltage is proportional to \frac{\partial \mathbf{B}}{\partial t} . The inductance \selfInd , which is the ratio of \voltage to dI/dt (see Section 17–7 ), thus involves the relation between B and H in the iron. Since the \mathbf{B} is so much bigger than the \FLPH , we get a large factor in the inductance. Physically, what happens is that a small current in the coil, which would ordinarily produce a small magnetic field, causes the little “slave” magnets in the iron to line up and produce a tremendously greater “magnetic” current than the external current in the winding. It is as if we had a lot more current going through the coil than we really have. When we reverse the current, all the little magnets flip over—all those internal currents reverse—and we get a much higher induced emf than we would get without the iron. If we want to calculate the inductance, we can do so through the energy—as described in Section 17–8 . The rate at which energy is delivered from the current source is I\voltage . The voltage \voltage is the cross-sectional area A of the core, times N , times dB/dt . From Eq. ( 36.20), I=(\epsilon_0 c^2l/N)H . So we have
+
+\frac{d U}{d t}=\voltage I=(\epsilon_0 c^2lA)H\,\frac{d B}{d t}.
+
+Integrating over time, we have
+
+U=(\epsilon_0 c^2lA)\int H\,dB. (36.21)
+
+Notice that lA is the volume of the torus, so we have shown that the energy density u=U/\text{vol} in a magnetic material is given by
+
+u=\epsilon_0 c^2\int H\,dB. (36.22)
+
+An interesting feature is involved here. When we use alternating currents, the iron is driven around a hysteresis loop. Since B is not a single-valued function of H , the integral of \int H\,dB around one complete cycle is not equal to zero. It is the area enclosed inside the hysteresis curve. Thus, the driving source delivers a certain net energy each cycle—an energy proportional to the area inside the hysteresis loop. And that energy is “lost.” It is lost from the electromagnetic goings on, but turns up as heat in the iron. It is called the hysteresis loss. To keep such energy losses small, we would like the hysteresis loop to be as narrow as possible. One way to decrease the area of the loop is to reduce the maximum field that is reached during each cycle. For smaller maximum fields, we get a hysteresis curve like the one shown in Fig. 36–9. Also, special materials are designed to have a very narrow loop. The so-called transformer irons —which are iron alloys with a small amount of silicon—have been developed to have this property.
+
+Figure Ch36-F9
+Caption: Fig. 36–9.A hysteresis loop that doesn’t reach saturation.
+Image: figures/Ch36-F9.svg
+![Fig. 36–9.A hysteresis loop that doesn’t reach saturation.](figures/Ch36-F9.svg)
+
+When an inductance is run over a small hysteresis loop, the relationship between B and H can be approximated by a linear equation. People usually write
+
+B=\mu H. (36.23)
+
+The constant \mu is not the magnetic moment we have used before. It is called the permeability of the iron. (It is also sometimes called the “ relative permeability.”) The permeability of ordinary irons is typically several thousand. There are special alloys alike “supermalloy” which can have permeabilities as high as a million.
+
+If we use the approximation that B=\mu H in Eq. ( 36.21), we can write the energy in a toroidal inductance as
+
+\begin{aligned} U&=(\epsilon_0 c^2lA)\mu\int H\,dH\\[1ex] &=(\epsilon_0 c^2lA)\,\frac{\mu H^2}{2}. \end{aligned} (36.24)
+
+So the energy density is approximately
+
+u\approx\frac{\epsilon_0 c^2}{2}\,\mu H^2.
+
+We can now set the energy of Eq. ( 36.24) equal to the energy \selfInd I^2/2 of an inductance, and solve for \selfInd . We get
+
+\selfInd=(\epsilon_0 c^2lA)\mu\biggl(\frac{H}{I}\biggr)^2.
+
+Using H/I from Eq. ( 36.20), we have
+
+\selfInd=\frac{\mu N^2A}{\epsilon_0 c^2l}. (36.25)
+
+The inductance is proportional to \mu . If you want inductances for such things as audio amplifiers, you will try to operate them on a hysteresis loop where the B - H relationship is as linear as possible. (You will remember that we spoke in Chapter 50, Vol. I, about the generation of harmonics in nonlinear systems.) For such purposes, Eq. ( 36.23) is a useful approximation. On the other hand, if you want to generate harmonics, you may use an inductance which is intentionally operated in a highly nonlinear way. Then you will have to use the complete B - H curves, and analyze what happens by graphical or numerical methods.
+
+A “transformer” is often made by putting two coils on the same torus—or core —of a magnetic material. (For the larger transformers, the core is made with rectangular proportions for convenience.) Then a varying current in the “primary” winding causes the magnetic field in the core to change, which induces an emf in the “secondary” winding. Since the flux through each turn of both windings is the same, the emf’s in the two windings are in the same ratio as the number of turns on each. A voltage applied to the primary is transformed to a different voltage at the secondary. Since a certain net current around the core is needed to produce the required change in the magnetic field, the algebraic sum of the currents in the two windings will be fixed and equal to the required “magnetizing” current. If the current drawn from the secondary increases, the primary current must increase in proportion—there is a “transformation” of currents as well as voltage.

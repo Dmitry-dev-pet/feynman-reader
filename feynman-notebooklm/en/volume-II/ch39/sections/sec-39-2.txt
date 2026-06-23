@@ -1,0 +1,57 @@
+39–2 The tensor of elasticity
+
+Now that we have described the strains, we want to relate them to the internal forces—the stresses in the material. For each small piece of the material, we assume Hooke’s law holds and write that the stresses are proportional to the strains. In Chapter 31 we defined the stress tensor S_{ij} as the i th component of the force across a unit-area perpendicular to the j -axis. Hooke’s law says that each component of S_{ij} is linearly related to each of the components of strain. Since S and e each have nine components, there are 9\times9=81 possible coefficients which describe the elastic properties of the material. They are constants if the material itself is homogeneous. We write these coefficients as C_{ijkl} and define them by the equation
+
+S_{ij}=\sum_{k,l}C_{ijkl}e_{kl}, (39.12)
+
+where i , j , k , l all take on the values 1 , 2 , or 3 . Since the coefficients C_{ijkl} relate one tensor to another, they also form a tensor—a tensor of the fourth rank. We can call it the tensor of elasticity.
+
+Suppose that all the C ’s are known and that you put a complicated force on an object of some peculiar shape. There will be all kinds of distortion, and the thing will settle down with some twisted shape. What are the displacements? You can see that it is a complicated problem. If you knew the strains, you could find the stresses from Eq. ( 39.12)—or vice versa. But the stresses and strains you end up with at any point depend on what happens in all the rest of the material.
+
+The easiest way to get at the problem is by thinking of the energy. When there is a force F proportional to a displacement x , say F=kx , the work required for any displacement x is kx^2/2 . In a similar way, the work w that goes into each unit volume of a distorted material turns out to be
+
+w=\frac{1}{2}\sum_{ijkl}C_{ijkl}e_{ij}e_{kl}. (39.13)
+
+The total work W done in distorting the body is the integral of w over its volume:
+
+W=\int\frac{1}{2}\sum_{ijkl}C_{ijkl}e_{ij}e_{kl}\,dV. (39.14)
+
+This is then the potential energy stored in the internal stresses of the material. Now when a body is in equilibrium, this internal energy must be at a minimum. So the problem of finding the strains in a body can be solved by finding the set of displacements \FLPu throughout the body which will make W a minimum. In Chapter 19 we gave some of the general ideas of the calculus of variations that are used in tackling minimization problems like this. We cannot go into the problem in any more detail here.
+
+What we are mainly interested in now is what we can say about the general properties of the tensor of elasticity. First, it is clear that there are not really 81 different terms in C_{ijkl} . Since both S_{ij} and e_{ij} are symmetric tensors, each with only six different terms, there can be at most 36 different terms in C_{ijkl} . There are, however, usually many fewer than this.
+
+Let’s look at the special case of a cubic crystal. In it, the energy density w starts out like this:
+
+\begin{aligned} w=\frac{1}{2}\{&C_{xxxx}e_{xx}^2\!+C_{xxxy}e_{xx}e_{xy}\!+C_{xxxz}e_{xx}e_{xz}\\[.5ex] +\;&C_{xxyx}e_{xx}e_{xy}\!+C_{xxyy}e_{xx}e_{yy}\ldots\text{etc}\ldots\\[.5ex] +\;&C_{yyyy}e_{yy}^2\!+\ldots\text{etc}\ldots\text{etc}\ldots\}, \end{aligned} (39.15)
+
+with 81 terms in all! Now a cubic crystal has certain symmetries. In particular, if the crystal is rotated 90^\circ , it has the same physical properties. It has the same stiffness for stretching in the y -direction as for stretching in the x -direction. Therefore, if we change our definition of the coordinate directions x and y in Eq. ( 39.15), the energy wouldn’t change. It must be that for a cubic crystal
+
+C_{xxxx}=C_{yyyy}=C_{zzzz}. (39.16)
+
+Next we can show that the terms like C_{xxxy} must be zero. A cubic crystal has the property that it is symmetric under a reflection about any plane perpendicular to one of the axes. If we replace y by -y , nothing is different. But changing y to -y changes e_{xy} to -e_{xy} —a displacement which was toward +y is now toward -y . If the energy is not to change, C_{xxxy} must go into -C_{xxxy} when we make a reflection. But a reflected crystal is the same as before, so C_{xxxy} must be the same as -C_{xxxy} . This can happen only if both are zero.
+
+You say, “But the same argument will make C_{yyyy}=0 !” No, because there are four y ’s. The sign changes once for each y , and four minuses make a plus. If there are two or four y ’s, the term does not have to be zero. It is zero only when there is one, or three. So, for a cubic crystal, any nonzero term of C will have only an even number of identical subscripts. (The arguments we have made for y obviously hold also for x and z .) We might then have terms like C_{xxyy} , C_{xyxy} , C_{xyyx} , and so on. We have already shown, however, that if we change all x ’s to y ’s and vice versa (or all z ’s and x ’s, and so on) we must get—for a cubic crystal—the same number. This means that there are only three different nonzero possibilities:
+
+\begin{aligned} &C_{xxxx}\:(=C_{yyyy}=C_{zzzz}),\\[.5ex] &C_{xxyy}\:(=C_{yyxx}=C_{xxzz},\:\text{etc.}),\\[.5ex] &C_{xyxy}\:(=C_{yxyx}=C_{xzxz},\:\text{etc.}). \end{aligned} (39.17)
+
+For a cubic crystal, then, the energy density will look like this:
+
+\begin{aligned} w&=\frac{1}{2}\{C_{xxxx}(e_{xx}^2+e_{yy}^2+e_{zz}^2)\\[.5ex] &\quad+\,2C_{xxyy}(e_{xx}e_{yy}+e_{yy}e_{zz}+e_{zz}e_{xx})\\[.5ex] &\quad+\,4C_{xyxy}(e_{xy}^2+e_{yz}^2+e_{zx}^2)\}. \end{aligned} (39.18)
+
+For an isotropic—that is, noncrystalline—material, the symmetry is still higher. The C ’s must be the same for any choice of the coordinate system. Then it turns out that there is another relation among the C ’s, namely, that
+
+C_{xxxx}=C_{xxyy}+2C_{xyxy}. (39.19)
+
+We can see that this is so by the following general argument. The stress tensor S_{ij} has to be related to e_{ij} in a way that doesn’t depend at all on the coordinate directions—it must be related only by scalar quantities. “That’s easy,” you say. “The only way to obtain S_{ij} from e_{ij} is by multiplication by a scalar constant. It’s just Hooke’s law. It must be that S_{ij}=(\text{const})e_{ij} .” But that’s not quite right; there could also be the unit tensor \delta_{ij} multiplied by some scalar, linearly related to e_{ij} . The only invariant you can make that is linear in the e ’s is \sum e_{ii} . (It transforms like x^2+y^2+z^2 , which is a scalar.) So the most general form for the equation relating S_{ij} to e_{ij} —for isotropic materials—is
+
+S_{ij}=2\mu e_{ij}+\lambda\Bigl(\sum_ke_{kk}\Bigr)\delta_{ij}. (39.20)
+
+(The first constant is usually written as two times \mu ; then the coefficient \mu is equal to the shear modulus we defined in the last chapter.) The constants \mu and \lambda are called the Lamé elastic constants. Comparing Eq. ( 39.20) with Eq. ( 39.12), you see that
+
+\begin{aligned} C_{xxyy}&=\lambda,\\[.5ex] C_{xyxy}&=\mu,\\[.5ex] C_{xxxx}&=2\mu+\lambda. \end{aligned} (39.21)
+
+So we have proved that Eq. ( 39.19) is indeed true. You also see that the elastic properties of an isotropic material are completely given by two constants, as we said in the last chapter.
+
+The C ’s can be put in terms of any two of the elastic constants we have used earlier—for instance, in terms of Young’s modulus Y and Poisson’s ratio \sigma . We will leave it for you to show that
+
+\begin{aligned} C_{xxxx}&=\frac{Y}{1+\sigma} \biggl(1+\frac{\sigma}{1-2\sigma}\biggr),\\[.5ex] C_{xxyy}&=\frac{Y}{1+\sigma} \biggl(\frac{\sigma}{1-2\sigma}\biggr),\\[.5ex] C_{xyxy}&=\frac{Y}{2(1+\sigma)}. \end{aligned} (39.22)
