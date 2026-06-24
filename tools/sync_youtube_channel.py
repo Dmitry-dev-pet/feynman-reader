@@ -23,6 +23,10 @@ LANG_LABEL = {"ru": "RU", "en": "EN"}
 VOLUME_LABEL = {"I": "Volume I", "II": "Volume II", "III": "Volume III"}
 MEDIA_LABEL = {"audio": "Audio", "video": "Video"}
 MEDIA_ACTION = {"audio": "listen", "video": "watch"}
+LEGACY_AGGREGATE_PLAYLISTS = {
+    "Feynman Reader NotebookLM Audio",
+    "Feynman Reader NotebookLM Video",
+}
 
 
 @dataclass(frozen=True)
@@ -177,35 +181,8 @@ def load_video_specs() -> list[VideoSpec]:
 
 def playlist_specs(video_specs: list[VideoSpec]) -> list[PlaylistSpec]:
     by_id = {spec.video_id: spec for spec in video_specs}
-    group_order = {"ru": 0, "en": 1}
-    volume_order = {"I": 0, "II": 1, "III": 2}
 
     specs: list[PlaylistSpec] = []
-    for media_type in ("audio", "video"):
-        videos = [
-            spec.video_id
-            for spec in sorted(
-                video_specs,
-                key=lambda item: (
-                    group_order[item.language],
-                    volume_order[item.volume],
-                    item.part_index,
-                ),
-            )
-            if spec.media_type == media_type
-        ]
-        specs.append(
-            PlaylistSpec(
-                title=f"Feynman Reader NotebookLM {MEDIA_LABEL[media_type]}",
-                description=(
-                    f"All Feynman Reader NotebookLM {media_type} companion videos, "
-                    "organized with chapter timestamps. Open the reader: "
-                    f"{READER_URL}"
-                ),
-                video_ids=tuple(videos),
-            )
-        )
-
     for language in ("ru", "en"):
         for volume in ("I", "II", "III"):
             rows = [
@@ -405,6 +382,17 @@ def sync_playlist_items(youtube: Any, spec: PlaylistSpec, playlist_id: str | Non
             ).execute()
 
 
+def prune_legacy_playlists(youtube: Any, existing: dict[str, dict[str, Any]], *, dry_run: bool) -> None:
+    for title in sorted(LEGACY_AGGREGATE_PLAYLISTS):
+        playlist = existing.get(title)
+        if not playlist:
+            continue
+        print(f"{'DRY RUN ' if dry_run else ''}delete playlist: {title}")
+        if not dry_run:
+            youtube.playlists().delete(id=playlist["id"]).execute()
+            existing.pop(title, None)
+
+
 def channel_sections(youtube: Any) -> list[dict[str, Any]]:
     response = youtube.channelSections().list(part="id,snippet,contentDetails", mine=True).execute()
     return response.get("items", [])
@@ -418,8 +406,6 @@ def sync_channel_sections(
     dry_run: bool,
 ) -> None:
     target_titles = [
-        "Feynman Reader NotebookLM Video",
-        "Feynman Reader NotebookLM Audio",
         "Feynman Reader RU Volume I",
         "Feynman Reader RU Volume II",
         "Feynman Reader RU Volume III",
@@ -436,6 +422,14 @@ def sync_channel_sections(
             by_playlist[str(playlists_in_section[0])] = section
 
     title_by_id = {playlist_ids[spec.title]: spec.title for spec in playlists if spec.title in playlist_ids}
+    wanted_set = set(wanted)
+    for playlist_id, section in by_playlist.items():
+        if playlist_id in wanted_set:
+            continue
+        print(f"{'DRY RUN ' if dry_run else ''}delete channel section: {playlist_id}")
+        if not dry_run:
+            youtube.channelSections().delete(id=section["id"]).execute()
+
     for position, playlist_id in enumerate(wanted):
         section = by_playlist.get(playlist_id)
         title = title_by_id.get(playlist_id, playlist_id)
@@ -489,6 +483,7 @@ def main() -> int:
     if not args.skip_video_metadata:
         sync_video_metadata(youtube, specs, dry_run=args.dry_run)
     existing = existing_playlists(youtube)
+    prune_legacy_playlists(youtube, existing, dry_run=args.dry_run)
     playlist_ids: dict[str, str] = {}
     for playlist in playlists:
         playlist_id = upsert_playlist(youtube, playlist, existing, dry_run=args.dry_run)
