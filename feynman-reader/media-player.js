@@ -6,6 +6,7 @@
   let manifestChapter = null;
 
   const MEDIA_INTENT_KEY = "flp-reader-media-intent";
+  const PLAYER_WIDTH_KEY = "flp-floating-player-width";
   const isRu = () => (document.documentElement.lang || "").toLowerCase().startsWith("ru");
 
   const ReaderManifest = {
@@ -98,6 +99,60 @@
   };
 
   const FloatingPlayer = {
+    minWidth: 320,
+    maxWidth() {
+      return Math.max(this.minWidth, Math.min(760, window.innerWidth - 32));
+    },
+    savedWidth() {
+      try {
+        return Number(localStorage.getItem(PLAYER_WIDTH_KEY) || 0);
+      } catch (_) {
+        return 0;
+      }
+    },
+    saveWidth(width) {
+      if (window.innerWidth <= 760) return;
+      try {
+        localStorage.setItem(PLAYER_WIDTH_KEY, String(Math.round(this.clampWidth(width))));
+      } catch (_) {}
+    },
+    clampWidth(width) {
+      return Math.min(this.maxWidth(), Math.max(this.minWidth, Number(width) || 0));
+    },
+    applySavedSize(player) {
+      if (window.innerWidth <= 760) {
+        player.style.removeProperty("width");
+        return;
+      }
+      const width = this.savedWidth();
+      if (width) player.style.width = `${this.clampWidth(width)}px`;
+    },
+    resizeBy(delta) {
+      const player = this.ensure();
+      if (window.innerWidth <= 760) return;
+      const current = player.getBoundingClientRect().width || this.savedWidth() || 432;
+      const width = this.clampWidth(current + delta);
+      player.style.width = `${width}px`;
+      this.saveWidth(width);
+    },
+    resetSize() {
+      const player = this.ensure();
+      player.style.removeProperty("width");
+      try {
+        localStorage.removeItem(PLAYER_WIDTH_KEY);
+      } catch (_) {}
+    },
+    observeResize(player) {
+      if (player.dataset.resizeObserverReady === "true" || typeof ResizeObserver === "undefined") return;
+      player.dataset.resizeObserverReady = "true";
+      const observer = new ResizeObserver((entries) => {
+        if (player.hidden || window.innerWidth <= 760) return;
+        const width = entries[0]?.contentRect?.width;
+        if (width) this.saveWidth(width);
+      });
+      observer.observe(player);
+      window.addEventListener("resize", () => this.applySavedSize(player));
+    },
     ensure() {
       let player = document.querySelector(".floating-youtube-player");
       if (player) return player;
@@ -108,6 +163,11 @@
       player.innerHTML = `
         <div class="floating-youtube-header">
           <span class="floating-youtube-label"></span>
+          <div class="floating-youtube-actions" aria-label="${isRu() ? "Размер плеера" : "Player size"}">
+            <button class="floating-youtube-size" type="button" data-player-size="smaller" aria-label="${isRu() ? "Уменьшить плеер" : "Make player smaller"}" title="${isRu() ? "Уменьшить" : "Smaller"}">−</button>
+            <button class="floating-youtube-size" type="button" data-player-size="larger" aria-label="${isRu() ? "Увеличить плеер" : "Make player larger"}" title="${isRu() ? "Увеличить" : "Larger"}">+</button>
+            <button class="floating-youtube-size" type="button" data-player-size="reset" aria-label="${isRu() ? "Сбросить размер плеера" : "Reset player size"}" title="${isRu() ? "Сбросить размер" : "Reset size"}">□</button>
+          </div>
           <button class="floating-youtube-close" type="button" aria-label="${isRu() ? "Закрыть плеер" : "Close player"}" title="${isRu() ? "Закрыть" : "Close"}">×</button>
         </div>
         <div class="floating-youtube-frame">
@@ -116,11 +176,17 @@
         <a class="floating-youtube-link" href="#" target="_blank" rel="noopener">${isRu() ? "Открыть на YouTube" : "Open on YouTube"}</a>`;
       document.body.append(player);
       player.querySelector(".floating-youtube-close").addEventListener("click", () => this.close());
+      player.querySelector('[data-player-size="smaller"]')?.addEventListener("click", () => this.resizeBy(-72));
+      player.querySelector('[data-player-size="larger"]')?.addEventListener("click", () => this.resizeBy(72));
+      player.querySelector('[data-player-size="reset"]')?.addEventListener("click", () => this.resetSize());
+      this.applySavedSize(player);
+      this.observeResize(player);
       return player;
     },
     open({ embedUrl, label, href, type }) {
       const player = this.ensure();
       const iframe = player.querySelector("iframe");
+      this.applySavedSize(player);
       player.querySelector(".floating-youtube-label").textContent = label;
       player.querySelector(".floating-youtube-link").href = href;
       iframe.title = label;
