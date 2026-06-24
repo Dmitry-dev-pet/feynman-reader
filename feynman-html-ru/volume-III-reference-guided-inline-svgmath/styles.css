@@ -1109,24 +1109,65 @@ figcaption {
   }
   .reader-toolbar {
     align-items: center;
-    flex-wrap: wrap;
-    padding: 0.45rem 0.6rem;
+    display: grid;
+    gap: 0.42rem;
+    grid-template-columns: auto minmax(0, 1fr);
+    padding: 0.44rem 0.6rem 0.52rem;
+  }
+  .toolbar-group {
+    min-width: 0;
+  }
+  .toolbar-navigation {
+    flex-wrap: nowrap;
+    grid-column: 1;
+    order: 1;
   }
   .toolbar-title {
-    flex-basis: 100%;
-    order: 3;
+    align-self: center;
+    flex-basis: auto;
+    grid-column: 2;
+    min-width: 0;
+    order: 2;
     text-align: left;
   }
+  .media-toolbar-controls {
+    grid-column: 1 / -1;
+    order: 3;
+  }
+  .study-toolbar-links {
+    grid-column: 1 / -1;
+    order: 4;
+  }
   .toolbar-settings {
+    display: flex;
+    flex-wrap: nowrap;
+    grid-column: 1 / -1;
     margin-left: 0;
+    order: 5;
+    overflow-x: auto;
+    padding-bottom: 0.12rem;
+    scrollbar-width: none;
+    width: 100%;
+  }
+  .toolbar-settings::-webkit-scrollbar {
+    display: none;
   }
   .toolbar-navigation .nav-btn,
   .toolbar-navigation .toolbar-btn span {
     display: none;
   }
-  .chapter { padding-bottom: 3rem; }
-  .chapter-flow { padding: 1.25rem 1rem 0; }
-  .icon-btn { min-width: 1.9rem; }
+  .toolbar-btn,
+  .reader-toolbar .nav-btn,
+  .language-toggle {
+    min-height: 2.2rem;
+    white-space: nowrap;
+  }
+  .chapter { padding-bottom: 3.5rem; }
+  body.media-player-open .chapter { padding-bottom: 18rem; }
+  .chapter-flow { padding: 1.2rem 1rem 0; }
+  .chapter h1 { font-size: clamp(1.9rem, 9vw, 2.65rem); }
+  .chapter h2 { font-size: 1.32rem; }
+  .icon-btn { min-width: 2.12rem; }
 }
 @media (min-width: 900px) {
   .chapter-flow > .flp-figure,

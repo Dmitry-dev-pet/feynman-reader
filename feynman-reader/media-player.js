@@ -7,6 +7,7 @@
 
   const MEDIA_INTENT_KEY = "flp-reader-media-intent";
   const PLAYER_WIDTH_KEY = "flp-floating-player-width";
+  const PLAYER_MODE_KEY = "flp-floating-player-mode";
   const isRu = () => (document.documentElement.lang || "").toLowerCase().startsWith("ru");
 
   const ReaderManifest = {
@@ -100,6 +101,9 @@
 
   const FloatingPlayer = {
     minWidth: 320,
+    isMobile() {
+      return window.innerWidth <= 760;
+    },
     maxWidth() {
       return Math.max(this.minWidth, Math.min(760, window.innerWidth - 32));
     },
@@ -120,16 +124,21 @@
       return Math.min(this.maxWidth(), Math.max(this.minWidth, Number(width) || 0));
     },
     applySavedSize(player) {
-      if (window.innerWidth <= 760) {
+      if (this.isMobile()) {
         player.style.removeProperty("width");
+        this.applyMobileMode(player, this.savedMode());
         return;
       }
+      this.applyMobileMode(player, "");
       const width = this.savedWidth();
       if (width) player.style.width = `${this.clampWidth(width)}px`;
     },
     resizeBy(delta) {
       const player = this.ensure();
-      if (window.innerWidth <= 760) return;
+      if (this.isMobile()) {
+        this.applyMobileMode(player, delta < 0 ? "mini" : "full", true);
+        return;
+      }
       const current = player.getBoundingClientRect().width || this.savedWidth() || 432;
       const width = this.clampWidth(current + delta);
       player.style.width = `${width}px`;
@@ -137,6 +146,7 @@
     },
     resetSize() {
       const player = this.ensure();
+      this.applyMobileMode(player, this.isMobile() ? "normal" : "", true);
       player.style.removeProperty("width");
       try {
         localStorage.removeItem(PLAYER_WIDTH_KEY);
@@ -146,12 +156,29 @@
       if (player.dataset.resizeObserverReady === "true" || typeof ResizeObserver === "undefined") return;
       player.dataset.resizeObserverReady = "true";
       const observer = new ResizeObserver((entries) => {
-        if (player.hidden || window.innerWidth <= 760) return;
+        if (player.hidden || this.isMobile()) return;
         const width = entries[0]?.contentRect?.width;
         if (width) this.saveWidth(width);
       });
       observer.observe(player);
       window.addEventListener("resize", () => this.applySavedSize(player));
+    },
+    savedMode() {
+      try {
+        return localStorage.getItem(PLAYER_MODE_KEY) || "normal";
+      } catch (_) {
+        return "normal";
+      }
+    },
+    applyMobileMode(player, mode, persist = false) {
+      player.classList.remove("is-mini", "is-full");
+      if (mode === "mini") player.classList.add("is-mini");
+      if (mode === "full") player.classList.add("is-full");
+      if (persist) {
+        try {
+          localStorage.setItem(PLAYER_MODE_KEY, mode || "normal");
+        } catch (_) {}
+      }
     },
     ensure() {
       let player = document.querySelector(".floating-youtube-player");
@@ -192,6 +219,7 @@
       iframe.title = label;
       iframe.src = embedUrl;
       player.hidden = false;
+      document.body.classList.add("media-player-open");
       MediaIntent.set(type);
       ToolbarState.setActive(type);
     },
@@ -201,6 +229,7 @@
         player.querySelector("iframe").removeAttribute("src");
         player.hidden = true;
       }
+      document.body.classList.remove("media-player-open");
       document.querySelectorAll(".study-youtube-card.is-playing").forEach((card) => card.classList.remove("is-playing"));
       MediaIntent.clear();
       ToolbarState.setActive("");

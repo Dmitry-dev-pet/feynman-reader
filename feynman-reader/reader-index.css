@@ -442,43 +442,71 @@ body[data-theme="dark"] .volume-figure img {
 
 @media (max-width: 660px) {
   .reader-app {
-    padding: 0 0.85rem 2.5rem;
+    padding: 0 0.75rem 2.5rem;
   }
 
   .app-header {
-    align-items: flex-start;
-    flex-direction: column;
+    align-items: center;
+    flex-direction: row;
+    gap: 0.55rem;
+    min-height: 3.4rem;
     position: static;
   }
 
   .brand {
+    flex: 1 1 auto;
     min-width: 0;
+  }
+
+  .brand img {
+    height: 34px;
+    width: 34px;
+  }
+
+  .brand strong {
+    font-size: 0.92rem;
+  }
+
+  .brand small {
+    display: none;
+  }
+
+  .top-actions {
+    flex: 0 0 auto;
+    gap: 0.3rem;
+    justify-content: flex-end;
+  }
+
+  .top-actions .btn {
+    display: none;
   }
 
   .top-actions,
   .quick-nav,
   .materials {
     align-items: stretch;
-    flex-direction: column;
-    width: 100%;
+    width: auto;
   }
 
   .language-segment {
-    align-self: flex-start;
+    align-self: center;
+    min-height: 2rem;
   }
 
-  .btn,
-  .quick-link,
-  .material-link {
-    width: 100%;
+  .segment-btn {
+    min-width: 2.15rem;
+    padding-left: 0.38rem;
+    padding-right: 0.38rem;
   }
 
   .icon-btn {
-    align-self: flex-start;
+    align-self: center;
+    min-height: 2rem;
+    min-width: 2rem;
   }
 
   h1 {
-    font-size: 1.95rem;
+    font-size: 1.85rem;
     max-width: 100%;
   }
 
@@ -487,15 +515,88 @@ body[data-theme="dark"] .volume-figure img {
     grid-template-columns: 1fr;
   }
 
+  .overview {
+    gap: 0.9rem;
+    padding-top: 1rem;
+  }
+
+  .overview-status {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .quick-nav {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .quick-link {
+    min-width: 0;
+    width: 100%;
+  }
+
   .volume-row {
+    align-items: start;
+    gap: 0.72rem;
+    grid-template-columns: 5.2rem minmax(0, 1fr);
     padding: 0.72rem;
   }
 
+  .volume-figure {
+    align-self: stretch;
+    grid-column: 1;
+    min-height: 5.2rem;
+    padding: 0.35rem;
+  }
+
+  .volume-figure img {
+    max-height: 5.35rem;
+  }
+
+  .volume-main {
+    grid-column: 2;
+    padding: 0;
+  }
+
   .volume-main h2 {
-    font-size: 1.12rem;
+    font-size: 1.06rem;
+  }
+
+  .meta {
+    font-size: 0.82rem;
+  }
+
+  .status-line {
+    gap: 0.3rem;
+    margin-top: 0.55rem;
+  }
+
+  .status-line span {
+    font-size: 0.75rem;
+    min-height: 1.75rem;
+    padding: 0.22rem 0.42rem;
+  }
+
+  .volume-actions {
+    grid-column: 1 / -1;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .volume-actions .btn.primary {
+    grid-column: auto;
+  }
+
+  .btn,
+  .material-link {
+    min-height: 2.15rem;
   }
 
   .material-note {
     margin-left: 0;
+  }
+
+  .materials {
+    align-items: stretch;
+    display: grid;
+    grid-template-columns: 1fr;
   }
 }
