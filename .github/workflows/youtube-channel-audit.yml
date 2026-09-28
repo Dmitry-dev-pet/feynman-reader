@@ -1,0 +1,88 @@
+name: YouTube channel audit
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: "Read-only YouTube check to run"
+        required: true
+        default: audit
+        type: choice
+        options:
+          - audit
+          - dry-run
+
+permissions:
+  contents: read
+
+concurrency:
+  group: youtube-channel-audit
+  cancel-in-progress: false
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install YouTube API dependencies
+        run: python -m pip install -r tools/youtube-upload-requirements.txt
+
+      - name: Restore YouTube OAuth files
+        env:
+          YOUTUBE_CLIENT_SECRETS_B64: ${{ secrets.YOUTUBE_CLIENT_SECRETS_B64 }}
+          YOUTUBE_TOKEN_B64: ${{ secrets.YOUTUBE_TOKEN_B64 }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "$YOUTUBE_CLIENT_SECRETS_B64"
+          test -n "$YOUTUBE_TOKEN_B64"
+
+          umask 077
+          secrets_dir="$RUNNER_TEMP/feynman-youtube"
+          mkdir -p "$secrets_dir"
+
+          printf '%s' "$YOUTUBE_CLIENT_SECRETS_B64" | base64 --decode > "$secrets_dir/youtube-client-secrets.json"
+          printf '%s' "$YOUTUBE_TOKEN_B64" | base64 --decode > "$secrets_dir/youtube-token.json"
+
+          python - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+
+          root = Path(os.environ["RUNNER_TEMP"]) / "feynman-youtube"
+          for name in ("youtube-client-secrets.json", "youtube-token.json"):
+              path = root / name
+              with path.open("r", encoding="utf-8") as fh:
+                  json.load(fh)
+              print(f"validated {name}")
+          PY
+
+      - name: Audit current YouTube visibility and metadata
+        if: ${{ inputs.mode == 'audit' }}
+        run: |
+          python tools/sync_youtube_channel.py \
+            --client-secrets "$RUNNER_TEMP/feynman-youtube/youtube-client-secrets.json" \
+            --token-file "$RUNNER_TEMP/feynman-youtube/youtube-token.json" \
+            --video-report-only
+
+      - name: Preview full synchronization
+        if: ${{ inputs.mode == 'dry-run' }}
+        run: |
+          python tools/sync_youtube_channel.py \
+            --client-secrets "$RUNNER_TEMP/feynman-youtube/youtube-client-secrets.json" \
+            --token-file "$RUNNER_TEMP/feynman-youtube/youtube-token.json" \
+            --dry-run
+
+      - name: Remove temporary OAuth files
+        if: ${{ always() }}
+        shell: bash
+        run: rm -rf "$RUNNER_TEMP/feynman-youtube"
