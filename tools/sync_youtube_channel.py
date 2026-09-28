@@ -57,19 +57,32 @@ class VideoSpec:
 
     @property
     def title(self) -> str:
-        base = f"{self.group_title} - NotebookLM {self.media_label}"
+        if self.language == "ru":
+            media_label = "аудиогид" if self.media_type == "audio" else "видеогид"
+            base = f"Фейнмановские лекции по физике, том {self.volume} — {media_label} | Feynman Reader"
+            if self.part_count > 1:
+                return f"{base} — часть {self.part_index}/{self.part_count}"
+            return base
+
+        media_label = "Audio Study Companion" if self.media_type == "audio" else "Visual Study Companion"
+        base = f"Feynman Lectures on Physics, Vol. {self.volume} — {media_label} | Feynman Reader"
         if self.part_count > 1:
-            return f"{base} Part {self.part_index}/{self.part_count}"
+            return f"{base} — Part {self.part_index}/{self.part_count}"
         return base
 
     @property
     def tags(self) -> list[str]:
         return [
             "Feynman Reader",
+            "Richard Feynman",
+            "Feynman Lectures on Physics",
             "Feynman Lectures",
-            "NotebookLM",
             "Physics",
             "Education",
+            "Фейнман",
+            "Фейнмановские лекции по физике",
+            "физика",
+            "NotebookLM",
             self.lang_label,
             self.volume_label,
             self.media_label,
@@ -77,14 +90,37 @@ class VideoSpec:
 
     @property
     def description(self) -> str:
+        if self.language == "ru":
+            part = f", часть {self.part_index}/{self.part_count}" if self.part_count > 1 else ""
+            lines = [
+                "Учебный AI-компаньон к «Фейнмановским лекциям по физике» Ричарда Фейнмана.",
+                "Независимый проект Feynman Reader; это не официальный канал Caltech или Feynman Lectures.",
+                "",
+                "Читать Feynman Reader:",
+                READER_URL,
+                "",
+                f"Том {self.volume}: NotebookLM {self.media_type}-материал{part}.",
+                "На страницах глав есть ссылки с таймкодами.",
+                "",
+                "Главы:",
+            ]
+            for chapter in self.chapters:
+                lines.append(f"{format_time(chapter['start'])} Глава {chapter['chapter']}. {chapter['title']}")
+            lines += [
+                "",
+                "Материалы созданы с помощью AI-assisted NotebookLM для самостоятельного изучения физики.",
+            ]
+            return "\n".join(lines)
+
         part = f", part {self.part_index}/{self.part_count}" if self.part_count > 1 else ""
         lines = [
-            self.title,
+            "Independent AI-assisted study companion to Richard Feynman's Feynman Lectures on Physics.",
+            "Feynman Reader is an independent project; this is not an official Caltech or Feynman Lectures channel.",
             "",
             "Open Feynman Reader:",
             READER_URL,
             "",
-            f"{self.lang_label} {self.volume_label} NotebookLM {self.media_type} companion{part}.",
+            f"Volume {self.volume}: NotebookLM {self.media_type} companion{part}.",
             f"Chapter pages include timestamped {MEDIA_ACTION[self.media_type]} links.",
             "",
             "Chapters:",
@@ -93,8 +129,7 @@ class VideoSpec:
             lines.append(f"{format_time(chapter['start'])} Chapter {chapter['chapter']}. {chapter['title']}")
         lines += [
             "",
-            "Created with AI-assisted NotebookLM study materials.",
-            "Independent study-media archive; not an official Feynman Lectures channel.",
+            "Created with AI-assisted NotebookLM study materials for independent physics study.",
         ]
         return "\n".join(lines)
 
@@ -260,9 +295,16 @@ def sync_video_metadata(youtube: Any, specs: list[VideoSpec], *, dry_run: bool) 
     video_ids = [spec.video_id for spec in specs]
     existing: dict[str, dict[str, Any]] = {}
     for batch in batched(video_ids, 50):
-        response = youtube.videos().list(part="id,snippet", id=",".join(batch), maxResults=50).execute()
+        response = youtube.videos().list(part="id,snippet,status", id=",".join(batch), maxResults=50).execute()
         for item in response.get("items", []):
             existing[item["id"]] = item
+
+    privacy_counts: dict[str, int] = defaultdict(int)
+    for current in existing.values():
+        privacy = str(current.get("status", {}).get("privacyStatus") or "unknown")
+        privacy_counts[privacy] += 1
+    summary = " ".join(f"{key}={privacy_counts.get(key, 0)}" for key in ("public", "unlisted", "private", "unknown"))
+    print(f"video privacy: {summary}")
 
     for spec in specs:
         current = existing.get(spec.video_id)
@@ -270,6 +312,12 @@ def sync_video_metadata(youtube: Any, specs: list[VideoSpec], *, dry_run: bool) 
             print(f"missing video on YouTube: {spec.video_id}")
             continue
         snippet = dict(current.get("snippet", {}))
+        privacy = str(current.get("status", {}).get("privacyStatus") or "unknown")
+        current_title = str(snippet.get("title") or "")
+        print(f"video: {spec.video_id} privacy={privacy}")
+        if current_title != spec.title:
+            print(f"  title: {current_title!r}")
+            print(f"     ->: {spec.title!r}")
         changed = (
             snippet.get("title") != spec.title
             or snippet.get("description") != spec.description
@@ -472,6 +520,11 @@ def main() -> int:
     parser.add_argument("--client-secrets", type=Path, default=Path("youtube-client-secrets.json"))
     parser.add_argument("--token-file", type=Path, default=Path("youtube-token.json"))
     parser.add_argument("--dry-run", action="store_true")
+    parser.add_argument(
+        "--video-report-only",
+        action="store_true",
+        help="Show current video privacy and proposed metadata changes, then exit without writing.",
+    )
     parser.add_argument("--skip-video-metadata", action="store_true")
     parser.add_argument("--skip-channel-sections", action="store_true")
     args = parser.parse_args()
@@ -480,6 +533,9 @@ def main() -> int:
     playlists = playlist_specs(specs)
     print(f"videos={len(specs)} playlists={len(playlists)} dry_run={args.dry_run}")
     youtube = load_youtube_client(args.client_secrets, args.token_file)
+    if args.video_report_only:
+        sync_video_metadata(youtube, specs, dry_run=True)
+        return 0
     if not args.skip_video_metadata:
         sync_video_metadata(youtube, specs, dry_run=args.dry_run)
     existing = existing_playlists(youtube)
