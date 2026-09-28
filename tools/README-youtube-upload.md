@@ -82,3 +82,38 @@ python3 tools/youtube_upload.py batch path/to/mp3-dir \
 
 Use `private` first. Switch to `unlisted` only when you are comfortable with the
 rights and platform-policy risk.
+
+
+## 5. Audit And Synchronize Channel Metadata
+
+Before changing anything on YouTube, inspect the 17 reader videos and their
+current visibility:
+
+```bash
+python3 tools/sync_youtube_channel.py --video-report-only
+```
+
+The report shows each video ID, its current `public` / `unlisted` /
+`private` status, and the proposed search-oriented title.
+
+Preview the full synchronization without writes:
+
+```bash
+python3 tools/sync_youtube_channel.py --dry-run
+```
+
+Apply the metadata and playlist synchronization only after reviewing that
+output:
+
+```bash
+python3 tools/sync_youtube_channel.py
+```
+
+The synchronized video titles and descriptions deliberately describe the
+uploads as independent AI-assisted study companions. They use common search
+phrases such as `Feynman Lectures on Physics` and
+`Фейнмановские лекции по физике` without presenting the channel as an
+official Caltech or Feynman Lectures source.
+
+This synchronization does **not** change video privacy. Visibility remains an
+explicit separate decision via `youtube_upload.py set-privacy`.
