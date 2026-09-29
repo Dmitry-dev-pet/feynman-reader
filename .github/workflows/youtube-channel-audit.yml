@@ -37,21 +37,18 @@ jobs:
       - name: Install YouTube API dependencies
         run: python -m pip install -r tools/youtube-upload-requirements.txt
 
-      - name: Restore YouTube OAuth files
+      - name: Restore YouTube OAuth token
         env:
-          YOUTUBE_CLIENT_SECRETS_B64: ${{ secrets.YOUTUBE_CLIENT_SECRETS_B64 }}
           YOUTUBE_TOKEN_B64: ${{ secrets.YOUTUBE_TOKEN_B64 }}
         shell: bash
         run: |
           set -euo pipefail
-          test -n "$YOUTUBE_CLIENT_SECRETS_B64"
           test -n "$YOUTUBE_TOKEN_B64"
 
           umask 077
           secrets_dir="$RUNNER_TEMP/feynman-youtube"
           mkdir -p "$secrets_dir"
 
-          printf '%s' "$YOUTUBE_CLIENT_SECRETS_B64" | base64 --decode > "$secrets_dir/youtube-client-secrets.json"
           printf '%s' "$YOUTUBE_TOKEN_B64" | base64 --decode > "$secrets_dir/youtube-token.json"
 
           python - <<'PY'
@@ -59,19 +56,31 @@ jobs:
           import os
           from pathlib import Path
 
-          root = Path(os.environ["RUNNER_TEMP"]) / "feynman-youtube"
-          for name in ("youtube-client-secrets.json", "youtube-token.json"):
-              path = root / name
-              with path.open("r", encoding="utf-8") as fh:
-                  json.load(fh)
-              print(f"validated {name}")
+          path = Path(os.environ["RUNNER_TEMP"]) / "feynman-youtube" / "youtube-token.json"
+          with path.open("r", encoding="utf-8") as fh:
+              token = json.load(fh)
+
+          required_fields = {"refresh_token", "token_uri", "client_id", "client_secret"}
+          missing_fields = sorted(field for field in required_fields if not token.get(field))
+          if missing_fields:
+              raise SystemExit(f"youtube-token.json is missing required fields: {missing_fields}")
+
+          required_scopes = {
+              "https://www.googleapis.com/auth/youtube.upload",
+              "https://www.googleapis.com/auth/youtube.force-ssl",
+          }
+          scopes = set(token.get("scopes") or [])
+          missing_scopes = sorted(required_scopes - scopes)
+          if missing_scopes:
+              raise SystemExit(f"youtube-token.json is missing required scopes: {missing_scopes}")
+
+          print("validated youtube-token.json")
           PY
 
       - name: Audit current YouTube visibility and metadata
         if: ${{ inputs.mode == 'audit' }}
         run: |
           python tools/sync_youtube_channel.py \
-            --client-secrets "$RUNNER_TEMP/feynman-youtube/youtube-client-secrets.json" \
             --token-file "$RUNNER_TEMP/feynman-youtube/youtube-token.json" \
             --video-report-only
 
@@ -79,7 +88,6 @@ jobs:
         if: ${{ inputs.mode == 'dry-run' }}
         run: |
           python tools/sync_youtube_channel.py \
-            --client-secrets "$RUNNER_TEMP/feynman-youtube/youtube-client-secrets.json" \
             --token-file "$RUNNER_TEMP/feynman-youtube/youtube-token.json" \
             --dry-run
 

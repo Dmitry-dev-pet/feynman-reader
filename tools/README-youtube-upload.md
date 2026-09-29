@@ -117,3 +117,25 @@ official Caltech or Feynman Lectures source.
 
 This synchronization does **not** change video privacy. Visibility remains an
 explicit separate decision via `youtube_upload.py set-privacy`.
+
+## 6. GitHub Actions Authentication
+
+The `YouTube channel audit` workflow uses the `youtube-audit` environment and
+requires one environment secret:
+
+- `YOUTUBE_TOKEN_B64` — the complete `youtube-token.json` created by this CLI.
+
+The authorized-user token already contains the refresh token, OAuth client ID,
+client secret, token URI, and granted scopes needed to refresh credentials.
+Do not add a separate `YOUTUBE_CLIENT_SECRETS_B64` secret.
+
+Set or rotate the token from macOS without printing its contents:
+
+```bash
+base64 < youtube-token.json | \
+  gh secret set YOUTUBE_TOKEN_B64 --env youtube-audit
+```
+
+Base64 is transport encoding, not encryption. Protection is provided by the
+GitHub environment secret; never commit either OAuth JSON file or persist the
+decoded token as an Actions artifact or cache.
