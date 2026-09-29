@@ -141,6 +141,7 @@ def load_youtube_client(
 
     ensure_parent(token_file)
     token_file.write_text(creds.to_json(), encoding="utf-8")
+    token_file.chmod(0o600)
     return build("youtube", "v3", credentials=creds)
 
 
