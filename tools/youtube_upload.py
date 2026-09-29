@@ -104,7 +104,12 @@ def missing_google_deps() -> None:
     )
 
 
-def load_youtube_client(client_secrets: Path, token_file: Path) -> Any:
+def load_youtube_client(
+    client_secrets: Path,
+    token_file: Path,
+    *,
+    force_consent: bool = False,
+) -> Any:
     try:
         from google.auth.transport.requests import Request
         from google.oauth2.credentials import Credentials
@@ -127,7 +132,12 @@ def load_youtube_client(client_secrets: Path, token_file: Path) -> Any:
         if not client_secrets.exists():
             raise SystemExit(f"YouTube client secrets file not found: {client_secrets}")
         flow = InstalledAppFlow.from_client_secrets_file(str(client_secrets), SCOPES)
-        creds = flow.run_local_server(port=0)
+        flow_options: Dict[str, Any] = {"port": 0}
+        if force_consent:
+            # Google may omit a new refresh token for an already-approved grant
+            # unless the authorization screen explicitly asks for consent again.
+            flow_options["prompt"] = "consent"
+        creds = flow.run_local_server(**flow_options)
 
     ensure_parent(token_file)
     token_file.write_text(creds.to_json(), encoding="utf-8")
@@ -386,7 +396,11 @@ def command_auth(args: argparse.Namespace) -> None:
         args.token_file.unlink()
         print(f"Removed token: {args.token_file}")
 
-    youtube = load_youtube_client(args.client_secrets, args.token_file)
+    youtube = load_youtube_client(
+        args.client_secrets,
+        args.token_file,
+        force_consent=args.reset,
+    )
     response = youtube.channels().list(
         part="id,snippet,brandingSettings,status",
         mine=True,
