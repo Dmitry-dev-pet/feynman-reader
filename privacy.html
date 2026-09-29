@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <title>Privacy Policy · Feynman Reader Uploader</title>
+  <meta name="description" content="Privacy policy for Feynman Reader Uploader, an owner-operated tool for managing the Feynman Reader Study Media YouTube channel.">
+  <link rel="canonical" href="https://dmitry-dev-pet.github.io/feynman-reader/privacy.html">
+  <link rel="icon" type="image/png" sizes="192x192" href="feynman-reader/favicon-192.png">
+  <link rel="apple-touch-icon" href="feynman-reader/apple-touch-icon.png">
+  <link rel="stylesheet" href="feynman-reader/reader-index.css">
+  <link rel="stylesheet" href="feynman-reader/privacy-policy.css">
+</head>
+<body>
+  <div class="privacy-shell">
+    <header class="app-header">
+      <a class="brand" href="index.html" aria-label="Feynman Reader home">
+        <img src="feynman-reader/favicon-192.png" alt="" width="40" height="40">
+        <span>
+          <strong>Feynman Reader</strong>
+          <small>lectures, media, notes</small>
+        </span>
+      </a>
+      <nav class="top-actions" aria-label="Page actions">
+        <a class="btn primary" href="index.html">Open reader</a>
+        <button class="icon-btn" type="button" data-theme-toggle aria-label="Switch to dark theme" title="Switch to dark theme">◐</button>
+      </nav>
+    </header>
+
+    <main class="privacy-main">
+      <section class="privacy-hero" aria-labelledby="privacy-title">
+        <p class="eyebrow">Feynman Reader Uploader</p>
+        <h1 id="privacy-title">Privacy Policy</h1>
+        <p class="privacy-lede">Feynman Reader Uploader is an owner-operated utility used to publish and maintain educational media on the Feynman Reader Study Media YouTube channel.</p>
+        <div class="privacy-meta" aria-label="Policy details">
+          <span>Effective September 29, 2026</span>
+          <span>Last updated September 29, 2026</span>
+        </div>
+      </section>
+
+      <section class="privacy-section" aria-labelledby="scope-heading">
+        <h2 id="scope-heading">Scope</h2>
+        <p>This policy explains how the Feynman Reader Uploader uses information obtained through Google and YouTube APIs. The tool is not offered as a multi-user service and does not create public user profiles.</p>
+      </section>
+
+      <section class="privacy-section" aria-labelledby="access-heading">
+        <h2 id="access-heading">Information the tool accesses</h2>
+        <p>After the channel owner authorizes the app, it can access:</p>
+        <ul>
+          <li>basic YouTube channel information, including the channel ID and title;</li>
+          <li>video metadata, privacy status, and playlist membership;</li>
+          <li>the video files and metadata that the channel owner explicitly selects for upload; and</li>
+          <li>OAuth credentials needed to keep the authorized session active.</li>
+        </ul>
+      </section>
+
+      <section class="privacy-section" aria-labelledby="use-heading">
+        <h2 id="use-heading">How information is used</h2>
+        <p>The information is used only to authenticate the channel owner, upload selected videos, update video titles and descriptions, manage playlist membership, and run read-only channel audits or synchronization checks.</p>
+        <p>The tool does not use Google user data for advertising, profiling, credit decisions, or any purpose unrelated to these channel-management functions.</p>
+      </section>
+
+      <section class="privacy-section" aria-labelledby="storage-heading">
+        <h2 id="storage-heading">Storage and security</h2>
+        <p>OAuth credentials are kept on the channel owner's computer and, when automation is enabled, in a restricted GitHub Actions Environment secret. A workflow may write the credential to a temporary file on a GitHub-hosted runner for the duration of a run. Credentials are not committed to the public repository.</p>
+        <p>No separate advertising, analytics, or user-profile database receives Google user data from this tool.</p>
+      </section>
+
+      <section class="privacy-section" aria-labelledby="sharing-heading">
+        <h2 id="sharing-heading">Sharing</h2>
+        <p>Google user data is not sold. It is not shared with third parties except as necessary for Google and YouTube to provide their APIs and for GitHub Actions to execute an owner-requested automation run.</p>
+      </section>
+
+      <section class="privacy-section privacy-callout" aria-labelledby="limited-use-heading">
+        <h2 id="limited-use-heading">Google API Services User Data Policy</h2>
+        <p>Feynman Reader Uploader's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener noreferrer">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+      </section>
+
+      <section class="privacy-section" aria-labelledby="retention-heading">
+        <h2 id="retention-heading">Retention, deletion, and revocation</h2>
+        <p>OAuth credentials are retained only while the channel owner wants the tool to have access. The owner can revoke access at any time from <a href="https://myaccount.google.com/connections" rel="noopener noreferrer">Google Account connections</a>. Local credentials and the corresponding GitHub secret can then be deleted or replaced.</p>
+        <p>Video and playlist changes made through the YouTube API remain part of the YouTube channel until the channel owner changes or deletes them in YouTube.</p>
+      </section>
+
+      <section class="privacy-section" aria-labelledby="contact-heading">
+        <h2 id="contact-heading">Contact</h2>
+        <p>Questions about this policy or requests concerning the tool can be submitted through the <a href="https://github.com/Dmitry-dev-pet/feynman-reader/issues" rel="noopener noreferrer">Feynman Reader issue tracker</a>.</p>
+      </section>
+    </main>
+
+    <footer class="privacy-footer">
+      <a href="index.html">Feynman Reader</a> · Privacy policy for the YouTube publishing utility
+    </footer>
+  </div>
+
+  <script>
+  (() => {
+    const themeKey = "flp-reader-theme";
+    const button = document.querySelector("[data-theme-toggle]");
+    const storage = {
+      get(key, fallbackValue) {
+        try { return localStorage.getItem(key) ?? fallbackValue; } catch (_) { return fallbackValue; }
+      },
+      set(key, value) {
+        try { localStorage.setItem(key, value); } catch (_) {}
+      }
+    };
+    const setTheme = (theme) => {
+      document.documentElement.dataset.theme = theme;
+      document.body.dataset.theme = theme;
+      storage.set(themeKey, theme);
+      const dark = theme === "dark";
+      if (button) {
+        button.setAttribute("aria-pressed", dark ? "true" : "false");
+        button.title = dark ? "Switch to light theme" : "Switch to dark theme";
+        button.setAttribute("aria-label", button.title);
+      }
+    };
+    setTheme(storage.get(themeKey, "light"));
+    button?.addEventListener("click", () => {
+      setTheme(document.documentElement.dataset.theme === "dark" ? "light" : "dark");
+    });
+  })();
+  </script>
+</body>
+</html>
