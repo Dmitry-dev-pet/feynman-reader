@@ -32,7 +32,7 @@ REPO = "Dmitry-dev-pet/feynman-reader"
 HOST = "127.0.0.1"
 PORT = int(os.environ.get("ARTIFACT_READER_BOOTSTRAP_PORT", "8768"))
 API_VERSION = "2026-03-10"
-CLIENT_ID_VARIABLE = "ARTIFACT_READER_APP_CLIENT_ID"
+APP_ID_VARIABLE = "ARTIFACT_READER_APP_ID"
 PRIVATE_KEY_SECRET = "ARTIFACT_READER_APP_PRIVATE_KEY"
 
 
@@ -139,7 +139,7 @@ def main() -> int:
             else:
                 try:
                     app = exchange_manifest_code(code, auth_token)
-                    client_id = app["client_id"]
+                    app_id = str(app["id"])
                     pem = app["pem"]
                     slug = app["slug"]
 
@@ -154,7 +154,7 @@ def main() -> int:
                     result.update(
                         {
                             "slug": slug,
-                            "client_id": client_id,
+                            "app_id": app_id,
                             "install_url": f"https://github.com/apps/{slug}/installations/new",
                         }
                     )
@@ -196,11 +196,11 @@ def main() -> int:
     run_gh(
         "variable",
         "set",
-        CLIENT_ID_VARIABLE,
+        APP_ID_VARIABLE,
         "--repo",
         REPO,
         "--body",
-        result["client_id"],
+        result["app_id"],
     )
 
     try:
@@ -242,7 +242,7 @@ def main() -> int:
             raise RuntimeError(f"smoke workflow {run_id} failed")
     except Exception as exc:
         try:
-            run_gh("variable", "delete", CLIENT_ID_VARIABLE, "--repo", REPO)
+            run_gh("variable", "delete", APP_ID_VARIABLE, "--repo", REPO)
         except Exception:
             pass
         print(
