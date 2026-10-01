@@ -11,8 +11,32 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 10
     steps:
-      - name: Mint mac-access Actions read token
-        id: artifact-token
+      - name: Validate Artifact Reader identifier
+        shell: bash
+        env:
+          CLIENT_ID: ${{ vars.ARTIFACT_READER_APP_CLIENT_ID }}
+          APP_ID: ${{ vars.ARTIFACT_READER_APP_ID }}
+        run: |
+          set -euo pipefail
+          if [[ -z "$CLIENT_ID" && -z "$APP_ID" ]]; then
+            echo "::error::Artifact Reader App identifier is not configured"
+            exit 2
+          fi
+
+      - name: Mint mac-access Actions read token with client ID
+        id: artifact-token-client
+        if: ${{ vars.ARTIFACT_READER_APP_CLIENT_ID != '' }}
+        uses: actions/create-github-app-token@v3
+        with:
+          client-id: ${{ vars.ARTIFACT_READER_APP_CLIENT_ID }}
+          private-key: ${{ secrets.ARTIFACT_READER_APP_PRIVATE_KEY }}
+          owner: Dmitry-dev-pet
+          repositories: mac-access
+          permission-actions: read
+
+      - name: Mint mac-access Actions read token with App ID
+        id: artifact-token-app
+        if: ${{ vars.ARTIFACT_READER_APP_CLIENT_ID == '' && vars.ARTIFACT_READER_APP_ID != '' }}
         uses: actions/create-github-app-token@v3
         with:
           app-id: ${{ vars.ARTIFACT_READER_APP_ID }}
@@ -24,7 +48,7 @@ jobs:
       - name: Verify exact artifact access
         shell: bash
         env:
-          GH_TOKEN: ${{ steps.artifact-token.outputs.token }}
+          GH_TOKEN: ${{ steps.artifact-token-client.outputs.token || steps.artifact-token-app.outputs.token }}
         run: |
           set -euo pipefail
           payload="$(gh api repos/Dmitry-dev-pet/mac-access/actions/runs/36856154207/artifacts)"
