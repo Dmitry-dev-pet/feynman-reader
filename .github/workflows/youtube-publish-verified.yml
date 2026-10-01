@@ -176,12 +176,12 @@ jobs:
         run: |
           set -euo pipefail
           if [[ "$PUBLISH_RESULT" == "success" && -n "$YOUTUBE_URL" ]]; then
-            gh issue comment "$ISSUE" --repo "$GITHUB_REPOSITORY" --body               "Verified video publication **$PUBLISH_STATUS**: $YOUTUBE_URL
-
-- video SHA-256: `$VIDEO_SHA256`
-- publication run: $RUN_URL"
+            printf -v body 'Verified video publication **%s**: %s\n\n- video SHA-256: `%s`\n- publication run: %s' \
+              "$PUBLISH_STATUS" "$YOUTUBE_URL" "$VIDEO_SHA256" "$RUN_URL"
+            gh issue comment "$ISSUE" --repo "$GITHUB_REPOSITORY" --body "$body"
             gh issue close "$ISSUE" --repo "$GITHUB_REPOSITORY" --reason completed
           else
-            gh issue comment "$ISSUE" --repo "$GITHUB_REPOSITORY"               --body "Verified video publication failed. Inspect: $RUN_URL"
+            gh issue comment "$ISSUE" --repo "$GITHUB_REPOSITORY" \
+              --body "Verified video publication failed. Inspect: $RUN_URL"
             exit 1
           fi
