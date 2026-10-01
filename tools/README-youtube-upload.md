@@ -139,3 +139,63 @@ base64 < youtube-token.json | \
 Base64 is transport encoding, not encryption. Protection is provided by the
 GitHub environment secret; never commit either OAuth JSON file or persist the
 decoded token as an Actions artifact or cache.
+
+
+## 7. Private Actions artifact reader
+
+Verified rendered videos are produced in the private
+`Dmitry-dev-pet/mac-access` repository. Do not copy the powerful GitHub Control
+App private key into this repository and do not persist temporary signed artifact
+URLs in workflow files.
+
+Instead, bootstrap the dedicated **Artifact Reader App** once:
+
+```bash
+python3 tools/bootstrap_artifact_reader_app.py
+```
+
+The bootstrap creates a private GitHub App with only:
+
+- repository permission **Actions: read**;
+- no Contents, Administration, Pages, Issues, Secrets, or write permission;
+- installation restricted to **mac-access only**.
+
+The private key is streamed directly to the
+`ARTIFACT_READER_APP_PRIVATE_KEY` repository secret. The non-secret client ID is
+stored as `ARTIFACT_READER_APP_CLIENT_ID`. The bootstrap then runs
+`artifact-reader-smoke.yml`, which mints a one-hour token scoped to
+`mac-access` and requests only `actions: read`.
+
+The resulting token is used only to download a pinned Actions artifact. It is not
+stored as a repository secret or publication artifact.
+
+## 8. Contract-driven verified publication
+
+Publication requests are reviewed JSON contracts under
+`youtube-publication-contracts/`. A contract pins:
+
+- source repository, Actions run ID and artifact name;
+- exact final MP4 filename and SHA-256;
+- expected verifier frame count, FPS, duration and resolution;
+- YouTube channel, title, privacy, category, tags and attribution.
+
+The issue workflow ignores issue bodies. Currently the accepted command is:
+
+```text
+[youtube] coimbra-032
+```
+
+The publisher:
+
+1. mints an Artifact Reader token scoped to `mac-access` with Actions read only;
+2. downloads the exact pinned artifact;
+3. verifies the MP4 SHA-256 and independent render verification evidence;
+4. authenticates to exactly `@feynmanreadermedia`;
+5. searches existing uploads for the same video SHA-256;
+6. reuses the existing URL instead of uploading a duplicate;
+7. otherwise uploads as **unlisted**;
+8. returns a sanitized publication receipt and closes the issue.
+
+Adding a future video requires a new reviewed contract and an explicit fixed route in
+`youtube-publish-verified.yml`. Do not add arbitrary run IDs, artifact names,
+repositories, URLs, titles, or privacy settings from issue bodies.
