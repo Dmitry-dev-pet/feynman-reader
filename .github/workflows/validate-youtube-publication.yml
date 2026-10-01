@@ -1,0 +1,50 @@
+name: Validate YouTube publication contracts
+
+on:
+  pull_request:
+    paths:
+      - ".github/workflows/artifact-reader-smoke.yml"
+      - ".github/workflows/youtube-publish-verified.yml"
+      - ".github/workflows/validate-youtube-publication.yml"
+      - "tools/bootstrap_artifact_reader_app.py"
+      - "tools/publish_verified_video.py"
+      - "tools/validate_publication_contract.py"
+      - "youtube-publication-contracts/**"
+      - "tools/README-youtube-upload.md"
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/artifact-reader-smoke.yml"
+      - ".github/workflows/youtube-publish-verified.yml"
+      - ".github/workflows/validate-youtube-publication.yml"
+      - "tools/bootstrap_artifact_reader_app.py"
+      - "tools/publish_verified_video.py"
+      - "tools/validate_publication_contract.py"
+      - "youtube-publication-contracts/**"
+      - "tools/README-youtube-upload.md"
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Compile publication tooling
+        run: |
+          python -m compileall -q             tools/bootstrap_artifact_reader_app.py             tools/publish_verified_video.py             tools/validate_publication_contract.py             tools/youtube_upload.py
+      - name: Validate reviewed publication contracts
+        run: |
+          python tools/validate_publication_contract.py             youtube-publication-contracts/*.json
+      - name: Check secret-safety boundaries
+        shell: bash
+        run: |
+          set -euo pipefail
+          ! grep -R -E 'https://[^ ]+sig=|YOUTUBE_TOKEN_B64[[:space:]]*:' youtube-publication-contracts tools/publish_verified_video.py
+          grep -F 'permission-actions: read' .github/workflows/artifact-reader-smoke.yml
+          grep -F 'permission-actions: read' .github/workflows/youtube-publish-verified.yml
+          ! grep -E 'permission-(administration|contents|actions): write'             .github/workflows/artifact-reader-smoke.yml             .github/workflows/youtube-publish-verified.yml
