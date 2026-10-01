@@ -179,7 +179,7 @@ Publication requests are reviewed JSON contracts under
 - expected verifier frame count, FPS, duration and resolution;
 - YouTube channel, title, privacy, category, tags and attribution.
 
-The issue workflow ignores issue bodies. Currently the accepted command is:
+The issue workflow ignores issue bodies and accepts no dynamic repository, run, artifact, URL or privacy inputs. Currently the accepted command is:
 
 ```text
 [youtube] coimbra-032
