@@ -1,0 +1,117 @@
+name: Temporary YouTube upload Coimbra 031
+
+on:
+  push:
+    branches:
+      - temp/youtube-coimbra-031-upload
+    paths:
+      - .github/workflows/temp-youtube-coimbra-031.yml
+
+permissions:
+  contents: read
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    environment: youtube-audit
+    timeout-minutes: 20
+
+    steps:
+      - name: Check out uploader
+        uses: actions/checkout@v4
+
+      - name: Download verified Coimbra 031 artifact
+        shell: bash
+        env:
+          SOURCE_URL: "https://sdmntprdenmarkeast.oaiusercontent.com/files/00000000-1920-8210-8657-00e03a2f0fe0/raw?se=2026-10-01T11%3A23%3A24Z&sp=r&sv=2026-02-06&sr=b&scid=03d80d44-70c2-5847-bc5a-bbe8f4b18504&skoid=7b771594-2b4f-4e93-93be-fdeeeb59aaf9&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-10-01T11%3A07%3A26Z&ske=2026-10-02T11%3A07%3A26Z&sks=b&skv=2026-02-06&sig=muNrGDbVKLfJHUaiRTJMhdTU3S%2BTKMFHTqAXCJHghyQ%3D"
+        run: |
+          set -euo pipefail
+          curl --fail --location --retry 3 --output "$RUNNER_TEMP/coimbra-031.zip" "$SOURCE_URL"
+          mkdir -p "$RUNNER_TEMP/coimbra-031"
+          unzip -q "$RUNNER_TEMP/coimbra-031.zip" -d "$RUNNER_TEMP/coimbra-031"
+          video="$RUNNER_TEMP/coimbra-031/coimbra-production-look-metal-12s.mp4"
+          test -s "$video"
+          test "$(sha256sum "$video" | awk '{print $1}')" = "07eed570d106d011f4c8f98086982d9a0be5e86aa31b1e5ac3e4e061e79e6e80"
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install YouTube API dependencies
+        run: python -m pip install -r tools/youtube-upload-requirements.txt
+
+      - name: Restore YouTube OAuth token
+        env:
+          YOUTUBE_TOKEN_B64: ${{ secrets.YOUTUBE_TOKEN_B64 }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -n "$YOUTUBE_TOKEN_B64"
+          umask 077
+          mkdir -p "$RUNNER_TEMP/feynman-youtube"
+          printf '%s' "$YOUTUBE_TOKEN_B64" | base64 --decode > "$RUNNER_TEMP/feynman-youtube/youtube-token.json"
+
+      - name: Prepare description
+        shell: bash
+        run: |
+          cat > "$RUNNER_TEMP/coimbra-031-description.txt" <<'EOF'
+          Coimbra 031 — production-look Metal full route.
+
+          Verified delivery:
+          • 360 frames
+          • 1600×1000
+          • 30 fps
+          • 12 seconds
+          • Blender Cycles / Apple Metal
+          • Render source commit: f950651ab0d891dfed871d7b799d1691c173fa69
+          • Video SHA-256: 07eed570d106d011f4c8f98086982d9a0be5e86aa31b1e5ac3e4e061e79e6e80
+
+          Project:
+          https://github.com/Dmitry-dev-pet/coimbra-video
+
+          Terrain / Ortho © DGT · Open data / CC BY 4.0
+          Map data © OpenStreetMap contributors · ODbL
+          EOF
+
+      - name: Upload to YouTube as unlisted
+        shell: bash
+        run: |
+          set -euo pipefail
+          python tools/youtube_upload.py upload             "$RUNNER_TEMP/coimbra-031/coimbra-production-look-metal-12s.mp4"             --title "Coimbra 031 — Production Look Metal Flyover"             --privacy unlisted             --category 19             --description-file "$RUNNER_TEMP/coimbra-031-description.txt"             --tags Coimbra Portugal Blender Cycles Metal flyover             --token-file "$RUNNER_TEMP/feynman-youtube/youtube-token.json"             --manifest "$RUNNER_TEMP/youtube-upload-manifest.jsonl"
+
+      - name: Save result
+        shell: bash
+        run: |
+          set -euo pipefail
+          python - <<'PY'
+          import json
+          import os
+          from pathlib import Path
+          source = Path(os.environ["RUNNER_TEMP"]) / "youtube-upload-manifest.jsonl"
+          records = [json.loads(line) for line in source.read_text().splitlines() if line.strip()]
+          if len(records) != 1 or not records[0].get("youtube_url"):
+              raise SystemExit("Expected one YouTube upload result")
+          result = {
+              "youtube_id": records[0]["youtube_id"],
+              "youtube_url": records[0]["youtube_url"],
+              "privacy": records[0]["privacy"],
+              "title": records[0]["title"],
+          }
+          out = Path(os.environ["RUNNER_TEMP"]) / "youtube-result.json"
+          out.write_text(json.dumps(result, indent=2) + "\n")
+          print(result["youtube_url"])
+          PY
+
+      - name: Upload result receipt
+        uses: actions/upload-artifact@v4
+        with:
+          name: coimbra-031-youtube-result
+          path: ${{ runner.temp }}/youtube-result.json
+          if-no-files-found: error
+          retention-days: 7
+
+      - name: Remove temporary OAuth files
+        if: ${{ always() }}
+        shell: bash
+        run: rm -rf "$RUNNER_TEMP/feynman-youtube"
