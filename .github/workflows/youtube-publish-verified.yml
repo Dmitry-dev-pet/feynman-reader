@@ -77,8 +77,32 @@ jobs:
                   fh.write(f"{key}={value}\n")
           PY
 
-      - name: Mint read-only mac-access artifact token
-        id: artifact-token
+      - name: Validate Artifact Reader identifier
+        shell: bash
+        env:
+          CLIENT_ID: ${{ vars.ARTIFACT_READER_APP_CLIENT_ID }}
+          APP_ID: ${{ vars.ARTIFACT_READER_APP_ID }}
+        run: |
+          set -euo pipefail
+          if [[ -z "$CLIENT_ID" && -z "$APP_ID" ]]; then
+            echo "::error::Artifact Reader App identifier is not configured"
+            exit 2
+          fi
+
+      - name: Mint read-only mac-access artifact token with client ID
+        id: artifact-token-client
+        if: ${{ vars.ARTIFACT_READER_APP_CLIENT_ID != '' }}
+        uses: actions/create-github-app-token@v3
+        with:
+          client-id: ${{ vars.ARTIFACT_READER_APP_CLIENT_ID }}
+          private-key: ${{ secrets.ARTIFACT_READER_APP_PRIVATE_KEY }}
+          owner: Dmitry-dev-pet
+          repositories: mac-access
+          permission-actions: read
+
+      - name: Mint read-only mac-access artifact token with App ID
+        id: artifact-token-app
+        if: ${{ vars.ARTIFACT_READER_APP_CLIENT_ID == '' && vars.ARTIFACT_READER_APP_ID != '' }}
         uses: actions/create-github-app-token@v3
         with:
           app-id: ${{ vars.ARTIFACT_READER_APP_ID }}
@@ -93,7 +117,7 @@ jobs:
           repository: ${{ steps.contract.outputs.repository }}
           run-id: ${{ steps.contract.outputs.run_id }}
           name: ${{ steps.contract.outputs.artifact_name }}
-          github-token: ${{ steps.artifact-token.outputs.token }}
+          github-token: ${{ steps.artifact-token-client.outputs.token || steps.artifact-token-app.outputs.token }}
           path: verified-artifact
 
       - name: Set up Python
