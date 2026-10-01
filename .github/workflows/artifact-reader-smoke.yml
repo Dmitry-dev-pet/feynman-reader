@@ -1,0 +1,50 @@
+name: Artifact Reader smoke
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Mint mac-access Actions read token
+        id: artifact-token
+        uses: actions/create-github-app-token@v3
+        with:
+          client-id: ${{ vars.ARTIFACT_READER_APP_CLIENT_ID }}
+          private-key: ${{ secrets.ARTIFACT_READER_APP_PRIVATE_KEY }}
+          owner: Dmitry-dev-pet
+          repositories: mac-access
+          permission-actions: read
+
+      - name: Verify exact artifact access
+        shell: bash
+        env:
+          GH_TOKEN: ${{ steps.artifact-token.outputs.token }}
+        run: |
+          set -euo pipefail
+          payload="$(gh api repos/Dmitry-dev-pet/mac-access/actions/runs/36856154207/artifacts)"
+          PAYLOAD="$payload" python - <<'PY'
+          import json, os
+          data = json.loads(os.environ["PAYLOAD"])
+          names = {item["name"] for item in data.get("artifacts", [])}
+          expected = "coimbra-032-slow60-production-look"
+          if expected not in names:
+              raise SystemExit(f"missing expected artifact: {expected}")
+          print("verified read-only artifact access:", expected)
+          PY
+
+      - name: Record security boundary
+        run: |
+          {
+            echo "## Artifact Reader smoke"
+            echo
+            echo "- installation scope: mac-access only"
+            echo "- requested permission: Actions read"
+            echo "- verified run: 36856154207"
+            echo "- verified artifact: coimbra-032-slow60-production-look"
+          } >> "$GITHUB_STEP_SUMMARY"
