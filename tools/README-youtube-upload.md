@@ -161,8 +161,8 @@ The bootstrap creates a private GitHub App with only:
 - installation restricted to **mac-access only**.
 
 The private key is streamed directly to the
-`ARTIFACT_READER_APP_PRIVATE_KEY` repository secret. The non-secret client ID is
-stored as `ARTIFACT_READER_APP_CLIENT_ID`. The bootstrap then runs
+`ARTIFACT_READER_APP_PRIVATE_KEY` repository secret. The non-secret numeric App ID is
+stored as `ARTIFACT_READER_APP_ID`. The bootstrap then runs
 `artifact-reader-smoke.yml`, which mints a one-hour token scoped to
 `mac-access` and requests only `actions: read`.
 
