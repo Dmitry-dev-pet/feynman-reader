@@ -81,7 +81,7 @@ jobs:
         id: artifact-token
         uses: actions/create-github-app-token@v3
         with:
-          client-id: ${{ vars.ARTIFACT_READER_APP_CLIENT_ID }}
+          app-id: ${{ vars.ARTIFACT_READER_APP_ID }}
           private-key: ${{ secrets.ARTIFACT_READER_APP_PRIVATE_KEY }}
           owner: Dmitry-dev-pet
           repositories: mac-access
