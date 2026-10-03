@@ -30,6 +30,9 @@ jobs:
             "[youtube] coimbra-032")
               echo "contract=youtube-publication-contracts/coimbra-032.json" >> "$GITHUB_OUTPUT"
               ;;
+            "[youtube] coimbra-036-preview")
+              echo "contract=youtube-publication-contracts/coimbra-036-preview.json" >> "$GITHUB_OUTPUT"
+              ;;
             *)
               gh issue comment "$ISSUE" --repo "$GITHUB_REPOSITORY"                 --body "Unsupported YouTube publication command."
               exit 2
