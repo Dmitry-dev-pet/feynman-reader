@@ -144,8 +144,9 @@ def verify_artifact(root: Path, contract: dict[str, Any]) -> Path:
     verification = json.loads(verification_path.read_text(encoding="utf-8"))
     expected = source["expected"]
     require(verification.get("verified") is expected["verified"], "verifier status mismatch")
+    verified_frame_count = verification.get("frame_count", verification.get("output_frame_count", 0))
     require(
-        int(verification.get("frame_count", 0)) == expected["frame_count"],
+        int(verified_frame_count) == expected["frame_count"],
         "verified frame count mismatch",
     )
     require(int(verification.get("fps", 0)) == expected["fps"], "verified fps mismatch")
